@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.UI" />
   <TypeSignature Language="VB.NET" Value="Public Interface UI" />
   <TypeSignature Language="C++ CLI" Value="public interface class UI" />
+  <TypeSignature Language="F#" Value="type UI = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.UI.Alert(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Alert (bstrAlertString As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Alert(System::String ^ bstrAlertString);" />
+      <MemberSignature Language="F#" Value="abstract member Alert : string -&gt; unit" Usage="uI.Alert bstrAlertString" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -56,6 +58,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.UI.ShowMailItem(System.String,System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ShowMailItem (bstrTo As String, bstrCC As String, bstrBCC As String, bstrSubject As String, bstrBody As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowMailItem(System::String ^ bstrTo, System::String ^ bstrCC, System::String ^ bstrBCC, System::String ^ bstrSubject, System::String ^ bstrBody);" />
+      <MemberSignature Language="F#" Value="abstract member ShowMailItem : string * string * string * string * string -&gt; unit" Usage="uI.ShowMailItem (bstrTo, bstrCC, bstrBCC, bstrSubject, bstrBody)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -92,6 +95,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.UI.ShowModalDialog(System.String,System.Object,System.Object,System.Object,System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function ShowModalDialog (bstrName As String, varArguments As Object, varHeight As Object, varWidth As Object, varTop As Object, varLeft As Object) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ ShowModalDialog(System::String ^ bstrName, System::Object ^ varArguments, System::Object ^ varHeight, System::Object ^ varWidth, System::Object ^ varTop, System::Object ^ varLeft);" />
+      <MemberSignature Language="F#" Value="abstract member ShowModalDialog : string * obj * obj * obj * obj * obj -&gt; obj" Usage="uI.ShowModalDialog (bstrName, varArguments, varHeight, varWidth, varTop, varLeft)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -131,6 +135,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.UI.ShowSignatureDialog" />
       <MemberSignature Language="VB.NET" Value="Public Sub ShowSignatureDialog ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ShowSignatureDialog();" />
+      <MemberSignature Language="F#" Value="abstract member ShowSignatureDialog : unit -&gt; unit" Usage="uI.ShowSignatureDialog " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock" />
   <TypeSignature Language="VB.NET" Value="Public Interface SignedDataBlock" />
   <TypeSignature Language="C++ CLI" Value="public interface class SignedDataBlock" />
+  <TypeSignature Language="F#" Value="type SignedDataBlock = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.Caption" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Caption As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Caption { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Caption : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.Caption" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -78,6 +81,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.Sign" />
       <MemberSignature Language="VB.NET" Value="Public Sub Sign ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Sign();" />
+      <MemberSignature Language="F#" Value="abstract member Sign : unit -&gt; unit" Usage="signedDataBlock.Sign " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -103,6 +107,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.SignatureContainer" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignatureContainer As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ SignatureContainer { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureContainer : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.SignatureContainer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -128,6 +133,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.SignatureRelation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignatureRelation As XdSignatureRelation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XdSignatureRelation SignatureRelation { Microsoft::Office::Interop::InfoPath::SemiTrust::XdSignatureRelation get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureRelation : Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.SignatureRelation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -153,6 +159,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.Signatures" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Signatures As SignaturesCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::SignaturesCollection ^ Signatures { Microsoft::Office::Interop::InfoPath::SemiTrust::SignaturesCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Signatures : Microsoft.Office.Interop.InfoPath.SemiTrust.SignaturesCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.Signatures" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -178,6 +185,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.XPath" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property XPath As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ XPath { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.XPath : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.XPath" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -203,6 +211,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.XPathNamespaceDeclarations" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property XPathNamespaceDeclarations As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ XPathNamespaceDeclarations { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.XPathNamespaceDeclarations : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.XPathNamespaceDeclarations" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

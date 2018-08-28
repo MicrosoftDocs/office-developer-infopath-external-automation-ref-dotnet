@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE" />
   <TypeSignature Language="VB.NET" Value="Public Enum XMLELEM_TYPE" />
   <TypeSignature Language="C++ CLI" Value="public enum class XMLELEM_TYPE" />
+  <TypeSignature Language="F#" Value="type XMLELEM_TYPE = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_COMMENT" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_COMMENT" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_COMMENT" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_COMMENT = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_COMMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_DOCUMENT" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_DOCUMENT" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_DOCUMENT" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_DOCUMENT = 3" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_DOCUMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -60,6 +63,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_DTD" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_DTD" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_DTD" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_DTD = 4" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_DTD" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -79,6 +83,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_ELEMENT" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_ELEMENT" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_ELEMENT" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_ELEMENT = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_ELEMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -98,6 +103,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_OTHER" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_OTHER" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_OTHER" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_OTHER = 6" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_OTHER" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -117,6 +123,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_PI" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_PI" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_PI" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_PI = 5" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_PI" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -136,6 +143,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_TEXT" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_TEXT" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_TEXT" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_TEXT = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_TEXT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

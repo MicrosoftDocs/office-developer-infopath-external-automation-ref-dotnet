@@ -1,0 +1,28 @@
+﻿<Type Name="MergeEventHandler" FullName="Microsoft.Office.InfoPath.MergeEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void MergeEventHandler(object sender, MergeEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MergeEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.MergeEventHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub MergeEventHandler(sender As Object, e As MergeEventArgs)" />
+  <TypeSignature Language="C++ CLI" Value="public delegate void MergeEventHandler(System::Object ^ sender, MergeEventArgs ^ e);" />
+  <TypeSignature Language="F#" Value="type MergeEventHandler = delegate of obj * MergeEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.InfoPath.MergeEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">To be added.</param>
+    <param name="e">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

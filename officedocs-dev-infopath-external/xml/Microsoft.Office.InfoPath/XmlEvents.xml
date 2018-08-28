@@ -1,0 +1,91 @@
+﻿<Type Name="XmlEvents" FullName="Microsoft.Office.InfoPath.XmlEvents">
+  <TypeSignature Language="C#" Value="public abstract class XmlEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlEvents extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlEvents" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlEvents" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlEvents abstract" />
+  <TypeSignature Language="F#" Value="type XmlEvents = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlEvents.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlEvents();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlEvent this[string xpath] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlEvent Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEvents.Item(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(xpath As String) As XmlEvent" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlEvent ^ default[System::String ^] { Microsoft::Office::InfoPath::XmlEvent ^ get(System::String ^ xpath); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : Microsoft.Office.InfoPath.XmlEvent" Usage="Microsoft.Office.InfoPath.XmlEvents.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlEvent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xpath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xpath">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlEvent this[string xpath, string dataSourceName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlEvent Item(string, string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEvents.Item(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(xpath As String, dataSourceName As String) As XmlEvent" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlEvent ^ default[System::String ^, System::String ^] { Microsoft::Office::InfoPath::XmlEvent ^ get(System::String ^ xpath, System::String ^ dataSourceName); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string * string) : Microsoft.Office.InfoPath.XmlEvent" Usage="Microsoft.Office.InfoPath.XmlEvents.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlEvent</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xpath" Type="System.String" />
+        <Parameter Name="dataSourceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xpath">To be added.</param>
+        <param name="dataSourceName">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_Event" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLDOMDocumentEvents_Event" />
   <TypeSignature Language="C++ CLI" Value="public interface class XMLDOMDocumentEvents_Event" />
+  <TypeSignature Language="F#" Value="type XMLDOMDocumentEvents_Event = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_Event.ondataavailable" />
       <MemberSignature Language="VB.NET" Value="Event ondataavailable As XMLDOMDocumentEvents_ondataavailableEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::XMLDOMDocumentEvents_ondataavailableEventHandler ^ ondataavailable;" />
+      <MemberSignature Language="F#" Value="member this.ondataavailable : Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_ondataavailableEventHandler " Usage="member this.ondataavailable : Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_ondataavailableEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_Event.onreadystatechange" />
       <MemberSignature Language="VB.NET" Value="Event onreadystatechange As XMLDOMDocumentEvents_onreadystatechangeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::XMLDOMDocumentEvents_onreadystatechangeEventHandler ^ onreadystatechange;" />
+      <MemberSignature Language="F#" Value="member this.onreadystatechange : Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_onreadystatechangeEventHandler " Usage="member this.onreadystatechange : Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_onreadystatechangeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

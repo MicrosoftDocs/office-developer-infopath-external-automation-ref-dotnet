@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2" />
   <TypeSignature Language="VB.NET" Value="Public Interface _Application2&#xA;Implements _Application" />
   <TypeSignature Language="C++ CLI" Value="public interface class _Application2 : Microsoft::Office::Interop::InfoPath::SemiTrust::_Application" />
+  <TypeSignature Language="F#" Value="type _Application2 = interface&#xA;    interface _Application" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.ActiveWindow" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveWindow As WindowObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::WindowObject ^ ActiveWindow { Microsoft::Office::Interop::InfoPath::SemiTrust::WindowObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ActiveWindow : Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.ActiveWindow" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.ActiveWindow</InterfaceMember>
@@ -60,6 +62,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.CacheSolution(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CacheSolution (bstrSolutionURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CacheSolution(System::String ^ bstrSolutionURI);" />
+      <MemberSignature Language="F#" Value="abstract member CacheSolution : string -&gt; unit" Usage="_Application2.CacheSolution bstrSolutionURI" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -88,6 +91,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.FormatString(System.Object,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function FormatString (varInput As Object, bstrCategory As String, bstrOptions As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ FormatString(System::Object ^ varInput, System::String ^ bstrCategory, System::String ^ bstrOptions);" />
+      <MemberSignature Language="F#" Value="abstract member FormatString : obj * string * string -&gt; string" Usage="_Application2.FormatString (varInput, bstrCategory, bstrOptions)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.FormatString(System.Object,System.String,System.String)</InterfaceMember>
@@ -124,6 +128,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.IsDestinationReachable(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function IsDestinationReachable (bstrDestination As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool IsDestinationReachable(System::String ^ bstrDestination);" />
+      <MemberSignature Language="F#" Value="abstract member IsDestinationReachable : string -&gt; bool" Usage="_Application2.IsDestinationReachable bstrDestination" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -153,6 +158,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.LanguageSettings" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LanguageSettings As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ LanguageSettings { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LanguageSettings : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.LanguageSettings" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.LanguageSettings</InterfaceMember>
@@ -181,6 +187,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.MachineOnlineState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MachineOnlineState As XdMachineOnlineState" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XdMachineOnlineState MachineOnlineState { Microsoft::Office::Interop::InfoPath::SemiTrust::XdMachineOnlineState get(); };" />
+      <MemberSignature Language="F#" Value="member this.MachineOnlineState : Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.MachineOnlineState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -206,6 +213,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Name" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Name</InterfaceMember>
@@ -234,6 +242,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.NewADODBConnection" />
       <MemberSignature Language="VB.NET" Value="Public Function NewADODBConnection () As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ NewADODBConnection();" />
+      <MemberSignature Language="F#" Value="abstract member NewADODBConnection : unit -&gt; obj" Usage="_Application2.NewADODBConnection " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.NewADODBConnection</InterfaceMember>
@@ -263,6 +272,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.NewADODBRecordset" />
       <MemberSignature Language="VB.NET" Value="Public Function NewADODBRecordset () As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ NewADODBRecordset();" />
+      <MemberSignature Language="F#" Value="abstract member NewADODBRecordset : unit -&gt; obj" Usage="_Application2.NewADODBRecordset " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.NewADODBRecordset</InterfaceMember>
@@ -292,6 +302,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Quit(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Quit (bForce As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Quit(bool bForce);" />
+      <MemberSignature Language="F#" Value="abstract member Quit : bool -&gt; unit" Usage="_Application2.Quit bForce" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Quit(System.Boolean)</InterfaceMember>
@@ -323,6 +334,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.RegisterSolution(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub RegisterSolution (bstrSolutionURL As String, bstrBehavior As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterSolution(System::String ^ bstrSolutionURL, System::String ^ bstrBehavior);" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSolution : string * string -&gt; unit" Usage="_Application2.RegisterSolution (bstrSolutionURL, bstrBehavior)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -353,6 +365,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.UnregisterSolution(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub UnregisterSolution (bstrSolutionURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void UnregisterSolution(System::String ^ bstrSolutionURI);" />
+      <MemberSignature Language="F#" Value="abstract member UnregisterSolution : string -&gt; unit" Usage="_Application2.UnregisterSolution bstrSolutionURI" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -381,6 +394,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.UsableHeight" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UsableHeight As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int UsableHeight { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.UsableHeight : int" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.UsableHeight" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -406,6 +420,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.UsableWidth" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UsableWidth As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int UsableWidth { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.UsableWidth : int" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.UsableWidth" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -431,6 +446,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.User" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property User As UserObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::UserObject ^ User { Microsoft::Office::Interop::InfoPath::SemiTrust::UserObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.User : Microsoft.Office.Interop.InfoPath.SemiTrust.UserObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.User" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -456,6 +472,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Version" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Version { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Version : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Version" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Version</InterfaceMember>
@@ -484,6 +501,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Windows" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Windows As WindowsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::WindowsCollection ^ Windows { Microsoft::Office::Interop::InfoPath::SemiTrust::WindowsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Windows : Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Windows" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Windows</InterfaceMember>
@@ -512,6 +530,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.XDocuments" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property XDocuments As XDocumentsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XDocumentsCollection ^ XDocuments { Microsoft::Office::Interop::InfoPath::SemiTrust::XDocumentsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.XDocuments : Microsoft.Office.Interop.InfoPath.SemiTrust.XDocumentsCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.XDocuments" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.XDocuments</InterfaceMember>

@@ -1,0 +1,173 @@
+﻿<Type Name="WebServiceConnection" FullName="Microsoft.Office.InfoPath.WebServiceConnection">
+  <TypeSignature Language="C#" Value="public abstract class WebServiceConnection : Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WebServiceConnection extends Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.WebServiceConnection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class WebServiceConnection&#xA;Inherits DataConnection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class WebServiceConnection abstract : Microsoft::Office::InfoPath::DataConnection" />
+  <TypeSignature Language="F#" Value="type WebServiceConnection = class&#xA;    inherit DataConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.DataConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected WebServiceConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.WebServiceConnection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; WebServiceConnection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract void Execute (System.Xml.XPath.XPathNavigator input, System.Xml.XPath.XPathNavigator output, System.Xml.XPath.XPathNavigator errors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(class System.Xml.XPath.XPathNavigator input, class System.Xml.XPath.XPathNavigator output, class System.Xml.XPath.XPathNavigator errors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.WebServiceConnection.Execute(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Execute (input As XPathNavigator, output As XPathNavigator, errors As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Execute(System::Xml::XPath::XPathNavigator ^ input, System::Xml::XPath::XPathNavigator ^ output, System::Xml::XPath::XPathNavigator ^ errors);" />
+      <MemberSignature Language="F#" Value="override this.Execute : System.Xml.XPath.XPathNavigator * System.Xml.XPath.XPathNavigator * System.Xml.XPath.XPathNavigator -&gt; unit" Usage="webServiceConnection.Execute (input, output, errors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="output" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="errors" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="input">To be added.</param>
+        <param name="output">To be added.</param>
+        <param name="errors">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateDataSetDiffGram">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator GenerateDataSetDiffGram ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNavigator GenerateDataSetDiffGram() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.WebServiceConnection.GenerateDataSetDiffGram" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GenerateDataSetDiffGram () As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNavigator ^ GenerateDataSetDiffGram();" />
+      <MemberSignature Language="F#" Value="abstract member GenerateDataSetDiffGram : unit -&gt; System.Xml.XPath.XPathNavigator" Usage="webServiceConnection.GenerateDataSetDiffGram " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServiceUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri ServiceUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri ServiceUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.WebServiceConnection.ServiceUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property ServiceUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ ServiceUrl { Uri ^ get(); void set(Uri ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ServiceUrl : Uri with get, set" Usage="Microsoft.Office.InfoPath.WebServiceConnection.ServiceUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoapAction">
+      <MemberSignature Language="C#" Value="public abstract Uri SoapAction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SoapAction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.WebServiceConnection.SoapAction" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property SoapAction As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SoapAction { Uri ^ get(); void set(Uri ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SoapAction : Uri with get, set" Usage="Microsoft.Office.InfoPath.WebServiceConnection.SoapAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Timeout">
+      <MemberSignature Language="C#" Value="public abstract int Timeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Timeout" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.WebServiceConnection.Timeout" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Timeout As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Timeout { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.Timeout : int with get, set" Usage="Microsoft.Office.InfoPath.WebServiceConnection.Timeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WsdlUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri WsdlUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri WsdlUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.WebServiceConnection.WsdlUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property WsdlUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ WsdlUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.WsdlUrl : Uri" Usage="Microsoft.Office.InfoPath.WebServiceConnection.WsdlUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

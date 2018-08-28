@@ -1,0 +1,148 @@
+﻿<Type Name="FormTemplate" FullName="Microsoft.Office.InfoPath.FormTemplate">
+  <TypeSignature Language="C#" Value="public abstract class FormTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormTemplate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FormTemplate" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class FormTemplate" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FormTemplate abstract" />
+  <TypeSignature Language="F#" Value="type FormTemplate = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FormTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormTemplate.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; FormTemplate();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheId">
+      <MemberSignature Language="C#" Value="public abstract string CacheId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CacheId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormTemplate.CacheId" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CacheId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ CacheId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CacheId : string" Usage="Microsoft.Office.InfoPath.FormTemplate.CacheId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Manifest">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator Manifest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Manifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormTemplate.Manifest" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Manifest As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ Manifest { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Manifest : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.FormTemplate.Manifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenFileFromPackage">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream OpenFileFromPackage (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream OpenFileFromPackage(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormTemplate.OpenFileFromPackage(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function OpenFileFromPackage (filename As String) As Stream" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::IO::Stream ^ OpenFileFromPackage(System::String ^ filename);" />
+      <MemberSignature Language="F#" Value="abstract member OpenFileFromPackage : string -&gt; System.IO.Stream" Usage="formTemplate.OpenFileFromPackage filename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public abstract Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormTemplate.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Uri As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ Uri { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uri : Uri" Usage="Microsoft.Office.InfoPath.FormTemplate.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public abstract string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormTemplate.Version" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Version As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Version { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Version : string" Usage="Microsoft.Office.InfoPath.FormTemplate.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

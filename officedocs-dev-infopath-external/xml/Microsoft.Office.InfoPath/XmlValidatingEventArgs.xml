@@ -1,0 +1,162 @@
+﻿<Type Name="XmlValidatingEventArgs" FullName="Microsoft.Office.InfoPath.XmlValidatingEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class XmlValidatingEventArgs : Microsoft.Office.InfoPath.XmlEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlValidatingEventArgs extends Microsoft.Office.InfoPath.XmlEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlValidatingEventArgs&#xA;Inherits XmlEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlValidatingEventArgs abstract : Microsoft::Office::InfoPath::XmlEventArgs" />
+  <TypeSignature Language="F#" Value="type XmlValidatingEventArgs = class&#xA;    inherit XmlEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.XmlEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlValidatingEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlValidatingEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public abstract void ReportError (System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(class System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ReportError (node As XPathNavigator, siteIndependent As Boolean, message As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReportError(System::Xml::XPath::XPathNavigator ^ node, bool siteIndependent, System::String ^ message);" />
+      <MemberSignature Language="F#" Value="abstract member ReportError : System.Xml.XPath.XPathNavigator * bool * string -&gt; unit" Usage="xmlValidatingEventArgs.ReportError (node, siteIndependent, message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="siteIndependent" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="siteIndependent">To be added.</param>
+        <param name="message">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public abstract void ReportError (System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(class System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ReportError (node As XPathNavigator, siteIndependent As Boolean, message As String, messageDetails As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReportError(System::Xml::XPath::XPathNavigator ^ node, bool siteIndependent, System::String ^ message, System::String ^ messageDetails);" />
+      <MemberSignature Language="F#" Value="abstract member ReportError : System.Xml.XPath.XPathNavigator * bool * string * string -&gt; unit" Usage="xmlValidatingEventArgs.ReportError (node, siteIndependent, message, messageDetails)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="siteIndependent" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageDetails" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="siteIndependent">To be added.</param>
+        <param name="message">To be added.</param>
+        <param name="messageDetails">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public abstract void ReportError (System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails, int errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(class System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails, int32 errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ReportError (node As XPathNavigator, siteIndependent As Boolean, message As String, messageDetails As String, errorCode As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReportError(System::Xml::XPath::XPathNavigator ^ node, bool siteIndependent, System::String ^ message, System::String ^ messageDetails, int errorCode);" />
+      <MemberSignature Language="F#" Value="abstract member ReportError : System.Xml.XPath.XPathNavigator * bool * string * string * int -&gt; unit" Usage="xmlValidatingEventArgs.ReportError (node, siteIndependent, message, messageDetails, errorCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="siteIndependent" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageDetails" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="siteIndependent">To be added.</param>
+        <param name="message">To be added.</param>
+        <param name="messageDetails">To be added.</param>
+        <param name="errorCode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public abstract void ReportError (System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails, int errorCode, Microsoft.Office.InfoPath.ErrorMode errorMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(class System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails, int32 errorCode, valuetype Microsoft.Office.InfoPath.ErrorMode errorMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReportError(System::Xml::XPath::XPathNavigator ^ node, bool siteIndependent, System::String ^ message, System::String ^ messageDetails, int errorCode, Microsoft::Office::InfoPath::ErrorMode errorMode);" />
+      <MemberSignature Language="F#" Value="abstract member ReportError : System.Xml.XPath.XPathNavigator * bool * string * string * int * Microsoft.Office.InfoPath.ErrorMode -&gt; unit" Usage="xmlValidatingEventArgs.ReportError (node, siteIndependent, message, messageDetails, errorCode, errorMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="siteIndependent" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageDetails" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="errorMode" Type="Microsoft.Office.InfoPath.ErrorMode" />
+      </Parameters>
+      <Docs>
+        <param name="node">To be added.</param>
+        <param name="siteIndependent">To be added.</param>
+        <param name="message">To be added.</param>
+        <param name="messageDetails">To be added.</param>
+        <param name="errorCode">To be added.</param>
+        <param name="errorMode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

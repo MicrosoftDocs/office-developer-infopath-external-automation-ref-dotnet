@@ -1,0 +1,81 @@
+﻿<Type Name="WindowState" FullName="Microsoft.Office.InfoPath.WindowState">
+  <TypeSignature Language="C#" Value="public enum WindowState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WindowState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.WindowState" />
+  <TypeSignature Language="VB.NET" Value="Public Enum WindowState" />
+  <TypeSignature Language="C++ CLI" Value="public enum class WindowState" />
+  <TypeSignature Language="F#" Value="type WindowState = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Maximized">
+      <MemberSignature Language="C#" Value="Maximized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.WindowState Maximized = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.WindowState.Maximized" />
+      <MemberSignature Language="VB.NET" Value="Maximized" />
+      <MemberSignature Language="C++ CLI" Value="Maximized" />
+      <MemberSignature Language="F#" Value="Maximized = 0" Usage="Microsoft.Office.InfoPath.WindowState.Maximized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.WindowState</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimized">
+      <MemberSignature Language="C#" Value="Minimized" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.WindowState Minimized = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.WindowState.Minimized" />
+      <MemberSignature Language="VB.NET" Value="Minimized" />
+      <MemberSignature Language="C++ CLI" Value="Minimized" />
+      <MemberSignature Language="F#" Value="Minimized = 2" Usage="Microsoft.Office.InfoPath.WindowState.Minimized" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.WindowState</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.WindowState Normal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.WindowState.Normal" />
+      <MemberSignature Language="VB.NET" Value="Normal" />
+      <MemberSignature Language="C++ CLI" Value="Normal" />
+      <MemberSignature Language="F#" Value="Normal = 1" Usage="Microsoft.Office.InfoPath.WindowState.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.WindowState</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

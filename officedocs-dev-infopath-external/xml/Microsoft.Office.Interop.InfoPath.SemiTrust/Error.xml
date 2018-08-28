@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Error" />
   <TypeSignature Language="VB.NET" Value="Public Interface Error" />
   <TypeSignature Language="C++ CLI" Value="public interface class Error" />
+  <TypeSignature Language="F#" Value="type Error = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Error.ConditionName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConditionName As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ConditionName { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ConditionName : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Error.ConditionName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Error.DetailedErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Property DetailedErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ DetailedErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DetailedErrorMessage : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Error.DetailedErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -78,6 +81,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Error.ErrorCode" />
       <MemberSignature Language="VB.NET" Value="Public Property ErrorCode As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int ErrorCode { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ErrorCode : int with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Error.ErrorCode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -103,6 +107,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Error.ErrorType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorType As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ErrorType { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ErrorType : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Error.ErrorType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -128,6 +133,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Error.Node" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Node As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ Node { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Node : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Error.Node" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -153,6 +159,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Error.ShortErrorMessage" />
       <MemberSignature Language="VB.NET" Value="Public Property ShortErrorMessage As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ShortErrorMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ShortErrorMessage : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Error.ShortErrorMessage" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdAttachmentType" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdAttachmentType" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdAttachmentType" />
+  <TypeSignature Language="F#" Value="type XdAttachmentType = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdAttachmentType.xdNone" />
       <MemberSignature Language="VB.NET" Value="xdNone" />
       <MemberSignature Language="C++ CLI" Value="xdNone" />
+      <MemberSignature Language="F#" Value="xdNone = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdAttachmentType.xdNone" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdAttachmentType.xdXml" />
       <MemberSignature Language="VB.NET" Value="xdXml" />
       <MemberSignature Language="C++ CLI" Value="xdXml" />
+      <MemberSignature Language="F#" Value="xdXml = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdAttachmentType.xdXml" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -60,6 +63,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdAttachmentType.xdXmlXsn" />
       <MemberSignature Language="VB.NET" Value="xdXmlXsn" />
       <MemberSignature Language="C++ CLI" Value="xdXmlXsn" />
+      <MemberSignature Language="F#" Value="xdXmlXsn = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdAttachmentType.xdXmlXsn" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

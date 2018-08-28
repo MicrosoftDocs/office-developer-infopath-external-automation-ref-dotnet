@@ -1,0 +1,81 @@
+﻿<Type Name="Environment" FullName="Microsoft.Office.InfoPath.Environment">
+  <TypeSignature Language="C#" Value="public abstract class Environment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Environment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Environment" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Environment" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Environment abstract" />
+  <TypeSignature Language="F#" Value="type Environment = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Environment ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.Environment.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Environment();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBrowser">
+      <MemberSignature Language="C#" Value="public abstract bool IsBrowser { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBrowser" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Environment.IsBrowser" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsBrowser As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsBrowser { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsBrowser : bool" Usage="Microsoft.Office.InfoPath.Environment.IsBrowser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMobile">
+      <MemberSignature Language="C#" Value="public abstract bool IsMobile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMobile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Environment.IsMobile" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsMobile As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsMobile { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsMobile : bool" Usage="Microsoft.Office.InfoPath.Environment.IsMobile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

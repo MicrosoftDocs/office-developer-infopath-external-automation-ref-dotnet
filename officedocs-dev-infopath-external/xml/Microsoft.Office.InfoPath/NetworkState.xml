@@ -1,0 +1,85 @@
+﻿<Type Name="NetworkState" FullName="Microsoft.Office.InfoPath.NetworkState">
+  <TypeSignature Language="C#" Value="public abstract class NetworkState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit NetworkState extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.NetworkState" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class NetworkState" />
+  <TypeSignature Language="C++ CLI" Value="public ref class NetworkState abstract" />
+  <TypeSignature Language="F#" Value="type NetworkState = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NetworkState ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.NetworkState.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; NetworkState();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDestinationReachable">
+      <MemberSignature Language="C#" Value="public abstract bool IsDestinationReachable (string destination);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsDestinationReachable(string destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.NetworkState.IsDestinationReachable(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function IsDestinationReachable (destination As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool IsDestinationReachable(System::String ^ destination);" />
+      <MemberSignature Language="F#" Value="abstract member IsDestinationReachable : string -&gt; bool" Usage="networkState.IsDestinationReachable destination" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="destination">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MachineOnlineState">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.MachineState MachineOnlineState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.MachineState MachineOnlineState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.NetworkState.MachineOnlineState" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property MachineOnlineState As MachineState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::MachineState MachineOnlineState { Microsoft::Office::InfoPath::MachineState get(); };" />
+      <MemberSignature Language="F#" Value="member this.MachineOnlineState : Microsoft.Office.InfoPath.MachineState" Usage="Microsoft.Office.InfoPath.NetworkState.MachineOnlineState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.MachineState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator" />
   <TypeSignature Language="VB.NET" Value="Public Class SignedDataBlocksEnumerator&#xA;Implements IEnumerator" />
   <TypeSignature Language="C++ CLI" Value="public ref class SignedDataBlocksEnumerator : System::Collections::IEnumerator" />
+  <TypeSignature Language="F#" Value="type SignedDataBlocksEnumerator = class&#xA;    interface IEnumerator" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -27,6 +28,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator.#ctor(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (objInstance As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; SignedDataBlocksEnumerator(System::Object ^ objInstance);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator : obj -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator" Usage="new Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator objInstance" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator.Current" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Current As SignedDataBlockObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::SignedDataBlockObject ^ Current { Microsoft::Office::Interop::InfoPath::SemiTrust::SignedDataBlockObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Current : Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator.Current" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -67,6 +70,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator.MoveNext" />
       <MemberSignature Language="VB.NET" Value="Public Function MoveNext () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual bool MoveNext();" />
+      <MemberSignature Language="F#" Value="abstract member MoveNext : unit -&gt; bool&#xA;override this.MoveNext : unit -&gt; bool" Usage="signedDataBlocksEnumerator.MoveNext " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerator.MoveNext</InterfaceMember>
@@ -91,6 +95,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator.Reset" />
       <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Reset();" />
+      <MemberSignature Language="F#" Value="abstract member Reset : unit -&gt; unit&#xA;override this.Reset : unit -&gt; unit" Usage="signedDataBlocksEnumerator.Reset " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerator.Reset</InterfaceMember>
@@ -113,7 +118,8 @@
       <MemberSignature Language="ILAsm" Value=".property instance object System.Collections.IEnumerator.Current" />
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksEnumerator.System#Collections#IEnumerator#Current" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property Current As Object Implements IEnumerator.Current" />
-      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System.Collections.IEnumerator.Current { System::Object ^ get(); };" />
+      <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::IEnumerator::Current { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Usage="System.Collections.IEnumerator.Current" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IEnumerator.Current</InterfaceMember>

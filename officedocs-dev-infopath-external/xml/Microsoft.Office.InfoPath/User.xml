@@ -1,0 +1,131 @@
+﻿<Type Name="User" FullName="Microsoft.Office.InfoPath.User">
+  <TypeSignature Language="C#" Value="public abstract class User" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit User extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.User" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class User" />
+  <TypeSignature Language="C++ CLI" Value="public ref class User abstract" />
+  <TypeSignature Language="F#" Value="type User = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected User ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.User.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; User();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCurrentUser">
+      <MemberSignature Language="C#" Value="public abstract bool IsCurrentUser (string userName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsCurrentUser(string userName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.User.IsCurrentUser(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function IsCurrentUser (userName As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool IsCurrentUser(System::String ^ userName);" />
+      <MemberSignature Language="F#" Value="abstract member IsCurrentUser : string -&gt; bool" Usage="user.IsCurrentUser userName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUserMemberOf">
+      <MemberSignature Language="C#" Value="public abstract bool IsUserMemberOf (string groupName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsUserMemberOf(string groupName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.User.IsUserMemberOf(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function IsUserMemberOf (groupName As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool IsUserMemberOf(System::String ^ groupName);" />
+      <MemberSignature Language="F#" Value="abstract member IsUserMemberOf : string -&gt; bool" Usage="user.IsUserMemberOf groupName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="groupName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="groupName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoginName">
+      <MemberSignature Language="C#" Value="public abstract string LoginName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LoginName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.User.LoginName" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property LoginName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ LoginName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LoginName : string" Usage="Microsoft.Office.InfoPath.User.LoginName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserName">
+      <MemberSignature Language="C#" Value="public abstract string UserName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.User.UserName" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property UserName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ UserName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserName : string" Usage="Microsoft.Office.InfoPath.User.UserName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

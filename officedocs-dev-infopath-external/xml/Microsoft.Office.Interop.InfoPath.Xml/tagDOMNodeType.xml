@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType" />
   <TypeSignature Language="VB.NET" Value="Public Enum tagDOMNodeType" />
   <TypeSignature Language="C++ CLI" Value="public enum class tagDOMNodeType" />
+  <TypeSignature Language="F#" Value="type tagDOMNodeType = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_ATTRIBUTE" />
       <MemberSignature Language="VB.NET" Value="NODE_ATTRIBUTE" />
       <MemberSignature Language="C++ CLI" Value="NODE_ATTRIBUTE" />
+      <MemberSignature Language="F#" Value="NODE_ATTRIBUTE = 2" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_ATTRIBUTE" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_CDATA_SECTION" />
       <MemberSignature Language="VB.NET" Value="NODE_CDATA_SECTION" />
       <MemberSignature Language="C++ CLI" Value="NODE_CDATA_SECTION" />
+      <MemberSignature Language="F#" Value="NODE_CDATA_SECTION = 4" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_CDATA_SECTION" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -60,6 +63,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_COMMENT" />
       <MemberSignature Language="VB.NET" Value="NODE_COMMENT" />
       <MemberSignature Language="C++ CLI" Value="NODE_COMMENT" />
+      <MemberSignature Language="F#" Value="NODE_COMMENT = 8" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_COMMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -79,6 +83,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_DOCUMENT" />
       <MemberSignature Language="VB.NET" Value="NODE_DOCUMENT" />
       <MemberSignature Language="C++ CLI" Value="NODE_DOCUMENT" />
+      <MemberSignature Language="F#" Value="NODE_DOCUMENT = 9" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_DOCUMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -98,6 +103,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_DOCUMENT_FRAGMENT" />
       <MemberSignature Language="VB.NET" Value="NODE_DOCUMENT_FRAGMENT" />
       <MemberSignature Language="C++ CLI" Value="NODE_DOCUMENT_FRAGMENT" />
+      <MemberSignature Language="F#" Value="NODE_DOCUMENT_FRAGMENT = 11" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_DOCUMENT_FRAGMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -117,6 +123,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_DOCUMENT_TYPE" />
       <MemberSignature Language="VB.NET" Value="NODE_DOCUMENT_TYPE" />
       <MemberSignature Language="C++ CLI" Value="NODE_DOCUMENT_TYPE" />
+      <MemberSignature Language="F#" Value="NODE_DOCUMENT_TYPE = 10" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_DOCUMENT_TYPE" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -136,6 +143,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_ELEMENT" />
       <MemberSignature Language="VB.NET" Value="NODE_ELEMENT" />
       <MemberSignature Language="C++ CLI" Value="NODE_ELEMENT" />
+      <MemberSignature Language="F#" Value="NODE_ELEMENT = 1" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_ELEMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -155,6 +163,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_ENTITY" />
       <MemberSignature Language="VB.NET" Value="NODE_ENTITY" />
       <MemberSignature Language="C++ CLI" Value="NODE_ENTITY" />
+      <MemberSignature Language="F#" Value="NODE_ENTITY = 6" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_ENTITY" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -174,6 +183,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_ENTITY_REFERENCE" />
       <MemberSignature Language="VB.NET" Value="NODE_ENTITY_REFERENCE" />
       <MemberSignature Language="C++ CLI" Value="NODE_ENTITY_REFERENCE" />
+      <MemberSignature Language="F#" Value="NODE_ENTITY_REFERENCE = 5" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_ENTITY_REFERENCE" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -193,6 +203,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_INVALID" />
       <MemberSignature Language="VB.NET" Value="NODE_INVALID" />
       <MemberSignature Language="C++ CLI" Value="NODE_INVALID" />
+      <MemberSignature Language="F#" Value="NODE_INVALID = 0" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_INVALID" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -212,6 +223,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_NOTATION" />
       <MemberSignature Language="VB.NET" Value="NODE_NOTATION" />
       <MemberSignature Language="C++ CLI" Value="NODE_NOTATION" />
+      <MemberSignature Language="F#" Value="NODE_NOTATION = 12" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_NOTATION" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -231,6 +243,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_PROCESSING_INSTRUCTION" />
       <MemberSignature Language="VB.NET" Value="NODE_PROCESSING_INSTRUCTION" />
       <MemberSignature Language="C++ CLI" Value="NODE_PROCESSING_INSTRUCTION" />
+      <MemberSignature Language="F#" Value="NODE_PROCESSING_INSTRUCTION = 7" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_PROCESSING_INSTRUCTION" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -250,6 +263,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_TEXT" />
       <MemberSignature Language="VB.NET" Value="NODE_TEXT" />
       <MemberSignature Language="C++ CLI" Value="NODE_TEXT" />
+      <MemberSignature Language="F#" Value="NODE_TEXT = 3" Usage="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType.NODE_TEXT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" />
   <TypeSignature Language="VB.NET" Value="Public Interface IXMLDOMDocument&#xA;Implements IXMLDOMNode" />
   <TypeSignature Language="C++ CLI" Value="public interface class IXMLDOMDocument : Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode" />
+  <TypeSignature Language="F#" Value="type IXMLDOMDocument = interface&#xA;    interface IXMLDOMNode" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.abort" />
       <MemberSignature Language="VB.NET" Value="Public Sub abort ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void abort();" />
+      <MemberSignature Language="F#" Value="abstract member abort : unit -&gt; unit" Usage="iXMLDOMDocument.abort " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -57,6 +59,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.appendChild(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)" />
       <MemberSignature Language="VB.NET" Value="Public Function appendChild (newChild As IXMLDOMNode) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ appendChild(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ newChild);" />
+      <MemberSignature Language="F#" Value="abstract member appendChild : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="iXMLDOMDocument.appendChild newChild" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.appendChild(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)</InterfaceMember>
@@ -89,6 +92,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.async" />
       <MemberSignature Language="VB.NET" Value="Public Property async As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool async { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.async : bool with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.async" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -114,6 +118,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.attributes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property attributes As IXMLDOMNamedNodeMap" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNamedNodeMap ^ attributes { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNamedNodeMap ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.attributes : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNamedNodeMap" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.attributes" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.attributes</InterfaceMember>
@@ -142,6 +147,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.baseName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property baseName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ baseName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.baseName : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.baseName" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.baseName</InterfaceMember>
@@ -170,6 +176,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.childNodes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property childNodes As DOMNodeList" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::DOMNodeList ^ childNodes { Microsoft::Office::Interop::InfoPath::SemiTrust::DOMNodeList ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.childNodes : Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeList" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.childNodes" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.childNodes</InterfaceMember>
@@ -198,6 +205,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.cloneNode(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function cloneNode (deep As Boolean) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ cloneNode(bool deep);" />
+      <MemberSignature Language="F#" Value="abstract member cloneNode : bool -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="iXMLDOMDocument.cloneNode deep" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.cloneNode(System.Boolean)</InterfaceMember>
@@ -230,6 +238,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.createAttribute(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function createAttribute (name As String) As IXMLDOMAttribute" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMAttribute ^ createAttribute(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member createAttribute : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMAttribute" Usage="iXMLDOMDocument.createAttribute name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -259,6 +268,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.createCDATASection(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function createCDATASection (data As String) As IXMLDOMCDATASection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMCDATASection ^ createCDATASection(System::String ^ data);" />
+      <MemberSignature Language="F#" Value="abstract member createCDATASection : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMCDATASection" Usage="iXMLDOMDocument.createCDATASection data" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -288,6 +298,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.createComment(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function createComment (data As String) As IXMLDOMComment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMComment ^ createComment(System::String ^ data);" />
+      <MemberSignature Language="F#" Value="abstract member createComment : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMComment" Usage="iXMLDOMDocument.createComment data" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -317,6 +328,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.createDocumentFragment" />
       <MemberSignature Language="VB.NET" Value="Public Function createDocumentFragment () As IXMLDOMDocumentFragment" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocumentFragment ^ createDocumentFragment();" />
+      <MemberSignature Language="F#" Value="abstract member createDocumentFragment : unit -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocumentFragment" Usage="iXMLDOMDocument.createDocumentFragment " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -343,6 +355,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.createElement(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function createElement (tagName As String) As IXMLDOMElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMElement ^ createElement(System::String ^ tagName);" />
+      <MemberSignature Language="F#" Value="abstract member createElement : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMElement" Usage="iXMLDOMDocument.createElement tagName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -372,6 +385,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.createEntityReference(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function createEntityReference (name As String) As IXMLDOMEntityReference" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMEntityReference ^ createEntityReference(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member createEntityReference : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMEntityReference" Usage="iXMLDOMDocument.createEntityReference name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -401,6 +415,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.createNode(System.Object,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function createNode (Type As Object, name As String, namespaceURI As String) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ createNode(System::Object ^ Type, System::String ^ name, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member createNode : obj * string * string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="iXMLDOMDocument.createNode (Type, name, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -434,6 +449,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.createProcessingInstruction(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function createProcessingInstruction (target As String, data As String) As IXMLDOMProcessingInstruction" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMProcessingInstruction ^ createProcessingInstruction(System::String ^ target, System::String ^ data);" />
+      <MemberSignature Language="F#" Value="abstract member createProcessingInstruction : string * string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMProcessingInstruction" Usage="iXMLDOMDocument.createProcessingInstruction (target, data)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -465,6 +481,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.createTextNode(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function createTextNode (data As String) As IXMLDOMText" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMText ^ createTextNode(System::String ^ data);" />
+      <MemberSignature Language="F#" Value="abstract member createTextNode : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMText" Usage="iXMLDOMDocument.createTextNode data" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -494,6 +511,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.dataType" />
       <MemberSignature Language="VB.NET" Value="Public Property dataType As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ dataType { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.dataType : obj with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.dataType" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.dataType</InterfaceMember>
@@ -522,6 +540,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.definition" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property definition As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ definition { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.definition : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.definition" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.definition</InterfaceMember>
@@ -550,6 +569,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.doctype" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property doctype As IXMLDOMDocumentType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocumentType ^ doctype { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocumentType ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.doctype : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocumentType" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.doctype" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -575,6 +595,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.documentElement" />
       <MemberSignature Language="VB.NET" Value="Public Property documentElement As IXMLDOMElement" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMElement ^ documentElement { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMElement ^ get(); void set(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMElement ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.documentElement : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMElement with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.documentElement" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -600,6 +621,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.firstChild" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property firstChild As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ firstChild { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.firstChild : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.firstChild" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.firstChild</InterfaceMember>
@@ -628,6 +650,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.getElementsByTagName(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function getElementsByTagName (tagName As String) As DOMNodeList" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::DOMNodeList ^ getElementsByTagName(System::String ^ tagName);" />
+      <MemberSignature Language="F#" Value="abstract member getElementsByTagName : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeList" Usage="iXMLDOMDocument.getElementsByTagName tagName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -657,6 +680,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.hasChildNodes" />
       <MemberSignature Language="VB.NET" Value="Public Function hasChildNodes () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool hasChildNodes();" />
+      <MemberSignature Language="F#" Value="abstract member hasChildNodes : unit -&gt; bool" Usage="iXMLDOMDocument.hasChildNodes " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.hasChildNodes</InterfaceMember>
@@ -686,6 +710,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.implementation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property implementation As IXMLDOMImplementation" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMImplementation ^ implementation { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMImplementation ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.implementation : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMImplementation" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.implementation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -711,6 +736,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.insertBefore(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function insertBefore (newChild As IXMLDOMNode, refChild As Object) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ insertBefore(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ newChild, System::Object ^ refChild);" />
+      <MemberSignature Language="F#" Value="abstract member insertBefore : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode * obj -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="iXMLDOMDocument.insertBefore (newChild, refChild)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.insertBefore(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,System.Object)</InterfaceMember>
@@ -745,6 +771,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.lastChild" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property lastChild As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ lastChild { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.lastChild : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.lastChild" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.lastChild</InterfaceMember>
@@ -773,6 +800,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.load(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function load (xmlSource As Object) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool load(System::Object ^ xmlSource);" />
+      <MemberSignature Language="F#" Value="abstract member load : obj -&gt; bool" Usage="iXMLDOMDocument.load xmlSource" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -802,6 +830,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.loadXML(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function loadXML (bstrXML As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool loadXML(System::String ^ bstrXML);" />
+      <MemberSignature Language="F#" Value="abstract member loadXML : string -&gt; bool" Usage="iXMLDOMDocument.loadXML bstrXML" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -831,6 +860,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.namespaceURI" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property namespaceURI As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ namespaceURI { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.namespaceURI : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.namespaceURI" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.namespaceURI</InterfaceMember>
@@ -859,6 +889,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nextSibling" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property nextSibling As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ nextSibling { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.nextSibling : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nextSibling" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.nextSibling</InterfaceMember>
@@ -887,6 +918,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeFromID(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function nodeFromID (idString As String) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ nodeFromID(System::String ^ idString);" />
+      <MemberSignature Language="F#" Value="abstract member nodeFromID : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="iXMLDOMDocument.nodeFromID idString" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -916,6 +948,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeName" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property nodeName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ nodeName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.nodeName : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeName" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.nodeName</InterfaceMember>
@@ -944,6 +977,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property nodeType As DOMNodeType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::DOMNodeType nodeType { Microsoft::Office::Interop::InfoPath::SemiTrust::DOMNodeType get(); };" />
+      <MemberSignature Language="F#" Value="member this.nodeType : Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeType" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeType" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.nodeType</InterfaceMember>
@@ -972,6 +1006,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeTypedValue" />
       <MemberSignature Language="VB.NET" Value="Public Property nodeTypedValue As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ nodeTypedValue { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.nodeTypedValue : obj with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeTypedValue" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.nodeTypedValue</InterfaceMember>
@@ -1000,6 +1035,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeTypeString" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property nodeTypeString As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ nodeTypeString { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.nodeTypeString : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeTypeString" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.nodeTypeString</InterfaceMember>
@@ -1028,6 +1064,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeValue" />
       <MemberSignature Language="VB.NET" Value="Public Property nodeValue As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ nodeValue { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.nodeValue : obj with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.nodeValue" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.nodeValue</InterfaceMember>
@@ -1056,6 +1093,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.ondataavailable" />
       <MemberSignature Language="VB.NET" Value="Public Property ondataavailable As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ondataavailable {  void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ondataavailable : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.ondataavailable" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1081,6 +1119,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.onreadystatechange" />
       <MemberSignature Language="VB.NET" Value="Public Property onreadystatechange As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ onreadystatechange {  void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.onreadystatechange : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.onreadystatechange" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1106,6 +1145,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.ontransformnode" />
       <MemberSignature Language="VB.NET" Value="Public Property ontransformnode As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ ontransformnode {  void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ontransformnode : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.ontransformnode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1131,6 +1171,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.ownerDocument" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ownerDocument As IXMLDOMDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ ownerDocument { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ownerDocument : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.ownerDocument" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.ownerDocument</InterfaceMember>
@@ -1159,6 +1200,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.parentNode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property parentNode As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ parentNode { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.parentNode : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.parentNode" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.parentNode</InterfaceMember>
@@ -1187,6 +1229,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.parsed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property parsed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool parsed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.parsed : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.parsed" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.parsed</InterfaceMember>
@@ -1215,6 +1258,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.parseError" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property parseError As IXMLDOMParseError" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMParseError ^ parseError { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMParseError ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.parseError : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseError" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.parseError" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1240,6 +1284,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.prefix" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property prefix As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ prefix { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.prefix : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.prefix" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.prefix</InterfaceMember>
@@ -1268,6 +1313,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.preserveWhiteSpace" />
       <MemberSignature Language="VB.NET" Value="Public Property preserveWhiteSpace As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool preserveWhiteSpace { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.preserveWhiteSpace : bool with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.preserveWhiteSpace" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1293,6 +1339,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.previousSibling" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property previousSibling As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ previousSibling { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.previousSibling : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.previousSibling" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.previousSibling</InterfaceMember>
@@ -1321,6 +1368,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.readyState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property readyState As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int readyState { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.readyState : int" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.readyState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1346,6 +1394,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.removeChild(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)" />
       <MemberSignature Language="VB.NET" Value="Public Function removeChild (childNode As IXMLDOMNode) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ removeChild(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ childNode);" />
+      <MemberSignature Language="F#" Value="abstract member removeChild : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="iXMLDOMDocument.removeChild childNode" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.removeChild(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)</InterfaceMember>
@@ -1378,6 +1427,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.replaceChild(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)" />
       <MemberSignature Language="VB.NET" Value="Public Function replaceChild (newChild As IXMLDOMNode, oldChild As IXMLDOMNode) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ replaceChild(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ newChild, Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ oldChild);" />
+      <MemberSignature Language="F#" Value="abstract member replaceChild : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode * Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="iXMLDOMDocument.replaceChild (newChild, oldChild)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.replaceChild(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)</InterfaceMember>
@@ -1412,6 +1462,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.resolveExternals" />
       <MemberSignature Language="VB.NET" Value="Public Property resolveExternals As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool resolveExternals { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.resolveExternals : bool with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.resolveExternals" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1437,6 +1488,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.save(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub save (destination As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void save(System::Object ^ destination);" />
+      <MemberSignature Language="F#" Value="abstract member save : obj -&gt; unit" Usage="iXMLDOMDocument.save destination" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1465,6 +1517,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.selectNodes(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function selectNodes (queryString As String) As DOMNodeList" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::DOMNodeList ^ selectNodes(System::String ^ queryString);" />
+      <MemberSignature Language="F#" Value="abstract member selectNodes : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeList" Usage="iXMLDOMDocument.selectNodes queryString" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.selectNodes(System.String)</InterfaceMember>
@@ -1497,6 +1550,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.selectSingleNode(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function selectSingleNode (queryString As String) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ selectSingleNode(System::String ^ queryString);" />
+      <MemberSignature Language="F#" Value="abstract member selectSingleNode : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="iXMLDOMDocument.selectSingleNode queryString" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.selectSingleNode(System.String)</InterfaceMember>
@@ -1529,6 +1583,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.specified" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property specified As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool specified { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.specified : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.specified" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.specified</InterfaceMember>
@@ -1557,6 +1612,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.text" />
       <MemberSignature Language="VB.NET" Value="Public Property text As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ text { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.text : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.text" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.text</InterfaceMember>
@@ -1585,6 +1641,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.transformNode(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)" />
       <MemberSignature Language="VB.NET" Value="Public Function transformNode (stylesheet As IXMLDOMNode) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ transformNode(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ stylesheet);" />
+      <MemberSignature Language="F#" Value="abstract member transformNode : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode -&gt; string" Usage="iXMLDOMDocument.transformNode stylesheet" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.transformNode(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)</InterfaceMember>
@@ -1617,6 +1674,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.transformNodeToObject(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub transformNodeToObject (stylesheet As IXMLDOMNode, outputObject As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void transformNodeToObject(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ stylesheet, System::Object ^ outputObject);" />
+      <MemberSignature Language="F#" Value="abstract member transformNodeToObject : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode * obj -&gt; unit" Usage="iXMLDOMDocument.transformNodeToObject (stylesheet, outputObject)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.transformNodeToObject(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,System.Object)</InterfaceMember>
@@ -1650,6 +1708,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.url" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property url As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ url { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.url : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.url" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1675,6 +1734,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.validateOnParse" />
       <MemberSignature Language="VB.NET" Value="Public Property validateOnParse As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool validateOnParse { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.validateOnParse : bool with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.validateOnParse" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -1700,6 +1760,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.xml" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property xml As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ xml { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.xml : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument.xml" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode.xml</InterfaceMember>

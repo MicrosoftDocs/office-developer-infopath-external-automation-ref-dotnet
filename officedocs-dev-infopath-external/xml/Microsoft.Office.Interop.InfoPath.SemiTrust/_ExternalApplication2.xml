@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2" />
   <TypeSignature Language="VB.NET" Value="Public Interface _ExternalApplication2&#xA;Implements _ExternalApplication" />
   <TypeSignature Language="C++ CLI" Value="public interface class _ExternalApplication2 : Microsoft::Office::Interop::InfoPath::SemiTrust::_ExternalApplication" />
+  <TypeSignature Language="F#" Value="type _ExternalApplication2 = interface&#xA;    interface _ExternalApplication" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2.CacheSolution(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CacheSolution (bstrSolutionURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CacheSolution(System::String ^ bstrSolutionURI);" />
+      <MemberSignature Language="F#" Value="abstract member CacheSolution : string -&gt; unit" Usage="_ExternalApplication2.CacheSolution bstrSolutionURI" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.CacheSolution(System.String)</InterfaceMember>
@@ -63,6 +65,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2.Close(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Close (bstrDocumentURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Close(System::String ^ bstrDocumentURI);" />
+      <MemberSignature Language="F#" Value="abstract member Close : string -&gt; unit" Usage="_ExternalApplication2.Close bstrDocumentURI" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.Close(System.String)</InterfaceMember>
@@ -94,6 +97,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2.New(System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (bstrDocumentURI As String, dwBehavior As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void New(System::String ^ bstrDocumentURI, int dwBehavior);" />
+      <MemberSignature Language="F#" Value="abstract member New : string * int -&gt; unit" Usage="_ExternalApplication2.New (bstrDocumentURI, dwBehavior)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.New(System.String,System.Int32)</InterfaceMember>
@@ -127,6 +131,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2.NewFromSolution(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub NewFromSolution (bstrSolutionURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void NewFromSolution(System::String ^ bstrSolutionURI);" />
+      <MemberSignature Language="F#" Value="abstract member NewFromSolution : string -&gt; unit" Usage="_ExternalApplication2.NewFromSolution bstrSolutionURI" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.NewFromSolution(System.String)</InterfaceMember>
@@ -158,6 +163,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2.NewFromSolutionWithInputParameters(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub NewFromSolutionWithInputParameters (bstrSolutionURI As String, bstrInputParameters As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void NewFromSolutionWithInputParameters(System::String ^ bstrSolutionURI, System::String ^ bstrInputParameters);" />
+      <MemberSignature Language="F#" Value="abstract member NewFromSolutionWithInputParameters : string * string -&gt; unit" Usage="_ExternalApplication2.NewFromSolutionWithInputParameters (bstrSolutionURI, bstrInputParameters)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -188,6 +194,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2.Open(System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Open (bstrDocumentURI As String, dwBehavior As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Open(System::String ^ bstrDocumentURI, int dwBehavior);" />
+      <MemberSignature Language="F#" Value="abstract member Open : string * int -&gt; unit" Usage="_ExternalApplication2.Open (bstrDocumentURI, dwBehavior)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.Open(System.String,System.Int32)</InterfaceMember>
@@ -221,6 +228,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2.Quit" />
       <MemberSignature Language="VB.NET" Value="Public Sub Quit ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Quit();" />
+      <MemberSignature Language="F#" Value="abstract member Quit : unit -&gt; unit" Usage="_ExternalApplication2.Quit " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.Quit</InterfaceMember>
@@ -249,6 +257,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2.RegisterSolution(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub RegisterSolution (bstrSolutionURL As String, bstrBehavior As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterSolution(System::String ^ bstrSolutionURL, System::String ^ bstrBehavior);" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSolution : string * string -&gt; unit" Usage="_ExternalApplication2.RegisterSolution (bstrSolutionURL, bstrBehavior)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.RegisterSolution(System.String,System.String)</InterfaceMember>
@@ -282,6 +291,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication2.UnregisterSolution(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub UnregisterSolution (bstrSolutionURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void UnregisterSolution(System::String ^ bstrSolutionURI);" />
+      <MemberSignature Language="F#" Value="abstract member UnregisterSolution : string -&gt; unit" Usage="_ExternalApplication2.UnregisterSolution bstrSolutionURI" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.UnregisterSolution(System.String)</InterfaceMember>

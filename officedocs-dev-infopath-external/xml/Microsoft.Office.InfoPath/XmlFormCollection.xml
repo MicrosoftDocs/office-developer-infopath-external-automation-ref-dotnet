@@ -1,0 +1,353 @@
+﻿<Type Name="XmlFormCollection" FullName="Microsoft.Office.InfoPath.XmlFormCollection">
+  <TypeSignature Language="C#" Value="public abstract class XmlFormCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlFormCollection extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlFormCollection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlFormCollection&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlFormCollection abstract : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type XmlFormCollection = class&#xA;    interface IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlFormCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlFormCollection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormCollection.Count" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.InfoPath.XmlFormCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="xmlFormCollection.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlForm Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormCollection.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(index As Integer) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlForm ^ default[int] { Microsoft::Office::InfoPath::XmlForm ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.InfoPath.XmlForm" Usage="Microsoft.Office.InfoPath.XmlFormCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm New (string formLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm New(string formLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function New (formLocation As String) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::XmlForm ^ New(System::String ^ formLocation);" />
+      <MemberSignature Language="F#" Value="abstract member New : string -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormCollection.New formLocation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formLocation" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formLocation">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm New (string formLocation, Microsoft.Office.InfoPath.XmlFormOpenMode behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm New(string formLocation, valuetype Microsoft.Office.InfoPath.XmlFormOpenMode behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function New (formLocation As String, behavior As XmlFormOpenMode) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::XmlForm ^ New(System::String ^ formLocation, Microsoft::Office::InfoPath::XmlFormOpenMode behavior);" />
+      <MemberSignature Language="F#" Value="abstract member New : string * Microsoft.Office.InfoPath.XmlFormOpenMode -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormCollection.New (formLocation, behavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formLocation" Type="System.String" />
+        <Parameter Name="behavior" Type="Microsoft.Office.InfoPath.XmlFormOpenMode" />
+      </Parameters>
+      <Docs>
+        <param name="formLocation">To be added.</param>
+        <param name="behavior">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewFromFormTemplate">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm NewFromFormTemplate (string formTemplateLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm NewFromFormTemplate(string formTemplateLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function NewFromFormTemplate (formTemplateLocation As String) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::XmlForm ^ NewFromFormTemplate(System::String ^ formTemplateLocation);" />
+      <MemberSignature Language="F#" Value="abstract member NewFromFormTemplate : string -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormCollection.NewFromFormTemplate formTemplateLocation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formTemplateLocation" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formTemplateLocation">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewFromFormTemplate">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm NewFromFormTemplate (string formTemplateLocation, string xmlData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm NewFromFormTemplate(string formTemplateLocation, string xmlData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function NewFromFormTemplate (formTemplateLocation As String, xmlData As String) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::XmlForm ^ NewFromFormTemplate(System::String ^ formTemplateLocation, System::String ^ xmlData);" />
+      <MemberSignature Language="F#" Value="abstract member NewFromFormTemplate : string * string -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormCollection.NewFromFormTemplate (formTemplateLocation, xmlData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formTemplateLocation" Type="System.String" />
+        <Parameter Name="xmlData" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formTemplateLocation">To be added.</param>
+        <param name="xmlData">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewFromFormTemplate">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm NewFromFormTemplate (string formTemplateLocation, System.Xml.XPath.XPathNavigator xmlData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm NewFromFormTemplate(string formTemplateLocation, class System.Xml.XPath.XPathNavigator xmlData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate(System.String,System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function NewFromFormTemplate (formTemplateLocation As String, xmlData As XPathNavigator) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::XmlForm ^ NewFromFormTemplate(System::String ^ formTemplateLocation, System::Xml::XPath::XPathNavigator ^ xmlData);" />
+      <MemberSignature Language="F#" Value="abstract member NewFromFormTemplate : string * System.Xml.XPath.XPathNavigator -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormCollection.NewFromFormTemplate (formTemplateLocation, xmlData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formTemplateLocation" Type="System.String" />
+        <Parameter Name="xmlData" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="formTemplateLocation">To be added.</param>
+        <param name="xmlData">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewFromFormTemplate">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm NewFromFormTemplate (string formTemplateLocation, string xmlData, Microsoft.Office.InfoPath.XmlFormOpenMode behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm NewFromFormTemplate(string formTemplateLocation, string xmlData, valuetype Microsoft.Office.InfoPath.XmlFormOpenMode behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate(System.String,System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function NewFromFormTemplate (formTemplateLocation As String, xmlData As String, behavior As XmlFormOpenMode) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::XmlForm ^ NewFromFormTemplate(System::String ^ formTemplateLocation, System::String ^ xmlData, Microsoft::Office::InfoPath::XmlFormOpenMode behavior);" />
+      <MemberSignature Language="F#" Value="abstract member NewFromFormTemplate : string * string * Microsoft.Office.InfoPath.XmlFormOpenMode -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormCollection.NewFromFormTemplate (formTemplateLocation, xmlData, behavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formTemplateLocation" Type="System.String" />
+        <Parameter Name="xmlData" Type="System.String" />
+        <Parameter Name="behavior" Type="Microsoft.Office.InfoPath.XmlFormOpenMode" />
+      </Parameters>
+      <Docs>
+        <param name="formTemplateLocation">To be added.</param>
+        <param name="xmlData">To be added.</param>
+        <param name="behavior">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewFromFormTemplateWithInputParameters">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm NewFromFormTemplateWithInputParameters (string formTemplateLocation, string inputParameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm NewFromFormTemplateWithInputParameters(string formTemplateLocation, string inputParameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplateWithInputParameters(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function NewFromFormTemplateWithInputParameters (formTemplateLocation As String, inputParameters As String) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::XmlForm ^ NewFromFormTemplateWithInputParameters(System::String ^ formTemplateLocation, System::String ^ inputParameters);" />
+      <MemberSignature Language="F#" Value="abstract member NewFromFormTemplateWithInputParameters : string * string -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormCollection.NewFromFormTemplateWithInputParameters (formTemplateLocation, inputParameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formTemplateLocation" Type="System.String" />
+        <Parameter Name="inputParameters" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formTemplateLocation">To be added.</param>
+        <param name="inputParameters">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm Open (string fileLocation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm Open(string fileLocation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.Open(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Open (fileLocation As String) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::XmlForm ^ Open(System::String ^ fileLocation);" />
+      <MemberSignature Language="F#" Value="abstract member Open : string -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormCollection.Open fileLocation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileLocation" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileLocation">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Open">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlForm Open (string fileLocation, Microsoft.Office.InfoPath.XmlFormOpenMode behavior);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm Open(string fileLocation, valuetype Microsoft.Office.InfoPath.XmlFormOpenMode behavior) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCollection.Open(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Open (fileLocation As String, behavior As XmlFormOpenMode) As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::XmlForm ^ Open(System::String ^ fileLocation, Microsoft::Office::InfoPath::XmlFormOpenMode behavior);" />
+      <MemberSignature Language="F#" Value="abstract member Open : string * Microsoft.Office.InfoPath.XmlFormOpenMode -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormCollection.Open (fileLocation, behavior)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileLocation" Type="System.String" />
+        <Parameter Name="behavior" Type="Microsoft.Office.InfoPath.XmlFormOpenMode" />
+      </Parameters>
+      <Docs>
+        <param name="fileLocation">To be added.</param>
+        <param name="behavior">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

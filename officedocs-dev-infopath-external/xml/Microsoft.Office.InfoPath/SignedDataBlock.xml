@@ -1,0 +1,186 @@
+﻿<Type Name="SignedDataBlock" FullName="Microsoft.Office.InfoPath.SignedDataBlock">
+  <TypeSignature Language="C#" Value="public abstract class SignedDataBlock" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SignedDataBlock extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignedDataBlock" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SignedDataBlock" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SignedDataBlock abstract" />
+  <TypeSignature Language="F#" Value="type SignedDataBlock = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SignedDataBlock ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignedDataBlock.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SignedDataBlock();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="public abstract string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.Caption" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Caption As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Caption { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Caption : string" Usage="Microsoft.Office.InfoPath.SignedDataBlock.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.Name" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.InfoPath.SignedDataBlock.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public abstract void Sign ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Sign() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignedDataBlock.Sign" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Sign ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Sign();" />
+      <MemberSignature Language="F#" Value="abstract member Sign : unit -&gt; unit" Usage="signedDataBlock.Sign " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureContainer">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator SignatureContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator SignatureContainer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.SignatureContainer" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SignatureContainer As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ SignatureContainer { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureContainer : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.SignedDataBlock.SignatureContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureRelation">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignatureRelation SignatureRelation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.SignatureRelation SignatureRelation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.SignatureRelation" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SignatureRelation As SignatureRelation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignatureRelation SignatureRelation { Microsoft::Office::InfoPath::SignatureRelation get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureRelation : Microsoft.Office.InfoPath.SignatureRelation" Usage="Microsoft.Office.InfoPath.SignedDataBlock.SignatureRelation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureRelation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signatures">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignatureCollection Signatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.SignatureCollection Signatures" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.Signatures" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Signatures As SignatureCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignatureCollection ^ Signatures { Microsoft::Office::InfoPath::SignatureCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Signatures : Microsoft.Office.InfoPath.SignatureCollection" Usage="Microsoft.Office.InfoPath.SignedDataBlock.Signatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathExpression XPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathExpression XPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.XPath" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property XPath As XPathExpression" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathExpression ^ XPath { System::Xml::XPath::XPathExpression ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.XPath : System.Xml.XPath.XPathExpression" Usage="Microsoft.Office.InfoPath.SignedDataBlock.XPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

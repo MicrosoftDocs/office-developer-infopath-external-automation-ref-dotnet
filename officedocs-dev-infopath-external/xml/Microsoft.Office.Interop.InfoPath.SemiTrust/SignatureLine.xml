@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine" />
   <TypeSignature Language="VB.NET" Value="Public Interface SignatureLine" />
   <TypeSignature Language="C++ CLI" Value="public interface class SignatureLine" />
+  <TypeSignature Language="F#" Value="type SignatureLine = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.Id" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Id { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Id : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.Id" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.Sign(System.String,System.String,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Sign (bstrImageURL As String, bstrSuggestedSigner As String, bstrSuggestedSignerTitle As String, bstrSuggestedSignerEmailAddress As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Sign(System::String ^ bstrImageURL, System::String ^ bstrSuggestedSigner, System::String ^ bstrSuggestedSignerTitle, System::String ^ bstrSuggestedSignerEmailAddress);" />
+      <MemberSignature Language="F#" Value="abstract member Sign : string * string * string * string -&gt; bool" Usage="signatureLine.Sign (bstrImageURL, bstrSuggestedSigner, bstrSuggestedSignerTitle, bstrSuggestedSignerEmailAddress)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -88,6 +91,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.Signature" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Signature As SignatureObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::SignatureObject ^ Signature { Microsoft::Office::Interop::InfoPath::SemiTrust::SignatureObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Signature : Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.Signature" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -113,6 +117,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.SignatureAppearanceType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignatureAppearanceType As XdSignatureAppearanceType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XdSignatureAppearanceType SignatureAppearanceType { Microsoft::Office::Interop::InfoPath::SemiTrust::XdSignatureAppearanceType get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureAppearanceType : Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureAppearanceType" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.SignatureAppearanceType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -138,6 +143,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.SuggestedSigner" />
       <MemberSignature Language="VB.NET" Value="Public Property SuggestedSigner As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SuggestedSigner { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SuggestedSigner : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.SuggestedSigner" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -163,6 +169,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.SuggestedSignerEmailAddress" />
       <MemberSignature Language="VB.NET" Value="Public Property SuggestedSignerEmailAddress As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SuggestedSignerEmailAddress { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SuggestedSignerEmailAddress : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.SuggestedSignerEmailAddress" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -188,6 +195,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.SuggestedSignerTitle" />
       <MemberSignature Language="VB.NET" Value="Public Property SuggestedSignerTitle As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SuggestedSignerTitle { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SuggestedSignerTitle : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLine.SuggestedSignerTitle" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

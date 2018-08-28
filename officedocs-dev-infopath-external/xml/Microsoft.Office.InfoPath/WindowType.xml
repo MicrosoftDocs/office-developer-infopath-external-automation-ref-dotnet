@@ -1,0 +1,61 @@
+﻿<Type Name="WindowType" FullName="Microsoft.Office.InfoPath.WindowType">
+  <TypeSignature Language="C#" Value="public enum WindowType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WindowType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.WindowType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum WindowType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class WindowType" />
+  <TypeSignature Language="F#" Value="type WindowType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Designer">
+      <MemberSignature Language="C#" Value="Designer" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.WindowType Designer = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.WindowType.Designer" />
+      <MemberSignature Language="VB.NET" Value="Designer" />
+      <MemberSignature Language="C++ CLI" Value="Designer" />
+      <MemberSignature Language="F#" Value="Designer = 1" Usage="Microsoft.Office.InfoPath.WindowType.Designer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.WindowType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Editor">
+      <MemberSignature Language="C#" Value="Editor" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.WindowType Editor = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.WindowType.Editor" />
+      <MemberSignature Language="VB.NET" Value="Editor" />
+      <MemberSignature Language="C++ CLI" Value="Editor" />
+      <MemberSignature Language="F#" Value="Editor = 0" Usage="Microsoft.Office.InfoPath.WindowType.Editor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.WindowType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

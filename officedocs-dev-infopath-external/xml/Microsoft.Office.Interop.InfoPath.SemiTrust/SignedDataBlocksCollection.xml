@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksCollection" />
   <TypeSignature Language="VB.NET" Value="Public Interface SignedDataBlocksCollection&#xA;Implements SignedDataBlocks" />
   <TypeSignature Language="C++ CLI" Value="public interface class SignedDataBlocksCollection : Microsoft::Office::Interop::InfoPath::SemiTrust::SignedDataBlocks" />
+  <TypeSignature Language="F#" Value="type SignedDataBlocksCollection = interface&#xA;    interface SignedDataBlocks" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

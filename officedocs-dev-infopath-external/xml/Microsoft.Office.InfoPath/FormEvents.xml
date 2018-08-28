@@ -1,0 +1,199 @@
+﻿<Type Name="FormEvents" FullName="Microsoft.Office.InfoPath.FormEvents">
+  <TypeSignature Language="C#" Value="public abstract class FormEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormEvents extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FormEvents" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class FormEvents" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FormEvents abstract" />
+  <TypeSignature Language="F#" Value="type FormEvents = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FormEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormEvents.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; FormEvents();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContextChanged">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.ContextChangedEventHandler ContextChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.ContextChangedEventHandler ContextChanged" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event ContextChanged As ContextChangedEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::ContextChangedEventHandler ^ ContextChanged;" />
+      <MemberSignature Language="F#" Value="member this.ContextChanged : Microsoft.Office.InfoPath.ContextChangedEventHandler " Usage="member this.ContextChanged : Microsoft.Office.InfoPath.ContextChangedEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ContextChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Loading">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.LoadingEventHandler Loading;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.LoadingEventHandler Loading" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.FormEvents.Loading" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event Loading As LoadingEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::LoadingEventHandler ^ Loading;" />
+      <MemberSignature Language="F#" Value="member this.Loading : Microsoft.Office.InfoPath.LoadingEventHandler " Usage="member this.Loading : Microsoft.Office.InfoPath.LoadingEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.LoadingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Merge">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.MergeEventHandler Merge;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.MergeEventHandler Merge" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.FormEvents.Merge" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event Merge As MergeEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::MergeEventHandler ^ Merge;" />
+      <MemberSignature Language="F#" Value="member this.Merge : Microsoft.Office.InfoPath.MergeEventHandler " Usage="member this.Merge : Microsoft.Office.InfoPath.MergeEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.MergeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.SaveEventHandler Save;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.SaveEventHandler Save" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.FormEvents.Save" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event Save As SaveEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::SaveEventHandler ^ Save;" />
+      <MemberSignature Language="F#" Value="member this.Save : Microsoft.Office.InfoPath.SaveEventHandler " Usage="member this.Save : Microsoft.Office.InfoPath.SaveEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SaveEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.SignEventHandler Sign;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.SignEventHandler Sign" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.FormEvents.Sign" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event Sign As SignEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::SignEventHandler ^ Sign;" />
+      <MemberSignature Language="F#" Value="member this.Sign : Microsoft.Office.InfoPath.SignEventHandler " Usage="member this.Sign : Microsoft.Office.InfoPath.SignEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Submit">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.SubmitEventHandler Submit;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.SubmitEventHandler Submit" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.FormEvents.Submit" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event Submit As SubmitEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::SubmitEventHandler ^ Submit;" />
+      <MemberSignature Language="F#" Value="member this.Submit : Microsoft.Office.InfoPath.SubmitEventHandler " Usage="member this.Submit : Microsoft.Office.InfoPath.SubmitEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SubmitEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VersionUpgrade">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.VersionUpgradeEventHandler VersionUpgrade;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.VersionUpgradeEventHandler VersionUpgrade" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event VersionUpgrade As VersionUpgradeEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::VersionUpgradeEventHandler ^ VersionUpgrade;" />
+      <MemberSignature Language="F#" Value="member this.VersionUpgrade : Microsoft.Office.InfoPath.VersionUpgradeEventHandler " Usage="member this.VersionUpgrade : Microsoft.Office.InfoPath.VersionUpgradeEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.VersionUpgradeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewSwitched">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.ViewSwitchedEventHandler ViewSwitched;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.ViewSwitchedEventHandler ViewSwitched" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event ViewSwitched As ViewSwitchedEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::ViewSwitchedEventHandler ^ ViewSwitched;" />
+      <MemberSignature Language="F#" Value="member this.ViewSwitched : Microsoft.Office.InfoPath.ViewSwitchedEventHandler " Usage="member this.ViewSwitched : Microsoft.Office.InfoPath.ViewSwitchedEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewSwitchedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

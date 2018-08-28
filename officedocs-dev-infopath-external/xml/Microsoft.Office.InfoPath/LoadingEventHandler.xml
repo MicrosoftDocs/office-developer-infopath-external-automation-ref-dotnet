@@ -1,0 +1,28 @@
+﻿<Type Name="LoadingEventHandler" FullName="Microsoft.Office.InfoPath.LoadingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void LoadingEventHandler(object sender, LoadingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LoadingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.LoadingEventHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub LoadingEventHandler(sender As Object, e As LoadingEventArgs)" />
+  <TypeSignature Language="C++ CLI" Value="public delegate void LoadingEventHandler(System::Object ^ sender, LoadingEventArgs ^ e);" />
+  <TypeSignature Language="F#" Value="type LoadingEventHandler = delegate of obj * LoadingEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.InfoPath.LoadingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">To be added.</param>
+    <param name="e">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

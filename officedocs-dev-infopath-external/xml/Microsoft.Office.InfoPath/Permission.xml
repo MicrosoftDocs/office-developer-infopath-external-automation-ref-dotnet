@@ -1,0 +1,231 @@
+﻿<Type Name="Permission" FullName="Microsoft.Office.InfoPath.Permission">
+  <TypeSignature Language="C#" Value="public abstract class Permission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Permission extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Permission" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Permission" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Permission abstract" />
+  <TypeSignature Language="F#" Value="type Permission = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Permission ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.Permission.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Permission();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyPolicy">
+      <MemberSignature Language="C#" Value="public abstract void ApplyPolicy (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyPolicy(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.Permission.ApplyPolicy(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ApplyPolicy (filename As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ApplyPolicy(System::String ^ filename);" />
+      <MemberSignature Language="F#" Value="abstract member ApplyPolicy : string -&gt; unit" Usage="permission.ApplyPolicy filename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentAuthor">
+      <MemberSignature Language="C#" Value="public abstract string DocumentAuthor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentAuthor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.DocumentAuthor" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property DocumentAuthor As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ DocumentAuthor { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DocumentAuthor : string with get, set" Usage="Microsoft.Office.InfoPath.Permission.DocumentAuthor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public abstract bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.Enabled" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Enabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Enabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="Microsoft.Office.InfoPath.Permission.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionFromPolicy">
+      <MemberSignature Language="C#" Value="public abstract bool PermissionFromPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PermissionFromPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.PermissionFromPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property PermissionFromPolicy As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool PermissionFromPolicy { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.PermissionFromPolicy : bool" Usage="Microsoft.Office.InfoPath.Permission.PermissionFromPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyDescription">
+      <MemberSignature Language="C#" Value="public abstract string PolicyDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PolicyDescription" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.PolicyDescription" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property PolicyDescription As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ PolicyDescription { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PolicyDescription : string" Usage="Microsoft.Office.InfoPath.Permission.PolicyDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyName">
+      <MemberSignature Language="C#" Value="public abstract string PolicyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PolicyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.PolicyName" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property PolicyName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ PolicyName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PolicyName : string" Usage="Microsoft.Office.InfoPath.Permission.PolicyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestPermissionUrl">
+      <MemberSignature Language="C#" Value="public abstract string RequestPermissionUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestPermissionUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.RequestPermissionUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property RequestPermissionUrl As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ RequestPermissionUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.RequestPermissionUrl : string with get, set" Usage="Microsoft.Office.InfoPath.Permission.RequestPermissionUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreLicenses">
+      <MemberSignature Language="C#" Value="public abstract bool StoreLicenses { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StoreLicenses" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.StoreLicenses" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property StoreLicenses As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool StoreLicenses { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.StoreLicenses : bool with get, set" Usage="Microsoft.Office.InfoPath.Permission.StoreLicenses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPermissions">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermissionCollection UserPermissions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.UserPermissionCollection UserPermissions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.UserPermissions" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property UserPermissions As UserPermissionCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::UserPermissionCollection ^ UserPermissions { Microsoft::Office::InfoPath::UserPermissionCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserPermissions : Microsoft.Office.InfoPath.UserPermissionCollection" Usage="Microsoft.Office.InfoPath.Permission.UserPermissions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermissionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

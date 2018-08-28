@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.MergeEventObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface MergeEventObject&#xA;Implements MergeEvent" />
   <TypeSignature Language="C++ CLI" Value="public interface class MergeEventObject : Microsoft::Office::Interop::InfoPath::SemiTrust::MergeEvent" />
+  <TypeSignature Language="F#" Value="type MergeEventObject = interface&#xA;    interface MergeEvent&#xA;    interface DocReturnEvent&#xA;    interface DocEvent" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

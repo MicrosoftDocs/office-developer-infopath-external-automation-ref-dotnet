@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_Event" />
   <TypeSignature Language="VB.NET" Value="Public Interface _DataDOMEventSink_Event" />
   <TypeSignature Language="C++ CLI" Value="public interface class _DataDOMEventSink_Event" />
+  <TypeSignature Language="F#" Value="type _DataDOMEventSink_Event = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_Event.OnAfterChange" />
       <MemberSignature Language="VB.NET" Value="Event OnAfterChange As _DataDOMEventSink_OnAfterChangeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_DataDOMEventSink_OnAfterChangeEventHandler ^ OnAfterChange;" />
+      <MemberSignature Language="F#" Value="member this.OnAfterChange : Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnAfterChangeEventHandler " Usage="member this.OnAfterChange : Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnAfterChangeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_Event.OnBeforeChange" />
       <MemberSignature Language="VB.NET" Value="Event OnBeforeChange As _DataDOMEventSink_OnBeforeChangeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_DataDOMEventSink_OnBeforeChangeEventHandler ^ OnBeforeChange;" />
+      <MemberSignature Language="F#" Value="member this.OnBeforeChange : Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnBeforeChangeEventHandler " Usage="member this.OnBeforeChange : Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnBeforeChangeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -66,6 +69,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_Event.OnValidate" />
       <MemberSignature Language="VB.NET" Value="Event OnValidate As _DataDOMEventSink_OnValidateEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_DataDOMEventSink_OnValidateEventHandler ^ OnValidate;" />
+      <MemberSignature Language="F#" Value="member this.OnValidate : Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnValidateEventHandler " Usage="member this.OnValidate : Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnValidateEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

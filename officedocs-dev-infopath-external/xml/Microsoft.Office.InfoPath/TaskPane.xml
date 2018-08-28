@@ -1,0 +1,81 @@
+﻿<Type Name="TaskPane" FullName="Microsoft.Office.InfoPath.TaskPane">
+  <TypeSignature Language="C#" Value="public abstract class TaskPane" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TaskPane extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.TaskPane" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class TaskPane" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TaskPane abstract" />
+  <TypeSignature Language="F#" Value="type TaskPane = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TaskPane ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.TaskPane.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; TaskPane();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskPaneType">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.TaskPaneType TaskPaneType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.TaskPaneType TaskPaneType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.TaskPane.TaskPaneType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property TaskPaneType As TaskPaneType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::TaskPaneType TaskPaneType { Microsoft::Office::InfoPath::TaskPaneType get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskPaneType : Microsoft.Office.InfoPath.TaskPaneType" Usage="Microsoft.Office.InfoPath.TaskPane.TaskPaneType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public abstract bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.TaskPane.Visible" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Visible As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Visible { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Visible : bool with get, set" Usage="Microsoft.Office.InfoPath.TaskPane.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" />
   <TypeSignature Language="VB.NET" Value="Public Interface ExternalApplication&#xA;Implements _ExternalApplication2" />
   <TypeSignature Language="C++ CLI" Value="public interface class ExternalApplication : Microsoft::Office::Interop::InfoPath::SemiTrust::_ExternalApplication2" />
+  <TypeSignature Language="F#" Value="type ExternalApplication = interface&#xA;    interface _ExternalApplication2&#xA;    interface _ExternalApplication" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

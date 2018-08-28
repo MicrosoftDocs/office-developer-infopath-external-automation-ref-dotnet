@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdMachineOnlineState" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdMachineOnlineState" />
+  <TypeSignature Language="F#" Value="type XdMachineOnlineState = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdIEIsInOfflineMode" />
       <MemberSignature Language="VB.NET" Value="xdIEIsInOfflineMode" />
       <MemberSignature Language="C++ CLI" Value="xdIEIsInOfflineMode" />
+      <MemberSignature Language="F#" Value="xdIEIsInOfflineMode = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdIEIsInOfflineMode" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdOffline" />
       <MemberSignature Language="VB.NET" Value="xdOffline" />
       <MemberSignature Language="C++ CLI" Value="xdOffline" />
+      <MemberSignature Language="F#" Value="xdOffline = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdOffline" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -60,6 +63,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdOnline" />
       <MemberSignature Language="VB.NET" Value="xdOnline" />
       <MemberSignature Language="C++ CLI" Value="xdOnline" />
+      <MemberSignature Language="F#" Value="xdOnline = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdOnline" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

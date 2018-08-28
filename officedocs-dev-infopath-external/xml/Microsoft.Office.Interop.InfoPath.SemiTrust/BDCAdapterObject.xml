@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.BDCAdapterObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface BDCAdapterObject&#xA;Implements BDCAdapter" />
   <TypeSignature Language="C++ CLI" Value="public interface class BDCAdapterObject : Microsoft::Office::Interop::InfoPath::SemiTrust::BDCAdapter" />
+  <TypeSignature Language="F#" Value="type BDCAdapterObject = interface&#xA;    interface BDCAdapter" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

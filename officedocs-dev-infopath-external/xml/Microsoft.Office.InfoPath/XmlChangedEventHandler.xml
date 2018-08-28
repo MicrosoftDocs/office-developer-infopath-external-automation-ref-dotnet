@@ -1,0 +1,28 @@
+﻿<Type Name="XmlChangedEventHandler" FullName="Microsoft.Office.InfoPath.XmlChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void XmlChangedEventHandler(object sender, XmlEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlChangedEventHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub XmlChangedEventHandler(sender As Object, e As XmlEventArgs)" />
+  <TypeSignature Language="C++ CLI" Value="public delegate void XmlChangedEventHandler(System::Object ^ sender, XmlEventArgs ^ e);" />
+  <TypeSignature Language="F#" Value="type XmlChangedEventHandler = delegate of obj * XmlEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.InfoPath.XmlEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">To be added.</param>
+    <param name="e">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

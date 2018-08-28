@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_SinkHelper" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class _ButtonEventSink_SinkHelper&#xA;Implements _ButtonEventSink" />
   <TypeSignature Language="C++ CLI" Value="public ref class _ButtonEventSink_SinkHelper sealed : Microsoft::Office::Interop::InfoPath::SemiTrust::_ButtonEventSink" />
+  <TypeSignature Language="F#" Value="type _ButtonEventSink_SinkHelper = class&#xA;    interface _ButtonEventSink" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_SinkHelper.m_dwCookie" />
       <MemberSignature Language="VB.NET" Value="Public m_dwCookie As Integer " />
       <MemberSignature Language="C++ CLI" Value="public: int m_dwCookie;" />
+      <MemberSignature Language="F#" Value="val mutable m_dwCookie : int" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_SinkHelper.m_dwCookie" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -51,6 +53,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_SinkHelper.m_OnClickDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnClickDelegate As _ButtonEventSink_OnClickEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_ButtonEventSink_OnClickEventHandler ^ m_OnClickDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnClickDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_OnClickEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_SinkHelper.m_OnClickDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -70,6 +73,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_SinkHelper.OnClick(Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnClick (pEvent As DocActionEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnClick(Microsoft::Office::Interop::InfoPath::SemiTrust::DocActionEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnClick : Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEvent -&gt; unit&#xA;override this.OnClick : Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEvent -&gt; unit" Usage="_ButtonEventSink_SinkHelper.OnClick pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink.OnClick(Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEvent)</InterfaceMember>

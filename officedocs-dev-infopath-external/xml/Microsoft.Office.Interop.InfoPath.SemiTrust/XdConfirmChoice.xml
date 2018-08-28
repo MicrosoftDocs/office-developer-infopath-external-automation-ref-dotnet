@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdConfirmChoice" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdConfirmChoice" />
+  <TypeSignature Language="F#" Value="type XdConfirmChoice = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdCancel" />
       <MemberSignature Language="VB.NET" Value="xdCancel" />
       <MemberSignature Language="C++ CLI" Value="xdCancel" />
+      <MemberSignature Language="F#" Value="xdCancel = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdCancel" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdNo" />
       <MemberSignature Language="VB.NET" Value="xdNo" />
       <MemberSignature Language="C++ CLI" Value="xdNo" />
+      <MemberSignature Language="F#" Value="xdNo = 7" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdNo" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -60,6 +63,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdOK" />
       <MemberSignature Language="VB.NET" Value="xdOK" />
       <MemberSignature Language="C++ CLI" Value="xdOK" />
+      <MemberSignature Language="F#" Value="xdOK = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdOK" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -79,6 +83,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdYes" />
       <MemberSignature Language="VB.NET" Value="xdYes" />
       <MemberSignature Language="C++ CLI" Value="xdYes" />
+      <MemberSignature Language="F#" Value="xdYes = 6" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdYes" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

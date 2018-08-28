@@ -1,0 +1,123 @@
+﻿<Type Name="ServerInfo" FullName="Microsoft.Office.InfoPath.ServerInfo">
+  <TypeSignature Language="C#" Value="public abstract class ServerInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServerInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ServerInfo" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ServerInfo" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ServerInfo abstract" />
+  <TypeSignature Language="F#" Value="type ServerInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServerInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.ServerInfo.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ServerInfo();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointListUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SharePointListUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SharePointListUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ServerInfo.SharePointListUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SharePointListUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SharePointListUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointListUrl : Uri" Usage="Microsoft.Office.InfoPath.ServerInfo.SharePointListUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointServerRootUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SharePointServerRootUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SharePointServerRootUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ServerInfo.SharePointServerRootUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SharePointServerRootUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SharePointServerRootUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointServerRootUrl : Uri" Usage="Microsoft.Office.InfoPath.ServerInfo.SharePointServerRootUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointSiteCollectionUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SharePointSiteCollectionUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SharePointSiteCollectionUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ServerInfo.SharePointSiteCollectionUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SharePointSiteCollectionUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SharePointSiteCollectionUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointSiteCollectionUrl : Uri" Usage="Microsoft.Office.InfoPath.ServerInfo.SharePointSiteCollectionUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointSiteUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SharePointSiteUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SharePointSiteUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ServerInfo.SharePointSiteUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SharePointSiteUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SharePointSiteUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointSiteUrl : Uri" Usage="Microsoft.Office.InfoPath.ServerInfo.SharePointSiteUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

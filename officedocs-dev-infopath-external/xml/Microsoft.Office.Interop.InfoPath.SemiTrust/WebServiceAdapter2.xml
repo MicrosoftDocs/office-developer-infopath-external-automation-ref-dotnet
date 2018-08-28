@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2" />
   <TypeSignature Language="VB.NET" Value="Public Interface WebServiceAdapter2&#xA;Implements WebServiceAdapter" />
   <TypeSignature Language="C++ CLI" Value="public interface class WebServiceAdapter2 : Microsoft::Office::Interop::InfoPath::SemiTrust::WebServiceAdapter" />
+  <TypeSignature Language="F#" Value="type WebServiceAdapter2 = interface&#xA;    interface WebServiceAdapter" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.ErrorsLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorsLocation As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ ErrorsLocation { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ErrorsLocation : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.ErrorsLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -57,6 +59,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.GenerateDataSetDiffGram(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)" />
       <MemberSignature Language="VB.NET" Value="Public Function GenerateDataSetDiffGram (pNode As IXMLDOMNode) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ GenerateDataSetDiffGram(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ pNode);" />
+      <MemberSignature Language="F#" Value="abstract member GenerateDataSetDiffGram : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="webServiceAdapter2.GenerateDataSetDiffGram pNode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -86,6 +89,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Input" />
       <MemberSignature Language="VB.NET" Value="Public Property Input As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Input { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Input : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Input" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter.Input</InterfaceMember>
@@ -114,6 +118,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -139,6 +144,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Operation" />
       <MemberSignature Language="VB.NET" Value="Public Property Operation As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Operation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Operation : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Operation" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter.Operation</InterfaceMember>
@@ -167,6 +173,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.OutputLocation" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutputLocation As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ OutputLocation { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OutputLocation : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.OutputLocation" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -192,6 +199,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Query" />
       <MemberSignature Language="VB.NET" Value="Public Sub Query ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Query();" />
+      <MemberSignature Language="F#" Value="abstract member Query : unit -&gt; unit" Usage="webServiceAdapter2.Query " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -217,6 +225,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.QueryAllowed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property QueryAllowed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool QueryAllowed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryAllowed : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.QueryAllowed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -242,6 +251,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Submit" />
       <MemberSignature Language="VB.NET" Value="Public Sub Submit ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Submit();" />
+      <MemberSignature Language="F#" Value="abstract member Submit : unit -&gt; unit" Usage="webServiceAdapter2.Submit " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -267,6 +277,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.SubmitAllowed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubmitAllowed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SubmitAllowed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.SubmitAllowed : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.SubmitAllowed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -292,6 +303,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Timeout" />
       <MemberSignature Language="VB.NET" Value="Public Property Timeout As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Timeout { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.Timeout : int with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.Timeout" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -317,6 +329,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.WSDLURL" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WSDLURL As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ WSDLURL { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.WSDLURL : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2.WSDLURL" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter.WSDLURL</InterfaceMember>

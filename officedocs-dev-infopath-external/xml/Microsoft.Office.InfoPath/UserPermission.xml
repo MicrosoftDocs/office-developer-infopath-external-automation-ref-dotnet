@@ -1,0 +1,123 @@
+﻿<Type Name="UserPermission" FullName="Microsoft.Office.InfoPath.UserPermission">
+  <TypeSignature Language="C#" Value="public abstract class UserPermission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UserPermission extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.UserPermission" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class UserPermission" />
+  <TypeSignature Language="C++ CLI" Value="public ref class UserPermission abstract" />
+  <TypeSignature Language="F#" Value="type UserPermission = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UserPermission ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermission.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; UserPermission();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpirationDate">
+      <MemberSignature Language="C#" Value="public abstract DateTime ExpirationDate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTime ExpirationDate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.UserPermission.ExpirationDate" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property ExpirationDate As DateTime" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property DateTime ExpirationDate { DateTime get(); void set(DateTime value); };" />
+      <MemberSignature Language="F#" Value="member this.ExpirationDate : DateTime with get, set" Usage="Microsoft.Office.InfoPath.UserPermission.ExpirationDate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Permission">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.PermissionType Permission { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.PermissionType Permission" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.UserPermission.Permission" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Permission As PermissionType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::PermissionType Permission { Microsoft::Office::InfoPath::PermissionType get(); void set(Microsoft::Office::InfoPath::PermissionType value); };" />
+      <MemberSignature Language="F#" Value="member this.Permission : Microsoft.Office.InfoPath.PermissionType with get, set" Usage="Microsoft.Office.InfoPath.UserPermission.Permission" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public abstract void Remove ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermission.Remove" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Remove ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Remove();" />
+      <MemberSignature Language="F#" Value="abstract member Remove : unit -&gt; unit" Usage="userPermission.Remove " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserId">
+      <MemberSignature Language="C#" Value="public abstract string UserId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.UserPermission.UserId" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property UserId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ UserId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserId : string" Usage="Microsoft.Office.InfoPath.UserPermission.UserId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

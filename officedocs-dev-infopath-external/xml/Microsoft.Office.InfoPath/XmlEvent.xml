@@ -1,0 +1,120 @@
+﻿<Type Name="XmlEvent" FullName="Microsoft.Office.InfoPath.XmlEvent">
+  <TypeSignature Language="C#" Value="public abstract class XmlEvent" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlEvent extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlEvent" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlEvent" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlEvent abstract" />
+  <TypeSignature Language="F#" Value="type XmlEvent = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlEvent.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlEvent();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.XmlChangedEventHandler Changed;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.XmlChangedEventHandler Changed" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.XmlEvent.Changed" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event Changed As XmlChangedEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::XmlChangedEventHandler ^ Changed;" />
+      <MemberSignature Language="F#" Value="member this.Changed : Microsoft.Office.InfoPath.XmlChangedEventHandler " Usage="member this.Changed : Microsoft.Office.InfoPath.XmlChangedEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changing">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.XmlChangingEventHandler Changing;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.XmlChangingEventHandler Changing" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.XmlEvent.Changing" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event Changing As XmlChangingEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::XmlChangingEventHandler ^ Changing;" />
+      <MemberSignature Language="F#" Value="member this.Changing : Microsoft.Office.InfoPath.XmlChangingEventHandler " Usage="member this.Changing : Microsoft.Office.InfoPath.XmlChangingEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlChangingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RaiseUndoRedoForChanged">
+      <MemberSignature Language="C#" Value="public abstract bool RaiseUndoRedoForChanged { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RaiseUndoRedoForChanged" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEvent.RaiseUndoRedoForChanged" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property RaiseUndoRedoForChanged As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool RaiseUndoRedoForChanged { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.RaiseUndoRedoForChanged : bool with get, set" Usage="Microsoft.Office.InfoPath.XmlEvent.RaiseUndoRedoForChanged" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Validating">
+      <MemberSignature Language="C#" Value="public abstract event Microsoft.Office.InfoPath.XmlValidatingEventHandler Validating;" />
+      <MemberSignature Language="ILAsm" Value=".event class Microsoft.Office.InfoPath.XmlValidatingEventHandler Validating" />
+      <MemberSignature Language="DocId" Value="E:Microsoft.Office.InfoPath.XmlEvent.Validating" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Custom Event Validating As XmlValidatingEventHandler " />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract event Microsoft::Office::InfoPath::XmlValidatingEventHandler ^ Validating;" />
+      <MemberSignature Language="F#" Value="member this.Validating : Microsoft.Office.InfoPath.XmlValidatingEventHandler " Usage="member this.Validating : Microsoft.Office.InfoPath.XmlValidatingEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlValidatingEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

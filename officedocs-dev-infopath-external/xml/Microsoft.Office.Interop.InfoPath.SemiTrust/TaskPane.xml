@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.TaskPane" />
   <TypeSignature Language="VB.NET" Value="Public Interface TaskPane" />
   <TypeSignature Language="C++ CLI" Value="public interface class TaskPane" />
+  <TypeSignature Language="F#" Value="type TaskPane = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.TaskPane.TaskPaneType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskPaneType As XdTaskPaneType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XdTaskPaneType TaskPaneType { Microsoft::Office::Interop::InfoPath::SemiTrust::XdTaskPaneType get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskPaneType : Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.TaskPane.TaskPaneType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.TaskPane.Visible" />
       <MemberSignature Language="VB.NET" Value="Public Property Visible As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Visible { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Visible : bool with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.TaskPane.Visible" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

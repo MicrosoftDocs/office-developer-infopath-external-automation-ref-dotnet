@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter" />
   <TypeSignature Language="VB.NET" Value="Public Interface EmailAdapter" />
   <TypeSignature Language="C++ CLI" Value="public interface class EmailAdapter" />
+  <TypeSignature Language="F#" Value="type EmailAdapter = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.AttachmentFileName" />
       <MemberSignature Language="VB.NET" Value="Public Property AttachmentFileName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ AttachmentFileName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.AttachmentFileName : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.AttachmentFileName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.AttachmentType" />
       <MemberSignature Language="VB.NET" Value="Public Property AttachmentType As XdAttachmentType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XdAttachmentType AttachmentType { Microsoft::Office::Interop::InfoPath::SemiTrust::XdAttachmentType get(); void set(Microsoft::Office::Interop::InfoPath::SemiTrust::XdAttachmentType value); };" />
+      <MemberSignature Language="F#" Value="member this.AttachmentType : Microsoft.Office.Interop.InfoPath.SemiTrust.XdAttachmentType with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.AttachmentType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -78,6 +81,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.BCC" />
       <MemberSignature Language="VB.NET" Value="Public Property BCC As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ BCC { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.BCC : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.BCC" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -103,6 +107,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.CC" />
       <MemberSignature Language="VB.NET" Value="Public Property CC As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ CC { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CC : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.CC" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -128,6 +133,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.Intro" />
       <MemberSignature Language="VB.NET" Value="Public Property Intro As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Intro { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Intro : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.Intro" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -153,6 +159,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -178,6 +185,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.Query" />
       <MemberSignature Language="VB.NET" Value="Public Sub Query ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Query();" />
+      <MemberSignature Language="F#" Value="abstract member Query : unit -&gt; unit" Usage="emailAdapter.Query " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -203,6 +211,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.QueryAllowed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property QueryAllowed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool QueryAllowed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryAllowed : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.QueryAllowed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -228,6 +237,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.Subject" />
       <MemberSignature Language="VB.NET" Value="Public Property Subject As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Subject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Subject : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.Subject" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -253,6 +263,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.Submit" />
       <MemberSignature Language="VB.NET" Value="Public Sub Submit ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Submit();" />
+      <MemberSignature Language="F#" Value="abstract member Submit : unit -&gt; unit" Usage="emailAdapter.Submit " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -278,6 +289,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.SubmitAllowed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubmitAllowed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SubmitAllowed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.SubmitAllowed : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.SubmitAllowed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -303,6 +315,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.SubmitData(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SubmitData (pData As IXMLDOMNode)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SubmitData(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ pData);" />
+      <MemberSignature Language="F#" Value="abstract member SubmitData : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode -&gt; unit" Usage="emailAdapter.SubmitData pData" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -331,6 +344,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.To" />
       <MemberSignature Language="VB.NET" Value="Public Property To As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ To { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.To : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.To" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

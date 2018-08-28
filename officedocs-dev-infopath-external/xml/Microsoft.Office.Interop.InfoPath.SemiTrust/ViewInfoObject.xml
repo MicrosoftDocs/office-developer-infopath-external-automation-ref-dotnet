@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface ViewInfoObject&#xA;Implements ViewInfo" />
   <TypeSignature Language="C++ CLI" Value="public interface class ViewInfoObject : Microsoft::Office::Interop::InfoPath::SemiTrust::ViewInfo" />
+  <TypeSignature Language="F#" Value="type ViewInfoObject = interface&#xA;    interface ViewInfo" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

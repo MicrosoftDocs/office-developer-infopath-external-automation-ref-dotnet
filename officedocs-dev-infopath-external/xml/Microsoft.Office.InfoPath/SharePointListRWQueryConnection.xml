@@ -1,0 +1,126 @@
+﻿<Type Name="SharePointListRWQueryConnection" FullName="Microsoft.Office.InfoPath.SharePointListRWQueryConnection">
+  <TypeSignature Language="C#" Value="public abstract class SharePointListRWQueryConnection : Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SharePointListRWQueryConnection extends Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SharePointListRWQueryConnection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SharePointListRWQueryConnection&#xA;Inherits DataConnection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SharePointListRWQueryConnection abstract : Microsoft::Office::InfoPath::DataConnection" />
+  <TypeSignature Language="F#" Value="type SharePointListRWQueryConnection = class&#xA;    inherit DataConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.DataConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SharePointListRWQueryConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SharePointListRWQueryConnection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContentTypeId">
+      <MemberSignature Language="C#" Value="public abstract string ContentTypeId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ContentTypeId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.ContentTypeId" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property ContentTypeId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ ContentTypeId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ContentTypeId : string with get, set" Usage="Microsoft.Office.InfoPath.SharePointListRWQueryConnection.ContentTypeId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract void Execute (System.Xml.XPath.XPathNavigator output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(class System.Xml.XPath.XPathNavigator output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Execute (output As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Execute(System::Xml::XPath::XPathNavigator ^ output);" />
+      <MemberSignature Language="F#" Value="override this.Execute : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="sharePointListRWQueryConnection.Execute output" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="output">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListId">
+      <MemberSignature Language="C#" Value="public abstract string ListId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ListId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.ListId" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property ListId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ ListId { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.ListId : string with get, set" Usage="Microsoft.Office.InfoPath.SharePointListRWQueryConnection.ListId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SiteUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SiteUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.SiteUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property SiteUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SiteUrl { Uri ^ get(); void set(Uri ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SiteUrl : Uri with get, set" Usage="Microsoft.Office.InfoPath.SharePointListRWQueryConnection.SiteUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

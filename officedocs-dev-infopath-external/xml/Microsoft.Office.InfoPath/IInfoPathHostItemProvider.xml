@@ -1,0 +1,46 @@
+﻿<Type Name="IInfoPathHostItemProvider" FullName="Microsoft.Office.InfoPath.IInfoPathHostItemProvider">
+  <TypeSignature Language="C#" Value="public interface IInfoPathHostItemProvider" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInfoPathHostItemProvider" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.IInfoPathHostItemProvider" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IInfoPathHostItemProvider" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IInfoPathHostItemProvider" />
+  <TypeSignature Language="F#" Value="type IInfoPathHostItemProvider = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetHostObject">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.InfoPath.ManagedObjectWrapper GetHostObject (string primaryType, string primaryCookie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.ManagedObjectWrapper GetHostObject(string primaryType, string primaryCookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.IInfoPathHostItemProvider.GetHostObject(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHostObject (primaryType As String, primaryCookie As String) As ManagedObjectWrapper" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::InfoPath::ManagedObjectWrapper ^ GetHostObject(System::String ^ primaryType, System::String ^ primaryCookie);" />
+      <MemberSignature Language="F#" Value="abstract member GetHostObject : string * string -&gt; Microsoft.Office.InfoPath.ManagedObjectWrapper" Usage="iInfoPathHostItemProvider.GetHostObject (primaryType, primaryCookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ManagedObjectWrapper</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="primaryType" Type="System.String" />
+        <Parameter Name="primaryCookie" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="primaryType">To be added.</param>
+        <param name="primaryCookie">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

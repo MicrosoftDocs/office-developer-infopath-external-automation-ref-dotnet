@@ -1,0 +1,124 @@
+﻿<Type Name="SaveEventArgs" FullName="Microsoft.Office.InfoPath.SaveEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class SaveEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SaveEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SaveEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SaveEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SaveEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type SaveEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SaveEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SaveEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SaveEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelableArgs">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SaveCancelEventArgs CancelableArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.SaveCancelEventArgs CancelableArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SaveEventArgs.CancelableArgs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CancelableArgs As SaveCancelEventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SaveCancelEventArgs ^ CancelableArgs { Microsoft::Office::InfoPath::SaveCancelEventArgs ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CancelableArgs : Microsoft.Office.InfoPath.SaveCancelEventArgs" Usage="Microsoft.Office.InfoPath.SaveEventArgs.CancelableArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SaveCancelEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filename">
+      <MemberSignature Language="C#" Value="public abstract string Filename { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Filename" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SaveEventArgs.Filename" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Filename As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Filename { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Filename : string" Usage="Microsoft.Office.InfoPath.SaveEventArgs.Filename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSaveAs">
+      <MemberSignature Language="C#" Value="public abstract bool IsSaveAs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsSaveAs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SaveEventArgs.IsSaveAs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsSaveAs As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsSaveAs { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsSaveAs : bool" Usage="Microsoft.Office.InfoPath.SaveEventArgs.IsSaveAs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformSaveOperation">
+      <MemberSignature Language="C#" Value="public abstract bool PerformSaveOperation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool PerformSaveOperation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SaveEventArgs.PerformSaveOperation" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function PerformSaveOperation () As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool PerformSaveOperation();" />
+      <MemberSignature Language="F#" Value="abstract member PerformSaveOperation : unit -&gt; bool" Usage="saveEventArgs.PerformSaveOperation " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

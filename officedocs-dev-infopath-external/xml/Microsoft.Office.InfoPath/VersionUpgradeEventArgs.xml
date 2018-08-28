@@ -1,0 +1,102 @@
+﻿<Type Name="VersionUpgradeEventArgs" FullName="Microsoft.Office.InfoPath.VersionUpgradeEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class VersionUpgradeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit VersionUpgradeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.VersionUpgradeEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class VersionUpgradeEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class VersionUpgradeEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type VersionUpgradeEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected VersionUpgradeEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; VersionUpgradeEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelableArgs">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.CancelableArgs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CancelableArgs As XmlFormCancelEventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ CancelableArgs { Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CancelableArgs : Microsoft.Office.InfoPath.XmlFormCancelEventArgs" Usage="Microsoft.Office.InfoPath.VersionUpgradeEventArgs.CancelableArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormCancelEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentVersion">
+      <MemberSignature Language="C#" Value="public abstract string DocumentVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.DocumentVersion" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property DocumentVersion As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ DocumentVersion { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DocumentVersion : string" Usage="Microsoft.Office.InfoPath.VersionUpgradeEventArgs.DocumentVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormTemplateVersion">
+      <MemberSignature Language="C#" Value="public abstract string FormTemplateVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormTemplateVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.FormTemplateVersion" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property FormTemplateVersion As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ FormTemplateVersion { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.FormTemplateVersion : string" Usage="Microsoft.Office.InfoPath.VersionUpgradeEventArgs.FormTemplateVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

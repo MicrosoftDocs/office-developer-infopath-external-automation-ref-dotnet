@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnVersionUpgradeEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub _XDocumentEventSink2_OnVersionUpgradeEventHandler(pEvent As VersionUpgradeEvent)" />
   <TypeSignature Language="C++ CLI" Value="public delegate void _XDocumentEventSink2_OnVersionUpgradeEventHandler(VersionUpgradeEvent ^ pEvent);" />
+  <TypeSignature Language="F#" Value="type _XDocumentEventSink2_OnVersionUpgradeEventHandler = delegate of VersionUpgradeEvent -&gt; unit" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdCertificateStatus" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdCertificateStatus" />
+  <TypeSignature Language="F#" Value="type XdCertificateStatus = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusError" />
       <MemberSignature Language="VB.NET" Value="xdCertificateStatusError" />
       <MemberSignature Language="C++ CLI" Value="xdCertificateStatusError" />
+      <MemberSignature Language="F#" Value="xdCertificateStatusError = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusError" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusExpired" />
       <MemberSignature Language="VB.NET" Value="xdCertificateStatusExpired" />
       <MemberSignature Language="C++ CLI" Value="xdCertificateStatusExpired" />
+      <MemberSignature Language="F#" Value="xdCertificateStatusExpired = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusExpired" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -60,6 +63,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusNotTrusted" />
       <MemberSignature Language="VB.NET" Value="xdCertificateStatusNotTrusted" />
       <MemberSignature Language="C++ CLI" Value="xdCertificateStatusNotTrusted" />
+      <MemberSignature Language="F#" Value="xdCertificateStatusNotTrusted = 3" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusNotTrusted" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -79,6 +83,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusRevoked" />
       <MemberSignature Language="VB.NET" Value="xdCertificateStatusRevoked" />
       <MemberSignature Language="C++ CLI" Value="xdCertificateStatusRevoked" />
+      <MemberSignature Language="F#" Value="xdCertificateStatusRevoked = 4" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusRevoked" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -98,6 +103,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusValid" />
       <MemberSignature Language="VB.NET" Value="xdCertificateStatusValid" />
       <MemberSignature Language="C++ CLI" Value="xdCertificateStatusValid" />
+      <MemberSignature Language="F#" Value="xdCertificateStatusValid = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus.xdCertificateStatusValid" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

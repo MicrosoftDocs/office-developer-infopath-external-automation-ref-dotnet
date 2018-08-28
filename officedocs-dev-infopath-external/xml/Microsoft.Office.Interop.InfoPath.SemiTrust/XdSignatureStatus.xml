@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdSignatureStatus" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdSignatureStatus" />
+  <TypeSignature Language="F#" Value="type XdSignatureStatus = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusError" />
       <MemberSignature Language="VB.NET" Value="xdSignatureStatusError" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureStatusError" />
+      <MemberSignature Language="F#" Value="xdSignatureStatusError = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusError" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusInvalid" />
       <MemberSignature Language="VB.NET" Value="xdSignatureStatusInvalid" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureStatusInvalid" />
+      <MemberSignature Language="F#" Value="xdSignatureStatusInvalid = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusInvalid" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -60,6 +63,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusUnsupported" />
       <MemberSignature Language="VB.NET" Value="xdSignatureStatusUnsupported" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureStatusUnsupported" />
+      <MemberSignature Language="F#" Value="xdSignatureStatusUnsupported = 3" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusUnsupported" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -79,6 +83,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusValid" />
       <MemberSignature Language="VB.NET" Value="xdSignatureStatusValid" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureStatusValid" />
+      <MemberSignature Language="F#" Value="xdSignatureStatusValid = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusValid" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

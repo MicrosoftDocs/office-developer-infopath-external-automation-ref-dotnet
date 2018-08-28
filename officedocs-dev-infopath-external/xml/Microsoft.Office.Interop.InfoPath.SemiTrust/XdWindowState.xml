@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdWindowState" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdWindowState" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdWindowState" />
+  <TypeSignature Language="F#" Value="type XdWindowState = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdWindowState.xdWindowStateMaximize" />
       <MemberSignature Language="VB.NET" Value="xdWindowStateMaximize" />
       <MemberSignature Language="C++ CLI" Value="xdWindowStateMaximize" />
+      <MemberSignature Language="F#" Value="xdWindowStateMaximize = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdWindowState.xdWindowStateMaximize" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdWindowState.xdWindowStateMinimize" />
       <MemberSignature Language="VB.NET" Value="xdWindowStateMinimize" />
       <MemberSignature Language="C++ CLI" Value="xdWindowStateMinimize" />
+      <MemberSignature Language="F#" Value="xdWindowStateMinimize = 3" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdWindowState.xdWindowStateMinimize" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -60,6 +63,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdWindowState.xdWindowStateNormal" />
       <MemberSignature Language="VB.NET" Value="xdWindowStateNormal" />
       <MemberSignature Language="C++ CLI" Value="xdWindowStateNormal" />
+      <MemberSignature Language="F#" Value="xdWindowStateNormal = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdWindowState.xdWindowStateNormal" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

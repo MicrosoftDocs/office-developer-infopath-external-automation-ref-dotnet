@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnValidateEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub _DataDOMEventSink_OnValidateEventHandler(pDataDOMEvent As DataDOMEvent)" />
   <TypeSignature Language="C++ CLI" Value="public delegate void _DataDOMEventSink_OnValidateEventHandler(DataDOMEvent ^ pDataDOMEvent);" />
+  <TypeSignature Language="F#" Value="type _DataDOMEventSink_OnValidateEventHandler = delegate of DataDOMEvent -&gt; unit" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

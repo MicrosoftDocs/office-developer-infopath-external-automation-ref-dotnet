@@ -1,0 +1,359 @@
+﻿<Type Name="FormErrorCollection" FullName="Microsoft.Office.InfoPath.FormErrorCollection">
+  <TypeSignature Language="C#" Value="public abstract class FormErrorCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormErrorCollection extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FormErrorCollection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class FormErrorCollection&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FormErrorCollection abstract : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type FormErrorCollection = class&#xA;    interface IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FormErrorCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; FormErrorCollection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormError Add (System.Xml.XPath.XPathNavigator context, string name, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.FormError Add(class System.Xml.XPath.XPathNavigator context, string name, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (context As XPathNavigator, name As String, message As String) As FormError" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::FormError ^ Add(System::Xml::XPath::XPathNavigator ^ context, System::String ^ name, System::String ^ message);" />
+      <MemberSignature Language="F#" Value="abstract member Add : System.Xml.XPath.XPathNavigator * string * string -&gt; Microsoft.Office.InfoPath.FormError" Usage="formErrorCollection.Add (context, name, message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="message">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormError Add (System.Xml.XPath.XPathNavigator context, string name, string message, string messageDetails);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.FormError Add(class System.Xml.XPath.XPathNavigator context, string name, string message, string messageDetails) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (context As XPathNavigator, name As String, message As String, messageDetails As String) As FormError" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::FormError ^ Add(System::Xml::XPath::XPathNavigator ^ context, System::String ^ name, System::String ^ message, System::String ^ messageDetails);" />
+      <MemberSignature Language="F#" Value="abstract member Add : System.Xml.XPath.XPathNavigator * string * string * string -&gt; Microsoft.Office.InfoPath.FormError" Usage="formErrorCollection.Add (context, name, message, messageDetails)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageDetails" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="message">To be added.</param>
+        <param name="messageDetails">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormError Add (System.Xml.XPath.XPathNavigator context, string name, string message, string messageDetails, int errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.FormError Add(class System.Xml.XPath.XPathNavigator context, string name, string message, string messageDetails, int32 errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (context As XPathNavigator, name As String, message As String, messageDetails As String, errorCode As Integer) As FormError" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::FormError ^ Add(System::Xml::XPath::XPathNavigator ^ context, System::String ^ name, System::String ^ message, System::String ^ messageDetails, int errorCode);" />
+      <MemberSignature Language="F#" Value="abstract member Add : System.Xml.XPath.XPathNavigator * string * string * string * int -&gt; Microsoft.Office.InfoPath.FormError" Usage="formErrorCollection.Add (context, name, message, messageDetails, errorCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageDetails" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="message">To be added.</param>
+        <param name="messageDetails">To be added.</param>
+        <param name="errorCode">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormError Add (System.Xml.XPath.XPathNavigator context, string name, string message, string messageDetails, int errorCode, Microsoft.Office.InfoPath.ErrorMode errorMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.FormError Add(class System.Xml.XPath.XPathNavigator context, string name, string message, string messageDetails, int32 errorCode, valuetype Microsoft.Office.InfoPath.ErrorMode errorMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::FormError ^ Add(System::Xml::XPath::XPathNavigator ^ context, System::String ^ name, System::String ^ message, System::String ^ messageDetails, int errorCode, Microsoft::Office::InfoPath::ErrorMode errorMode);" />
+      <MemberSignature Language="F#" Value="abstract member Add : System.Xml.XPath.XPathNavigator * string * string * string * int * Microsoft.Office.InfoPath.ErrorMode -&gt; Microsoft.Office.InfoPath.FormError" Usage="formErrorCollection.Add (context, name, message, messageDetails, errorCode, errorMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="context" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageDetails" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="errorMode" Type="Microsoft.Office.InfoPath.ErrorMode" />
+      </Parameters>
+      <Docs>
+        <param name="context">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="message">To be added.</param>
+        <param name="messageDetails">To be added.</param>
+        <param name="errorCode">To be added.</param>
+        <param name="errorMode">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormErrorCollection.Count" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.InfoPath.FormErrorCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public abstract void Delete (Microsoft.Office.InfoPath.FormError formError);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete(class Microsoft.Office.InfoPath.FormError formError) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.Delete(Microsoft.Office.InfoPath.FormError)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Delete(Microsoft::Office::InfoPath::FormError ^ formError);" />
+      <MemberSignature Language="F#" Value="abstract member Delete : Microsoft.Office.InfoPath.FormError -&gt; unit" Usage="formErrorCollection.Delete formError" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formError" Type="Microsoft.Office.InfoPath.FormError" />
+      </Parameters>
+      <Docs>
+        <param name="formError">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public abstract void Delete (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.Delete(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Delete (name As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Delete(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member Delete : string -&gt; unit" Usage="formErrorCollection.Delete name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteAll">
+      <MemberSignature Language="C#" Value="public abstract void DeleteAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DeleteAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.DeleteAll" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub DeleteAll ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void DeleteAll();" />
+      <MemberSignature Language="F#" Value="abstract member DeleteAll : unit -&gt; unit" Usage="formErrorCollection.DeleteAll " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="formErrorCollection.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrors">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormError[] GetErrors (Microsoft.Office.InfoPath.FormErrorType errorType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.FormError[] GetErrors(valuetype Microsoft.Office.InfoPath.FormErrorType errorType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.GetErrors(Microsoft.Office.InfoPath.FormErrorType)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetErrors (errorType As FormErrorType) As FormError()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract cli::array &lt;Microsoft::Office::InfoPath::FormError ^&gt; ^ GetErrors(Microsoft::Office::InfoPath::FormErrorType errorType);" />
+      <MemberSignature Language="F#" Value="abstract member GetErrors : Microsoft.Office.InfoPath.FormErrorType -&gt; Microsoft.Office.InfoPath.FormError[]" Usage="formErrorCollection.GetErrors errorType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormError[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="errorType" Type="Microsoft.Office.InfoPath.FormErrorType" />
+      </Parameters>
+      <Docs>
+        <param name="errorType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetErrors">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormError[] GetErrors (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.FormError[] GetErrors(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.GetErrors(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetErrors (name As String) As FormError()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract cli::array &lt;Microsoft::Office::InfoPath::FormError ^&gt; ^ GetErrors(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member GetErrors : string -&gt; Microsoft.Office.InfoPath.FormError[]" Usage="formErrorCollection.GetErrors name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormError[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormError this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.FormError Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormErrorCollection.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(index As Integer) As FormError" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::FormError ^ default[int] { Microsoft::Office::InfoPath::FormError ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.InfoPath.FormError" Usage="Microsoft.Office.InfoPath.FormErrorCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormError</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SaveEventObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface SaveEventObject&#xA;Implements SaveEvent" />
   <TypeSignature Language="C++ CLI" Value="public interface class SaveEventObject : Microsoft::Office::Interop::InfoPath::SemiTrust::SaveEvent" />
+  <TypeSignature Language="F#" Value="type SaveEventObject = interface&#xA;    interface SaveEvent&#xA;    interface DocReturnEvent&#xA;    interface DocEvent" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

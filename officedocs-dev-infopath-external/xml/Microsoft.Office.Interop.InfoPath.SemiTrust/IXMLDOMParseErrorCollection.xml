@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseErrorCollection" />
   <TypeSignature Language="VB.NET" Value="Public Interface IXMLDOMParseErrorCollection" />
   <TypeSignature Language="C++ CLI" Value="public interface class IXMLDOMParseErrorCollection" />
+  <TypeSignature Language="F#" Value="type IXMLDOMParseErrorCollection = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseErrorCollection.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="iXMLDOMParseErrorCollection.GetEnumerator " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -49,6 +51,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseErrorCollection.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As IXMLDOMParseError2" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMParseError2 ^ default[int] { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMParseError2 ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseError2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseErrorCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -78,6 +81,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseErrorCollection.length" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property length As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int length { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.length : int" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseErrorCollection.length" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -103,6 +107,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseErrorCollection.next" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property next As IXMLDOMParseError2" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMParseError2 ^ next { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMParseError2 ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.next : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseError2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseErrorCollection.next" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -128,6 +133,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseErrorCollection.reset" />
       <MemberSignature Language="VB.NET" Value="Public Sub reset ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void reset();" />
+      <MemberSignature Language="F#" Value="abstract member reset : unit -&gt; unit" Usage="iXMLDOMParseErrorCollection.reset " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

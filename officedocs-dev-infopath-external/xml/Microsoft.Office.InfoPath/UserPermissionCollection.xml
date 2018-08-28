@@ -1,0 +1,292 @@
+﻿<Type Name="UserPermissionCollection" FullName="Microsoft.Office.InfoPath.UserPermissionCollection">
+  <TypeSignature Language="C#" Value="public abstract class UserPermissionCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UserPermissionCollection extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.UserPermissionCollection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class UserPermissionCollection&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class UserPermissionCollection abstract : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type UserPermissionCollection = class&#xA;    interface IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UserPermissionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; UserPermissionCollection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission Add (string userId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.UserPermission Add(string userId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (userId As String) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::UserPermission ^ Add(System::String ^ userId);" />
+      <MemberSignature Language="F#" Value="abstract member Add : string -&gt; Microsoft.Office.InfoPath.UserPermission" Usage="userPermissionCollection.Add userId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userId">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission Add (string userId, Microsoft.Office.InfoPath.PermissionType permission);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.UserPermission Add(string userId, valuetype Microsoft.Office.InfoPath.PermissionType permission) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,Microsoft.Office.InfoPath.PermissionType)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (userId As String, permission As PermissionType) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::UserPermission ^ Add(System::String ^ userId, Microsoft::Office::InfoPath::PermissionType permission);" />
+      <MemberSignature Language="F#" Value="abstract member Add : string * Microsoft.Office.InfoPath.PermissionType -&gt; Microsoft.Office.InfoPath.UserPermission" Usage="userPermissionCollection.Add (userId, permission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="permission" Type="Microsoft.Office.InfoPath.PermissionType" />
+      </Parameters>
+      <Docs>
+        <param name="userId">To be added.</param>
+        <param name="permission">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission Add (string userId, DateTime expirationDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.UserPermission Add(string userId, valuetype System.DateTime expirationDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (userId As String, expirationDate As DateTime) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::UserPermission ^ Add(System::String ^ userId, DateTime expirationDate);" />
+      <MemberSignature Language="F#" Value="abstract member Add : string * DateTime -&gt; Microsoft.Office.InfoPath.UserPermission" Usage="userPermissionCollection.Add (userId, expirationDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="expirationDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="userId">To be added.</param>
+        <param name="expirationDate">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission Add (string userId, Microsoft.Office.InfoPath.PermissionType permission, DateTime expirationDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.UserPermission Add(string userId, valuetype Microsoft.Office.InfoPath.PermissionType permission, valuetype System.DateTime expirationDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,Microsoft.Office.InfoPath.PermissionType,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (userId As String, permission As PermissionType, expirationDate As DateTime) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::UserPermission ^ Add(System::String ^ userId, Microsoft::Office::InfoPath::PermissionType permission, DateTime expirationDate);" />
+      <MemberSignature Language="F#" Value="abstract member Add : string * Microsoft.Office.InfoPath.PermissionType * DateTime -&gt; Microsoft.Office.InfoPath.UserPermission" Usage="userPermissionCollection.Add (userId, permission, expirationDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="permission" Type="Microsoft.Office.InfoPath.PermissionType" />
+        <Parameter Name="expirationDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="userId">To be added.</param>
+        <param name="permission">To be added.</param>
+        <param name="expirationDate">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.UserPermissionCollection.Count" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.InfoPath.UserPermissionCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="userPermissionCollection.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.UserPermission Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.UserPermissionCollection.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(index As Integer) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::UserPermission ^ default[int] { Microsoft::Office::InfoPath::UserPermission ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.InfoPath.UserPermission" Usage="Microsoft.Office.InfoPath.UserPermissionCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission this[string userId] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.UserPermission Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.UserPermissionCollection.Item(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(userId As String) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::UserPermission ^ default[System::String ^] { Microsoft::Office::InfoPath::UserPermission ^ get(System::String ^ userId); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : Microsoft.Office.InfoPath.UserPermission" Usage="Microsoft.Office.InfoPath.UserPermissionCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userId">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public abstract void Remove (string userId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string userId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Remove(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Remove (userId As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Remove(System::String ^ userId);" />
+      <MemberSignature Language="F#" Value="abstract member Remove : string -&gt; unit" Usage="userPermissionCollection.Remove userId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userId">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public abstract void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.RemoveAll" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RemoveAll ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RemoveAll();" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAll : unit -&gt; unit" Usage="userPermissionCollection.RemoveAll " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,497 @@
+﻿<Type Name="View" FullName="Microsoft.Office.InfoPath.View">
+  <TypeSignature Language="C#" Value="public abstract class View" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit View extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.View" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class View" />
+  <TypeSignature Language="C++ CLI" Value="public ref class View abstract" />
+  <TypeSignature Language="F#" Value="type View = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected View ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; View();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAutoUpdate">
+      <MemberSignature Language="C#" Value="public abstract void DisableAutoUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DisableAutoUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.DisableAutoUpdate" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub DisableAutoUpdate ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void DisableAutoUpdate();" />
+      <MemberSignature Language="F#" Value="abstract member DisableAutoUpdate : unit -&gt; unit" Usage="view.DisableAutoUpdate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAutoUpdate">
+      <MemberSignature Language="C#" Value="public abstract void EnableAutoUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnableAutoUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.EnableAutoUpdate" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EnableAutoUpdate ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EnableAutoUpdate();" />
+      <MemberSignature Language="F#" Value="abstract member EnableAutoUpdate : unit -&gt; unit" Usage="view.EnableAutoUpdate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAction">
+      <MemberSignature Language="C#" Value="public abstract void ExecuteAction (Microsoft.Office.InfoPath.ActionType action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExecuteAction(valuetype Microsoft.Office.InfoPath.ActionType action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.ExecuteAction(Microsoft.Office.InfoPath.ActionType)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ExecuteAction (action As ActionType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ExecuteAction(Microsoft::Office::InfoPath::ActionType action);" />
+      <MemberSignature Language="F#" Value="abstract member ExecuteAction : Microsoft.Office.InfoPath.ActionType -&gt; unit" Usage="view.ExecuteAction action" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="Microsoft.Office.InfoPath.ActionType" />
+      </Parameters>
+      <Docs>
+        <param name="action">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAction">
+      <MemberSignature Language="C#" Value="public abstract void ExecuteAction (Microsoft.Office.InfoPath.ActionType action, string xmlToEdit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExecuteAction(valuetype Microsoft.Office.InfoPath.ActionType action, string xmlToEdit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.ExecuteAction(Microsoft.Office.InfoPath.ActionType,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ExecuteAction (action As ActionType, xmlToEdit As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ExecuteAction(Microsoft::Office::InfoPath::ActionType action, System::String ^ xmlToEdit);" />
+      <MemberSignature Language="F#" Value="abstract member ExecuteAction : Microsoft.Office.InfoPath.ActionType * string -&gt; unit" Usage="view.ExecuteAction (action, xmlToEdit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="Microsoft.Office.InfoPath.ActionType" />
+        <Parameter Name="xmlToEdit" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">To be added.</param>
+        <param name="xmlToEdit">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public abstract void Export (string fileLocation, Microsoft.Office.InfoPath.ExportFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Export(string fileLocation, valuetype Microsoft.Office.InfoPath.ExportFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.Export(System.String,Microsoft.Office.InfoPath.ExportFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Export (fileLocation As String, format As ExportFormat)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Export(System::String ^ fileLocation, Microsoft::Office::InfoPath::ExportFormat format);" />
+      <MemberSignature Language="F#" Value="abstract member Export : string * Microsoft.Office.InfoPath.ExportFormat -&gt; unit" Usage="view.Export (fileLocation, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileLocation" Type="System.String" />
+        <Parameter Name="format" Type="Microsoft.Office.InfoPath.ExportFormat" />
+      </Parameters>
+      <Docs>
+        <param name="fileLocation">To be added.</param>
+        <param name="format">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceUpdate">
+      <MemberSignature Language="C#" Value="public abstract void ForceUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ForceUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.ForceUpdate" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ForceUpdate ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ForceUpdate();" />
+      <MemberSignature Language="F#" Value="abstract member ForceUpdate : unit -&gt; unit" Usage="view.ForceUpdate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextNodes">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeIterator GetContextNodes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNodeIterator GetContextNodes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.GetContextNodes" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetContextNodes () As XPathNodeIterator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNodeIterator ^ GetContextNodes();" />
+      <MemberSignature Language="F#" Value="abstract member GetContextNodes : unit -&gt; System.Xml.XPath.XPathNodeIterator" Usage="view.GetContextNodes " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeIterator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextNodes">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeIterator GetContextNodes (System.Xml.XPath.XPathNavigator xmlNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNodeIterator GetContextNodes(class System.Xml.XPath.XPathNavigator xmlNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.GetContextNodes(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetContextNodes (xmlNode As XPathNavigator) As XPathNodeIterator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNodeIterator ^ GetContextNodes(System::Xml::XPath::XPathNavigator ^ xmlNode);" />
+      <MemberSignature Language="F#" Value="abstract member GetContextNodes : System.Xml.XPath.XPathNavigator -&gt; System.Xml.XPath.XPathNodeIterator" Usage="view.GetContextNodes xmlNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeIterator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlNode" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNode">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextNodes">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeIterator GetContextNodes (System.Xml.XPath.XPathNavigator xmlNode, string controlId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNodeIterator GetContextNodes(class System.Xml.XPath.XPathNavigator xmlNode, string controlId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.GetContextNodes(System.Xml.XPath.XPathNavigator,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetContextNodes (xmlNode As XPathNavigator, controlId As String) As XPathNodeIterator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNodeIterator ^ GetContextNodes(System::Xml::XPath::XPathNavigator ^ xmlNode, System::String ^ controlId);" />
+      <MemberSignature Language="F#" Value="abstract member GetContextNodes : System.Xml.XPath.XPathNavigator * string -&gt; System.Xml.XPath.XPathNodeIterator" Usage="view.GetContextNodes (xmlNode, controlId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeIterator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="controlId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNode">To be added.</param>
+        <param name="controlId">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedNodes">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeIterator GetSelectedNodes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNodeIterator GetSelectedNodes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.GetSelectedNodes" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetSelectedNodes () As XPathNodeIterator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNodeIterator ^ GetSelectedNodes();" />
+      <MemberSignature Language="F#" Value="abstract member GetSelectedNodes : unit -&gt; System.Xml.XPath.XPathNodeIterator" Usage="view.GetSelectedNodes " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeIterator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNodes">
+      <MemberSignature Language="C#" Value="public abstract void SelectNodes (System.Xml.XPath.XPathNavigator startNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectNodes(class System.Xml.XPath.XPathNavigator startNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectNodes (startNode As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectNodes(System::Xml::XPath::XPathNavigator ^ startNode);" />
+      <MemberSignature Language="F#" Value="abstract member SelectNodes : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="view.SelectNodes startNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startNode" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="startNode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNodes">
+      <MemberSignature Language="C#" Value="public abstract void SelectNodes (System.Xml.XPath.XPathNavigator startNode, System.Xml.XPath.XPathNavigator endNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectNodes(class System.Xml.XPath.XPathNavigator startNode, class System.Xml.XPath.XPathNavigator endNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectNodes (startNode As XPathNavigator, endNode As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectNodes(System::Xml::XPath::XPathNavigator ^ startNode, System::Xml::XPath::XPathNavigator ^ endNode);" />
+      <MemberSignature Language="F#" Value="abstract member SelectNodes : System.Xml.XPath.XPathNavigator * System.Xml.XPath.XPathNavigator -&gt; unit" Usage="view.SelectNodes (startNode, endNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="endNode" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="startNode">To be added.</param>
+        <param name="endNode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNodes">
+      <MemberSignature Language="C#" Value="public abstract void SelectNodes (System.Xml.XPath.XPathNavigator startNode, System.Xml.XPath.XPathNavigator endNode, string viewContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectNodes(class System.Xml.XPath.XPathNavigator startNode, class System.Xml.XPath.XPathNavigator endNode, string viewContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectNodes (startNode As XPathNavigator, endNode As XPathNavigator, viewContext As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectNodes(System::Xml::XPath::XPathNavigator ^ startNode, System::Xml::XPath::XPathNavigator ^ endNode, System::String ^ viewContext);" />
+      <MemberSignature Language="F#" Value="abstract member SelectNodes : System.Xml.XPath.XPathNavigator * System.Xml.XPath.XPathNavigator * string -&gt; unit" Usage="view.SelectNodes (startNode, endNode, viewContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="endNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="viewContext" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="startNode">To be added.</param>
+        <param name="endNode">To be added.</param>
+        <param name="viewContext">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectText">
+      <MemberSignature Language="C#" Value="public abstract void SelectText (System.Xml.XPath.XPathNavigator xmlNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectText(class System.Xml.XPath.XPathNavigator xmlNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectText(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectText (xmlNode As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectText(System::Xml::XPath::XPathNavigator ^ xmlNode);" />
+      <MemberSignature Language="F#" Value="abstract member SelectText : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="view.SelectText xmlNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlNode" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectText">
+      <MemberSignature Language="C#" Value="public abstract void SelectText (System.Xml.XPath.XPathNavigator xmlNode, string viewContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectText(class System.Xml.XPath.XPathNavigator xmlNode, string viewContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectText(System.Xml.XPath.XPathNavigator,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectText (xmlNode As XPathNavigator, viewContext As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectText(System::Xml::XPath::XPathNavigator ^ xmlNode, System::String ^ viewContext);" />
+      <MemberSignature Language="F#" Value="abstract member SelectText : System.Xml.XPath.XPathNavigator * string -&gt; unit" Usage="view.SelectText (xmlNode, viewContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="viewContext" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNode">To be added.</param>
+        <param name="viewContext">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowMailItem">
+      <MemberSignature Language="C#" Value="public abstract void ShowMailItem (string destinationTo, string destinationCC, string destinationBcc, string subject, string body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowMailItem(string destinationTo, string destinationCC, string destinationBcc, string subject, string body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.ShowMailItem(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ShowMailItem (destinationTo As String, destinationCC As String, destinationBcc As String, subject As String, body As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ShowMailItem(System::String ^ destinationTo, System::String ^ destinationCC, System::String ^ destinationBcc, System::String ^ subject, System::String ^ body);" />
+      <MemberSignature Language="F#" Value="abstract member ShowMailItem : string * string * string * string * string -&gt; unit" Usage="view.ShowMailItem (destinationTo, destinationCC, destinationBcc, subject, body)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationTo" Type="System.String" />
+        <Parameter Name="destinationCC" Type="System.String" />
+        <Parameter Name="destinationBcc" Type="System.String" />
+        <Parameter Name="subject" Type="System.String" />
+        <Parameter Name="body" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="destinationTo">To be added.</param>
+        <param name="destinationCC">To be added.</param>
+        <param name="destinationBcc">To be added.</param>
+        <param name="subject">To be added.</param>
+        <param name="body">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureLines">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.SignatureLineCollection SignatureLines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.SignatureLineCollection SignatureLines" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.View.SignatureLines" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SignatureLines As SignatureLineCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::SignatureLineCollection ^ SignatureLines { Microsoft::Office::InfoPath::SignatureLineCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureLines : Microsoft.Office.InfoPath.SignatureLineCollection" Usage="Microsoft.Office.InfoPath.View.SignatureLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureLineCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewInfo">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ViewInfo ViewInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ViewInfo ViewInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.View.ViewInfo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ViewInfo As ViewInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ViewInfo ^ ViewInfo { Microsoft::Office::InfoPath::ViewInfo ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ViewInfo : Microsoft.Office.InfoPath.ViewInfo" Usage="Microsoft.Office.InfoPath.View.ViewInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Window">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Window Window { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Window Window" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.View.Window" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Window As Window" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Window ^ Window { Microsoft::Office::InfoPath::Window ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Window : Microsoft.Office.InfoPath.Window" Usage="Microsoft.Office.InfoPath.View.Window" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Window</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

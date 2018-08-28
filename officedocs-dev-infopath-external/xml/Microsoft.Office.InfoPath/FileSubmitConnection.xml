@@ -1,0 +1,105 @@
+﻿<Type Name="FileSubmitConnection" FullName="Microsoft.Office.InfoPath.FileSubmitConnection">
+  <TypeSignature Language="C#" Value="public abstract class FileSubmitConnection : Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FileSubmitConnection extends Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FileSubmitConnection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class FileSubmitConnection&#xA;Inherits DataConnection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FileSubmitConnection abstract : Microsoft::Office::InfoPath::DataConnection" />
+  <TypeSignature Language="F#" Value="type FileSubmitConnection = class&#xA;    inherit DataConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.DataConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FileSubmitConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FileSubmitConnection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; FileSubmitConnection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract void Execute (System.Xml.XPath.XPathNavigator input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(class System.Xml.XPath.XPathNavigator input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FileSubmitConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Execute (input As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Execute(System::Xml::XPath::XPathNavigator ^ input);" />
+      <MemberSignature Language="F#" Value="override this.Execute : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="fileSubmitConnection.Execute input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="input">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Filename">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XPathTypedValue Filename { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XPathTypedValue Filename" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FileSubmitConnection.Filename" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Filename As XPathTypedValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XPathTypedValue ^ Filename { Microsoft::Office::InfoPath::XPathTypedValue ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Filename : Microsoft.Office.InfoPath.XPathTypedValue" Usage="Microsoft.Office.InfoPath.FileSubmitConnection.Filename" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FolderUrl">
+      <MemberSignature Language="C#" Value="public abstract string FolderUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FolderUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FileSubmitConnection.FolderUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property FolderUrl As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ FolderUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.FolderUrl : string with get, set" Usage="Microsoft.Office.InfoPath.FileSubmitConnection.FolderUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

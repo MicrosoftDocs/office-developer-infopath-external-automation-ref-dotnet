@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor" />
   <TypeSignature Language="VB.NET" Value="Public Interface IXSLProcessor" />
   <TypeSignature Language="C++ CLI" Value="public interface class IXSLProcessor" />
+  <TypeSignature Language="F#" Value="type IXSLProcessor = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.addObject(System.Object,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub addObject (obj As Object, namespaceURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void addObject(System::Object ^ obj, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member addObject : obj * string -&gt; unit" Usage="iXSLProcessor.addObject (obj, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.addParameter(System.String,System.Object,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub addParameter (baseName As String, parameter As Object, namespaceURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void addParameter(System::String ^ baseName, System::Object ^ parameter, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member addParameter : string * obj * string -&gt; unit" Usage="iXSLProcessor.addParameter (baseName, parameter, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -90,6 +93,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.input" />
       <MemberSignature Language="VB.NET" Value="Public Property input As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ input { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.input : obj with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.input" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -115,6 +119,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.output" />
       <MemberSignature Language="VB.NET" Value="Public Property output As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ output { System::Object ^ get(); void set(System::Object ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.output : obj with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.output" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -140,6 +145,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.ownerTemplate" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ownerTemplate As XSLTemplate" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XSLTemplate ^ ownerTemplate { Microsoft::Office::Interop::InfoPath::SemiTrust::XSLTemplate ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ownerTemplate : Microsoft.Office.Interop.InfoPath.SemiTrust.XSLTemplate" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.ownerTemplate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -165,6 +171,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.readyState" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property readyState As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int readyState { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.readyState : int" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.readyState" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -190,6 +197,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.reset" />
       <MemberSignature Language="VB.NET" Value="Public Sub reset ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void reset();" />
+      <MemberSignature Language="F#" Value="abstract member reset : unit -&gt; unit" Usage="iXSLProcessor.reset " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -215,6 +223,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.setStartMode(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub setStartMode (mode As String, namespaceURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void setStartMode(System::String ^ mode, System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member setStartMode : string * string -&gt; unit" Usage="iXSLProcessor.setStartMode (mode, namespaceURI)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -245,6 +254,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.startMode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property startMode As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ startMode { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.startMode : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.startMode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -270,6 +280,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.startModeURI" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property startModeURI As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ startModeURI { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.startModeURI : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.startModeURI" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -295,6 +306,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.stylesheet" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property stylesheet As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ stylesheet { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.stylesheet : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.stylesheet" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -320,6 +332,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXSLProcessor.transform" />
       <MemberSignature Language="VB.NET" Value="Public Function transform () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool transform();" />
+      <MemberSignature Language="F#" Value="abstract member transform : unit -&gt; bool" Usage="iXSLProcessor.transform " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

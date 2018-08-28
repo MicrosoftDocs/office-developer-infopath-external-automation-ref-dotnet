@@ -1,0 +1,28 @@
+﻿<Type Name="ContextChangedEventHandler" FullName="Microsoft.Office.InfoPath.ContextChangedEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void ContextChangedEventHandler(object sender, ContextChangedEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ContextChangedEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ContextChangedEventHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub ContextChangedEventHandler(sender As Object, e As ContextChangedEventArgs)" />
+  <TypeSignature Language="C++ CLI" Value="public delegate void ContextChangedEventHandler(System::Object ^ sender, ContextChangedEventArgs ^ e);" />
+  <TypeSignature Language="F#" Value="type ContextChangedEventHandler = delegate of obj * ContextChangedEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.InfoPath.ContextChangedEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">To be added.</param>
+    <param name="e">To be added.</param>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,105 @@
+﻿<Type Name="HtmlTaskPane" FullName="Microsoft.Office.InfoPath.HtmlTaskPane">
+  <TypeSignature Language="C#" Value="public abstract class HtmlTaskPane : Microsoft.Office.InfoPath.TaskPane" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit HtmlTaskPane extends Microsoft.Office.InfoPath.TaskPane" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.HtmlTaskPane" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class HtmlTaskPane&#xA;Inherits TaskPane" />
+  <TypeSignature Language="C++ CLI" Value="public ref class HtmlTaskPane abstract : Microsoft::Office::InfoPath::TaskPane" />
+  <TypeSignature Language="F#" Value="type HtmlTaskPane = class&#xA;    inherit TaskPane" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.TaskPane</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected HtmlTaskPane ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.HtmlTaskPane.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; HtmlTaskPane();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlDocument">
+      <MemberSignature Language="C#" Value="public abstract object HtmlDocument { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object HtmlDocument" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.HtmlTaskPane.HtmlDocument" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property HtmlDocument As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Object ^ HtmlDocument { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.HtmlDocument : obj" Usage="Microsoft.Office.InfoPath.HtmlTaskPane.HtmlDocument" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HtmlWindow">
+      <MemberSignature Language="C#" Value="public abstract object HtmlWindow { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object HtmlWindow" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.HtmlTaskPane.HtmlWindow" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property HtmlWindow As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Object ^ HtmlWindow { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.HtmlWindow : obj" Usage="Microsoft.Office.InfoPath.HtmlTaskPane.HtmlWindow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Navigate">
+      <MemberSignature Language="C#" Value="public abstract void Navigate (string url);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Navigate(string url) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.HtmlTaskPane.Navigate(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Navigate (url As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Navigate(System::String ^ url);" />
+      <MemberSignature Language="F#" Value="abstract member Navigate : string -&gt; unit" Usage="htmlTaskPane.Navigate url" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="url" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="url">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

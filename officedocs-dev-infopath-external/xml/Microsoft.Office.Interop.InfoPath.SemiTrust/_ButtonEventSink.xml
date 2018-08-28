@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink" />
   <TypeSignature Language="VB.NET" Value="Public Interface _ButtonEventSink" />
   <TypeSignature Language="C++ CLI" Value="public interface class _ButtonEventSink" />
+  <TypeSignature Language="F#" Value="type _ButtonEventSink = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink.OnClick(Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnClick (pEvent As DocActionEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void OnClick(Microsoft::Office::Interop::InfoPath::SemiTrust::DocActionEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnClick : Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEvent -&gt; unit" Usage="_ButtonEventSink.OnClick pEvent" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

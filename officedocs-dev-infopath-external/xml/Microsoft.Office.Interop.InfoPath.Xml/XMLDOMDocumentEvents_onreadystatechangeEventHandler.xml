@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub XMLDOMDocumentEvents_onreadystatechangeEventHandler()" />
   <TypeSignature Language="C++ CLI" Value="public delegate void XMLDOMDocumentEvents_onreadystatechangeEventHandler();" />
+  <TypeSignature Language="F#" Value="type XMLDOMDocumentEvents_onreadystatechangeEventHandler = delegate of unit -&gt; unit" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>

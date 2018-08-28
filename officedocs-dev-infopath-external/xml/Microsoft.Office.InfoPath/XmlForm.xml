@@ -1,0 +1,944 @@
+﻿<Type Name="XmlForm" FullName="Microsoft.Office.InfoPath.XmlForm">
+  <TypeSignature Language="C#" Value="public abstract class XmlForm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlForm extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlForm" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlForm" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlForm abstract" />
+  <TypeSignature Language="F#" Value="type XmlForm = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlForm();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public abstract void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Close" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Close ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Close();" />
+      <MemberSignature Language="F#" Value="abstract member Close : unit -&gt; unit" Usage="xmlForm.Close " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentView">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.View CurrentView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.View CurrentView" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.CurrentView" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CurrentView As View" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::View ^ CurrentView { Microsoft::Office::InfoPath::View ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentView : Microsoft.Office.InfoPath.View" Usage="Microsoft.Office.InfoPath.XmlForm.CurrentView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataConnections">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.DataConnectionCollection DataConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataConnectionCollection DataConnections" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property DataConnections As DataConnectionCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::DataConnectionCollection ^ DataConnections { Microsoft::Office::InfoPath::DataConnectionCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataConnections : Microsoft.Office.InfoPath.DataConnectionCollection" Usage="Microsoft.Office.InfoPath.XmlForm.DataConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataConnectionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSources">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.DataSourceCollection DataSources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataSourceCollection DataSources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.DataSources" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property DataSources As DataSourceCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::DataSourceCollection ^ DataSources { Microsoft::Office::InfoPath::DataSourceCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataSources : Microsoft.Office.InfoPath.DataSourceCollection" Usage="Microsoft.Office.InfoPath.XmlForm.DataSources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataSourceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dirty">
+      <MemberSignature Language="C#" Value="public abstract bool Dirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Dirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Dirty" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Dirty As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Dirty { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Dirty : bool with get, set" Usage="Microsoft.Office.InfoPath.XmlForm.Dirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Environment">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Environment Environment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Environment Environment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Environment" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Environment As Environment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Environment ^ Environment { Microsoft::Office::InfoPath::Environment ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Environment : Microsoft.Office.InfoPath.Environment" Usage="Microsoft.Office.InfoPath.XmlForm.Environment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Environment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.FormErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Errors" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Errors As FormErrorCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::FormErrorCollection ^ Errors { Microsoft::Office::InfoPath::FormErrorCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Errors : Microsoft.Office.InfoPath.FormErrorCollection" Usage="Microsoft.Office.InfoPath.XmlForm.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public abstract object Extension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Extension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Extension" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Extension As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Object ^ Extension { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Extension : obj" Usage="Microsoft.Office.InfoPath.XmlForm.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormState">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IDictionary FormState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary FormState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.FormState" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property FormState As IDictionary" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::IDictionary ^ FormState { System::Collections::IDictionary ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.FormState : System.Collections.IDictionary" Usage="Microsoft.Office.InfoPath.XmlForm.FormState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowTasks">
+      <MemberSignature Language="C#" Value="public abstract object GetWorkflowTasks ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetWorkflowTasks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTasks" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetWorkflowTasks () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Object ^ GetWorkflowTasks();" />
+      <MemberSignature Language="F#" Value="abstract member GetWorkflowTasks : unit -&gt; obj" Usage="xmlForm.GetWorkflowTasks " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowTemplates">
+      <MemberSignature Language="C#" Value="public abstract object GetWorkflowTemplates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetWorkflowTemplates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTemplates" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetWorkflowTemplates () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Object ^ GetWorkflowTemplates();" />
+      <MemberSignature Language="F#" Value="abstract member GetWorkflowTemplates : unit -&gt; obj" Usage="xmlForm.GetWorkflowTemplates " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public abstract object Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Host" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Host" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Host As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Object ^ Host { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Host : obj" Usage="Microsoft.Office.InfoPath.XmlForm.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hosted">
+      <MemberSignature Language="C#" Value="public abstract bool Hosted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Hosted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Hosted" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Hosted As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Hosted { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Hosted : bool" Usage="Microsoft.Office.InfoPath.XmlForm.Hosted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public abstract string HostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.HostName" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property HostName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ HostName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.HostName : string" Usage="Microsoft.Office.InfoPath.XmlForm.HostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MainDataSource">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.DataSource MainDataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataSource MainDataSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property MainDataSource As DataSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::DataSource ^ MainDataSource { Microsoft::Office::InfoPath::DataSource ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MainDataSource : Microsoft.Office.InfoPath.DataSource" Usage="Microsoft.Office.InfoPath.XmlForm.MainDataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeForm">
+      <MemberSignature Language="C#" Value="public abstract void MergeForm (string fileUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MergeForm(string fileUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub MergeForm (fileUrl As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void MergeForm(System::String ^ fileUrl);" />
+      <MemberSignature Language="F#" Value="abstract member MergeForm : string -&gt; unit" Usage="xmlForm.MergeForm fileUrl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileUrl">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeForm">
+      <MemberSignature Language="C#" Value="public abstract void MergeForm (System.Xml.XPath.XPathNavigator target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MergeForm(class System.Xml.XPath.XPathNavigator target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub MergeForm (target As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void MergeForm(System::Xml::XPath::XPathNavigator ^ target);" />
+      <MemberSignature Language="F#" Value="abstract member MergeForm : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="xmlForm.MergeForm target" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="target">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceManager">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlNamespaceManager NamespaceManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNamespaceManager NamespaceManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.NamespaceManager" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property NamespaceManager As XmlNamespaceManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XmlNamespaceManager ^ NamespaceManager { System::Xml::XmlNamespaceManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NamespaceManager : System.Xml.XmlNamespaceManager" Usage="Microsoft.Office.InfoPath.XmlForm.NamespaceManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNamespaceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkState">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.NetworkState NetworkState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.NetworkState NetworkState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.NetworkState" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property NetworkState As NetworkState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::NetworkState ^ NetworkState { Microsoft::Office::InfoPath::NetworkState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NetworkState : Microsoft.Office.InfoPath.NetworkState" Usage="Microsoft.Office.InfoPath.XmlForm.NetworkState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.NetworkState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public abstract bool New { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool New" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.New" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property New As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool New { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.New : bool" Usage="Microsoft.Office.InfoPath.XmlForm.New" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyHost">
+      <MemberSignature Language="C#" Value="public abstract void NotifyHost (string notification);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NotifyHost(string notification) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.NotifyHost(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub NotifyHost (notification As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void NotifyHost(System::String ^ notification);" />
+      <MemberSignature Language="F#" Value="abstract member NotifyHost : string -&gt; unit" Usage="xmlForm.NotifyHost notification" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="notification" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="notification">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Permission">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Permission Permission { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Permission Permission" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Permission" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Permission As Permission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Permission ^ Permission { Microsoft::Office::InfoPath::Permission ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Permission : Microsoft.Office.InfoPath.Permission" Usage="Microsoft.Office.InfoPath.XmlForm.Permission" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Permission</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public abstract void Print ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Print() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Print" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Print ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Print();" />
+      <MemberSignature Language="F#" Value="abstract member Print : unit -&gt; unit" Usage="xmlForm.Print " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public abstract void Print (bool showPrintDialog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Print(bool showPrintDialog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Print(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Print (showPrintDialog As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Print(bool showPrintDialog);" />
+      <MemberSignature Language="F#" Value="abstract member Print : bool -&gt; unit" Usage="xmlForm.Print showPrintDialog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="showPrintDialog" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="showPrintDialog">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryDataConnection">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.DataConnection QueryDataConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataConnection QueryDataConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.QueryDataConnection" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property QueryDataConnection As DataConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::DataConnection ^ QueryDataConnection { Microsoft::Office::InfoPath::DataConnection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryDataConnection : Microsoft.Office.InfoPath.DataConnection" Usage="Microsoft.Office.InfoPath.XmlForm.QueryDataConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public abstract bool ReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.ReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ReadOnly As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool ReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReadOnly : bool" Usage="Microsoft.Office.InfoPath.XmlForm.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recovered">
+      <MemberSignature Language="C#" Value="public abstract bool Recovered { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Recovered" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Recovered" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Recovered As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Recovered { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Recovered : bool" Usage="Microsoft.Office.InfoPath.XmlForm.Recovered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public abstract void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Save" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Save ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Save();" />
+      <MemberSignature Language="F#" Value="abstract member Save : unit -&gt; unit" Usage="xmlForm.Save " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public abstract void SaveAs (string fileUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveAs(string fileUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.SaveAs(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SaveAs (fileUrl As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SaveAs(System::String ^ fileUrl);" />
+      <MemberSignature Language="F#" Value="abstract member SaveAs : string -&gt; unit" Usage="xmlForm.SaveAs fileUrl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileUrl">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerInfo">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ServerInfo ServerInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ServerInfo ServerInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.ServerInfo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ServerInfo As ServerInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ServerInfo ^ ServerInfo { Microsoft::Office::InfoPath::ServerInfo ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ServerInfo : Microsoft.Office.InfoPath.ServerInfo" Usage="Microsoft.Office.InfoPath.XmlForm.ServerInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ServerInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSaveAsDialogFilename">
+      <MemberSignature Language="C#" Value="public abstract void SetSaveAsDialogFilename (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSaveAsDialogFilename(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogFilename(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetSaveAsDialogFilename (filename As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetSaveAsDialogFilename(System::String ^ filename);" />
+      <MemberSignature Language="F#" Value="abstract member SetSaveAsDialogFilename : string -&gt; unit" Usage="xmlForm.SetSaveAsDialogFilename filename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSaveAsDialogLocation">
+      <MemberSignature Language="C#" Value="public abstract void SetSaveAsDialogLocation (string pathname);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSaveAsDialogLocation(string pathname) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogLocation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetSaveAsDialogLocation (pathname As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetSaveAsDialogLocation(System::String ^ pathname);" />
+      <MemberSignature Language="F#" Value="abstract member SetSaveAsDialogLocation : string -&gt; unit" Usage="xmlForm.SetSaveAsDialogLocation pathname" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathname" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathname">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signed">
+      <MemberSignature Language="C#" Value="public abstract bool Signed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Signed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Signed" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Signed As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Signed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Signed : bool" Usage="Microsoft.Office.InfoPath.XmlForm.Signed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedDataBlocks">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignedDataBlockCollection SignedDataBlocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.SignedDataBlockCollection SignedDataBlocks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.SignedDataBlocks" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SignedDataBlocks As SignedDataBlockCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignedDataBlockCollection ^ SignedDataBlocks { Microsoft::Office::InfoPath::SignedDataBlockCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignedDataBlocks : Microsoft.Office.InfoPath.SignedDataBlockCollection" Usage="Microsoft.Office.InfoPath.XmlForm.SignedDataBlocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignedDataBlockCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Submit">
+      <MemberSignature Language="C#" Value="public abstract void Submit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Submit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Submit" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Submit ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Submit();" />
+      <MemberSignature Language="F#" Value="abstract member Submit : unit -&gt; unit" Usage="xmlForm.Submit " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskPanes">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.TaskPaneCollection TaskPanes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.TaskPaneCollection TaskPanes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.TaskPanes" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property TaskPanes As TaskPaneCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::TaskPaneCollection ^ TaskPanes { Microsoft::Office::InfoPath::TaskPaneCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskPanes : Microsoft.Office.InfoPath.TaskPaneCollection" Usage="Microsoft.Office.InfoPath.XmlForm.TaskPanes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Template">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormTemplate Template { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.FormTemplate Template" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Template" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Template As FormTemplate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::FormTemplate ^ Template { Microsoft::Office::InfoPath::FormTemplate ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Template : Microsoft.Office.InfoPath.FormTemplate" Usage="Microsoft.Office.InfoPath.XmlForm.Template" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public abstract string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Uri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Office.InfoPath.XmlForm.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.User User { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.User User" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.User" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property User As User" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::User ^ User { Microsoft::Office::InfoPath::User ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.User : Microsoft.Office.InfoPath.User" Usage="Microsoft.Office.InfoPath.XmlForm.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.User</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserRole">
+      <MemberSignature Language="C#" Value="public abstract string UserRole { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserRole" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.UserRole" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property UserRole As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ UserRole { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UserRole : string with get, set" Usage="Microsoft.Office.InfoPath.XmlForm.UserRole" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewInfos">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ViewInfoCollection ViewInfos { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ViewInfoCollection ViewInfos" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ViewInfos As ViewInfoCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ViewInfoCollection ^ ViewInfos { Microsoft::Office::InfoPath::ViewInfoCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ViewInfos : Microsoft.Office.InfoPath.ViewInfoCollection" Usage="Microsoft.Office.InfoPath.XmlForm.ViewInfos" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewInfoCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlLang">
+      <MemberSignature Language="C#" Value="public abstract string XmlLang { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlLang" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.XmlLang" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property XmlLang As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ XmlLang { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.XmlLang : string with get, set" Usage="Microsoft.Office.InfoPath.XmlForm.XmlLang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

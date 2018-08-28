@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ApplicationEvents" />
   <TypeSignature Language="VB.NET" Value="Public Interface ApplicationEvents&#xA;Implements ApplicationEventsEmpty" />
   <TypeSignature Language="C++ CLI" Value="public interface class ApplicationEvents : Microsoft::Office::Interop::InfoPath::SemiTrust::ApplicationEventsEmpty" />
+  <TypeSignature Language="F#" Value="type ApplicationEvents = interface&#xA;    interface ApplicationEventsEmpty" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

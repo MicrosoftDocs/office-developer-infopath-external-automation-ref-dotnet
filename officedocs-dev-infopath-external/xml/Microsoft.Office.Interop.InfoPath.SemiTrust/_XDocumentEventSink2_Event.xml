@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event" />
   <TypeSignature Language="VB.NET" Value="Public Interface _XDocumentEventSink2_Event" />
   <TypeSignature Language="C++ CLI" Value="public interface class _XDocumentEventSink2_Event" />
+  <TypeSignature Language="F#" Value="type _XDocumentEventSink2_Event = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnAfterImport" />
       <MemberSignature Language="VB.NET" Value="Event OnAfterImport As _XDocumentEventSink2_OnAfterImportEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnAfterImportEventHandler ^ OnAfterImport;" />
+      <MemberSignature Language="F#" Value="member this.OnAfterImport : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnAfterImportEventHandler " Usage="member this.OnAfterImport : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnAfterImportEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -47,6 +49,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnContextChange" />
       <MemberSignature Language="VB.NET" Value="Event OnContextChange As _XDocumentEventSink2_OnContextChangeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnContextChangeEventHandler ^ OnContextChange;" />
+      <MemberSignature Language="F#" Value="member this.OnContextChange : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnContextChangeEventHandler " Usage="member this.OnContextChange : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnContextChangeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -66,6 +69,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnLoad" />
       <MemberSignature Language="VB.NET" Value="Event OnLoad As _XDocumentEventSink2_OnLoadEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnLoadEventHandler ^ OnLoad;" />
+      <MemberSignature Language="F#" Value="member this.OnLoad : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnLoadEventHandler " Usage="member this.OnLoad : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnLoadEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -85,6 +89,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnMergeRequest" />
       <MemberSignature Language="VB.NET" Value="Event OnMergeRequest As _XDocumentEventSink2_OnMergeRequestEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnMergeRequestEventHandler ^ OnMergeRequest;" />
+      <MemberSignature Language="F#" Value="member this.OnMergeRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnMergeRequestEventHandler " Usage="member this.OnMergeRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnMergeRequestEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -104,6 +109,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSaveRequest" />
       <MemberSignature Language="VB.NET" Value="Event OnSaveRequest As _XDocumentEventSink2_OnSaveRequestEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSaveRequestEventHandler ^ OnSaveRequest;" />
+      <MemberSignature Language="F#" Value="member this.OnSaveRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSaveRequestEventHandler " Usage="member this.OnSaveRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSaveRequestEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -123,6 +129,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSign" />
       <MemberSignature Language="VB.NET" Value="Event OnSign As _XDocumentEventSink2_OnSignEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSignEventHandler ^ OnSign;" />
+      <MemberSignature Language="F#" Value="member this.OnSign : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSignEventHandler " Usage="member this.OnSign : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSignEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -142,6 +149,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSubmitRequest" />
       <MemberSignature Language="VB.NET" Value="Event OnSubmitRequest As _XDocumentEventSink2_OnSubmitRequestEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSubmitRequestEventHandler ^ OnSubmitRequest;" />
+      <MemberSignature Language="F#" Value="member this.OnSubmitRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSubmitRequestEventHandler " Usage="member this.OnSubmitRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSubmitRequestEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -161,6 +169,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSwitchView" />
       <MemberSignature Language="VB.NET" Value="Event OnSwitchView As _XDocumentEventSink2_OnSwitchViewEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSwitchViewEventHandler ^ OnSwitchView;" />
+      <MemberSignature Language="F#" Value="member this.OnSwitchView : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSwitchViewEventHandler " Usage="member this.OnSwitchView : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSwitchViewEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -180,6 +189,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnVersionUpgrade" />
       <MemberSignature Language="VB.NET" Value="Event OnVersionUpgrade As _XDocumentEventSink2_OnVersionUpgradeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnVersionUpgradeEventHandler ^ OnVersionUpgrade;" />
+      <MemberSignature Language="F#" Value="member this.OnVersionUpgrade : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnVersionUpgradeEventHandler " Usage="member this.OnVersionUpgrade : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnVersionUpgradeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

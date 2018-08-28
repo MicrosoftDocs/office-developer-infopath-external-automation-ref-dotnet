@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdSignatureRelation" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdSignatureRelation" />
+  <TypeSignature Language="F#" Value="type XdSignatureRelation = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,6 +23,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation.xdSignatureRelationCoSign" />
       <MemberSignature Language="VB.NET" Value="xdSignatureRelationCoSign" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureRelationCoSign" />
+      <MemberSignature Language="F#" Value="xdSignatureRelationCoSign = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation.xdSignatureRelationCoSign" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -41,6 +43,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation.xdSignatureRelationCounterSign" />
       <MemberSignature Language="VB.NET" Value="xdSignatureRelationCounterSign" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureRelationCounterSign" />
+      <MemberSignature Language="F#" Value="xdSignatureRelationCounterSign = 3" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation.xdSignatureRelationCounterSign" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -60,6 +63,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation.xdSignatureRelationSingle" />
       <MemberSignature Language="VB.NET" Value="xdSignatureRelationSingle" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureRelationSingle" />
+      <MemberSignature Language="F#" Value="xdSignatureRelationSingle = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation.xdSignatureRelationSingle" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

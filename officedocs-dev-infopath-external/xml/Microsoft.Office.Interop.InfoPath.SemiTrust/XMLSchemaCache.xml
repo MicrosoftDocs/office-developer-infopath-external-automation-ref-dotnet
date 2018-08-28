@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLSchemaCache" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLSchemaCache&#xA;Implements IXMLDOMSchemaCollection" />
   <TypeSignature Language="C++ CLI" Value="public interface class XMLSchemaCache : Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMSchemaCollection" />
+  <TypeSignature Language="F#" Value="type XMLSchemaCache = interface&#xA;    interface IXMLDOMSchemaCollection" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

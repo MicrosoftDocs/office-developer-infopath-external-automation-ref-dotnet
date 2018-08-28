@@ -1,0 +1,210 @@
+﻿<Type Name="EmailSubmitConnection" FullName="Microsoft.Office.InfoPath.EmailSubmitConnection">
+  <TypeSignature Language="C#" Value="public abstract class EmailSubmitConnection : Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EmailSubmitConnection extends Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.EmailSubmitConnection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class EmailSubmitConnection&#xA;Inherits DataConnection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class EmailSubmitConnection abstract : Microsoft::Office::InfoPath::DataConnection" />
+  <TypeSignature Language="F#" Value="type EmailSubmitConnection = class&#xA;    inherit DataConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.DataConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EmailSubmitConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.EmailSubmitConnection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; EmailSubmitConnection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AttachmentFileName">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XPathTypedValue AttachmentFileName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XPathTypedValue AttachmentFileName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.EmailSubmitConnection.AttachmentFileName" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property AttachmentFileName As XPathTypedValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XPathTypedValue ^ AttachmentFileName { Microsoft::Office::InfoPath::XPathTypedValue ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.AttachmentFileName : Microsoft.Office.InfoPath.XPathTypedValue" Usage="Microsoft.Office.InfoPath.EmailSubmitConnection.AttachmentFileName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bcc">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XPathTypedValue Bcc { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XPathTypedValue Bcc" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.EmailSubmitConnection.Bcc" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Bcc As XPathTypedValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XPathTypedValue ^ Bcc { Microsoft::Office::InfoPath::XPathTypedValue ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Bcc : Microsoft.Office.InfoPath.XPathTypedValue" Usage="Microsoft.Office.InfoPath.EmailSubmitConnection.Bcc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CC">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XPathTypedValue CC { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XPathTypedValue CC" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.EmailSubmitConnection.CC" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CC As XPathTypedValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XPathTypedValue ^ CC { Microsoft::Office::InfoPath::XPathTypedValue ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CC : Microsoft.Office.InfoPath.XPathTypedValue" Usage="Microsoft.Office.InfoPath.EmailSubmitConnection.CC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailAttachmentType">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.EmailAttachmentType EmailAttachmentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.EmailAttachmentType EmailAttachmentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.EmailSubmitConnection.EmailAttachmentType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property EmailAttachmentType As EmailAttachmentType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::EmailAttachmentType EmailAttachmentType { Microsoft::Office::InfoPath::EmailAttachmentType get(); void set(Microsoft::Office::InfoPath::EmailAttachmentType value); };" />
+      <MemberSignature Language="F#" Value="member this.EmailAttachmentType : Microsoft.Office.InfoPath.EmailAttachmentType with get, set" Usage="Microsoft.Office.InfoPath.EmailSubmitConnection.EmailAttachmentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.EmailAttachmentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract void Execute (System.Xml.XPath.XPathNavigator input);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(class System.Xml.XPath.XPathNavigator input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.EmailSubmitConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Execute (input As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Execute(System::Xml::XPath::XPathNavigator ^ input);" />
+      <MemberSignature Language="F#" Value="override this.Execute : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="emailSubmitConnection.Execute input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="input">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Introduction">
+      <MemberSignature Language="C#" Value="public abstract string Introduction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Introduction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.EmailSubmitConnection.Introduction" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Introduction As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Introduction { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Introduction : string with get, set" Usage="Microsoft.Office.InfoPath.EmailSubmitConnection.Introduction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XPathTypedValue Subject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XPathTypedValue Subject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.EmailSubmitConnection.Subject" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Subject As XPathTypedValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XPathTypedValue ^ Subject { Microsoft::Office::InfoPath::XPathTypedValue ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Subject : Microsoft.Office.InfoPath.XPathTypedValue" Usage="Microsoft.Office.InfoPath.EmailSubmitConnection.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XPathTypedValue To { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XPathTypedValue To" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.EmailSubmitConnection.To" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property To As XPathTypedValue" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XPathTypedValue ^ To { Microsoft::Office::InfoPath::XPathTypedValue ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.To : Microsoft.Office.InfoPath.XPathTypedValue" Usage="Microsoft.Office.InfoPath.EmailSubmitConnection.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

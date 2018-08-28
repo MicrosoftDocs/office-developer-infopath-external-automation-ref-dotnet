@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.PermissionObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface PermissionObject&#xA;Implements Permission" />
   <TypeSignature Language="C++ CLI" Value="public interface class PermissionObject : Microsoft::Office::Interop::InfoPath::SemiTrust::Permission" />
+  <TypeSignature Language="F#" Value="type PermissionObject = interface&#xA;    interface Permission" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

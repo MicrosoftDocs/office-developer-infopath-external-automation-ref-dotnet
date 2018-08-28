@@ -1,0 +1,121 @@
+﻿<Type Name="CertificateStatus" FullName="Microsoft.Office.InfoPath.CertificateStatus">
+  <TypeSignature Language="C#" Value="public enum CertificateStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed CertificateStatus extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.CertificateStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Enum CertificateStatus" />
+  <TypeSignature Language="C++ CLI" Value="public enum class CertificateStatus" />
+  <TypeSignature Language="F#" Value="type CertificateStatus = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="Error" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.CertificateStatus Error = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.CertificateStatus.Error" />
+      <MemberSignature Language="VB.NET" Value="Error" />
+      <MemberSignature Language="C++ CLI" Value="Error" />
+      <MemberSignature Language="F#" Value="Error = 0" Usage="Microsoft.Office.InfoPath.CertificateStatus.Error" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.CertificateStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Expired">
+      <MemberSignature Language="C#" Value="Expired" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.CertificateStatus Expired = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.CertificateStatus.Expired" />
+      <MemberSignature Language="VB.NET" Value="Expired" />
+      <MemberSignature Language="C++ CLI" Value="Expired" />
+      <MemberSignature Language="F#" Value="Expired = 2" Usage="Microsoft.Office.InfoPath.CertificateStatus.Expired" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.CertificateStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotTrusted">
+      <MemberSignature Language="C#" Value="NotTrusted" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.CertificateStatus NotTrusted = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.CertificateStatus.NotTrusted" />
+      <MemberSignature Language="VB.NET" Value="NotTrusted" />
+      <MemberSignature Language="C++ CLI" Value="NotTrusted" />
+      <MemberSignature Language="F#" Value="NotTrusted = 3" Usage="Microsoft.Office.InfoPath.CertificateStatus.NotTrusted" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.CertificateStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Revoked">
+      <MemberSignature Language="C#" Value="Revoked" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.CertificateStatus Revoked = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.CertificateStatus.Revoked" />
+      <MemberSignature Language="VB.NET" Value="Revoked" />
+      <MemberSignature Language="C++ CLI" Value="Revoked" />
+      <MemberSignature Language="F#" Value="Revoked = 4" Usage="Microsoft.Office.InfoPath.CertificateStatus.Revoked" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.CertificateStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Valid">
+      <MemberSignature Language="C#" Value="Valid" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.CertificateStatus Valid = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.CertificateStatus.Valid" />
+      <MemberSignature Language="VB.NET" Value="Valid" />
+      <MemberSignature Language="C++ CLI" Value="Valid" />
+      <MemberSignature Language="F#" Value="Valid = 1" Usage="Microsoft.Office.InfoPath.CertificateStatus.Valid" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.CertificateStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

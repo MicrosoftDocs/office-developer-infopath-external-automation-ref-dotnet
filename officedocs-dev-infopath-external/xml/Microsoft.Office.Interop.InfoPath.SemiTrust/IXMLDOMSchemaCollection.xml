@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection" />
   <TypeSignature Language="VB.NET" Value="Public Interface IXMLDOMSchemaCollection" />
   <TypeSignature Language="C++ CLI" Value="public interface class IXMLDOMSchemaCollection" />
+  <TypeSignature Language="F#" Value="type IXMLDOMSchemaCollection = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection.add(System.String,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub add (namespaceURI As String, var As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void add(System::String ^ namespaceURI, System::Object ^ var);" />
+      <MemberSignature Language="F#" Value="abstract member add : string * obj -&gt; unit" Usage="iXMLDOMSchemaCollection.add (namespaceURI, var)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection.addCollection(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection)" />
       <MemberSignature Language="VB.NET" Value="Public Sub addCollection (otherCollection As IXMLDOMSchemaCollection)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void addCollection(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMSchemaCollection ^ otherCollection);" />
+      <MemberSignature Language="F#" Value="abstract member addCollection : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection -&gt; unit" Usage="iXMLDOMSchemaCollection.addCollection otherCollection" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -86,6 +89,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection.get(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function get (namespaceURI As String) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member get : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="iXMLDOMSchemaCollection.get namespaceURI" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -115,6 +119,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="iXMLDOMSchemaCollection.GetEnumerator " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -136,6 +141,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection.Item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default[int] { System::String ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -165,6 +171,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection.length" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property length As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int length { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.length : int" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection.length" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -190,6 +197,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSchemaCollection.remove(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub remove (namespaceURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void remove(System::String ^ namespaceURI);" />
+      <MemberSignature Language="F#" Value="abstract member remove : string -&gt; unit" Usage="iXMLDOMSchemaCollection.remove namespaceURI" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

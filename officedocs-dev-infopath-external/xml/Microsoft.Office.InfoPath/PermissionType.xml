@@ -1,0 +1,206 @@
+﻿<Type Name="PermissionType" FullName="Microsoft.Office.InfoPath.PermissionType">
+  <TypeSignature Language="C#" Value="public enum PermissionType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PermissionType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.PermissionType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum PermissionType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class PermissionType" />
+  <TypeSignature Language="F#" Value="type PermissionType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Change">
+      <MemberSignature Language="C#" Value="Change" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Change = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Change" />
+      <MemberSignature Language="VB.NET" Value="Change" />
+      <MemberSignature Language="C++ CLI" Value="Change" />
+      <MemberSignature Language="F#" Value="Change = 15" Usage="Microsoft.Office.InfoPath.PermissionType.Change" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>15</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="Edit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Edit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Edit" />
+      <MemberSignature Language="VB.NET" Value="Edit" />
+      <MemberSignature Language="C++ CLI" Value="Edit" />
+      <MemberSignature Language="F#" Value="Edit = 2" Usage="Microsoft.Office.InfoPath.PermissionType.Edit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Extract">
+      <MemberSignature Language="C#" Value="Extract" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Extract = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Extract" />
+      <MemberSignature Language="VB.NET" Value="Extract" />
+      <MemberSignature Language="C++ CLI" Value="Extract" />
+      <MemberSignature Language="F#" Value="Extract = 8" Usage="Microsoft.Office.InfoPath.PermissionType.Extract" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullControl">
+      <MemberSignature Language="C#" Value="FullControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType FullControl = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.FullControl" />
+      <MemberSignature Language="VB.NET" Value="FullControl" />
+      <MemberSignature Language="C++ CLI" Value="FullControl" />
+      <MemberSignature Language="F#" Value="FullControl = 64" Usage="Microsoft.Office.InfoPath.PermissionType.FullControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectModel">
+      <MemberSignature Language="C#" Value="ObjectModel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType ObjectModel = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.ObjectModel" />
+      <MemberSignature Language="VB.NET" Value="ObjectModel" />
+      <MemberSignature Language="C++ CLI" Value="ObjectModel" />
+      <MemberSignature Language="F#" Value="ObjectModel = 32" Usage="Microsoft.Office.InfoPath.PermissionType.ObjectModel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="Print" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Print = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Print" />
+      <MemberSignature Language="VB.NET" Value="Print" />
+      <MemberSignature Language="C++ CLI" Value="Print" />
+      <MemberSignature Language="F#" Value="Print = 16" Usage="Microsoft.Office.InfoPath.PermissionType.Print" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Read = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Read" />
+      <MemberSignature Language="VB.NET" Value="Read" />
+      <MemberSignature Language="C++ CLI" Value="Read" />
+      <MemberSignature Language="F#" Value="Read = 1" Usage="Microsoft.Office.InfoPath.PermissionType.Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="Save" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Save = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Save" />
+      <MemberSignature Language="VB.NET" Value="Save" />
+      <MemberSignature Language="C++ CLI" Value="Save" />
+      <MemberSignature Language="F#" Value="Save = 4" Usage="Microsoft.Office.InfoPath.PermissionType.Save" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="View">
+      <MemberSignature Language="C#" Value="View" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType View = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.View" />
+      <MemberSignature Language="VB.NET" Value="View" />
+      <MemberSignature Language="C++ CLI" Value="View" />
+      <MemberSignature Language="F#" Value="View = 1" Usage="Microsoft.Office.InfoPath.PermissionType.View" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

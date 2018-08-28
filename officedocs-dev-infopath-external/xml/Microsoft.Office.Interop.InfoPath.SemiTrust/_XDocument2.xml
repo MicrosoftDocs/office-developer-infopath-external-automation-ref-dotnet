@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2" />
   <TypeSignature Language="VB.NET" Value="Public Interface _XDocument2&#xA;Implements _XDocument" />
   <TypeSignature Language="C++ CLI" Value="public interface class _XDocument2 : Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocument" />
+  <TypeSignature Language="F#" Value="type _XDocument2 = interface&#xA;    interface _XDocument" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.CreateDOM" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateDOM () As IXMLDOMDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ CreateDOM();" />
+      <MemberSignature Language="F#" Value="abstract member CreateDOM : unit -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" Usage="_XDocument2.CreateDOM " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DataAdapters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataAdapters As DataAdaptersCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::DataAdaptersCollection ^ DataAdapters { Microsoft::Office::Interop::InfoPath::SemiTrust::DataAdaptersCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataAdapters : Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DataAdapters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -83,6 +86,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DataObjects" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataObjects As DataObjectsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::DataObjectsCollection ^ DataObjects { Microsoft::Office::Interop::InfoPath::SemiTrust::DataObjectsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataObjects : Microsoft.Office.Interop.InfoPath.SemiTrust.DataObjectsCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DataObjects" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.DataObjects</InterfaceMember>
@@ -111,6 +115,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DOM" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DOM As IXMLDOMDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ DOM { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DOM : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DOM" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.DOM</InterfaceMember>
@@ -139,6 +144,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Errors" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Errors As ErrorsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::ErrorsCollection ^ Errors { Microsoft::Office::Interop::InfoPath::SemiTrust::ErrorsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Errors : Microsoft.Office.Interop.InfoPath.SemiTrust.ErrorsCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Errors" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Errors</InterfaceMember>
@@ -167,6 +173,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Extension" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Extension As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Extension { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Extension : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Extension" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Extension</InterfaceMember>
@@ -195,6 +202,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.GetDataVariable(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDataVariable (lVariableNumber As Integer) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetDataVariable(int lVariableNumber);" />
+      <MemberSignature Language="F#" Value="abstract member GetDataVariable : int -&gt; string" Usage="_XDocument2.GetDataVariable lVariableNumber" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.GetDataVariable(System.Int32)</InterfaceMember>
@@ -227,6 +235,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.GetDOM(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDOM (bstrName As String) As IXMLDOMDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ GetDOM(System::String ^ bstrName);" />
+      <MemberSignature Language="F#" Value="abstract member GetDOM : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" Usage="_XDocument2.GetDOM bstrName" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.GetDOM(System.String)</InterfaceMember>
@@ -259,6 +268,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.GetNamedNodeProperty(System.Object,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetNamedNodeProperty (varMainDOMNode As Object, bstrPropertyName As String, bstrDefaultValue As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetNamedNodeProperty(System::Object ^ varMainDOMNode, System::String ^ bstrPropertyName, System::String ^ bstrDefaultValue);" />
+      <MemberSignature Language="F#" Value="abstract member GetNamedNodeProperty : obj * string * string -&gt; string" Usage="_XDocument2.GetNamedNodeProperty (varMainDOMNode, bstrPropertyName, bstrDefaultValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -292,6 +302,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ImportDOM(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ImportDOM (pxDoc As IXMLDOMDocument)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ImportDOM(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ pxDoc);" />
+      <MemberSignature Language="F#" Value="abstract member ImportDOM : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument -&gt; unit" Usage="_XDocument2.ImportDOM pxDoc" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -320,6 +331,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ImportFile(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ImportFile (bstrFileURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ImportFile(System::String ^ bstrFileURI);" />
+      <MemberSignature Language="F#" Value="abstract member ImportFile : string -&gt; unit" Usage="_XDocument2.ImportFile bstrFileURI" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.ImportFile(System.String)</InterfaceMember>
@@ -351,6 +363,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDirty" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDirty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDirty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsDirty : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDirty" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsDirty</InterfaceMember>
@@ -379,6 +392,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDOMReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDOMReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDOMReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsDOMReadOnly : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDOMReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsDOMReadOnly</InterfaceMember>
@@ -407,6 +421,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsNew" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsNew As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsNew { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsNew : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsNew" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsNew</InterfaceMember>
@@ -435,6 +450,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsReadOnly</InterfaceMember>
@@ -463,6 +479,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsRecovered" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRecovered As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsRecovered { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsRecovered : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsRecovered" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -488,6 +505,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsSigned" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSigned As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSigned { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsSigned : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsSigned" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsSigned</InterfaceMember>
@@ -516,6 +534,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Language" />
       <MemberSignature Language="VB.NET" Value="Public Property Language As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Language { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Language : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Language" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Language</InterfaceMember>
@@ -544,6 +563,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.PrintOut" />
       <MemberSignature Language="VB.NET" Value="Public Sub PrintOut ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void PrintOut();" />
+      <MemberSignature Language="F#" Value="abstract member PrintOut : unit -&gt; unit" Usage="_XDocument2.PrintOut " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.PrintOut</InterfaceMember>
@@ -572,6 +592,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Query" />
       <MemberSignature Language="VB.NET" Value="Public Sub Query ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Query();" />
+      <MemberSignature Language="F#" Value="abstract member Query : unit -&gt; unit" Usage="_XDocument2.Query " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Query</InterfaceMember>
@@ -600,6 +621,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.QueryAdapter" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property QueryAdapter As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ QueryAdapter { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryAdapter : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.QueryAdapter" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.QueryAdapter</InterfaceMember>
@@ -628,6 +650,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Role" />
       <MemberSignature Language="VB.NET" Value="Public Property Role As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Role { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Role : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Role" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -653,6 +676,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Save" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save();" />
+      <MemberSignature Language="F#" Value="abstract member Save : unit -&gt; unit" Usage="_XDocument2.Save " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Save</InterfaceMember>
@@ -681,6 +705,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SaveAs(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SaveAs (bstrFileUrl As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SaveAs(System::String ^ bstrFileUrl);" />
+      <MemberSignature Language="F#" Value="abstract member SaveAs : string -&gt; unit" Usage="_XDocument2.SaveAs bstrFileUrl" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.SaveAs(System.String)</InterfaceMember>
@@ -712,6 +737,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SetDataVariable(System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetDataVariable (lVariableNumber As Integer, bstrVariableValue As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetDataVariable(int lVariableNumber, System::String ^ bstrVariableValue);" />
+      <MemberSignature Language="F#" Value="abstract member SetDataVariable : int * string -&gt; unit" Usage="_XDocument2.SetDataVariable (lVariableNumber, bstrVariableValue)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.SetDataVariable(System.Int32,System.String)</InterfaceMember>
@@ -745,6 +771,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SetDirty(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetDirty (vfIsDirty As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetDirty(bool vfIsDirty);" />
+      <MemberSignature Language="F#" Value="abstract member SetDirty : bool -&gt; unit" Usage="_XDocument2.SetDirty vfIsDirty" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -773,6 +800,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SetNamedNodeProperty(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetNamedNodeProperty (pxmlMainDOMNode As IXMLDOMNode, bstrPropertyName As String, bstrValue As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetNamedNodeProperty(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ pxmlMainDOMNode, System::String ^ bstrPropertyName, System::String ^ bstrValue);" />
+      <MemberSignature Language="F#" Value="abstract member SetNamedNodeProperty : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode * string * string -&gt; unit" Usage="_XDocument2.SetNamedNodeProperty (pxmlMainDOMNode, bstrPropertyName, bstrValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -805,6 +833,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SignedDataBlocks" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignedDataBlocks As SignedDataBlocksCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::SignedDataBlocksCollection ^ SignedDataBlocks { Microsoft::Office::Interop::InfoPath::SemiTrust::SignedDataBlocksCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignedDataBlocks : Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SignedDataBlocks" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -830,6 +859,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Solution" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Solution As SolutionObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::SolutionObject ^ Solution { Microsoft::Office::Interop::InfoPath::SemiTrust::SolutionObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Solution : Microsoft.Office.Interop.InfoPath.SemiTrust.SolutionObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Solution" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Solution</InterfaceMember>
@@ -858,6 +888,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Submit" />
       <MemberSignature Language="VB.NET" Value="Public Sub Submit ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Submit();" />
+      <MemberSignature Language="F#" Value="abstract member Submit : unit -&gt; unit" Usage="_XDocument2.Submit " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Submit</InterfaceMember>
@@ -886,6 +917,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.UI" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UI As UIObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::UIObject ^ UI { Microsoft::Office::Interop::InfoPath::SemiTrust::UIObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UI : Microsoft.Office.Interop.InfoPath.SemiTrust.UIObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.UI" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.UI</InterfaceMember>
@@ -914,6 +946,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.URI" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property URI As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ URI { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.URI : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.URI" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.URI</InterfaceMember>
@@ -942,6 +975,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Util" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Util As UtilObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::UtilObject ^ Util { Microsoft::Office::Interop::InfoPath::SemiTrust::UtilObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Util : Microsoft.Office.Interop.InfoPath.SemiTrust.UtilObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Util" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -967,6 +1001,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.View" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property View As ViewObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::ViewObject ^ View { Microsoft::Office::Interop::InfoPath::SemiTrust::ViewObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.View : Microsoft.Office.Interop.InfoPath.SemiTrust.ViewObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.View" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.View</InterfaceMember>
@@ -995,6 +1030,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ViewInfos" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ViewInfos As ViewInfosCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::ViewInfosCollection ^ ViewInfos { Microsoft::Office::Interop::InfoPath::SemiTrust::ViewInfosCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ViewInfos : Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfosCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ViewInfos" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.ViewInfos</InterfaceMember>

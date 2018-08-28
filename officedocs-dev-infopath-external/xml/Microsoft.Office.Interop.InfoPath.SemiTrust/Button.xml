@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Button" />
   <TypeSignature Language="VB.NET" Value="Public Interface Button&#xA;Implements ButtonEmpty" />
   <TypeSignature Language="C++ CLI" Value="public interface class Button : Microsoft::Office::Interop::InfoPath::SemiTrust::ButtonEmpty" />
+  <TypeSignature Language="F#" Value="type Button = interface&#xA;    interface ButtonEmpty" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

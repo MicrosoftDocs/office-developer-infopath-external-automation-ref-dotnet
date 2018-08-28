@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeList" />
   <TypeSignature Language="VB.NET" Value="Public Interface DOMNodeList&#xA;Implements IXMLDOMNodeList" />
   <TypeSignature Language="C++ CLI" Value="public interface class DOMNodeList : Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNodeList" />
+  <TypeSignature Language="F#" Value="type DOMNodeList = interface&#xA;    interface IXMLDOMNodeList" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

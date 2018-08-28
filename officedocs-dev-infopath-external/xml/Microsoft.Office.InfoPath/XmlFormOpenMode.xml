@@ -1,0 +1,186 @@
+﻿<Type Name="XmlFormOpenMode" FullName="Microsoft.Office.InfoPath.XmlFormOpenMode">
+  <TypeSignature Language="C#" Value="public enum XmlFormOpenMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlFormOpenMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlFormOpenMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum XmlFormOpenMode" />
+  <TypeSignature Language="C++ CLI" Value="public enum class XmlFormOpenMode" />
+  <TypeSignature Language="F#" Value="type XmlFormOpenMode = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.XmlFormOpenMode Default = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.XmlFormOpenMode.Default" />
+      <MemberSignature Language="VB.NET" Value="Default" />
+      <MemberSignature Language="C++ CLI" Value="Default" />
+      <MemberSignature Language="F#" Value="Default = 1" Usage="Microsoft.Office.InfoPath.XmlFormOpenMode.Default" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormOpenMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FailOnVersionMismatch">
+      <MemberSignature Language="C#" Value="FailOnVersionMismatch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.XmlFormOpenMode FailOnVersionMismatch = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.XmlFormOpenMode.FailOnVersionMismatch" />
+      <MemberSignature Language="VB.NET" Value="FailOnVersionMismatch" />
+      <MemberSignature Language="C++ CLI" Value="FailOnVersionMismatch" />
+      <MemberSignature Language="F#" Value="FailOnVersionMismatch = 0" Usage="Microsoft.Office.InfoPath.XmlFormOpenMode.FailOnVersionMismatch" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormOpenMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FailOnVersionOlder">
+      <MemberSignature Language="C#" Value="FailOnVersionOlder" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.XmlFormOpenMode FailOnVersionOlder = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.XmlFormOpenMode.FailOnVersionOlder" />
+      <MemberSignature Language="VB.NET" Value="FailOnVersionOlder" />
+      <MemberSignature Language="C++ CLI" Value="FailOnVersionOlder" />
+      <MemberSignature Language="F#" Value="FailOnVersionOlder = 1" Usage="Microsoft.Office.InfoPath.XmlFormOpenMode.FailOnVersionOlder" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormOpenMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreDataConnectionsFailure">
+      <MemberSignature Language="C#" Value="IgnoreDataConnectionsFailure" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.XmlFormOpenMode IgnoreDataConnectionsFailure = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.XmlFormOpenMode.IgnoreDataConnectionsFailure" />
+      <MemberSignature Language="VB.NET" Value="IgnoreDataConnectionsFailure" />
+      <MemberSignature Language="C++ CLI" Value="IgnoreDataConnectionsFailure" />
+      <MemberSignature Language="F#" Value="IgnoreDataConnectionsFailure = 64" Usage="Microsoft.Office.InfoPath.XmlFormOpenMode.IgnoreDataConnectionsFailure" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormOpenMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PromptIfSigned">
+      <MemberSignature Language="C#" Value="PromptIfSigned" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.XmlFormOpenMode PromptIfSigned = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.XmlFormOpenMode.PromptIfSigned" />
+      <MemberSignature Language="VB.NET" Value="PromptIfSigned" />
+      <MemberSignature Language="C++ CLI" Value="PromptIfSigned" />
+      <MemberSignature Language="F#" Value="PromptIfSigned = 32" Usage="Microsoft.Office.InfoPath.XmlFormOpenMode.PromptIfSigned" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormOpenMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="ReadOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.XmlFormOpenMode ReadOnly = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.XmlFormOpenMode.ReadOnly" />
+      <MemberSignature Language="VB.NET" Value="ReadOnly" />
+      <MemberSignature Language="C++ CLI" Value="ReadOnly" />
+      <MemberSignature Language="F#" Value="ReadOnly = 8" Usage="Microsoft.Office.InfoPath.XmlFormOpenMode.ReadOnly" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormOpenMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformEvenIfSigned">
+      <MemberSignature Language="C#" Value="TransformEvenIfSigned" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.XmlFormOpenMode TransformEvenIfSigned = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.XmlFormOpenMode.TransformEvenIfSigned" />
+      <MemberSignature Language="VB.NET" Value="TransformEvenIfSigned" />
+      <MemberSignature Language="C++ CLI" Value="TransformEvenIfSigned" />
+      <MemberSignature Language="F#" Value="TransformEvenIfSigned = 16" Usage="Microsoft.Office.InfoPath.XmlFormOpenMode.TransformEvenIfSigned" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormOpenMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UseExistingVersion">
+      <MemberSignature Language="C#" Value="UseExistingVersion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.XmlFormOpenMode UseExistingVersion = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.XmlFormOpenMode.UseExistingVersion" />
+      <MemberSignature Language="VB.NET" Value="UseExistingVersion" />
+      <MemberSignature Language="C++ CLI" Value="UseExistingVersion" />
+      <MemberSignature Language="F#" Value="UseExistingVersion = 2" Usage="Microsoft.Office.InfoPath.XmlFormOpenMode.UseExistingVersion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormOpenMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

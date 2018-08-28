@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Window" />
   <TypeSignature Language="VB.NET" Value="Public Interface Window" />
   <TypeSignature Language="C++ CLI" Value="public interface class Window" />
+  <TypeSignature Language="F#" Value="type Window = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.Window.Activate" />
       <MemberSignature Language="VB.NET" Value="Public Sub Activate ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Activate();" />
+      <MemberSignature Language="F#" Value="abstract member Activate : unit -&gt; unit" Usage="window.Activate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window.Active" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Active As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool Active { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Active : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Window.Active" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -78,6 +81,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.Window.Close(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Close (fForce As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Close(bool fForce);" />
+      <MemberSignature Language="F#" Value="abstract member Close : bool -&gt; unit" Usage="window.Close fForce" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -106,6 +110,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window.CommandBars" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandBars As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ CommandBars { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CommandBars : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Window.CommandBars" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -131,6 +136,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window.MailEnvelope" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MailEnvelope As MailEnvelopeObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::MailEnvelopeObject ^ MailEnvelope { Microsoft::Office::Interop::InfoPath::SemiTrust::MailEnvelopeObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MailEnvelope : Microsoft.Office.Interop.InfoPath.SemiTrust.MailEnvelopeObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Window.MailEnvelope" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -156,6 +162,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window.TaskPanes" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TaskPanes As TaskPanesCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::TaskPanesCollection ^ TaskPanes { Microsoft::Office::Interop::InfoPath::SemiTrust::TaskPanesCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskPanes : Microsoft.Office.Interop.InfoPath.SemiTrust.TaskPanesCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Window.TaskPanes" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -181,6 +188,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window.WindowType" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WindowType As XdWindowType" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XdWindowType WindowType { Microsoft::Office::Interop::InfoPath::SemiTrust::XdWindowType get(); };" />
+      <MemberSignature Language="F#" Value="member this.WindowType : Microsoft.Office.Interop.InfoPath.SemiTrust.XdWindowType" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Window.WindowType" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -206,6 +214,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window.XDocument" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property XDocument As XDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XDocument ^ XDocument { Microsoft::Office::Interop::InfoPath::SemiTrust::XDocument ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.XDocument : Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Window.XDocument" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

@@ -1,0 +1,123 @@
+﻿<Type Name="BdcQueryConnection" FullName="Microsoft.Office.InfoPath.BdcQueryConnection">
+  <TypeSignature Language="C#" Value="public abstract class BdcQueryConnection : Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BdcQueryConnection extends Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.BdcQueryConnection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BdcQueryConnection&#xA;Inherits DataConnection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class BdcQueryConnection abstract : Microsoft::Office::InfoPath::DataConnection" />
+  <TypeSignature Language="F#" Value="type BdcQueryConnection = class&#xA;    inherit DataConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.DataConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BdcQueryConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.BdcQueryConnection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; BdcQueryConnection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityName">
+      <MemberSignature Language="C#" Value="public abstract string EntityName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntityName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.BdcQueryConnection.EntityName" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property EntityName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ EntityName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EntityName : string" Usage="Microsoft.Office.InfoPath.BdcQueryConnection.EntityName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EntityNamespace">
+      <MemberSignature Language="C#" Value="public abstract string EntityNamespace { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string EntityNamespace" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.BdcQueryConnection.EntityNamespace" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property EntityNamespace As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ EntityNamespace { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.EntityNamespace : string" Usage="Microsoft.Office.InfoPath.BdcQueryConnection.EntityNamespace" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LobSystemInstance">
+      <MemberSignature Language="C#" Value="public abstract string LobSystemInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string LobSystemInstance" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.BdcQueryConnection.LobSystemInstance" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property LobSystemInstance As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ LobSystemInstance { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LobSystemInstance : string" Usage="Microsoft.Office.InfoPath.BdcQueryConnection.LobSystemInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecificFinder">
+      <MemberSignature Language="C#" Value="public abstract string SpecificFinder { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SpecificFinder" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.BdcQueryConnection.SpecificFinder" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SpecificFinder As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ SpecificFinder { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SpecificFinder : string" Usage="Microsoft.Office.InfoPath.BdcQueryConnection.SpecificFinder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,207 @@
+﻿<Type Name="MailEnvelope" FullName="Microsoft.Office.InfoPath.MailEnvelope">
+  <TypeSignature Language="C#" Value="public abstract class MailEnvelope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MailEnvelope extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.MailEnvelope" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MailEnvelope" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MailEnvelope abstract" />
+  <TypeSignature Language="F#" Value="type MailEnvelope = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MailEnvelope ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.MailEnvelope.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; MailEnvelope();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Available">
+      <MemberSignature Language="C#" Value="public abstract bool Available { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Available" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Available" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Available As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Available { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Available : bool" Usage="Microsoft.Office.InfoPath.MailEnvelope.Available" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bcc">
+      <MemberSignature Language="C#" Value="public abstract string Bcc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Bcc" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Bcc" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Bcc As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Bcc { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Bcc : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.Bcc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CC">
+      <MemberSignature Language="C#" Value="public abstract string CC { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CC" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.CC" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property CC As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ CC { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CC : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.CC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailAttachmentType">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.EmailAttachmentType EmailAttachmentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.EmailAttachmentType EmailAttachmentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.EmailAttachmentType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property EmailAttachmentType As EmailAttachmentType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::EmailAttachmentType EmailAttachmentType { Microsoft::Office::InfoPath::EmailAttachmentType get(); void set(Microsoft::Office::InfoPath::EmailAttachmentType value); };" />
+      <MemberSignature Language="F#" Value="member this.EmailAttachmentType : Microsoft.Office.InfoPath.EmailAttachmentType with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.EmailAttachmentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.EmailAttachmentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Introduction">
+      <MemberSignature Language="C#" Value="public abstract string Introduction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Introduction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Introduction" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Introduction As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Introduction { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Introduction : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.Introduction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public abstract string Subject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Subject" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Subject As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Subject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Subject : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public abstract string To { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string To" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.To" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property To As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ To { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.To : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public abstract bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Visible" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Visible As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Visible { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Visible : bool with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

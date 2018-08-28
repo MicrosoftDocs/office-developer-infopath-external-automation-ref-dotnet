@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEventObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface DataDOMEventObject&#xA;Implements DataDOMEvent" />
   <TypeSignature Language="C++ CLI" Value="public interface class DataDOMEventObject : Microsoft::Office::Interop::InfoPath::SemiTrust::DataDOMEvent" />
+  <TypeSignature Language="F#" Value="type DataDOMEventObject = interface&#xA;    interface DataDOMEvent&#xA;    interface DocActionEvent&#xA;    interface DocReturnEvent&#xA;    interface DocEvent" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

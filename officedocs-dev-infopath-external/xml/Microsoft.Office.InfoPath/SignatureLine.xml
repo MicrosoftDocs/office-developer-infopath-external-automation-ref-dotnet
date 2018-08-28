@@ -1,0 +1,196 @@
+﻿<Type Name="SignatureLine" FullName="Microsoft.Office.InfoPath.SignatureLine">
+  <TypeSignature Language="C#" Value="public abstract class SignatureLine" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SignatureLine extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignatureLine" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SignatureLine" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SignatureLine abstract" />
+  <TypeSignature Language="F#" Value="type SignatureLine = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SignatureLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignatureLine.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SignatureLine();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public abstract string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.Id" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Id As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Id { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Id : string" Usage="Microsoft.Office.InfoPath.SignatureLine.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public abstract bool Sign (string imageUrl, string suggestedSigner, string suggestedSignerTitle, string suggestedSignerEmail);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Sign(string imageUrl, string suggestedSigner, string suggestedSignerTitle, string suggestedSignerEmail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignatureLine.Sign(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Sign (imageUrl As String, suggestedSigner As String, suggestedSignerTitle As String, suggestedSignerEmail As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool Sign(System::String ^ imageUrl, System::String ^ suggestedSigner, System::String ^ suggestedSignerTitle, System::String ^ suggestedSignerEmail);" />
+      <MemberSignature Language="F#" Value="abstract member Sign : string * string * string * string -&gt; bool" Usage="signatureLine.Sign (imageUrl, suggestedSigner, suggestedSignerTitle, suggestedSignerEmail)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageUrl" Type="System.String" />
+        <Parameter Name="suggestedSigner" Type="System.String" />
+        <Parameter Name="suggestedSignerTitle" Type="System.String" />
+        <Parameter Name="suggestedSignerEmail" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="imageUrl">To be added.</param>
+        <param name="suggestedSigner">To be added.</param>
+        <param name="suggestedSignerTitle">To be added.</param>
+        <param name="suggestedSignerEmail">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signature">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Signature Signature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Signature Signature" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.Signature" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Signature As Signature" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Signature ^ Signature { Microsoft::Office::InfoPath::Signature ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Signature : Microsoft.Office.InfoPath.Signature" Usage="Microsoft.Office.InfoPath.SignatureLine.Signature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Signature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureAppearanceType">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignatureAppearanceType SignatureAppearanceType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.SignatureAppearanceType SignatureAppearanceType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.SignatureAppearanceType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SignatureAppearanceType As SignatureAppearanceType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignatureAppearanceType SignatureAppearanceType { Microsoft::Office::InfoPath::SignatureAppearanceType get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureAppearanceType : Microsoft.Office.InfoPath.SignatureAppearanceType" Usage="Microsoft.Office.InfoPath.SignatureLine.SignatureAppearanceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureAppearanceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuggestedSigner">
+      <MemberSignature Language="C#" Value="public abstract string SuggestedSigner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuggestedSigner" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSigner" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property SuggestedSigner As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ SuggestedSigner { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SuggestedSigner : string with get, set" Usage="Microsoft.Office.InfoPath.SignatureLine.SuggestedSigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuggestedSignerEmailAddress">
+      <MemberSignature Language="C#" Value="public abstract string SuggestedSignerEmailAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuggestedSignerEmailAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerEmailAddress" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property SuggestedSignerEmailAddress As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ SuggestedSignerEmailAddress { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SuggestedSignerEmailAddress : string with get, set" Usage="Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerEmailAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuggestedSignerTitle">
+      <MemberSignature Language="C#" Value="public abstract string SuggestedSignerTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuggestedSignerTitle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerTitle" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property SuggestedSignerTitle As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ SuggestedSignerTitle { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SuggestedSignerTitle : string with get, set" Usage="Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,129 @@
+﻿<Type Name="LoadingEventArgs" FullName="Microsoft.Office.InfoPath.LoadingEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class LoadingEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LoadingEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.LoadingEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class LoadingEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LoadingEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type LoadingEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LoadingEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.LoadingEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; LoadingEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelableArgs">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.LoadingEventArgs.CancelableArgs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CancelableArgs As XmlFormCancelEventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ CancelableArgs { Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CancelableArgs : Microsoft.Office.InfoPath.XmlFormCancelEventArgs" Usage="Microsoft.Office.InfoPath.LoadingEventArgs.CancelableArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormCancelEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputParameters">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IDictionary&lt;string,string&gt; InputParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; InputParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.LoadingEventArgs.InputParameters" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property InputParameters As IDictionary(Of String, String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ InputParameters { System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.InputParameters : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.Office.InfoPath.LoadingEventArgs.InputParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefaultView">
+      <MemberSignature Language="C#" Value="public abstract void SetDefaultView (Microsoft.Office.InfoPath.ViewInfo view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDefaultView(class Microsoft.Office.InfoPath.ViewInfo view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.LoadingEventArgs.SetDefaultView(Microsoft.Office.InfoPath.ViewInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetDefaultView (view As ViewInfo)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetDefaultView(Microsoft::Office::InfoPath::ViewInfo ^ view);" />
+      <MemberSignature Language="F#" Value="abstract member SetDefaultView : Microsoft.Office.InfoPath.ViewInfo -&gt; unit" Usage="loadingEventArgs.SetDefaultView view" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="Microsoft.Office.InfoPath.ViewInfo" />
+      </Parameters>
+      <Docs>
+        <param name="view">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefaultView">
+      <MemberSignature Language="C#" Value="public abstract void SetDefaultView (string view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDefaultView(string view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.LoadingEventArgs.SetDefaultView(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetDefaultView (view As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetDefaultView(System::String ^ view);" />
+      <MemberSignature Language="F#" Value="abstract member SetDefaultView : string -&gt; unit" Usage="loadingEventArgs.SetDefaultView view" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="view">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

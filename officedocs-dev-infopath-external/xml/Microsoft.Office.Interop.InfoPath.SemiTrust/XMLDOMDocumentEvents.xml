@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents" />
   <TypeSignature Language="VB.NET" Value="Public Interface XMLDOMDocumentEvents" />
   <TypeSignature Language="C++ CLI" Value="public interface class XMLDOMDocumentEvents" />
+  <TypeSignature Language="F#" Value="type XMLDOMDocumentEvents = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents.ondataavailable" />
       <MemberSignature Language="VB.NET" Value="Public Sub ondataavailable ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ondataavailable();" />
+      <MemberSignature Language="F#" Value="abstract member ondataavailable : unit -&gt; unit" Usage="xMLDOMDocumentEvents.ondataavailable " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents.onreadystatechange" />
       <MemberSignature Language="VB.NET" Value="Public Sub onreadystatechange ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void onreadystatechange();" />
+      <MemberSignature Language="F#" Value="abstract member onreadystatechange : unit -&gt; unit" Usage="xMLDOMDocumentEvents.onreadystatechange " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

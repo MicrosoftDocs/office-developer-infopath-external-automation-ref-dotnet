@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.View" />
   <TypeSignature Language="VB.NET" Value="Public Interface View" />
   <TypeSignature Language="C++ CLI" Value="public interface class View" />
+  <TypeSignature Language="F#" Value="type View = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.DisableAutoUpdate" />
       <MemberSignature Language="VB.NET" Value="Public Sub DisableAutoUpdate ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void DisableAutoUpdate();" />
+      <MemberSignature Language="F#" Value="abstract member DisableAutoUpdate : unit -&gt; unit" Usage="view.DisableAutoUpdate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.EnableAutoUpdate" />
       <MemberSignature Language="VB.NET" Value="Public Sub EnableAutoUpdate ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void EnableAutoUpdate();" />
+      <MemberSignature Language="F#" Value="abstract member EnableAutoUpdate : unit -&gt; unit" Usage="view.EnableAutoUpdate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -78,6 +81,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.ExecuteAction(System.String,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ExecuteAction (bstrAction As String, varXmlToEdit As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ExecuteAction(System::String ^ bstrAction, System::Object ^ varXmlToEdit);" />
+      <MemberSignature Language="F#" Value="abstract member ExecuteAction : string * obj -&gt; unit" Usage="view.ExecuteAction (bstrAction, varXmlToEdit)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -108,6 +112,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.Export(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Export (bstrURL As String, bstrFormat As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Export(System::String ^ bstrURL, System::String ^ bstrFormat);" />
+      <MemberSignature Language="F#" Value="abstract member Export : string * string -&gt; unit" Usage="view.Export (bstrURL, bstrFormat)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -138,6 +143,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.ForceUpdate" />
       <MemberSignature Language="VB.NET" Value="Public Sub ForceUpdate ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ForceUpdate();" />
+      <MemberSignature Language="F#" Value="abstract member ForceUpdate : unit -&gt; unit" Usage="view.ForceUpdate " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -163,6 +169,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.GetContextNodes(System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetContextNodes (varNode As Object, varViewContext As Object) As XMLNodesCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::XMLNodesCollection ^ GetContextNodes(System::Object ^ varNode, System::Object ^ varViewContext);" />
+      <MemberSignature Language="F#" Value="abstract member GetContextNodes : obj * obj -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.XMLNodesCollection" Usage="view.GetContextNodes (varNode, varViewContext)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -194,6 +201,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.GetSelectedNodes" />
       <MemberSignature Language="VB.NET" Value="Public Function GetSelectedNodes () As XMLNodesCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::XMLNodesCollection ^ GetSelectedNodes();" />
+      <MemberSignature Language="F#" Value="abstract member GetSelectedNodes : unit -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.XMLNodesCollection" Usage="view.GetSelectedNodes " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -220,6 +228,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.View.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.View.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -245,6 +254,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.SelectNodes(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,System.Object,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SelectNodes (pxnStartNode As IXMLDOMNode, varEndNode As Object, varViewContext As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SelectNodes(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ pxnStartNode, System::Object ^ varEndNode, System::Object ^ varViewContext);" />
+      <MemberSignature Language="F#" Value="abstract member SelectNodes : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode * obj * obj -&gt; unit" Usage="view.SelectNodes (pxnStartNode, varEndNode, varViewContext)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -277,6 +287,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.SelectText(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SelectText (pxnField As IXMLDOMNode, varViewContext As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SelectText(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ pxnField, System::Object ^ varViewContext);" />
+      <MemberSignature Language="F#" Value="abstract member SelectText : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode * obj -&gt; unit" Usage="view.SelectText (pxnField, varViewContext)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -307,6 +318,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.SwitchView(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SwitchView (bstrName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SwitchView(System::String ^ bstrName);" />
+      <MemberSignature Language="F#" Value="abstract member SwitchView : string -&gt; unit" Usage="view.SwitchView bstrName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -335,6 +347,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.View.Window" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Window As WindowObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::WindowObject ^ Window { Microsoft::Office::Interop::InfoPath::SemiTrust::WindowObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Window : Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.View.Window" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

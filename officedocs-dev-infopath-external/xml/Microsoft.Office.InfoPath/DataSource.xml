@@ -1,0 +1,179 @@
+﻿<Type Name="DataSource" FullName="Microsoft.Office.InfoPath.DataSource">
+  <TypeSignature Language="C#" Value="public abstract class DataSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataSource extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.DataSource" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class DataSource" />
+  <TypeSignature Language="C++ CLI" Value="public ref class DataSource abstract" />
+  <TypeSignature Language="F#" Value="type DataSource = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DataSource ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.DataSource.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; DataSource();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNavigator">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator CreateNavigator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNavigator CreateNavigator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.DataSource.CreateNavigator" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateNavigator () As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNavigator ^ CreateNavigator();" />
+      <MemberSignature Language="F#" Value="abstract member CreateNavigator : unit -&gt; System.Xml.XPath.XPathNavigator" Usage="dataSource.CreateNavigator " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNamedNodeProperty">
+      <MemberSignature Language="C#" Value="public abstract string GetNamedNodeProperty (System.Xml.XPath.XPathNavigator target, string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetNamedNodeProperty(class System.Xml.XPath.XPathNavigator target, string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.DataSource.GetNamedNodeProperty(System.Xml.XPath.XPathNavigator,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetNamedNodeProperty (target As XPathNavigator, name As String) As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::String ^ GetNamedNodeProperty(System::Xml::XPath::XPathNavigator ^ target, System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member GetNamedNodeProperty : System.Xml.XPath.XPathNavigator * string -&gt; string" Usage="dataSource.GetNamedNodeProperty (target, name)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">To be added.</param>
+        <param name="name">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.DataSource.Name" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.InfoPath.DataSource.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryConnection">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.DataConnection QueryConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataConnection QueryConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.DataSource.QueryConnection" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property QueryConnection As DataConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::DataConnection ^ QueryConnection { Microsoft::Office::InfoPath::DataConnection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryConnection : Microsoft.Office.InfoPath.DataConnection" Usage="Microsoft.Office.InfoPath.DataSource.QueryConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public abstract bool ReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.DataSource.ReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ReadOnly As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool ReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReadOnly : bool" Usage="Microsoft.Office.InfoPath.DataSource.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNamedNodeProperty">
+      <MemberSignature Language="C#" Value="public abstract void SetNamedNodeProperty (System.Xml.XPath.XPathNavigator target, string name, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetNamedNodeProperty(class System.Xml.XPath.XPathNavigator target, string name, string value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.DataSource.SetNamedNodeProperty(System.Xml.XPath.XPathNavigator,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetNamedNodeProperty (target As XPathNavigator, name As String, value As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetNamedNodeProperty(System::Xml::XPath::XPathNavigator ^ target, System::String ^ name, System::String ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member SetNamedNodeProperty : System.Xml.XPath.XPathNavigator * string * string -&gt; unit" Usage="dataSource.SetNamedNodeProperty (target, name, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="target">To be added.</param>
+        <param name="name">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

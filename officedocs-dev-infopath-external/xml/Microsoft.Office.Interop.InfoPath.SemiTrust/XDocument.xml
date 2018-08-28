@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" />
   <TypeSignature Language="VB.NET" Value="Public Interface XDocument&#xA;Implements _XDocument2" />
   <TypeSignature Language="C++ CLI" Value="public interface class XDocument : Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocument2" />
+  <TypeSignature Language="F#" Value="type XDocument = interface&#xA;    interface _XDocument2&#xA;    interface _XDocument" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

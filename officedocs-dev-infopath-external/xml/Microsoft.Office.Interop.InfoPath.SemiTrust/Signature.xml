@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature" />
   <TypeSignature Language="VB.NET" Value="Public Interface Signature" />
   <TypeSignature Language="C++ CLI" Value="public interface class Signature" />
+  <TypeSignature Language="F#" Value="type Signature = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Certificate" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Certificate As CertificateObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::CertificateObject ^ Certificate { Microsoft::Office::Interop::InfoPath::SemiTrust::CertificateObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Certificate : Microsoft.Office.Interop.InfoPath.SemiTrust.CertificateObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Certificate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Comment" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Comment As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Comment { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Comment : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Comment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -78,6 +81,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Sign" />
       <MemberSignature Language="VB.NET" Value="Public Sub Sign ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Sign();" />
+      <MemberSignature Language="F#" Value="abstract member Sign : unit -&gt; unit" Usage="signature.Sign " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -103,6 +107,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.SignatureBlockXmlNode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignatureBlockXmlNode As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ SignatureBlockXmlNode { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureBlockXmlNode : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.SignatureBlockXmlNode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -128,6 +133,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Status" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Status As XdSignatureStatus" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XdSignatureStatus Status { Microsoft::Office::Interop::InfoPath::SemiTrust::XdSignatureStatus get(); };" />
+      <MemberSignature Language="F#" Value="member this.Status : Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Status" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>

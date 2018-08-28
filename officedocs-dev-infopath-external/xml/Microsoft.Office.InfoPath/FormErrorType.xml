@@ -1,0 +1,81 @@
+﻿<Type Name="FormErrorType" FullName="Microsoft.Office.InfoPath.FormErrorType">
+  <TypeSignature Language="C#" Value="public enum FormErrorType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed FormErrorType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FormErrorType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum FormErrorType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class FormErrorType" />
+  <TypeSignature Language="F#" Value="type FormErrorType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="SchemaValidation">
+      <MemberSignature Language="C#" Value="SchemaValidation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.FormErrorType SchemaValidation = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.FormErrorType.SchemaValidation" />
+      <MemberSignature Language="VB.NET" Value="SchemaValidation" />
+      <MemberSignature Language="C++ CLI" Value="SchemaValidation" />
+      <MemberSignature Language="F#" Value="SchemaValidation = 1" Usage="Microsoft.Office.InfoPath.FormErrorType.SchemaValidation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormErrorType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SystemGenerated">
+      <MemberSignature Language="C#" Value="SystemGenerated" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.FormErrorType SystemGenerated = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.FormErrorType.SystemGenerated" />
+      <MemberSignature Language="VB.NET" Value="SystemGenerated" />
+      <MemberSignature Language="C++ CLI" Value="SystemGenerated" />
+      <MemberSignature Language="F#" Value="SystemGenerated = 2" Usage="Microsoft.Office.InfoPath.FormErrorType.SystemGenerated" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormErrorType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserDefined">
+      <MemberSignature Language="C#" Value="UserDefined" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.FormErrorType UserDefined = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.FormErrorType.UserDefined" />
+      <MemberSignature Language="VB.NET" Value="UserDefined" />
+      <MemberSignature Language="C++ CLI" Value="UserDefined" />
+      <MemberSignature Language="F#" Value="UserDefined = 3" Usage="Microsoft.Office.InfoPath.FormErrorType.UserDefined" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormErrorType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

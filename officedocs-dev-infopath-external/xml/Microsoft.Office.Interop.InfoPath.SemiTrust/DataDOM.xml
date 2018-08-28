@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOM" />
   <TypeSignature Language="VB.NET" Value="Public Interface DataDOM&#xA;Implements DataDOMEmpty" />
   <TypeSignature Language="C++ CLI" Value="public interface class DataDOM : Microsoft::Office::Interop::InfoPath::SemiTrust::DataDOMEmpty" />
+  <TypeSignature Language="F#" Value="type DataDOM = interface&#xA;    interface DataDOMEmpty" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

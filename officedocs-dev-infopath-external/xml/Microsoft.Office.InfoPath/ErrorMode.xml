@@ -1,0 +1,61 @@
+﻿<Type Name="ErrorMode" FullName="Microsoft.Office.InfoPath.ErrorMode">
+  <TypeSignature Language="C#" Value="public enum ErrorMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ErrorMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ErrorMode" />
+  <TypeSignature Language="C++ CLI" Value="public enum class ErrorMode" />
+  <TypeSignature Language="F#" Value="type ErrorMode = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Modal">
+      <MemberSignature Language="C#" Value="Modal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ErrorMode Modal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ErrorMode.Modal" />
+      <MemberSignature Language="VB.NET" Value="Modal" />
+      <MemberSignature Language="C++ CLI" Value="Modal" />
+      <MemberSignature Language="F#" Value="Modal = 0" Usage="Microsoft.Office.InfoPath.ErrorMode.Modal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ErrorMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modeless">
+      <MemberSignature Language="C#" Value="Modeless" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ErrorMode Modeless = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ErrorMode.Modeless" />
+      <MemberSignature Language="VB.NET" Value="Modeless" />
+      <MemberSignature Language="C++ CLI" Value="Modeless" />
+      <MemberSignature Language="F#" Value="Modeless = 1" Usage="Microsoft.Office.InfoPath.ErrorMode.Modeless" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ErrorMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
