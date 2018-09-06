@@ -14,8 +14,12 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Save" /> event of a form.</summary>
+    <remarks>
+      <para>The <b>SaveEventArgs</b> object provides properties and methods that can be used during a save operation from an event handler for the <b>Save</b> event to determine save properties, and perform the save operation.</para>
+      <para>The properties provided by the <b>SaveEventArgs</b> object are available only during the <b>Save</b> event. This object is destroyed when the form's <b>Save</b> event expires so it may not be stored and used outside of the scope of the <b>Save</b> event.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +55,15 @@
         <ReturnType>Microsoft.Office.InfoPath.SaveCancelEventArgs</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.SaveCancelEventArgs" /> object that can be used to cancel the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Save" /> event.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.SaveCancelEventArgs" /> object.</value>
+        <remarks>
+          <para>Access the <b>SaveCancelEventArgs</b> object to cancel the <b>Save</b> event and specify a custom message to display when the event is cancelled.</para>
+          <para>The <b>SaveEventArgs.CancelableArgs.Cancel</b> property is set to <b>true</b> by default.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Filename">
@@ -72,9 +82,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the file name to be used in the event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Save" /> event. </summary>
+        <value>The name of the file to be saved.</value>
+        <remarks>
+          <para>If the <see cref="P:Microsoft.Office.InfoPath.SaveEventArgs.IsSaveAs" /> property of the <see cref="T:Microsoft.Office.InfoPath.SaveEventArgs" /> object is <b>true</b>, and a save operation has not yet occurred, the <b>FileName</b> property returns an empty string. If the <b>IsSaveAs</b> property is <b>true</b> and a save operation has already occurred, the value returned by the <b>FileName</b> property is the file name under which the form was saved. If the <b>IsSaveAs</b> property is <b>false</b>, the <b>FileName</b> property returns the same value as the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Uri" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsSaveAs">
@@ -93,9 +108,15 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets whether the <see cref="M:Microsoft.Office.InfoPath.SaveEventArgs.PerformSaveOperation" /> method will be performed as a "save" operation or as a "save as" operation.</summary>
+        <value>
+          <b>true</b> if the <b>PerformSaveOperation</b> method will be performed as a "save as" operation; <b>false</b> if the method will be performed as a "save" operation.</value>
+        <remarks>
+          <para>The <b>IsSaveAs</b> property returns <b>true</b> when the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Save" /> event was triggered by a call to the <see cref="M:Microsoft.Office.InfoPath.XmlForm.SaveAs(System.String)" /> method, or by a call to the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Save" /> method when the document is new, or by a call to either method when the document is read-only. Otherwise, the <b>IsSaveAs</b> property returns false.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="PerformSaveOperation">
@@ -115,9 +136,15 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Performs the save operation requested by the user.</summary>
+        <returns>
+          <b>true</b> if the "save" or "save as" operation was successful; if the user cancels the operation by clicking Cancel in the Save As dialog box, returns <b>false</b>.</returns>
+        <remarks>
+          <para>The <b>PerformSaveOperation</b> performs a "save" operation or a "save as" operation depending on the value of the <see cref="P:Microsoft.Office.InfoPath.SaveEventArgs.IsSaveAs" /> property. If the operation is successful, the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Dirty" /> property is set to <b>false</b>.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

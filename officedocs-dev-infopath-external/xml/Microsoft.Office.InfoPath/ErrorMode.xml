@@ -13,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies whether the custom error will be displayed in a modal dialog box or in modeless context within the control that is the source of the error.</summary>
+    <remarks>
+      <para>The <b>ErrorMode</b> enumeration is used to specify the mode in which to display a custom error when using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" /> method of the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> class and the <see cref="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> class.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Modal">
@@ -34,7 +38,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The user is notified of the error with a dialog box alert. After clicking OK in the dialog box alert, the error will appear as an inline alert and the user can choose to return to the previous value with an undo operation.</summary>
       </Docs>
     </Member>
     <Member MemberName="Modeless">
@@ -54,7 +58,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The user is notified of the error with an inline alert and can choose to return to the previous value with an undo operation.</summary>
       </Docs>
     </Member>
   </Members>

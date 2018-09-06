@@ -23,7 +23,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -51,9 +51,21 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> object that represents the currently active window.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>Using the <b>ActiveWindow</b> property, you can gain immediate access to the window that is currently being viewed by the user, and then use the properties and methods of the <b>Window</b> object that it returns.</para>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>ActiveWindow</b> property is used to gain access to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window2.MailEnvelope" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> object that returns a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.MailEnvelopeObject" /> object.</para>
+          <code>MailEnvelope email = thisApplication.&lt;span class="label"&gt;ActiveWindow&lt;/span&gt;.MailEnvelope;
+email.Subject = getNode(@"/mtg:meetingAgenda/mtg:subject").text;
+email.To = aliases + "; ";
+email.Visible = true;</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="CacheSolution">
@@ -80,9 +92,36 @@
         <Parameter Name="bstrSolutionURI" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrSolutionURI">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrSolutionURI">Specifies the Uniform Resource Identifier (URI) of the form template. This parameter can be specified as a form definition (.xsf) file or a form template (.xsn) file.</param>
+        <summary>Examines the form template in the cache and, if necessary, updates it from the published location of the form template.</summary>
+        <remarks>
+          <para>If the form template that currently exists in the cache matches the form template from the published location, no caching takes place. If the computer is offline and the form is already in the cache, the cache is kept and no update will occur.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>private string[] _forms = 
+{ 
+@"\\MyServer\MyForms\MyForm.xsn", 
+@"\\MyServer\MyForms\manifest.xsf" 
+};
+
+private void someFunction()
+{
+…
+CacheFormTemplate(_forms);
+…
+}
+
+private void CacheFormTemplate(string[] forms)
+{ 
+ foreach (string form in forms)
+ {
+  thisApplication.&lt;span class="label"&gt;CacheSolution&lt;/span&gt;(form);
+ }
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="FormatString">
@@ -114,12 +153,148 @@
         <Parameter Name="bstrOptions" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="varInput">To be added.</param>
-        <param name="bstrCategory">To be added.</param>
-        <param name="bstrOptions">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="varInput">The value or XML node to be formatted.</param>
+        <param name="bstrCategory">The value that specifies the category used for formatting. Values include number, percentage, currency, date, time, and datetime.</param>
+        <param name="bstrOptions">The value that specifies the options used for formatting. Takes the form of a case-sensitive string in the format "optionName:value".</param>
+        <summary>Formats the specified string or XML node according to the specified category and options parameters.</summary>
+        <returns>The <b>string</b> formatted according to the specified category and options parameters.</returns>
+        <remarks>
+          <para>The <b>FormatString</b> method can be used anywhere you need to change the format of a specified string. It must be qualified with the Application name, and its return value must be assigned to a variable or used as an expression that requires a string value.</para>
+          <para>The following sections list the values that may be used for <paramref name="bstrCategory" /> and <paramref name="bstrOptions" />:</para>
+          <para />
+          <para />
+          <para>List of categories</para>
+          <list type="table">
+            <item>
+              <term>
+                <b>number</b>
+              </term>
+              <description>Uses numerical values. Valid options for this category include "locale", "numDigits", "leadingZero", "grouping", "decimalSep", "thousandSep", and "negativeOrder".</description>
+            </item>
+            <item>
+              <term>
+                <b>percentage</b>
+              </term>
+              <description>Uses percentage values. Valid options for this category include "locale", "numDigits", "leadingZero", "grouping", "decimalSep", "thousandSep", and "negativeOrder".</description>
+            </item>
+            <item>
+              <term>
+                <b>currency</b>
+              </term>
+              <description>Uses currency values. Valid options for this category include "locale", "numDigits", "leadingZero", "grouping", "decimalSep", "thousandSep", and "negativeOrder", "positiveOrder", and "currencyLocale".</description>
+            </item>
+            <item>
+              <term>
+                <b>date</b>
+              </term>
+              <description>Uses date values. Valid options for this category include "locale", "dateFormat", "useAltCalendar", and "useEnglishStringsAlways".</description>
+            </item>
+            <item>
+              <term>
+                <b>time</b>
+              </term>
+              <description>Uses time values. Valid options for this category include "locale", "timeFormat", and "noSeconds".</description>
+            </item>
+            <item>
+              <term>
+                <b>datetime</b>
+              </term>
+              <description>Uses datetime values. Valid options for this category include "locale", "dateFormat", "timeFormat", "noSeconds", "useAltCalendar", and "useEnglishStringAlways".</description>
+            </item>
+          </list>
+          <para>List of options</para>
+          <list type="table">
+            <item>
+              <term>
+                <b>locale</b>
+              </term>
+              <description>Specifies the locale identifier (LCID). Defaults to the current user's LCID if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>numDigits</b>
+              </term>
+              <description>Specifies the number of fractional digits after the decimal separator. The value auto may also be used to indicate that the number of decimal places that was entered will be the number of decimal places in the output. For example, 1.234, 1.234, 1.00, 1.00, 1.56e2, or 156.00. Defaults to the corresponding value in regional settings if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>leadingZero</b>
+              </term>
+              <description>Specifies whether to use leading zeros in decimal fields. Specify 0 to indicate no leading zeros and 1 to indicate leading zeros. Defaults to the corresponding value in regional settings if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>grouping</b>
+              </term>
+              <description>Specifies the size of each group of digits to the left of the decimal. Values in the range 0–9 and value 32 are valid. Value 32 indicates that the grouping is three digits, then two digits thereafter. Defaults to the corresponding value in regional settings if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>decimalSep</b>
+              </term>
+              <description>Specifies the decimal separator string. Defaults to the corresponding value in regional settings if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>thousandSep</b>
+              </term>
+              <description>Specifies the thousands separator string. Defaults to the corresponding value in regional settings if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>negativeOrder</b>
+              </term>
+              <description>Specifies the negative number mode. Defaults to the corresponding value in regional settings if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>positiveOrder</b>
+              </term>
+              <description>Specifies the positive number mode. Defaults to the corresponding value in regional settings if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>currencyLocale</b>
+              </term>
+              <description>Specifies the locale identifier (LCID) for the currency symbol. Defaults to the value specified by locale if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>dateFormat</b>
+              </term>
+              <description>Specifies a format picture string that is used to form the date string. The values "Short Date", "Long Date", "Year Month", and "none" may also be used to indicate short date format, long date format, year month format, and no format, respectively. "Short Date", "Long Date", and "Year Month" are the default formats provided by the operating system's regional and language settings.</description>
+            </item>
+            <item>
+              <term>
+                <b>useAltCalendar</b>
+              </term>
+              <description>Specifies whether to use an alternate calendar for date formatting. Specify 0 to use the normal calendar and 1 to use the alternate calendar. Defaults to 0 if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>useEnglishStringsAlways</b>
+              </term>
+              <description>Specifies whether to always use English strings for date formatting. Specify 0 to use the language specified by locale and 1 to always use English. Defaults to 0 if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>timeFormat</b>
+              </term>
+              <description>Specifies a format string that is used to form the time string. The value "none" may also be used to indicate no format. Defaults to the time format in regional settings if not specified.</description>
+            </item>
+            <item>
+              <term>
+                <b>noSeconds</b>
+              </term>
+              <description>Specifies whether to not use seconds. Specify 0 to use seconds and 1 to not use seconds. Defaults to 0 if not specified.</description>
+            </item>
+          </list>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>FormatString</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to format the specified date string into a long date format:</para>
+          <code>thisApplication.&lt;span class="label"&gt;FormatString&lt;/span&gt;("2003-01-08", "date", "dateFormat:Long Date");</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="IsDestinationReachable">
@@ -146,10 +321,16 @@
         <Parameter Name="bstrDestination" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrDestination">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="bstrDestination">Specifies the location to check for network connectivity. IP addresses, a UNC paths, or a URLs are acceptable values.</param>
+        <summary>Gets a value indicating whether the specified Uniform Resource Locator (URL), universal naming convention (UNC) path, or IP address of the destination computer can be connected to from the client computer.</summary>
+        <returns>
+          <b>true</b> if the destination computer is reachable; otherwise, <b>false</b>.</returns>
+        <remarks>
+          <para>The value specified for <paramref name="bstrDestination" /> must be either a UNC path that includes a server name and a share name, such as @"\\MyServer\MyShare", or a URL that begins with one of the following protocol identifiers: http, https, or file.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LanguageSettings">
@@ -176,9 +357,24 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the Microsoft Office <b>LanguageSettings</b>.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>After you establish a reference to the <b>LanguageSettings</b> property, you can access all the properties and methods of the object.</para>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example uses the <b>LanguageID</b> property of the <b>LanguageSettings</b> object to return the LCID value (a four-digit number) for the language that is currently being used for the Office help system:</para>
+          <code>LanguageSettings languageSettings = (LanguageSettings) thisApplication.LanguageSettings;   
+int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
+</code>
+          <para>
+            <b>Note</b>: The above example requires the <b>Microsoft.Office.Core</b> namespace and a reference to the Microsoft Office 11.0 Object Library.</para>
+          <para>
+            <b>Important</b>: The above example requires the form have a Full Trust Security Level.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="MachineOnlineState">
@@ -202,9 +398,15 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the current connection state of the client computer.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>MachineOnlineState</b> is based on the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState" /> enumeration.</para>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -231,9 +433,18 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the name of the InfoPath application.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The name of the application does not contain the version number. To obtain the version number of an application, use the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Version" /> property.</para>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.UI2.Alert(System.String)" /> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.UIObject" /> object, accessed through the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to display a message box that indicates the name of the application:</para>
+          <code>thisXDocument.UI.Alert("Application name: " + thisApplication.&lt;span class="label"&gt;Name&lt;/span&gt;);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="NewADODBConnection">
@@ -261,9 +472,19 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Creates and gets a reference to an empty ActiveX Data Objects (ADO) <b>Connection</b> object.</summary>
+        <returns>A reference to an ADO <b>Connection</b> object.</returns>
+        <remarks>
+          <para>If the form is not fully trusted, the <b>NewADODBConnection</b> method will return a "permission denied" error.</para>
+          <para>
+            <b>Note</b>: This method is not intended to be used in a managed-code form. To query a Microsoft SQL Server database, use the <b>System.Data.SqlClient</b> namespace and its associated members by adding a reference to System.Data.dll and a <b>using</b> clause to <b>System.Data.SqlClient</b>.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>object adoConn = thisApplication.&lt;span class="label"&gt;NewADODBConnection&lt;/span&gt;();</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="NewADODBRecordset">
@@ -291,9 +512,19 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Creates and gets a reference to an empty ActiveX Data Objects (ADO) <b>Recordset</b> object.</summary>
+        <returns>A reference to an empty ActiveX Data Objects (ADO) <b>Recordset</b> object.</returns>
+        <remarks>
+          <para>If the form is not fully trusted, the <b>NewADODBRecordset</b> method will return a "permission denied" error.</para>
+          <para>
+            <b>Note</b>: This method is not intended to be used in a managed-code form. To query a Microsoft SQL Server database, use the <b>System.Data.SqlClient</b> namespace and its associated members by adding a reference to System.Data.dll and a <b>using</b> clause to <b>System.Data.SqlClient</b>.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>object adoRS = thisApplication.&lt;span class="label"&gt;NewADODBRecordset&lt;/span&gt;();</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Quit">
@@ -323,9 +554,18 @@
         <Parameter Name="bForce" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="bForce">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bForce">Determines whether open forms will be saved during the quit operation. If set to <b>false</b>, all forms will be closed without saving, even if the data in the forms has been changed. If set to <b>true</b>, the user will be prompted to save the forms. Default value is <b>false</b>.</param>
+        <summary>Quits the InfoPath application.</summary>
+        <remarks>
+          <para>If the <b>Quit</b> method is used in a form that is not fully trusted, the method will return a "permission denied" error.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Quit</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to quit InfoPath without saving any of the currently open forms: </para>
+          <code>thisApplication.&lt;span class="label"&gt;Quit&lt;/span&gt;(false);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="RegisterSolution">
@@ -353,10 +593,25 @@
         <Parameter Name="bstrBehavior" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrSolutionURL">To be added.</param>
-        <param name="bstrBehavior">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrSolutionURL">Specifies the Uniform Resource Locator (URL) of the form template. This parameter can be specified as a form definition (.xsf) file or a form template (.xsn) file.</param>
+        <param name="bstrBehavior">Specifies how the form template is to be installed. Default value is "overwrite". The only other valid value for this parameter is "new-only".</param>
+        <summary>Installs the specified form template.</summary>
+        <remarks>
+          <para>If the form template has already been registered, and "new-only" is specified for the <paramref name="bstrBehavior" /> parameter, the <b>RegisterSolution</b> method will return an error. If "overwrite" is specified, the form template's registration record will be overwritten.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following C# example, the <b>RegisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to install a form template:</para>
+          <code>public void InstallForm()
+{
+ Microsoft.Office.Interop.InfoPath.Application infoPath = new Microsoft.Office.Interop.InfoPath.ApplicationClass();
+ infoPath.&lt;span class="label"&gt;RegisterSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn", "overwrite");
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="UnregisterSolution">
@@ -383,9 +638,24 @@
         <Parameter Name="bstrSolutionURI" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrSolutionURI">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrSolutionURI">Specifies the Uniform Resource Identifier (URI) of the form template.</param>
+        <summary>Uninstalls the specified form template.</summary>
+        <remarks>
+          <para>If the form template cannot be unregistered, the <b>UnregisterSolution</b> method will return an error.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>UnregisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to uninstall a form template:</para>
+          <code>public void UninstallForm()
+{
+ Microsoft.Office.Interop.InfoPath.Application infoPath = new Microsoft.Office.Interop.InfoPath.ApplicationClass();
+ infoPath.&lt;span class="label"&gt;UnregisterSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn");
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="UsableHeight">
@@ -409,9 +679,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the available screen height, the maximum number of points to which you can set the height of an InfoPath document window.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UsableWidth">
@@ -435,9 +709,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the available screen width, the maximum number of points to which you can set the width of an InfoPath document window.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="User">
@@ -461,9 +739,13 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.UserObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.UserObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Version">
@@ -490,9 +772,19 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the InfoPath version number.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The version number of the application does not contain the name. To obtain the name of an application, use the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Name" /> property</para>
+          <para>To obtain the version number of a form template, use the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Solution.Version" /> property.</para>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Version</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to display the application's version number in a message box:</para>
+          <code>thisXDocument.UI.Alert("Application version: " + thisApplication.&lt;span class="label"&gt;Version&lt;/span&gt;);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Windows">
@@ -519,9 +811,20 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> collection.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>After you have set a reference to the <b>Windows</b> collection, you can use its properties to access each of the <b>Window</b> objects that it contains.</para>
+          <para>
+            <b>Note</b>: The <b>Windows</b> collection can be used only to get the count of the <b>Window</b> objects that it contains or to return a reference to a <b>Window</b> object. It cannot be used to add or remove <b>Window</b> objects.</para>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Windows</b> property is used to access the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Windows.Count" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> collection and display the value in a message box:</para>
+          <code>thisXDocument.UI.Alert("Count of Windows: " + thisApplication.&lt;span class="label"&gt;Windows&lt;/span&gt;.Count);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="XDocuments">
@@ -548,9 +851,18 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.XDocumentsCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocuments" /> collection.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>After you have set a reference to the <b>XDocuments</b> collection, you can use its properties to access each of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /><b />objects that it contains.</para>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>XDocuments</b> property is used to access the <b>Count</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocumentsCollection" /> collection and display the value in a message box:</para>
+          <code>thisXDocument.UI.Alert("Count of XDocuments: " + thisApplication.&lt;span class="label"&gt;XDocuments&lt;/span&gt;.Count);</code>
+        </example>
       </Docs>
     </Member>
   </Members>

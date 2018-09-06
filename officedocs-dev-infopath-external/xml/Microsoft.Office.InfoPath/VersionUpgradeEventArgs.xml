@@ -14,8 +14,11 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" /> event of a form. </summary>
+    <remarks>
+      <para>The <b>VersionUpgradeEventArgs</b> object passes state information to an event handler for the <b>VersionUpgrade</b> event. The <b>VersionUpgradeEventArgs</b> object provides properties that can be used in an event handler to determine the version numbers of the form and form template, and provide a response indicating the success or failure of the version upgrade process. The properties that it provides are available only during this event.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +54,16 @@
         <ReturnType>Microsoft.Office.InfoPath.XmlFormCancelEventArgs</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to a <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object.</value>
+        <remarks>
+          <para>Access the <b>XmlFormCancelEventArgs</b> object to cancel the <see cref="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" /> event and specify a custom message to display.</para>
+          <para>The <b>VersionUpgradeEventArgs.CancelableArgs.Cancel</b> property is set to <b>false</b> by default.</para>
+          <para>This property can be used only during the <b>VersionUpgrade</b> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DocumentVersion">
@@ -72,9 +82,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the version number of the form document being upgraded. </summary>
+        <value>The version number of the form.</value>
+        <remarks>
+          <para>This property can be used only during the <see cref="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" /> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FormTemplateVersion">
@@ -93,9 +108,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the version number of the form template associated with the form being upgraded.</summary>
+        <value>The version number of the form template.</value>
+        <remarks>
+          <para>This property can be used only during the <see cref="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" /> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

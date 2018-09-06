@@ -19,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.CertificateObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -44,9 +44,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns the expiration date of a digital certificate in the localized 'SHORTDATE' format.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IssuedBy">
@@ -70,9 +74,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns the issuer of the digital certificate.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IssuedTo">
@@ -96,9 +104,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns to whom the digital certificate is issued.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Status">
@@ -122,9 +134,14 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns the status of the digital certificate.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The status that is returned is one of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus" /> enumerated constants.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

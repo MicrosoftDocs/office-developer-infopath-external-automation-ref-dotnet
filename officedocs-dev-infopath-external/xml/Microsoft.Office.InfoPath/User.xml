@@ -14,8 +14,11 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides properties and a method that can be used to return information about the current user of the form.</summary>
+    <remarks>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.User" /> class is accessed through the <see cref="P:Microsoft.Office.InfoPath.Application.User" /> property of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -54,10 +57,29 @@
         <Parameter Name="userName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="userName">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="userName">The user's name in the format of domain\username.</param>
+        <summary>Gets whether the specified user is the current user.</summary>
+        <returns>
+          <b>true</b> if the specified user is the current user; otherwise <b>false</b>.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays whether the specified user is the current user.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(
+      this.Application.User.IsCurrentUser(
+      "CONTOSO\\markus").ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show( _
+      Me.Application.User.IsCurrentUser("CONTOSO\markus").ToString())
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="IsUserMemberOf">
@@ -79,10 +101,36 @@
         <Parameter Name="groupName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="groupName">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="groupName">The group name in the format of domain\groupname.</param>
+        <summary>Gets whether the current user is a member of the specified group.</summary>
+        <returns>
+          <b>true</b> if the current user is a member of the specified group; otherwise <b>false</b>.</returns>
+        <remarks>
+          <para>Even though the <see cref="M:Microsoft.Office.InfoPath.User.IsUserMemberOf(System.String)" /> method is marked as security level 2, it is not always accessible. When a call is made to the <see cref="M:Microsoft.Office.InfoPath.User.IsUserMemberOf(System.String)" /> method, InfoPath first performs a security check to determine if access to this method is allowed. The security check confirms whether the calling code is trusted or not and it determines the location of the calling code.</para>
+          <para>If the calling code is trusted (as it is when, for example, the <see cref="M:Microsoft.Office.InfoPath.User.IsUserMemberOf(System.String)" /> method is called from an installed or signed InfoPath form template, or from trusted external code, such as an executable file on the local computer), InfoPath will allow full access to the <see cref="M:Microsoft.Office.InfoPath.User.IsUserMemberOf(System.String)" /> method.</para>
+          <para>If the calling code is not trusted, for example, if the call is coming from a domain-based InfoPath form template, InfoPath first checks where the call is being made from. If the call is from code that is not trusted in an InfoPath form template at a URL such as "http://www.contoso.com/example.xsn", then the call is from the Internet zone. InfoPath will deny access to the <see cref="M:Microsoft.Office.InfoPath.User.IsUserMemberOf(System.String)" /> method for all calls that are not trusted coming from the Internet zone. If the call is from a URL such as "http://contoso/example.xsn", then the call is from the Intranet zone. For a call that is not trusted from the Intranet zone, InfoPath checks whether the Internet Explorer user authentication settings allow automatic logon (in the Intranet zone only or for every logon). If Internet Explorer is configured for automatic logon, then InfoPath checks the user's group membership. If the group membership is public, InfoPath allows full access to the <see cref="M:Microsoft.Office.InfoPath.User.IsUserMemberOf(System.String)" /> method. If the group membership is not fully public, InfoPath hides the result. That is, InfoPath treats the group membership as if it were not visible. The return value in this case is always <b>false</b> because the group membership is not public. InfoPath does not report that access is denied.</para>
+          <para>
+            <b>Note</b>: Group membership information is fully public if access to it is allowed and the information is visible by all non-anonymous users. If even a single non-anonymous user has been specifically denied access to membership information, then the group membership information is not fully public.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays whether the current user is a member of the specified group.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(
+      this.Application.User.IsUserMemberOf(
+      "CONTOSO\\Users").ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show( _
+      Me.Application.User.IsUserMemberOf("CONTOSO\\Users").ToString())
+End Sub</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="LoginName">
@@ -101,9 +149,28 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the user's full credentials.</summary>
+        <value>The user's credentials as domain\username.</value>
+        <remarks>
+          <para>When the form is opened in InfoPath, the <see cref="P:Microsoft.Office.InfoPath.User.LoginName" /> property returns a user's credentials as domain\username. If the user's account does not belong to a domain, the property returns only username.</para>
+          <para>This is equivalent to calling System.Environment.UserDomainName+"\\"+System.Environment.UserName. </para>
+          <para>When the form is deployed to and opened from an appropriately configured document library in Microsoft SharePoint Server 2010 running InfoPath Forms Services, the <b>LoginName</b> property returns the SharePoint credentials of the user that is editing the form. This is equivalent to calling the SharePoint <b>SPUser.LoginName</b> property.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays the current user's login credentials.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Application.User.LoginName);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Application.User.LoginName)
+End Sub</code>
+        </example>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="UserName">
@@ -122,9 +189,28 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets only the user's username.</summary>
+        <value>The user's username.</value>
+        <remarks>
+          <para>When the form is opened in the InfoPath editor, calling the <see cref="P:Microsoft.Office.InfoPath.User.UserName" /> property is equivalent to calling System.Environment.UserName. </para>
+          <para>When the form is deployed to and opened from an appropriately configured document library in Microsoft SharePoint Server 2010 running InfoPath Forms Services, calling the <see cref="P:Microsoft.Office.InfoPath.User.UserName" /> property is equivalent to calling the SharePoint  <a href="frlrfMicrosoftSharePointSPUserClassNameTopic">SPUser.Name</a><a href="frlrfMicrosoftSharePointSPUserClassLoginNameTopic">SPUser.LoginName</a><see cref="P:Microsoft.Office.InfoPath.User.LoginName" /> property.</para>
+          <para>
+            <b>Note</b>: The Local Intranet zone permissions allow reading the username from the environment, so this method can be called by domain-based form templates.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays the current user's username only.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Application.User.UserName);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Application.User.UserName)
+End Sub</code>
+        </example>
       </Docs>
     </Member>
   </Members>

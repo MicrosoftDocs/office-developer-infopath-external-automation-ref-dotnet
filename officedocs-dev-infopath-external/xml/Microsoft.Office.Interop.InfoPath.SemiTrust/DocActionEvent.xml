@@ -23,7 +23,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEventObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -51,9 +51,23 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets or sets the return status of the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_Event.OnClick" /> event.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>ReturnStatus</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEventObject" /> object is available, as the <b>DocActionEvent</b> object inherits from the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEventObject" /> object, but setting this property to <b>false</b> does not cause the event to fail.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>ReturnStatus</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEventObject" /> object is used to indicate that the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_Event.OnClick" /> event was not successful:</para>
+          <code>[InfoPathEventHandler(MatchPath="ShowViewNames", EventType=InfoPathEventType.OnClick)]
+public void ShowViewNames_OnClick(DocActionEvent e)
+{
+ // Cancel the event.
+ e.&lt;span class="label"&gt;ReturnStatus&lt;/span&gt; = false;
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Source">
@@ -77,9 +91,28 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the inner-most XML Document Object Model (DOM) node of a form's underlying XML document.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>After you have set a reference to the XML DOM node that the <b>Source</b> property returns, you can use any of the properties and methods that are supported by the XML DOM.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Source</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEventObject" /> object is used to display the source XML data of the inner-most XML Document Object Model (DOM) node of the form's underlying XML document, which contains the button:</para>
+          <code>[InfoPathEventHandler(MatchPath="ShowDocActionEventSource", EventType=InfoPathEventType.OnClick)]
+public void ShowDocActionEventSource_OnClick(DocActionEvent e)
+{
+ thisXDocument.UI.Alert("Source: " + e.&lt;span class="label"&gt;Source&lt;/span&gt;.xml);
+}</code>
+          <para>In the following example, the <b>Source</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEventObject" /> object is used to display the source XML data of the XML DOM node in a message box:</para>
+          <code>[InfoPathEventHandler(MatchPath="DocActionEventSource", EventType=InfoPathEventType.OnClick)]
+public void DocActionEventSource_OnClick(DocActionEvent e)
+{
+ thisXDocument.UI.Alert("Source: " + e.&lt;span class="label"&gt;Source&lt;/span&gt;.xml);
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="XDocument">
@@ -106,9 +139,21 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object that is associated with the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEventObject" /> event during an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_Event.OnClick" /> event.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>After you have set a reference to the <b>XDocument</b> object that is returned, you can use any of the properties and methods that it provides.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>XDocument</b> property of the <b>DocActionEvent</b> object is used to set a reference to the <b>XDocument</b> object:</para>
+          <code>public void showViewInfos_OnClick(DocActionEvent e)
+{
+XDocument doc = e.&lt;span class="label"&gt;XDocument&lt;/span&gt;;
+}</code>
+        </example>
       </Docs>
     </Member>
   </Members>

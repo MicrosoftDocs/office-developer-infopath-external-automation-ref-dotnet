@@ -19,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>Reserved for internal use.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -40,7 +40,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -62,7 +62,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -84,7 +84,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,7 +113,7 @@
         <param name="fInputIsNull">To be added.</param>
         <param name="bstrInputXML">To be added.</param>
         <param name="fOutputIsNull">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -135,7 +135,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -160,7 +160,7 @@
       </Parameters>
       <Docs>
         <param name="bstrInputXML">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

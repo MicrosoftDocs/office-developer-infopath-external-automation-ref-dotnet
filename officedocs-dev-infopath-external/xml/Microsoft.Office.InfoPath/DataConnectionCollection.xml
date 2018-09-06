@@ -18,8 +18,96 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Contains a data connection object corresponding to each data connection used within a form template.</summary>
+    <remarks>
+      <para>Each data connection is used to retrieve data (inserted into the main data source or into a secondary data source) or to submit data.</para>
+      <para>A data connection used to retrieve or submit data for the main data source will correspond to one of the following data connection object types:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" />
+          </description>
+        </item>
+      </list>
+      <para>A data connection used to retrieve data for a secondary data source will correspond to one of the following data connection object types:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.BdcQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.FileQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.SharePointListRWQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" />
+          </description>
+        </item>
+      </list>
+      <para>A data connection used only for submitting data will correspond to one of the following data connection object types:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.BdcSubmitConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.FileSubmitConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.SharePointListRWSubmitConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" />
+          </description>
+        </item>
+      </list>
+      <para>To access a <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object for a particular kind of data connection, use the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> object associated with the form template. To access the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> object, use the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para>To use the properties or methods of the object returned from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" />, you must cast that object to the type that represents the kind of data connection you are working with before you can access those members. For example, to work with an <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" /> object (which represents a data connection for retrieving data from an Access or SQL Server database), you must cast the object returned from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> as shown in the following examples.</para>
+      <code>   // Get the Employees connection from the 
+   // DataConnections collection.
+   AdoQueryConnection myAdoQueryConnection =
+      (AdoQueryConnection)(this.DataConnections["Employees"]);</code>
+      <code>   ' Get the Employees connection from the 
+   ' DataConnections collection.
+   Dim myAdoQueryConnection As AdoQueryConnection = _
+      DirectCast(Me.DataConnections("Employees"), AdoQueryConnection)</code>
+      <para>For more information about working with data connections, see How to: Access External Data Sources.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,9 +143,18 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the count of the number of <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> objects in the collection.</summary>
+        <value>The count of the number of <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> objects in the collection.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the count of the number of <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> objects is displayed in a message box.</para>
+          <code>MessageBox.Show("Count: " + this.DataConnections.Count.ToString());</code>
+          <code>MessageBox.Show("Count: " &amp;amp; Me.DataConnections.Count.ToString())</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -80,9 +177,14 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:System.Collections.IEnumerator" /> object that iterates over all entries in the collection.</summary>
+        <returns>A <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <remarks>
+          <para>After you have set a reference to the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object that the <b>Item</b> property returns, you can access any of its properties or methods after the object has been cast to the appropriate type for the corresponding data connection. For example, to access the properties and methods of an e-mail connection, you must cast the returned <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object to the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> type.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -104,10 +206,28 @@
         <Parameter Name="index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="index">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="index">The zero-based index of the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object to get.</param>
+        <summary>Gets a reference to the specified <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object from the collection by index value.</summary>
+        <value>The specified object.</value>
+        <remarks>
+          <para>After you have set a reference to the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object that the <b>Item</b> property returns, you can access any of its properties or methods after the object has been cast to the appropriate type for the corresponding data connection. For example, to access the properties and methods of a data connection for submitting a form in e-mail, you must cast the returned <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object to the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> type.</para>
+          <para>
+            <b>Important</b>: Index value of a given data connection is not guaranteed to be the same between versions, or between sessions of opening the same form template in InfoPath and in a Web browser (from an appropriately configured document library on SharePoint Server 2010 running InfoPath Forms Services). To reliably open the same data connection under all conditions, you should open the data connection explicitly by name using the <see cref="P:Microsoft.Office.InfoPath.DataConnectionCollection.Item(System.String)" /> method instead.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the first <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object is retrieved from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" />, and then cast to the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> type.</para>
+          <code>   // Get the first connection from the 
+   // DataConnections collection.
+   EmailSubmitConnection myEmailSubmitConnection =
+      (EmailSubmitConnection)(this.DataConnections[0]);</code>
+          <code>   ' Get the first connection from the 
+   ' DataConnections collection.
+   Dim myEmailSubmitConnection As EmailSubmitConnection = _
+      DirectCast(Me.DataConnections(0), EmailSubmitConnection)</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -129,10 +249,26 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="name">The name of the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object to get.</param>
+        <summary>Gets a reference to the specified <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object from the collection by name.</summary>
+        <value>The specified object.</value>
+        <remarks>
+          <para>After you have set a reference to the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object that the <b>Item</b> property returns, you can access any of its properties or methods after the object has been cast to the appropriate type for the corresponding data connection. For example, to access the properties and methods of a data connection for submitting a form in e-mail, you must cast the returned <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object to the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> type.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object named "Employees" is retrieved from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" />, and then cast to the <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" /> type (which represents a data connection for retrieving data from an Access or SQL Server database).</para>
+          <code>   // Get the Employees connection from the 
+   // DataConnections collection.
+   AdoQueryConnection myAdoQueryConnection =
+      (AdoQueryConnection)(this.DataConnections["Employees"]);</code>
+          <code>   ' Get the Employees connection from the 
+   ' DataConnections collection.
+   Dim myAdoQueryConnection As AdoQueryConnection = _
+      DirectCast(Me.DataConnections("Employees"), AdoQueryConnection)</code>
+        </example>
       </Docs>
     </Member>
   </Members>

@@ -18,8 +18,11 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents the collection of <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> objects associated with the current form.</summary>
+    <remarks>
+      <para>Each <b>UserPermission</b> object in the <b>UserPermissionCollection</b> is used to associate a specific set of rights with an individual user of a form template. The <see cref="P:Microsoft.Office.InfoPath.UserPermissionCollection.Count" /> property returns the number of <b>UserPermission</b> objects in the collection, and the <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String)" />, <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.Remove(System.String)" /> and <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.RemoveAll" /> methods can be used to manipulate the members of the collection.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -58,10 +61,28 @@
         <Parameter Name="userId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="userId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to whom permissions on the current form are being granted.</param>
+        <summary>Adds a new user to the current form. </summary>
+        <returns>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object that represents the specified user.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, and then adds a new user.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   this.Permission.UserPermissions.Add("someone@example.com");
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Me.Permission.UserPermissions.Add("someone@example.com")
+End Sub</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -84,11 +105,31 @@
         <Parameter Name="permission" Type="Microsoft.Office.InfoPath.PermissionType" />
       </Parameters>
       <Docs>
-        <param name="userId">To be added.</param>
-        <param name="permission">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to whom permissions on the current form are being granted.</param>
+        <param name="permission">The permissions on the current form that are being granted to the specified user as a combination of one or more <see cref="T:Microsoft.Office.InfoPath.PermissionType" /> values.</param>
+        <summary>Adds a new user with the specified permissions.</summary>
+        <returns>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" />.object that represents the specified user.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, and then adds and assigns a user to the Full Control access level.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   this.Permission.UserPermissions.Add("someone@example.com", 
+      PermissionType.FullControl);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Me.Permission.UserPermissions.Add("someone@example.com", _
+      PermissionType.FullControl)
+End Sub</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -111,11 +152,38 @@
         <Parameter Name="expirationDate" Type="System.DateTime" />
       </Parameters>
       <Docs>
-        <param name="userId">To be added.</param>
-        <param name="expirationDate">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to whom permissions on the current form are being granted.</param>
+        <param name="expirationDate">The expiration date for the permissions that are being granted as a <b>System.DateTime</b> value.</param>
+        <summary>Add a new user to the current form with an expiration date.</summary>
+        <returns>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object that represents the specified user.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, adds a new user to the current form, and sets an expiration date of two days from the current date.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   string strExpirationDate = DateTime.Today.AddDays(2).ToString();
+   DateTime dtExpirationDate = DateTime.Parse(strExpirationDate);
+
+   this.Permission.UserPermissions.Add("someone@example.com",
+      dtExpirationDate);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim strExpirationDate As String = _
+      DateTime.Today.AddDays(2).ToString()
+   dtExpirationDate As DateTime = DateTime.Parse(strExpirationDate)
+
+   Me.Permission.UserPermissions.Add("someone@example.com", _
+      dtExpirationDate)
+End Sub</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -139,12 +207,40 @@
         <Parameter Name="expirationDate" Type="System.DateTime" />
       </Parameters>
       <Docs>
-        <param name="userId">To be added.</param>
-        <param name="permission">To be added.</param>
-        <param name="expirationDate">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to whom permissions on the current form are being granted.</param>
+        <param name="permission">The permissions on the current form that are being granted to the specified user as a combination of one or more <see cref="T:Microsoft.Office.InfoPath.PermissionType" /> values.</param>
+        <param name="expirationDate">The expiration date for the permissions that are being granted as a <b>System.DateTime</b> value.</param>
+        <summary>Creates a new set of permissions on the current form for the specified user with the specified permissions and an expiration date.</summary>
+        <returns>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> that represents the specified user.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, adds and assigns a user to the Full Control access level, and sets an expiration date of two days from the current date.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   string strExpirationDate = DateTime.Today.AddDays(2).ToString();
+   DateTime dtExpirationDate = DateTime.Parse(strExpirationDate);
+
+   this.Permission.UserPermissions.Add("someone@example.com", 
+      PermissionType.FullControl, dtExpirationDate);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim strExpirationDate As String = _
+      DateTime.Today.AddDays(2).ToString()
+   dtExpirationDate As DateTime = DateTime.Parse(strExpirationDate)
+
+   Me.Permission.UserPermissions.Add("someone@example.com", _
+      PermissionType.FullControl, dtExpirationDate)
+End Sub</code>
+        </example>
+        <exception cref="T:System.FormatException">The <b>DateTime</b> value provided is invalid.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -163,9 +259,24 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the number of <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> objects in the collection.</summary>
+        <value>The number of <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> objects in the collection.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and displays the count of users.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Permission.UserPermissions.Count.ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Permission.UserPermissions.Count.ToString())
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -188,9 +299,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <b>IEnumerator</b> for iterating over the collection.</summary>
+        <returns>A <b>System.IEnumerator</b></returns>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -212,10 +327,25 @@
         <Parameter Name="index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="index">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="index">The zero-based index of the <b>UserPermission</b> object to retrieve.</param>
+        <summary>Gets the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object at the specified index in the collection. </summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object that represents the specified user.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and sets the second user in the collection to the Change access level.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   Permission.UserPermissions[1].Permission = PermissionType.Change;
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Permission.UserPermissions(1).Permission = PermissionType.Change
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -237,10 +367,27 @@
         <Parameter Name="userId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="userId">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="userId">The e-mail address of the specified user.</param>
+        <summary>Get the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object with the specified <see cref="P:Microsoft.Office.InfoPath.UserPermission.UserId" /> from the collection. </summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> that represents the specified user. Returns a null reference (Nothing in Visual Basic) if the specified <paramref name="userId" /> does not exist.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and sets the user with the e-mail address <b>someone@example.com</b> to the Change access level.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   Permission.UserPermissions["someone@example.com"].Permission = 
+      PermissionType.Change;
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Permission.UserPermissions("someone@example.com").Permission = _
+      PermissionType.Change
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -262,9 +409,26 @@
         <Parameter Name="userId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="userId">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to be removed.</param>
+        <summary>Removes the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object with the specified <see cref="P:Microsoft.Office.InfoPath.UserPermission.UserId" /> from the collection.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and removes the user with the e-mail address <b>someone@example.com</b>.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   this.Permission.UserPermissions.Remove("someone@example.com");
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Me.Permission.UserPermissions.Remove("someone@example.com")
+End Sub</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveAll">
@@ -284,8 +448,23 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Removes all <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> objects from the collection.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and removes all users.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   this.Permission.UserPermissions.RemoveAll();
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Me.Permission.UserPermissions.RemoveAll()
+End Sub</code>
+        </example>
       </Docs>
     </Member>
   </Members>

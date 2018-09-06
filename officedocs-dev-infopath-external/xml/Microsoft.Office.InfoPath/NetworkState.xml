@@ -14,8 +14,13 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides information about the connection state of the client computer and whether a connection can be made to a specified network location.</summary>
+    <remarks>
+      <para>
+        <b>Note</b>: The <see cref="T:Microsoft.Office.InfoPath.NetworkState" /> class and its members are intended to be used in code that works with the <see cref="T:Microsoft.Office.InfoPath.FormControl" />, which is a managed control that is used to integrate the InfoPath form editor into a .NET-based custom application. To use the same functionality from an InfoPath form template, use the <see cref="M:Microsoft.Office.InfoPath.Application.IsDestinationReachable(System.String)" /> method and <see cref="P:Microsoft.Office.InfoPath.Application.MachineOnlineState" /> property of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class.</para>
+      <para>To access the <see cref="T:Microsoft.Office.InfoPath.NetworkState" /> object associated with the current form, use the <see cref="P:Microsoft.Office.InfoPath.XmlForm.NetworkState" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class. To access the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class from the object model provided by the <see cref="T:Microsoft.Office.InfoPath.FormControl" />, use the <see cref="P:Microsoft.Office.InfoPath.FormControl.XmlForm" /> property.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -54,10 +59,35 @@
         <Parameter Name="destination" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="destination">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="destination">Specifies the location to check for network connectivity as a Uniform Resource Locator (URL), universal naming convention (UNC) path, or IP address.</param>
+        <summary>Gets a value that indicates whether a connection can be made to the specified network destination.</summary>
+        <returns>
+          <b>true</b> if a connection can be made to the specified URL, UNC path, or IP address; otherwise, <b>false</b>.</returns>
+        <remarks>
+          <para>The value specified for <paramref name="destination" /> must be either a UNC path that includes a server name and a share name, such as @"\\MyServer\MyShare", or a URL that begins with one of the following protocol identifiers: http, https, or file.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para>In the following code example, clicking the <b>Button</b> control displays whether a connection can be made to the specified URL.</para>
+          <code>using Microsoft.Office.InfoPath;
+
+string result = formControl1.XmlForm.NetworkState.IsDestinationReachable(
+   "http://www.microsoft.com").ToString();
+
+// Display result in a message box.
+MessageBox.Show("Can connect to Microsoft.com = " + result);</code>
+          <code>Imports Microsoft.Office.InfoPath
+Dim result As String = _
+   formControl1.XmlForm.NetworkState.IsDestinationReachable( _
+   "http://www.microsoft.com").ToString() 
+
+' Display result in a message box.
+MessageBox.Show("Can connect to Microsoft.com = " &amp;amp; result)
+</code>
+          <para />
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">The location of the destination cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="MachineOnlineState">
@@ -76,9 +106,30 @@
         <ReturnType>Microsoft.Office.InfoPath.MachineState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the current connection state of the client computer.</summary>
+        <value>One of the enumeration values.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <see cref="P:Microsoft.Office.InfoPath.NetworkState.MachineOnlineState" /> property is used to display the current connection state of the client computer.</para>
+          <code>using Microsoft.Office.InfoPath;
+
+string networkState = 
+   formControl1.XmlForm.NetworkState.MachineOnlineState.ToString();
+
+// Display result in a message box.
+MessageBox.Show("The connection state is " + networkState);</code>
+          <code>Imports Microsoft.Office.InfoPath
+Dim networkState As String = _
+   formControl1.XmlForm.NetworkState.MachineOnlineState.ToString()
+
+' Display result in a message box.
+MessageBox.Show("The connection state is " &amp;amp; networkState)
+</code>
+        </example>
       </Docs>
     </Member>
   </Members>

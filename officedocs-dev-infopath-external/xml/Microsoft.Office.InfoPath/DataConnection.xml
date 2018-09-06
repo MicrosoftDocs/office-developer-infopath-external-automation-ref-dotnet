@@ -14,8 +14,91 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents the base class from which each specific type of data connection is derived.</summary>
+    <remarks>
+      <para>Each data connection is used to retrieve data (inserted into the main data source or into a secondary data source) or to submit data.</para>
+      <para>A data connection used to retrieve or submit data for the main data source will correspond to one of the following data connection object types:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" />
+          </description>
+        </item>
+      </list>
+      <para>A data connection used to retrieve data for a secondary data source will correspond to one of the following data connection object types:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.BdcQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.FileQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.SharePointListRWQueryConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" />
+          </description>
+        </item>
+      </list>
+      <para>A data connection used only for submitting data will correspond to one of the following data connection object types:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.BdcSubmitConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.FileSubmitConnection" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" />
+          </description>
+        </item>
+      </list>
+      <para>To access a <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object for a particular kind of data connection, use the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> object associated with the form template. To access the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> object, use the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para>To use the properties or methods of the object returned from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" />, you must cast that object to the type that represents the kind of data connection you are working with before you can access those members. For example, to work with an <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" /> object (which represents a data connection for retrieving data from an Access or SQL Server database), you must cast the object returned from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> as shown in the following examples.</para>
+      <code>   // Get the Employees connection from the 
+   // DataConnections collection.
+   AdoQueryConnection myAdoQueryConnection =
+      (AdoQueryConnection)(this.DataConnections["Employees"]);</code>
+      <code>   ' Get the Employees connection from the 
+   ' DataConnections collection.
+   Dim myAdoQueryConnection As AdoQueryConnection = _
+      DirectCast(Me.DataConnections("Employees"), AdoQueryConnection)</code>
+      <para>For more information about working with data connections, see How to: Access External Data Sources.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -52,8 +135,123 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Depending on which ConnectionType<b>Connection</b> class it is called from, executes a submit or query operation on the data connection using the declaratively defined values for the submitted data, query parameters, or data to retrieve.</summary>
+        <remarks>
+          <para>When designing a form template, you can use the Submit Actions commands on the Data tab to define the destination to submit to and related settings that are stored in the form template file's solution definition file (.xsf). You can also use the Data Connections command on the Data tab to define settings for submitting or receiving data, which are stored in the solution definition file (.xsf). Using the <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method performs a submit or query operation on the data connection using these declaratively defined settings.</para>
+          <para>The <b>DataConnection.Execute</b> method is inherited by all classes that represent data connections, and is exposed as an inherited method of that class, such as the <b>EmailSubmitConnection.Execute()</b> method. Depending on the kind of data connection the inheriting class represents, the <b>Execute</b> method will perform the declared submit or query operation appropriate to that connection.</para>
+          <list type="table">
+            <item>
+              <term>
+                <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" />
+              </term>
+              <description>Query</description>
+            </item>
+            <item>
+              <term>
+                <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" />
+              </term>
+              <description>Submit</description>
+            </item>
+            <item>
+              <term>
+                <see cref="T:Microsoft.Office.InfoPath.BdcQueryConnection" />
+              </term>
+              <description>Query</description>
+            </item>
+            <item>
+              <term>
+                <see cref="T:Microsoft.Office.InfoPath.BdcSubmitConnection" />
+              </term>
+              <description>Submit</description>
+            </item>
+            <item>
+              <term>
+                <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" />
+              </term>
+              <description>Submit</description>
+            </item>
+            <item>
+              <term>
+                <see cref="T:Microsoft.Office.InfoPath.FileQueryConnection" />
+              </term>
+              <description>Query</description>
+            </item>
+            <item>
+              <term>
+                <see cref="T:Microsoft.Office.InfoPath.FileSubmitConnection" />
+              </term>
+              <description>Submit</description>
+            </item>
+            <item>
+              <term>
+                <see cref="T:Microsoft.Office.InfoPath.SharePointListRWQueryConnection" />NoteThe <see cref="T:Microsoft.Office.InfoPath.SharepointListQueryConnection" /> class used in previous versions of InfoPath has been deprecated.</term>
+              <description>Query</description>
+            </item>
+            <item>
+              <term>
+                <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" />
+              </term>
+              <description>Submit or Query</description>
+            </item>
+          </list>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, after the <b>Command</b> property of the <b>ADOQueryConnection</b> class is used to update the SQL command text of the data connection, the <b>Execute</b> method of the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> class is used to execute the query to refresh the data in the form.</para>
+          <code>public void RefreshData_Clicked(object sender, ClickedEventArgs e)
+{
+   // Get the Employees connection from the 
+   // DataConnections collection.
+   AdoQueryConnection myAdoQueryConnection =
+      (AdoQueryConnection)(this.DataConnections["Employees"]);
+
+   // Get the employee's ID from the EmpID field in 
+   // the main data source.
+   XPathNavigator myNav = 
+      CreateNavigator().SelectSingleNode("/my:myFields/my:EmpID", 
+      NamespaceManager);
+   // Assign the value from the field to a variable.
+   string employeeID = myNav.InnerXml;
+
+   // Change the SQL command for Employees connection to retrieve 
+   // the record of the Employee's ID entered by the user.
+   myAdoQueryConnection.Command = 
+      "select * from [Employees] where [EmployeeID] = " + employeeID;
+
+   // Execute the updated command against the data connection to 
+   // refresh the data.
+   myAdoQueryConnection.Execute();
+}</code>
+          <code>Public Sub RefreshData_Clicked(ByVal sender As Object, ByVal e As ClickedEventArgs)
+   ' Get the Employees connection from the 
+   ' DataConnections collection.
+   Dim myAdoQueryConnection As AdoQueryConnection = _
+      DirectCast(Me.DataConnections("Employees"), AdoQueryConnection)
+
+   ' Get the employee's ID from the EmpID field in 
+   ' the main data source.
+   Dim myNav As XPathNavigator = _
+      CreateNavigator().SelectSingleNode("/my:myFields/my:EmpID", _
+      NamespaceManager)
+   Dim employeeID As String = myNav.InnerXml
+
+   ' Change the SQL command for Employees connection to retrieve 
+   ' the record of the Employee's ID entered by the user.
+   myAdoQueryConnection.Command = _
+      "select * from [Employees] where [EmployeeID] = " + employeeID
+
+   ' Execute the updated command against the data connection to 
+   ' refresh the data.
+    myAdoQueryConnection.Execute()
+End Sub</code>
+        </example>
+        <exception cref="T:System.Net.WebException">The execute operation failed.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.InvalidOperationException">For submit operations, the <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.Runtime.InteropServices.SEHException">A structured exception handler (SEH) error was thrown from unmanaged code that is not mapped to an equivalent managed code exception. For more information, search on "unmanaged exceptions" and "Structured Exception Handling" in the MSDN Library.</exception>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -72,9 +270,23 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the name of the data connection.</summary>
+        <value>The name of the data connection as specified in the Data Connection Wizard in InfoPath design mode.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Name</b> property is used to display the name of each <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object in the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> object of the form template.</para>
+          <code>foreach (DataConnection connect in this.DataConnections)
+{
+   MessageBox.Show(connect.Name);
+}</code>
+          <code>For Each connect As DataConnection In Me.DataConnections
+   MessageBox.Show(connect.Name)
+Next</code>
+        </example>
       </Docs>
     </Member>
   </Members>

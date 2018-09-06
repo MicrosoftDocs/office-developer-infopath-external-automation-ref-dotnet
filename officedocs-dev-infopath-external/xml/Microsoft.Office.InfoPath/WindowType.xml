@@ -13,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the type of InfoPath application window.</summary>
+    <remarks>
+      <para>These enumerated values are returned by the <see cref="P:Microsoft.Office.InfoPath.Window.WindowType" /> property of the <see cref="T:Microsoft.Office.InfoPath.Window" /> object.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Designer">
@@ -34,7 +38,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The type of window that is displayed when designing a form template.</summary>
       </Docs>
     </Member>
     <Member MemberName="Editor">
@@ -54,7 +58,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The type of window that is displayed when filling out a form.</summary>
       </Docs>
     </Member>
   </Members>

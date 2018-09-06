@@ -13,7 +13,8 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -34,7 +35,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_CDATA_SECTION">
@@ -54,7 +55,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_COMMENT">
@@ -74,7 +75,7 @@
       </ReturnValue>
       <MemberValue>8</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_DOCUMENT">
@@ -94,7 +95,7 @@
       </ReturnValue>
       <MemberValue>9</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_DOCUMENT_FRAGMENT">
@@ -114,7 +115,7 @@
       </ReturnValue>
       <MemberValue>11</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_DOCUMENT_TYPE">
@@ -134,7 +135,7 @@
       </ReturnValue>
       <MemberValue>10</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_ELEMENT">
@@ -154,7 +155,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_ENTITY">
@@ -174,7 +175,7 @@
       </ReturnValue>
       <MemberValue>6</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_ENTITY_REFERENCE">
@@ -194,7 +195,7 @@
       </ReturnValue>
       <MemberValue>5</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_INVALID">
@@ -214,7 +215,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_NOTATION">
@@ -234,7 +235,7 @@
       </ReturnValue>
       <MemberValue>12</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_PROCESSING_INSTRUCTION">
@@ -254,7 +255,7 @@
       </ReturnValue>
       <MemberValue>7</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
     <Member MemberName="NODE_TEXT">
@@ -274,7 +275,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary />
       </Docs>
     </Member>
   </Members>

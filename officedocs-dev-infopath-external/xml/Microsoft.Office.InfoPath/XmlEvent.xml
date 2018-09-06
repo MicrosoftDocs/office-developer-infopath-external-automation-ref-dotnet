@@ -14,8 +14,13 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Implements the events raised by changes to the data in the underlying XML document of a form instance.</summary>
+    <remarks>
+      <para>The <b>XmlEvent</b> class implements the document-level events raised by changes to the data in the underlying XML document of a form instance created using an InfoPath form template. The form-level events raised by the actions performed on the form template itself, such as loading a form or changing a view, are handled separately and implemented by the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> type.</para>
+      <para>
+        <b>Important</b>: The <b>XmlEvent</b> class itself is not meant to be instantiated by the developer in form code. When you add an event handler to your form template from the design mode user interface, Microsoft InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and members of the <b>XmlEvent</b> class to bind document-level events to their event handlers. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,8 +56,30 @@
         <ReturnType>Microsoft.Office.InfoPath.XmlChangedEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after changes to a form's underlying XML document have been accepted and after the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event has occurred.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <b>Changed</b> event is not meant to be instantiated by the developer in form code. When you add an event handler to your form template from the design mode user interface, Microsoft InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.XmlEvent" /> class to bind document-level events to their event handlers. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <b>Changed</b> event is bound using the <see cref="T:Microsoft.Office.InfoPath.XmlChangedEventHandler" /> delegate.</para>
+          <para>This event handler does not allow users to cancel an operation.</para>
+          <para>The <b>Change</b> event is typically used for changing data in a form after other changes have occurred, such as making calculations or changing the structure of a form's underlying XML document.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, after a change has been made and validated for <b>field9</b>, a value is added to <b>field4</b> to reflect this change.</para>
+          <code>public void field9_Changed(object sender, XmlEventArgs e)
+{
+   this.CreateNavigator().SelectSingleNode("/my:myFields/my:field4", 
+      this.NamespaceManager).SetValue("Field9 was changed.");
+}</code>
+          <code>Public Sub field9_Changed(ByVal sender As Object, _
+   ByVal e As XmlEventArgs )
+   Me.CreateNavigator().SelectSingleNode("/my:myFields/my:field4", _
+      Me.NamespaceManager).SetValue("Field9 was changed.")
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
     <Member MemberName="Changing">
@@ -71,8 +98,40 @@
         <ReturnType>Microsoft.Office.InfoPath.XmlChangingEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after changes to a form's underlying XML document have been made but before the changes have been accepted.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <b>Changing</b> event is not meant to be instantiated by the developer in form code. When you add an event handler to your form template from the design mode user interface, Microsoft InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.XmlEvent" /> class to bind document-level events to their event handlers. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <b>Changing</b> event is bound using the <see cref="T:Microsoft.Office.InfoPath.XmlChangingEventHandler" /> delegate.</para>
+          <para>This event handler allows users to cancel an operation.</para>
+          <para>During the <b>Changing</b> event, the form's underlying XML document is placed in read-only mode. If the <b>XmlChangingEventArgs.CancelableArgs.Cancel</b> property is set to <b>true</b>, InfoPath rejects the changes that were made and a message box is displayed to the user. If an error occurs in the code for the <b>Changing</b> event, InfoPath rejects the changes and restores the data to its previous state.</para>
+          <para>
+            <b>Note</b>: It is best to avoid switching views during the <b>Changing</b> event; changes have not yet been accepted, and switching to another view may result in an error.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, when a change is made to <b>field2</b>, the <b>Changing</b> event is raised and a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object for <b>field1</b> is added to the form's <b>FormErrorCollection</b> using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" /> method of the <b>FormErrorCollection</b> class. </para>
+          <para>This associates an error message with <b>field1</b>. The string passed as the <paramref name="message" /> parameter of the <b>Add</b> method is displayed in a screen tip when the user hovers over <b>field1</b>. When the user right-clicks <b>field1</b> and then clicks Full error description, InfoPath displays the full error message including the string passed as the <paramref name="messageDetails" /> parameter of the <b>Add</b> method.</para>
+          <code>public void field2_Changing(object sender, XmlChangingEventArgs e)
+{
+   XPathNavigator errNode = 
+      this.CreateNavigator().SelectSingleNode("/my:myFields/my:field1", 
+      NamespaceManager);
+   this.Errors.Add(errNode, "Field2Changing", 
+      "The Changing event occurred for Field2.", 
+      "Changes were made to Field2, but have not yet been accepted.");
+}</code>
+          <code>Public Sub field2_Changing(ByVal sender As Object, _
+   ByVal e As XmlChangingEventArgs)
+   Dim errNode As XPathNavigator = Me.CreateNavigator(). _
+      SelectSingleNode("/my:myFields/my:field1", NamespaceManager)
+   Me.Errors.Add(errNode, "Field2Changing", _
+      "The Changing event occurred for Field2.", _
+      "Changes were made, but have not yet been accepted.")
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event to a node in secondary data source. This event is not supported for secondary data sources.</exception>
       </Docs>
     </Member>
     <Member MemberName="RaiseUndoRedoForChanged">
@@ -91,9 +150,26 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets whether the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" /> event will be raised when an undo or redo operation occurs.</summary>
+        <value>
+          <b>true</b> if the <b>Changed</b> event will be raised; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>The <b>RaiseUndoRedoForChanged</b> property is used to specify if a user's undo or redo operations raise the <b>Changed</b> event or not. If you set this property to <b>true</b> in event binding code for the <b>Changed</b> event handler in the <b>InternalStartup</b> method, the <b>Changed</b> event will be raised for every undo and redo operation performed on the selected node. This property affects only the <b>Changed</b> event. Undo and redo operations always raise events for the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> and <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changing" /> events. </para>
+          <para>By default the <b>RaiseUndoRedoForChanged</b> property is set to <b>false</b>, so that the <b>Changed</b> event is not raised for undo and redo operations.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>RaiseUndoRedoForChanged</b> property is set to <b>true</b> in the event binding code for the <b>Changing</b> event handler associated with <b>field1</b> in the <b>InternalStartup</b> method of the FormCode module for the form template. Note that the first line of code in the example is the event binding code generated by InfoPath when the event handler was added in the InfoPath design mode user interface. You should not alter this line of code. The second line of code in the example is the line of code that you add following the event binding code to set the <b>RaiseUndoRedoForChanged</b> property to <b>true</b> so that the <b>Changed</b> event will be raised for undo and redo operations.</para>
+          <code>EventManager.XmlEvents["/my:myFields/my:field1"].Changed += 
+   new XmlChangedEventHandler(field1_Changed);
+EventManager.XmlEvents["/my:myFields/my:field1"].
+   RaiseUndoRedoForChanged = true;</code>
+          <code>AddHandler EventManager.XmlEvents("/my:myFields/my:field1").Changed, _
+   AddressOf field1_Changed
+EventManager.XmlEvents("/my:myFields/my:field1"). _
+   RaiseUndoRedoForChanged = True</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Validating">
@@ -112,8 +188,42 @@
         <ReturnType>Microsoft.Office.InfoPath.XmlValidatingEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after changes to a form's underlying XML document have been accepted but before the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" /> event has occurred.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <b>Validating</b> event is not meant to be instantiated by the developer in form code. When you add an event handler to your form template from the design mode user interface, Microsoft InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.XmlEvent" /> class to bind document-level events to their event handlers. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <b>Validating</b> event is bound using the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventHandler" /> delegate.</para>
+          <para>This event handler does not allow users to cancel an operation.</para>
+          <para>During the <b>Validate</b> event, the form's underlying XML document is placed in read-only mode.</para>
+          <para>The <b>Validate</b> event is typically used for handling errors and working with the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> collection, for example, adding new errors or deleting existing ones.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, after a change has been accepted for <b>field9</b>, the <b>Validating</b> event is raised and a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object associated with <b>field6</b> is added to the <b>FormErrorCollection</b> of the form using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" /> method. </para>
+          <para>This associates an error message with <b>field6</b>. The string passed as the <paramref name="message" /> parameter of the <b>Add</b> method is displayed in a screen tip when the user hovers over <b>field6</b>. When the user right-clicks <b>field6</b> and then clicks Full error description, InfoPath displays the full error message including the string passed as the <paramref name="messageDetails" /> parameter of the <b>Add</b> method.</para>
+          <code>public void field9_Validating(object sender, XmlValidatingEventArgs e)
+{
+   XPathNavigator errNode = 
+      this.CreateNavigator().SelectSingleNode("/my:myFields/my:field6", 
+      NamespaceManager);
+
+   this.Errors.Add(errNode, "Field9Validating", 
+      "Field9 was validated.", 
+      "Field9 was validated and an error was assocated with Field6.");
+}</code>
+          <code>Public Sub field9_Validating(ByVal sender As Object, _
+   ByVal e As XmlValidatingEventArgs )
+   Dim errNode As XPathNavigator = _
+      Me.CreateNavigator().SelectSingleNode("/my:myFields/my:field6", _
+      NamespaceManager)
+
+   Me.Errors.Add(errNode, "Field9Validating", _
+      "Field9 was validated.", _
+      "Field9 was validated and an error was associated with Field6.")
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event to a node in a secondary data source. This event is not supported for secondary data sources.</exception>
       </Docs>
     </Member>
   </Members>

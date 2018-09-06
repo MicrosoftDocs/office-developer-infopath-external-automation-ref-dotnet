@@ -13,8 +13,11 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The <b>XdWindowState</b> enumeration is used to determine the state of the Microsoft InfoPath window that is represented by the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> object.</summary>
+    <remarks>
+      <para>These enumerated values are returned or set by the <see cref="P:Microsoft.Office.Interop.InfoPath.Window2.WindowState" /> property.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="xdWindowStateMaximize">
@@ -34,7 +37,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The window is maximized.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdWindowStateMinimize">
@@ -54,7 +57,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The window is minimized.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdWindowStateNormal">
@@ -74,7 +77,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The window is not maximized or minimized.</summary>
       </Docs>
     </Member>
   </Members>

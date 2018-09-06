@@ -13,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the status of a digital certificate.</summary>
+    <remarks>
+      <para>These enumerated values are returned by the <see cref="P:Microsoft.Office.InfoPath.Certificate.Status" /> property of the <see cref="T:Microsoft.Office.InfoPath.Certificate" /> class.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Error">
@@ -34,7 +38,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The status of the digital certificate cannot be determined.</summary>
       </Docs>
     </Member>
     <Member MemberName="Expired">
@@ -54,7 +58,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The digital certificate has expired.</summary>
       </Docs>
     </Member>
     <Member MemberName="NotTrusted">
@@ -74,7 +78,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The digital certificate is not trusted.</summary>
       </Docs>
     </Member>
     <Member MemberName="Revoked">
@@ -94,7 +98,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The digital certificate has been revoked.</summary>
       </Docs>
     </Member>
     <Member MemberName="Valid">
@@ -114,7 +118,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The digital certificate is valid.</summary>
       </Docs>
     </Member>
   </Members>

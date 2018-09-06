@@ -14,8 +14,15 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a connection to submit form information to a SharePoint Foundation server or other server that supports DAV connections.</summary>
+    <remarks>
+      <para>The <b>FileSubmitConnection</b> class represents a data connection created in InfoPath using the Data Connection Wizard that specifies all the information necessary for submitting data to a SharePoint Foundation document library or other server that supports DAV connections.</para>
+      <para>The <b>FileSubmitConnection</b> object is accessible using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class to return the connection from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> of the form template. </para>
+      <para>The <b>FileSubmitConnection</b> class provides the <see cref="P:Microsoft.Office.InfoPath.FileSubmitConnection.Filename" /> property, which returns an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the file name that the current form will be given when the form is submitted by the <see cref="T:Microsoft.Office.InfoPath.FileSubmitConnection" /> object. It also provides the <see cref="P:Microsoft.Office.InfoPath.FileSubmitConnection.FolderUrl" /> property, which gets or sets the Uniform Resource Locator (URL) of folder to which the form will be submitted.</para>
+      <para>In addition to the default <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method inherited from the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> base class that performs a query operation using the values that were declaratively defined in InfoPath form template design mode, the <b>FileSubmitConnection</b> class also provides the <see cref="M:Microsoft.Office.InfoPath.FileSubmitConnection.Execute(System.Xml.XPath.XPathNavigator)" /> method, which allows you to specify a different source of data to submit.</para>
+      <para>The <b>FileSubmitConnection</b> type corresponds to the <b>DAVAdapterObject</b> class of the Microsoft Office InfoPath 2003 object model.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -54,9 +61,45 @@
         <Parameter Name="input" Type="System.Xml.XPath.XPathNavigator" />
       </Parameters>
       <Docs>
-        <param name="input">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="input">An <see cref="T:System.Xml.XPath.XPathNavigator" /> that is positioned at the XML node of the form that contains the data to submit.</param>
+        <summary>Overrides the default <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method to allow specifying a different source of data to submit.</summary>
+        <remarks>
+          <para>This method overrides the default <b>Execute</b> method (inherited from the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> base class), which submits the data that is declaratively defined in the form template. The <b>XPathNavigator</b> object specified for the <paramref name="input" /> parameter should point to an XML element which contains the data to be submitted. The data to submit can be in specified by any <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object.</para>
+          <para>Setting the <paramref name="input" /> parameter to a null reference (Nothing in Visual Basic) has the same effect as using the default <b>Execute</b> method to submit data using the declarative settings defined in the form template.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Execute(</b><paramref name="input" /><b>)</b> method is used to perform a submit operation to the SharePoint Library defined by <b>FileSubmitConnection</b> object to submit the contents of the <b>UniqueValue</b> node in the main data source of the form.</para>
+          <code>public void ExecuteInput_Clicked(object sender, ClickedEventArgs e)
+{
+   string UniqueValueXPath = "/my:myFields/my:UniqueValue";
+   XPathNavigator mainNavigator = MainDataSource.CreateNavigator();
+   XPathNavigator uniqueValueNavigator = 
+      mainNavigator.SelectSingleNode(UniqueValueXPath, 
+      NamespaceManager);
+   FileSubmitConnection submitConnection = 
+      (FileSubmitConnection)(DataConnections["SharePoint Library"]);
+   submitConnection.Execute(uniqueValueNavigator);
+}</code>
+          <code>Public Sub ExecuteInput_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim UniqueValueXPath As String = "/my:myFields/my:UniqueValue"
+   Dim mainNavigator As XPathNavigator = 
+       MainDataSource.CreateNavigator()
+   Dim uniqueValueNavigator As XPathNavigator  = 
+      mainNavigator.SelectSingleNode(UniqueValueXPath, 
+      NamespaceManager)
+   Dim submitConnection As FileSubmitConnection = 
+      DirectCast(DataConnections["SharePoint Library"], _
+      FileSubmitConnection)
+   submitConnection.Execute(uniqueValueNavigator)
+End Sub</code>
+        </example>
+        <exception cref="T:System.Net.WebException">The submit operation failed.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Filename">
@@ -75,9 +118,33 @@
         <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> that evaluates to the file name that the current form will be given when the form is submitted by the <see cref="T:Microsoft.Office.InfoPath.FileSubmitConnection" /> object.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> that evaluates to the file name that the form will be given when it is submitted.</value>
+        <remarks>
+          <para>The value of the <b>Filename</b> property of the <b>FileSubmitConnection</b> class is  returned as an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object, which can be set by specifying a literal string using the <see cref="M:Microsoft.Office.InfoPath.XPathTypedValue.SetStringValue(System.String)" /> method of the <b>XPathTypedValue</b> class, or by specifying an XPath expression using the <see cref="P:Microsoft.Office.InfoPath.XPathTypedValue.XPath" /> property of the <b>XPathTypedValue</b> class. For more information and code samples, see the <b>XPathTypedValue</b> Class topic.</para>
+          <para>The ".xml" file name extension will be appended to the string if it is not already included. If the <b>Filename</b> property is a null reference (Nothing in Visual Basic), the form is given the name "Form.xml" when it is submitted.</para>
+          <para>If an XPath expression, such as concat("Status Report -", field1), has been specified in the File name box of the Data Connection Wizard when the data connection was defined, you can return that expression by using the <see cref="P:Microsoft.Office.InfoPath.XPathTypedValue.XPath" /> property of the <b>XPathTypedValue</b> class, as shown in the following example.</para>
+          <code>   FileSubmitConnection submitConnection = 
+      (FileSubmitConnection)(DataConnections["SharePoint Library"]);
+   MessageBox.Show (submitConnection.Filename.XPath.ToString());</code>
+          <code>   Dim submitConnection As FileSubmitConnection = 
+      DirectCast(DataConnections["SharePoint Library"], _
+      FileSubmitConnection)
+   MessageBox.Show (submitConnection.Filename.XPath.ToString())</code>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example uses the <b>Filename</b> property of the <b>FileSubmitConnection</b> object to display the file name that will be used when submitting the form to the data connection.</para>
+          <code>   FileSubmitConnection submitConnection = 
+      (FileSubmitConnection)(DataConnections["SharePoint Library"]);
+   MessageBox.Show (submitConnection.Filename.ToString());</code>
+          <code>   Dim submitConnection As FileSubmitConnection = 
+      DirectCast(DataConnections["SharePoint Library"], _
+      FileSubmitConnection)
+   MessageBox.Show (submitConnection.Filename.ToString())</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="FolderUrl">
@@ -96,9 +163,24 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the Uniform Resource Locator (URL) of the folder to which the form will be submitted by the <see cref="T:Microsoft.Office.InfoPath.FileSubmitConnection" /> object.</summary>
+        <value>The URL of the folder to which the form will be submitted.</value>
+        <remarks>
+          <para>The <see cref="Overload:Microsoft.Office.InfoPath.FileSubmitConnection.Execute" /> method of the <b>FileSubmitConnection</b> object will fail if the value of the <b>FolderUrl</b> property does not begin with either the "http:" or the "https:" prefix. The <b>Execute</b> method will also fail if the site specified by the <b>FolderURL</b> property is not available, or if the URL is not in the same security domain as the form template.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example shows how to use the <b>FolderUrl</b> property of an instance of the <b>FileSubmitConnection</b> object to change the folder to which the form data will be submitted.</para>
+          <code>   FileSubmitConnection submitConnection = 
+      (FileSubmitConnection)(DataConnections["SharePoint Library"]);
+   submitConnection.FolderUrl = submitConnection.FolderUrl + @"data\";</code>
+          <code>   Dim submitConnection As FileSubmitConnection = 
+      DirectCast(DataConnections["SharePoint Library"], _
+      FileSubmitConnection)
+   submitConnection.FolderUrl = submitConnection.FolderUrl &amp;amp; "data\"</code>
+        </example>
       </Docs>
     </Member>
   </Members>

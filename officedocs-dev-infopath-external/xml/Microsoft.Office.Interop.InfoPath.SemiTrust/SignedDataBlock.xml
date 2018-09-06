@@ -19,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -44,9 +44,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the signature confirmation message of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -70,9 +74,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the friendly name of a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Sign">
@@ -97,8 +105,17 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Invokes the Digital Signatures Wizard to add a digital signature to the currently selected set of data which can be signed in a Microsoft InfoPath form.</summary>
+        <remarks>
+          <para>The new signature uses the default signature template, and it is applied to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object. Calling this method advances the Digital Signatures Wizard to the second step in the signing process, selecting a certificate.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example will advance the Digital Signature Wizard dialog to the Select a Certificate step of the wizard:</para>
+          <code>thisXDocument.SignedDataBlocks[0].&lt;span class="label"&gt;Sign&lt;/span&gt;();</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="SignatureContainer">
@@ -122,9 +139,13 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the root XML node of the subtree containing the signatures in the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SignatureRelation">
@@ -148,9 +169,13 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the relation among multiple signatures of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object, expressed as <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureRelation" /> enumerated constants.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Signatures">
@@ -174,9 +199,13 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.SignaturesCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignaturesCollection" /> collection associated with the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="XPath">
@@ -200,9 +229,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the XPath expression of a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="XPathNamespaceDeclarations">
@@ -226,9 +259,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the namespace declarations for the XPath expression returned by the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlock.XPath" /> property of a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

@@ -14,8 +14,13 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Contains descriptive information about a view within a form.</summary>
+    <remarks>
+      <para>The <b>ViewInfo</b> object provides properties that can be used to get the name of a view and determine whether its name is hidden on the View menu when editing a form. The <b>ViewInfo</b> object is accessible through the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object, and from the <see cref="P:Microsoft.Office.InfoPath.View.ViewInfo" /> property of a <see cref="T:Microsoft.Office.InfoPath.View" /> object.</para>
+      <para>
+        <b>Note</b>: To work with the view programmatically, use the <b>View</b> object.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +56,23 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the value of the <b>caption</b> attribute of the <b>xsf:view</b> element associated with the view in the form definition file (.xsf).</summary>
+        <value>The value of the <b>caption</b> attribute of the <b>xsf:view</b> element associated with the view in the form definition file (.xsf)</value>
+        <remarks>
+          <para>By default, the value of the <b>caption</b> attribute of the <b>xsf:view</b> element is the same as the name given to the view when it was created in InfoPath form template design mode. As a result, the <b>Caption</b> property will return the same value as the <see cref="P:Microsoft.Office.InfoPath.ViewInfo.Name" /> property by default. </para>
+          <para>The <b>Caption</b> property can be used to facilitate two scenarios:</para>
+          <list type="bullet">
+            <item>
+              <description>To create a localized version of a view's name. You can save the form template files as source files (Save As Source Files on the File menu), and then hand edit the form definition file (.xsf) to change the value of the <b>caption</b> attribute of a <b>xsf:view</b> element to give the view a localized name. After doing so, the <b>Caption</b> property can be used to return the localized name. </description>
+            </item>
+            <item>
+              <description>When InfoPath is hosted as a control using the <b>FormControl</b> in another application or in the <b>FormViewControl</b> on InfoPath Forms Services, the value of the <b>caption</b> attribute can be used to create a drop-down list for switching views. For example, when the selected item is changed the drop-down list control would use <b>FormControl.XmlForm.ViewInfos.SwitchView()</b> method to switch views using the view name value returned by the <b>Name</b> property, but using the localized value returned by the <b>Caption</b> property for user interface text.</description>
+            </item>
+          </list>
+          <para>
+            <b>Important</b>: When using a property to pass the name of a view to the <see cref="M:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView(System.String)" /> method, you should only use the value returned by the <b>Name</b> property.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HideName">
@@ -72,9 +91,22 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets whether the name of the view is set to be hidden on the View menu.</summary>
+        <value>
+          <b>true</b> if the name of the view is set to be hidden; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>The <b>HideName</b> property specifies whether the form designer set the Show on the View menu when filling out the form check box in the View Properties dialog box.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>HideName</b> property of the <b>ViewInfo</b> class is used to display whether the view named "View2" is configured to be hidden on the View menu.</para>
+          <code>ViewInfo myViewInfo = this.ViewInfos["View2"];
+MessageBox.Show("Is hidden: " + myViewInfo.HideName.ToString());</code>
+          <code>Dim myViewInfo As ViewInfo  = Me.ViewInfos("View2")
+MessageBox.Show("Is hidden: " &amp;amp; myViewInfo.HideName.ToString())</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -93,9 +125,21 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the name of the view that is associated with the <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object.</summary>
+        <value>The name of the view that is associated with the <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object.</value>
+        <remarks>
+          <para>The name of the <b>ViewInfo</b> object is the same as the name of the view that it represents. The name of the <b>ViewInfo</b> object can also be used as the argument to the <see cref="P:Microsoft.Office.InfoPath.ViewInfoCollection.Item(System.String)" /> property of the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> class.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Name</b> property of the <b>ViewInfo</b> class is used to display the name of the first view in the <b>ViewInfoCollection</b> in a message box.</para>
+          <code>ViewInfo myViewInfo = this.ViewInfos[0];
+MessageBox.Show("View name: " + myViewInfo.Name);</code>
+          <code>Dim myViewInfo As ViewInfo  = Me.ViewInfos(0)
+MessageBox.Show("View name: " &amp;amp; myViewInfo.Name)</code>
+        </example>
       </Docs>
     </Member>
   </Members>

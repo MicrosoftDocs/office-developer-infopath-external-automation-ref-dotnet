@@ -13,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the status of a digital signature.</summary>
+    <remarks>
+      <para>These enumerated values are returned by the <see cref="P:Microsoft.Office.InfoPath.Signature.Status" /> property of the <see cref="T:Microsoft.Office.InfoPath.Signature" /> class.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Error">
@@ -34,7 +38,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The status of the specified digital signature cannot be determined.</summary>
       </Docs>
     </Member>
     <Member MemberName="Invalid">
@@ -54,7 +58,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The specified digital signature is invalid.</summary>
       </Docs>
     </Member>
     <Member MemberName="Unsupported">
@@ -74,7 +78,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The specified digital signature is not supported by Microsoft InfoPath.</summary>
       </Docs>
     </Member>
     <Member MemberName="Valid">
@@ -94,7 +98,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The specified digital signature is valid.</summary>
       </Docs>
     </Member>
   </Members>

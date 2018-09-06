@@ -13,8 +13,11 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the file format to use when exporting a view.</summary>
+    <remarks>
+      <para>The <b>ExportFormat</b> enumeration is used to specify the file format when using the <see cref="M:Microsoft.Office.InfoPath.View.Export(System.String,Microsoft.Office.InfoPath.ExportFormat)" /> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Mht">
@@ -34,7 +37,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Web Archive, single file format (.mht)</summary>
       </Docs>
     </Member>
     <Member MemberName="Pdf">
@@ -54,7 +57,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Portable Document Format file (.pdf)</summary>
       </Docs>
     </Member>
     <Member MemberName="Xps">
@@ -74,7 +77,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>XPS Document (.xps)</summary>
       </Docs>
     </Member>
   </Members>

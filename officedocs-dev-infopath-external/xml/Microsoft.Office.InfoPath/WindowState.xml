@@ -13,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the state of the InfoPath application window that is represented by a <see cref="T:Microsoft.Office.InfoPath.Window" /> object.</summary>
+    <remarks>
+      <para>These enumerated values are returned or set by the <see cref="P:Microsoft.Office.InfoPath.Window.WindowState" /> property of the <b>Window</b> object.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Maximized">
@@ -34,7 +38,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The window is maximized.</summary>
       </Docs>
     </Member>
     <Member MemberName="Minimized">
@@ -54,7 +58,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The window is minimized.</summary>
       </Docs>
     </Member>
     <Member MemberName="Normal">
@@ -74,7 +78,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The window is not maximized or minimized.</summary>
       </Docs>
     </Member>
   </Members>

@@ -14,8 +14,12 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Implements the event associated with a Button control on a form.</summary>
+    <remarks>
+      <para>The <b>ButtonEvent</b> class implements the event that is raised when a Button control is clicked on a form. The <b>ButtonEvent</b> class itself is not meant to be manually instantiated in your form code. When you add an event handler for a Button control from the design mode user interface, Microsoft InfoPath generates code in the <b>InternalStartup</b> method of your form code file to bind the event handler to the <see cref="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" /> event.</para>
+      <para>For information on how to add event handlers in InfoPath design mode, see How Do I: Add an Event Handler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,8 +55,33 @@
         <ReturnType>Microsoft.Office.InfoPath.ClickedEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when a Button control is clicked within a view in a form. </summary>
+        <remarks>
+          <para>The event handler for this event does not allow cancelling the event.</para>
+          <para>
+            <b>Note</b>: The <b>Clicked</b> event raised by the Button control is the only event that is supported directly by a control on a form. However, the <see cref="T:Microsoft.Office.InfoPath.XmlEvent" /> class implements events that are raised when changes are made to the underlying XML document of the form. With these events, you can create event handlers that respond to changes made from controls bound to nodes and groups in the underlying XML document of a form.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example assumes that you have a Button control and a Text Box control that is bound to <b>field1</b> on your form. Clicking the Button opens a XPathNavigator object positioned at the root of the main data source of the form (the underlying XML document). This <b>XPathNavigator</b> is then used to select the node that the Text Box is bound to. It then sets and positions a second <b>XPathNavigator</b> for the Text Box to that node. Finally, the <see cref="M:System.Xml.XPath.XPathNavigator.SetValue(System.String)" /> method of the <b>XPathNavigator</b> is used to set the Text Box to "Hello World!".</para>
+          <code>public void MyButton_Clicked(object sender, ClickedEventArgs e)
+{
+   XPathNavigator root, txtbox;
+   root = this.MainDataSource.CreateNavigator();
+   txtbox = root.SelectSingleNode("/my:myFields/my:field1", 
+      this.NamespaceManager);
+   txtbox.SetValue("Hello World!");
+}</code>
+          <code>Public Sub MyButton_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim root, txtbox As XPathNavigator
+   root = Me.MainDataSource.CreateNavigator
+   txtbox = root.SelectSingleNode("/my:myFields/my:field1", _
+      Me.NamespaceManager)
+   txtbox.SetValue("Hello World!")
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Only one delegate can be added to the event. This exception is thrown if multiple delegates are added for the same Control ID.</exception>
       </Docs>
     </Member>
   </Members>

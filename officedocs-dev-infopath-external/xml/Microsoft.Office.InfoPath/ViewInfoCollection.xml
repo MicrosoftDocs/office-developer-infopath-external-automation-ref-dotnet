@@ -18,8 +18,38 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Contains a <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object for each view within a form.</summary>
+    <remarks>
+      <para>The <b>ViewInfoCollection</b> class implements properties that can be used to access the <b>ViewInfo</b> object associated with each view in a form. The <b>ViewInfoCollection</b> object for a form is accessed through the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para>The <b>ViewInfoCollection</b> object can be used to return a reference to a specified <b>ViewInfo</b> object, get the count of the <b>ViewInfo</b> objects, switch views, and return information about a view. It cannot be used to create, add, or remove <b>ViewInfo</b> objects.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to set a reference to the <b>ViewInfoCollection</b> of the form. The code then loops through the collection and uses the <see cref="P:Microsoft.Office.InfoPath.ViewInfo.HideName" /> property of the <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> class to determine whether the view is hidden from the View menu. If it is, the name of the view is displayed in a message box.</para>
+      <code>// Set a reference to the ViewInfoCollection of the form.
+ViewInfoCollection myViewInfos = this.ViewInfos;
+
+// Loop through the collection and display the 
+// names of any hidden views.
+foreach (ViewInfo myViewInfo in myViewInfos)
+{
+   if(myViewInfo.HideName)
+   {
+      MessageBox.Show("Hidden view: " + myViewInfo.Name);
+   }
+}</code>
+      <code>' Set a reference to the ViewInfoCollection of the form.
+Dim myViewInfos As ViewInfoCollection = Me.ViewInfos
+
+' Loop through the collection and display the 
+' names of any hidden views.
+Dim myViewInfo As ViewInfo
+For Each myViewInfo In myViewInfos
+   If myViewInfo.HideName Then
+      MessageBox.Show("Hidden view: " &amp;amp; myViewInfo.Name)
+   End If
+Next</code>
+    </example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,9 +85,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a count of the number of <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> objects contained in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection.</summary>
+        <value>The number of <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> objects contained in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Default">
@@ -76,9 +110,13 @@
         <ReturnType>Microsoft.Office.InfoPath.ViewInfo</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object that represents the default view as it is set in the form template.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object that represents the default view as it is set in the form template.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -101,9 +139,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <b>IEnumerator</b> object that iterates over all entries in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> object.</summary>
+        <returns>An <b>IEnumerator</b> object that iterates over all the entries in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> object.</returns>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Initial">
@@ -122,9 +164,18 @@
         <ReturnType>Microsoft.Office.InfoPath.ViewInfo</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object that represents the initial view of the form.</summary>
+        <value>The <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object that represents the initial view of the form.</value>
+        <remarks>
+          <para>The <b>ViewInfo</b> object that is returned or set by the <b>Initial</b> property is specified by the value of the <b>InitialView</b> attribute in the processing instructions of the underlying XML document of the form. The value can be set to a valid view and is saved when the form is saved.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>To see an example that uses the <b>Initial</b> property, see the <see cref="M:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView(Microsoft.Office.InfoPath.ViewInfo)" /> method topic.</para>
+        </example>
+        <exception cref="T:System.ArgumentException">The specified <b>ViewInfo</b> object doesn't exist.</exception>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -146,10 +197,21 @@
         <Parameter Name="index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="index">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="index">The zero-based index of the <b>ViewInfo</b> object to get.</param>
+        <summary>Gets the specified <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object from the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection by index value.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object from the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection that corresponds to the specified index value.</value>
+        <remarks>
+          <para>The value passed for the <paramref name="index" /> parameter must be a number from 0 to the value of the collection's <see cref="P:Microsoft.Office.InfoPath.ViewInfoCollection.Count" /> property minus 1.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example sets a variable to the <b>ViewInfo</b> object that represents the first view in the collection.</para>
+          <code>ViewInfo firstView = this.ViewInfos[0];</code>
+          <code>Dim firstView As ViewInfo = Me.ViewInfos(0)</code>
+        </example>
+        <exception cref="T:System.IndexOutOfRangeException">The specified index is out of range.</exception>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -171,10 +233,20 @@
         <Parameter Name="viewName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="viewName">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="viewName">The name of the <b>ViewInfo</b> object to get.</param>
+        <summary>Gets the specified <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object from the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection by name.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object from the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection that corresponds to the specified name.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example sets a variable to the <b>ViewInfo</b> object with the name "View2".</para>
+          <code>ViewInfo myView = this.ViewInfos["View2"];</code>
+          <code>Dim myView As ViewInfo = Me.ViewInfos("View2")</code>
+        </example>
+        <exception cref="T:System.ArgumentException">The specified view name doesn't exist, or a a null reference (Nothing in Visual Basic) or empty value was passed.</exception>
       </Docs>
     </Member>
     <Member MemberName="SwitchView">
@@ -196,9 +268,23 @@
         <Parameter Name="view" Type="Microsoft.Office.InfoPath.ViewInfo" />
       </Parameters>
       <Docs>
-        <param name="view">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="view">The <b>ViewObject</b> that represents the view to switch to.</param>
+        <summary>Switches the current view to the view represented by the specified <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example switches the current view to the initial view in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection using the <see cref="P:Microsoft.Office.InfoPath.ViewInfoCollection.Initial" /> property to get the <b>ViewInfo</b> object that represents the initial view in the collection.</para>
+          <code>ViewInfo firstView = ViewInfos.Initial;
+this.ViewInfos.SwitchView(firstView);</code>
+          <code>Dim firstView As ViewInfo  = ViewInfos.Initial
+Me.ViewInfos.SwitchView(firstView)</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>SwitchView</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> or <see cref="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" /> events.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="SwitchView">
@@ -220,9 +306,21 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="name">The name of the view to switch to.</param>
+        <summary>Switches the current view to the specified view by name.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example switches the current view to the view name "View2".</para>
+          <code>this.ViewInfos.SwitchView("View2");</code>
+          <code>Me.ViewInfos.SwitchView("View2")</code>
+        </example>
+        <exception cref="T:System.ArgumentException">The view name does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">The <b>SwitchView</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> or <see cref="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" /> events.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
       </Docs>
     </Member>
   </Members>

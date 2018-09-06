@@ -13,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the relationship defined for how multiple signatures can be applied to a set of data that can be signed.</summary>
+    <remarks>
+      <para>These enumerated values are returned by the <see cref="P:Microsoft.Office.InfoPath.SignedDataBlock.SignatureRelation" /> property of the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Cosign">
@@ -34,7 +38,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Signatures are independent of each other in the <b>SignedDateBlock</b>.</summary>
       </Docs>
     </Member>
     <Member MemberName="CounterSign">
@@ -54,7 +58,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Each signature signs the preceding signature in the <b>SignedDateBlock</b>.</summary>
       </Docs>
     </Member>
     <Member MemberName="Single">
@@ -74,7 +78,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Only one signature is allowed in the <b>SignedDateBlock</b>.</summary>
       </Docs>
     </Member>
   </Members>

@@ -14,8 +14,11 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" /> event.</summary>
+    <remarks>
+      <para>The <b>ClickedEventArgs</b> object passes state information to an event handler for the <b>Clicked</b> event, which is associated with a Button control.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +54,20 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Gets the value of <b>ID</b> property for the Button control that raised the event.</summary>
+        <value>The <b>ID</b> of the button control.</value>
         <remarks>To be added.</remarks>
+        <example>
+          <para>In the following example, the <b>ControlId</b> property is used to display the <b>ID</b> property value (MyButton) for the Button control.</para>
+          <code>public void MyButton_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(e.ControlId);
+}</code>
+          <code>Public Sub MyButton_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(e.ControlId)
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Source">
@@ -72,9 +86,17 @@
         <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an XPathNavigator object positioned at the innermost XML node of the form's underlying XML document that contains the Button control.</summary>
+        <value>An <b>XPathNavigator</b> object positioned at the innermost XML node of the form's underlying XML document that contains the Button control.</value>
+        <remarks>
+          <para>After you have set a reference to the <b>XPathNavigator</b> object that the <b>Source</b> property returns, you can use the properties and methods that are supported by the <b>XPathNavigator</b> class.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Source</b> property is used to return an <b>XPathNavigator</b> object, which is then used to display the of the innermost XML node of the form's underlying XML document that contains the Button control.</para>
+          <code>MessageBox.Show(e.Source.OuterXml.ToString());</code>
+          <code>MessageBox.Show(e.Source.OuterXml.ToString())</code>
+        </example>
       </Docs>
     </Member>
   </Members>

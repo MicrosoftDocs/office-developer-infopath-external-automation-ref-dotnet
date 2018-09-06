@@ -13,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the appearance of a Signature Line control.</summary>
+    <remarks>
+      <para>These enumerated constants specify the return value of the <see cref="P:Microsoft.Office.InfoPath.SignatureLine.SignatureAppearanceType" /> property of the <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> class.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Line">
@@ -34,7 +38,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The control displays with a signature line. </summary>
       </Docs>
     </Member>
     <Member MemberName="Stamp">
@@ -54,7 +58,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The control displays for signing with the image of a stamp, such as an inkan or hanko seal.</summary>
       </Docs>
     </Member>
   </Members>

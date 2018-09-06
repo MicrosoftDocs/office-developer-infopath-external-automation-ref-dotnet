@@ -18,8 +18,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a user's permissions.</summary>
+    <remarks>
+      <para>These enumerated constants are returned by the <see cref="P:Microsoft.Office.InfoPath.UserPermission.Permission" /> property of the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> class, and passed as the <paramref name="PermissionType" /> parameter to the <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,Microsoft.Office.InfoPath.PermissionType)" /> method of the <see cref="T:Microsoft.Office.InfoPath.UserPermissionCollection" /> class.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Change">
@@ -39,7 +43,7 @@
       </ReturnValue>
       <MemberValue>15</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Allows users to view, edit, copy, and save, but not print a form. Equivalent to the <b>Read</b>, <b>Edit</b>, <b>Save</b>, and <b>Extract</b> permissions combined.</summary>
       </Docs>
     </Member>
     <Member MemberName="Edit">
@@ -59,7 +63,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Allows the user to edit the form.</summary>
       </Docs>
     </Member>
     <Member MemberName="Extract">
@@ -79,7 +83,7 @@
       </ReturnValue>
       <MemberValue>8</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Allows a user with the <b>Read</b> permission to copy content in the form.</summary>
       </Docs>
     </Member>
     <Member MemberName="FullControl">
@@ -99,7 +103,7 @@
       </ReturnValue>
       <MemberValue>64</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Allows the user to add, change, and remove permissions for other users of a form.</summary>
       </Docs>
     </Member>
     <Member MemberName="ObjectModel">
@@ -119,7 +123,7 @@
       </ReturnValue>
       <MemberValue>32</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Allows a user to access the form document programmatically through its object model. Users without the <b>ObjectModel</b> permission cannot use the object model to determine their own permissions.</summary>
       </Docs>
     </Member>
     <Member MemberName="Print">
@@ -139,7 +143,7 @@
       </ReturnValue>
       <MemberValue>16</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Allows the user to print the form.</summary>
       </Docs>
     </Member>
     <Member MemberName="Read">
@@ -159,7 +163,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Allows the user to read (view) the form. (The <b>Read</b> and <b>View</b> permissions are equivalent.)</summary>
       </Docs>
     </Member>
     <Member MemberName="Save">
@@ -179,7 +183,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Allows the user to save the form.</summary>
       </Docs>
     </Member>
     <Member MemberName="View">
@@ -199,7 +203,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Allows the user to view (read) the form. (The <b>Read</b> and <b>View</b> permissions are equivalent.) </summary>
       </Docs>
     </Member>
   </Members>

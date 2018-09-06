@@ -17,6 +17,9 @@
     <Attribute>
       <AttributeName>System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Method | System.AttributeTargets.Interface, AllowMultiple=true, Inherited=false)</AttributeName>
     </Attribute>
+    <Attribute>
+      <AttributeName>Serializable</AttributeName>
+    </Attribute>
   </Attributes>
   <Docs>
     <summary>To be added.</summary>

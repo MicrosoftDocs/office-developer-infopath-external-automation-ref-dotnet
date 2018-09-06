@@ -14,8 +14,27 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a form template.</summary>
+    <remarks>
+      <para>The <b>FormTemplate</b> class implements properties for getting information about a form template, including its version number, its cache identifier, the Uniform Resource Identifier (URI) it was loaded from, and an <see cref="T:System.Xml.XPath.XPathNavigator" /> object positioned at the root of its form definition (.xsf) file. The <b>FormTemplate</b> class also implements a method for opening a file contained within the form template .xsn file.</para>
+      <para>A <b>FormTemplate</b> object that represents the form template associated with the current form is accessed through the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Template" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, a reference is set to the <b>FormTemplate</b> object for the current form template, then the code displays the values of the <see cref="P:Microsoft.Office.InfoPath.FormTemplate.Version" />, <see cref="P:Microsoft.Office.InfoPath.FormTemplate.CacheId" />, and <see cref="P:Microsoft.Office.InfoPath.FormTemplate.Uri" /> properties of the form template.</para>
+      <code>FormTemplate myTemplate = this.Template;
+
+string templateProperties = "Version: " + myTemplate.Version +
+   "\nCacheId: " + myTemplate.CacheId +
+   "\nUri: " + myTemplate.Url.ToString();
+MessageBox.Show(templateProperties);</code>
+      <code>Dim myTemplate As FormTemplate  = Me.Template
+
+Dim templateProperties As String = "Version: " &amp;amp; myTemplate.Version &amp;amp; _
+   vbNewLine &amp;amp; "CacheId: " &amp;amp; myTemplate.CacheId &amp;amp; _
+   vbNewLine &amp;amp; "Uri: " + myTemplate.Url.ToString()
+MessageBox.Show(templateProperties)</code>
+    </example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +70,16 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the form template cache identifier.</summary>
+        <value>The form template cache identifier.</value>
+        <remarks>
+          <para>The <b>CacheID</b> property is set at run time, and the URL it returns points to the folder where the form template's files are cached. The value returned is from the following location in the file system:</para>
+          <code>%USERPROFILE%\Local Settings\Application Data\Microsoft\InfoPath\FormCache1\&lt;span class="placeholder"&gt;foldername&lt;/span&gt;\&lt;span class="placeholder"&gt;cacheID&lt;/span&gt;</code>
+          <para>Where foldername is a random name assigned in a user's form cache, and cacheID is the cache ID value.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Manifest">
@@ -72,9 +98,14 @@
         <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an XPathNavigator object positioned at the root of the form template's form definition (.xsf) file. </summary>
+        <value>An <b>XPathNavigator</b> object positioned at the root of the form template's form definition (.xsf) file.</value>
+        <remarks>
+          <para>The <b>XPathNavigator</b> object returned is read-write, but changes are not saved when the <see cref="T:Microsoft.Office.InfoPath.FormTemplate" /> object is closed.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="OpenFileFromPackage">
@@ -96,10 +127,17 @@
         <Parameter Name="filename" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="filename">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="filename">The name of the file to open.</param>
+        <summary>Opens a file contained within the form template (.xsn) file.</summary>
+        <returns>The specified file as a <see cref="T:System.IO.Stream" /> object.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.IO.IOException">An I/O error, such as file not found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Uri">
@@ -118,9 +156,14 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the Uniform Resource Identifier (URI) of a form template.</summary>
+        <value>The Uniform Resource Identifier (URI) of the form template.</value>
+        <remarks>
+          <para>The <b>URI</b> property can take the form of a Uniform Resource Locator (URL) or Uniform Resource Name (URN), depending on the location from which the form was opened.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Version">
@@ -139,9 +182,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the version of a form template.</summary>
+        <value>The version of the form template.</value>
+        <remarks>
+          <para>To get the version of the InfoPath application, use the <see cref="P:Microsoft.Office.InfoPath.Application.Version" /> property instead.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

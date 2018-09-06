@@ -13,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Indicates what type of operation occurred during a <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" />, <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changing" />, or <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event.</summary>
+    <remarks>
+      <para>The <b>XmlOperation</b> enumeration is returned by the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Operation" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlEventArgs" /> class.</para>
+      <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Delete">
@@ -34,7 +38,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The node was deleted.</summary>
       </Docs>
     </Member>
     <Member MemberName="Insert">
@@ -54,7 +58,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>A new node was inserted.</summary>
       </Docs>
     </Member>
     <Member MemberName="None">
@@ -74,7 +78,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>No change has occurred.</summary>
       </Docs>
     </Member>
     <Member MemberName="ValueChange">
@@ -94,7 +98,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The value of the node was changed (updated).</summary>
       </Docs>
     </Member>
   </Members>

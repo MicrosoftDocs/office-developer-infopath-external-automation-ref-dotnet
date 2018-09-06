@@ -14,8 +14,15 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides information about the SharePoint Foundation server where a form is located.</summary>
+    <remarks>
+      <para>If the form template was published to a SharePoint Foundation server, the members of the <see cref="T:Microsoft.Office.InfoPath.ServerInfo" /> class can be used to determine information about where the form is published, such as the URL of the document library where the form is located. To access the <see cref="T:Microsoft.Office.InfoPath.ServerInfo" /> object associated with the current form, use the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ServerInfo" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para>In a managed code form template created using the object model provided by the members of the <see cref="N:Microsoft.Office.InfoPath" /> namespace, you can use the <b>this</b> (C#) or <b>Me</b> (Visual Basic) keyword in your form code to access the members of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class directly (without requiring an object variable that establishes a reference to the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class).</para>
+      <para>For example, the following code example uses the <b>this</b> or <b>Me</b> keyword to access the <see cref="T:Microsoft.Office.InfoPath.ServerInfo" /> object associated with the current form, and then uses the <see cref="P:Microsoft.Office.InfoPath.ServerInfo.SharePointListUrl" /> property to create a string variable that contains the URL of the document library where the form is located.</para>
+      <code>string strListUrl = &lt;span class="label"&gt;this&lt;/span&gt;.ServerInfo.SharePointListUrl.OriginalString;</code>
+      <code>Dim strListUrl As String = &lt;span class="label"&gt;Me&lt;/span&gt;.ServerInfo.SharePointListUrl.OriginalString</code>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +58,13 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.Uri" /> that provides the URL of the document library where the form is located.</summary>
+        <value>The URL of the document library.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SharePointServerRootUrl">
@@ -72,9 +83,13 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.Uri" /> that provides the root URL of the SharePoint server where the form is located.</summary>
+        <value>The root URL of the SharePoint server where the form is located.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SharePointSiteCollectionUrl">
@@ -93,9 +108,13 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.Uri" /> that provides the URL of the SharePoint site collection where the form is located.</summary>
+        <value>The URL of the SharePoint site collection where the form is located.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SharePointSiteUrl">
@@ -114,9 +133,13 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.Uri" /> that provides the URL of the SharePoint site where the form is located.</summary>
+        <value>The URL of the SharePoint site where the form is located.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

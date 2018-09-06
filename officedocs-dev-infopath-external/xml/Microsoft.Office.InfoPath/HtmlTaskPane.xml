@@ -14,8 +14,104 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents the custom task pane that is associated the current window in which a form is being edited.</summary>
+    <remarks>
+      <para>InfoPath custom task panes can only be used in a form template with the compatibility set to InfoPath Editor. To set a form template's compatibility, click the File tab, click Form Options, and then click the Compatibility category.</para>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.HtmlTaskPane" /> object provides properties and methods for working with InfoPath custom task panes, and it also inherits the properties of the <see cref="T:Microsoft.Office.InfoPath.TaskPane" /> class.</para>
+      <para>The properties available for an InfoPath task pane are determined by the type of task pane that you are working with. If the <see cref="P:Microsoft.Office.InfoPath.TaskPane.TaskPaneType" /> property returns <b>TaskPaneType.Html</b>, the task pane is a custom task pane and the properties and methods available are provided by the <see cref="T:Microsoft.Office.InfoPath.HtmlTaskPane" /> class. If the <see cref="P:Microsoft.Office.InfoPath.TaskPane.TaskPaneType" /> property returns any other value, the task pane is a built-in task pane and the properties are provided by the <see cref="T:Microsoft.Office.InfoPath.TaskPane" /> class.</para>
+      <para>The<see cref="P:Microsoft.Office.InfoPath.TaskPane.TaskPaneType" /> property returns values defined by the <see cref="T:Microsoft.Office.InfoPath.TaskPaneType" /> enumeration. These enumerated values are also used as arguments to the <see cref="P:Microsoft.Office.InfoPath.TaskPaneCollection.Item(Microsoft.Office.InfoPath.TaskPaneType)" /> property of the <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" /> class for returning a reference to a specified type of task pane.</para>
+      <para>To enable and add a custom task pane to a form template, you must first create one or more HTML files and add them as resource files using the Resource Files command on the Data tab in form template design mode. Then, you must configure one of the HTML files as the form template's default custom task pane, by clicking the File tab, clicking Form Options, clicking the Programming category, and then selecting the Enable custom task pane check box.</para>
+      <para>
+        <b>Note</b>: The properties and methods of the <see cref="T:Microsoft.Office.InfoPath.HtmlTaskPane" /> object cannot be called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event because the view is not yet loaded when this event occurs, and task panes are associated with the view.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, the <see cref="Overload:Microsoft.Office.InfoPath.TaskPaneCollection.Item" /> property of the <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" /> class is used to get a reference to the <see cref="T:Microsoft.Office.InfoPath.TaskPane" /> object that represents the custom task pane, which is cast to the <see cref="T:Microsoft.Office.InfoPath.HtmlTaskPane" /> type. The code then calls the <see cref="M:Microsoft.Office.InfoPath.HtmlTaskPane.Navigate(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.HtmlTaskPane" /> class to open an HTML file, which replaces the current HTML file that is loaded as the custom task pane.</para>
+      <code>// Get a reference to the custom task pane. 
+// It is always index [0] in the TaskPanes collection.
+HtmlTaskPane oTaskPane = (Microsoft.Office.InfoPath.HtmlTaskPane)
+   (this.CurrentView.Window.TaskPanes[0]);
+
+// Navigate to new task pane based on url specified.
+oTaskPane.Navigate("taskpane2.html");</code>
+      <code>' Get a reference to the custom task pane. It is always index (0) in 
+' the TaskPanes collection.
+Dim oTaskPane As HtmlTaskPane = _
+   DirectCast(Me.CurrentView.Window.TaskPanes(0), _
+   Microsoft.Office.InfoPath.HtmlTaskPane)
+
+' Navigate to new task pane based on url specified.
+oTaskPane.Navigate("taskpane2.html")</code>
+      <para>In the following example, the <b>Item</b> property of the <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" /> class is used to get a reference to the <see cref="T:Microsoft.Office.InfoPath.TaskPane" /> object that represents the custom task pane. The code then calls a scripting function defined in the HTML code of the custom task pane by using the <see cref="P:Microsoft.Office.InfoPath.HtmlTaskPane.HtmlDocument" /> property of the <see cref="T:Microsoft.Office.InfoPath.HtmlTaskPane" /> class.</para>
+      <para>To be able to work with the object model of the HTML file that is specified as a custom task pane, you use the object model provided by the Microsoft HTML Object Library (MSHTML.dll). To do that from managed code, add a reference to <b>Microsoft.mshtml</b> on the .NET tab of the Add Reference dialog box in Visual Studio 2012.</para>
+      <para>The following example assumes that you have a using mshtml; or Imports mshtml directive in the declarations section of your form code file.</para>
+      <code>// Ensure View has loaded before trying to access the task pane.
+if (this.CurrentView != null)
+{
+   // Get a reference to the custom task pane. It is always index [0]
+   // in the TaskPanes collection.
+   HtmlTaskPane custom = (Microsoft.Office.InfoPath.HtmlTaskPane)
+      this.CurrentView.Window.TaskPanes[0];
+
+   // Get a reference to the custom task pane document.
+   IHTMLDocument2 oHTMLdoc = (IHTMLDocument2)custom.HtmlDocument;
+
+   // Ensure that the task pane is completely loaded.
+   if (custom != null &amp;amp;&amp;amp; oHTMLdoc.readyState == "complete")
+   {
+      // Get a reference to the parent window of the task pane. 
+      IHTMLWindow2 window = (IHTMLWindow2)custom.HtmlWindow;
+
+      // Create array to contain method arguments.
+      object[] args = new object[] { "ViewID" };
+
+      // Call into script through CLR late binding mechanism
+      window.GetType().InvokeMember(
+         "SelectView",      // late bound method name.
+         System.Reflection.BindingFlags.InvokeMethod | // binding flags
+         System.Reflection.BindingFlags.DeclaredOnly |
+         System.Reflection.BindingFlags.Public |
+         System.Reflection.BindingFlags.Instance,
+         null,     // binder object
+         window,   // target object
+         args);   // method arguments
+   }
+}</code>
+      <code>' Ensure View has loaded before trying to access the task pane.
+If Not (Me.CurrentView Is Nothing) Then
+   ' Get a reference to the custom task pane. It is always index (0)
+   ' in the TaskPanes collection.
+   Dim custom As HtmlTaskPane = _
+      DirectCast(Me.CurrentView.Window.TaskPanes(0), _
+      Microsoft.Office.InfoPath.HtmlTaskPane)
+
+   ' Get a reference to the custom task pane document.
+   Dim oHTMLdoc As IHTMLDocument2 = DirectCast(
+      custom.HtmlDocument, IHTMLDocument2)
+
+   ' Ensure that the task pane is completely loaded.
+   If Not (custom Is Nothing And oHTMLdoc.readyState = "complete") Then
+      ' Get a reference to the parent window of the task pane.
+      Dim window As IHTMLWindow2 = DirectCast(custom.HtmlWindow, _
+         IHTMLWindow2
+
+      ' Create array to contain method arguments.
+        Dim args As Object()
+        args = New Object() {"ViewID"}
+
+        ' Call into script through CLR late binding mechanism
+        window.GetType().InvokeMember( _
+         "SelectView", _
+         System.Reflection.BindingFlags.InvokeMethod Or _
+         System.Reflection.BindingFlags.DeclaredOnly Or _
+         System.Reflection.BindingFlags.Public Or _
+         System.Reflection.BindingFlags.Instance, _
+         Nothing, _
+         window, _
+         args)
+    End If
+End If</code>
+    </example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -32,7 +128,10 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HtmlDocument">
@@ -51,9 +150,89 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to the MSHTML <b>IHTMLDocument2</b> interface for working with the the HTML document object model of a custom task pane. </summary>
+        <value>An <b>IHTMLDocument2</b> object associated with the HTML file of the custom task pane.</value>
+        <remarks>
+          <para>Using the <b>HtmlDocument</b> property, you can call scripting functions contained in the HTML code of the task pane through late binding, as in the second example below. You can also directly manipulate the HTML code of the task pane using any of the properties and methods that the <b>IHTMLDocument2</b> interface provides.</para>
+          <para>To work with the <b>IHTMLDocument2</b> object returned by the <b>HtmlDocument</b> property, you must add a reference to <b>Microsoft.mshtml</b> on the .NET tab of the Add Reference dialog box in Visual Studio 2012. Additionally, you must cast the object returned by the <b>HtmlDocument</b> property to the <b>IHTMLDocument2 </b>type.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following examples assume that you have a using mshtml; or Imports mshtml directive in the declarations section of your form code file.</para>
+          <para>In the following example, the <b>HtmlDocument</b> property of the <see cref="T:Microsoft.Office.InfoPath.HtmlTaskPane" /> class is used to set a reference to the HTML <b>window</b> object of the custom task pane of a fully trusted form. Then the code changes the background color of the custom task pane.</para>
+          <code>// Get a reference to the custom task pane. It is always index [0]
+// in the TaskPanes collection.
+HtmlTaskPane custom = (Microsoft.Office.InfoPath.HtmlTaskPane)
+   (this.CurrentView.Window.TaskPanes[0]);
+
+// Get a reference to the custom task pane document and cast to
+// the IHTMLDocument2 type.
+IHTMLDocument2 oHTMLdoc = (IHTMLDocument2)(custom.HtmlDocument);
+
+// Change custom task pane background color to red.
+oHTMLdoc.bgColor = "red";</code>
+          <code>' Get a reference to the custom task pane. It is always index [0]
+' in the TaskPanes collection.
+Dim custom As HtmlTaskPane = DirectCast( _
+   Me.CurrentView.Window.TaskPanes(0), _
+   Microsoft.Office.InfoPath.HtmlTaskPane)
+
+' Get a reference to the custom task pane document and cast to
+' the IHTMLDocument2 type.
+IHTMLDocument2 oHTMLdoc = _
+   DirectCast(custom.HtmlDocument,IHTMLDocument2)
+
+' Change custom task pane background color to red.
+oHTMLdoc.bgColor = "red"</code>
+          <para>In the following example, the <b>HtmlDocument</b> property of the <b>HtmlTaskPane</b> class is used to set a reference to the HTML <b>window</b> object of the custom task pane of a fully trusted form. Then the code calls the <b>TaskPaneSwitchView</b> custom function that is defined in the HTML code of the custom task pane.</para>
+          <code>   // Get a reference to the custom task pane. It is always index [0]
+   // in the TaskPanes collection.
+   HtmlTaskPane custom = (Microsoft.Office.InfoPath.HtmlTaskPane)
+      this.CurrentView.Window.TaskPanes[0];
+
+   // Get a reference to the custom task pane document.
+   IHTMLDocument2 oHTMLdoc = (IHTMLDocument2)custom.HtmlDocument;
+
+   // Get a reference to the parent window of the task pane.
+   IHTMLWindow2 window = (IHTMLWindow2)oHTMLdoc.parentWindow;
+
+   // Call into script through CLR late binding mechanism.
+   window.GetType().InvokeMember(
+      "TaskPaneSwitchView",      // late bound method name.
+      System.Reflection.BindingFlags.InvokeMethod | // binding flags
+      System.Reflection.BindingFlags.DeclaredOnly |
+      System.Reflection.BindingFlags.Public |
+      System.Reflection.BindingFlags.Instance,
+      null,     // binder object
+      window,   // target object
+      null);   // method arguments</code>
+          <code>   ' Get a reference to the custom task pane. It is always index (0)
+   ' in the TaskPanes collection.
+   Dim custom As HtmlTaskPane = _
+      DirectCast(Me.CurrentView.Window.TaskPanes(0), _
+      Microsoft.Office.InfoPath.HtmlTaskPane)
+
+   ' Get a reference to the custom task pane document.
+   Dim oHTMLdoc As IHTMLDocument2 = DirectCast(
+      custom.HtmlDocument, IHTMLDocument2)
+
+     ' Get a reference to the parent window of the task pane.
+      Dim window As IHTMLWindow2 = DirectCast(oHTMLdoc.parentWindow, _
+         IHTMLWindow2
+
+     ' Call into script through CLR late binding mechanism.
+     window.GetType().InvokeMember( _
+      "TaskPaneSwitchView", _
+      System.Reflection.BindingFlags.InvokeMethod Or _
+      System.Reflection.BindingFlags.DeclaredOnly Or _
+      System.Reflection.BindingFlags.Public Or _
+      System.Reflection.BindingFlags.Instance, _
+      Nothing, _
+      window, _
+      Nothing)</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="HtmlWindow">
@@ -72,9 +251,58 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to the MSHTML <b>IHTMLWindow2</b> interface for working with the HTML document of a custom task pane.</summary>
+        <value>An <b>IHTMLWindow2</b> object associated with HTML file of the custom task pane.</value>
+        <remarks>
+          <para>Using the <b>HtmlWindow</b> property, you can call scripting functions contained in the HTML code of the task pane from the primary form code, manipulate the HTML code of the task pane, and work with any of the properties and methods that the <b>IHTMLWindow2</b> interface provides.</para>
+          <para>
+            <b>Note</b>: The <b>HtmlWindow</b> property provides the same functionality as the <see cref="P:Microsoft.Office.InfoPath.HtmlTaskPane.HtmlDocument" /> property, but it is only available when using fully trusted forms. If the form is not fully trusted, you can use the <b>HtmlDocument</b> property instead.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>HtmlWindow</b> property of the <b>HtmlTaskPane</b> class is used to set a reference to the <b>IHTMLWindow2</b> object of the custom task pane of a fully trusted form. Then the code calls the <b>TaskPaneSwitchView</b> custom function that is defined in the HTML code of the custom task pane.</para>
+          <code>   // Get a reference to the custom task pane. It is always index [0]
+   // in the TaskPanes collection.
+   HtmlTaskPane custom = (Microsoft.Office.InfoPath.HtmlTaskPane)
+      this.CurrentView.Window.TaskPanes[0];
+
+   // Get a reference to the parent window of the task pane.
+   IHTMLWindow2 window = (IHTMLWindow2)custom.HtmlWindow;
+
+   // Call into script through CLR late binding mechanism.
+   window.GetType().InvokeMember(
+      "TaskPaneSwitchView",      // late bound method name.
+      System.Reflection.BindingFlags.InvokeMethod | // binding flags
+      System.Reflection.BindingFlags.DeclaredOnly |
+      System.Reflection.BindingFlags.Public |
+      System.Reflection.BindingFlags.Instance,
+      null,     // binder object
+      window,   // target object
+      null);   // method arguments</code>
+          <code>   ' Get a reference to the custom task pane. It is always index (0)
+   ' in the TaskPanes collection.
+   Dim custom As HtmlTaskPane = _
+      DirectCast(Me.CurrentView.Window.TaskPanes(0), _
+      Microsoft.Office.InfoPath.HtmlTaskPane)
+
+     ' Get a reference to the parent window of the task pane.
+      Dim window As IHTMLWindow2 = DirectCast(custom.HtmlWindow, _
+         IHTMLWindow2
+
+     ' Call into script through CLR late binding mechanism.
+     window.GetType().InvokeMember( _
+      "TaskPaneSwitchView", _
+      System.Reflection.BindingFlags.InvokeMethod Or _
+      System.Reflection.BindingFlags.DeclaredOnly Or _
+      System.Reflection.BindingFlags.Public Or _
+      System.Reflection.BindingFlags.Instance, _
+      Nothing, _
+      window, _
+      Nothing)</code>
+        </example>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Navigate">
@@ -96,9 +324,36 @@
         <Parameter Name="url" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="url">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="url">The Uniform Resource Locator (URL) of the HTML document to navigate to.</param>
+        <summary>Loads the specified HTML document into the custom task pane. </summary>
+        <remarks>
+          <para>
+            <b>Note</b>: The <b>Navigate</b> method cannot be called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event because the view is not yet loaded when this event occurs, and task panes are associated with the view. </para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Navigate</b> method of the <b>HtmlTaskPane</b> class is used to load an HTML file into the custom task pane. The HTML document that it loads is one that has been added as a resource file of the form template.</para>
+          <code>// Get a reference to the custom task pane. 
+// It is always index [0] in the TaskPanes collection.
+HtmlTaskPane oTaskPane = (Microsoft.Office.InfoPath.HtmlTaskPane)
+   (this.CurrentView.Window.TaskPanes[0]);
+
+// Navigate to new task pane based on url specified.
+oTaskPane.Navigate("taskpane2.html");</code>
+          <code>' Get a reference to the custom task pane. It is always index (0) in 
+' the TaskPanes collection.
+Dim oTaskPane As HtmlTaskPane = _
+   DirectCast(Me.CurrentView.Window.TaskPanes(0), _
+   Microsoft.Office.InfoPath.HtmlTaskPane)
+
+' Navigate to new task pane based on url specified.
+oTaskPane.Navigate("taskpane2.html")</code>
+        </example>
+        <exception cref="T:System.Net.WebException">An error occurred while attempting to open the specified URL.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
   </Members>

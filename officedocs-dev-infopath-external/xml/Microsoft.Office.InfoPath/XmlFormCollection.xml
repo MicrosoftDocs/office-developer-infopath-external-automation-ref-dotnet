@@ -18,8 +18,11 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Contains an <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object for each form that is currently open.</summary>
+    <remarks>
+      <para>The <b>XmlFormCollection</b> class implements properties and methods that can be used to access a form's associated <b>XmlForm</b> object, or to create and open the forms themselves. The <b>XmlFormCollection</b> object for the current instance of InfoPath is accessed through the <see cref="P:Microsoft.Office.InfoPath.Application.XmlForms" /> property of the <see cref="T:Microsoft.Office.InfoPath.Application" /> object.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,9 +58,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a count of the number of <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> objects that are contained in the collection.</summary>
+        <value>A count of the number of <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> objects that are contained in the collection.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -80,9 +87,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <b>System.Collections.IEnumerator</b> object that iterates over all entries in the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> object.</summary>
+        <returns>An <b>IEnumerator</b> that iterates over all entries in the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> object.</returns>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -104,10 +115,22 @@
         <Parameter Name="index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="index">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="index">The zero-based index of the form to return.</param>
+        <summary>Gets a reference to the specified <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object from the collection by index value.</summary>
+        <value>The <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object for the specified index value.</value>
+        <remarks>
+          <para>If the value that is provided for the <paramref name="index" /> parameter does not match any existing member of the collection, an exception is raised.</para>
+          <para>After you have set a reference to the <b>XmlForm</b> object that the <b>Item</b> property returns, you can access any of its properties or methods.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>Because the <b>Item</b> property is the default property of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class, it can be used as shown in the following code example.</para>
+          <code>XmlForm firstForm = this.Application.XmlForms[0];</code>
+          <code>Dim firstForm As XmlForm  = Me.Application.XmlForms(0)</code>
+        </example>
+        <exception cref="T:System.IndexOutOfRangeException">The index provided is out of range.</exception>
       </Docs>
     </Member>
     <Member MemberName="New">
@@ -129,10 +152,24 @@
         <Parameter Name="formLocation" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="formLocation">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="formLocation">The Uniform Resource Identifier (URI) of the form on which to base the new form.</param>
+        <summary>Creates a new form that is based on the specified form.</summary>
+        <returns>An <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object that represents the new form that was created.</returns>
+        <remarks>
+          <para>The <b>New</b> method can only be used to create a new form that is based on an existing form; it cannot be used to create a new form that is based on a form template. To create a form from a form template, use the <see cref="Overload:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate" /> method.</para>
+          <para>When you use the <b>New</b> method, the new form opens in Microsoft InfoPath and is ready to be filled out.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>New</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form on which to base the new form and the new form's associated <b>XmlForm</b> object is returned.</para>
+          <code>XmlForm newDocument = 
+   this.Application.XmlForms.New(@"C:\MyForm.xml");</code>
+          <code>Dim newDocument As XmlForm  = _
+   Me.Application.XmlForms.New("C:\MyForm.xml")</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>New</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="New">
@@ -155,11 +192,27 @@
         <Parameter Name="behavior" Type="Microsoft.Office.InfoPath.XmlFormOpenMode" />
       </Parameters>
       <Docs>
-        <param name="formLocation">To be added.</param>
-        <param name="behavior">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="formLocation">The Uniform Resource Identifier (URI) of the form on which to base the new form.</param>
+        <param name="behavior">An <see cref="T:Microsoft.Office.InfoPath.XmlFormOpenMode" /> enumeration that specifies how the form will be opened.</param>
+        <summary>Creates a new form that is based on the specified form by using the specified open mode behavior.</summary>
+        <returns>An <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object that represents the new form that was created.</returns>
+        <remarks>
+          <para>The <b>New</b> method can only be used to create a new form that is based on an existing form; it cannot be used to create a new form that is based on a form template. To create a form from a form template, use the <see cref="Overload:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate" /> method.</para>
+          <para>When you use the <b>New</b> method, the new form opens in Microsoft InfoPath and is ready to be filled out.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>New</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form on which to base the new form by using the default open mode, and the new form's associated <b>XmlForm</b> object is returned.</para>
+          <code>XmlForm newDocument = 
+   this.Application.XmlForms.New(@"C:\MyForm.xml", 
+   XmlFormOpenMode.Default);</code>
+          <code>Dim newDocument As XmlForm  = _
+   Me.Application.XmlForms.New("C:\MyForm.xml", 
+   XmlFormOpenMode.Default)</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>New</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplate">
@@ -181,10 +234,29 @@
         <Parameter Name="formTemplateLocation" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="formTemplateLocation">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="formTemplateLocation">The Uniform Resource Identifier (URI) of the form template on which to base the new form.</param>
+        <summary>Creates a new form that is based on the specified form template, with optional data.</summary>
+        <returns>An <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object that represents the new form that was created.</returns>
+        <remarks>
+          <para>The <b>NewFromFormTemplate </b>method can only be used to create a new form that is based on an existing form template; it cannot be used to create a new form that is based on a form. To create a form from an existing form, use the <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" /> method.</para>
+          <para>When you use the <b>NewFromFormTemplate</b> method, the new form opens in InfoPath and is ready to be filled out.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>NewFromFormTemplate(</b><paramref name="formTemplateLocation" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form template and the new form's associated <b>XmlForm</b> object is returned.</para>
+          <code>XmlForm newDocument = 
+   this.Application.XmlForms.NewFromFormTemplate(
+   @"C:\MyForm.xsn");</code>
+          <code>Dim newDocument As XmlForm  = _
+   Me.Application.XmlForms.NewFromFormTemplate(_
+   "C:\MyForm.xsn")</code>
+        </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplate">
@@ -207,11 +279,30 @@
         <Parameter Name="xmlData" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="formTemplateLocation">To be added.</param>
-        <param name="xmlData">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="formTemplateLocation">The Uniform Resource Identifier (URI) of the form template on which to base the new form.</param>
+        <param name="xmlData">The Uniform Resource Identifier (URI) of the XML document that provides the XML data to be used as a template for the form.</param>
+        <summary>Creates a new form that uses the specified form template and XML data file.</summary>
+        <returns>An <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object that represents the new form that was created.</returns>
+        <remarks>
+          <para>The <b>NewFromFormTemplate</b> method can only be used to create a new form that is based on an existing form template; it cannot be used to create a new form that is based on a form. To create a form from an existing form, use the <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" /> method.</para>
+          <para>When you use the <b>NewFromFormTemplate</b> method, the new form opens in InfoPath and is ready to be filled out.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>NewFromFormTemplate(</b><paramref name="formTemplateLocation" />,<paramref name=" xmlData" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form template, the URI of XML data, and the new form's associated <b>XmlForm</b> object is returned.</para>
+          <code>XmlForm newDocument = 
+   this.Application.XmlForms.NewFromFormTemplate(
+   @"C:\MyForm.xsn", @"C:\MyForm.xml");</code>
+          <code>Dim newDocument As XmlForm  = _
+   Me.Application.XmlForms.NewFromFormTemplate(_
+   "C:\MyForm.xsn", "C:\MyForm.xml")</code>
+        </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplate">
@@ -234,11 +325,52 @@
         <Parameter Name="xmlData" Type="System.Xml.XPath.XPathNavigator" />
       </Parameters>
       <Docs>
-        <param name="formTemplateLocation">To be added.</param>
-        <param name="xmlData">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="formTemplateLocation">The Uniform Resource Identifier (URI) of the form template on which to base the new form.</param>
+        <param name="xmlData">An <see cref="T:System.Xml.XPath.XPathNavigator" /> object that returns the XML data to be used as a template for the form.</param>
+        <summary>Creates a new form by using the specified form template with data specified by an <see cref="T:System.Xml.XPath.XPathNavigator" /> object.</summary>
+        <returns>An <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object that represents the new form that was created.</returns>
+        <remarks>
+          <para>The <b>NewFromFormTemplate</b> method can only be used to create a new form that is based on an existing form template; it cannot be used to create a new form that is based on a form. To create a form from an existing form, use the <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" /> method.</para>
+          <para>When you use the <b>NewFromFormTemplate</b> method, the new form opens in InfoPath and is ready to be filled out.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>NewFromFormTemplate(</b><paramref name="formTemplateLocation" />,<paramref name=" xmlData" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form template and an <b>XPathNavigator</b> object that returns XML data, and the new form's associated <b>XmlForm</b> object returned.</para>
+          <code>// Create an in-memory XML document.
+XmlDocument newDoc = new XmlDocument();
+// Load the document with some XML.
+newDoc.LoadXml(
+   "&amp;lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&amp;gt;&amp;lt;person&amp;gt;&amp;lt;firstName/&amp;gt;&amp;lt;lastName/&amp;gt;&amp;lt;address/&amp;gt;&amp;lt;city/&amp;gt;&amp;lt;country/&amp;gt;&amp;lt;/person&amp;gt;");
+// Create an XPathNavigator for the XML file.
+XPathNavigator newDocNav = newDoc.CreateNavigator();
+// Call NewFromFormTemplate to open new form and load XML.
+XmlForm newDocument = 
+   this.Application.XmlForms.NewFromFormTemplate(
+   @"C:\MyForm.xsn", newDocNav);</code>
+          <code>' Create an in-memory XML document.
+Dim newDoc As XmlDocument = new XmlDocument()
+' Create XML to load.
+Dim xmlToLoad As String = "&amp;lt;?xml version=" &amp;amp; Quote &amp;amp; "1.0" &amp;amp; Quote &amp;amp; _
+   " encoding=" &amp;amp; Quote &amp;amp; "utf-8" &amp;amp; Quote &amp;amp; _
+   " ?&amp;gt;&amp;lt;person&amp;gt;&amp;lt;firstName/&amp;gt;&amp;lt;lastName/&amp;gt;&amp;lt;address/&amp;gt;" &amp;amp; _
+   "&amp;lt;city/&amp;gt;&amp;lt;country/&amp;gt;&amp;lt;/person&amp;gt;"
+' Load the document with some XML.
+newDoc.LoadXml(
+   )
+' Create an XPathNavigator for the XML file.
+Dim newDocNav As XPathNavigator  = newDoc.CreateNavigator()
+
+' Call NewFromFormTemplate to open new form and load XML.
+Dim newDocument As XmlForm  = _
+   Me.Application.XmlForms.NewFromFormTemplate(_
+   "C:\MyForm.xsn", newDocNav)</code>
+        </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplate">
@@ -262,12 +394,32 @@
         <Parameter Name="behavior" Type="Microsoft.Office.InfoPath.XmlFormOpenMode" />
       </Parameters>
       <Docs>
-        <param name="formTemplateLocation">To be added.</param>
-        <param name="xmlData">To be added.</param>
-        <param name="behavior">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="formTemplateLocation">The Uniform Resource Identifier (URI) of the form template on which to base the new form.</param>
+        <param name="xmlData">The Uniform Resource Identifier (URI) of the XML document that provides the XML data to be used as a template for the form.</param>
+        <param name="behavior">An <see cref="T:Microsoft.Office.InfoPath.XmlFormOpenMode" /> enumeration that specifies how the form will be opened.</param>
+        <summary>Creates a new form by using the specified form template with data specified by an <see cref="T:System.Xml.XPath.XPathNavigator" /> object and opened in the specified <see cref="T:Microsoft.Office.InfoPath.XmlFormOpenMode" />.</summary>
+        <returns>An <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object that represents the new form that was created.</returns>
+        <remarks>
+          <para>The <b>NewFromFormTemplate </b>method can only be used to create a new form that is based on an existing form template; it cannot be used to create a new form that is based on a form. To create a form from an existing form, use the <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" /> method.</para>
+          <para>When you use the <b>NewFromFormTemplate</b> method, the new form opens in InfoPath and is ready to be filled out.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>NewFromFormTemplate(</b><paramref name="formTemplateLocation" />,<paramref name=" xmlData" />,<paramref name="behavior" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form template, the URI of XML data, an <b>XmlFormOpenMode</b> enumeration, and the new form's associated <b>XmlForm</b> object is returned.</para>
+          <code>XmlForm newDocument = 
+   this.Application.XmlForms.NewFromFormTemplate(
+   @"C:\MyForm.xsn", @"C:\MyForm.xml", 
+   XmlFormOpenMode.FailOnVersionOlder);</code>
+          <code>Dim newDocument As XmlForm  = _
+   Me.Application.XmlForms.NewFromFormTemplate(_
+   "C:\MyForm.xsn", XmlFormOpenMode.FailOnVersionOlder)</code>
+        </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplateWithInputParameters">
@@ -290,11 +442,29 @@
         <Parameter Name="inputParameters" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="formTemplateLocation">To be added.</param>
-        <param name="inputParameters">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="formTemplateLocation">The Uniform Resource Identifier (URI) of the form template on which to base the new form.</param>
+        <param name="inputParameters">One or more name/value pairs separated by the ampersand (&amp;) character.</param>
+        <summary>Creates a new form with the specified form template and input parameters.</summary>
+        <returns>An object that represents the new form.</returns>
+        <remarks>
+          <para>To use the input parameters that were passed to the <paramref name="inputParameters" /> parameter, the form specified in the <paramref name="formTemplateLocation" /> parameter must contain a <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler that uses the <see cref="P:Microsoft.Office.InfoPath.LoadingEventArgs.InputParameters" /> property of the <see cref="T:Microsoft.Office.InfoPath.LoadingEventArgs" /> class to retrieve the input parameter values, and then do something with those values. For an example of how to do this, see the <see cref="P:Microsoft.Office.InfoPath.LoadingEventArgs.InputParameters" /> property topic.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following code example shows how to create a new form by passing in the URI of a form template that contains an appropriate <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler and two input parameters. </para>
+          <code>XmlForm newDocument = 
+   this.Application.XmlForms.NewFromFormTemplateWithParameters(
+   @"C:\User Forms\DeptReport.xsn","Dept=Accounting&amp;amp;Acct=Contoso");</code>
+          <code>Dim newDocument As XmlForm = _
+   Me.Application.XmlForms.NewFromFormTemplateWithParameters( _
+   "C:\User Forms\DeptReport.xsn","Dept=Accounting&amp;amp;Acct=Contoso")</code>
+        </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="Open">
@@ -316,10 +486,21 @@
         <Parameter Name="fileLocation" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="fileLocation">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="fileLocation">The Uniform Resource Identifier (URI) of the form to open.</param>
+        <summary>Opens the specified form.</summary>
+        <returns>An <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object that represents the form that was opened.</returns>
+        <remarks>
+          <para>The <b>Open</b> method can only be used to open a form; it cannot be used to open a form template. To create a form from a form template, use the <see cref="Overload:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate" /> method. To create a form that is based on an existing form, use the <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" /> method.</para>
+          <para>When you use the <b>Open</b> method, the specified form opens in Microsoft InfoPath and is ready to be filled out.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Open</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of the form to open, and its associated <b>XmlForm</b> object is returned.</para>
+          <code>XmlForm document = this.Application.XmlForms.Open(@"C:\MyForm.xml");</code>
+          <code>Dim document As XmlForm = Me.Application.XmlForms.Open("C:\MyForm.xml")</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Open">
@@ -342,11 +523,24 @@
         <Parameter Name="behavior" Type="Microsoft.Office.InfoPath.XmlFormOpenMode" />
       </Parameters>
       <Docs>
-        <param name="fileLocation">To be added.</param>
-        <param name="behavior">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="fileLocation">The Uniform Resource Identifier (URI) of the form to open.</param>
+        <param name="behavior">An <see cref="T:Microsoft.Office.InfoPath.XmlFormOpenMode" /> enumeration that specifies how the form will be opened.</param>
+        <summary>Opens the specified form by using the specified open mode behavior.</summary>
+        <returns>An <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object that represents the form that was opened.</returns>
+        <remarks>
+          <para>The <b>Open</b> method can only be used to open a form; it cannot be used to open a form template. To create a form from a form template, use the <see cref="Overload:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate" /> method. To create a form that is based on an existing form, use the <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" /> method.</para>
+          <para>When you use the <b>Open</b> method, the specified form opens in Microsoft InfoPath and is ready to be filled out.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Open</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of the form to open in read-only mode and its associated <b>XmlForm</b> object is returned.</para>
+          <code>XmlForm document = this.Application.XmlForms.Open(
+   @"C:\MyForm.xml", XmlFormOpenMode.ReadOnly);</code>
+          <code>Dim document As XmlForm = Me.Application.XmlForms.Open(_
+   "C:\MyForm.xml", XmlFormOpenMode.ReadOnly)</code>
+        </example>
       </Docs>
     </Member>
   </Members>

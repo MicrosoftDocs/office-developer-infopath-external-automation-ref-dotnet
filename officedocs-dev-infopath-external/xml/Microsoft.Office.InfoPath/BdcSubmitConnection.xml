@@ -14,8 +14,12 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a data connection for submitting data to an external list on a server running Microsoft SharePoint Foundation 2010 or Microsoft SharePoint Server 2010.</summary>
+    <remarks>
+      <para>An external list is an external data source that is registered in the Business Data Connectivity service (BDC) on a server that runs SharePoint Foundation 2010 or SharePoint Server 2010. An external list is based on an external content type that specifies how to connect to and work with the data that you need from an external business entity, such as a SQL Server database or Web service. After you create an external list, you can generally use its data like any other SharePoint list. For more information about how to create external content types and external lists, see <a href="e51f978f-ae27-43a0-8450-7dfe5d39ab19">Building Solutions Using the Presentation Features of Business Connectivity Services</a></para>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.BdcSubmitConnection" /> class provides properties that can be used to get information about the data connection. It also provides the inherited <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method that can be used to execute the submit operation that was defined declaratively when the data connection was created.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,8 +55,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Gets the name of the external content type that defines connectivity information for the data source accessed from the external list.</summary>
+        <value>The name of the external content type.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -72,8 +76,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Gets the namespace of the external content type that defines connectivity information for the data source accessed from the external list.</summary>
+        <value>The namespace of the external content type.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -93,8 +97,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Gets the name of the system instance to which the external content type connects to provide data to the external list.</summary>
+        <value>The name of the connected system instance.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -114,8 +118,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Gets the name of the operation defined in the external content type for submitting to the data source that contains the items displayed in the external list.</summary>
+        <value>The name of the query operation.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

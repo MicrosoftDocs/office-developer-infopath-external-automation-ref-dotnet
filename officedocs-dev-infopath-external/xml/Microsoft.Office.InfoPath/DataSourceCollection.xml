@@ -18,8 +18,14 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Contains a collection of <see cref="T:Microsoft.Office.InfoPath.DataSource" /> objects that represent the data sources used within a form.</summary>
+    <remarks>
+      <para>Each <b>DataSource</b> object in the <b>DataSourceCollection</b> corresponds to data obtained from some external source of data using an associated data connection. The data connection represents the connection to a database or Web service and the data source represents the storage of the returned XML data. The <see cref="P:Microsoft.Office.InfoPath.DataSource.QueryConnection" /> property of the <b>DataSource</b> class provides access to a <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object that represents the particular data connection that was used to connect to the data source.</para>
+      <para>The <b>DataSourceCollection</b> class implements properties that can be used to access a form's associated <b>DataSource</b> objects, and is accessible through the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataSources" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para>
+        <b>Note</b>: The <b>DataSourceCollection</b> class can only be used to get the count of <b>DataSource</b> objects that it contains or to return a reference to a <b>DataSource</b> object in the collection. It cannot be used to create, add, or remove <b>DataSource</b> objects.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,9 +61,20 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a count of the number of <see cref="T:Microsoft.Office.InfoPath.DataSource" /> objects contained in the <see cref="T:Microsoft.Office.InfoPath.DataSourceCollection" />.</summary>
+        <value>The number of <see cref="T:Microsoft.Office.InfoPath.DataSource" /> objects in the <see cref="T:Microsoft.Office.InfoPath.DataSourceCollection" />.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Count</b> property of the <b>DataSourceCollection</b> is used to display a count of the number of <b>DataSource</b> objects in the collection.</para>
+          <code>MessageBox.Show(
+   "DataSource count: " + this.DataSource.Count.ToString());</code>
+          <code>MessageBox.Show(
+   "DataSource count: " &amp;amp; Me.DataSource.Count.ToString())</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -80,9 +97,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.Collections.IEnumerator" /> object that iterates over all entries in the collection.</summary>
+        <returns>A <see cref="T:System.Collections.IEnumerator" /> for iterating over the collection.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -104,10 +125,21 @@
         <Parameter Name="index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="index">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="index">The zero-based index of the <b>DataSource</b> object to get.</param>
+        <summary>Gets a reference to the specified <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object from the <see cref="T:Microsoft.Office.InfoPath.DataSourceCollection" /> by index value.</summary>
+        <value>The <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object for the specified index value.</value>
+        <remarks>
+          <para>The number or numeric expression passed as the argument for <paramref name="index" /> must evaluate to a number from 0 to the value of the <see cref="P:Microsoft.Office.InfoPath.DataSourceCollection.Count" /> property minus 1.</para>
+          <para>After you have set a reference to the <b>DataSource</b> object that the <b>Item</b> property returns, you can access any of its properties or methods.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the first <b>DataSource</b> object in the <b>DataSourceCollection</b> of the form template is retrieved by index value and assigned to a variable.</para>
+          <code>DataSource firstDataSource = this.DataSources[0];</code>
+          <code>Dim firstDataSource As DataSource = Me.DataSources(0)</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -129,10 +161,21 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="name">The name of the <b>DataSource</b> object to get.</param>
+        <summary>Gets a reference to the specified <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object from the <see cref="T:Microsoft.Office.InfoPath.DataSourceCollection" /> by name.</summary>
+        <value>The <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object for the specified name.</value>
+        <remarks>
+          <para>The string or string expression passed as the argument for <paramref name="name" /> must be the name of a member of the collection.</para>
+          <para>After you have set a reference to the <b>DataSource</b> object that <b>Item</b> property returns, you can access any of its properties or methods.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>DataSource</b> object named "File1" in the <b>DataSourceCollection</b> of the form template is retrieved and assigned to a variable.</para>
+          <code>DataSource myDataSource = this.DataSources["File1"];</code>
+          <code>Dim myDataSource As DataSource = Me.DataSources("File1")</code>
+        </example>
       </Docs>
     </Member>
   </Members>

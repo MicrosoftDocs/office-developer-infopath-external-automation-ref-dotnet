@@ -23,7 +23,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -48,9 +48,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the value of the <b>caption</b> attribute of the <b>xsf:view</b> element associated with the view in the form definition file (.xsf).</summary>
+        <value>The value of the <b>caption</b> attribute of the <b>xsf:view</b> element associated with the view in the form definition file (.xsf)</value>
+        <remarks>
+          <para>By default, the value of the <b>caption</b> attribute is the same as the name given to the view when it was created in Microsoft InfoPath.</para>
+          <para>Because the <b>Caption</b> property is newin Microsoft InfoPath, you must declare and cast to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo2" /> type to access it. For more information, see How to: Use Object Model Members That Are Not Compatible with InfoPath 2003.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HideName">
@@ -74,9 +79,20 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets whether the name of the view is set to be hidden on the View menu.</summary>
+        <value>
+          <b>true</b> if the name of the view is hidden; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>The <b>HideName</b> property specifies whether the form designer set the Show on the View menu when filling out the form check box in the View Properties dialog box.</para>
+          <para>Because the <b>HideName</b> property is newin Microsoft InfoPath, you must declare and cast to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo2" /> type to access it. For more information, see How to: Use Object Model Members That Are Not Compatible with InfoPath 2003.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>HideName</b> property is used to display whether the view named "View2" is configured to be hidden on the View menu.</para>
+          <code>ViewInfo2 myView = (ViewInfo2)thisXDocument.ViewInfos["View2"];
+thisXDocument.UI.Alert("Is hidden: " + myView.HideName);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="IsDefault">
@@ -103,9 +119,18 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets a value that indicates whether the view is defined as the default view in a Microsoft InfoPath form.</summary>
+        <value>
+          <b>true</b> if the view is the default view; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>The <b>IsDefault</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" /> object can be used to determine whether a view is the default view, and it can be used to programmatically change the default view before the first view is loaded.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>IsDefault</b> property is used to make the second view contained in the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfosCollection" /> collection the default view:</para>
+          <code>thisXDocument.ViewInfos[1].&lt;span class="label"&gt;IsDefault&lt;/span&gt; = true;</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -132,9 +157,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the name of the view that is associated with the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" /> object.</summary>
+        <value>The name of the view that is associated with the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" /> object.</value>
+        <remarks>
+          <para>The name of the <b>ViewInfoObject</b> object is the same as the name of the view that it represents. The name of the <b>ViewInfoObject</b> object can also be used as the argument to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfos.Item(System.Object)" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfosCollection" /> collection.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

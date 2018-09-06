@@ -23,7 +23,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -43,7 +43,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -63,7 +63,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnAfterChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -83,7 +83,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnBeforeChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -103,7 +103,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_OnValidateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -130,7 +130,7 @@
       </Parameters>
       <Docs>
         <param name="pDataDOMEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -157,7 +157,7 @@
       </Parameters>
       <Docs>
         <param name="pDataDOMEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -184,7 +184,7 @@
       </Parameters>
       <Docs>
         <param name="pDataDOMEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

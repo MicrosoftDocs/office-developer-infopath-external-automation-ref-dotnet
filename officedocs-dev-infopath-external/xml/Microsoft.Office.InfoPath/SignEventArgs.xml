@@ -14,8 +14,12 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event of a form.</summary>
+    <remarks>
+      <para>The <b>SignEventArgs</b> object passes state information to an event handler for the <b>Sign</b> event. Use the <see cref="P:Microsoft.Office.InfoPath.SignEventArgs.SignedDataBlock" /> property to determine which set of signable data raised the <b>Sign</b> event. </para>
+      <para>An event handler for the <b>Sign</b> event can run custom code only in a form template with the Full Trust security level.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +55,14 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets whether to display the Digital Signatures dialog box.</summary>
+        <value>
+          <b>true</b> to display the Digital Signatures dialog box; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SignedDataBlock">
@@ -72,9 +81,14 @@
         <ReturnType>Microsoft.Office.InfoPath.SignedDataBlock</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the set of signable data that raised the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event. </summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> that represents the set of signable data that raised the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event.</value>
+        <remarks>
+          <para>The <b>SignedDataBlock</b> object returned by the <b>SignedDataBlock</b> property provides a number of properties and the <see cref="M:Microsoft.Office.InfoPath.SignedDataBlock.Sign" /> method that can be used to programmatically interact with a set of data which can be signed. </para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

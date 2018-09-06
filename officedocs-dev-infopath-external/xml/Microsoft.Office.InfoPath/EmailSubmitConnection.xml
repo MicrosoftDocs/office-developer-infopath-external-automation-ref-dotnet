@@ -14,8 +14,14 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents the data connection for submitting form information in e-mail.</summary>
+    <remarks>
+      <para>The <b>EmailSubmitConnection</b> class represents a data connection created in InfoPath using the Data Connection Wizard that specifies all the information necessary for submitting a form in e-mail.</para>
+      <para>Use the <see cref="P:Microsoft.Office.InfoPath.DataConnectionCollection.Item" /> property of the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> collection to return an <b>EmailSubmitConnection</b> object.</para>
+      <para>The values of most of the properties of the <b>EmailSubmitConnection</b> class are returned as <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> objects, which can be set by specifying a literal string value using the <see cref="M:Microsoft.Office.InfoPath.XPathTypedValue.SetStringValue(System.String)" /> method of the <b>XPathTypedValue</b> class, or by specifying an XPath expression using the <see cref="P:Microsoft.Office.InfoPath.XPathTypedValue.XPath" /> property of the <b>XPathTypedValue</b> class. For more information and code samples, see the <b>XPathTypedValue</b> Class topic.</para>
+      <para>The <b>EmailSubmitConnection</b> class corresponds to the <b>EmailAdapterObject</b> interface of the Microsoft Office InfoPath 2003 object model.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +57,14 @@
         <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the file name to be used for the current form when the form is attached to an e-mail message submitted with an <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> object.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the name of the form file name to be submitted.</value>
+        <remarks>
+          <para>The ".xml" file name extension will be appended to the string if it is not already included.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Bcc">
@@ -72,9 +83,14 @@
         <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the blind carbon copy (BCC) addresses of an e-mail message submitted with an <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> object.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the blind carbon copy (BCC) addresses of the e-mail message to be submitted.</value>
+        <remarks>
+          <para>The value must be a semicolon-delimited string that can be resolved into a list of valid e-mail addresses by the user's e-mail client.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CC">
@@ -93,9 +109,14 @@
         <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the carbon copy (CC) addresses of an e-mail message submitted with an <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> object.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the carbon copy (CC) addresses of the e-mail message to be submitted.</value>
+        <remarks>
+          <para>The value must be a semicolon-delimited string that can be resolved into a list of valid e-mail addresses by the user's e-mail client.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EmailAttachmentType">
@@ -114,9 +135,14 @@
         <ReturnType>Microsoft.Office.InfoPath.EmailAttachmentType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the type of file to be attached to the e-mail message submitted with an <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> object.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.EmailAttachmentType" /> object that specifies the type of file attached to the e-mail message.</value>
+        <remarks>
+          <para>Use <see cref="T:Microsoft.Office.InfoPath.EmailAttachmentType" /> to specify the type of file attached to the e-mail message, which can be a form file (.xml), a form file (.xml) along with a form template file (.xsn), or no file.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Execute">
@@ -138,9 +164,40 @@
         <Parameter Name="input" Type="System.Xml.XPath.XPathNavigator" />
       </Parameters>
       <Docs>
-        <param name="input">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="input">An XPathNavigator object positioned to the XML node which contains the data to submit.</param>
+        <summary>Overrides the default <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method to allow specifying a different source of data to submit.</summary>
+        <remarks>
+          <para>This method overrides the default <b>Execute()</b> method (inherited from the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> base class), which submits the main data source of the form. The <b>XPathNavigator</b> object specified for the <paramref name="input" /> parameter should point to an XML node which contains the data to be submitted. The data to submit can be specified by any <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object.</para>
+          <para>Setting the <paramref name="input" /> parameter to null has the same effect as using the default <b>Execute()</b> method to submit the entire form using the declarative settings defined in the form template.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example uses the <b>Execute(XPathNavigator)</b> method to submit the form to the data connection named "Email Submit" using the data from the data source named "QueryTypedDataSet" instead of the main data source of the form.</para>
+          <code>public void FormEvents_Submit(object sender, SubmitEventArgs e)
+{
+   XmlForm myXmlForm = this;
+   XPathNavigator myNav = myXmlForm.DataSources[
+      "QueryTypedDataSet"].CreateNavigator();
+
+   EmailSubmitConnection mySubmit = (EmailSubmitConnection)myXmlForm.
+      DataConnections["Email Submit"];
+   mySubmit.Execute(myNav);
+}</code>
+          <code>Public Sub FormEvents_Submit(ByVal sender As Object, _
+   ByVal e As SubmitEventArgs)
+   Dim myXmlForm As XmlForm = Me
+   Dim myNav As XPathNavigator = myXmlForm.DataSources(_
+      "QueryTypedDataSet").CreateNavigator()
+
+   EmailSubmitConnection mySubmit = DirectCast( _
+      myXmlForm.DataConnections("Email Submit"),EmailSubmitConnection)
+   mySubmit.Execute(myNav)
+End Sub</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is<b></b>not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Introduction">
@@ -159,9 +216,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the introduction in the body of an e-mail message submitted with an <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> object.</summary>
+        <value>The introduction in the body of the submitted e-mail message.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Subject">
@@ -180,9 +241,13 @@
         <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the subject of an e-mail message submitted with an <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> object.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the subject of the submitted e-mail message.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="To">
@@ -201,9 +266,14 @@
         <ReturnType>Microsoft.Office.InfoPath.XPathTypedValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the addresses of the recipients of an e-mail message submitted with an <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> object.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object that evaluates to the addresses (To) of the e-mail message to be submitted.</value>
+        <remarks>
+          <para>The value must be a semicolon-delimited string that can be resolved into a list of valid e-mail addresses by the user's e-mail client.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

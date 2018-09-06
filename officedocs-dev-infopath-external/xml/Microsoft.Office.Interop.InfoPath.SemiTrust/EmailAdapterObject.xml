@@ -23,8 +23,26 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents the data adapter for submitting form information in e-mail by using Microsoft Office Outlook.</summary>
+    <remarks>
+      <para>This type is a wrapper for a coclass that is required by managed code for COM interoperability. Use this type to access the members of the COM interface implemented by this coclass. For information about the COM interface, including a link to descriptions of its members, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter" />.</para>
+      <para>Use the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdapters.Item(System.Object)" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersCollection" /> collection to return an <b>EmailAdapterObject</b> object. Before you can access and use the properties and methods of the <b>EmailAdapterObject</b>, you must cast the object returned from the <b>DataAdaptersCollection</b> to the <b>EmailAdapterObject</b> type.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>The following example retrieves an <b>EmailAdapter</b> object that represents the data connection named "Email Submit" from the <b>DataAdaptersCollection</b> object, sets the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.To" /> and <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.EmailAdapter.Subject" /> property, and then submits the current form to the data connection.</para>
+      <code>&lt;span class="label"&gt;EmailAdapterObject&lt;/span&gt; myEmailAdapter = 
+   ((&lt;span class="label"&gt;EmailAdapterObject&lt;/span&gt;)thisXDocument.DataAdapters["Email Submit"]);
+myEmailAdapter.To = "list@example.com";
+myEmailAdapter.Subject = "Status Report";
+myEmailAdapter.Submit();</code>
+      <code>&lt;span class="label"&gt;Dim &lt;/span&gt;myEmailAdapter As &lt;span class="label"&gt;EmailAdapterObject&lt;/span&gt;  = _
+   DirectCast(thisXDocument.DataAdapters("Email Submit"), _
+   &lt;span class="label"&gt;EmailAdapterObject&lt;/span&gt;);
+myEmailAdapter.To = "list@example.com"
+myEmailAdapter.Subject = "Status Report"
+myEmailAdapter.Submit()</code>
+    </example>
   </Docs>
   <Members />
 </Type>

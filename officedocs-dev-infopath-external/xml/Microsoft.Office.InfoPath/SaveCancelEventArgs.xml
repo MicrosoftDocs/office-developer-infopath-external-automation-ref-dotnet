@@ -14,8 +14,12 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides data to the <see cref="P:Microsoft.Office.InfoPath.SaveEventArgs.CancelableArgs" /> property of the <see cref="T:Microsoft.Office.InfoPath.SaveEventArgs" /> object.</summary>
+    <remarks>
+      <para>The <b>SaveCancelEventArgs</b> class provides the <see cref="P:Microsoft.Office.InfoPath.SaveCancelEventArgs.CloseIfSaveCancelled" /> property for determining whether to override the default behavior and allow InfoPath to close if saving a dirty form (a new or changed form that hasn't been saved) failed during the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Save" /> event.</para>
+      <para>The <b>SaveCancelEventArgs</b> class also provides the <see cref="P:System.ComponentModel.CancelEventArgs.Cancel" /> property inherited from the <see cref="T:System.ComponentModel.CancelEventArgs" /> class that can be used to cancel the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Save" /> event, and the <see cref="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.Message" /> and <see cref="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.MessageDetails" /> properties inherited from the <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> class for providing a custom error message when the <b>Save</b> event is cancelled.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +55,14 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets whether a dirty form (a new or changed form that hasn't been saved) can be closed when a save operation is cancelled.</summary>
+        <value>
+          <b>true</b> if InfoPath is allowed to close when saving a dirty form was cancelled; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>When closing InfoPath, the user is prompted to save the document if the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Dirty" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object is <b>true</b>. If the <b>CloseIfSaveCancelled</b> property is <b>false</b>, which is the default setting, InfoPath will be prevented from closing if the save operation was cancelled (that is, if the <b>CancelableArgs.Cancel</b> property is <b>true</b>). To allow InfoPath to close without saving, set the <b>CloseIfSaveCancelled</b> property to <b>true</b>.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

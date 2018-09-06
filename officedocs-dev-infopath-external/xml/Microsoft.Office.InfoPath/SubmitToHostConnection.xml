@@ -14,8 +14,44 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a connection for submitting data to a hosting environment.</summary>
+    <remarks>
+      <para>This type of connection is used in a form template that is opened by an application that is hosting the InfoPath form editing environment as a control. For information about hosting InfoPath as a control, including information on how to create a method to handle the event for submitting a form in your host application’s code, see the article titled <a href="http://msdn.microsoft.com/en-us/library/aa701079(office.12).aspx">Hosting the InfoPath Form Editing Environment in a Custom Windows Form Application</a></para>
+      <para>To create a data connection for submitting data to a hosting environment that can be referenced from business logic in a form template, use the Data Connections command on the Data tab of the ribbon. For information on how to create an event handler that will run when the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event is raised, see How to: Add an Event Handler.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>The following example shows a pattern for writing code that will perform custom actions in a form template's business logic before the form is submitted.</para>
+      <code>public void FormEvents_Submit(object sender, SubmitEventArgs e)
+{
+   // Get the data connection defined in the form template from the 
+   // DataConnections collection and cast to the SubmitToHostConnection
+   // type.
+   SubmitToHostConnection submitConnection = 
+      (SubmitToHostConnection)(DataConnections["MyHostConnection"]);
+
+   // Write code here to do custom actions that are not 
+   // supported by rules or other declarative settings.  
+
+   // Execute the submit operation against the connection.
+   submitConnection.Execute();</code>
+      <para>}</para>
+      <code>Public Sub FormEvents_Submit(ByVal sender As Object, _
+   ByVal e As SubmitEventArg)
+   ' Get the data connection defined in the form template from the
+   ' DataConnections collection and cast to the SubmitToHostConnection
+   ' type.
+   Dim submitConnection As SubmitToHostConnection = _
+      DirectCast(DataConnections("MyHostConnection"), _
+      SubmitToHostConnection)
+
+   ' Write code here to do custom actions that are not 
+   ' supported by rules or other declarative settings.
+
+   ' Execute the submit operation against the connection.
+   submitConnection.Execute()
+End Sub</code>
+    </example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">

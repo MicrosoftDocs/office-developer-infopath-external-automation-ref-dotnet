@@ -18,7 +18,7 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>Reserved for internal use.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -39,7 +39,7 @@
       </Parameters>
       <Docs>
         <param name="objInstance">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -59,7 +59,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.InputParameterObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -84,7 +84,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -109,7 +109,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Reserved for internal use.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -132,8 +132,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>Reserved for internal use.</summary>
+        <value>Returns <see cref="T:System.Object" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

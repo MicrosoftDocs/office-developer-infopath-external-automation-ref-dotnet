@@ -14,8 +14,13 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Implements all of the events that a form template itself can raise.</summary>
+    <remarks>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class implements the form-level events of an InfoPath form template, such as loading a form or changing a view. The events raised by changes to the data in the underlying XML document of a form instance are handled separately and implemented by the <see cref="T:Microsoft.Office.InfoPath.XmlEvent" /> type.</para>
+      <para>
+        <b>Important</b>: The <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class itself is not meant to be instantiated by the developer in form code. You should only add event handlers for form-level events from the Microsoft InfoPath design mode user interface. When you add an event handler to your form template from the design mode user interface, InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class to bind the event to its event handler. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,8 +56,53 @@
         <ReturnType>Microsoft.Office.InfoPath.ContextChangedEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after the context node changes.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <b>ContextChanged</b> event is not meant to be instantiated by the developer in form code. You should only add event handlers for form-level events from the Microsoft InfoPath design mode user interface. When you add an event handler to your form template from the design mode user interface, InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class to bind the event to its event handler. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <b>ContextChanged</b> event is bound using the <see cref="T:Microsoft.Office.InfoPath.ContextChangedEventHandler" /> delegate.</para>
+          <para>The context node is the XML node mapped to the view that corresponds to the container (or item) with the current XML selection. For example, if the current selection in the view is in a text box, the context node is the node to which the text box is bound. If the current selection is a repeating section, the context node is the node for that item. If two repeating sections are selected, the context node is the ancestor XML node for both items mapped to the view.</para>
+          <para>The <b>ContextChanged</b> event is asynchronous. It does not fire on every change in the context node; instead, it fires after the application has stopped processing other events.</para>
+          <para>When the underlying XML document loads, or when a view change occurs, the <b>ContextChanged</b> event will occur after the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> and <see cref="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" /> events occur.</para>
+          <para>When the <see cref="P:Microsoft.Office.InfoPath.ContextChangedEventArgs.UndoRedo" /> property of the <see cref="T:Microsoft.Office.InfoPath.ContextChangedEventArgs" /> object is <b>true</b>, the context change was caused by a user's undo or redo operation rather than an explicit user context change. Operations performed within the <b>ContextChanged</b> event that modify the underlying XML document should be avoided in response to undo or redo operations, because they may interfere with the user's intention to revert data to a previous state.</para>
+          <para>For Rich Text Box controls, the <b>ContextChanged</b> event is not raised for context changes within the XHTML content, that is, selection changes to the rich text in the control. The <see cref="M:Microsoft.Office.InfoPath.View.GetContextNodes" /> method can be used to determine the selection within Rich Text Box controls.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example assumes that your form has a Text Box control bound to a field named <b>DisplayContext</b>, as well as controls bound to other fields and groups on the form. Moving the selection to different fields and groups displays the name of the field or group in the Text Box bound to <b>DisplayContext</b>.</para>
+          <code>public void FormEvents_ContextChanged(object sender, 
+   ContextChangedEventArgs e)
+{
+   if (e.ChangeType == "ContextNode")
+   {
+      // Position a XPathNavigator on the DisplayContext field.
+      XPathNavigator root, txtbox;
+      root = this.MainDataSource.CreateNavigator();
+      txtbox = root.SelectSingleNode("/my:myFields/my:DisplayContext", 
+         this.NamespaceManager);
+
+      // Set DisplayContext with the name of the current context.
+      txtbox.SetValue(e.Context.Name);
+      return;
+   }
+}</code>
+          <code>Public Sub FormEvents_ContextChanged(ByVal sender As Object, _
+   ByVal e As ContextChangedEventArgs)
+   If (e.ChangeType = "ContextNode") Then
+      ' Position a XPathNavigator on the DisplayContext field.
+      Dim root, txtbox As XPathNavigator
+      root = Me.MainDataSource.CreateNavigator
+      txtbox = root.SelectSingleNode("/my:myFields/my:DisplayContext", 
+         Me.NamespaceManager)
+
+      ' Set DisplayContext with the name of the current context.
+      txtbox.SetValue(e.Context.Name)
+      Return
+   End If
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method.  </exception>
       </Docs>
     </Member>
     <Member MemberName="Loading">
@@ -71,8 +121,130 @@
         <ReturnType>Microsoft.Office.InfoPath.LoadingEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the form template has been loaded, but before any views have been initialized.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <b>Loading</b> event is not meant to be instantiated by the developer in form code. You should only add event handlers for form-level events from the Microsoft InfoPath design mode user interface. When you add an event handler to your form template from the design mode user interface, InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class to bind the event to its event handler. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <b>Loading</b> event is bound using the <see cref="T:Microsoft.Office.InfoPath.LoadingEventHandler" /> delegate.</para>
+          <para>The <b>Loading</b> event occurs before the form is loaded and before the view is rendered. </para>
+          <para>If a form template is deployed to and opened from an appropriately configured document library on SharePoint Server 2010 running InfoPath Forms Services, the <b>Loading</b> event only occurs once per session.</para>
+          <para>The <b>Loading</b> event can be cancelled by using the <see cref="P:Microsoft.Office.InfoPath.SaveEventArgs.CancelableArgs" /> property of the <see cref="T:Microsoft.Office.InfoPath.SaveEventArgs" /> class to set the <b>Cancel</b> property to <b>true</b>.</para>
+          <para>
+            <b>Note</b>: When the <b>Loading</b> event occurs, the view is not initialized and the XSL Transformation (XSLT) used for the view is not yet loaded. The <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object is not added to the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> collection until after the <b>Loading</b> event has occurred. However, the <b>XmlForm</b> object is available during the <b>Loading</b> event.</para>
+          <para>Calls to the following methods and properties cannot be made in the <b>Loading</b> event handler:</para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.Application.Quit" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.View.DisableAutoUpdate" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.View.EnableAutoUpdate" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.View.ExecuteAction(Microsoft.Office.InfoPath.ActionType)" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.View.Export(System.String,Microsoft.Office.InfoPath.ExportFormat)" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.View.ForceUpdate" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.View.GetContextNodes(System.Xml.XPath.XPathNavigator)" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.View.GetSelectedNodes" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator)" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.View.SelectText(System.Xml.XPath.XPathNavigator)" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView(System.String)" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.XmlForm.Close" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.String)" />
+          </para>
+          <para>
+            <see cref="P:Microsoft.Office.InfoPath.XmlForm.New" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.XmlForm.Save" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.XmlForm.SaveAs(System.String)" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.XmlForm.Submit" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.XmlForm.Print" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate(System.String)" />
+          </para>
+          <para>
+            <see cref="M:Microsoft.Office.InfoPath.Window.Close" />
+          </para>
+          <para>
+            <see cref="P:Microsoft.Office.InfoPath.Window.TaskPanes" />
+          </para>
+          <para>Calls to the members of the <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" />, <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" />, or <see cref="T:Microsoft.Office.InfoPath.FileSubmitConnection" /> classes cannot be made in the <b>Loading</b> event handler.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the event handler for the <b>Loading</b> event is used to determine whether the form has been digitally signed, and if it hasn't sets the <b>Date1</b> field to the current date.</para>
+          <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
+{
+   if (this.Signed)
+   {
+         e.CancelableArgs.Message = 
+            "This form is digitally signed. Loading is cancelled.";
+         e.CancelableArgs.Cancel = true;
+   }
+
+   XPathNavigator myDate = 
+      CreateNavigator().SelectSingleNode("/my:myFields/my:date1",
+      NamespaceManager);
+
+   // Check for and delete xsi:nil="true" attribute.
+   if (myDate.MoveToAttribute("nil", 
+      "http://www.w3.org/2001/XMLSchema-instance"))
+   {
+      myDate.DeleteSelf();
+   }
+
+   myDate.SetValue(System.DateTime.Now.ToString("yyyy-MM-dd"));
+}</code>
+          <code>Public Sub FormEvents_Loading(ByVal sender As Object, _
+   ByVal e As LoadingEventArgs)
+   If (Me.Signed)Then
+         e.CancelableArgs.Message = 
+            "This form is digitally signed. Loading is cancelled."
+         e.CancelableArgs.Cancel = True
+   End If
+
+   Dim myDate As XPathNavigator = 
+      CreateNavigator().SelectSingleNode("/my:myFields/my:date1",
+      NamespaceManager)
+
+   ' Check for and delete xsi:nil="true" attribute.
+   If (myDate.MoveToAttribute("nil", 
+      "http://www.w3.org/2001/XMLSchema-instance"))
+      myDate.DeleteSelf();
+   End If
+
+   myDate.SetValue(System.DateTime.Now.ToString("yyyy-MM-dd"));
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
     <Member MemberName="Merge">
@@ -91,8 +263,98 @@
         <ReturnType>Microsoft.Office.InfoPath.MergeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the Merge Forms command is invoked from the user interface, or InfoPath is started with the <b>/aggregate</b> command-line switch.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <b>Merge</b> event is not meant to be instantiated by the developer in form code. You should only add event handlers for form-level events from the Microsoft InfoPath design mode user interface. When you add an event handler to your form template from the design mode user interface, InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class to bind the event to its event handler. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <b>Merge</b> event is bound using the <see cref="T:Microsoft.Office.InfoPath.MergeEventHandler" /> delegate.</para>
+          <para>The <b>Merge</b> event can be cancelled by using the <see cref="P:Microsoft.Office.InfoPath.MergeEventArgs.CancelableArgs" /> property of the <see cref="T:Microsoft.Office.InfoPath.MergeEventArgs" /> class to set the <b>Cancel</b> property to <b>true</b>.</para>
+          <para>If you cancel the event, how InfoPath works depends on whether or how you set the <see cref="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.Message" /> and <see cref="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.MessageDetails" /> properties as described in the following table.</para>
+          <list type="table">
+            <item>
+              <term>Set only the <b>Message</b> property to a message string</term>
+              <description>Your message and "Do you want to continue?" with Yes, Yes to All, and Cancel buttons.</description>
+            </item>
+            <item>
+              <term>Set only the <b>MessageDetails</b> property to a message string</term>
+              <description>"Microsoft Office InfoPath has encountered a problem merging the following form: formname.xml." and your detailed message with Yes, Yes to All, and Cancel buttons.</description>
+            </item>
+            <item>
+              <term>Set both the <b>Message</b> and <b>MessageDetails</b> properties to a message string</term>
+              <description>Your message and detailed message with Yes, Yes to All, and Cancel buttons.</description>
+            </item>
+            <item>
+              <term>Don't set the <b>Message</b> and <b>MessageDetails</b> properties, or set them both to a null reference (Nothing in Visual Basic) or an empty string</term>
+              <description>No dialog box is displayed.</description>
+            </item>
+          </list>
+          <para>The behaviors when a user clicks the Yes, Yes to All, and Cancel buttons are as follows:</para>
+          <list type="table">
+            <item>
+              <term>Yes button</term>
+              <description>The merge operation takes place and the user has to click Yes for each individual form being merged. </description>
+            </item>
+            <item>
+              <term>Yes to All button</term>
+              <description>The merge operation takes place and all selected forms are merged.</description>
+            </item>
+            <item>
+              <term>Cancel button</term>
+              <description>The merging of all forms is cancelled. If the user clicked Yes for any forms before clicking Cancel, the merging of those forms is also cancelled.</description>
+            </item>
+          </list>
+          <para>The <see cref="T:Microsoft.Office.InfoPath.MergeEventArgs" /> object is passed as a parameter to the event handler for the <b>Merge</b> event of a form. The <b>MergeEventArgs</b> object provides properties that can be used during the <b>Merge</b> event to programmatically interact with a form's underlying XML document and to determine merge properties such as the number of files being merged. The properties that the <b>MergeEventArgs</b> object provides are available only during this event.</para>
+          <para>During a single merge forms operation, the <b>Merge</b> event will occur (and the code in its event handler will run) once for each file being merged.</para>
+          <para>
+            <b>Important</b>: In the InfoPath 2003 object model, there is an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnAfterImport" /> event that occurs after the merge operation is completed. The Microsoft InfoPath object model does not provide an equivalent event. However, the same functionality can be achieved in an event handler for the <b>Merge</b> event by comparing the values of the <see cref="P:Microsoft.Office.InfoPath.MergeEventArgs.Index" /> and <see cref="P:Microsoft.Office.InfoPath.MergeEventArgs.Count" /> properties of the <see cref="T:Microsoft.Office.InfoPath.MergeEventArgs" /> class to confirm that the merge operation is complete, before performing any "after merge" operations.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the event handler for the <b>Merge</b> event sets variables to indicate the status of the merge operation, calls the <see cref="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.Xml.XPath.XPathNavigator)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class to perform the merge operation, and displays a message when merging is finished.</para>
+          <code>private bool _merging = false;
+public void FormEvents_Merge(object sender, MergeEventArgs e)
+{
+   // Set global property to indicate that forms are being merged.
+   if (e.Index == 0)
+   {
+      _merging = true;
+   }
+   // Merge the current form.
+   MergeForm(e.Xml);
+   e.CancelableArgs.Cancel = false;
+
+   // Check to see if merging is finished.
+   if ((e.Index + 1) == e.Count)
+   {
+      _merging = false;
+      MessageBox.Show("Your request to merge " + e.Count + 
+         " files is now complete.");
+      // Perform any "after merge" operations here.
+   }
+}</code>
+          <code>Private _merging As Boolean = False
+Public Sub FormEvents_Merge(ByVal sender As Object, _
+   ByVal e As MergeEventArgs)
+   ' Set global property to indicate that forms are being merged.
+   If (e.Index = 0) Then
+      _merging = True
+   End If
+
+   ' Merge the current form.
+   MergeForm(e.Xml)
+   e.CancelableArgs.Cancel = False
+
+   ' Check to see if merging is finished.
+   If ((e.Index + 1) = e.Count) Then
+      _merging = False
+      MessageBox.Show("Your request to merge " + e.Count + 
+         " files is now complete.")
+      ' Perform any "after merge" operations here.
+   End If
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
     <Member MemberName="Save">
@@ -111,8 +373,55 @@
         <ReturnType>Microsoft.Office.InfoPath.SaveEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the Save or Save As commands are used from the user interface, or when the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Save" /> and <see cref="M:Microsoft.Office.InfoPath.XmlForm.SaveAs(System.String)" /> methods are used.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <b>Save</b> event is not meant to be instantiated by the developer in form code. You should only add event handlers for form-level events from the Microsoft InfoPath design mode user interface. When you add an event handler to your form template from the design mode user interface, InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class to bind the event to its event handler. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <b>Save</b> event is raised only if the form template has the Save using custom code option set in the Form Options dialog box.</para>
+          <para>The <b>Save</b> event is bound using the <see cref="T:Microsoft.Office.InfoPath.SaveEventHandler" /> delegate.</para>
+          <para>The <b>Save</b> event can be cancelled by using the <see cref="P:Microsoft.Office.InfoPath.SaveEventArgs.CancelableArgs" /> property of the <see cref="T:Microsoft.Office.InfoPath.SaveEventArgs" /> class to set the <b>Cancel</b> property to <b>true</b>.</para>
+          <para>The <see cref="T:Microsoft.Office.InfoPath.SaveEventArgs" /> object, which is passed as a parameter to an event handler for the <b>Save</b> event, provides properties and methods that can be used to get the form's file name, determine save status, and perform the save operation.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the event handler for the <b>Save</b> event checks to see if Field2 is empty, and if it is not performs a save operation. If it is empty, it displays a message and cancels the save operation.</para>
+          <code>public void FormEvents_Save(object sender, SaveEventArgs e)
+{
+   // Check to see if Field2 is empty.
+   XPathNavigator reqField = 
+      CreateNavigator().SelectSingleNode("/my:myFields/my:field2", 
+      NamespaceManager);
+   if(reqField.ToString() == "")
+   {
+      MessageBox.Show("Field2 is empty.\nYou cannot save the form.");
+      e.CancelableArg.Cancel = true;
+   }
+   else
+   {
+   // The Dirty property will be set to false if save is successful.
+      e.PerformSaveOperation();
+      e.CancelableArgs.Cancel = false;
+   }
+}</code>
+          <code>Public Sub FormEvents_Save(ByVal sender As Object, _
+   ByVal e As SaveEventArgs)
+   ' Check to see if Field2 is empty.
+   Dim reqField as XPathNavigator = 
+      CreateNavigator().SelectSingleNode("/my:myFields/my:field2", _
+      NamespaceManager)
+   If(reqField.ToString() = "") Then
+      MessageBox.Show("Field2 is empty" &amp;amp; vbNewLine &amp;amp; _
+         "You cannot save the form.")
+      e.CancelableArgs.Cancel = True
+   Else
+   ' The Dirty property will be set to false if save is successful.
+   e.PerformSaveOperation()
+   e.CancelableArgs.Cancel = False
+   End If
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method.  </exception>
       </Docs>
     </Member>
     <Member MemberName="Sign">
@@ -131,8 +440,52 @@
         <ReturnType>Microsoft.Office.InfoPath.SignEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after a set of signed data has been selected to sign through the Digital Signatures dialog box.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event is not meant to be instantiated by the developer in form code. You should only add event handlers for form-level events from the Microsoft InfoPath design mode user interface. When you add an event handler to your form template from the design mode user interface, InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class to bind the event to its event handler. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event is bound using the <see cref="T:Microsoft.Office.InfoPath.SignEventHandler" /> delegate.</para>
+          <para>An event handler for this event requires the Full Trust security level to run. To set this security level, in the InfoPath designer click the File tab, click Form Options, select Security and Trust, uncheck Automatically determine security level, and then select Full Trust. A form set to the Full Trust security level must be installed or digitally signed.</para>
+          <para>You can use the event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event to add additional data to the digital signature. For example, you can add data from a trusted timestamp server, or add a server-side countersignature of the transaction. You can also use the event handler to block signing if the current user is not a member of a particular group.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, created by adding an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event to the form by clicking Sign Event on the Developer tab in the InfoPath design mode user interface, a digital signature is added to the form by using the <see cref="M:Microsoft.Office.InfoPath.Signature.Sign" /> method of the <see cref="T:Microsoft.Office.InfoPath.Signature" /> class.</para>
+          <code>public void FormEvents_Sign(object sender, SignEventArgs e)
+{
+   // This event handler will run only in fully trusted form templates.
+
+   Signature thisSignature = 
+     e.SignedDataBlock.Signatures.CreateSignature();
+
+   // To add other pieces of information to sign, modify the
+   // signature template returned by 
+   // thisSignature.SignatureBlockXmlNode.
+   // Write your code here.
+
+   thisSignature.Sign();
+   e.SignatureWizard = false;
+}</code>
+          <code>Public Sub FormEvents_Sign(ByVal sender As Object, _
+   ByVal e As SignEventArgs)
+   ' This event handler will run only in fully trusted form templates.
+
+   Dim thisSignature As Signature = _
+     e.SignedDataBlock.Signatures.CreateSignature
+
+   ' To add other pieces of information to sign, modify the
+   ' signature template returned by 
+   ' thisSignature.SignatureBlockXmlNode.
+   ' Write your code here.
+
+   thisSignature.Sign()
+   e.SignatureWizard = False
+}</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Submit">
@@ -151,8 +504,41 @@
         <ReturnType>Microsoft.Office.InfoPath.SubmitEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the Submit command is used from the user interface, or the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Submit" /> method is used.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event is not meant to be instantiated by the developer in form code. You should only add event handlers for form-level events from the Microsoft InfoPath design mode user interface. When you add an event handler to your form template from the design mode user interface, InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class to bind the event to its event handler. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event is raised only if the form template has the Perform custom action using Code option set in the Submit Options dialog box.</para>
+          <para>The <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event is bound using the <see cref="T:Microsoft.Office.InfoPath.SubmitEventHandler" /> delegate.</para>
+          <para>The <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event can be cancelled by using the <see cref="P:Microsoft.Office.InfoPath.SubmitEventArgs.CancelableArgs" /> property of the <see cref="T:Microsoft.Office.InfoPath.MergeEventArgs" /> class to set the <b>Cancel</b> property to <b>true</b>.</para>
+          <para>If event handler code uses the <see cref="P:Microsoft.Office.InfoPath.SubmitEventArgs.CancelableArgs" /> property to set the strings of the <see cref="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.Message" /> or <see cref="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.MessageDetails" /> properties, but the <b>CancelableArgs.Cancel</b> property is left to the default setting of <b>false</b>, then a success message will be displayed with the text of the <b>Message</b> and <b>MessageDetails</b> properties. This message will override the Show a success or failure message and On success custom message settings in the Form Submit Options dialog box. </para>
+          <para>Similarly, if the event handler code sets the <b>Message</b> or <b>MessageDetails</b> strings, and sets <b>CancelableArgs.Cancel</b> to <b>true</b>, then a failure message will be shown, the message will be displayed with the text of the <b>Message</b> and <b>MessageDetails</b> properties, overriding the Form Submit Options dialog box settings.</para>
+          <para>If the event handler code leaves both <b>Message</b> and <b>MessageDetails</b> properties at the default value of a null reference (Nothing in Visual Basic), but sets <b>CancelableArgs.Cancel</b> to <b>true</b>, then the submit operation is considered to have failed. Whether a failure message will be shown and what the message will be is determined by the settings in the Submit Options dialog box.</para>
+          <para>Calls to the <see cref="M:Microsoft.Office.InfoPath.Application.Quit" /> method of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class cannot be made in the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event handler.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event is used to prevent the form from being submitted if the form has not been saved.</para>
+          <code>public void FormEvents_Submit(object sender, SubmitEventArgs e)
+{
+   if(this.Dirty || this.New)
+      MessageBox.Show("Please save this form before submitting it.");
+      e.CancelableArgs.Cancel = true;
+   else
+      e.CancelableArgs.Message = "Submit succeeded.";
+}</code>
+          <code>Public Sub FormEvents_Submit(ByVal sender As Object, _
+   ByVal e As SubmitEventArgs)
+   If(Me.Dirty Or Me.New) Then
+      MessageBox.Show("Please save this form before submitting it.")
+      e.CancelableArgs.Cancel = True
+   Else
+      e.CancelableArgs.Message = "Submit succeeded."
+   End If
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method.  </exception>
       </Docs>
     </Member>
     <Member MemberName="VersionUpgrade">
@@ -171,8 +557,33 @@
         <ReturnType>Microsoft.Office.InfoPath.VersionUpgradeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the version number of the form being opened is older than the version number of the form template on which it is based.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <b>VersionUpgrade</b> event is not meant to be instantiated by the developer in form code. You should only add event handlers for form-level events from the Microsoft InfoPath design mode user interface. When you add an event handler to your form template from the design mode user interface, InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class to bind the event to its event handler. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>An event handler for the <b>VersionUpgrade</b> event allows you to run code to update a form when the form template on which it is based has been upgraded since the form was last opened.</para>
+          <para>The <b>VersionUpgrade</b> event is bound using the <see cref="T:Microsoft.Office.InfoPath.VersionUpgradeEventHandler" /> delegate.</para>
+          <para>The <b>VersionUpgrade</b> event can be cancelled by using the <see cref="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.CancelableArgs" /> property of the <see cref="T:Microsoft.Office.InfoPath.VersionUpgradeEventArgs" /> class to set the <b>Cancel</b> property to <b>true</b>.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.DocumentVersion" /> and <see cref="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.FormTemplateVersion" /> properties of the <see cref="T:Microsoft.Office.InfoPath.VersionUpgradeEventArgs" /> class are used to display the version numbers of the form and form template.</para>
+          <code>public void FormEvents_VersionUpgrade(object sender, VersionUpgradeEventArgs e)
+{
+   MessageBox.Show("The form version: " + e.DocumentVersion + 
+      "\nThe form template version: " + e.FormTemplateVersion);
+   // Write code to update form here.
+}</code>
+          <code>Public Sub FormEvents_VersionUpgrade(ByVal sender As Object, _
+   ByVal e As VersionUpgradeEventArgs)
+   MessageBox.Show("The form version: " &amp;amp; e.DocumentVersion &amp;amp; _
+      vbNewLine &amp;amp; "The form template version: " &amp;amp; _
+      e.FormTemplateVersion)
+   ' Write code to update form here.
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
     <Member MemberName="ViewSwitched">
@@ -191,8 +602,31 @@
         <ReturnType>Microsoft.Office.InfoPath.ViewSwitchedEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after a view of a form has been successfully switched.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: The <b>ViewSwitched</b> event is not meant to be instantiated by the developer in form code. You should only add event handlers for form-level events from the Microsoft InfoPath design mode user interface. When you add an event handler to your form template from the design mode user interface, InfoPath generates code in the <b>InternalStartup</b> method of your form code file using the <see cref="T:Microsoft.Office.InfoPath.EventManager" /> class and the member of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class to bind the event to its event handler. For information on how to add event handlers in InfoPath design mode, see How to: Add an Event Handler.</para>
+          <para>The <b>ViewSwitched</b> event is bound using the <see cref="T:Microsoft.Office.InfoPath.ViewSwitchedEventHandler" /> delegate.</para>
+          <para>The <b>ViewSwitched</b> event cannot be cancelled.</para>
+          <para>
+            <b>Note</b>: The <b>ViewSwitched</b> event also occurs when a form is first opened.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the event handler for the <b>ViewSwitched</b> event is used to show the name of the view displayed when the view change occurs.</para>
+          <code>public void FormEvents_ViewSwitched(object sender, ViewSwitchedEventArgs e)
+{
+   MessageBox.Show("Loading the view: " + 
+      this.CurrentView.ViewInfo.Name);
+}</code>
+          <code>Public Sub FormEvents_ViewSwitched(sender As Object, _
+   e As ViewSwitchedEventArgs)
+   MessageBox.Show("Loading the view: " &amp;amp; _
+      Me.CurrentView.ViewInfo.Name)
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
   </Members>

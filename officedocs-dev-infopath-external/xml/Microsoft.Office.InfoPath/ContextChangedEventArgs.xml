@@ -14,7 +14,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" /> event.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -51,9 +51,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the type of context change that was performed when the <see cref="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" /> event occurred. </summary>
+        <value>The type of context change.</value>
+        <remarks>
+          <para>The <b>ChangeType</b> property returns only the value "ContextNode" for context changes in Microsoft InfoPath. Nevertheless, if code in an event handler performs actions that depend on current functionality, that code should still be designed to check the value of the <b>ChangeType</b> property, because future versions of InfoPath may use different values for different context changes.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Context">
@@ -72,9 +77,13 @@
         <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to an XPathNavigator object positioned at the context node that raised the <see cref="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" /> event.</summary>
+        <value>An <b>XPathNavigator</b> object positioned at the context node that raised the <see cref="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" /> event.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UndoRedo">
@@ -93,9 +102,14 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a value indicating whether the context change event occurred in response to undoing or redoing an operation.</summary>
+        <value>
+          <b>true</b> if the context change occurred due to undoing or redoing an operation; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

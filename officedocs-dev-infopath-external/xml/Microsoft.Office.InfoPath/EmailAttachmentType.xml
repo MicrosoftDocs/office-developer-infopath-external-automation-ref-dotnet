@@ -13,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the type of form files attached to an e-mail message.</summary>
+    <remarks>
+      <para>Use the <b>EmailAttachmentType</b> to specify the <see cref="P:Microsoft.Office.InfoPath.EmailSubmitConnection.EmailAttachmentType" /> property of the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> class and the <see cref="P:Microsoft.Office.InfoPath.MailEnvelope.EmailAttachmentType" /> property of the <see cref="T:Microsoft.Office.InfoPath.MailEnvelope" /> class.</para>
+      <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="None">
@@ -34,7 +38,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>No file will be attached. Only the form view will be sent as the e-mail message body.</summary>
       </Docs>
     </Member>
     <Member MemberName="Xml">
@@ -54,7 +58,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The attachment is a form file (.xml).</summary>
       </Docs>
     </Member>
     <Member MemberName="XmlXsn">
@@ -74,7 +78,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The attachment is a form file (.xml) along with its associated form template file (.xsn).</summary>
       </Docs>
     </Member>
   </Members>

@@ -18,8 +18,22 @@
     </Interface>
   </Interfaces>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Contains all <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects in the current view, which represent the Signature Line controls in that view.</summary>
+    <remarks>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para>To access the <see cref="T:Microsoft.Office.InfoPath.SignatureLineCollection" /> for the current view, use the <see cref="P:Microsoft.Office.InfoPath.View.SignatureLines" /> property of the <see cref="T:Microsoft.Office.InfoPath.View" /> class.</para>
+      <para>The order of the <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects in the collection corresponds to the value of the Tab index property assigned to each control when you add it to the view. To specify that value, open the form template in the InfoPath designer, right-click the control, click Signature Line Properties, click Advanced, and then set the Tab index property of the control.</para>
+      <para>
+        <b>Important</b>: When a form template has more than one view and other views contain Signature Line controls, be aware that looping through an instance of the <see cref="T:Microsoft.Office.InfoPath.SignatureLineCollection" /> accesses only the set of <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects that represent the Signature Line controls in the current view. To access the <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects for the Signature Line controls in other views, you must use the <see cref="M:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView(System.String)" /> method to switch to a different view before looping through that view's <see cref="T:Microsoft.Office.InfoPath.SignatureLineCollection" />.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>The following code example shows how to return the <see cref="T:Microsoft.Office.InfoPath.SignatureLineCollection" /> associated with the current view.</para>
+      <code>SignatureLineCollection mySignatures = 
+   this.CurrentView.SignatureLines;</code>
+      <code>Dim mySignatures As SignatureLineCollection = _
+   Me.CurrentView.SignatureLines</code>
+    </example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -55,9 +69,25 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the number of <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects in the <see cref="T:Microsoft.Office.InfoPath.SignatureLineCollection" />.</summary>
+        <value>The number of objects in the collection.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following code example displays the count of signature lines in the current view.</para>
+          <code>SignatureLineCollection mySignatures = 
+   this.CurrentView.SignatureLines;
+MessageBox.Show("There are " + mySignatures.Count.ToString() + 
+   " signature lines in the current view.");
+</code>
+          <code>Dim mySignatures As SignatureLineCollection = _
+   Me.CurrentView.SignatureLines
+MessageBox.Show("There are " &amp;amp; mySignatures.Count.ToString() &amp;amp; _
+   " signature lines in the current view.")</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -80,9 +110,35 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.Collections.IEnumerator" /> object that iterates over all entries in the <see cref="T:Microsoft.Office.InfoPath.SignatureLineCollection" />.</summary>
+        <returns>An enumerator for iterating over the entries in the collection.</returns>
+        <remarks>
+          <para>The order of the <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects in the collection corresponds to the value of the Tab index property assigned to each control when you add it to the view.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following code example iterates over the entire collection of <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects and displays the value of the <see cref="P:Microsoft.Office.InfoPath.Signature.Comment" /> property associated with each signature.</para>
+          <code>SignatureLineCollection mySignatures =
+   this.CurrentView.SignatureLines;
+System.Collections.IEnumerator sigEnum =
+   mySignatures.GetEnumerator();
+while (sigEnum.MoveNext())
+{
+   MessageBox.Show(((SignatureLine)sigEnum.Current)
+      .Signature.Comment.ToString());
+}
+</code>
+          <code>Dim mySignatures As SignatureLineCollection = _
+   Me.CurrentView.SignatureLines
+Dim sigEnum As System.Collections.IEnumerator = _
+   mySignatures.GetEnumerator()
+While sigEnum.MoveNext()
+   MessageBox.Show(DirectCast(sigEnum.Current, SignatureLine) _
+      .Signature.Comment.ToString())
+End While</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -104,10 +160,32 @@
         <Parameter Name="index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="index">To be added.</param>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <param name="index">The zero-based index for the <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> object to return. The value specified must be a number from 0 to the value of the collection's <see cref="P:Microsoft.Office.InfoPath.SignatureLineCollection.Count" /> property minus 1.</param>
+        <summary>Gets a reference to the specified <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> object from the <see cref="T:Microsoft.Office.InfoPath.SignatureLineCollection" />.</summary>
+        <value>An object that represents a Signature Line control in the collection.</value>
+        <remarks>
+          <para>The order of the <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects in the collection corresponds to the value of the Tab index property assigned to each control when you add it to the view.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following code example iterates over the entire collection of <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects and displays the value of the <see cref="P:Microsoft.Office.InfoPath.Signature.Comment" /> property associated with each signature.</para>
+          <code>SignatureLineCollection mySignatures = 
+   this.CurrentView.SignatureLines;
+foreach (SignatureLine myLine in mySignatures)
+{
+   MessageBox.Show(myLine.Signature.Comment.ToString());
+}
+</code>
+          <code>Dim mySignatures As SignatureLineCollection = _
+   Me.CurrentView.SignatureLines
+For Each myLine As SignatureLine In mySignatures
+   MessageBox.Show(myLine.Signature.Comment.ToString())
+Next</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
   </Members>

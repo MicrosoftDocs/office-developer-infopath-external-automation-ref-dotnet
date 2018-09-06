@@ -14,8 +14,13 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" /> event.</summary>
+    <remarks>
+      <para>The <b>XmlEventArgs</b> object is passed to the event handler for the <b>Changed</b> event, which occurs after changes to the form's underlying XML document have been accepted and the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event has occurred. The <b>XmlEventArgs</b> object provides a number of properties that can be used within the event handler to programmatically interact with the data that is being changed in the form's underlying XML document and to get information about the node that is being changed.</para>
+      <para>The <b>XmlEventArgs</b> object provides the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property which gets a reference to an <b>XPathNavigator</b> object that that is positioned at the node that is being changed, and can be used to work with this node and other data in a form's underlying XML document.</para>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.XmlChangingEventArgs" /> and <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> classes for the corresponding <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changing" /><see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> events are derived from the <b>XmlEventArgs</b> class and expose the same set of properties.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +56,14 @@
         <ReturnType>System.Xml.XPath.XPathExpression</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:System.Xml.XPath.XPathExpression" /> object which contains an XPath expression that returns the node that is currently being changed.</summary>
+        <value>A <see cref="T:System.Xml.XPath.XPathExpression" /> object that returns the node that is currently being changed in the form's underlying XML document.</value>
+        <remarks>
+          <para>The <b>XPathExpression</b> object returned by <b>Match</b> property contains a compiled XPath expression that points to a node in the form's underlying XML document. This is the node that raised the event to which the event handler is responding.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="NewValue">
@@ -72,9 +82,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the new value for the node being changed.</summary>
+        <value>The value that will replace the existing value.</value>
+        <remarks>
+          <para>The <b>NewValue</b> property contains the value of the node that will replace the existing value. To get the original value of the node, use the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.OldValue" /> property.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="OldParent">
@@ -93,9 +108,14 @@
         <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:System.Xml.XPath.XPathNavigator" /> object pointing to the node which is the parent of the node being deleted.</summary>
+        <value>An <see cref="T:System.Xml.XPath.XPathNavigator" /> object for the parent of the deleted node.</value>
+        <remarks>
+          <para>The value of the <b>OldParent</b> property is a null reference (Nothing in Visual Basic) unless the change that is occurring is a delete operation. When a delete operation was performed, the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Operation" /> property will return <b>XmlOperation.Delete</b>.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="OldValue">
@@ -114,9 +134,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the original value of the node that is being changed.</summary>
+        <value>The original value of the node that is being changed.</value>
+        <remarks>
+          <para>The <b>OldValue</b> property returns the original value of the node that will be replaced with a new value or deleted. To get the new value of the node, use the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.NewValue" /> property.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Operation">
@@ -135,9 +160,14 @@
         <ReturnType>Microsoft.Office.InfoPath.XmlOperation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:Microsoft.Office.InfoPath.XmlOperation" /> enumeration that indicates the type of operation that occurred when the node was changed.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XmlOperation" /> enumeration for the operation that has occurred.</value>
+        <remarks>
+          <para>The <b>XmlOperation</b> enumeration values that the <b>Operation</b> property returns are: <b>XmlOperation.Insert</b>, <b>XmlOperation.ValueChange</b>, and <b>XmlOperation.Delete</b>. Which operations can occur depends on the structure of the control to which the handler for the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" /> event is bound. For example, for a Text Box control, the node that the control is bound to can never be inserted or deleted, so only the <b>XmlOperation.ValueChange</b> operation can occur. Whereas, for a repeating control, such as a Repeating Table control, in addition to <b>XmlOperation.ValueChange</b> operations that can occur in the fields in the table's columns, entire groups (rows) can be inserted and deleted, which cause the <b>Operation</b> property to return the corresponding <b>XmlOperation.Insert</b> and <b>XmlOperation.Delete</b> enumeration values.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Site">
@@ -156,9 +186,14 @@
         <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <see cref="T:System.Xml.XPath.XPathNavigator" /> object pointing at the node that is being changed.</summary>
+        <value>An <see cref="T:System.Xml.XPath.XPathNavigator" /> object pointing to the changed node.</value>
+        <remarks>
+          <para>After you set a reference to the <b>XPathNavigator</b> object that the <b>Site</b> property returns, you can use any of the properties and methods that are supported by the <b>XPathNavigator</b> class to work with the data.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UndoRedo">
@@ -177,9 +212,15 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a value that indicates whether the node being changed is part of an undo or redo operation.</summary>
+        <value>
+          <b>true</b> if the node being changed is part of an undo or redo operation; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>When an undo or a redo operation takes place, the form's underlying XML document is placed in a read-only state and cannot be modified. If this occurs during a <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" /> event, the <b>UndoRedo</b> property can be used to bypass the data validation logic contained in the handler for the event.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

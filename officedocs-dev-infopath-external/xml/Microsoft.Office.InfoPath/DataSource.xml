@@ -14,8 +14,35 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a data source in a form template.</summary>
+    <remarks>
+      <para>A <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object corresponds to one of the sources of stored data associated with an InfoPath form template. A <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object can represent either the form template's primary (main) data source, or a secondary data source obtained from some external source of data using an associated data connection (referred to as a data adapter in the first release of Microsoft InfoPath). Working with a form's main data source provides access to the underlying XML document of the form, whereas working with a secondary data source provides access to data retrieved from an external source of data such as a Web Service query.</para>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object provides properties and methods that can be used to programmatically interact with the stored data, as well as providing access to the associated data connection for secondary data sources. A <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object can be accessed using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataSources" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class. </para>
+      <para>For secondary data sources, a <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object acts as an intermediary between the form and the data connection that is used to obtain data from an external data source, such as a connection to a Microsoft Access or Microsoft SQL Server database, an .xml file, or an XML Web service. The type of data connection object used depends on the type of external data connection used to acquire the data. The <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object provides a common set of properties and methods that can be used for all types of data connection objects, and each of the data connection objects provides its own set of properties and methods. </para>
+      <para>Microsoft InfoPath supports the following kinds of data connections:</para>
+      <list type="bullet">
+        <item>
+          <description>A connection query or submit using ActiveX Data Objects (ADO) represented by the <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" /> and <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" /> objects.</description>
+        </item>
+        <item>
+          <description>A connection to query or submit to an external data source that is registered in the Business Data Connectivity service (BDC) a server running SharePoint Foundation 2010 or SharePoint Server 2010  represented by the <see cref="T:Microsoft.Office.InfoPath.BdcQueryConnection" /> or <see cref="T:Microsoft.Office.InfoPath.BdcSubmitConnection" /> objects.</description>
+        </item>
+        <item>
+          <description>A connection to query or submit to a SharePoint list represented by the <see cref="T:Microsoft.Office.InfoPath.SharepointListRWQueryConnection" /> or <see cref="T:Microsoft.Office.InfoPath.SharepointListRWSubmitConnection" /> objects.</description>
+        </item>
+        <item>
+          <description>A connection to a Web service represented by the <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" /> object.</description>
+        </item>
+        <item>
+          <description>A connection to query or submit to an XML file represented by the <see cref="T:Microsoft.Office.InfoPath.FileQueryConnection" /> and <see cref="T:Microsoft.Office.InfoPath.FileSubmitConnection" /> objects.</description>
+        </item>
+        <item>
+          <description>A connection to submit by e-mail represented by the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> object.</description>
+        </item>
+      </list>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.DataSource" /> class corresponds to the <b>DataObject</b> interface in the Microsoft InfoPath 2003 object model.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -52,9 +79,24 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Returns an <a href="frlrfSystemXmlXPathXPathNavigatorClassTopic">XPathNavigator</a></summary>
+        <returns>An <b>XPathNavigator</b> object positioned at the root node of the data source.</returns>
+        <remarks>
+          <para>The <see cref="M:Microsoft.Office.InfoPath.DataSource.CreateNavigator" /> method allows you to programmatically access and manipulate the stored data of a data source represented by the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object. You can use any of the properties and methods that are supported by the <b>XPathNavigator</b> class to work with the data source.</para>
+          <para>The <see cref="M:Microsoft.Office.InfoPath.DataSource.CreateNavigator" /> method replaces the <b>DOM</b> property of the <b>DataObject</b> object used in the Microsoft InfoPath 2003 object model.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, an <b>XPathNavigator</b> object is created for the "CityList" data source using the <see cref="M:Microsoft.Office.InfoPath.DataSource.CreateNavigator" /> method, and then the XML of the data source is displayed in a message box.</para>
+          <code>XPathNavigator myNavigator = 
+   this.DataSources["CityList"].CreateNavigator();
+MessageBox.Show("Data source XML: " + myNavigator.OuterXml.ToString());</code>
+          <code>Dim myNavigator As XPathNavigator  = 
+   Me.DataSources("CityList").CreateNavigator()
+MessageBox.Show("Data source XML: " &amp;amp; myNavigator.OuterXml.ToString())</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetNamedNodeProperty">
@@ -77,11 +119,18 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="target">To be added.</param>
-        <param name="name">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="target">An <see cref="T:System.Xml.XPath.XPathNavigator" /> object positioned at the XML node corresponding to a <b>nonattribute</b> node in the main data source, for which a named property is to be returned.</param>
+        <param name="name">The name of the property whose value is to be returned.</param>
+        <summary>Gets the value of a named property for the specified XML node, which must be a <b>nonattribute</b> node in the main data source.</summary>
+        <returns>The value of the specified named property.</returns>
+        <remarks>
+          <para>Named properties allow users to associate strings with user-defined properties of XML element nodes in the main data source. Use the <b>GetNamedNodeProperty</b> method to read the value of a named property. The value of a named property can be set by using the <see cref="M:Microsoft.Office.InfoPath.DataSource.SetNamedNodeProperty(System.Xml.XPath.XPathNavigator,System.String,System.String)" /> method. </para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are<b></b>not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -100,9 +149,25 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the name of the associated <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object.</summary>
+        <value>If the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object represents a secondary data source, returns the name of the data source. If the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object represents the primary (main) data source, returns <b>String.Empty</b>.</value>
+        <remarks>
+          <para>If the data source is a secondary data source, the name of the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object is the same as the name of the data source that it represents. For secondary data sources, the name of the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object can also be used as the argument to the <see cref="P:Microsoft.Office.InfoPath.DataConnectionCollection.Item" /> property of the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> class.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the name of each <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object in the <b>DataSourceCollection</b> is displayed in a message box.</para>
+          <code>foreach (DataSource source in this.DataSources)
+{
+   MessageBox.Show("Source name: " + source.Name);
+}</code>
+          <code>For Each source As DataSource In Me.DataSources
+{
+   MessageBox.Show("Source name: " &amp;amp; source.Name)
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="QueryConnection">
@@ -121,9 +186,24 @@
         <ReturnType>Microsoft.Office.InfoPath.DataConnection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object associated with the data source.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> associated with the data source.</value>
+        <remarks>
+          <para>After you have set a reference to the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object that the <see cref="P:Microsoft.Office.InfoPath.DataSource.QueryConnection" /> property returns, you can use the properties and methods that the particular <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object provides.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.InfoPath.DataSource.QueryConnection" /> property of the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object is used to return a reference to the data connection that is associated with the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object, which in this example is an <see cref="T:Microsoft.Office.InfoPath.ADOQueryConnection" /> object. The code then uses the <see cref="P:Microsoft.Office.InfoPath.ADOQueryConnection.Command" /> property of the <see cref="T:Microsoft.Office.InfoPath.ADOQueryConnection" /> class to display the SQL command text in a message box.</para>
+          <code>AdoQueryConnection myConnection = 
+   (AdoQueryConnection)(this.DataSources["CityList"].QueryConnection);
+MessageBox.Show("SQL command text: " + myConnection.Command);</code>
+          <code>Dim myConnection As AdoQueryConnection  = _
+   DirectCast(Me.DataSources("CityList").QueryConnection, _
+   AdoQueryConnection) ;
+MessageBox.Show("SQL command text: " &amp;amp; myConnection.Command)</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="ReadOnly">
@@ -142,9 +222,16 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a value that indicates whether the data source is in a read-only state.</summary>
+        <value>
+          <b>true</b> if the data source is read-only; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>For a <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object that represents a form's primary data source, if the <b>ReadOnly</b> property is <b>true</b>, data in the form's underlying XML document is in a read-only state and cannot be changed. If <b>false</b>, the data in the form's underlying XML document can be changed.</para>
+          <para>For a <b>DataSource</b> object that represents a secondary data source, the <b>ReadOnly</b> property always returns <b>false</b>.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetNamedNodeProperty">
@@ -168,11 +255,19 @@
         <Parameter Name="value" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="target">To be added.</param>
-        <param name="name">To be added.</param>
-        <param name="value">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="target">An XPathNavigator object positioned at the XML node corresponding to a <b>nonattribute</b> node in the main data source, for which a named property is to be set.</param>
+        <param name="name">The name of the property to be set.</param>
+        <param name="value">The value to which the property will be set.</param>
+        <summary>Sets the value of a named property for the specified XML node, which must be a <b>nonattribute</b> node in the main data source.</summary>
+        <remarks>
+          <para>Named properties allow users to associate strings with user-defined properties of XML element nodes in the main data source. The value of a named property can be set by using the <b>SetNamedNodeProperty</b> method. Use the <see cref="M:Microsoft.Office.InfoPath.DataSource.GetNamedNodeProperty(System.Xml.XPath.XPathNavigator,System.String)" /> method to read the value of a named property.</para>
+          <para>Property values set with the <b>SetNamedNodeProperty</b> method are not saved when the form is saved.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are<b></b>not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
       </Docs>
     </Member>
   </Members>

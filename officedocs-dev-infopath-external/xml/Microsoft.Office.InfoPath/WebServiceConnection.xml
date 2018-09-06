@@ -14,8 +14,25 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a connection to an XML Web service.</summary>
+    <remarks>
+      <para>The <b>WebServiceConnection</b> class represents a data connection created in InfoPath using the Data Connection Wizard that specifies all the information necessary for retrieving data from and submitting data to an external data source using a Web service.</para>
+      <para>The <b>WebServiceConnection</b> provides properties that can be used to get and set information about the data connection's input and operation strings. It also provides a property for getting the Uniform Resource Locator (URL) of the Web Services Description Language (WSDL) file of the XML Web service.</para>
+      <para>The <b>WebServiceConnection</b> object associated with the data connection is accessible using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class to return the connection from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> of the form template.</para>
+      <para>In addition to the default <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method inherited from the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> base class that performs a query or submit operation using the values that were declaratively defined in InfoPath form template design mode, the <b>WebServiceConnection</b> class also provides the <see cref="M:Microsoft.Office.InfoPath.WebServiceConnection.Execute(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" /> method, which allows you to specify a different source of data to submit, a different location to insert the returned data, and a way to retrieve errors returned by the connection.</para>
+      <para>The <b>WebServiceConnection</b> class corresponds to the <b>WebServiceAdapterObject</b> interface of the Microsoft Office InfoPath 2003 object model.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, a reference to the <b>WebServiceConnection</b> object that represents the connection named "Main query" is set by passing the name to the <see cref="P:Microsoft.Office.InfoPath.DataConnectionCollection.Item(System.String)" /> property of the <b>DataConnectionCollection</b> class, and then casting the returned object to the <b>WebServiceConnection</b> type.</para>
+      <code>WebServiceConnection wsConnection = (WebServiceConnection)this.DataConnections["Main query"];</code>
+      <code>Dim wsConnection As WebServiceConnection = _
+   DirectCast(Me.DataConnections("Main query"), WebServiceConnection)</code>
+      <para>After the reference has been set, you can use the properties of the <b>WebServiceConnection</b> object as shown in the following example, which sets a string variable to the value returned by the <see cref="P:Microsoft.Office.InfoPath.WebServiceConnection.ServiceUrl" /> property.</para>
+      <code>string wsServiceURL = wsConnection.ServiceUrl.ToString();</code>
+      <code>Dim wsServiceURL As String = _
+   string wsServiceURL = wsConnection.ServiceUrl.ToString()</code>
+    </example>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -56,11 +73,64 @@
         <Parameter Name="errors" Type="System.Xml.XPath.XPathNavigator" />
       </Parameters>
       <Docs>
-        <param name="input">To be added.</param>
-        <param name="output">To be added.</param>
-        <param name="errors">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="input">An <b>XPathNavigator</b> object that is positioned at the XML node to insert into the &lt;SOAP:Body&gt; element of the Web service. The specified XML node should contain XML corresponding to the full set of query parameters and their corresponding values.For a data connection configured as a query operation, this overrides the declarative setting, which is the query fields (descendents of &lt;dfs:queryFields&gt;) of the associated <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object.For a data connection configured as a submit operation, this overrides the complete set of part fragment mappings.If the <paramref name="input" /> parameter is specified as a null reference (Nothing in Visual Basic) then the declarative settings are used.</param>
+        <param name="output">An <b>XPathNavigator</b> object that is positioned at the XML node under which to insert the contents of the &lt;SOAP:Body&gt; element returned by the Web service. For a data connection configured as query operation, this overrides the declarative setting, which is the data fields (descendents of &lt;dfs:dataFields&gt;) of the associated <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object.For a data connection configured as a submit operation, this overrides the complete set of part fragment mappings.If the <paramref name="output" /> parameter is specified as a null reference (Nothing in Visual Basic) for a data connection configured as a query operation, then the declarative settings are used. If the data connection is configured as a submit operation, then the returned data isn't written at all.</param>
+        <param name="errors">An <b>XPathNavigator</b> object that is positioned at the XML node under which to insert the contents of error text returned in the &lt;Fault&gt; element by the Web service, if the operation fails. If the <paramref name="errors" /> parameter is specified as a null reference (Nothing in Visual Basic), then the error data is not written at all.</param>
+        <summary>Overrides the default <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method inherited from the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> base class to allow specifying a different source of data to submit, a different location to insert the data that is returned, or a location to insert any error text returned.</summary>
+        <remarks>
+          <para>When the action of a data connection that a <b>WebServiceConnection</b> object represents is executed, InfoPath wraps the data (as query parameters) in a SOAP envelope and then submits it to the Web service. The data connection then obtains the data returned by the Web service in the SOAP message or, in the case of failure, as error message data. Each data connection that a <b>WebServiceConnection</b> object represents is created in the InfoPath using the Data Connection Wizard as either a query operation or a submit operation. </para>
+          <para>Data connections defined as query operations are associated with a specific <b>DataSource</b> object from which they receive query parameters (contained within query fields defined in the &lt;dfs:queryFields&gt; node of the form's data source) and into which they insert the returned data (in the data fields defined in the &lt;dfs:dataFields&gt; node of the form's data source).</para>
+          <para>Data connections defined as submit operation have part fragment mappings established to pull the data for the query parameters from different <b>DataSource</b> subtrees.</para>
+          <para>The default <b>Execute</b> method inherited from the <b>DataConnection</b> base class uses the declaratively defined input (query parameters) and output location defined using the Data Connection Wizard in InfoPath.</para>
+          <para>The <b>Execute (XPathNavigator, XPathNavigator, XPathNavigator)</b> method overrides the default version of the <b>Execute</b> method to allow specifying any or all of the parameters described above.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, three <b>XmlDocument</b> objects are created to work with the <b>Execute</b> method. The first XmlDocument is populated with data, then three <b>XPathNavigator</b> objects are created to pass as the <paramref name="input" />, <paramref name="output" />, and <paramref name="errors" /> parameters of the <b>Execute</b> method, and the method is called.</para>
+          <code>// Open connection.
+WebServiceConnection wsc = 
+   (WebServiceConnection)this.DataConnections["Main query"];
+
+// Create XmlDocuments.
+XmlDocument inputDocument = new XmlDocument();
+XmlDocument outputDocument = new XmlDocument();
+XmlDocument errorsDocument = new XmlDocument();
+
+// Load input document.
+inputDocument.LoadXml("&amp;lt;inputValue1&amp;gt;Test&amp;lt;/inputValue1&amp;gt;&amp;lt;inputValue2&amp;gt;5&amp;lt;/inputValue2&amp;gt;");
+
+// Create XPathNavigator objects for documents.
+XPathNavigator inputNav = inputDocument.CreateNavigator();
+XPathNavigator outputNav = outputDocument.CreateNavigator();
+XPathNavigator errorsNav = errorsDocument.CreateNavigator();
+
+// Call Execute method.
+wsc.Execute(inputNav, outputNav, errorsNav);</code>
+          <code>' Open connection.
+Dim wsc As WebServiceConnection = _
+   DirectCast(Me.DataConnections["Main query"], WebServiceConnection)
+
+' Create XmlDocuments.
+Dim inputDocument As XmlDocument = new XmlDocument()
+Dim outputDocument As XmlDocument = new XmlDocument()
+Dim errorsDocument As XmlDocument = new XmlDocument()
+
+' Load input document.
+inputDocument.LoadXml("&amp;lt;inputValue1&amp;gt;Test&amp;lt;/inputValue1&amp;gt;&amp;lt;inputValue2&amp;gt;5&amp;lt;/inputValue2&amp;gt;")
+
+' Create XPathNavigator objects for documents.
+Dim inputNav As XPathNavigator = inputDocument.CreateNavigator()
+Dim outputNav As XPathNavigator = outputDocument.CreateNavigator()
+Dim errorsNav As XPathNavigator = errorsDocument.CreateNavigator()
+
+' Call Execute method.
+wsc.Execute(inputNav, outputNav, errorsNav)</code>
+        </example>
+        <exception cref="T:System.Net.WebException">A network error occurred while attempting to access the Web service.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are<b></b>not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="GenerateDataSetDiffGram">
@@ -80,9 +150,30 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>For a data connection that uses an ADO .NET <b>DataSet</b> and returns a <b>DiffGram</b> that identifies any differences between original and current versions of data elements.</summary>
+        <returns>An <b>XPathNavigator</b> positioned at the root of an XML node that contains the <b>DiffGram</b> for the data returned by the data connection.</returns>
+        <remarks>
+          <para>A <b>DiffGram</b> is an XML format that identifies current and original versions of data elements. If the data source represented by the <b>WebServiceConnection</b> object returns an ADO.NET <b>DataSet</b>, calling the <b>GenerateDataSetDiffgram</b> method on the connection will generate a <b>DiffGram</b> from the data source of the connection that identifies any differences between the original set of data elements in the form and those that are currently available from the data connection. </para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>GenerateDataSetDiffGram</b> method of the <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" /> class is called on a Web service connection that uses a <b>DataSet</b> to return a <b>DiffGram</b> to the <b>XPathNavigator</b> object named <b>DiffGramNavigator</b>.</para>
+          <code>// Open connection.
+WebServiceConnection wsc = 
+   (WebServiceConnection)this.DataConnections["Main query"];
+
+// Generate DiffGram.
+XPathNavigator DiffGramNavigator =  wsc.GenerateDataSetDiffgram();</code>
+          <code>' Open connection.
+Dim wsc As WebServiceConnection = 
+   DirectCast(Me.DataConnections("Main query"), WebServiceConnection)
+
+' Generate DiffGram.
+Dim DiffGramNavigator As XPathNavigator  = _
+   wsc.GenerateDataSetDiffgram()</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="ServiceUrl">
@@ -101,9 +192,13 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the Uniform Resource Locator (URL) that is used to invoke the Web service associated with a <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" /> object.</summary>
+        <value>The Uniform Resource Locator (URL) that is used to invoke the Web service associated with a <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" /> object as a <b>System.Uri</b>.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SoapAction">
@@ -122,9 +217,13 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the value of the <b>soapAction</b> attribute of the Web service associated with a <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" /> object.</summary>
+        <value>The value of the <b>soapAction</b> attribute of the Web service associated with a <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" /> object as a <b>System.Uri</b>.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Timeout">
@@ -143,9 +242,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the time-out value in seconds for data connection associated with a <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" /> object.</summary>
+        <value>The number of seconds before a time out occurs. The default value is 30 seconds.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="WsdlUrl">
@@ -164,9 +267,16 @@
         <ReturnType>System.Uri</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the Uniform Resource Locator (URL) of the Web Services Description Language (WSDL) file for the Web service associated with the <see cref="T:Microsoft.Office.InfoPath.WebServiceConnection" /> object. </summary>
+        <value>The Uniform Resource Locator (URL) of the Web Services Description Language (WSDL) file for the Web service.</value>
+        <remarks>
+          <para>The WSDL file is an XML document that defines the format of messages that an XML Web service understands. The service description serves as an agreement that defines the behavior of an XML Web service and instructs potential clients in how to interact with it. The behavior of an XML Web service is determined by messaging patterns that the service defines and supports. These patterns conceptually dictate what the service consumer can expect to happen when a properly formatted message is submitted to the XML Web service.</para>
+          <para>
+            <b>Note</b>: The <b>WsdlUrl</b> property gets the WSDL file location that was defined when using the Data Connection Wizard in InfoPath. The <see cref="P:Microsoft.Office.InfoPath.WebServiceConnection.ServiceUrl" /> property gets or sets the URL that is used to invoke the Web service.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

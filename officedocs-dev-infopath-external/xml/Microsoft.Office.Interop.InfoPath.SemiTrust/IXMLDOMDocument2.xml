@@ -23,7 +23,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -52,7 +53,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -84,7 +86,8 @@
       </Parameters>
       <Docs>
         <param name="newChild">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,7 +116,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -142,7 +146,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNamedNodeMap</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -171,7 +176,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -200,7 +206,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeList</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -233,7 +240,8 @@
       </Parameters>
       <Docs>
         <param name="deep">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -266,7 +274,8 @@
       </Parameters>
       <Docs>
         <param name="name">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -299,7 +308,8 @@
       </Parameters>
       <Docs>
         <param name="data">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -332,7 +342,8 @@
       </Parameters>
       <Docs>
         <param name="data">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -362,7 +373,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -395,7 +407,8 @@
       </Parameters>
       <Docs>
         <param name="tagName">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -428,7 +441,8 @@
       </Parameters>
       <Docs>
         <param name="name">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -465,7 +479,8 @@
         <param name="Type">To be added.</param>
         <param name="name">To be added.</param>
         <param name="namespaceURI">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -500,7 +515,8 @@
       <Docs>
         <param name="target">To be added.</param>
         <param name="data">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -533,7 +549,8 @@
       </Parameters>
       <Docs>
         <param name="data">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -562,7 +579,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -591,7 +609,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -620,7 +639,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocumentType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -649,7 +669,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMElement</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -678,7 +699,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -711,7 +733,8 @@
       </Parameters>
       <Docs>
         <param name="tagName">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -741,7 +764,8 @@
       </Parameters>
       <Docs>
         <param name="name">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -771,7 +795,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -800,7 +825,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMImplementation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -835,7 +861,8 @@
       <Docs>
         <param name="newChild">To be added.</param>
         <param name="refChild">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -864,7 +891,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -897,7 +925,8 @@
       </Parameters>
       <Docs>
         <param name="xmlSource">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -930,7 +959,8 @@
       </Parameters>
       <Docs>
         <param name="bstrXML">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -956,7 +986,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.XMLSchemaCache</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -985,7 +1016,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1014,7 +1046,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1047,7 +1080,8 @@
       </Parameters>
       <Docs>
         <param name="idString">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1076,7 +1110,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1105,7 +1140,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1134,7 +1170,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1163,7 +1200,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1192,7 +1230,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1221,7 +1260,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1250,7 +1290,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1279,7 +1320,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1308,7 +1350,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1337,7 +1380,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1366,7 +1410,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1395,7 +1440,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMParseError</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1424,7 +1470,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1453,7 +1500,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1482,7 +1530,8 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1511,7 +1560,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1544,7 +1594,8 @@
       </Parameters>
       <Docs>
         <param name="childNode">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1579,7 +1630,8 @@
       <Docs>
         <param name="newChild">To be added.</param>
         <param name="oldChild">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1608,7 +1660,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1641,7 +1694,8 @@
       </Parameters>
       <Docs>
         <param name="destination">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1666,7 +1720,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1699,7 +1754,8 @@
       </Parameters>
       <Docs>
         <param name="queryString">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1732,7 +1788,8 @@
       </Parameters>
       <Docs>
         <param name="queryString">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1764,7 +1821,8 @@
       <Docs>
         <param name="name">To be added.</param>
         <param name="value">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1792,7 +1850,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1821,7 +1880,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1854,7 +1914,8 @@
       </Parameters>
       <Docs>
         <param name="stylesheet">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1889,7 +1950,8 @@
       <Docs>
         <param name="stylesheet">To be added.</param>
         <param name="outputObject">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1917,7 +1979,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1944,7 +2007,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1973,7 +2037,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2002,7 +2067,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

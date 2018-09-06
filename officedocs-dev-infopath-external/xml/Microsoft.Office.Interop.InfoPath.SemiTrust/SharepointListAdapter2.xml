@@ -23,7 +23,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapterObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -51,9 +51,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the name of a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapterObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Query">
@@ -81,8 +85,25 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Reads data from the associated data adapter.</summary>
+        <remarks>
+          <para>The <b>Query</b> method fails if the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapter.QueryAllowed" /> property is <b>false</b>.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Query</b> method of an existing Data Connection to a SharePoint list, "SharePoint list", is invoked. A message box is displayed if the <b>Query</b> method fails:</para>
+          <code>SharepointListAdapter SPList = ((SharepointListAdapter)thisXDocument.DataAdapters["SharePoint list"]);
+try
+{
+ SPList.&lt;span class="label"&gt;Query&lt;/span&gt;();
+}
+catch (Exception ex)
+{
+ thisXDocument.UI.Alert("Failed to query.\n\n" + ex.Message);
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="QueryAllowed">
@@ -109,9 +130,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a value that always returns <b>true</b>, corresponding to the <b>queryAllowed</b> attribute in the form definition file (.xsf).</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="QueryThisFormOnly">
@@ -135,9 +160,16 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets whether the query operation will apply only to the current form.</summary>
+        <value>
+          <b>true</b> if the query applies only to the current form; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>When a form is part of a SharePoint workflow, the query operation will apply only to the current form. The value of this property corresponds to the value of the <b>queryThisFormOnly</b> attribute of the <b>xsf:extensions/xsf:extension/xsf2:solutionDefinition/xsf2:solutionDefinition/xsf2:dataConnections/xsf2:sharePointListAdapterExt/</b> element in the form definition file (.xsf) of the form template.</para>
+          <para>Because the <b>QueryThisFormOnly</b> property is newin Microsoft InfoPath, you must declare and cast to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapter2" /> type to access it. For more information, see How to: Use Object Model Members That Are Not Compatible with InfoPath 2003.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SiteUrl">
@@ -164,9 +196,18 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the Uniform Resource Locator (URL) of the Windows SharePoint Services site that the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapterObject" /> object will query.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>SiteUrl</b> property of an existing Data Connection to a SharePoint list, "SharePoint list", is displayed in a message box:</para>
+          <code>SharepointListAdapter SPList = ((SharepointListAdapter)thisXDocument.DataAdapters["SharePoint list"]);
+thisXDocument.UI.Alert(SPList.&lt;span class="label"&gt;SiteUrl&lt;/span&gt;);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Submit">
@@ -194,8 +235,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Available for the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapterObject" />, but, because <b>SharePointListAdapter</b> object can only receive data, this method will always generate a run-time error when it is called on that object.</summary>
+        <remarks>
+          <para>To submit form data to a SharePoint list or library, use the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.Submit" /> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapterObject" /> object instead of this method.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SubmitAllowed">
@@ -222,9 +268,14 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a value corresponding to the <b>submitAllowed</b> attribute in the form definition file (.xsf).</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>Always returns <b>false</b> for the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapterObject" /> object.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

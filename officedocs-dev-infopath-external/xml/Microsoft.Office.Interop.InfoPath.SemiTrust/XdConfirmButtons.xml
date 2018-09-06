@@ -13,8 +13,11 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The <b>XdConfirmButtons</b> enumeration is used to determine the type of buttons to be displayed in a message box.</summary>
+    <remarks>
+      <para>These enumerated values are used by <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.UI2.Confirm(System.String,Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmButtons)" /> method.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="xdOKCancel">
@@ -34,7 +37,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>OK and Cancel buttons are displayed.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdYesNo">
@@ -54,7 +57,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Yes and No buttons are displayed</summary>
       </Docs>
     </Member>
     <Member MemberName="xdYesNoCancel">
@@ -74,7 +77,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Yes, No, and Cancel buttons are displayed.</summary>
       </Docs>
     </Member>
   </Members>

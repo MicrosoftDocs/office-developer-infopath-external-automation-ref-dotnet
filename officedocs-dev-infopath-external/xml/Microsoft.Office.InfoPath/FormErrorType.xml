@@ -13,8 +13,11 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the error type of a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object in the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> of an InfoPath form.</summary>
+    <remarks>
+      <para>The three types of data validation errors that can occur in an InfoPath form can be determined using the <see cref="P:Microsoft.Office.InfoPath.FormError.FormErrorType" /> property of the <b>FormError</b> class, which returns a <b>FormErrorType</b> enumeration value.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="SchemaValidation">
@@ -34,7 +37,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Data validation failed as a result of an XML Schema-defined constraint.</summary>
       </Docs>
     </Member>
     <Member MemberName="SystemGenerated">
@@ -54,7 +57,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Data validation failed as a result of constraints defined in the form definition (.xsf) file or as a result of form code calling the <see cref="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> class.</summary>
       </Docs>
     </Member>
     <Member MemberName="UserDefined">
@@ -74,7 +77,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Data validation failed as a result of a custom error defined using the <see cref="Overload:Microsoft.Office.InfoPath.FormErrorCollection.Add" /> method of the <b>FormErrorsCollection</b> class.</summary>
       </Docs>
     </Member>
   </Members>

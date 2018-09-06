@@ -26,8 +26,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>This class is a wrapper for the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+    <remarks>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.XmlFormHostItem" /> class and its members are wrappers for the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class and its corresponding members.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -76,7 +79,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Close" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -97,8 +100,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.DataSource.CreateNavigator" /> method of the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> class, which provides access to an <b>XPathNavigator</b> object for accessing and manipulating a form's underlying XML document (main data source).</summary>
+        <returns>Returns <see cref="T:System.Xml.XPath.XPathNavigator" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -148,8 +151,8 @@
         <ReturnType>Microsoft.Office.InfoPath.View</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.CurrentView" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.View" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -169,8 +172,8 @@
         <ReturnType>Microsoft.Office.InfoPath.DataConnectionCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -190,8 +193,8 @@
         <ReturnType>Microsoft.Office.InfoPath.DataSourceCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataSources" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.DataSourceCollection" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -211,8 +214,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Dirty" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -232,8 +235,8 @@
         <ReturnType>Microsoft.Office.InfoPath.Environment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Environment" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.Environment" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -253,8 +256,8 @@
         <ReturnType>Microsoft.Office.InfoPath.FormErrorCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Errors" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -274,7 +277,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Extension" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -325,8 +328,8 @@
         <ReturnType>System.Collections.IDictionary</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.FormState" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Collections.IDictionary" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -361,7 +364,7 @@
         <param name="primaryType">To be added.</param>
         <param name="cookie">To be added.</param>
         <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <returns>Returns <see cref="T:System.Object" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -480,7 +483,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>To be added.</returns>
+        <returns>Returns <see cref="T:Microsoft.Office.InfoPath.XmlForm" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -585,7 +588,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTasks" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -607,7 +610,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTemplates" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -628,7 +631,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Host" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -649,7 +652,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Hosted" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -670,8 +673,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.HostName" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -772,8 +775,8 @@
         <ReturnType>Microsoft.Office.InfoPath.DataSource</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.DataSource" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -827,7 +830,7 @@
       </Parameters>
       <Docs>
         <param name="fileUrl">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -851,7 +854,7 @@
       </Parameters>
       <Docs>
         <param name="target">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.Xml.XPath.XPathNavigator)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1121,8 +1124,8 @@
         <ReturnType>System.Xml.XmlNamespaceManager</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.NamespaceManager" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Xml.XmlNamespaceManager" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1142,8 +1145,8 @@
         <ReturnType>Microsoft.Office.InfoPath.NetworkState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.NetworkState" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.NetworkState" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1163,8 +1166,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.New" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1188,7 +1191,7 @@
       </Parameters>
       <Docs>
         <param name="notification">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.NotifyHost(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1290,8 +1293,8 @@
         <ReturnType>Microsoft.Office.InfoPath.Permission</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Permission" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.Permission" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1338,7 +1341,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Print" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1362,7 +1365,7 @@
       </Parameters>
       <Docs>
         <param name="showPrintDialog">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Print(System.Boolean)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1415,8 +1418,8 @@
         <ReturnType>Microsoft.Office.InfoPath.DataConnection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.QueryDataConnection" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.DataConnection" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1436,8 +1439,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ReadOnly" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1457,8 +1460,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Recovered" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1598,7 +1601,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Save" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1622,7 +1625,7 @@
       </Parameters>
       <Docs>
         <param name="fileUrl">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.SaveAs(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1642,8 +1645,8 @@
         <ReturnType>Microsoft.Office.InfoPath.ServerInfo</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ServerInfo" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.ServerInfo" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1698,7 +1701,7 @@
       </Parameters>
       <Docs>
         <param name="filename">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogFilename(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1722,7 +1725,7 @@
       </Parameters>
       <Docs>
         <param name="pathname">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogLocation(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1742,8 +1745,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Signed" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1763,8 +1766,8 @@
         <ReturnType>Microsoft.Office.InfoPath.SignedDataBlockCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.SignedDataBlocks" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1811,7 +1814,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Submit" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1831,8 +1834,8 @@
         <ReturnType>Microsoft.Office.InfoPath.TaskPaneCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.TaskPanes" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1852,8 +1855,8 @@
         <ReturnType>Microsoft.Office.InfoPath.FormTemplate</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Template" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.FormTemplate" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1899,8 +1902,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Uri" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1920,8 +1923,8 @@
         <ReturnType>Microsoft.Office.InfoPath.User</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.User" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.User" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1941,8 +1944,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.UserRole" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1962,8 +1965,8 @@
         <ReturnType>Microsoft.Office.InfoPath.ViewInfoCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1983,8 +1986,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.XmlLang" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.String" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

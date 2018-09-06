@@ -14,8 +14,12 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents the InfoPath application.</summary>
+    <remarks>
+      <para>The <b>Application</b> object includes properties and methods that return references to the high-level objects of the InfoPath object model. For example, the <see cref="P:Microsoft.Office.InfoPath.Application.XmlForms" /> property returns a reference to a collection of <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> objects.</para>
+      <para>The <b>Application</b> object is the top-level object in the InfoPath object model, and it provides a number of properties and methods that can be used to access lower-level collections and objects in the object model, and to perform a variety of general purpose functions.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +55,19 @@
         <ReturnType>Microsoft.Office.InfoPath.Window</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to a <see cref="T:Microsoft.Office.InfoPath.Window" /> object that represents the currently active window.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.Window" /> that provides access to the current window.</value>
+        <remarks>
+          <para>Using the <b>ActiveWindow</b> property, you can gain immediate access to the window that is currently being viewed by the user, and then use the properties and methods of the <b>Window</b> object that it returns.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>ActiveWindow</b> property used to retrieve the <b>Window</b> object for the current window, and then the <see cref="P:Microsoft.Office.InfoPath.Window.Caption" /> property is used to display the title bar text of the window.</para>
+          <code>MessageBox.Show(this.Application.ActiveWindow.Caption);</code>
+          <code>MessageBox.Show(Me.Application.ActiveWindow.Caption)</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="CacheFormTemplate">
@@ -75,9 +89,40 @@
         <Parameter Name="formTemplateLocation" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="formTemplateLocation">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="formTemplateLocation">Specifies the Uniform Resource Identifier (URI) of the form template. This parameter can be specified as a form definition (.xsf) file or a form template (.xsn) file.</param>
+        <summary>Examines the form template in the cache and, if necessary, updates it from the published location of the form template.</summary>
+        <remarks>
+          <para>If the form template that currently exists in the cache matches the form template from the published location, no caching takes place. If the computer is offline and the form is already in the cache, the cache is kept and no update will occur.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>CacheMyFormTemplates</b> custom function loops through the location for each the form template specified in the <b>forms</b> array and passes that value to the <b>CacheFormTemplate</b> method for evaluation.</para>
+          <code>private string[] _forms = 
+{ 
+   @"\\MyServer\MyForms\MyForm.xsn", 
+   @"\\MyServer\MyForms\manifest.xsf" 
+};
+
+private void someFunction()
+{
+...
+   CacheMyFormTemplates(_forms);
+...
+}
+
+private void CacheMyFormTemplates(string[] forms)
+{ 
+   foreach (string form in forms)
+   {
+      this.Application.CacheFormTemplate(form);
+   }
+}</code>
+        </example>
+        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="ComAddIns">
@@ -96,9 +141,38 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <b>Microsoft.Office.Core.COMAddIns</b> object containing information about the COM Add-ins registered for the current InfoPath application.</summary>
+        <value>A <b>Microsoft.Office.Core.COMAddIns</b> collection that contains information about the COM Add-ins registered for the current InfoPath application.</value>
+        <remarks>
+          <para>The <b>COMAddIns</b> object returned by the InfoPath <b>ComAddIns</b> property is implemented in the <b>Microsoft.Office.Core</b> namespace. The <b>Microsoft.Office.Core.COMAddIns</b> object provides information about the collection of InfoPath COM add-ins that are registered in the Windows registry of the user's computer. To access the members of <b>Microsoft.Office.Core</b> namespace, you must first add a reference to the Microsoft Office 14.0 Object Library on the COM tab of the Add Reference dialog box in Visual Studio. </para>
+          <para>To use the <b>Microsoft.Office.InfoPath.ComAddIns</b> property to access the <b>Microsoft.Office.Core.COMAddIns</b> object, you must cast the InfoPath <b>ComAddIns</b> property to the Office <b>COMAddIns</b> type as shown in the code example. </para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example accesses the first item in the <b>COMAddIns</b> collection that is returned by the <b>ComAddIns</b> property.</para>
+          <code>Object objectReference = 1;
+Microsoft.Office.InfoPath.Application app = 
+   this.Application;
+
+Microsoft.Office.Core.COMAddIns myComAddIns = 
+   (Microsoft.Office.Core.COMAddIns)app.ComAddIns;
+
+Microsoft.Office.Core.COMAddIn myComAddIn = 
+   myComAddIns.Item(ref objectReference);</code>
+          <code>Dim objectReference As Object  = 1
+Dim app As Microsoft.Office.InfoPath.Application = _
+   Me.Application
+
+Dim myComAddins As Microsoft.Office.Core.COMAddIns = _
+   DirectCast(app.ComAddIns, Microsoft.Office.Core.COMAddIns)
+
+Dim myComAddIn As Microsoft.Office.Core.COMAddIn = _
+   myComAddIns.Item(objectReference)
+</code>
+        </example>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Environment">
@@ -117,9 +191,17 @@
         <ReturnType>Microsoft.Office.InfoPath.Environment</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to an <see cref="T:Microsoft.Office.InfoPath.Environment" /> object that can be used to determine which runtime environment (InfoPath, Web browser, or mobile browser) the form is running in.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.Environment" /> object that can be used to determine which runtime environment (InfoPath, Web browser, or mobile browser) the form is running in.</value>
+        <remarks>
+          <para>The <b>Environment</b> object can be used to determine which runtime environment the form is running in.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>For an example of how to use the <b>Environment</b> property, see the <see cref="T:Microsoft.Office.InfoPath.Environment" /> class topic.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetFormTemplateLocation">
@@ -141,10 +223,26 @@
         <Parameter Name="cacheId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="cacheId">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="cacheId">A string that identifies the form template in the local InfoPath form cache.</param>
+        <summary>Gets the Uniform Resource Locator (URL) or universal naming convention (UNC) location of a form template from the local cache ID.</summary>
+        <returns>The URL or UNC for the published location of the form template.</returns>
+        <remarks>
+          <para>The value to pass as the <paramref name="cacheID" /> parameter can be identified from the following location in the file system:</para>
+          <code>%USERPROFILE%\Local Settings\Application Data\Microsoft\InfoPath\FormCache1\&lt;span class="placeholder"&gt;foldername&lt;/span&gt;\&lt;span class="placeholder"&gt;cacheID&lt;/span&gt;</code>
+          <para>Where foldername is a random name assigned in a user's form cache, and cacheID is the name of the folder that contains the cached form template and the cache ID value.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, a cache ID value is passed to the <b>GetFormTemplateLocation</b> method to display the published location of the form template.</para>
+          <code>MessageBox.Show(this.Application.GetFormTemplateLocation(
+   "37d5ef02fa44a797$"));</code>
+          <code>MessageBox.Show(Me.Application.GetFormTemplateLocation( _
+   "37d5ef02fa44a797$"))</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="IsDestinationReachable">
@@ -166,10 +264,36 @@
         <Parameter Name="destination" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="destination">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="destination">Specifies the location to check for network connectivity as an IP address, UNC path, or URLs.</param>
+        <summary>Gets a value indicating whether a connection can be made to the destination computer using the specified Uniform Resource Locator (URL), universal naming convention (UNC) path, or IP address.</summary>
+        <returns>
+          <b>true</b> if a connection can be made to the specified URL, UNC, or IP address; otherwise, <b>false</b>.</returns>
+        <remarks>
+          <para>The value specified for <paramref name="destination" /> must be either a UNC path that includes a server name and a share name, such as @"\\MyServer\MyShare", or a URL that begins with one of the following protocol identifiers: http, https, or file.</para>
+          <para>
+            <b>Note</b>: To get the same functionality when using the <see cref="T:Microsoft.Office.InfoPath.FormControl" />, use the <see cref="M:Microsoft.Office.InfoPath.NetworkState.IsDestinationReachable(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.NetworkState" /> class.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the <b>Button</b> control displays whether a connection can be made to the specified URL.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   string result = this.Application.IsDestinationReachable(
+      "http://www.microsoft.com").ToString();
+   MessageBox.Show(result);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   result As String = Me.Application.IsDestinationReachable( _
+      "http://www.microsoft.com").ToString()
+   MessageBox.Show(result)
+End Sub</code>
+        </example>
+        <exception cref="T:System.IO.FileNotFoundException">The location of the destination cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="LanguageSettings">
@@ -188,9 +312,29 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to the <b>Microsoft.Office.Core.LanguageSettings</b> object.</summary>
+        <value>A reference to the <b>Microsoft.Office.Core.LanguageSettings</b> object.</value>
+        <remarks>
+          <para>After you establish a reference to the object returned by the <b>LanguageSettings</b> property, you can access all the properties and methods of the <b>LanaguageSettings</b> class.</para>
+          <para>
+            <b>Important</b>: For the <b>LanguageSettings</b> property to work, you must establish a reference to the Microsoft Office 14.0 Object Library (from the COM tab of the Add Reference dialog box in Visual Studio 2012). This will establish a reference to the <b>Microsoft.Office.Core</b> namespace, which contains the <b>LanguageSettings</b> class. Additionally, the form must be running as Full Trust.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example uses the <b>get_LanguageID</b> method (or the <b>LanguageID</b> property) of the <b>LanguageSettings</b> class to return the LCID value (a four-digit number) for the language that is currently being used for the Office user interface.</para>
+          <para>This example requires a <b>using</b> or <b>Imports</b> directive for the <b>Microsoft.Office.Core</b> namespace in the declarations section of the form code module.</para>
+          <code>LanguageSettings langSettings = 
+   (LanguageSettings)this.Application.LanguageSettings;
+int lcid = 
+   langSettings.get_LanguageID (MsoAppLanguageID.msoLanguageIDUI);</code>
+          <code>Dim langSettings As LanguageSettings  = 
+   DirectCast(Me.Application.LanguageSettings, LanguageSettings)
+Dim lcid As Integer  = 
+   langSettings.LanguageID (MsoAppLanguageID.msoLanguageIDUI)</code>
+        </example>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="MachineOnlineState">
@@ -209,9 +353,20 @@
         <ReturnType>Microsoft.Office.InfoPath.MachineState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the current connection state of the client computer.</summary>
+        <value>One of the <see cref="T:Microsoft.Office.InfoPath.MachineState" /> values.</value>
+        <remarks>
+          <para>
+            <b>Note</b>: To get the same functionality when using the <see cref="T:Microsoft.Office.InfoPath.FormControl" /> , use the <see cref="P:Microsoft.Office.InfoPath.NetworkState.MachineOnlineState" /> property of the <see cref="T:Microsoft.Office.InfoPath.NetworkState" /> class.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>MachineOnlineState</b> property is used to display the current connection state of the client computer.</para>
+          <code>MessageBox.Show(this.Application.MachineOnlineState.ToString());</code>
+          <code>MessageBox.Show(Me.Application.MachineOnlineState.ToString())</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -230,9 +385,21 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the name of the InfoPath application.</summary>
+        <value>The name of the InfoPath application.</value>
+        <remarks>
+          <para>The name of the application does not contain the version number. To obtain the version number of an application, use the <see cref="P:Microsoft.Office.InfoPath.Application.Version" /> property.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Name</b> property is used to display the name of the application.</para>
+          <code>string appName = this.Application.Name;
+MessageBox.Show(appName);</code>
+          <code>Dim appName As String = Me.Application.Name
+MessageBox.Show(appName)</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Quit">
@@ -252,8 +419,19 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Quits the InfoPath application without prompting users to save open forms.</summary>
+        <remarks>
+          <para>If the <b>Quit</b> method is used in a form that is not fully trusted, the method will return a "permission denied" error.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Quit</b> method of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class is used to quit InfoPath without prompting the user to save any of the currently open forms. </para>
+          <code>this.Application.Quit();</code>
+          <code>Me.Application.Quit()</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>Quit</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="Quit">
@@ -275,9 +453,22 @@
         <Parameter Name="force" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="force">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="force">Determines whether open forms will be saved during the quit operation. If set to <b>false</b>, all forms will be closed without saving, even if the data in the forms has been changed. If set to <b>true</b>, the user will be prompted to save the forms. The default value is <b>false</b>.</param>
+        <summary>Quits the InfoPath application with the option to prompt users to save forms that are being closed.</summary>
+        <remarks>
+          <para>If the <b>Quit</b> method is used in a form that is not fully trusted, the method will raise a <b>System.Security.SecurityException</b> exception.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Quit</b> method of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class is used to quit InfoPath and prompt the user to save any of the currently open forms. </para>
+          <code>this.Application.Quit(true);</code>
+          <code>Me.Application.Quit(true)</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>Quit</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="RegisterFormTemplate">
@@ -299,9 +490,17 @@
         <Parameter Name="formTemplateLocation" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="formTemplateLocation">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="formTemplateLocation">Specifies the Uniform Resource Locator (URL) of the form template. This parameter can be specified as a form definition (.xsf) file or a form template (.xsn) file.</param>
+        <summary>Installs the specified form template.</summary>
+        <remarks>
+          <para>If the form template has already been registered, the form template's registration record will be overwritten. To control whether a previously registered form template's record is overwritten, use the <see cref="M:Microsoft.Office.InfoPath.Application.RegisterFormTemplate(System.String,System.String)" /> method instead.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="RegisterFormTemplate">
@@ -324,10 +523,34 @@
         <Parameter Name="behavior" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="formTemplateLocation">To be added.</param>
-        <param name="behavior">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="formTemplateLocation">Specifies the Uniform Resource Locator (URL) of the form template. This parameter can be specified as a form definition (.xsf) file or a form template (.xsn) file.</param>
+        <param name="behavior">Specifies how the form template is to be installed. The default value is "overwrite". The only other valid value for this parameter is "new-only".</param>
+        <summary>Installs the specified form template with the option to overwrite the previous registration record for the form template.</summary>
+        <remarks>
+          <para>If the form template has already been registered, and "new-only" is specified for the <paramref name="behavior" /> parameter, the <b>RegisterFormTemplate</b> method will return an error. If "overwrite" is specified, the form template's registration record will be overwritten.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>RegisterFormTemplate</b> method of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class is used in a function to install a form template. The example assumes that there is a <b>using</b> or <b>Imports</b> statement for the <b>Microsoft.Office.InfoPath</b> namespace in the declarations section of the class that contains the function, and that the Microsoft InfoPath 3.0 Type Library is referenced on the COM tab of the Add Reference dialog box in Visual Studio.</para>
+          <code>public void InstallForm()
+{
+Microsoft.Office.InfoPath.Application infoPathApp = 
+   new Microsoft.Office.InfoPath.Application();
+infoPathApp.RegisterFormTemplate(@"C:\My Forms\MyFormTemplate.xsn", 
+   "overwrite");
+}</code>
+          <code>Public Sub InstallForm()
+Dim infoPathApp As Microsoft.Office.InfoPath.Application = _
+   new Microsoft.Office.InfoPath.Application()
+infoPathApp.RegisterFormTemplate("C:\My Forms\MyFormTemplate.xsn", _
+   "overwrite")
+End Sub</code>
+        </example>
+        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="UnregisterFormTemplate">
@@ -349,9 +572,31 @@
         <Parameter Name="formTemplateLocation" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="formTemplateLocation">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="formTemplateLocation">Specifies the Uniform Resource Identifier (URI) of the form template.</param>
+        <summary>Uninstalls the specified form template.</summary>
+        <remarks>
+          <para>If the form template cannot be uninstalled, the <b>UnregisterFormTemplate</b> method will raise an exception.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>UnregisterFormTemplate</b> method of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class is used in a function to uninstall the specified form template. The example assumes that there is a <b>using</b> or <b>Imports</b> statement for the <b>Microsoft.Office.InfoPath</b> namespace in the declarations section of the class that contains the function, and that the Microsoft InfoPath 3.0 Type Library is referenced on the COM tab of the Add Reference dialog box in Visual Studio.</para>
+          <code>public void UninstallForm()
+{
+Microsoft.Office.InfoPath.Application infoPathApp = 
+   new Microsoft.Office.InfoPath.Application();
+infoPathApp.UnregisterFormTemplate(@"C:\My Forms\MyFormTemplate.xsn");
+}</code>
+          <code>Public Sub UninstallForm()
+Dim infoPathApp As Microsoft.Office.InfoPath.Application = _
+   new Microsoft.Office.InfoPath.Application()
+infoPathApp.UnregisterFormTemplate("C:\My Forms\MyFormTemplate.xsn")
+End Sub</code>
+        </example>
+        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="UsableHeight">
@@ -370,9 +615,18 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the available screen height, the maximum number of points to which you can set the height of an InfoPath document window.</summary>
+        <value>The available screen height in points.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>UsableHeight</b> property is used to display the maximum available screen height in points.</para>
+          <code>MessageBox.Show(this.Application.UsableHeight.ToString());</code>
+          <code>MessageBox.Show(Me.Application.UsableHeight.ToString())</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="UsableWidth">
@@ -391,9 +645,18 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the available screen width, the maximum number of points to which you can set the width of an InfoPath document window.</summary>
+        <value>The available screen width in points.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>UsableWidth</b> property is used to display the maximum available screen width in points.</para>
+          <code>MessageBox.Show(this.Application.UsableWidth.ToString());</code>
+          <code>MessageBox.Show(Me.Application.UsableWidth.ToString())</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="User">
@@ -412,9 +675,18 @@
         <ReturnType>Microsoft.Office.InfoPath.User</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.User" /> object.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.User" /> that represents the current user.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>User</b> property is used to retrieve the <b>User</b> object, and then the <see cref="P:Microsoft.Office.InfoPath.User.UserName" /> property is used to display the current user's user name.</para>
+          <code>MessageBox.Show(this.Application.User.UserName);</code>
+          <code>MessageBox.Show(Me.Application.User.UserName)</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Version">
@@ -433,9 +705,20 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the InfoPath version number.</summary>
+        <value>The application version number.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Version</b> property used to display the version number of the application.</para>
+          <code>string appVersion = this.Application.Version;
+MessageBox.Show(appVersion);</code>
+          <code>Dim appVersion As String = Me.Application.Version
+MessageBox.Show(appVersion)</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Windows">
@@ -454,9 +737,27 @@
         <ReturnType>Microsoft.Office.InfoPath.WindowCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.WindowCollection" />.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.WindowCollection" /> for the current session.</value>
+        <remarks>
+          <para>After you have set a reference to the <b>WindowsCollection</b> class, you can use its properties to access each of the <see cref="T:Microsoft.Office.InfoPath.Window" /> objects that it contains.</para>
+          <para>
+            <b>Note</b>: The <b>WindowsCollection</b> type can be used only to get the count of the <b>Window</b> objects that it contains or to return a reference to a <b>Window</b> object. It cannot be used to add or remove <b>Window</b> objects.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <see cref="M:System.Windows.Forms.MessageBox.Show(System.String)" /> method of the <see cref="T:System.Windows.Forms.MessageBox" /> class is used to display message boxes with the count of windows open (using the <see cref="P:Microsoft.Office.InfoPath.WindowCollection.Count" /> property) and the caption of the first window in the collection (using the <see cref="P:Microsoft.Office.InfoPath.Window.Caption" /> property).</para>
+          <code>int windowCount = this.Application.Windows.Count;
+Window myWindow = this.Application.Windows[0];
+MessageBox.Show ("Count: " + windowCount.ToString());
+MessageBox.Show("Caption: " + myWindow.Caption);</code>
+          <code>Dim windowCount As Integer = Me.Application.Windows.Count
+Dim myWindow As Window  = Me.Application.Windows(0)
+MessageBox.Show ("Count: " &amp;amp; windowCount.ToString())
+MessageBox.Show("Caption: " &amp;amp; myWindow.Caption)</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="XmlForms">
@@ -475,9 +776,21 @@
         <ReturnType>Microsoft.Office.InfoPath.XmlFormCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" />.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> that represents the collection of forms that are currently open.</value>
+        <remarks>
+          <para>After you have set a reference to the <b>XmlFormcollection</b> type, you can use its properties to access each of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> objects that it contains.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>XmlForms</b> property is used to access the <see cref="P:Microsoft.Office.InfoPath.XmlFormCollection.Count" /> property of the <b>XmlFormCollection</b> and display the value in a message box.</para>
+          <code>int formsCount = this.Application.XmlForms.Count;
+MessageBox.Show(formsCount.ToString());</code>
+          <code>Dim formsCount As Integer = Me.Application.XmlForms.Count
+MessageBox.Show(formsCount.ToString())</code>
+        </example>
       </Docs>
     </Member>
   </Members>

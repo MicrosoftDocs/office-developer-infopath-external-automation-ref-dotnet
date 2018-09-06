@@ -14,8 +14,16 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a connection for submitting data to a Microsoft Access or Microsoft SQL Server database.</summary>
+    <remarks>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" /> class provides properties that can be used to get and set information about the data connection's connection string, SQL command text, and timeout value. It also provides a method for creating a SQL command text fragment based on a specified XML node's attributes.</para>
+      <para>
+        <b>Note</b>: The <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" /> class and its members will only work in code for form templates that are designed to be opened in the Microsoft InfoPath editor. This type and its members will not run in code for a browser-enabled form deployed to InfoPath Forms Services.</para>
+      <para>When a form designer creates a new form template by using the Database template, and then specifies the database to connect to, an <see cref="T:Microsoft.Office.InfoPath.AdoQueryConnection" /> object for this connection is added to the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> collection.</para>
+      <para>If the form designer also enables submitting to this ADO connection, then an <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" /> object for this connection is added to the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> collection.</para>
+      <para>For both kinds of connection, the name of the connection is specified by the form designer in the Data Connection Wizard user interface. The default names assigned in the wizard for each kind of connection are "Main connection" (<b>AdoQueryConnection</b>) and "Main connection submit" (<b>AdoSubmitConnection</b>).</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -54,10 +62,67 @@
         <Parameter Name="input" Type="System.Xml.XPath.XPathNavigator" />
       </Parameters>
       <Docs>
-        <param name="input">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="input">An <see cref="T:System.Xml.XPath.XPathNavigator" /> object that specifies the XML node to be converted to an SQL fragment.</param>
+        <summary>Returns a SQL command text fragment using the specified XML node.</summary>
+        <returns>The WHERE clause for the specified node.</returns>
+        <remarks>
+          <para>The fragment of SQL that the <b>BuildSQLFromXMLNodes</b> method generates is an SQL <b>WHERE</b> clause in the form of field = value pairs. The XML node that you specify for the <paramref name="input" /> parameter must be a descendant of the <b>dfs:queryFields</b> node of the form. For example, if the user queried the <b>Employees</b> table of the Northwind database by entering <b>Davolio</b> and <b>Nancy</b> in the query fields for the <b>Last Name</b> and <b>First Name</b> fields, the SQL fragment returned by the <b>BuildSQLFromXmlNode</b> method would be:</para>
+          <code>("Employees"."LastName"='Davolio' AND "Employees"."FirstName"='Nancy')</code>
+          <para>You can add the SQL command text fragment to the existing SQL command string of the <b>ADOSubmitConnection</b> object using the <see cref="P:Microsoft.Office.InfoPath.AdoSubmitConnection.Command" /> property.</para>
+          <para>
+            <b>Note</b>: To determine the XPath expression for the table that contains the query field values to pass for the <paramref name="input" /> parameter, display the Data Source task pane, expand the queryFields group, right-click the table that contains the query fields you want to work with, and then click Copy XPath.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the event handler for a <b>Button</b> control uses the <b>BuildSQLFromXMLNodes</b> method of the <b>AdoSubmitConnection</b> class to parse the current query field values and display them in a message box.</para>
+          <para>This example assumes that the form template has a data connection for submitting data named "Main connection submit" to the <b>Employees</b> table in the SQL Server Northwind sample database.</para>
+          <code>public void DisplaySQL_Clicked(object sender, ClickedEventArgs e)
+{
+   // Get the query fields node.
+   string queryFieldsXPath = 
+      "dfs:myFields/dfs:queryFields/q:Employees";
+   XPathNavigator mainDataSourceNav = MainDataSource.CreateNavigator();
+   XPathNavigator queryFieldsNav = mainDataSourceNav.SelectSingleNode(
+      queryFieldsXPath, NamespaceManager);
+
+   // Create AdoSubmitConnection from the 
+   // DataConnections collection.
+   AdoSubmitConnection myAdoSubmitConnection = 
+      (AdoSubmitConnection)(DataConnections["Main connection submit"]);
+   
+   // Display BuildSQLFromXMLNodes output.
+   string sqlFromXmlNodes = 
+      myAdoSubmitConnection.BuildSqlFromXmlNodes(queryFieldsNav);
+   MessageBox.Show(sqlFromXmlNodes);
+}</code>
+          <code>Public Sub DisplaySQL_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   ' Get the query fields node.
+   Dim queryFieldsXPath As String = 
+      "dfs:myFields/dfs:queryFields/q:Employees"
+   Dim mainDataSourceNav As XPathNavigator  = _
+      MainDataSource.CreateNavigator()
+   Dim queryFieldsNav As XPathNavigator = _
+      mainDataSourceNav.SelectSingleNode( _
+      queryFieldsXPath, NamespaceManager)
+
+   ' Create AdoSubmitConnection from the 
+   ' DataConnections collection.
+   Dim myAdoSubmitConnection As AdoSubmitConnection  = _
+      DirectCast(DataConnections["Main connection submit"], _
+      AdoSubmitConnection)
+   
+   ' Display BuildSQLFromXMLNodes output.
+   Dim sqlFromXmlNodes As String  = 
+      myAdoSubmitConnection.BuildSqlFromXmlNodes(queryFieldsNav)
+   MessageBox.Show(sqlFromXmlNodes)
+End Sub</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">One of the following conditions has occurred:The SQL command string generated from the input node cannot be parsed.The input node is not a table of values.The input node contains columns (XML attributes) that are not present in the data source to which they are being submitted.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Command">
@@ -76,9 +141,69 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the SQL command string text for an <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" /> object.</summary>
+        <value>The SQL command string for the data connection.</value>
+        <remarks>
+          <para>The <b>Command</b> property of the <b>ADOSubmitConnection</b> object contains the SQL command text that is used by the ADO data connection to submit data to an ActiveX Data Objects/OLEDB external data source.</para>
+          <para>
+            <b>Important</b>: An <b>ADOSubmitConnection</b> object can only exist when there is a corresponding <b>ADOQueryConnection</b> object, and the data connections represented by both objects share the same set of property values. Changing the value of this property for the <b>ADOSubmitConnection</b> object will also change the value of the same property for the corresponding <b>ADOQueryConnection</b> object.</para>
+          <para>
+            <b>Note</b>: The <b>ADOSubmitConnection</b> object is limited to work only with Microsoft SQL Server and Microsoft Access databases.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Command</b> property of the <b>AdoSubmitConnection</b> class and the <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method of the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> class are used to query a table in a secondary data source named <b>Employees</b>. The query is executed against the data connection created in InfoPath design mode to the database that contains the <b>Employees</b> table, which is named "EmployeesSubmit". </para>
+          <para>First, the value entered by the user in the field <b>my:EmpID</b> is used to update the SQL command text using the <b>Command</b> property. Then, the <b>Execute</b> method is used to refresh the data retrieved by data connection, which updates the record displayed in a Repeating Table control which bound to the <b>Employees</b> table on the form. This example requires the <b>my:EmpID</b> field in the main data source bound to a Text Box control in a view that contains a <b>Button</b> control to invoke the following code.</para>
+          <code>public void RefreshData_Clicked(object sender, ClickedEventArgs e)
+{
+   // Get the Employees connection from the 
+   // DataConnections collection.
+   AdoSubmitConnection myAdoSubmitConnection =
+      (AdoSubmitConnection)(this.DataConnections["EmployeesSubmit"]);
+
+   // Get the employee's ID from the EmpID field in 
+   // the main data source.
+   XPathNavigator myNav = 
+      CreateNavigator().SelectSingleNode("/my:myFields/my:EmpID", 
+      NamespaceManager);
+   // Assign the value from the field to a variable.
+   string employeeID = myNav.InnerXml;
+
+   // Change the SQL command for Employees connection to retrieve 
+   // the record of the Employee's ID entered by the user.
+   myAdoSubmitConnection.Command = 
+      "select * from [Employees] where [EmployeeID] = " + employeeID;
+
+   // Execute the updated command against the data connection to 
+   // refresh the data.
+   myAdoSubmitConnection.Execute();
+}</code>
+          <code>Public Sub RefreshData_Clicked(ByVal sender As Object, ByVal e As ClickedEventArgs)
+   ' Get the Employees connection from the 
+   ' DataConnections collection.
+   Dim myAdoSubmitConnection As AdoSubmitConnection = _
+      DirectCast(Me.DataConnections("EmployeesSubmit"), _
+      AdoSubmitConnection)
+
+   ' Get the employee's ID from the EmpID field in 
+   ' the main data source.
+   Dim myNav As XPathNavigator = _
+      CreateNavigator().SelectSingleNode("/my:myFields/my:EmpID", _
+      NamespaceManager)
+   Dim employeeID As String = myNav.InnerXml
+
+   ' Change the SQL command for Employees connection to retrieve 
+   ' the record of the Employee's ID entered by the user.
+   myAdoQueryConnection.Command = _
+      "select * from [Employees] where [EmployeeID] = " &amp;amp; employeeID
+
+   ' Execute the updated command against the data connection to 
+   ' refresh the data.
+    myAdoSubmitConnection.Execute()
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Connection">
@@ -97,9 +222,70 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the connection string used for an <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" /> object.</summary>
+        <value>The connection string for the data connection.</value>
+        <remarks>
+          <para>The <b>Connection</b> property of the <b>ADOSubmitConnection</b> object provides access to the connection string that is used by the ADO data connection to connect to an ActiveX Data Objects/OLEDB external data source.</para>
+          <para>
+            <b>Important</b>: An <b>ADOSubmitConnection</b> object can only exist when there is a corresponding <b>ADOQueryConnection</b> object, and the data connections represented by both objects share the same set of property values. Changing the value of this property for the <b>ADOSubmitConnection</b> object will also change the value of the same property for the corresponding <b>ADOQueryConnection</b> object.</para>
+          <para>
+            <b>Note</b>: The <b>ADOSubmitConnection</b> object is limited to work only with Microsoft SQL Server and Microsoft Access databases.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the event handler for a <b>Button</b> control uses the <b>Connection</b> property of the <b>AdoSubmitConnection</b> class to update the connection string for the secondary data source named <b>Employees</b> to point to a new server using the value entered in the <b>ServerName</b> field in the main data source. Then the <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method of the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> class is used to re-query the data connection on the new server.</para>
+          <code>public void ChangeServerName_Clicked(object sender, ClickedEventArgs e)
+{
+   // Get the Employees connection from the 
+   //DataConnections collection.
+   AdoSubmitConnection myAdoSubmitConnection = 
+      (AdoSubmitConnection)(this.DataConnections["Employees"]);
+   
+   // Get the new server name from the ServerName field in 
+   // the main data source.
+   XPathNavigator myNav = 
+      CreateNavigator().SelectSingleNode("/my:myFields/my:ServerName",
+      NamespaceManager);
+   string newServer = myNav.InnerXml;
+
+   // Build the new connection string.
+   string connectionString = 
+      "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=True;";
+   connectionString += "Initial Catalog=SalesDB;Data Source=" + 
+      newServer;
+
+   // Set the new connection string.
+   myAdoSubmitConnection.Connection = connectionString;
+
+   // Requery the data source.
+   myAdoSubmitConnection.Execute();
+}</code>
+          <code>Public Sub ChangeServerName_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   ' Get the Employees connection from 
+   ' the DataConnections collection.
+   Dim myAdoSubmitConnection As AdoSubmitConnection = _
+      DirectCast(Me.DataConnections("Employees"), AdoSubmitConnection)
+
+   ' Get the new server name from the ServerName field in 
+   ' the main data source.
+   Dim myNav As XPathNavigator = _
+     CreateNavigator().SelectSingleNode("/my:myFields/my:ServerName", _
+      NamespaceManager)
+   Dim newServer As String = myNav.InnerXml
+
+   ' Build the new connection string.
+   Dim connectionString As String = _
+      "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=True;"
+   connectionString = connectionString &amp;amp; _
+      "Initial Catalog=SalesDB;Data Source=" &amp;amp; newServer
+
+   ' Requery the data source.
+    myAdoSubmitConnection.Execute()
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Timeout">
@@ -118,9 +304,42 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the timeout value in seconds for a data connection associated with an <see cref="T:Microsoft.Office.InfoPath.AdoSubmitConnection" /> object.</summary>
+        <value>The timeout value in seconds.</value>
+        <remarks>
+          <para>The <b>Timeout</b> property of the <b>ADOSubmitConnection</b> object contains the timeout value that is used by the ADO data adapter to regulate the time used to submit data to an ActiveX Data Objects/OLEDB external data source.</para>
+          <para>The <b>Timeout</b> property specifies the timeout value in seconds. By default, the Microsoft InfoPath application sets the timeout value to 30 seconds. The value specified for the <b>Timeout</b> property will override this application setting.</para>
+          <para>
+            <b>Important</b>: An <b>ADOSubmitConnection</b> object can only exist when there is a corresponding <b>ADOQueryConnection</b> object, and the data connections represented by both objects share the same set of property values. Changing the value of this property for the <b>ADOSubmitConnection</b> object will also change the value of the same property for the corresponding <b>ADOQueryConnection</b> object.</para>
+          <para>
+            <b>Note</b>: The <b>ADOSubmitConnection</b> object is limited to work only with Microsoft SQL Server and Microsoft Access databases.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the event handler for a <b>Button</b> control uses the <b>Timeout</b> property of the <b>AdoSubmitConnection</b> class, which is used to display the timeout value.</para>
+          <code>public void DisplayTimeout_Clicked(object sender, ClickedEventArgs e)
+{
+   // Get the Employees connection from the 
+   // DataConnections collection.
+   AdoSubmitConnection myAdoSubmitConnection = 
+      (AdoSubmitConnection)(this.DataConnections["Employees"]);
+   
+   // Display Timeout value.
+   MessageBox.Show (myAdoSubmitConnection.Timeout.ToString());
+}</code>
+          <code>Public Sub DisplayTimeout_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   ' Get the Employees connection from 
+   ' the DataConnections collection.
+   Dim myAdoSubmitConnection As AdoSubmitConnection = _
+      DirectCast(Me.DataConnections("Employees"), AdoSubmitConnection)
+
+   ' Display Timeout value.
+   MessageBox.Show (myAdoSubmitConnection.Timeout.ToString())
+End Sub</code>
+        </example>
       </Docs>
     </Member>
   </Members>

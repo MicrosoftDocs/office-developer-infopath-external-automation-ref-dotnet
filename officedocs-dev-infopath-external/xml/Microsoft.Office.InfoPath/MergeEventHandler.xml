@@ -20,9 +20,17 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="sender">To be added.</param>
-    <param name="e">To be added.</param>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <param name="sender">The source of the event.</param>
+    <param name="e">A <see cref="T:Microsoft.Office.InfoPath.MergeEventArgs" /> object that contains the event data.</param>
+    <summary>Represents the method that will handle the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Merge" /> event of a form.</summary>
+    <remarks>
+      <para>
+        <b>Important</b>: The code skeleton for an event handler associated with the <b>Merge</b> event, which uses the <b>MergeEventHandler</b> delegate, should be added only from the Microsoft InfoPath user interface. For more information on how to add event handlers in InfoPath, see How Do I: Add an Event Handler.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>For an example of using the <b>MergeEventHandler</b> delegate, see the sample code in the <b>Merge</b> event of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class.</para>
+    </example>
   </Docs>
 </Type>

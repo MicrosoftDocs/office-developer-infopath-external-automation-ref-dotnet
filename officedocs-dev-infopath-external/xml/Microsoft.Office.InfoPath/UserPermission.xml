@@ -14,8 +14,13 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Represents a member of the current form's <see cref="T:Microsoft.Office.InfoPath.UserPermissionCollection" /> collection.</summary>
+    <remarks>
+      <para>The <b>UserPermission</b> class associates a set of permissions for the current form with a single user and an optional expiration date.</para>
+      <para>Define a user and the permissions associated with that user with the properties of the <b>UserPermission</b> class, and then use one of the <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String)" /> methods of the <b>UserPermissionCollection</b> class to add and grant that user permissions on the current form. Use the <see cref="M:Microsoft.Office.InfoPath.UserPermission.Remove" /> method of the <b>UserPermission</b> class or the <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.Remove(System.String)" /> method of the <b>UserPermissionCollection</b> class to remove a user and the user's permissions.</para>
+      <para>While some permissions granted through the user interface apply to all users, such as printing and expiration date, you can use the <b>UserPermission</b> object to assign them on a per-user basis with per-user expiration dates.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -51,9 +56,29 @@
         <ReturnType>System.DateTime</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets the optional expiration date for the permissions on the current form assigned to the user associated with an instance of the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> class.</summary>
+        <value>A <b>System.DateTime</b> that represents the expiration date for the user associated with the <b>UserPermission</b> object.</value>
+        <remarks>
+          <para>An instance of the <b>UserPermission</b> class associates a set of permissions on the current form with a single user and an optional expiration date. The <b>ExpirationDate</b> property gets or sets the optional expiration date of this <b>UserPermission</b> object using the local time zone.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the specified user from <b>UserPermissionsCollection</b> for the current form, and then displays that user's expiration date.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   UserPermission thisUser = 
+      Permission.UserPermissions["someone@example.com"];
+   MessageBox.Show(thisUser.ExpirationDate.ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   UserPermission thisUser = 
+      Permission.UserPermissions("someone@example.com")
+   MessageBox.Show(thisUser.ExpirationDate.ToString())
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Permission">
@@ -72,9 +97,29 @@
         <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets or sets a value representing the permissions on the current form assigned to the user associated with an instance of the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> class. </summary>
+        <value>One or a combination of <see cref="T:Microsoft.Office.InfoPath.PermissionType" /> constants.</value>
+        <remarks>
+          <para>An instance of the <b>UserPermission</b> class associates a set of permissions on the current form with a single user and an optional expiration date. The <b>Permission</b> property gets or sets the set of user permissions specified by this <b>UserPermission</b> object. While some permissions granted through the user interface apply to all users, you can use the <b>UserPermission</b> object to assign them on a per-user basis with per-user expiration dates.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the specified user from <b>UserPermissionsCollection</b> for the current form, and then displays that user's permissions.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   UserPermission thisUser = 
+      Permission.UserPermissions["someone@example.com"];
+   MessageBox.Show(thisUser.Permission.ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   UserPermission thisUser = _
+      Permission.UserPermissions("someone@example.com")
+   MessageBox.Show(thisUser.Permission.ToString())
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -94,8 +139,27 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Removes the current <b>UserPermission</b> object from the form's permissions.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the specified user from <b>UserPermissionsCollection</b> for the current form, and then removes that user.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   UserPermission thisUser = 
+      Permission.UserPermissions["someone@example.com"];
+   thisUser.Remove());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   UserPermission thisUser = _
+      Permission.UserPermissions("someone@example.com")
+   thisUser.Remove())
+End Sub</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="UserId">
@@ -114,9 +178,25 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets the e-mail address of the user whose permissions on the current form are determined by the specified <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object.</summary>
+        <value>The user's e-mail address.</value>
+        <remarks>
+          <para>An instance of the <b>UserPermission</b> class associates a set of permissions on the current form with a single user and an optional expiration date. The <b>UserId</b> property returns the e-mail address of the user whose permissions are determined by the <b>UserPermission</b> object.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the specified user from <b>UserPermissionsCollection</b> for the current form, and then displays that user's e-mail address.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(Permission.UserPermissions[1].UserId);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Permission.UserPermissions[1].UserId)
+End Sub</code>
+        </example>
       </Docs>
     </Member>
   </Members>

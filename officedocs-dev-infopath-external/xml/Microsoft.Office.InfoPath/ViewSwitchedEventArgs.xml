@@ -14,8 +14,11 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" /> event of a form.</summary>
+    <remarks>
+      <para>In Microsoft InfoPath, the <b>ViewSwitchedEventArgs</b> class does not provide any properties and methods for the <b>ViewSwitched</b> event other than those inherited from <see cref="T:System.Object" />.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
