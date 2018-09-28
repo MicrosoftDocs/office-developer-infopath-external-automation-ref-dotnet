@@ -5,8 +5,8 @@
             <typeFilter name="IInfoPathHostItemProvider" expose="false" />
             <typeFilter name="IInfoPathRuntime" expose="false" />
         </namespaceFilter>
-        <namespace name="Microsoft.Office.Interop.InfoPath.Helper" expose="false" />
-        <namespace name="Microsoft.Office.Interop.InfoPath.SemiTrust" expose="true" >
+        <namespaceFilter name="Microsoft.Office.Interop.InfoPath.Helper" expose="false" />
+        <namespaceFilter name="Microsoft.Office.Interop.InfoPath.SemiTrust" expose="true" >
             <typeFilter name="InfoPathEvidence" expose="false" />
             <typeFilter name="InfoPathPermission" expose="false" />
             <typeFilter name="InfoPathPermissionAttribute" expose="false" />
