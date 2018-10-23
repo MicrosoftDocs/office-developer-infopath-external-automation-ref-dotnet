@@ -103,6 +103,7 @@ End Sub</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">A method was called which attempted to write to the <b>IDictionary</b> that contains input parameters.</exception>
         <example>
           <para>In the following code example, the InfoPath form template that contains the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler code is opened from the command line or a URL using the following syntax.</para>
           <para>Command-line:</para>
@@ -145,7 +146,6 @@ End Sub</code>
    End If
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">A method was called which attempted to write to the <b>IDictionary</b> that contains input parameters.</exception>
       </Docs>
     </Member>
     <Member MemberName="SetDefaultView">
@@ -173,6 +173,8 @@ End Sub</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following code example, the <b>SetDefaultView(Microsoft.Office.InfoPath.ViewInfo)</b> method is used in the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler to set the default view to the second view in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" />.</para>
           <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
@@ -184,8 +186,6 @@ End Sub</code>
    e.SetDefaultView(ViewInfos(1))
 End Sub</code>
         </example>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="SetDefaultView">
@@ -213,6 +213,8 @@ End Sub</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following code example, the <b>SetDefaultView(System.String)</b> method is used in the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler to set the default view to the view named "View2".</para>
           <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
@@ -224,8 +226,6 @@ End Sub</code>
    e.SetDefaultView("View2")
 End Sub</code>
         </example>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
   </Members>

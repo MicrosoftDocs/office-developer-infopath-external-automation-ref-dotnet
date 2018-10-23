@@ -75,6 +75,9 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">One of the following conditions has occurred:The SQL command string generated from the input node cannot be parsed.The input node is not a table of values.The input node contains columns (XML attributes) that are not present in the data source to which they are being submitted.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the event handler for a <b>Button</b> control uses the <b>BuildSQLFromXMLNodes</b> method of the <b>AdoSubmitConnection</b> class to parse the current query field values and display them in a message box.</para>
           <para>This example assumes that the form template has a data connection for submitting data named "Main connection submit" to the <b>Employees</b> table in the SQL Server Northwind sample database.</para>
@@ -120,9 +123,6 @@
    MessageBox.Show(sqlFromXmlNodes)
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">One of the following conditions has occurred:The SQL command string generated from the input node cannot be parsed.The input node is not a table of values.The input node contains columns (XML attributes) that are not present in the data source to which they are being submitted.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Command">

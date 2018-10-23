@@ -56,6 +56,16 @@ public void btnAlert_&lt;span class="label"&gt;OnClick&lt;/span&gt;(DocActionEve
   thisXDocument.UI.Alert(field1.text);
  }</code>
         </example>
+        <example>
+          <para>In the following example, the <b>OnClick</b> event handler is used to show the value of <paramref name="my:field1" /> in an message box:</para>
+          <code>[InfoPathEventHandler(MatchPath="btnAlert", EventType=InfoPathEventType.&lt;span class="label"&gt;OnClick&lt;/span&gt;)]
+public void btnAlert_&lt;span class="label"&gt;OnClick&lt;/span&gt;(DocActionEvent e)
+ {
+  IXMLDOMNode field1;
+  field1 = thisXDocument.DOM.selectSingleNode(@"/my:myFields/my:field1");
+  thisXDocument.UI.Alert(field1.text);
+ }</code>
+        </example>
       </Docs>
     </Member>
   </Members>

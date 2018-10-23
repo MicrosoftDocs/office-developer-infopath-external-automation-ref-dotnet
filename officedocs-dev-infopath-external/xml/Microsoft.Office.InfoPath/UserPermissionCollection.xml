@@ -69,6 +69,9 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, and then adds a new user.</para>
           <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
@@ -80,9 +83,6 @@
    Me.Permission.UserPermissions.Add("someone@example.com")
 End Sub</code>
         </example>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -114,6 +114,9 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, and then adds and assigns a user to the Full Control access level.</para>
           <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
@@ -127,9 +130,6 @@ End Sub</code>
       PermissionType.FullControl)
 End Sub</code>
         </example>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -161,6 +161,9 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, adds a new user to the current form, and sets an expiration date of two days from the current date.</para>
           <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
@@ -181,9 +184,6 @@ End Sub</code>
       dtExpirationDate)
 End Sub</code>
         </example>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -217,6 +217,10 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.FormatException">The <b>DateTime</b> value provided is invalid.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, adds and assigns a user to the Full Control access level, and sets an expiration date of two days from the current date.</para>
           <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
@@ -237,10 +241,6 @@ End Sub</code>
       PermissionType.FullControl, dtExpirationDate)
 End Sub</code>
         </example>
-        <exception cref="T:System.FormatException">The <b>DateTime</b> value provided is invalid.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -416,6 +416,8 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and removes the user with the e-mail address <b>someone@example.com</b>.</para>
           <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
@@ -427,8 +429,6 @@ End Sub</code>
    Me.Permission.UserPermissions.Remove("someone@example.com")
 End Sub</code>
         </example>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="RemoveAll">

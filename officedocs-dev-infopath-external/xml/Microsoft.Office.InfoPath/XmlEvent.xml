@@ -66,6 +66,7 @@
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
         <example>
           <para>In the following example, after a change has been made and validated for <b>field9</b>, a value is added to <b>field4</b> to reflect this change.</para>
           <code>public void field9_Changed(object sender, XmlEventArgs e)
@@ -79,7 +80,6 @@
       Me.NamespaceManager).SetValue("Field9 was changed.")
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
     <Member MemberName="Changing">
@@ -110,6 +110,7 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event to a node in secondary data source. This event is not supported for secondary data sources.</exception>
         <example>
           <para>In the following example, when a change is made to <b>field2</b>, the <b>Changing</b> event is raised and a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object for <b>field1</b> is added to the form's <b>FormErrorCollection</b> using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" /> method of the <b>FormErrorCollection</b> class. </para>
           <para>This associates an error message with <b>field1</b>. The string passed as the <paramref name="message" /> parameter of the <b>Add</b> method is displayed in a screen tip when the user hovers over <b>field1</b>. When the user right-clicks <b>field1</b> and then clicks Full error description, InfoPath displays the full error message including the string passed as the <paramref name="messageDetails" /> parameter of the <b>Add</b> method.</para>
@@ -131,7 +132,6 @@ End Sub</code>
       "Changes were made, but have not yet been accepted.")
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event to a node in secondary data source. This event is not supported for secondary data sources.</exception>
       </Docs>
     </Member>
     <Member MemberName="RaiseUndoRedoForChanged">
@@ -199,6 +199,7 @@ EventManager.XmlEvents("/my:myFields/my:field1"). _
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event to a node in a secondary data source. This event is not supported for secondary data sources.</exception>
         <example>
           <para>In the following example, after a change has been accepted for <b>field9</b>, the <b>Validating</b> event is raised and a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object associated with <b>field6</b> is added to the <b>FormErrorCollection</b> of the form using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" /> method. </para>
           <para>This associates an error message with <b>field6</b>. The string passed as the <paramref name="message" /> parameter of the <b>Add</b> method is displayed in a screen tip when the user hovers over <b>field6</b>. When the user right-clicks <b>field6</b> and then clicks Full error description, InfoPath displays the full error message including the string passed as the <paramref name="messageDetails" /> parameter of the <b>Add</b> method.</para>
@@ -223,7 +224,6 @@ EventManager.XmlEvents("/my:myFields/my:field1"). _
       "Field9 was validated and an error was associated with Field6.")
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event to a node in a secondary data source. This event is not supported for secondary data sources.</exception>
       </Docs>
     </Member>
   </Members>

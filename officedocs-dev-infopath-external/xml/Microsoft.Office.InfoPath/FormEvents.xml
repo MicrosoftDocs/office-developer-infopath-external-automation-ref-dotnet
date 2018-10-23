@@ -69,6 +69,7 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method.  </exception>
         <example>
           <para>The following example assumes that your form has a Text Box control bound to a field named <b>DisplayContext</b>, as well as controls bound to other fields and groups on the form. Moving the selection to different fields and groups displays the name of the field or group in the Text Box bound to <b>DisplayContext</b>.</para>
           <code>public void FormEvents_ContextChanged(object sender, 
@@ -102,7 +103,6 @@
    End If
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method.  </exception>
       </Docs>
     </Member>
     <Member MemberName="Loading">
@@ -199,6 +199,7 @@ End Sub</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
         <example>
           <para>In the following example, the event handler for the <b>Loading</b> event is used to determine whether the form has been digitally signed, and if it hasn't sets the <b>Date1</b> field to the current date.</para>
           <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
@@ -244,7 +245,6 @@ End Sub</code>
    myDate.SetValue(System.DateTime.Now.ToString("yyyy-MM-dd"));
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
     <Member MemberName="Merge">
@@ -310,6 +310,7 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
         <example>
           <para>In the following example, the event handler for the <b>Merge</b> event sets variables to indicate the status of the merge operation, calls the <see cref="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.Xml.XPath.XPathNavigator)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class to perform the merge operation, and displays a message when merging is finished.</para>
           <code>private bool _merging = false;
@@ -354,7 +355,6 @@ Public Sub FormEvents_Merge(ByVal sender As Object, _
    End If
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
     <Member MemberName="Save">
@@ -384,6 +384,7 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method.  </exception>
         <example>
           <para>In the following example, the event handler for the <b>Save</b> event checks to see if Field2 is empty, and if it is not performs a save operation. If it is empty, it displays a message and cancels the save operation.</para>
           <code>public void FormEvents_Save(object sender, SaveEventArgs e)
@@ -421,7 +422,6 @@ End Sub</code>
    End If
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method.  </exception>
       </Docs>
     </Member>
     <Member MemberName="Sign">
@@ -451,6 +451,8 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>In the following example, created by adding an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event to the form by clicking Sign Event on the Developer tab in the InfoPath design mode user interface, a digital signature is added to the form by using the <see cref="M:Microsoft.Office.InfoPath.Signature.Sign" /> method of the <see cref="T:Microsoft.Office.InfoPath.Signature" /> class.</para>
           <code>public void FormEvents_Sign(object sender, SignEventArgs e)
@@ -484,8 +486,6 @@ End Sub</code>
    e.SignatureWizard = False
 }</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Submit">
@@ -518,6 +518,7 @@ End Sub</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method.  </exception>
         <example>
           <para>In the following example, the event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event is used to prevent the form from being submitted if the form has not been saved.</para>
           <code>public void FormEvents_Submit(object sender, SubmitEventArgs e)
@@ -538,7 +539,6 @@ End Sub</code>
    End If
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method.  </exception>
       </Docs>
     </Member>
     <Member MemberName="VersionUpgrade">
@@ -567,6 +567,7 @@ End Sub</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
         <example>
           <para>In the following example, the <see cref="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.DocumentVersion" /> and <see cref="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.FormTemplateVersion" /> properties of the <see cref="T:Microsoft.Office.InfoPath.VersionUpgradeEventArgs" /> class are used to display the version numbers of the form and form template.</para>
           <code>public void FormEvents_VersionUpgrade(object sender, VersionUpgradeEventArgs e)
@@ -583,7 +584,6 @@ End Sub</code>
    ' Write code to update form here.
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
     <Member MemberName="ViewSwitched">
@@ -613,6 +613,7 @@ End Sub</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
+        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
         <example>
           <para>In the following example, the event handler for the <b>ViewSwitched</b> event is used to show the name of the view displayed when the view change occurs.</para>
           <code>public void FormEvents_ViewSwitched(object sender, ViewSwitchedEventArgs e)
@@ -626,7 +627,6 @@ End Sub</code>
       Me.CurrentView.ViewInfo.Name)
 End Sub</code>
         </example>
-        <exception cref="T:System.InvalidOperationException">The developer attempted to bind the event in some location other than the <b>InternalStartup</b> method. </exception>
       </Docs>
     </Member>
   </Members>
