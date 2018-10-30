@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class _XDocumentEventSink2_SinkHelper&#xA;Implements _XDocumentEventSink2" />
   <TypeSignature Language="C++ CLI" Value="public ref class _XDocumentEventSink2_SinkHelper sealed : Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2" />
+  <TypeSignature Language="F#" Value="type _XDocumentEventSink2_SinkHelper = class&#xA;    interface _XDocumentEventSink2&#xA;    interface _XDocumentEventSink" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,7 +23,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_dwCookie" />
       <MemberSignature Language="VB.NET" Value="Public m_dwCookie As Integer " />
       <MemberSignature Language="C++ CLI" Value="public: int m_dwCookie;" />
+      <MemberSignature Language="F#" Value="val mutable m_dwCookie : int" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_dwCookie" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -41,7 +43,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -51,6 +53,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnAfterImportDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnAfterImportDelegate As _XDocumentEventSink2_OnAfterImportEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnAfterImportEventHandler ^ m_OnAfterImportDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnAfterImportDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnAfterImportEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnAfterImportDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -60,7 +63,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnAfterImportEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -70,6 +73,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnContextChangeDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnContextChangeDelegate As _XDocumentEventSink2_OnContextChangeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnContextChangeEventHandler ^ m_OnContextChangeDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnContextChangeDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnContextChangeEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnContextChangeDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -79,7 +83,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnContextChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -89,6 +93,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnLoadDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnLoadDelegate As _XDocumentEventSink2_OnLoadEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnLoadEventHandler ^ m_OnLoadDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnLoadDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnLoadEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnLoadDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -98,7 +103,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnLoadEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -108,6 +113,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnMergeRequestDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnMergeRequestDelegate As _XDocumentEventSink2_OnMergeRequestEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnMergeRequestEventHandler ^ m_OnMergeRequestDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnMergeRequestDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnMergeRequestEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnMergeRequestDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -117,7 +123,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnMergeRequestEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -127,6 +133,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnSaveRequestDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnSaveRequestDelegate As _XDocumentEventSink2_OnSaveRequestEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSaveRequestEventHandler ^ m_OnSaveRequestDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnSaveRequestDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSaveRequestEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnSaveRequestDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -136,7 +143,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSaveRequestEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -146,6 +153,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnSignDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnSignDelegate As _XDocumentEventSink2_OnSignEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSignEventHandler ^ m_OnSignDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnSignDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSignEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnSignDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -155,7 +163,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSignEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -165,6 +173,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnSubmitRequestDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnSubmitRequestDelegate As _XDocumentEventSink2_OnSubmitRequestEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSubmitRequestEventHandler ^ m_OnSubmitRequestDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnSubmitRequestDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSubmitRequestEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnSubmitRequestDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -174,7 +183,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSubmitRequestEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -184,6 +193,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnSwitchViewDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnSwitchViewDelegate As _XDocumentEventSink2_OnSwitchViewEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSwitchViewEventHandler ^ m_OnSwitchViewDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnSwitchViewDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSwitchViewEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnSwitchViewDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -193,7 +203,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSwitchViewEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -203,6 +213,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnVersionUpgradeDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_OnVersionUpgradeDelegate As _XDocumentEventSink2_OnVersionUpgradeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnVersionUpgradeEventHandler ^ m_OnVersionUpgradeDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_OnVersionUpgradeDelegate : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnVersionUpgradeEventHandler" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.m_OnVersionUpgradeDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -212,7 +223,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnVersionUpgradeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -222,6 +233,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.OnAfterImport(Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnAfterImport (pEvent As DocEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnAfterImport(Microsoft::Office::Interop::InfoPath::SemiTrust::DocEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnAfterImport : Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent -&gt; unit&#xA;override this.OnAfterImport : Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent -&gt; unit" Usage="_XDocumentEventSink2_SinkHelper.OnAfterImport pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2.OnAfterImport(Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent)</InterfaceMember>
@@ -238,7 +250,7 @@
       </Parameters>
       <Docs>
         <param name="pEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -248,6 +260,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.OnContextChange(Microsoft.Office.Interop.InfoPath.SemiTrust.DocContextChangeEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnContextChange (pEvent As DocContextChangeEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnContextChange(Microsoft::Office::Interop::InfoPath::SemiTrust::DocContextChangeEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnContextChange : Microsoft.Office.Interop.InfoPath.SemiTrust.DocContextChangeEvent -&gt; unit&#xA;override this.OnContextChange : Microsoft.Office.Interop.InfoPath.SemiTrust.DocContextChangeEvent -&gt; unit" Usage="_XDocumentEventSink2_SinkHelper.OnContextChange pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2.OnContextChange(Microsoft.Office.Interop.InfoPath.SemiTrust.DocContextChangeEvent)</InterfaceMember>
@@ -264,7 +277,7 @@
       </Parameters>
       <Docs>
         <param name="pEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -274,6 +287,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.OnLoad(Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnLoad (pEvent As DocReturnEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnLoad(Microsoft::Office::Interop::InfoPath::SemiTrust::DocReturnEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnLoad : Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent -&gt; unit&#xA;override this.OnLoad : Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent -&gt; unit" Usage="_XDocumentEventSink2_SinkHelper.OnLoad pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2.OnLoad(Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent)</InterfaceMember>
@@ -290,7 +304,7 @@
       </Parameters>
       <Docs>
         <param name="pEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -300,6 +314,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.OnMergeRequest(Microsoft.Office.Interop.InfoPath.SemiTrust.MergeEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnMergeRequest (pEvent As MergeEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnMergeRequest(Microsoft::Office::Interop::InfoPath::SemiTrust::MergeEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnMergeRequest : Microsoft.Office.Interop.InfoPath.SemiTrust.MergeEvent -&gt; unit&#xA;override this.OnMergeRequest : Microsoft.Office.Interop.InfoPath.SemiTrust.MergeEvent -&gt; unit" Usage="_XDocumentEventSink2_SinkHelper.OnMergeRequest pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2.OnMergeRequest(Microsoft.Office.Interop.InfoPath.SemiTrust.MergeEvent)</InterfaceMember>
@@ -316,7 +331,7 @@
       </Parameters>
       <Docs>
         <param name="pEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -326,6 +341,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.OnSaveRequest(Microsoft.Office.Interop.InfoPath.SemiTrust.SaveEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnSaveRequest (pEvent As SaveEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnSaveRequest(Microsoft::Office::Interop::InfoPath::SemiTrust::SaveEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnSaveRequest : Microsoft.Office.Interop.InfoPath.SemiTrust.SaveEvent -&gt; unit&#xA;override this.OnSaveRequest : Microsoft.Office.Interop.InfoPath.SemiTrust.SaveEvent -&gt; unit" Usage="_XDocumentEventSink2_SinkHelper.OnSaveRequest pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2.OnSaveRequest(Microsoft.Office.Interop.InfoPath.SemiTrust.SaveEvent)</InterfaceMember>
@@ -342,7 +358,7 @@
       </Parameters>
       <Docs>
         <param name="pEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -352,6 +368,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.OnSign(Microsoft.Office.Interop.InfoPath.SemiTrust.SignEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnSign (pEvent As SignEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnSign(Microsoft::Office::Interop::InfoPath::SemiTrust::SignEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnSign : Microsoft.Office.Interop.InfoPath.SemiTrust.SignEvent -&gt; unit&#xA;override this.OnSign : Microsoft.Office.Interop.InfoPath.SemiTrust.SignEvent -&gt; unit" Usage="_XDocumentEventSink2_SinkHelper.OnSign pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2.OnSign(Microsoft.Office.Interop.InfoPath.SemiTrust.SignEvent)</InterfaceMember>
@@ -368,7 +385,7 @@
       </Parameters>
       <Docs>
         <param name="pEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -378,6 +395,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.OnSubmitRequest(Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnSubmitRequest (pEvent As DocReturnEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnSubmitRequest(Microsoft::Office::Interop::InfoPath::SemiTrust::DocReturnEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnSubmitRequest : Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent -&gt; unit&#xA;override this.OnSubmitRequest : Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent -&gt; unit" Usage="_XDocumentEventSink2_SinkHelper.OnSubmitRequest pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2.OnSubmitRequest(Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent)</InterfaceMember>
@@ -394,7 +412,7 @@
       </Parameters>
       <Docs>
         <param name="pEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -404,6 +422,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.OnSwitchView(Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnSwitchView (pEvent As DocEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnSwitchView(Microsoft::Office::Interop::InfoPath::SemiTrust::DocEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnSwitchView : Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent -&gt; unit&#xA;override this.OnSwitchView : Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent -&gt; unit" Usage="_XDocumentEventSink2_SinkHelper.OnSwitchView pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2.OnSwitchView(Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent)</InterfaceMember>
@@ -420,7 +439,7 @@
       </Parameters>
       <Docs>
         <param name="pEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -430,6 +449,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_SinkHelper.OnVersionUpgrade(Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEvent)" />
       <MemberSignature Language="VB.NET" Value="Public Sub OnVersionUpgrade (pEvent As VersionUpgradeEvent)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void OnVersionUpgrade(Microsoft::Office::Interop::InfoPath::SemiTrust::VersionUpgradeEvent ^ pEvent);" />
+      <MemberSignature Language="F#" Value="abstract member OnVersionUpgrade : Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEvent -&gt; unit&#xA;override this.OnVersionUpgrade : Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEvent -&gt; unit" Usage="_XDocumentEventSink2_SinkHelper.OnVersionUpgrade pEvent" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2.OnVersionUpgrade(Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEvent)</InterfaceMember>
@@ -446,7 +466,7 @@
       </Parameters>
       <Docs>
         <param name="pEvent">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.IXSLTemplate" />
   <TypeSignature Language="VB.NET" Value="Public Interface IXSLTemplate" />
   <TypeSignature Language="C++ CLI" Value="public interface class IXSLTemplate" />
+  <TypeSignature Language="F#" Value="type IXSLTemplate = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXSLTemplate.createProcessor" />
       <MemberSignature Language="VB.NET" Value="Public Function createProcessor () As IXSLProcessor" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::Xml::IXSLProcessor ^ createProcessor();" />
+      <MemberSignature Language="F#" Value="abstract member createProcessor : unit -&gt; Microsoft.Office.Interop.InfoPath.Xml.IXSLProcessor" Usage="iXSLTemplate.createProcessor " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -54,6 +56,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.Xml.IXSLTemplate.stylesheet" />
       <MemberSignature Language="VB.NET" Value="Public Property stylesheet As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ stylesheet { Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ get(); void set(Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.stylesheet : Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode with get, set" Usage="Microsoft.Office.Interop.InfoPath.Xml.IXSLTemplate.stylesheet" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>

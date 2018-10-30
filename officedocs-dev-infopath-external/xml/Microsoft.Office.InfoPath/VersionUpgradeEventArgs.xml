@@ -1,0 +1,122 @@
+﻿<Type Name="VersionUpgradeEventArgs" FullName="Microsoft.Office.InfoPath.VersionUpgradeEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class VersionUpgradeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit VersionUpgradeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.VersionUpgradeEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class VersionUpgradeEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class VersionUpgradeEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type VersionUpgradeEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" /> event of a form. </summary>
+    <remarks>
+      <para>The <b>VersionUpgradeEventArgs</b> object passes state information to an event handler for the <b>VersionUpgrade</b> event. The <b>VersionUpgradeEventArgs</b> object provides properties that can be used in an event handler to determine the version numbers of the form and form template, and provide a response indicating the success or failure of the version upgrade process. The properties that it provides are available only during this event.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected VersionUpgradeEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; VersionUpgradeEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelableArgs">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.CancelableArgs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CancelableArgs As XmlFormCancelEventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ CancelableArgs { Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CancelableArgs : Microsoft.Office.InfoPath.XmlFormCancelEventArgs" Usage="Microsoft.Office.InfoPath.VersionUpgradeEventArgs.CancelableArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormCancelEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to a <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object.</value>
+        <remarks>
+          <para>Access the <b>XmlFormCancelEventArgs</b> object to cancel the <see cref="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" /> event and specify a custom message to display.</para>
+          <para>The <b>VersionUpgradeEventArgs.CancelableArgs.Cancel</b> property is set to <b>false</b> by default.</para>
+          <para>This property can be used only during the <b>VersionUpgrade</b> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentVersion">
+      <MemberSignature Language="C#" Value="public abstract string DocumentVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.DocumentVersion" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property DocumentVersion As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ DocumentVersion { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DocumentVersion : string" Usage="Microsoft.Office.InfoPath.VersionUpgradeEventArgs.DocumentVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the version number of the form document being upgraded. </summary>
+        <value>The version number of the form.</value>
+        <remarks>
+          <para>This property can be used only during the <see cref="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" /> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormTemplateVersion">
+      <MemberSignature Language="C#" Value="public abstract string FormTemplateVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FormTemplateVersion" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.FormTemplateVersion" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property FormTemplateVersion As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ FormTemplateVersion { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.FormTemplateVersion : string" Usage="Microsoft.Office.InfoPath.VersionUpgradeEventArgs.FormTemplateVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the version number of the form template associated with the form being upgraded.</summary>
+        <value>The version number of the form template.</value>
+        <remarks>
+          <para>This property can be used only during the <see cref="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" /> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

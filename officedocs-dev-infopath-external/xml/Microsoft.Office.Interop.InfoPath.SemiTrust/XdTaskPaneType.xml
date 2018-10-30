@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdTaskPaneType" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdTaskPaneType" />
+  <TypeSignature Language="F#" Value="type XdTaskPaneType = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -12,8 +13,11 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The <b>XdTaskPaneType</b> enumeration is used to determine the type of Microsoft InfoPath task pane that is currently displayed.</summary>
+    <remarks>
+      <para>These enumerated values are returned by the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.TaskPane.TaskPaneType" /> property. These values are also used as the positional argument to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.TaskPanes.Item(System.Object)" /> property.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="xdTaskPaneBulletsNumbering">
@@ -22,6 +26,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneBulletsNumbering" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneBulletsNumbering" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneBulletsNumbering" />
+      <MemberSignature Language="F#" Value="xdTaskPaneBulletsNumbering = 9" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneBulletsNumbering" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -32,7 +37,7 @@
       </ReturnValue>
       <MemberValue>9</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Bullets and Numbering task pane. Used for applying bullet and numbering styles to a form.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneClipArt">
@@ -41,6 +46,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneClipArt" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneClipArt" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneClipArt" />
+      <MemberSignature Language="F#" Value="xdTaskPaneClipArt = 5" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneClipArt" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -51,7 +57,7 @@
       </ReturnValue>
       <MemberValue>5</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Clip Art task pane. Used for inserting clip art into a form.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneDesignerNew">
@@ -60,6 +66,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneDesignerNew" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneDesignerNew" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneDesignerNew" />
+      <MemberSignature Language="F#" Value="xdTaskPaneDesignerNew = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneDesignerNew" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -70,7 +77,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Design a Form task pane. Used to design a new form, open a form in design mode, or select a form to fill out. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneFillOutAForm">
@@ -79,6 +86,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneFillOutAForm" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneFillOutAForm" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneFillOutAForm" />
+      <MemberSignature Language="F#" Value="xdTaskPaneFillOutAForm = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneFillOutAForm" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -89,7 +97,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Fill Out a Form task pane. Used to open a form to fill out or design. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneFind">
@@ -98,6 +106,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneFind" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneFind" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneFind" />
+      <MemberSignature Language="F#" Value="xdTaskPaneFind = 6" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneFind" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -108,7 +117,7 @@
       </ReturnValue>
       <MemberValue>6</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Find task pane. Used to search for text in a form. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneFormatting">
@@ -117,6 +126,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneFormatting" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneFormatting" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneFormatting" />
+      <MemberSignature Language="F#" Value="xdTaskPaneFormatting = 8" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneFormatting" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -127,7 +137,7 @@
       </ReturnValue>
       <MemberValue>8</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Font task pane. Used to format text.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneHelp">
@@ -136,6 +146,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneHelp" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneHelp" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneHelp" />
+      <MemberSignature Language="F#" Value="xdTaskPaneHelp = 4" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneHelp" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -146,7 +157,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Help task pane. Used to display the InfoPath Help system. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneHTML">
@@ -155,6 +166,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneHTML" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneHTML" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneHTML" />
+      <MemberSignature Language="F#" Value="xdTaskPaneHTML = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneHTML" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -165,7 +177,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The InfoPath custom task pane. Used by form developers to provide extra form functionality.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneHWSWorkflow">
@@ -174,6 +186,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneHWSWorkflow" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneHWSWorkflow" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneHWSWorkflow" />
+      <MemberSignature Language="F#" Value="xdTaskPaneHWSWorkflow = 12" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneHWSWorkflow" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -184,7 +197,7 @@
       </ReturnValue>
       <MemberValue>12</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Microsoft BizTalk Server 2004 Human Workflow Services (HWS) Workflow task pane. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneParaFormatting">
@@ -193,6 +206,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneParaFormatting" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneParaFormatting" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneParaFormatting" />
+      <MemberSignature Language="F#" Value="xdTaskPaneParaFormatting = 11" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneParaFormatting" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -203,7 +217,7 @@
       </ReturnValue>
       <MemberValue>11</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Paragraph task pane. Used to configure properties of paragraphs including alignment and spacing.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneReplace">
@@ -212,6 +226,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneReplace" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneReplace" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneReplace" />
+      <MemberSignature Language="F#" Value="xdTaskPaneReplace = 7" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneReplace" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -222,7 +237,7 @@
       </ReturnValue>
       <MemberValue>7</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Replace task pane. Used to find and replace text in a form. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneSearchResults">
@@ -231,6 +246,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneSearchResults" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneSearchResults" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneSearchResults" />
+      <MemberSignature Language="F#" Value="xdTaskPaneSearchResults = 3" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneSearchResults" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -241,7 +257,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Search Results task pane. Used to display the results of a search. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdTaskPaneSpelling">
@@ -250,6 +266,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneSpelling" />
       <MemberSignature Language="VB.NET" Value="xdTaskPaneSpelling" />
       <MemberSignature Language="C++ CLI" Value="xdTaskPaneSpelling" />
+      <MemberSignature Language="F#" Value="xdTaskPaneSpelling = 10" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdTaskPaneType.xdTaskPaneSpelling" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -260,7 +277,7 @@
       </ReturnValue>
       <MemberValue>10</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Spelling task pane. Used to check the spelling in a form. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
       </Docs>
     </Member>
   </Members>

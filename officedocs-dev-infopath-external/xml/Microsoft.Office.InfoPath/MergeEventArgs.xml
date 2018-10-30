@@ -1,0 +1,184 @@
+﻿<Type Name="MergeEventArgs" FullName="Microsoft.Office.InfoPath.MergeEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class MergeEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MergeEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.MergeEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MergeEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MergeEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type MergeEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Merge" /> event.</summary>
+    <remarks>
+      <para>The <b>MergeEventArgs</b> class provides properties that can be used during a <b>Merge</b> event to programmatically interact with the underlying XML document of the current form that's being merged, to determine the number of files being merged, to cancel the event, and to determine when and how to rollback changes that occurred during a merge operation that was cancelled. </para>
+      <para />
+    </remarks>
+    <example>
+      <para>For an example of using some of the properties of the <b>MergeEventArgs</b> class, see the sample code in the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Merge" /> event topic.</para>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MergeEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.MergeEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; MergeEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelableArgs">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MergeEventArgs.CancelableArgs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CancelableArgs As XmlFormCancelEventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ CancelableArgs { Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CancelableArgs : Microsoft.Office.InfoPath.XmlFormCancelEventArgs" Usage="Microsoft.Office.InfoPath.MergeEventArgs.CancelableArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormCancelEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object.</value>
+        <remarks>
+          <para>Access the <b>XmlFormCancelEventArgs</b> object to cancel the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Merge" /> event and specify a custom message to display when the event is cancelled.</para>
+          <para>The <b>MergeEventArgs.CancelableArgs.Cancel</b> property is set to <b>true</b> by default.</para>
+          <para>This property can be used only during the <b>Merge</b> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MergeEventArgs.Count" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.InfoPath.MergeEventArgs.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the count of the number of forms being merged in a merging operation. </summary>
+        <value>The number of forms being merged.</value>
+        <remarks>
+          <para>The <b>Count</b> property can be used in combination with the <see cref="P:Microsoft.Office.InfoPath.MergeEventArgs.Index" /> property to determine when the last form was merged.</para>
+          <para>This property can be used only during the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Merge" /> event.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public abstract int Index { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Index" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MergeEventArgs.Index" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Index As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Index { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Index : int" Usage="Microsoft.Office.InfoPath.MergeEventArgs.Index" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the zero-based index of the form that is currently being merged. </summary>
+        <value>The numeric index of the form being merged.</value>
+        <remarks>
+          <para>The value of the <b>Index</b> property increases from 0 to <see cref="P:Microsoft.Office.InfoPath.MergeEventArgs.Count" />-1 for each <see cref="E:Microsoft.Office.InfoPath.FormEvents.Merge" /> event that occurs when multiple forms are merged.</para>
+          <para>When used in combination with the <b>Count</b> property, the <b>Index</b> property can be used to determine when the last form has been merged.</para>
+          <para>This property can be used only during the <b>Merge</b> event.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rollback">
+      <MemberSignature Language="C#" Value="public abstract bool Rollback { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rollback" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MergeEventArgs.Rollback" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Rollback As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Rollback { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Rollback : bool with get, set" Usage="Microsoft.Office.InfoPath.MergeEventArgs.Rollback" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value that is used with the <b>Cancel</b> property to determine whether to cancel only the current form or the entire merging operation.</summary>
+        <value>
+          <b>true</b> if the merging operation will be rolled back; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>If the <b>Cancel</b> property (accessed using the <see cref="P:Microsoft.Office.InfoPath.MergeEventArgs.CancelableArgs" /> property) is set to <b>false</b>, this property is ignored.</para>
+          <para>If the <b>Cancel</b> property is <b>true</b> and the <b>RollBack</b> property is <b>true</b>, the entire merging operation will be cancelled and rolled back to the state before the operation was initiated. If the <b>Cancel</b> property is <b>false</b> and the <b>RollBack</b> property is <b>true</b>, merging the current form will fail, but the merging operation will continue with the next form.</para>
+          <para>This property can be used only during the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Merge" /> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator Xml { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Xml" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MergeEventArgs.Xml" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Xml As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ Xml { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Xml : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.MergeEventArgs.Xml" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an XPathNavigator object positioned at the root node of the underlying XML document of the form that is currently being merged.</summary>
+        <value>An <b>XPathNavigator</b> object positioned at the root node of the form.</value>
+        <remarks>
+          <para>The <b>Xml</b> property allows you to access and manipulate the source XML of a form programmatically. After you have set a reference to the returned <b>XPathNavigator</b> object, you can use any of its properties and methods to access and manipulate the source XML data of the form.</para>
+          <para>This property can be used only during the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Merge" /> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

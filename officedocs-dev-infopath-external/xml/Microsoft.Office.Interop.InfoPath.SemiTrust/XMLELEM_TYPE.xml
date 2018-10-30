@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE" />
   <TypeSignature Language="VB.NET" Value="Public Enum XMLELEM_TYPE" />
   <TypeSignature Language="C++ CLI" Value="public enum class XMLELEM_TYPE" />
+  <TypeSignature Language="F#" Value="type XMLELEM_TYPE = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -12,7 +13,8 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -22,6 +24,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_COMMENT" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_COMMENT" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_COMMENT" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_COMMENT = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_COMMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -32,7 +35,8 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
       </Docs>
     </Member>
     <Member MemberName="XMLELEMTYPE_DOCUMENT">
@@ -41,6 +45,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_DOCUMENT" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_DOCUMENT" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_DOCUMENT" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_DOCUMENT = 3" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_DOCUMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -51,7 +56,8 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
       </Docs>
     </Member>
     <Member MemberName="XMLELEMTYPE_DTD">
@@ -60,6 +66,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_DTD" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_DTD" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_DTD" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_DTD = 4" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_DTD" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -70,7 +77,8 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
       </Docs>
     </Member>
     <Member MemberName="XMLELEMTYPE_ELEMENT">
@@ -79,6 +87,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_ELEMENT" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_ELEMENT" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_ELEMENT" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_ELEMENT = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_ELEMENT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -89,7 +98,8 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
       </Docs>
     </Member>
     <Member MemberName="XMLELEMTYPE_OTHER">
@@ -98,6 +108,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_OTHER" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_OTHER" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_OTHER" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_OTHER = 6" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_OTHER" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -108,7 +119,8 @@
       </ReturnValue>
       <MemberValue>6</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
       </Docs>
     </Member>
     <Member MemberName="XMLELEMTYPE_PI">
@@ -117,6 +129,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_PI" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_PI" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_PI" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_PI = 5" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_PI" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -127,7 +140,8 @@
       </ReturnValue>
       <MemberValue>5</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
       </Docs>
     </Member>
     <Member MemberName="XMLELEMTYPE_TEXT">
@@ -136,6 +150,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_TEXT" />
       <MemberSignature Language="VB.NET" Value="XMLELEMTYPE_TEXT" />
       <MemberSignature Language="C++ CLI" Value="XMLELEMTYPE_TEXT" />
+      <MemberSignature Language="F#" Value="XMLELEMTYPE_TEXT = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLELEM_TYPE.XMLELEMTYPE_TEXT" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -146,7 +161,8 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
       </Docs>
     </Member>
   </Members>

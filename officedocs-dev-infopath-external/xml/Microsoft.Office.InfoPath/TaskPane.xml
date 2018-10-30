@@ -1,0 +1,109 @@
+﻿<Type Name="TaskPane" FullName="Microsoft.Office.InfoPath.TaskPane">
+  <TypeSignature Language="C#" Value="public abstract class TaskPane" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TaskPane extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.TaskPane" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class TaskPane" />
+  <TypeSignature Language="C++ CLI" Value="public ref class TaskPane abstract" />
+  <TypeSignature Language="F#" Value="type TaskPane = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents the task pane that is associated with the current window in Microsoft InfoPath.</summary>
+    <remarks>
+      <para>The <b>TaskPane</b> class provides properties for working with the InfoPath built-in task panes. The <see cref="T:Microsoft.Office.InfoPath.HtmlTaskPane" /> class inherits these properties for working with a custom task pane.</para>
+      <para>The properties available for an InfoPath task pane are determined by the type of task pane that you are working with. If the <see cref="P:Microsoft.Office.InfoPath.TaskPane.TaskPaneType" /> property returns <b>TaskPaneType.Html</b>, the task pane is a custom task pane and the properties and methods available are provided by the <b>HtmlTaskPane</b> class. If the <b>TaskPaneType</b> property returns any other value, the task pane is a built-in task pane and the properties are provided by the <b>TaskPane</b> object.</para>
+      <para>
+        <b>Note</b>: <b>TaskPaneType</b> property returns values defined by the <see cref="T:Microsoft.Office.InfoPath.TaskPaneType" /> enumeration. These enumerated values are also used as arguments to the <see cref="P:Microsoft.Office.InfoPath.TaskPaneCollection.Item(Microsoft.Office.InfoPath.TaskPaneType)" /> property of the <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" /> class for returning a reference to a specified type of task pane.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>The following example sets a reference to the <b>TaskPane</b> object in the <b>TaskPaneCollection</b> with the <paramref name="index" /> value of 3, displays its <b>TaskPaneType</b> value (<b>ClipArt</b>), and then displays the Clip Art task pane.</para>
+      <code>TaskPane myTaskPane = this.TaskPanes[3];
+MessageBox.Show(myTaskPane.TaskPaneType.ToString());
+myTaskPane.Visible = true;</code>
+      <code>Dim myTaskPane As TaskPane  = Me.TaskPanes(3)
+MessageBox.Show(myTaskPane.TaskPaneType.ToString())
+myTaskPane.Visible = true</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected TaskPane ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.TaskPane.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; TaskPane();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskPaneType">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.TaskPaneType TaskPaneType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.TaskPaneType TaskPaneType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.TaskPane.TaskPaneType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property TaskPaneType As TaskPaneType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::TaskPaneType TaskPaneType { Microsoft::Office::InfoPath::TaskPaneType get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskPaneType : Microsoft.Office.InfoPath.TaskPaneType" Usage="Microsoft.Office.InfoPath.TaskPane.TaskPaneType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.TaskPaneType" /> value indicating the type of task pane represented by the <see cref="T:Microsoft.Office.InfoPath.TaskPane" /> object. </summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.TaskPaneType" /> value that indicates the type of task pane represented by the <see cref="T:Microsoft.Office.InfoPath.TaskPane" /> object.</value>
+        <remarks>
+          <para>If the <b>TaskPaneType</b> property returns <b>TaskPaneType.Html</b>, the task pane is a custom task pane. If the <b>TaskPaneType</b> property returns any other <b>TaskPaneType</b> enumerated value, the task pane is a built-in task pane.</para>
+          <para>
+            <b>Note</b>: <b>TaskPaneType</b> property returns values defined by the <b>TaskPaneType</b> enumeration. These enumerated values are also used as arguments to the <see cref="P:Microsoft.Office.InfoPath.TaskPaneCollection.Item(Microsoft.Office.InfoPath.TaskPaneType)" /> property of the <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" /> class for returning a reference to a specified type of task pane.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public abstract bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.TaskPane.Visible" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Visible As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Visible { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Visible : bool with get, set" Usage="Microsoft.Office.InfoPath.TaskPane.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets whether the task pane represented by the <see cref="T:Microsoft.Office.InfoPath.TaskPane" /> object is visible in the Microsoft InfoPath user interface.</summary>
+        <value>
+          <b>true</b> if the task pane is visible; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>Setting the <b>Visible</b> property to <b>true</b> causes the task pane to appear in the user interface, and setting it to <b>false</b> causes it to be removed from the user interface.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

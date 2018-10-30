@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMImplementation" />
   <TypeSignature Language="VB.NET" Value="Public Interface IXMLDOMImplementation" />
   <TypeSignature Language="C++ CLI" Value="public interface class IXMLDOMImplementation" />
+  <TypeSignature Language="F#" Value="type IXMLDOMImplementation = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMImplementation.hasFeature(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function hasFeature (feature As String, version As String) As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool hasFeature(System::String ^ feature, System::String ^ version);" />
+      <MemberSignature Language="F#" Value="abstract member hasFeature : string * string -&gt; bool" Usage="iXMLDOMImplementation.hasFeature (feature, version)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>

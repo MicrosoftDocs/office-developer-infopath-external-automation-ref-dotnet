@@ -1,0 +1,299 @@
+﻿<Type Name="MailEnvelope" FullName="Microsoft.Office.InfoPath.MailEnvelope">
+  <TypeSignature Language="C#" Value="public abstract class MailEnvelope" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit MailEnvelope extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.MailEnvelope" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class MailEnvelope" />
+  <TypeSignature Language="C++ CLI" Value="public ref class MailEnvelope abstract" />
+  <TypeSignature Language="F#" Value="type MailEnvelope = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents a custom e-mail message for sending the current form as an attachment.</summary>
+    <remarks>
+      <para>The <b>MailEnvelope</b> class provides properties that can be used to programmatically create a custom e-mail message for attaching and sending the currently open InfoPath form. After any e-mail addresses and other properties are specified, setting the <see cref="P:Microsoft.Office.InfoPath.MailEnvelope.Visible" /> property of the <b>MailEnvelope</b> class to <b>true</b> will display the e-mail message fields, Send toolbar, and Mail Options task pane along with the form so that users can then inspect and make any changes or additions to the e-mail message before sending it. Writing code to work with a <b>MailEnvelope</b> object is equivalent to using the Send to Mail Recipient command on the File menu when editing a form in InfoPath.</para>
+      <para>
+        <b>Note</b>: The <b>MailEnvelope</b> class cannot be used to send the e-mail messages it creates; users must manually send the e-mail messages by clicking the Send button in InfoPath.</para>
+      <para>Alternatively, you can use the <see cref="M:Microsoft.Office.InfoPath.View.ShowMailItem(System.String,System.String,System.String,System.String,System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class to programmatically create an e-mail message with an attached form. Or, if the form template has been configured to be submitted as an e-mail message, you can use the properties and methods of the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> class to programmatically create and send the form as an e-mail attachment.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> property of the <see cref="T:Microsoft.Office.InfoPath.Window" /> class is used to set a reference to the <b>MailEnvelope</b> object for the current form. The <see cref="P:Microsoft.Office.InfoPath.MailEnvelope.Available" /> property is used to determine if the form is opened within Microsoft Office Outlook 2007. If so, the <b>Available</b> property will return <b>false</b>, and the following code will not run. If the <b>Available</b> property returns <b>true</b>, the form is open in InfoPath, and the initial address, subject, and introduction values are specified. Then, the <see cref="P:Microsoft.Office.InfoPath.MailEnvelope.EmailAttachmentType" /> property of the <b>MailEnvelope</b> class is used to configure the message to include both the form data and form template. Finally, the <b>Visible</b> property of the <b>MailEnvelope</b> class is set to <b>true</b> to display the e-mail message fields, Send toolbar, and Mail Options task pane to the user for sending the e-mail message from InfoPath.</para>
+      <code>// Set a reference to MailEnvelope object.
+MailEnvelope myEnvelope = this.Application.ActiveWindow.MailEnvelope;
+
+// Check to see if form is open in Outlook.
+if (myEnvelope.Available)
+{
+   // Specify addresses, subject, and introduction.
+   myEnvelope.To = "someone@example.com";
+   myEnvelope.CC = "someone@example.com";
+   myEnvelope.BCC = "someone@example.com";
+   myEnvelope.Subject = "Open this form";
+   myEnvelope.Introduction = "InfoPath is required to edit this form.";
+
+   // Include form template with form.
+   myEnvelope.EmailAttachmentType = EmailAttachmentType.XmlXsn;
+
+   // Display form with e-mail envelope.
+   myEnvelope.Visible = true;
+}
+else
+{
+   // The form is open in Outlook, and code will not run.
+   MessageBox.Show("This form is open in Outlook.");
+}</code>
+      <code>' Set a reference to MailEnvelope object.
+Dim myEnvelope As MailEnvelope  = _
+   Me.Application.ActiveWindow.MailEnvelope
+
+' Check to see if form is open in Outlook.
+If (myEnvelope.Available) Then
+   ' Specify addresses, subject, and introduction.
+   myEnvelope.To = "someone@example.com"
+   myEnvelope.CC = "someone@example.com"
+   myEnvelope.BCC = "someone@example.com"
+   myEnvelope.Subject = "Open this form"
+   myEnvelope.Introduction = "InfoPath is required to edit this form."
+
+   ' Include form template with form.
+   myEnvelope.EmailAttachmentType = EmailAttachmentType.XmlXsn
+
+   ' Display form with e-mail envelope.
+   myEnvelope.Visible = True
+Else
+   ' The form is open in Outlook, and code will not run.
+   MessageBox.Show("This form is open in Outlook.")
+End If</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected MailEnvelope ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.MailEnvelope.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; MailEnvelope();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Available">
+      <MemberSignature Language="C#" Value="public abstract bool Available { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Available" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Available" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Available As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Available { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Available : bool" Usage="Microsoft.Office.InfoPath.MailEnvelope.Available" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets whether the other properties of the <see cref="T:Microsoft.Office.InfoPath.MailEnvelope" /> class are available to code running in the form.</summary>
+        <value>
+          <b>true</b> if the other properties of the <see cref="T:Microsoft.Office.InfoPath.MailEnvelope" /> class are available to code running in the form; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>The <b>Available</b> property is used to test whether the form is open in Outlook 2010. If a form is sent as an e-mail attachment to a user running Outlook 2010, the form will open within Outlook. In this context, it is not appropriate to programmatically create an e-mail message for attaching and sending the currently open InfoPath form because the form and e-mail message to which it is attached are already open in Outlook, and the <b>Available</b> property will return <b>false</b>. If the form is opened in InfoPath, the <b>Available</b> property will return <b>true</b> and form code can use the properties of the <b>MailEnvelope</b> class.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bcc">
+      <MemberSignature Language="C#" Value="public abstract string Bcc { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Bcc" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Bcc" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Bcc As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Bcc { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Bcc : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.Bcc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the blind carbon copy (BCC) addresses of the e-mail message.</summary>
+        <value>The blind carbon copy (BCC) addresses of the e-mail message.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CC">
+      <MemberSignature Language="C#" Value="public abstract string CC { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CC" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.CC" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property CC As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ CC { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.CC : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.CC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the carbon copy (CC) addresses of the e-mail message. </summary>
+        <value>The carbon copy (CC) addresses of the e-mail message.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmailAttachmentType">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.EmailAttachmentType EmailAttachmentType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.EmailAttachmentType EmailAttachmentType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.EmailAttachmentType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property EmailAttachmentType As EmailAttachmentType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::EmailAttachmentType EmailAttachmentType { Microsoft::Office::InfoPath::EmailAttachmentType get(); void set(Microsoft::Office::InfoPath::EmailAttachmentType value); };" />
+      <MemberSignature Language="F#" Value="member this.EmailAttachmentType : Microsoft.Office.InfoPath.EmailAttachmentType with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.EmailAttachmentType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.EmailAttachmentType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the type of file to be attached to the e-mail message.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.EmailAttachmentType" />.</value>
+        <remarks>
+          <para>Set to <b>EmailAttachmentType.Xml</b> to send only the form file (.xml). Set to <b>EmailAttachmentType.XmlXsn</b> to send the form file (.xml) along with its associated form template file (.xsn).</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Introduction">
+      <MemberSignature Language="C#" Value="public abstract string Introduction { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Introduction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Introduction" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Introduction As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Introduction { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Introduction : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.Introduction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the introduction in the body of the e-mail message.</summary>
+        <value>The introduction in the body of the e-mail message.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Subject">
+      <MemberSignature Language="C#" Value="public abstract string Subject { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Subject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Subject" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Subject As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Subject { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Subject : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.Subject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the subject of the e-mail message.</summary>
+        <value>The subject of the e-mail message.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public abstract string To { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string To" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.To" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property To As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ To { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.To : string with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the addresses of the recipients of the e-mail message.</summary>
+        <value>The addresses of the recipients of the e-mail message.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Visible">
+      <MemberSignature Language="C#" Value="public abstract bool Visible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Visible" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.MailEnvelope.Visible" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Visible As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Visible { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Visible : bool with get, set" Usage="Microsoft.Office.InfoPath.MailEnvelope.Visible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the visibility of the e-mail message fields, Send toolbar, and Mail Options task pane.</summary>
+        <value>
+          <b>true</b> to display e-mail message fields, Send toolbar, and Mail Options task pane; <b>false</b> if these InfoPath features are not visible.</value>
+        <remarks>
+          <para>If there is no default e-mail editor configured, the <b>Visible</b> property will raise an error.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter" />
   <TypeSignature Language="VB.NET" Value="Public Interface DAVAdapter" />
   <TypeSignature Language="C++ CLI" Value="public interface class DAVAdapter" />
+  <TypeSignature Language="F#" Value="type DAVAdapter = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapterObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.FileName" />
       <MemberSignature Language="VB.NET" Value="Public Property FileName As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FileName { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.FileName : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.FileName" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -42,9 +44,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets or sets the file name that the current Microsoft InfoPath form will be given when the form is submitted by the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapterObject" />.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The ".xml" file name extension will be appended to the string if it is not already included. If the <b>FileName</b> property is set to null, the form is given the name "Form.xml" when it is submitted.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FolderURL">
@@ -53,6 +60,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.FolderURL" />
       <MemberSignature Language="VB.NET" Value="Public Property FolderURL As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ FolderURL { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.FolderURL : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.FolderURL" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -67,9 +75,18 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets or sets the Uniform Resource Locator (URL) to which the form will be submitted by the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapterObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>Submit</b> method of the <b>DAVAdapter</b> object will fail if the value of the <b>FolderURL</b> property does not begin with either the "http:" or the "https:" prefix. The <b>Submit</b> method will also fail if the site specified by the <b>FolderURL</b> property is not available, or if the URL is not in the same security domain as the form template.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>This example shows how to use the <b>FolderURL</b> property of an instance of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapterObject" /> object to change the folder to which the form data will be submitted:</para>
+          <code>davAdapter.FolderURL = davAdapter.&lt;span class="label"&gt;FolderURL&lt;/span&gt; + @"data\";</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -78,6 +95,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -92,9 +110,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the name of a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapterObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Query">
@@ -103,6 +125,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.Query" />
       <MemberSignature Language="VB.NET" Value="Public Sub Query ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Query();" />
+      <MemberSignature Language="F#" Value="abstract member Query : unit -&gt; unit" Usage="dAVAdapter.Query " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -118,8 +141,12 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>The <b>Query</b> method is available for the <see cref="T:Microsoft.Office.Interop.InfoPath.DAVAdapterObject" /> object but, because the <b>DAVAdapter</b> object is available for submitting data only, the method will always generate a run-time error when it is called on that object.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="QueryAllowed">
@@ -128,6 +155,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.QueryAllowed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property QueryAllowed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool QueryAllowed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryAllowed : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.QueryAllowed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -142,9 +170,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns <b>false</b>, corresponding to the <b>queryAllowed</b> attribute in the form definition file (.xsf).</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Submit">
@@ -153,6 +185,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.Submit" />
       <MemberSignature Language="VB.NET" Value="Public Sub Submit ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Submit();" />
+      <MemberSignature Language="F#" Value="abstract member Submit : unit -&gt; unit" Usage="dAVAdapter.Submit " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -168,8 +201,40 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Executes the submit operation on the associated adapter.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Submit</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapterObject" /> object is used to submit an XML document to a Windows SharePoint Server document library. This code requires a SharePoint form library Data Connection named "Submit".</para>
+          <code>// Get the first data adapter; a "SharePoint Library" submit adapter
+DAVAdapter davAdapter = thisXDocument.DataAdapters["Submit"] as DAVAdapter;
+if (davAdapter == null)
+{
+ thisXDocument.UI.Alert("SharePoint submit list adapter called 'Submit' was not found.");
+ return;
+}
+// Set the file name to be the today's date (as an .xml file)
+davAdapter.FileName = DateTime.Today.ToShortDateString() + ".xml";
+if (davAdapter.SubmitAllowed)
+{
+ try
+ {
+  davAdapter.&lt;span class="label"&gt;Submit&lt;/span&gt;();
+ }
+ catch (Exception ex)
+ {
+  // The save failed
+  thisXDocument.UI.Alert("Saving to " + davAdapter.FolderURL + " as " + davAdapter.FileName + " failed." + Environment.NewLine + "Reason: " + ex.Message);
+ }
+}
+else
+{
+ thisXDocument.UI.Alert("Submit is not allowed on adapter " + davAdapter.Name + ".");
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="SubmitAllowed">
@@ -178,6 +243,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.SubmitAllowed" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubmitAllowed As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool SubmitAllowed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.SubmitAllowed : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.SubmitAllowed" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -192,9 +258,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns <b>true</b>, corresponding to the <b>submitAllowed</b> attribute in the form definition file (.xsf).</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SubmitData">
@@ -203,6 +273,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapter.SubmitData(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SubmitData (pData As IXMLDOMNode)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SubmitData(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ pData);" />
+      <MemberSignature Language="F#" Value="abstract member SubmitData : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode -&gt; unit" Usage="dAVAdapter.SubmitData pData" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -220,9 +291,52 @@
         <Parameter Name="pData" Type="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" />
       </Parameters>
       <Docs>
-        <param name="pData">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="pData">The XML data that is to be submitted.</param>
+        <summary>Submits the specified DOM element or DOM document to a data adapter.</summary>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>SubmitData</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DAVAdapterObject" /> object is used to submit an XML document containing a DOM element, <paramref name="my:group1" />, to a Windows SharePoint Server document library. This code requires a SharePoint form library Data Connection named "Submit" and that <paramref name="my:group1" /> exists in the data source under the document element, for example, <paramref name="my:myFields" />.</para>
+          <code>// Get the first data adapter; a "SharePoint Library" submit adapter
+DAVAdapter davAdapter = thisXDocument.DataAdapters["Submit"] as DAVAdapter;
+if (davAdapter == null)
+{
+ thisXDocument.UI.Alert("SharePoint submit list adapter called 'Submit' was not found.");
+ return;
+}
+// Set the file name to be the today's date (as an .xml file)
+davAdapter.FileName = DateTime.Today.ToShortDateString() + ".xml";
+// Get my:group1 from the data source
+IXMLDOMNode group1Node = thisXDocument.DOM.selectSingleNode("/my:myFields/my:group1");
+// Check if group1 exists
+if (group1Node != null)
+{
+ if (davAdapter.SubmitAllowed)
+ {
+  try
+  {
+   davAdapter.&lt;span class="label"&gt;SubmitData&lt;/span&gt;(group1Node);
+  }
+  catch (Exception ex)
+  {
+   // The save failed
+   thisXDocument.UI.Alert("Saving to " + davAdapter.FolderURL + " as " + davAdapter.FileName + " failed." + Environment.NewLine + "Reason: " + ex.Message);
+  }
+ }
+ else
+ {
+  thisXDocument.UI.Alert("Submit is not allowed on adapter " + davAdapter.Name + ".");
+ }
+}
+else
+{
+ // my:group1 does not exist
+ thisXDocument.UI.Alert("my:group1 does not exist in the form.");
+}</code>
+        </example>
       </Docs>
     </Member>
   </Members>

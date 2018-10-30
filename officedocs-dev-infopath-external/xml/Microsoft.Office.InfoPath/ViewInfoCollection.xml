@@ -1,0 +1,327 @@
+﻿<Type Name="ViewInfoCollection" FullName="Microsoft.Office.InfoPath.ViewInfoCollection">
+  <TypeSignature Language="C#" Value="public abstract class ViewInfoCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ViewInfoCollection extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ViewInfoCollection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ViewInfoCollection&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ViewInfoCollection abstract : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type ViewInfoCollection = class&#xA;    interface IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contains a <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object for each view within a form.</summary>
+    <remarks>
+      <para>The <b>ViewInfoCollection</b> class implements properties that can be used to access the <b>ViewInfo</b> object associated with each view in a form. The <b>ViewInfoCollection</b> object for a form is accessed through the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para>The <b>ViewInfoCollection</b> object can be used to return a reference to a specified <b>ViewInfo</b> object, get the count of the <b>ViewInfo</b> objects, switch views, and return information about a view. It cannot be used to create, add, or remove <b>ViewInfo</b> objects.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to set a reference to the <b>ViewInfoCollection</b> of the form. The code then loops through the collection and uses the <see cref="P:Microsoft.Office.InfoPath.ViewInfo.HideName" /> property of the <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> class to determine whether the view is hidden from the View menu. If it is, the name of the view is displayed in a message box.</para>
+      <code>// Set a reference to the ViewInfoCollection of the form.
+ViewInfoCollection myViewInfos = this.ViewInfos;
+
+// Loop through the collection and display the 
+// names of any hidden views.
+foreach (ViewInfo myViewInfo in myViewInfos)
+{
+   if(myViewInfo.HideName)
+   {
+      MessageBox.Show("Hidden view: " + myViewInfo.Name);
+   }
+}</code>
+      <code>' Set a reference to the ViewInfoCollection of the form.
+Dim myViewInfos As ViewInfoCollection = Me.ViewInfos
+
+' Loop through the collection and display the 
+' names of any hidden views.
+Dim myViewInfo As ViewInfo
+For Each myViewInfo In myViewInfos
+   If myViewInfo.HideName Then
+      MessageBox.Show("Hidden view: " &amp;amp; myViewInfo.Name)
+   End If
+Next</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ViewInfoCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.ViewInfoCollection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ViewInfoCollection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ViewInfoCollection.Count" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.InfoPath.ViewInfoCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a count of the number of <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> objects contained in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection.</summary>
+        <value>The number of <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> objects contained in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ViewInfo Default { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ViewInfo Default" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ViewInfoCollection.Default" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Default As ViewInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ViewInfo ^ Default { Microsoft::Office::InfoPath::ViewInfo ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Default : Microsoft.Office.InfoPath.ViewInfo" Usage="Microsoft.Office.InfoPath.ViewInfoCollection.Default" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object that represents the default view as it is set in the form template.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object that represents the default view as it is set in the form template.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.ViewInfoCollection.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="viewInfoCollection.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets an <b>IEnumerator</b> object that iterates over all entries in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> object.</summary>
+        <returns>An <b>IEnumerator</b> object that iterates over all the entries in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> object.</returns>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initial">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ViewInfo Initial { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ViewInfo Initial" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ViewInfoCollection.Initial" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Initial As ViewInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ViewInfo ^ Initial { Microsoft::Office::InfoPath::ViewInfo ^ get(); void set(Microsoft::Office::InfoPath::ViewInfo ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Initial : Microsoft.Office.InfoPath.ViewInfo with get, set" Usage="Microsoft.Office.InfoPath.ViewInfoCollection.Initial" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object that represents the initial view of the form.</summary>
+        <value>The <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object that represents the initial view of the form.</value>
+        <remarks>
+          <para>The <b>ViewInfo</b> object that is returned or set by the <b>Initial</b> property is specified by the value of the <b>InitialView</b> attribute in the processing instructions of the underlying XML document of the form. The value can be set to a valid view and is saved when the form is saved.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>To see an example that uses the <b>Initial</b> property, see the <see cref="M:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView(Microsoft.Office.InfoPath.ViewInfo)" /> method topic.</para>
+        </example>
+        <exception cref="T:System.ArgumentException">The specified <b>ViewInfo</b> object doesn't exist.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ViewInfo this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ViewInfo Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ViewInfoCollection.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(index As Integer) As ViewInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ViewInfo ^ default[int] { Microsoft::Office::InfoPath::ViewInfo ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.InfoPath.ViewInfo" Usage="Microsoft.Office.InfoPath.ViewInfoCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">The zero-based index of the <b>ViewInfo</b> object to get.</param>
+        <summary>Gets the specified <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object from the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection by index value.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object from the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection that corresponds to the specified index value.</value>
+        <remarks>
+          <para>The value passed for the <paramref name="index" /> parameter must be a number from 0 to the value of the collection's <see cref="P:Microsoft.Office.InfoPath.ViewInfoCollection.Count" /> property minus 1.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example sets a variable to the <b>ViewInfo</b> object that represents the first view in the collection.</para>
+          <code>ViewInfo firstView = this.ViewInfos[0];</code>
+          <code>Dim firstView As ViewInfo = Me.ViewInfos(0)</code>
+        </example>
+        <exception cref="T:System.IndexOutOfRangeException">The specified index is out of range.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ViewInfo this[string viewName] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ViewInfo Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ViewInfoCollection.Item(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(viewName As String) As ViewInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ViewInfo ^ default[System::String ^] { Microsoft::Office::InfoPath::ViewInfo ^ get(System::String ^ viewName); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : Microsoft.Office.InfoPath.ViewInfo" Usage="Microsoft.Office.InfoPath.ViewInfoCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewInfo</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="viewName">The name of the <b>ViewInfo</b> object to get.</param>
+        <summary>Gets the specified <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object from the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection by name.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object from the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection that corresponds to the specified name.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example sets a variable to the <b>ViewInfo</b> object with the name "View2".</para>
+          <code>ViewInfo myView = this.ViewInfos["View2"];</code>
+          <code>Dim myView As ViewInfo = Me.ViewInfos("View2")</code>
+        </example>
+        <exception cref="T:System.ArgumentException">The specified view name doesn't exist, or a a null reference (Nothing in Visual Basic) or empty value was passed.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchView">
+      <MemberSignature Language="C#" Value="public abstract void SwitchView (Microsoft.Office.InfoPath.ViewInfo view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SwitchView(class Microsoft.Office.InfoPath.ViewInfo view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView(Microsoft.Office.InfoPath.ViewInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SwitchView (view As ViewInfo)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SwitchView(Microsoft::Office::InfoPath::ViewInfo ^ view);" />
+      <MemberSignature Language="F#" Value="abstract member SwitchView : Microsoft.Office.InfoPath.ViewInfo -&gt; unit" Usage="viewInfoCollection.SwitchView view" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="Microsoft.Office.InfoPath.ViewInfo" />
+      </Parameters>
+      <Docs>
+        <param name="view">The <b>ViewObject</b> that represents the view to switch to.</param>
+        <summary>Switches the current view to the view represented by the specified <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>SwitchView</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> or <see cref="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" /> events.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>The following example switches the current view to the initial view in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection using the <see cref="P:Microsoft.Office.InfoPath.ViewInfoCollection.Initial" /> property to get the <b>ViewInfo</b> object that represents the initial view in the collection.</para>
+          <code>ViewInfo firstView = ViewInfos.Initial;
+this.ViewInfos.SwitchView(firstView);</code>
+          <code>Dim firstView As ViewInfo  = ViewInfos.Initial
+Me.ViewInfos.SwitchView(firstView)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchView">
+      <MemberSignature Language="C#" Value="public abstract void SwitchView (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SwitchView(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SwitchView (name As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SwitchView(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member SwitchView : string -&gt; unit" Usage="viewInfoCollection.SwitchView name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the view to switch to.</param>
+        <summary>Switches the current view to the specified view by name.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example switches the current view to the view name "View2".</para>
+          <code>this.ViewInfos.SwitchView("View2");</code>
+          <code>Me.ViewInfos.SwitchView("View2")</code>
+        </example>
+        <exception cref="T:System.ArgumentException">The view name does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">The <b>SwitchView</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> or <see cref="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" /> events.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

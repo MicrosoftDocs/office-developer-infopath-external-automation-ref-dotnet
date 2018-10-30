@@ -1,0 +1,471 @@
+﻿<Type Name="UserPermissionCollection" FullName="Microsoft.Office.InfoPath.UserPermissionCollection">
+  <TypeSignature Language="C#" Value="public abstract class UserPermissionCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit UserPermissionCollection extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.UserPermissionCollection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class UserPermissionCollection&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class UserPermissionCollection abstract : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type UserPermissionCollection = class&#xA;    interface IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Represents the collection of <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> objects associated with the current form.</summary>
+    <remarks>
+      <para>Each <b>UserPermission</b> object in the <b>UserPermissionCollection</b> is used to associate a specific set of rights with an individual user of a form template. The <see cref="P:Microsoft.Office.InfoPath.UserPermissionCollection.Count" /> property returns the number of <b>UserPermission</b> objects in the collection, and the <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String)" />, <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.Remove(System.String)" /> and <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.RemoveAll" /> methods can be used to manipulate the members of the collection.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected UserPermissionCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; UserPermissionCollection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission Add (string userId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.UserPermission Add(string userId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (userId As String) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::UserPermission ^ Add(System::String ^ userId);" />
+      <MemberSignature Language="F#" Value="abstract member Add : string -&gt; Microsoft.Office.InfoPath.UserPermission" Usage="userPermissionCollection.Add userId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to whom permissions on the current form are being granted.</param>
+        <summary>Adds a new user to the current form. </summary>
+        <returns>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object that represents the specified user.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, and then adds a new user.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   this.Permission.UserPermissions.Add("someone@example.com");
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Me.Permission.UserPermissions.Add("someone@example.com")
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission Add (string userId, Microsoft.Office.InfoPath.PermissionType permission);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.UserPermission Add(string userId, valuetype Microsoft.Office.InfoPath.PermissionType permission) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,Microsoft.Office.InfoPath.PermissionType)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (userId As String, permission As PermissionType) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::UserPermission ^ Add(System::String ^ userId, Microsoft::Office::InfoPath::PermissionType permission);" />
+      <MemberSignature Language="F#" Value="abstract member Add : string * Microsoft.Office.InfoPath.PermissionType -&gt; Microsoft.Office.InfoPath.UserPermission" Usage="userPermissionCollection.Add (userId, permission)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="permission" Type="Microsoft.Office.InfoPath.PermissionType" />
+      </Parameters>
+      <Docs>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to whom permissions on the current form are being granted.</param>
+        <param name="permission">The permissions on the current form that are being granted to the specified user as a combination of one or more <see cref="T:Microsoft.Office.InfoPath.PermissionType" /> values.</param>
+        <summary>Adds a new user with the specified permissions.</summary>
+        <returns>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" />.object that represents the specified user.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, and then adds and assigns a user to the Full Control access level.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   this.Permission.UserPermissions.Add("someone@example.com", 
+      PermissionType.FullControl);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Me.Permission.UserPermissions.Add("someone@example.com", _
+      PermissionType.FullControl)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission Add (string userId, DateTime expirationDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.UserPermission Add(string userId, valuetype System.DateTime expirationDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (userId As String, expirationDate As DateTime) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::UserPermission ^ Add(System::String ^ userId, DateTime expirationDate);" />
+      <MemberSignature Language="F#" Value="abstract member Add : string * DateTime -&gt; Microsoft.Office.InfoPath.UserPermission" Usage="userPermissionCollection.Add (userId, expirationDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="expirationDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to whom permissions on the current form are being granted.</param>
+        <param name="expirationDate">The expiration date for the permissions that are being granted as a <b>System.DateTime</b> value.</param>
+        <summary>Add a new user to the current form with an expiration date.</summary>
+        <returns>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object that represents the specified user.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, adds a new user to the current form, and sets an expiration date of two days from the current date.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   string strExpirationDate = DateTime.Today.AddDays(2).ToString();
+   DateTime dtExpirationDate = DateTime.Parse(strExpirationDate);
+
+   this.Permission.UserPermissions.Add("someone@example.com",
+      dtExpirationDate);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim strExpirationDate As String = _
+      DateTime.Today.AddDays(2).ToString()
+   dtExpirationDate As DateTime = DateTime.Parse(strExpirationDate)
+
+   Me.Permission.UserPermissions.Add("someone@example.com", _
+      dtExpirationDate)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission Add (string userId, Microsoft.Office.InfoPath.PermissionType permission, DateTime expirationDate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.UserPermission Add(string userId, valuetype Microsoft.Office.InfoPath.PermissionType permission, valuetype System.DateTime expirationDate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,Microsoft.Office.InfoPath.PermissionType,System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (userId As String, permission As PermissionType, expirationDate As DateTime) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::UserPermission ^ Add(System::String ^ userId, Microsoft::Office::InfoPath::PermissionType permission, DateTime expirationDate);" />
+      <MemberSignature Language="F#" Value="abstract member Add : string * Microsoft.Office.InfoPath.PermissionType * DateTime -&gt; Microsoft.Office.InfoPath.UserPermission" Usage="userPermissionCollection.Add (userId, permission, expirationDate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="permission" Type="Microsoft.Office.InfoPath.PermissionType" />
+        <Parameter Name="expirationDate" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to whom permissions on the current form are being granted.</param>
+        <param name="permission">The permissions on the current form that are being granted to the specified user as a combination of one or more <see cref="T:Microsoft.Office.InfoPath.PermissionType" /> values.</param>
+        <param name="expirationDate">The expiration date for the permissions that are being granted as a <b>System.DateTime</b> value.</param>
+        <summary>Creates a new set of permissions on the current form for the specified user with the specified permissions and an expiration date.</summary>
+        <returns>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> that represents the specified user.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.FormatException">The <b>DateTime</b> value provided is invalid.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, adds and assigns a user to the Full Control access level, and sets an expiration date of two days from the current date.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   string strExpirationDate = DateTime.Today.AddDays(2).ToString();
+   DateTime dtExpirationDate = DateTime.Parse(strExpirationDate);
+
+   this.Permission.UserPermissions.Add("someone@example.com", 
+      PermissionType.FullControl, dtExpirationDate);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim strExpirationDate As String = _
+      DateTime.Today.AddDays(2).ToString()
+   dtExpirationDate As DateTime = DateTime.Parse(strExpirationDate)
+
+   Me.Permission.UserPermissions.Add("someone@example.com", _
+      PermissionType.FullControl, dtExpirationDate)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.UserPermissionCollection.Count" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.InfoPath.UserPermissionCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the number of <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> objects in the collection.</summary>
+        <value>The number of <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> objects in the collection.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and displays the count of users.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Permission.UserPermissions.Count.ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Permission.UserPermissions.Count.ToString())
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="userPermissionCollection.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets an <b>IEnumerator</b> for iterating over the collection.</summary>
+        <returns>A <b>System.IEnumerator</b></returns>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.UserPermission Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.UserPermissionCollection.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(index As Integer) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::UserPermission ^ default[int] { Microsoft::Office::InfoPath::UserPermission ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.InfoPath.UserPermission" Usage="Microsoft.Office.InfoPath.UserPermissionCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">The zero-based index of the <b>UserPermission</b> object to retrieve.</param>
+        <summary>Gets the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object at the specified index in the collection. </summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object that represents the specified user.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and sets the second user in the collection to the Change access level.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   Permission.UserPermissions[1].Permission = PermissionType.Change;
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Permission.UserPermissions(1).Permission = PermissionType.Change
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermission this[string userId] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.UserPermission Item(string)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.UserPermissionCollection.Item(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(userId As String) As UserPermission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::UserPermission ^ default[System::String ^] { Microsoft::Office::InfoPath::UserPermission ^ get(System::String ^ userId); };" />
+      <MemberSignature Language="F#" Value="member this.Item(string) : Microsoft.Office.InfoPath.UserPermission" Usage="Microsoft.Office.InfoPath.UserPermissionCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermission</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userId">The e-mail address of the specified user.</param>
+        <summary>Get the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object with the specified <see cref="P:Microsoft.Office.InfoPath.UserPermission.UserId" /> from the collection. </summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> that represents the specified user. Returns a null reference (Nothing in Visual Basic) if the specified <paramref name="userId" /> does not exist.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and sets the user with the e-mail address <b>someone@example.com</b> to the Change access level.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   Permission.UserPermissions["someone@example.com"].Permission = 
+      PermissionType.Change;
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Permission.UserPermissions("someone@example.com").Permission = _
+      PermissionType.Change
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public abstract void Remove (string userId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Remove(string userId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.Remove(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Remove (userId As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Remove(System::String ^ userId);" />
+      <MemberSignature Language="F#" Value="abstract member Remove : string -&gt; unit" Usage="userPermissionCollection.Remove userId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="userId">The e-mail address in the format user@domain.com of the user to be removed.</param>
+        <summary>Removes the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object with the specified <see cref="P:Microsoft.Office.InfoPath.UserPermission.UserId" /> from the collection.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and removes the user with the e-mail address <b>someone@example.com</b>.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   this.Permission.UserPermissions.Remove("someone@example.com");
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Me.Permission.UserPermissions.Remove("someone@example.com")
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAll">
+      <MemberSignature Language="C#" Value="public abstract void RemoveAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.UserPermissionCollection.RemoveAll" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RemoveAll ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void RemoveAll();" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAll : unit -&gt; unit" Usage="userPermissionCollection.RemoveAll " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Removes all <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> objects from the collection.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form and removes all users.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   this.Permission.UserPermissions.RemoveAll();
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Me.Permission.UserPermissions.RemoveAll()
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

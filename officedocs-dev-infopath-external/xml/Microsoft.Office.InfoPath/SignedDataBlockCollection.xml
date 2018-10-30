@@ -1,0 +1,165 @@
+﻿<Type Name="SignedDataBlockCollection" FullName="Microsoft.Office.InfoPath.SignedDataBlockCollection">
+  <TypeSignature Language="C#" Value="public abstract class SignedDataBlockCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SignedDataBlockCollection extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SignedDataBlockCollection&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SignedDataBlockCollection abstract : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type SignedDataBlockCollection = class&#xA;    interface IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>The collection of <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> objects that correspond to the sets of data in the form template that can be digitally signed.</summary>
+    <remarks>
+      <para>A <b>SignedDataBlock</b> object in a <b>SignedDataBlockCollection</b> object returned for a form corresponds to a set of data that was configured in the form template at design time using the Digital Signature category in the Form Options dialog box. If the Allow signing parts of the formoption is selected in the Digital Signature category of the Form Options dialog box, there will be one <b>SignedDataBlock</b> object in the collection that represents each set of data configured using that option. If the Allow signing the entire form option is selected, there is only one <b>SignedDataBlock</b> object that represents the entire form.</para>
+      <para>Alternatively, if you create a form template that can be opened only in the InfoPath editor, you can add one or more Signature Line controls to the form, and then use the settings on the Advanced tab of the control's Properties dialog box to configure digital signing for all or part of a form.</para>
+      <para>The <b>SignedDataBlockCollection</b> class implements properties that can be used to access the <b>SignedDataBlock</b> objects associated with a form. The <b>SignedDataBlockCollection</b> is accessed through the <see cref="P:Microsoft.Office.InfoPath.XmlForm.SignedDataBlocks" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object.</para>
+      <para>The <see cref="P:Microsoft.Office.InfoPath.SignedDataBlockCollection.Item(System.Int32)" /> property and <see cref="P:Microsoft.Office.InfoPath.SignedDataBlockCollection.Count" /> property of the <b>SignedDataBlockCollection</b> class are used to access and count the <b>SignedDataBlock</b> objects in the collection. You can provide a name or index value in your form code that allows InfoPath to use the <see cref="P:Microsoft.Office.InfoPath.SignedDataBlockCollection.Item(System.Int32)" /> method to access a <b>SignedDataBlock</b> object.</para>
+      <para>The <b>SignedDataBlockCollection</b> class also provides the <see cref="M:Microsoft.Office.InfoPath.SignedDataBlockCollection.ShowSignatureDialog" /> method which displays the Sign dialog box at run time, if digital signatures were enabled in the form template at design time.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SignedDataBlockCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignedDataBlockCollection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SignedDataBlockCollection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlockCollection.Count" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.InfoPath.SignedDataBlockCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the number of <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> objects defined in the form template.</summary>
+        <value>The number of <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> objects defined in the form template</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignedDataBlockCollection.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="signedDataBlockCollection.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets a <b>System.Collections.IEnumerator</b> object that iterates over all entries in the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" /> collection.</summary>
+        <returns>A <b>System.Collections.IEnumerator</b> object that iterates over all entries in the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" /> object.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignedDataBlock this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.SignedDataBlock Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlockCollection.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(index As Integer) As SignedDataBlock" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignedDataBlock ^ default[int] { Microsoft::Office::InfoPath::SignedDataBlock ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.InfoPath.SignedDataBlock" Usage="Microsoft.Office.InfoPath.SignedDataBlockCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignedDataBlock</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">The zero-based index of the <b>SignedDataBlock</b> object to retrieve. The specified value must be a number from 0 to the value of the collection's <see cref="P:Microsoft.Office.InfoPath.SignatureCollection.Count" /> property minus 1.</param>
+        <summary>Gets a reference to the specified <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object from the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" /> object based on index position.</summary>
+        <value>The <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object that corresponds to the specified index value.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">The index value is out of range.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowSignatureDialog">
+      <MemberSignature Language="C#" Value="public abstract void ShowSignatureDialog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowSignatureDialog() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignedDataBlockCollection.ShowSignatureDialog" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ShowSignatureDialog ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ShowSignatureDialog();" />
+      <MemberSignature Language="F#" Value="abstract member ShowSignatureDialog : unit -&gt; unit" Usage="signedDataBlockCollection.ShowSignatureDialog " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Displays the Sign dialog box.</summary>
+        <remarks>
+          <para>The <b>ShowSignatureDialog</b> method can be used only in form templates that have been enabled for digital signing. The method will raise an exception if used in a form template that is not enabled for digital signing.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>ShowSignatureDialog</b> method of the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" /> class is used to display the Sign dialog box.</para>
+          <code>this.SignedDataBlocks.ShowSignatureDialog();</code>
+          <code>Me.SignedDataBlocks.ShowSignatureDialog()</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

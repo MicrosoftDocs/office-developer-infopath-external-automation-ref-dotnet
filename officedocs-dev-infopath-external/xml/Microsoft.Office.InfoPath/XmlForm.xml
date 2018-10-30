@@ -1,0 +1,1703 @@
+﻿<Type Name="XmlForm" FullName="Microsoft.Office.InfoPath.XmlForm">
+  <TypeSignature Language="C#" Value="public abstract class XmlForm" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlForm extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlForm" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlForm" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlForm abstract" />
+  <TypeSignature Language="F#" Value="type XmlForm = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents the underlying XML document of a form.</summary>
+    <remarks>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is a key object in the InfoPath managed code object model that provides properties, methods, and events that can be used to programmatically interact with and manipulate the XML data in the underlying XML document of a form.</para>
+      <para>While <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> objects can be accessed from the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class using the <see cref="P:Microsoft.Office.InfoPath.Application.XmlForms" /> property of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class, in most cases, when working with form template business logic you will access the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class and its members using the <b>this</b> (in C#) or <b>Me</b> (in Visual Basic) keywords without going through the collection.</para>
+      <para>For example, the following code examples of event handlers for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event use the <b>this</b> or <b>Me</b> keywords to access the <see cref="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" /> and <see cref="P:Microsoft.Office.InfoPath.XmlForm.NamespaceManager" /> properties of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class. These properties are used to work with an instance of the <a href="frlrfSystemXmlXPathXPathNavigatorClassTopic">System.Xml.XPath.XPathNavigator</a><b>employee</b> field (resolving namespace prefixes by using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.NamespaceManager" /> property), and then set the field to the current user's username.</para>
+      <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
+{
+   // Create XPathNavigator positioned at the root of the main data 
+   // source.
+   XPathNavigator myNav = this.MainDataSource.CreateNavigator()
+
+   // Select employee field and set value to username.
+   myNav.SelectSingleNode("//my:employee",this.NamespaceManager).
+      SetValue(System.Environment.UserName);
+}</code>
+      <code>Public Sub FormEvents_Loading(ByVal sender As Object, ByVal e As LoadingEventArgs)
+   ' Create XPathNavigator positioned at the root of the main data 
+   ' source.
+   Dim myNav As XPathNavigator = Me.MainDataSource.CreateNavigator()
+
+   ' Select employee field and set value to username.
+   myNav.SelectSingleNode("//my:employee", Me.NamespaceManager). _
+      SetValue(System.Environment.UserName)
+End Sub</code>
+      <para>
+        <b>Note</b>: It is not necessary to explicitly reference the <b>this</b> or <b>Me</b> keywords to access the members of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class in form code. For example, the lines of code to access the <see cref="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" /> property in the previous C# and Visual Basic examples can be written as follows:</para>
+      <code>XPathNavigator myNav = MainDataSource.CreateNavigator()
+Dim myNav As XPathNavigator = MainDataSource.CreateNavigator()</code>
+      <para>However, using the <b>this</b> or <b>Me</b> keywords when writing code does facilitate IntelliSense statement completion, which lists the members of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class when writing business logic code in a form template's FormCode module.</para>
+      <para>When working with managed code, the source XML data of a form is accessed through the <see cref="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" /> property which returns an instance of the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> class that represents the main data source of the form. The <see cref="M:Microsoft.Office.InfoPath.DataSource.CreateNavigator" /> method of the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> class is then used to create an instance of the <b>System.Xml.XPath.XPathNavigator</b> class which is positioned at the root of the form's underlying XML document. The members of the <b>XPathNavigator</b> class can then be used to navigate, read from and write to the form data. For more information about using the <b>XPathNavigator</b> class in InfoPath form code, see How to: Work with System.Xml from Managed-code Form Templates.</para>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class also provides additional properties that can be used to get information about the form and its underlying XML document. It also provides methods that can be used to perform various actions with the form, such as printing, saving, and submitting. Form-level events, such as loading a form, switching views, or a merge operation, are implemented by the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class. Additionally, events raised by changes to the underlying XML document itself are implemented by the <see cref="T:Microsoft.Office.InfoPath.XmlEvents" /> class.</para>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object can be accessed from the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> and <see cref="T:Microsoft.Office.InfoPath.Window" /> classes in the InfoPath object model. The following table lists these locations where the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object is available.</para>
+      <list type="table">
+        <item>
+          <term>
+            <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" />
+          </term>
+          <description>Accessed from the <see cref="T:Microsoft.Office.InfoPath.Application" /> object by using the <see cref="P:Microsoft.Office.InfoPath.Application.XmlForms" /> property. Provides the <see cref="P:Microsoft.Office.InfoPath.XmlFormCollection.Item(System.Int32)" /> property and <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.Open" /> method for accessing the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> objects that it contains.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="T:Microsoft.Office.InfoPath.Window" />
+          </term>
+          <description>Provides the <see cref="P:Microsoft.Office.InfoPath.Window.XmlForm" /> property for accessing the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object associated with the window.</description>
+        </item>
+      </list>
+      <para>In the InfoPath 2003 compatible managed code object model (the types and members of the <see cref="N:Microsoft.Office.Interop.InfoPath.SemiTrust" /> namespace), which was first introduced in InfoPath 2003 Service Pack 1 in conjunction with the Microsoft Office InfoPath 2003 Toolkit for Visual Studio .NET, the following classes provided an <b>XDocument</b> property for accessing the underlying XML document of a form during events: <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEventObject" />, <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEventObject" />, <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocEventObject" />, <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEventObject" />, and <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEventObject" /> classes.</para>
+      <para>In the new InfoPath managed code object model (the types and members of the <see cref="N:Microsoft.Office.InfoPath" /> namespace), you use the <b>this</b> (in C#) or <b>Me</b> (in Visual Basic) keywords to access the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class and its members from event handlers and from other code in your form template business logic.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlForm ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlForm();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public abstract void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Close" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Close ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Close();" />
+      <MemberSignature Language="F#" Value="abstract member Close : unit -&gt; unit" Usage="xmlForm.Close " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Closes the form.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Close</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object is used to close the current form.</para>
+          <code>this.Close();</code>
+          <code>Me.Close()</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentView">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.View CurrentView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.View CurrentView" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.CurrentView" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CurrentView As View" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::View ^ CurrentView { Microsoft::Office::InfoPath::View ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentView : Microsoft.Office.InfoPath.View" Usage="Microsoft.Office.InfoPath.XmlForm.CurrentView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.View" /> object that represents the current view of the form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.View" /> object that represents the current view.</value>
+        <remarks>
+          <para>Use the <b>View</b> object returned by the <b>CurrentView</b> property to work with the properties and methods of the <b>View</b> object as they apply to the current view.</para>
+          <para>
+            <b>Important</b>: When a form is open in InfoPath, the <b>CurrentView</b> property returns a null reference (Nothing in Visual Basic) if it is used to access a <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object from an event handler for the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following code example shows how to use the <see cref="P:Microsoft.Office.InfoPath.View.ViewInfo" /> and <see cref="P:Microsoft.Office.InfoPath.View.Window" /> properties of the <b>View</b> object returned by the <b>CurrentView</b> property to display the name of the current view and the caption of the current window.</para>
+          <code>MessageBox.Show(this.CurrentView.ViewInfo.Name);
+MessageBox.Show(this.CurrentView.Window.Caption);</code>
+          <code>MessageBox.Show(Me.CurrentView.ViewInfo.Name)
+MessageBox.Show(Me.CurrentView.Window.Caption)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="DataConnections">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.DataConnectionCollection DataConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataConnectionCollection DataConnections" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property DataConnections As DataConnectionCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::DataConnectionCollection ^ DataConnections { Microsoft::Office::InfoPath::DataConnectionCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataConnections : Microsoft.Office.InfoPath.DataConnectionCollection" Usage="Microsoft.Office.InfoPath.XmlForm.DataConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataConnectionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> object associated with the form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> that contains any <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> objects associated with the form.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>DataConnections</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to set a reference to a data connection called "Main query".</para>
+          <code>DataConnection mainQuery = this.DataConnections["Main query"];</code>
+          <code>Dim mainQuery As DataConnection = Me.DataConnections("Main query")</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSources">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.DataSourceCollection DataSources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataSourceCollection DataSources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.DataSources" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property DataSources As DataSourceCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::DataSourceCollection ^ DataSources { Microsoft::Office::InfoPath::DataSourceCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataSources : Microsoft.Office.InfoPath.DataSourceCollection" Usage="Microsoft.Office.InfoPath.XmlForm.DataSources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataSourceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the <see cref="T:Microsoft.Office.InfoPath.DataSourceCollection" /> object associated with the form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.DataSourceCollection" /> that contains any <see cref="T:Microsoft.Office.InfoPath.DataSource" /> objects associated with the form.</value>
+        <remarks>
+          <para>The <b>DataSourceCollection</b> object contains a collection of <see cref="T:Microsoft.Office.InfoPath.DataSource" /> objects that represent all external (secondary) data sources associated with the form template. The <b>DataSourceCollection</b> object also contains a <b>DataSource</b> object that represents the main data source of the form. This means that developers will have two ways to return the <b>DataSource</b> object that represents the main data source: by using DataSources[""] or by using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" /> property.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>DataSources</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to set a reference to the "CityList" secondary data source.</para>
+          <code>DataSource myDataSource = this.DataSources["CityList"];</code>
+          <code>Dim myDataSource As DataSource = Me.DataSources("CityList")</code>
+          <para>In the following code example, which implements an event handler for a Button control on a form, the <b>DataSources</b> property of the <b>XmlForm</b> object is used to set a reference to the <b>DataSourceCollection</b> of the form. The code loops through the collection and displays the positional index and name of each <b>DataSource</b> object that it contains.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   // Set a reference to the DataSources collection.
+   DataSourceCollection myDataSources = this.DataSources;
+
+   // Loop through the collection and display the name
+   // of each DataSource object that it contains.
+   for (int i = 0; i &amp;lt; myDataSources.Count; i++)
+   {
+      MessageBox.Show("Data source " + i + ": " + 
+         myDataSources[i].Name);
+   }
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   ' Set a reference to the DataSources collection.
+   Dim myDataSources As DataSourceCollection = Me.DataSources
+
+   ' Loop through the collection and display the name
+   ' of each DataSource object that it contains.
+   Dim i As Integer
+   For i = 0 To myDataSources.Count - 1
+      MessageBox.Show("Data source " &amp;amp; i &amp;amp; ": " _
+         &amp;amp; myDataSources(i).Name)
+   Next
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Dirty">
+      <MemberSignature Language="C#" Value="public abstract bool Dirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Dirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Dirty" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Dirty As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Dirty { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Dirty : bool with get, set" Usage="Microsoft.Office.InfoPath.XmlForm.Dirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value that indicates whether the data in a form has been modified since it was last saved.</summary>
+        <value>
+          <b>true</b> if the data in the form has been modified since it was last saved; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>If the <b>Dirty</b> property is <b>true</b>, data in the form's underlying XML document has been changed since it was last saved. If <b>false</b>, no changes have occurred.</para>
+          <para>
+            <b>Note</b>: Changes that occur during a <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event will not result in the <b>Dirty</b> property being set to <b>true</b>.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Dirty</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to determine whether data in the form has been changed.</para>
+          <code>if (this.Dirty)
+{
+   MessageBox.Show("Data has been changed.");
+}
+else
+{
+   MessageBox.Show("Data has not been changed.");
+}</code>
+          <code>If (Me.Dirty) Then
+   MessageBox.Show("Data has been changed.")
+Else
+   MessageBox.Show("Data has not been changed.")
+End If</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Environment">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Environment Environment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Environment Environment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Environment" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Environment As Environment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Environment ^ Environment { Microsoft::Office::InfoPath::Environment ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Environment : Microsoft.Office.InfoPath.Environment" Usage="Microsoft.Office.InfoPath.XmlForm.Environment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Environment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.Environment" /> object that provides information about which runtime environment (the InfoPath editor, Web browser, or mobile browser) the form is running in.</summary>
+        <value>An object that provides information about which runtime environment the form is running in.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.FormErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Errors" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Errors As FormErrorCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::FormErrorCollection ^ Errors { Microsoft::Office::InfoPath::FormErrorCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Errors : Microsoft.Office.InfoPath.FormErrorCollection" Usage="Microsoft.Office.InfoPath.XmlForm.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> that is associated with a form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> that represents the collection of <see cref="T:Microsoft.Office.infoPath.FormError" /> objects for the current form.</value>
+        <remarks>
+          <para>The <b>FormErrorCollection</b> collection is associated with a form's underlying XML document so that when an error occurs a <b>FormError</b> object that contains information about the error will be added to the collection. After you set a reference to the <b>FormErrorCollection</b> collection, you can access all of its properties and methods for managing the errors that occur within an InfoPath form.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Errors</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to return the count of the number of errors and then display that value in a message box.</para>
+          <code>int formErrors = this.Errors.Count;
+MessageBox.Show("Total number of errors: " + formErrors);</code>
+          <code>Dim formErrors As Integer = Me.Errors.Count
+MessageBox.Show("Total number of errors: " &amp;amp; formErrors)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public abstract object Extension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Extension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Extension" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Extension As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Object ^ Extension { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Extension : obj" Usage="Microsoft.Office.InfoPath.XmlForm.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an <see cref="T:System.Object" /> for accessing the functions and global variables contained in a form's primary form code file using <b>System.Reflection</b>.</summary>
+        <value>An <see cref="T:System.Object" /> for accessing the functions and global variables contained in a form's primary form code file using <b>System.Reflection</b>.</value>
+        <remarks>
+          <para>The <b>System.Object</b> returned by the <b>Extension</b> property facilitates using the functions and global variables implemented in an InfoPath form code file. Usually, it is used from a custom task pane, from a custom dialog box, or in the XSL Transform (XSLT) of a view where direct access to the functions and variables may be needed.</para>
+          <para>To use the <b>System.Object</b> within a custom task pane, you must first set a reference to the <b>XmlForm</b> object by using the Dynamic HTML (DHTML) <b>external</b> property of the DHTML <b>window</b> object, as shown in this example.</para>
+          <code>objXmlForm = window.external.XmlForm;</code>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Extension</b> property is used to return a <b>System.Object</b> to invoke the custom method called <paramref name="MyMethod" />.</para>
+          <code>object extObj = this.Extension;
+extObj.GetType().InvokeMember("MyMethod",
+   BindingFlags.InvokeMethod |
+   BindingFlags.DeclaredOnly |
+   BindingFlags.Public |
+   BindingFlags.Instance, null, extObj, null);</code>
+          <code>Dim extObj As Object extObj = Me.Extension
+extObj.GetType().InvokeMember("MyMethod", _
+   BindingFlags.InvokeMethod Or _
+   BindingFlags.DeclaredOnly Or _
+   BindingFlags.Public Or _
+   BindingFlags.Instance, Nothing, extObj, Nothing)</code>
+          <para>In the following code example, a method called <paramref name="myCustomMethod" /> of the InfoPath form code project class can be accessed from the custom task pane using the <b>Extension</b> property.</para>
+          <code>// Custom method added to the form code project.
+public string myCustomMethod()
+{
+   return "Method value";
+}</code>
+          <code>' Custom method added to the form code project.
+Function myCustomMethod() As String
+   myCustomMethod = "Method value"
+End Function</code>
+          <para>To access <paramref name="myCustomMethod" /> from script in the custom task pane, use the DHTML <b>external</b> property of the DHTML <b>window</b> object.</para>
+          <code>objXmlForm = window.external.XmlForm;
+myString = objXmlForm.Extension.myCustomMethod();</code>
+          <code>Dim objXmlForm
+Dim myString
+Set objXmlForm = window.external.XmlForm
+myString = objXmlForm.Extension.myCustomMethod()</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="FormState">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IDictionary FormState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary FormState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.FormState" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property FormState As IDictionary" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::IDictionary ^ FormState { System::Collections::IDictionary ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.FormState : System.Collections.IDictionary" Usage="Microsoft.Office.InfoPath.XmlForm.FormState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to a property bag of type <b>System.Collections.IDictionary</b> that browser-enabled forms can use to maintain state information across sessions on the server.</summary>
+        <value>An <see cref="T:System.Collections.IDictionary" /> that contains any user-defined state variables that were defined in the declarations section of the form code.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following code example shows a design pattern for creating a state variable in the declarations section of the FormCode class (before the InternalStartup method) that functions as a counter. The following code example verifies that the _Counter variable is a null reference (Nothing in Visual Basic) before returning the value to avoid errors where the FormState array was not initialized.</para>
+          <code>private int _Counter
+{
+   get
+   {
+      if(FormState["_Counter"] != null)
+      {
+         return (int) FormState["_Counter"];
+      }
+      else
+      {
+         return 0;
+      }
+   }
+   set
+   {
+      FormState["_Counter"] = value;
+   }
+}</code>
+          <code>Private Property _Counter As Integer
+   Get
+      If(FormState("_Counter") != null) Then
+         _Counter = DirectCast(FormState("_Counter"), Integer)
+      Else
+         _Counter = 0
+      End If
+   End Get
+   Set
+      FormState("_Counter") = value
+   End Set
+End Property</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowTasks">
+      <MemberSignature Language="C#" Value="public abstract object GetWorkflowTasks ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetWorkflowTasks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTasks" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetWorkflowTasks () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Object ^ GetWorkflowTasks();" />
+      <MemberSignature Language="F#" Value="abstract member GetWorkflowTasks : unit -&gt; obj" Usage="xmlForm.GetWorkflowTasks " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets a reference to a <b>Microsoft.Office.Core.WorkflowTasks</b> collection for the current form.</summary>
+        <returns>A <b>Microsoft.Office.Core.WorkflowTasks</b> collection that contains any <b>Microsoft.Office.Core.WorkflowTask</b> objects for the current form.</returns>
+        <remarks>
+          <para>
+            <b>Important</b>: For the <b>GetWorkFlowTasks</b> method to work, you must establish a reference to the Microsoft Office 14.0 Object Library (from the COM tab of the Add Reference dialog box in Visual Studio 2012). This will establish a reference to the <b>Microsoft.Office.Core</b> namespace, which contains the <b>WorkflowTasks</b> class.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, clicking the Button control displays the count of workflow tasks associated with the current form.</para>
+          <para>This example requires a <b>using</b> or <b>Imports</b> directive for the <b>Microsoft.Office.Core</b> namespace in the declarations section of the form code module.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   WorkflowTasks myWorkflowTasks = 
+      (WorkflowTasks)this.GetWorkflowTasks();
+
+   int workflowTasksCount = myWorkflowTasks.Count;
+
+   MessageBox.Show("Get " + workflowTasksCount.ToString() + " 
+      workflow tasks.");
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim myWorkflowTasks As WorkflowTasks = _
+      DirectCast(Me.GetWorkflowTasks(), WorkflowTasks)
+
+   Dim workflowTasksCount As Integer = myWorkflowTasks.Count
+
+   MessageBox.Show("Get " &amp;amp; workflowTasksCount.ToString() &amp;amp; " _
+      workflow tasks.")
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowTemplates">
+      <MemberSignature Language="C#" Value="public abstract object GetWorkflowTemplates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetWorkflowTemplates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTemplates" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetWorkflowTemplates () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Object ^ GetWorkflowTemplates();" />
+      <MemberSignature Language="F#" Value="abstract member GetWorkflowTemplates : unit -&gt; obj" Usage="xmlForm.GetWorkflowTemplates " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets a reference to a <b>Microsoft.Office.Core.WorkflowTemplates</b> collection for the current form.</summary>
+        <returns>A <b>Microsoft.Office.Core.WorkflowTemplates</b> collection that contains any <b>Microsoft.Office.Core.WorkflowTemplate</b> objects for the current form.</returns>
+        <remarks>
+          <para>
+            <b>Important</b>: For the <b>GetWorkFlowTemplates</b> method to work, you must establish a reference to the Microsoft Office 14.0 Object Library (from the COM tab of the Add Reference dialog box in Visual Studio 2012). This will establish a reference to the <b>Microsoft.Office.Core</b> namespace, which contains the <b>WorkflowTemplates</b> class.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, clicking the Button control displays the count of workflow templates associated with the current form.</para>
+          <para>This example requires a <b>using</b> or <b>Imports</b> directive for the <b>Microsoft.Office.Core</b> namespace in the declarations section of the form code module.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   WorkflowTemplates myWorkflowTemplates = 
+      (WorkflowTemplates)this.GetWorkflowTemplates();
+
+   int workflowTemplatesCount = myWorkflowTemplates.Count;
+
+   MessageBox.Show("Get " + workflowTemplatesCount.ToString() + " 
+      workflow templates.");
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim myWorkflowTemplates As WorkflowTemplates = _
+      DirectCast(Me.GetWorkflowTemplates(), WorkflowTemplates)
+
+   Dim workflowTemplatesCount As Integer = myWorkflowTemplates.Count
+
+   MessageBox.Show("Get " &amp;amp; workflowTemplatesCount.ToString() &amp;amp; " _
+      workflow templates.")
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public abstract object Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Host" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Host" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Host As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Object ^ Host { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Host : obj" Usage="Microsoft.Office.InfoPath.XmlForm.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <b>System.Object</b> that code running in a hosted instance of InfoPath can use to access the object model of the host application.</summary>
+        <value>A <b>System.Object</b> that represents the method defined in the host application for accessing that application's object model.</value>
+        <remarks>
+          <para>This property is only used for scenarios where InfoPath is hosted as a control in another application and code running in InfoPath needs to access the object model of the host application. By default, the value of this property is set to a null reference (Nothing in Visual Basic).</para>
+          <para>For more information and a brief overview of hosting InfoPath in another application, see "The InfoPath Editor Hosted as a Control" in What's New for InfoPath Developers. For more information about hosting InfoPath in another application, see the article titled "Hosting the InfoPath Editing Environment in a Custom Windows Form Application" on the <a href="http://go.microsoft.com/fwlink?LinkID=11689">InfoPath Developer Portal</a></para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hosted">
+      <MemberSignature Language="C#" Value="public abstract bool Hosted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Hosted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Hosted" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Hosted As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Hosted { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Hosted : bool" Usage="Microsoft.Office.InfoPath.XmlForm.Hosted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets whether InfoPath is hosted as a control in another application.</summary>
+        <value>
+          <b>true</b> if InfoPath is hosted as a control in another application; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>This property is intended for use in scenarios where InfoPath is hosted as a control in another application.</para>
+          <para>For more information and a brief overview of hosting InfoPath in another application, see "The InfoPath Editor Hosted as a Control" in What's New for InfoPath Developers. For more information about hosting InfoPath in another application, see the article titled "Hosting the InfoPath Editing Environment in a Custom Windows Form Application" on the <a href="http://go.microsoft.com/fwlink?LinkID=11689">InfoPath Developer Portal</a></para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public abstract string HostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.HostName" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property HostName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ HostName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.HostName : string" Usage="Microsoft.Office.InfoPath.XmlForm.HostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the name of the application hosting InfoPath as a control. </summary>
+        <value>The name of the host application.</value>
+        <remarks>
+          <para>This property is intended for use in scenarios where InfoPath is hosted as a control in another application and code running in InfoPath needs to access the name of the host application. Typically, the host application name returned will be used in the title bar text of dialog boxes instead of "Microsoft InfoPath".</para>
+          <para>For a brief overview of hosting InfoPath in another application, see "The InfoPath Editor Hosted as a Control" in What's New for InfoPath Developers. For more information about hosting InfoPath in another application, see the article titled "Hosting the InfoPath Editing Environment in a Custom Windows Form Application" on the <a href="http://go.microsoft.com/fwlink?LinkID=11689">InfoPath Developer Portal</a></para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MainDataSource">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.DataSource MainDataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataSource MainDataSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property MainDataSource As DataSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::DataSource ^ MainDataSource { Microsoft::Office::InfoPath::DataSource ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MainDataSource : Microsoft.Office.InfoPath.DataSource" Usage="Microsoft.Office.InfoPath.XmlForm.MainDataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.DataSource" /> object that represents the main data source of the form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.DataSource" /> that represents the main data source of the form.</value>
+        <remarks>
+          <para>The <b>MainDataSource</b> property gets a reference to a <b>DataSource</b> object that represents the underlying XML document of the form. This object can then be used to access the properties and methods of the <b>DataSource</b> class to work with the data in the underlying XML document of the form.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event first uses the <b>MainDataSource</b> property to call the <see cref="M:Microsoft.Office.InfoPath.DataSource.CreateNavigator" /> method of the <b>DataSource</b> class to create an instance of the <b>System.Xml.XPath.XPathNavigator</b> class positioned at the root node of the underlying XML document of the form. Then, it uses the <b>SelectSingleNode</b> method of the <b>XPathNavigator</b> object to navigate to the <b>employee</b> field (resolving namespace prefixes using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.NamespaceManager" /> property) and set the field to the current user's username.</para>
+          <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
+{
+   // Create XPathNavigator positioned at the root of the main data 
+   // source.
+   XPathNavigator myNav = this.MainDataSource.CreateNavigator()
+
+   // Select employee field and set value to username.
+   myNav.SelectSingleNode("//my:employee",this.NamespaceManager).
+      SetValue(System.Environment.UserName);
+}</code>
+          <code>Public Sub FormEvents_Loading(ByVal sender As Object, ByVal e As LoadingEventArgs)
+   ' Create XPathNavigator positioned at the root of the main data 
+   ' source.
+   Dim myNav As XPathNavigator = Me.MainDataSource.CreateNavigator()
+
+   ' Select employee field and set value to username.
+   myNav.SelectSingleNode("//my:employee", Me.NamespaceManager). _
+      SetValue(System.Environment.UserName)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeForm">
+      <MemberSignature Language="C#" Value="public abstract void MergeForm (string fileUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MergeForm(string fileUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub MergeForm (fileUrl As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void MergeForm(System::String ^ fileUrl);" />
+      <MemberSignature Language="F#" Value="abstract member MergeForm : string -&gt; unit" Usage="xmlForm.MergeForm fileUrl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileUrl">The path or URL to the form file to merge.</param>
+        <summary>Merges the current form with the form specified by path or URL.</summary>
+        <remarks>
+          <para>The <b>MergeForm</b> method is equivalent to using the Merge Forms command of the InfoPath form editor. The value passed as the <paramref name="fileUrl" /> parameter must be a full path or URL, and must include the filename with an .xml file extension.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>MergeForm</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to merge a form with the current form.</para>
+          <code>this.MergeForm("C:\\MyForms\\SomeOtherForm.xml");</code>
+          <code>Me.MergeForm("C:\MyForms\SomeOtherForm.xml")</code>
+        </example>
+        <exception cref="T:System.ArgumentNullException">The value passed for <paramref name="fileUrl" /> is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The value passed for <paramref name="fileUrl" /> is "" or is invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">The <b>MergeForm</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeForm">
+      <MemberSignature Language="C#" Value="public abstract void MergeForm (System.Xml.XPath.XPathNavigator target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MergeForm(class System.Xml.XPath.XPathNavigator target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub MergeForm (target As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void MergeForm(System::Xml::XPath::XPathNavigator ^ target);" />
+      <MemberSignature Language="F#" Value="abstract member MergeForm : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="xmlForm.MergeForm target" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="target">An <b>XPathNavigator</b> that provides the XML data to merge into the current form.</param>
+        <summary>Merges the current form with the target form specified in the node returned by the <see cref="T:System.Xml.XPath.XPathNavigator" /> passed to the method.</summary>
+        <remarks>
+          <para>The <b>MergeForm</b> method is equivalent to using the Merge Forms command of the InfoPath editor. The XML data provided by <b>XPathNavigator</b> passed as the <paramref name="target" /> parameter must be valid XML for merging into the current form. If the XML data provided isn't wrapped as an InfoPath form, InfoPath will wrap the data.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>MergeForm</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following code example, a <b>System.Xml.XmlDocument</b> object is used to load a form from the specified URL, and then a <b>System.Xml.XPath.XPathNavigator</b> object is positioned at the root of the form to merge. Finally, the <b>XPathNavigator</b> is passed to the <b>MergeForm(System.Xml.XPath.XPathNavigator)</b> method to merge the form into the current form. </para>
+          <code>string pathToFile = @"C:\FormToMerge\Form1.xml";
+XmlDocument FormXML = new XmlDocument();
+
+// The form tempate must be Full Trust for the 
+// XmlDocument.Load method to work.
+FormXML.Load(pathToFile);
+
+XPathNavigator nav = FormXML.CreateNavigator();
+
+// Merge the root node (the entire document) into the current form.
+this.MergeForm(nav);</code>
+          <code>Dim pathToFile As String = "C:\FormToMerge\Form1.xml"
+Dim FormXML As New XmlDocument
+
+' The form tempate must be Full Trust for the 
+' XmlDocument.Load method to work.
+FormXML.Load(pathToFile)
+
+Dim nav As XPathNavigator = FormXML.CreateNavigator()
+
+' Merge the root node (the entire document) into the current form.
+Me.MergeForm(nav)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceManager">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XmlNamespaceManager NamespaceManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNamespaceManager NamespaceManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.NamespaceManager" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property NamespaceManager As XmlNamespaceManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XmlNamespaceManager ^ NamespaceManager { System::Xml::XmlNamespaceManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NamespaceManager : System.Xml.XmlNamespaceManager" Usage="Microsoft.Office.InfoPath.XmlForm.NamespaceManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNamespaceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to a <see cref="T:System.Xml.XmlNamespaceManager" /> object that can be used to resolve, add, or remove namespaces used in the form.</summary>
+        <value>An <see cref="T:System.Xml.XmlNamespaceManager" /> that can be used resolve, add, or remove namespaces used in the form.</value>
+        <remarks>
+          <para>The <b>XmlNamespaceManager</b> object is initialized at load time with all the namespaces defined in the <b>xDocumentClass</b> element of the form template form definition file (.xsf).</para>
+          <para>A developer can use the instance of the <b>XmlNamespaceManager</b> class to resolve, add, or remove namespaces from the form template. For browser-enabled forms, the class is persisted on the server. All namespaces added using the <b>XmlNamespaceManager</b> class are persisted in the session state of the form template so that they are available across all requests for the form.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>NamespaceManager</b> property is used to get an instance of the <b>System.Xml.XmlNamespaceManager</b> class that is then used to resolve namespaces when using the <b>System.Xml.XPath.XPathNavigator.SelectSingleNode</b> method to select a field.</para>
+          <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
+{
+   // Create XPathNavigator positioned at the root of the main data 
+   // source.
+   XPathNavigator myNav = this.MainDataSource.CreateNavigator()
+
+   // Select employee field and set value to username.
+   myNav.SelectSingleNode("//my:employee",this.NamespaceManager).
+      SetValue(System.Environment.UserName);
+}</code>
+          <code>Public Sub FormEvents_Loading(ByVal sender As Object, ByVal e As LoadingEventArgs)
+   ' Create XPathNavigator positioned at the root of the main data 
+   ' source.
+   Dim myNav As XPathNavigator = Me.MainDataSource.CreateNavigator()
+
+   ' Select employee field and set value to username.
+   myNav.SelectSingleNode("//my:employee", Me.NamespaceManager). _
+      SetValue(System.Environment.UserName)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkState">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.NetworkState NetworkState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.NetworkState NetworkState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.NetworkState" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property NetworkState As NetworkState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::NetworkState ^ NetworkState { Microsoft::Office::InfoPath::NetworkState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NetworkState : Microsoft.Office.InfoPath.NetworkState" Usage="Microsoft.Office.InfoPath.XmlForm.NetworkState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.NetworkState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.NetworkState" /> object that provides information about the connection state of the client computer or whether a connection can be made to the specified network destination.</summary>
+        <value>An object that provides information about the connection state of the client computer or whether a connection can be made to the specified network destination.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public abstract bool New { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool New" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.New" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property New As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool New { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.New : bool" Usage="Microsoft.Office.InfoPath.XmlForm.New" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a value that specifies whether a form is new.</summary>
+        <value>
+          <b>true</b> if the form is new; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>The <b>New</b> property behaves differently depending on whether the new form is created in Microsoft InfoPath or in a Web browser.</para>
+          <para>In a Web browser, the <b>New</b> property is set to <b>true</b> when a new form is created. The property is set to <b>false</b> only when an existing form is opened.</para>
+          <para>In InfoPath, the <b>New</b> property is set to <b>true</b> when a new form is created. The property is set to <b>false</b> as soon as the form is successfully saved. The property is also set to <b>false</b> when an existing form is opened.</para>
+          <para>
+            <b>Note</b>: The <b>New</b> property is equivalent to the <b>IsNew</b> property of the <b>XDocument</b> object in the COM/Scripting object model, and to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsNew" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2" /> interface of the InfoPath 2003 compatible managed code object model. </para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following code example shows a pattern for using the <b>New</b> property to conditionally run code depending on whether the form is new.</para>
+          <code>if (this.New)
+{
+   // Code to run if form is new.
+}
+else
+{
+   // Code to run if form is not new.
+}</code>
+          <code>If (Me.[New]) Then
+   ' Code to run if form is new.
+Else
+   ' Code to run if form is not new.
+End If</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyHost">
+      <MemberSignature Language="C#" Value="public abstract void NotifyHost (string notification);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NotifyHost(string notification) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.NotifyHost(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub NotifyHost (notification As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void NotifyHost(System::String ^ notification);" />
+      <MemberSignature Language="F#" Value="abstract member NotifyHost : string -&gt; unit" Usage="xmlForm.NotifyHost notification" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="notification" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="notification">A custom value that will be used by the code in the hosting application or ASPX page.</param>
+        <summary>Provides a custom value to the hosting application or ASPX page.</summary>
+        <remarks>
+          <para>The <b>NotifyHost</b> method is intended for use in scenarios where an InfoPath form template is hosted in an <b>Microsoft.Office.InfoPath.Server.Controls.XmlFormView</b> control on an ASPX page running on Microsoft SharePoint Server 2010 with InfoPath Forms Services. The value you provide for the <paramref name="notification" /> parameter is a string that can be used by the code-behind of the host ASPX page to perform a custom action.</para>
+          <para>For information about hosting an InfoPath form template in an ASPX page, see the article titled "Hosting the InfoPath Form Editing Environment in a Custom Web Form" on the <a href="http://go.microsoft.com/fwlink?LinkID=11689">InfoPath Developer Portal</a></para>
+          <para>The <b>NotifyHost</b> method can also be used when the InfoPath application is itself hosted as a control in another application, although in that scenario you would typically use the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Host" /> property to retrieve a custom object for working with the host application's object model instead.</para>
+          <para>For information about hosting InfoPath in another application, see the article titled "Hosting the InfoPath Editing Environment in a Custom Windows Form Application" on the <a href="http://go.microsoft.com/fwlink?LinkID=11689">InfoPath Developer Portal</a></para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>The following code example shows what the event handler in the code-behind of an ASPX page would need look like in order to receive the string value provided by the <b>NotifyHost</b> method. In this example, the <b>NotifyHost</b> method would be providing "ActionA" as the <paramref name="notification" /> parameter, and the event handler would perform a conditional action when the value is received.</para>
+          <code>private void XmlFormView1_NotifyHost(Object sender, 
+   NotifyHostEventArgs e)
+{
+   if (e.Notification == "ActionA")
+   {
+      // Code to perform if 'ActionA' is received.
+   }
+
+   else 
+   {
+      // Code to perform an alternative action.
+   }
+}</code>
+          <code>Private Sub XmlFormView1_NotifyHost(sender As Object, _
+   e As NotifyHostEventArgs)
+   If (e.Notification = "ActionA") Then
+      ' Code to perform if 'ActionA' is received.
+   Else 
+      ' Code to perform an alternative action.
+   End If
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Permission">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Permission Permission { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Permission Permission" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Permission" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Permission As Permission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Permission ^ Permission { Microsoft::Office::InfoPath::Permission ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Permission : Microsoft.Office.InfoPath.Permission" Usage="Microsoft.Office.InfoPath.XmlForm.Permission" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Permission</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to a <see cref="T:Microsoft.Office.InfoPath.Permission" /> object associated with the form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.Permission" /> object that represents the Information Rights Management (IRM) permission settings for the form.</value>
+        <remarks>
+          <para>After a reference to the <b>Permission</b> object is returned, it can be used to restrict permissions to the active form and to return or set specific permissions settings, such as whether data in the form can be edited, copied, or printed.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, clicking the Button control uses the <b>Permission</b> property to return a <b>Permission</b> object for the current form, and then uses the <see cref="P:Microsoft.Office.InfoPath.Permission.Enabled" /> property to display whether permission settings are enabled for the current form.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Permission.Enabled.ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Permission.Enabled.ToString())
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public abstract void Print ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Print() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Print" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Print ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Print();" />
+      <MemberSignature Language="F#" Value="abstract member Print : unit -&gt; unit" Usage="xmlForm.Print " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Prints the form content as it is rendered in the form's active view.</summary>
+        <remarks>
+          <para>The <b>Print</b> method uses the current printer settings, and raises exceptions if the method was called from event handlers for the <b>ViewSwitched</b> or <b>Loading</b> events, or is called from a form that is not fully trusted.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Print</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to print the current view using the current printer settings.</para>
+          <code>this.Print();</code>
+          <code>Me.Print()</code>
+        </example>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">The form cannot be printed.</exception>
+        <exception cref="T:System.InvalidOperationException">The <b>Print</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public abstract void Print (bool showPrintDialog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Print(bool showPrintDialog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Print(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Print (showPrintDialog As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Print(bool showPrintDialog);" />
+      <MemberSignature Language="F#" Value="abstract member Print : bool -&gt; unit" Usage="xmlForm.Print showPrintDialog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="showPrintDialog" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="showPrintDialog">Set to <b>true</b> to display the Print dialog box to allow the user to configure where and how to print the form. When set to <b>false</b>, the form is printed on the default printer.</param>
+        <summary>Prints the form content as it is rendered the form's active view by displaying the Print dialog box.</summary>
+        <remarks>
+          <para>The <b>Print </b>(<paramref name="showPrintDialog" />) method raises exceptions if the method was called from event handlers for the <b>ViewSwitched</b> or <b>Loading</b> events, or is called from a form that is not fully trusted.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Print</b> (<paramref name="showPrintDialog" />) method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to print the current view by displaying the Print dialog box.</para>
+          <code>this.Print(true);</code>
+          <code>Me.Print(True)</code>
+        </example>
+        <exception cref="T:System.Drawing.Printing.InvalidPrinterException">The form cannot be printed.</exception>
+        <exception cref="T:System.InvalidOperationException">The <b>Print</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryDataConnection">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.DataConnection QueryDataConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataConnection QueryDataConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.QueryDataConnection" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property QueryDataConnection As DataConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::DataConnection ^ QueryDataConnection { Microsoft::Office::InfoPath::DataConnection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryDataConnection : Microsoft.Office.InfoPath.DataConnection" Usage="Microsoft.Office.InfoPath.XmlForm.QueryDataConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> object that represents the data connection that is associated with the form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> that represents the data connection that is associated with the form.</value>
+        <remarks>
+          <para>
+            <b>DataConnection</b> objects provide properties and methods that retrieve and submit data to external data sources; the data connection that is associated with a form is dependent on the type of data source that was used when the form was initially created.</para>
+          <para>The <b>QueryDataConnection</b> property allows you to access an InfoPath form's primary data source. To access the data adapter objects used for a form's secondary data sources, use the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataSources" /> property.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>QueryDataConnection</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to set a reference to the <see cref="T:Microsoft.Office.InfoPath.ADOQueryConnection" /> and <see cref="T:Microsoft.Office.InfoPath.ADOSubmitConnection" /> objects associated with the form template. Then the <see cref="P:Microsoft.Office.InfoPath.AdoQueryConnection.Command" /> property of the <b>ADOQueryConnection</b> object and the <see cref="P:Microsoft.Office.InfoPath.AdoSubmitConnection.Command" /> property of the <b>ADOQueryConnection</b> objects are used to display the SQL command text for each connection type in a message box</para>
+          <code>ADOQueryConnection queryConnection;
+ADOSubmitConnection submitConnection;
+
+queryConnection = (ADOQueryConnection) this.QueryConnection;
+MessageBox.Show("Query SQL command text: " + queryConnection.Command);
+
+submitConnection = (ADOSubmitConnection) this.QueryConnection;
+MessageBox.Show("Submit SQL command text: " + querySubmit.Command);</code>
+          <code>Dim queryConnection As ADOQueryConnection
+Dim submitConnectionmAs ADOSubmitConnection
+
+queryConnection = DirectCast(ADOQueryConnection, Me.QueryConnection)
+MessageBox.Show("Query SQL command text: " &amp;amp; queryConnection.Command)
+
+submitConnection = DirectCast(ADOSubmitConnection, Me.QueryConnection)
+MessageBox.Show("Submit SQL command text: " &amp;amp; querySubmit.Command)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public abstract bool ReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.ReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ReadOnly As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool ReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReadOnly : bool" Usage="Microsoft.Office.InfoPath.XmlForm.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a value that indicates whether a form template is read-only or locked.</summary>
+        <value>
+          <b>true</b> if the form template is read-only or locked; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>If the <b>ReadOnly</b> property is <b>true</b>, the form template has been placed in a read-only or locked state. Changes can still be made to the form template, but it cannot be saved to the same name using a <see cref="M:Microsoft.Office.InfoPath.XmlForm.Save" /> operation; it must be saved to a new name using a <see cref="M:Microsoft.Office.InfoPath.XmlForm.SaveAs(System.String)" /> operation.</para>
+          <para>To determine whether the form's underlying XML document has been placed in a read-only state, use the <see cref="P:Microsoft.Office.InfoPath.DataSource.ReadOnly" /> property of the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> class. To access the <b>ReadOnly</b> property for the current form, you can use the <see cref="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" /> property to access an instance of the <b>DataSource</b> class that represents the current form's underlying XML document.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recovered">
+      <MemberSignature Language="C#" Value="public abstract bool Recovered { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Recovered" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Recovered" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Recovered As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Recovered { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Recovered : bool" Usage="Microsoft.Office.InfoPath.XmlForm.Recovered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a value that indicates whether a form was last saved by an AutoRecover save operation.</summary>
+        <value>
+          <b>true</b> if the current form was last saved by an AutoRecover save operation; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
+{
+   MessageBox.Show(("Last saved by an AutoRecover save operation: " 
+      + this.Recovered);
+}</code>
+          <code>Public Sub FormEvents_Loading(ByVal sender As Object, ByVal e As LoadingEventArgs)
+   MessageBox.Show(("Last saved by an AutoRecover save operation: " _
+      &amp;amp; Me.Recovered)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public abstract void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Save" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Save ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Save();" />
+      <MemberSignature Language="F#" Value="abstract member Save : unit -&gt; unit" Usage="xmlForm.Save " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Saves the form to the Uniform Resource Locator (URL) that it is currently associated with.</summary>
+        <remarks>
+          <para>Using the <b>Save</b> method sets the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Dirty" /> property of the form to <b>false</b> as soon as the form is saved.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>Save</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+        <example>
+          <para>In the following code example, the <see cref="P:Microsoft.Office.InfoPath.XmlForm.New" /> property is used to determine if the form has been saved previously, and if so, the <b>Save</b> method is used to save the form to the URL that it is currently associated with.</para>
+          <code>if(this.New)
+{
+   this.SaveAs("c:\\myforms\\form1.xml");
+}
+else
+{
+   this.Save();
+}</code>
+          <code>If(Me.New) Then
+   Me.SaveAs("c:\\myforms\\form1.xml")
+Else
+   Me.Save()
+End If</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public abstract void SaveAs (string fileUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveAs(string fileUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.SaveAs(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SaveAs (fileUrl As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SaveAs(System::String ^ fileUrl);" />
+      <MemberSignature Language="F#" Value="abstract member SaveAs : string -&gt; unit" Usage="xmlForm.SaveAs fileUrl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileUrl">The path or URL that the form should be saved to.</param>
+        <summary>Saves the form to the specified Uniform Resource Locator (URL).</summary>
+        <remarks>
+          <para>The value passed as the <paramref name="fileUrl" /> parameter must be a valid path or URL, and must include the filename with a .xml file extension.</para>
+          <para>Using the <b>SaveAs</b> method sets the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Dirty" /> property of the form to <b>false</b> as soon as the form is saved.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The value passed for <paramref name="fileUrl" /> is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The value passed for <paramref name="fileUrl" /> is "" or is invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">The <b>Save</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+        <example>
+          <para>In the following code example, the <see cref="P:Microsoft.Office.InfoPath.XmlForm.New" /> property is used to determine if the form has been saved previously, and if not, the <b>SaveAs</b> method is used to save the form to the specified URL.</para>
+          <code>if(this.New)
+{
+   this.SaveAs("c:\\myforms\\form1.xml");
+}
+else
+{
+   this.Save();
+}</code>
+          <code>If(Me.New) Then
+   Me.SaveAs("c:\\myforms\\form1.xml")
+Else
+   Me.Save()
+End If</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerInfo">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ServerInfo ServerInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ServerInfo ServerInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.ServerInfo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ServerInfo As ServerInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ServerInfo ^ ServerInfo { Microsoft::Office::InfoPath::ServerInfo ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ServerInfo : Microsoft.Office.InfoPath.ServerInfo" Usage="Microsoft.Office.InfoPath.XmlForm.ServerInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ServerInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.ServerInfo" /> object that provides information about the SharePoint server where the form is located. </summary>
+        <value>An object that provides information about the SharePoint server where the form is located.</value>
+        <remarks>
+          <para>If the form template has been published to a SharePoint Foundation server, the members of the <see cref="T:Microsoft.Office.InfoPath.ServerInfo" /> class can be used to determine information about where the form is published, such as the URL of the document library where the form is located.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSaveAsDialogFilename">
+      <MemberSignature Language="C#" Value="public abstract void SetSaveAsDialogFilename (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSaveAsDialogFilename(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogFilename(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetSaveAsDialogFilename (filename As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetSaveAsDialogFilename(System::String ^ filename);" />
+      <MemberSignature Language="F#" Value="abstract member SetSaveAsDialogFilename : string -&gt; unit" Usage="xmlForm.SetSaveAsDialogFilename filename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">The name of the file.</param>
+        <summary>Sets the default filename for the SaveAs dialog box.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>SetSaveAsDialogFilename</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to set the filename for the SaveAs dialog box to "SampleFile".</para>
+          <code>this.SetSaveAsDialogFilename("SampleFile");</code>
+          <code>Me.SetSaveAsDialogFilename("SampleFile")</code>
+        </example>
+        <exception cref="T:System.IO.FileNotFoundException">The file cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSaveAsDialogLocation">
+      <MemberSignature Language="C#" Value="public abstract void SetSaveAsDialogLocation (string pathname);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSaveAsDialogLocation(string pathname) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogLocation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetSaveAsDialogLocation (pathname As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetSaveAsDialogLocation(System::String ^ pathname);" />
+      <MemberSignature Language="F#" Value="abstract member SetSaveAsDialogLocation : string -&gt; unit" Usage="xmlForm.SetSaveAsDialogLocation pathname" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathname" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathname">The path to save to.</param>
+        <summary>Sets the default path for saving the form using the SaveAs dialog box.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>SetSaveAsDialogLocation</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to set the default path for the SaveAs dialog box to "C:\SampleFiles\".</para>
+          <code>this.SetSaveAsDialogLocation("C:\\SampleFiles\\");</code>
+          <code>Me.SetSaveAsDialogLocation("C:\SampleFiles\")</code>
+        </example>
+        <exception cref="T:System.IO.FileNotFoundException">The path is invalid.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Signed">
+      <MemberSignature Language="C#" Value="public abstract bool Signed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Signed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Signed" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Signed As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Signed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Signed : bool" Usage="Microsoft.Office.InfoPath.XmlForm.Signed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a value that indicates whether a form has been digitally signed using digital signatures.</summary>
+        <value>
+          <b>true</b> if the entire form or one or more sections of signable data have been digitally signed; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>The <b>Signed</b> property is <b>true</b>, if the entire form or one or more sections have been digitally signed. If <b>false</b>, the form has not been digitally signed, or a user has removed all signatures from the form.</para>
+          <para>InfoPath uses XML Signatures to digitally sign forms.</para>
+          <para>
+            <b>Note</b>: If a form has been digitally signed, its underlying XML document is placed in a read-only state.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>To view a code example that uses the <b>Signed</b> property, see the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event topic.</para>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedDataBlocks">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignedDataBlockCollection SignedDataBlocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.SignedDataBlockCollection SignedDataBlocks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.SignedDataBlocks" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SignedDataBlocks As SignedDataBlockCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignedDataBlockCollection ^ SignedDataBlocks { Microsoft::Office::InfoPath::SignedDataBlockCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignedDataBlocks : Microsoft.Office.InfoPath.SignedDataBlockCollection" Usage="Microsoft.Office.InfoPath.XmlForm.SignedDataBlocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignedDataBlockCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" /> collection that is associated with a form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" /> that contains any <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> objects associated with the form.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>SignedDataBlocks</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to get a reference to the <b>SignedDataBlockCollection</b> for the form. The first <b>SignedDataBlock</b> object is then accessed from the collection.</para>
+          <code>SignedDataBlockCollection sblocks = this.SignedDataBlocks;
+SignedDataBlock sdblock = sblocks[0];</code>
+          <code>Dim sblocks As SignedDataBlockCollection = Me.SignedDataBlocks
+Dim sdblock As SignedDataBlock = sblocks(0)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Submit">
+      <MemberSignature Language="C#" Value="public abstract void Submit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Submit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlForm.Submit" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Submit ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Submit();" />
+      <MemberSignature Language="F#" Value="abstract member Submit : unit -&gt; unit" Usage="xmlForm.Submit " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Submits the form using the submit operation defined in the form template.</summary>
+        <remarks>
+          <para>Using the <b>Submit</b> method is similar to, but not exactly like, using the submit operation from the InfoPath user interface. Calling the <b>Submit</b> method simply performs the submit operation, but the submit operation must first be defined for form template in design mode.</para>
+          <para>
+            <b>Note</b>: You can write a custom submit event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event, and then you can programmatically call the event handler by using the <b>Submit</b> method.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Submit</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to submit the form using the predefined submit operation.</para>
+          <code>this.Submit();</code>
+          <code>Me.Submit()</code>
+        </example>
+        <exception cref="T:System.Net.WebException">The form cannot be submitted.</exception>
+        <exception cref="T:System.InvalidOperationException">The <b>Submit</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskPanes">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.TaskPaneCollection TaskPanes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.TaskPaneCollection TaskPanes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.TaskPanes" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property TaskPanes As TaskPaneCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::TaskPaneCollection ^ TaskPanes { Microsoft::Office::InfoPath::TaskPaneCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskPanes : Microsoft.Office.InfoPath.TaskPaneCollection" Usage="Microsoft.Office.InfoPath.XmlForm.TaskPanes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" /> that is associated with a form template.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" /> that contains any <see cref="T:Microsoft.Office.InfoPath.TaskPane" /> objects associated with the form template.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>TaskPanes</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to set a reference to the <b>TaskPaneCollection</b> associated with the form template:</para>
+          <code>TaskPaneCollection formTaskPanes = this.TaskPanes;</code>
+          <code>Dim formTaskPanes As TaskPaneCollection  = Me.TaskPanes</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>TaskPanes</b> property was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Template">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormTemplate Template { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.FormTemplate Template" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Template" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Template As FormTemplate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::FormTemplate ^ Template { Microsoft::Office::InfoPath::FormTemplate ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Template : Microsoft.Office.InfoPath.FormTemplate" Usage="Microsoft.Office.InfoPath.XmlForm.Template" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.FormTemplate" /> object that represents the manifest (.xsf) of the form template associated with the form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.FormTemplate" /> that represents the manifest (.xsf) of the form template associated with the form.</value>
+        <remarks>
+          <para>The <b>Template</b> property provides access to information about the form definition (.xsf) file (the manifest) of the form template associated with the form, including access to a <b>System.Xml.XPath.XPathNavigator</b> object that can be used to work with the source XML of the .xsf file.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Template</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to return a reference to the <b>FormTemplate</b> object. The <see cref="P:Microsoft.Office.InfoPath.FormTemplate.Manifest" /> property of the <b>FormTemplate</b> object is then used to return a <b>System.Xml.XPath.XPathNavigator</b> object which is used to display the XML contents of the .xsf file in a message box.</para>
+          <code>MessageBox.Show(this.Template.Manifest.OuterXml.ToString());</code>
+          <code>MessageBox.Show(Me.Template.Manifest.OuterXml.ToString())</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public abstract string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Uri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Office.InfoPath.XmlForm.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the Uniform Resource Identifier (URI) of a form.</summary>
+        <value>The Uniform Resource Identifier (URI) of the form.</value>
+        <remarks>
+          <para>The value returned by the <b>Uri</b> property can be passed as the name of a form when it is accessed from the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> collection.</para>
+          <para>Depending on the state of the form, the <b>Uri</b> property will return a different value as described in the following table.</para>
+          <para>Previewing a form(Preview) formnameNew formformnamePreviously saved formThe full URL of the form, which can be a path name (C:\My Documents\MyForm.xml) or a valid URL if the form template was published to SharePoint, a Web server, or Microsoft SharePoint Server 2010 with InfoPath Forms Services.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>Uri</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to display a form's URI in a message box.</para>
+          <code>MessageBox.Show(this.Uri);</code>
+          <code>MessageBox.Show(Me.Uri)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.User User { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.User User" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.User" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property User As User" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::User ^ User { Microsoft::Office::InfoPath::User ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.User : Microsoft.Office.InfoPath.User" Usage="Microsoft.Office.InfoPath.XmlForm.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.User</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.User" /> object that provides information about the current user of the form.</summary>
+        <value>An object that provides information about the current user.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserRole">
+      <MemberSignature Language="C#" Value="public abstract string UserRole { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserRole" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.UserRole" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property UserRole As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ UserRole { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UserRole : string with get, set" Usage="Microsoft.Office.InfoPath.XmlForm.UserRole" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the current user of the form's role name.</summary>
+        <value>The user's role name as defined in design mode with the User Roles command on the Tools menu.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>UserRole</b> property is used set a variable with the role name of the current user.</para>
+          <code>string currentRole = this.UserRole;</code>
+          <code>Dim currentRole As String = Me.UserRole</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewInfos">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ViewInfoCollection ViewInfos { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ViewInfoCollection ViewInfos" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ViewInfos As ViewInfoCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ViewInfoCollection ^ ViewInfos { Microsoft::Office::InfoPath::ViewInfoCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ViewInfos : Microsoft.Office.InfoPath.ViewInfoCollection" Usage="Microsoft.Office.InfoPath.XmlForm.ViewInfos" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewInfoCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> object associated with the form template.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> that contains the <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> objects associated with the form template.</value>
+        <remarks>
+          <para>The <b>ViewInfosCollection</b> object contains a collection of <b>ViewInfo</b> objects that contain information about each of the views implemented in an InfoPath form template.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>ViewInfos</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> object is used to set a reference to the <b>ViewInfoCollection</b> for the form template. It then loops through each <b>ViewInfo</b> object in the collection to display the name of each view in a message box.</para>
+          <code>ViewInfoCollection viewInfos = this.ViewInfos;
+
+foreach(ViewInfo thisView in viewInfos)
+{
+   MessageBox.Show("View name: " + thisView.Name);
+}</code>
+          <code>Dim viewInfos As ViewInfoCollection = Me.ViewInfos
+
+For Each thisView As ViewInfo In viewInfos
+   MessageBox.Show("View name:" &amp;amp; thisView.Name)
+Next</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlLang">
+      <MemberSignature Language="C#" Value="public abstract string XmlLang { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlLang" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlForm.XmlLang" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property XmlLang As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ XmlLang { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.XmlLang : string with get, set" Usage="Microsoft.Office.InfoPath.XmlForm.XmlLang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the value of the <b>xml:lang</b> attribute in the underlying XML document of the form.</summary>
+        <value>The <b>xml:lang</b> attribute of the underlying XML document of the form.</value>
+        <remarks>
+          <para>The value of the <b>xml:lang</b> attribute specifies the language used in the content of the form.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following code example, the <b>XmlLang</b> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class is used to display a form's current language setting in a message box.</para>
+          <para>[C#]</para>
+          <code>MessageBox.Show(this.XmlLang);</code>
+          <code>MessageBox.Show(Me.XmlLang)</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,116 @@
+﻿<Type Name="ContextChangedEventArgs" FullName="Microsoft.Office.InfoPath.ContextChangedEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class ContextChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ContextChangedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ContextChangedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ContextChangedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ContextChangedEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type ContextChangedEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" /> event.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ContextChangedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.ContextChangedEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ContextChangedEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeType">
+      <MemberSignature Language="C#" Value="public abstract string ChangeType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ChangeType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ContextChangedEventArgs.ChangeType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ChangeType As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ ChangeType { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ChangeType : string" Usage="Microsoft.Office.InfoPath.ContextChangedEventArgs.ChangeType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the type of context change that was performed when the <see cref="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" /> event occurred. </summary>
+        <value>The type of context change.</value>
+        <remarks>
+          <para>The <b>ChangeType</b> property returns only the value "ContextNode" for context changes in Microsoft InfoPath. Nevertheless, if code in an event handler performs actions that depend on current functionality, that code should still be designed to check the value of the <b>ChangeType</b> property, because future versions of InfoPath may use different values for different context changes.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Context" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ContextChangedEventArgs.Context" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Context As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ Context { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Context : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.ContextChangedEventArgs.Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to an XPathNavigator object positioned at the context node that raised the <see cref="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" /> event.</summary>
+        <value>An <b>XPathNavigator</b> object positioned at the context node that raised the <see cref="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" /> event.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoRedo">
+      <MemberSignature Language="C#" Value="public abstract bool UndoRedo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UndoRedo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ContextChangedEventArgs.UndoRedo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property UndoRedo As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool UndoRedo { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.UndoRedo : bool" Usage="Microsoft.Office.InfoPath.ContextChangedEventArgs.UndoRedo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a value indicating whether the context change event occurred in response to undoing or redoing an operation.</summary>
+        <value>
+          <b>true</b> if the context change occurred due to undoing or redoing an operation; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

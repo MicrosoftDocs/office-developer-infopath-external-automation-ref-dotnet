@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._Application" />
   <TypeSignature Language="VB.NET" Value="Public Interface _Application" />
   <TypeSignature Language="C++ CLI" Value="public interface class _Application" />
+  <TypeSignature Language="F#" Value="type _Application = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about the later version of this interface, including usage remarks and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust._Application3" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.ActiveWindow" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActiveWindow As WindowObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::WindowObject ^ ActiveWindow { Microsoft::Office::Interop::InfoPath::SemiTrust::WindowObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ActiveWindow : Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application.ActiveWindow" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -42,7 +44,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.ActiveWindow" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -53,6 +55,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.FormatString(System.Object,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function FormatString (varInput As Object, bstrCategory As String, bstrOptions As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ FormatString(System::Object ^ varInput, System::String ^ bstrCategory, System::String ^ bstrOptions);" />
+      <MemberSignature Language="F#" Value="abstract member FormatString : obj * string * string -&gt; string" Usage="_Application.FormatString (varInput, bstrCategory, bstrOptions)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -75,7 +78,7 @@
         <param name="varInput">To be added.</param>
         <param name="bstrCategory">To be added.</param>
         <param name="bstrOptions">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.FormatString(System.Object,System.String,System.String)" />.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -86,6 +89,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.LanguageSettings" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LanguageSettings As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ LanguageSettings { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.LanguageSettings : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application.LanguageSettings" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -100,7 +104,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.LanguageSettings" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -111,6 +115,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -125,7 +130,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Name" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -136,6 +141,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.NewADODBConnection" />
       <MemberSignature Language="VB.NET" Value="Public Function NewADODBConnection () As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ NewADODBConnection();" />
+      <MemberSignature Language="F#" Value="abstract member NewADODBConnection : unit -&gt; obj" Usage="_Application.NewADODBConnection " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -151,7 +157,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.NewADODBConnection" />.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -162,6 +168,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.NewADODBRecordset" />
       <MemberSignature Language="VB.NET" Value="Public Function NewADODBRecordset () As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ NewADODBRecordset();" />
+      <MemberSignature Language="F#" Value="abstract member NewADODBRecordset : unit -&gt; obj" Usage="_Application.NewADODBRecordset " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -177,7 +184,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.NewADODBRecordset" />.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -188,6 +195,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Quit(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Quit (bForce As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Quit(bool bForce);" />
+      <MemberSignature Language="F#" Value="abstract member Quit : bool -&gt; unit" Usage="_Application.Quit bForce" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -206,7 +214,7 @@
       </Parameters>
       <Docs>
         <param name="bForce">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Quit(System.Boolean)" />.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -216,6 +224,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Version" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Version { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Version : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Version" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -230,7 +239,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Version" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -241,6 +250,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Windows" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Windows As WindowsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::WindowsCollection ^ Windows { Microsoft::Office::Interop::InfoPath::SemiTrust::WindowsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Windows : Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application.Windows" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -255,7 +265,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.Windows" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -266,6 +276,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application.XDocuments" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property XDocuments As XDocumentsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XDocumentsCollection ^ XDocuments { Microsoft::Office::Interop::InfoPath::SemiTrust::XDocumentsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.XDocuments : Microsoft.Office.Interop.InfoPath.SemiTrust.XDocumentsCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._Application.XDocuments" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -280,7 +291,7 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.XDocumentsCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is a wrapper for a member of a COM interface that has been superseded by a later version. The later version of this interface implements all members of earlier interfaces and additional new members. For information about this member as it is implemented in the later interface, including usage, remarks, and examples, see<see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.XDocuments" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

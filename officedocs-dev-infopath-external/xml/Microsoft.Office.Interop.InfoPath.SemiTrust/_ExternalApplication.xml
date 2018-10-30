@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication" />
   <TypeSignature Language="VB.NET" Value="Public Interface _ExternalApplication" />
   <TypeSignature Language="C++ CLI" Value="public interface class _ExternalApplication" />
+  <TypeSignature Language="F#" Value="type _ExternalApplication = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.CacheSolution(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub CacheSolution (bstrSolutionURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void CacheSolution(System::String ^ bstrSolutionURI);" />
+      <MemberSignature Language="F#" Value="abstract member CacheSolution : string -&gt; unit" Usage="_ExternalApplication.CacheSolution bstrSolutionURI" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -45,9 +47,38 @@
         <Parameter Name="bstrSolutionURI" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrSolutionURI">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrSolutionURI">The string value that specifies the Uniform Resource Identifier (URI) of the form template. This parameter can be specified as a form definition (.xsf) file or a form template (.xsn) file.</param>
+        <summary>Examines the form template in the cache and, if necessary, updates it from the published location of the form template.</summary>
+        <remarks>
+          <para>If the form template that currently exists in the cache matches the form template from the published location, no caching takes place. If the computer is offline and the form is already in the cache, the cache is kept and no update will occur.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>CacheSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to cache an InfoPath form template</para>
+          <code>private void AutomateInfoPathForm()
+{
+ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Cache an InfoPath form template.
+infoPath.&lt;span class="label"&gt;CacheSolution&lt;/span&gt;(@"\\MyServer\MyForms\MyForm.xsn");
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 1.0 Type Library is referenced.</para>
+        </example>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>CacheSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to cache an InfoPath form template</para>
+          <code>private void AutomateInfoPathForm()
+{
+ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Cache an InfoPath form template.
+infoPath.&lt;span class="label"&gt;CacheSolution&lt;/span&gt;(@"\\MyServer\MyForms\MyForm.xsn");
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 1.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Close">
@@ -56,6 +87,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.Close(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Close (bstrDocumentURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Close(System::String ^ bstrDocumentURI);" />
+      <MemberSignature Language="F#" Value="abstract member Close : string -&gt; unit" Usage="_ExternalApplication.Close bstrDocumentURI" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -73,9 +105,46 @@
         <Parameter Name="bstrDocumentURI" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrDocumentURI">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrDocumentURI">The string value that specifies the Uniform Resource Identifier (URI) of a form.</param>
+        <summary>Closes the specified Microsoft InfoPath form.</summary>
+        <remarks>
+          <para>The <b>Close</b> method closes the currently open form without quitting the InfoPath application. When using the <b>Close</b> method, the form is closed unconditionally, meaning that any changes made to the data in the form are not saved.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>Close</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to close the currently open form:</para>
+          <code>
+private void AutomateInfoPathForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+ // Open an InfoPath form.
+ infoPath.Open(@"C:\My Forms\Form1.xml", 1);
+ // Close the InfoPath form.
+ infoPath.&lt;span class="label"&gt;Close&lt;/span&gt;(@"C:\My Forms\Form1.xml");
+ // Quit the InfoPath application.
+ infoPath.Quit();
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>Close</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to close the currently open form:</para>
+          <code>
+private void AutomateInfoPathForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+ // Open an InfoPath form.
+ infoPath.Open(@"C:\My Forms\Form1.xml", 1);
+ // Close the InfoPath form.
+ infoPath.&lt;span class="label"&gt;Close&lt;/span&gt;(@"C:\My Forms\Form1.xml");
+ // Quit the InfoPath application.
+ infoPath.Quit();
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="New">
@@ -84,6 +153,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.New(System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (bstrDocumentURI As String, dwBehavior As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void New(System::String ^ bstrDocumentURI, int dwBehavior);" />
+      <MemberSignature Language="F#" Value="abstract member New : string * int -&gt; unit" Usage="_ExternalApplication.New (bstrDocumentURI, dwBehavior)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -102,10 +172,41 @@
         <Parameter Name="dwBehavior" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="bstrDocumentURI">To be added.</param>
-        <param name="dwBehavior">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrDocumentURI">The string value that specifies the Uniform Resource Identifier (URI) of a form.</param>
+        <param name="dwBehavior">Default value is 1. Specifies how the form should be opened. The values are based on the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdDocumentVersionMode" /> enumeration.</param>
+        <summary>Creates a new Microsoft InfoPath form based on a specified form.</summary>
+        <remarks>
+          <para>The <b>New</b> method can be used to only create a new form based on an existing form; it cannot be used to create a new form based on a form template. To create a form from a form template, use the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.NewFromSolution(System.String)" /> method.</para>
+          <para>When you use the <b>New</b> method, InfoPath is opened and the new form is ready to be filled out.</para>
+          <para>Note   You cannot use <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.Close(System.String)" /> to close a form that has been opened with the <b>New</b> method. When the <b>New</b> method creates a form, the name of that form is not yet known.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>New</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to create a new form based on a specified form:</para>
+          <code>private void CreateFromForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Create an InfoPath form.
+ infoPath.&lt;span class="label"&gt;New&lt;/span&gt;(@"C:\My Forms\Form1.xml", 1);
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>New</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to create a new form based on a specified form:</para>
+          <code>private void CreateFromForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Create an InfoPath form.
+ infoPath.&lt;span class="label"&gt;New&lt;/span&gt;(@"C:\My Forms\Form1.xml", 1);
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="NewFromSolution">
@@ -114,6 +215,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.NewFromSolution(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub NewFromSolution (bstrSolutionURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void NewFromSolution(System::String ^ bstrSolutionURI);" />
+      <MemberSignature Language="F#" Value="abstract member NewFromSolution : string -&gt; unit" Usage="_ExternalApplication.NewFromSolution bstrSolutionURI" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -131,9 +233,41 @@
         <Parameter Name="bstrSolutionURI" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrSolutionURI">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrSolutionURI">The string value that specifies the Uniform Resource Identifier (URI) of a form template.</param>
+        <summary>Creates a new Microsoft InfoPath form based on the specified form template.</summary>
+        <remarks>
+          <para>The <b>NewFromSolution</b> method can be used only to create a new form based on an existing form template; it cannot be used to create a new form based on an existing form. To create a form from an existing form, use <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.New(System.String,System.Int32)" />.</para>
+          <para>When you use The <b>NewFromSolution</b> method, InfoPath is opened and the new form is ready to be filled out.</para>
+          <para>
+            <b>Note</b>: You cannot use <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.Close(System.String)" /> to close a form that has been opened with the <b>NewFromSolution</b> method. When the <b>NewFromSolution</b> method creates a form, the name of that form is not yet known.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>NewFromSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to create a new form based on a specified form template:</para>
+          <code>private void CreateFromFormTemplate()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Create an InfoPath form.
+ infoPath.&lt;span class="label"&gt;NewFromSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn", 1);
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>NewFromSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to create a new form based on a specified form template:</para>
+          <code>private void CreateFromFormTemplate()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Create an InfoPath form.
+ infoPath.&lt;span class="label"&gt;NewFromSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn", 1);
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Open">
@@ -142,6 +276,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.Open(System.String,System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Open (bstrDocumentURI As String, dwBehavior As Integer)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Open(System::String ^ bstrDocumentURI, int dwBehavior);" />
+      <MemberSignature Language="F#" Value="abstract member Open : string * int -&gt; unit" Usage="_ExternalApplication.Open (bstrDocumentURI, dwBehavior)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -160,10 +295,53 @@
         <Parameter Name="dwBehavior" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="bstrDocumentURI">To be added.</param>
-        <param name="dwBehavior">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrDocumentURI">The string value that specifies the Uniform Resource Identifier (URI) of a form.</param>
+        <param name="dwBehavior">Default value is 1. Specifies how the form should be opened. The values are based on the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdDocumentVersionMode" /> enumeration.</param>
+        <summary>Opens the specified Microsoft InfoPath form.</summary>
+        <remarks>
+          <para>The <b>Open</b> method can be used only to open a form; it cannot be used to open a form template. To create a form from a form template, use the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.NewFromSolution(System.String)" /> method. To create a form based on an existing form, use the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.New(System.String,System.Int32)" /> method.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>Open</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to open a form from the file system:</para>
+          <code>private void AutomateInfoPathForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Open an InfoPath form.
+
+ infoPath.&lt;span class="label"&gt;Open&lt;/span&gt;(@"C:\My Forms\Form1.xml", 1);
+      
+ // Close the InfoPath form.
+ infoPath.Close(@"C:\My Forms\Form1.xml");
+      
+ // Quit the InfoPath application.
+ infoPath.Quit();
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>Open</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to open a form from the file system:</para>
+          <code>private void AutomateInfoPathForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Open an InfoPath form.
+
+ infoPath.&lt;span class="label"&gt;Open&lt;/span&gt;(@"C:\My Forms\Form1.xml", 1);
+      
+ // Close the InfoPath form.
+ infoPath.Close(@"C:\My Forms\Form1.xml");
+      
+ // Quit the InfoPath application.
+ infoPath.Quit();
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Quit">
@@ -172,6 +350,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.Quit" />
       <MemberSignature Language="VB.NET" Value="Public Sub Quit ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Quit();" />
+      <MemberSignature Language="F#" Value="abstract member Quit : unit -&gt; unit" Usage="_ExternalApplication.Quit " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -187,8 +366,47 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Quits the Microsoft InfoPath application.</summary>
+        <remarks>
+          <para>If you use the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.Close(System.String)" /> method before using the <b>Quit</b> method, data that has been changed in the form will not be saved, nor will users be prompted to save it. However, if you do not use the <b>Close</b> method but only use the <b>Quit</b> method, users will be prompted to save the form before quitting the InfoPath application.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>Quit</b>  method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to close InfoPath:</para>
+          <code>private void AutomateInfoPathForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+ // Open an InfoPath form.
+ infoPath.Open(@"C:\My Forms\Form1.xml", 1);
+
+ // Close the InfoPath form.
+ infoPath.Close(@"C:\My Forms\Form1.xml");
+
+ // Quit the InfoPath application.
+ infoPath.&lt;span class="label"&gt;Quit&lt;/span&gt;();
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>Quit</b>  method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to close InfoPath:</para>
+          <code>private void AutomateInfoPathForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+ // Open an InfoPath form.
+ infoPath.Open(@"C:\My Forms\Form1.xml", 1);
+
+ // Close the InfoPath form.
+ infoPath.Close(@"C:\My Forms\Form1.xml");
+
+ // Quit the InfoPath application.
+ infoPath.&lt;span class="label"&gt;Quit&lt;/span&gt;();
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="RegisterSolution">
@@ -197,6 +415,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.RegisterSolution(System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub RegisterSolution (bstrSolutionURL As String, bstrBehavior As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void RegisterSolution(System::String ^ bstrSolutionURL, System::String ^ bstrBehavior);" />
+      <MemberSignature Language="F#" Value="abstract member RegisterSolution : string * string -&gt; unit" Usage="_ExternalApplication.RegisterSolution (bstrSolutionURL, bstrBehavior)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -215,10 +434,39 @@
         <Parameter Name="bstrBehavior" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrSolutionURL">To be added.</param>
-        <param name="bstrBehavior">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrSolutionURL">Specifies the Uniform Resource Locator (URL) of the form template. This parameter can be specified as a form definition (.xsf) file or a form template (.xsn) file.</param>
+        <param name="bstrBehavior">Default value is <b>overwrite</b>. Specifies how the form template is to be installed. The only other valid value for this parameter is <b>new-only</b>.</param>
+        <summary>Installs the specified Microsoft InfoPath form template.</summary>
+        <remarks>
+          <para>If the form template has already been registered, and the <b>new-only</b> value is used for the <paramref name="bstrBehavior" /> parameter, the <b>RegisterSolution </b>method will return an error. If the <b>overwrite</b> value is used, the form template's registration record will be overwritten.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>RegisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to install a form template:</para>
+          <code>private void InstallForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Create an InfoPath form.
+ infoPath.&lt;span class="label"&gt;RegisterSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn", "overwrite");
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>RegisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to install a form template:</para>
+          <code>private void InstallForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ // Create an InfoPath form.
+ infoPath.&lt;span class="label"&gt;RegisterSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn", "overwrite");
+}</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="UnregisterSolution">
@@ -227,6 +475,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ExternalApplication.UnregisterSolution(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub UnregisterSolution (bstrSolutionURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void UnregisterSolution(System::String ^ bstrSolutionURI);" />
+      <MemberSignature Language="F#" Value="abstract member UnregisterSolution : string -&gt; unit" Usage="_ExternalApplication.UnregisterSolution bstrSolutionURI" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -244,9 +493,38 @@
         <Parameter Name="bstrSolutionURI" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrSolutionURI">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrSolutionURI">The string value that specifies the Uniform Resource Identifier (URI) of the form template.</param>
+        <summary>Uninstalls the specified Microsoft InfoPath form template.</summary>
+        <remarks>
+          <para>If the form template cannot be unregistered, the <b>UnregisterSolution</b> method will return an error.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>UnregisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to uninstall a form template:</para>
+          <code>private void UninstallForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ infoPath.&lt;span class="label"&gt;UnregisterSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn");
+}
+</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
+        <example>
+          <para>In the following example, which is written in the C# programming language, the <b>UnregisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ExternalApplication" /> object is used to uninstall a form template:</para>
+          <code>private void UninstallForm()
+{
+ ExternalApplication infoPath = new ExternalApplicationClass();
+
+ infoPath.&lt;span class="label"&gt;UnregisterSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn");
+}
+</code>
+          <para>
+            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
+        </example>
       </Docs>
     </Member>
   </Members>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection" />
   <TypeSignature Language="VB.NET" Value="Public Interface IXMLDOMSelection&#xA;Implements IXMLDOMNodeList" />
   <TypeSignature Language="C++ CLI" Value="public interface class IXMLDOMSelection : Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNodeList" />
+  <TypeSignature Language="F#" Value="type IXMLDOMSelection = interface&#xA;    interface IXMLDOMNodeList" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.clone" />
       <MemberSignature Language="VB.NET" Value="Public Function clone () As IXMLDOMSelection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMSelection ^ clone();" />
+      <MemberSignature Language="F#" Value="abstract member clone : unit -&gt; Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection" Usage="iXMLDOMSelection.clone " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -58,6 +60,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.context" />
       <MemberSignature Language="VB.NET" Value="Public Property context As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ context { Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ get(); void set(Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.context : Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode with get, set" Usage="Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.context" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -89,6 +92,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.expr" />
       <MemberSignature Language="VB.NET" Value="Public Property expr As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ expr { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.expr : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.expr" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -120,6 +124,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="iXMLDOMSelection.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNodeList.GetEnumerator</InterfaceMember>
@@ -152,6 +157,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.getProperty(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function getProperty (name As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ getProperty(System::String ^ name);" />
+      <MemberSignature Language="F#" Value="abstract member getProperty : string -&gt; obj" Usage="iXMLDOMSelection.getProperty name" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -181,6 +187,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property item(index As Integer) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ default[int] { Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.item(int) : Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.item" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNodeList.item(System.Int32)</InterfaceMember>
@@ -216,6 +223,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.length" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property length As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int length { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.length : int" Usage="Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.length" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNodeList.length</InterfaceMember>
@@ -247,6 +255,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.matches(Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode)" />
       <MemberSignature Language="VB.NET" Value="Public Function matches (pNode As IXMLDOMNode) As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ matches(Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ pNode);" />
+      <MemberSignature Language="F#" Value="abstract member matches : Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode -&gt; Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode" Usage="iXMLDOMSelection.matches pNode" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -276,6 +285,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.nextNode" />
       <MemberSignature Language="VB.NET" Value="Public Function nextNode () As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ nextNode();" />
+      <MemberSignature Language="F#" Value="abstract member nextNode : unit -&gt; Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode" Usage="iXMLDOMSelection.nextNode " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNodeList.nextNode</InterfaceMember>
@@ -305,6 +315,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.peekNode" />
       <MemberSignature Language="VB.NET" Value="Public Function peekNode () As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ peekNode();" />
+      <MemberSignature Language="F#" Value="abstract member peekNode : unit -&gt; Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode" Usage="iXMLDOMSelection.peekNode " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -331,6 +342,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.removeAll" />
       <MemberSignature Language="VB.NET" Value="Public Sub removeAll ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void removeAll();" />
+      <MemberSignature Language="F#" Value="abstract member removeAll : unit -&gt; unit" Usage="iXMLDOMSelection.removeAll " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -356,6 +368,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.removeNext" />
       <MemberSignature Language="VB.NET" Value="Public Function removeNext () As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ removeNext();" />
+      <MemberSignature Language="F#" Value="abstract member removeNext : unit -&gt; Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode" Usage="iXMLDOMSelection.removeNext " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -382,6 +395,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.reset" />
       <MemberSignature Language="VB.NET" Value="Public Sub reset ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void reset();" />
+      <MemberSignature Language="F#" Value="abstract member reset : unit -&gt; unit" Usage="iXMLDOMSelection.reset " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNodeList.reset</InterfaceMember>
@@ -410,6 +424,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMSelection.setProperty(System.String,System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Sub setProperty (name As String, value As Object)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void setProperty(System::String ^ name, System::Object ^ value);" />
+      <MemberSignature Language="F#" Value="abstract member setProperty : string * obj -&gt; unit" Usage="iXMLDOMSelection.setProperty (name, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>

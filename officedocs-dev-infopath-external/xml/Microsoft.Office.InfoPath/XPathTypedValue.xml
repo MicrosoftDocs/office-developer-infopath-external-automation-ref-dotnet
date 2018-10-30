@@ -1,0 +1,220 @@
+﻿<Type Name="XPathTypedValue" FullName="Microsoft.Office.InfoPath.XPathTypedValue">
+  <TypeSignature Language="C#" Value="public abstract class XPathTypedValue" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XPathTypedValue extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XPathTypedValue" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XPathTypedValue" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XPathTypedValue abstract" />
+  <TypeSignature Language="F#" Value="type XPathTypedValue = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Implements the object returned by certain property values of the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> and <see cref="T:Microsoft.Office.InfoPath.FileSubmitConnection" /> classes to get and set those values.</summary>
+    <remarks>
+      <para>An <b>XPathTypedValue</b> object is returned by the following members of the <b>EmailSubmitConnection</b> class to get or set their values:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.EmailSubmitConnection.AttachmentFileName" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.EmailSubmitConnection.Bcc" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.EmailSubmitConnection.CC" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.EmailSubmitConnection.Subject" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.EmailSubmitConnection.To" />
+          </description>
+        </item>
+      </list>
+      <para>An <b>XPathTypedValue</b> object is returned by the <see cref="P:Microsoft.Office.InfoPath.FileSubmitConnection.Filename" /> property of the <b>EmailSubmitConnection</b> class to get or set its value.</para>
+      <para>To read or set these properties, you must use the properties and methods of the <b>XPathTypedValue</b> class.</para>
+      <para>You can set the value of a property that returns an <b>XPathTypedValue</b> object by specifying either a literal string or by specifying an XPath expression. Using an XPath expression allows you to set the property by retrieving the value from a field on that form (or some other node in the form's data sources). Additionally, you can use XPath operators and functions to perform other operations on the retrieved data.</para>
+      <para>To set the value of a property as a literal string, you use the <see cref="M:Microsoft.Office.InfoPath.XPathTypedValue.SetStringValue(System.String)" /> method of the <b>XPathTypedValue</b> class.</para>
+      <para>The following example shows how to set the value of the <see cref="P:Microsoft.Office.InfoPath.EmailSubmitConnection.To" /> property of the <b>EmailSubmitConnection</b> class by specifying an e-mail address as a literal string using the <b>SetStringValue</b> method.</para>
+      <code>// Get the e-mail submit data connection configured for the form.
+EmailSubmitConnection mySubmit = (EmailSubmitConnection)
+   (this.DataConnections["Email Submit"]);
+
+// Set To property to literal string value.
+mySubmit.To.SetStringValue("someone@example.com");
+
+// Submit form.
+mySubmit.Execute();</code>
+      <code>' Get the e-mail submit data connection configured for the form.
+Dim mySubmit As EmailSubmitConnection = DirectCast(_
+   Me.DataConnections["Email Submit"], EmailSubmitConnection)
+
+' Set To property to literal string value.
+mySubmit.To.SetStringValue("someone@example.com")
+
+' Submit form.
+mySubmit.Execute()</code>
+      <para>To set the value of a property as an XPath expression, use the <see cref="P:Microsoft.Office.InfoPath.XPathTypedValue.XPath" /> property of the <b>XPathTypedValue</b> class.</para>
+      <para>The following example shows how to set the value of the <b>To</b> property of the <b>EmailSubmitConnection</b> class, by specifying an e-mail address as an XPath expression that retrieves the value from the <b>ToAddress</b> field on the form using the <b>XPath</b> property.</para>
+      <code>// Get the e-mail submit data connection configured for the form.
+EmailSubmitConnection mySubmit = (EmailSubmitConnection)
+   (this.DataConnections["Email Submit"]);
+
+// Set To property to XPath for ToAddress field.
+mySubmit.To.XPath = "/my:myFields/my:ToAddress";
+
+// Submit form.
+mySubmit.Execute();</code>
+      <code>' Get the e-mail submit data connection configured for the form.
+Dim mySubmit As EmailSubmitConnection = DirectCast(_
+   Me.DataConnections["Email Submit"], EmailSubmitConnection)
+
+' Set To property to XPath for ToAddress field.
+mySubmit.To = "/my:myFields/my:ToAddress"
+
+' Submit form.
+mySubmit.Execute()</code>
+      <para>To read values of properties returned as <b>XPathTypedValue</b> objects, use the <see cref="M:Microsoft.Office.InfoPath.XPathTypedValue.Evaluate" /> method of the <b>XPathTypedValue</b> class to evaluate an XPath expression and return its result as a string, or use the <see cref="M:Microsoft.Office.InfoPath.XPathTypedValue.ToString" /> method of the <b>XPathTypedValue</b> class to return a literal string.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XPathTypedValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XPathTypedValue.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XPathTypedValue();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Evaluate">
+      <MemberSignature Language="C#" Value="public abstract string Evaluate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string Evaluate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XPathTypedValue.Evaluate" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Evaluate () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::String ^ Evaluate();" />
+      <MemberSignature Language="F#" Value="abstract member Evaluate : unit -&gt; string" Usage="xPathTypedValue.Evaluate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Evaluates the XPath expression defined for an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object.</summary>
+        <returns>The value returned when the XPath expression specified for an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object is evaluated.</returns>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStringValue">
+      <MemberSignature Language="C#" Value="public abstract void SetStringValue (string newValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetStringValue(string newValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XPathTypedValue.SetStringValue(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetStringValue (newValue As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetStringValue(System::String ^ newValue);" />
+      <MemberSignature Language="F#" Value="abstract member SetStringValue : string -&gt; unit" Usage="xPathTypedValue.SetStringValue newValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newValue" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="newValue">An XPath expression.</param>
+        <summary>Specifies a literal string for an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object.</summary>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is<b></b>not valid. For example, it is of the wrong type or format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XPathTypedValue.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::String ^ ToString();" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="xPathTypedValue.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Converts the value defined for an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object to a string.</summary>
+        <returns>The value defined for an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object.</returns>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="public abstract string XPath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XPathTypedValue.XPath" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property XPath As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ XPath { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.XPath : string with get, set" Usage="Microsoft.Office.InfoPath.XPathTypedValue.XPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the XPath expression of an <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object.</summary>
+        <value>The XPath expression defined for the returned <see cref="T:Microsoft.Office.InfoPath.XPathTypedValue" /> object.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdConfirmChoice" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdConfirmChoice" />
+  <TypeSignature Language="F#" Value="type XdConfirmChoice = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -12,8 +13,11 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The <b>XdConfirmChoice</b> enumeration is used to determine which button is clicked in a message box.</summary>
+    <remarks>
+      <para>These enumerated values are used by the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.UI2.Confirm(System.String,Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmButtons)" /> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.UIObject" /> object.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="xdCancel">
@@ -22,6 +26,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdCancel" />
       <MemberSignature Language="VB.NET" Value="xdCancel" />
       <MemberSignature Language="C++ CLI" Value="xdCancel" />
+      <MemberSignature Language="F#" Value="xdCancel = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdCancel" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -32,7 +37,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Cancel button was clicked.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdNo">
@@ -41,6 +46,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdNo" />
       <MemberSignature Language="VB.NET" Value="xdNo" />
       <MemberSignature Language="C++ CLI" Value="xdNo" />
+      <MemberSignature Language="F#" Value="xdNo = 7" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdNo" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -51,7 +57,7 @@
       </ReturnValue>
       <MemberValue>7</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The No button was clicked.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdOK">
@@ -60,6 +66,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdOK" />
       <MemberSignature Language="VB.NET" Value="xdOK" />
       <MemberSignature Language="C++ CLI" Value="xdOK" />
+      <MemberSignature Language="F#" Value="xdOK = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdOK" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -70,7 +77,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The OK button was clicked.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdYes">
@@ -79,6 +86,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdYes" />
       <MemberSignature Language="VB.NET" Value="xdYes" />
       <MemberSignature Language="C++ CLI" Value="xdYes" />
+      <MemberSignature Language="F#" Value="xdYes = 6" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdConfirmChoice.xdYes" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -89,7 +97,7 @@
       </ReturnValue>
       <MemberValue>6</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The Yes button was clicked.</summary>
       </Docs>
     </Member>
   </Members>

@@ -1,0 +1,250 @@
+﻿<Type Name="SignatureLine" FullName="Microsoft.Office.InfoPath.SignatureLine">
+  <TypeSignature Language="C#" Value="public abstract class SignatureLine" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SignatureLine extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignatureLine" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SignatureLine" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SignatureLine abstract" />
+  <TypeSignature Language="F#" Value="type SignatureLine = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents a Signature Line control in a view.</summary>
+    <remarks>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> class provides programmatic access to a Signature Line control in a view. To access an instance of the <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> class associated with a Signature Line control, use the <see cref="T:Microsoft.Office.InfoPath.SignatureLineCollection" /> that is associated with the view that contains the control. The following code example shows how to access a <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> object that represents the first control in the current view. </para>
+      <code>SignatureLine mySignatureLine = 
+   this.CurrentView.SignatureLines[0];</code>
+      <code>Dim mySignatureLine As SignatureLine = _
+   Me.CurrentView.SignatureLines(0)</code>
+      <para>Only a subset of the properties of the Signature Line control are exposed through the <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> class and its associated members of the object model. For example, the properties for specifying the size and tab index of the control can be set only by using the InfoPath designer. However, properties, such as the <see cref="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSigner" />, <see cref="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerTitle" />, and <see cref="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerEmailAddress" /> properties, can be used to get or set the name, title, and e-mail address of the suggested signer for the control. Use the <see cref="P:Microsoft.Office.InfoPath.SignatureLine.Signature" /> property to return a <see cref="T:Microsoft.Office.InfoPath.Signature" /> object associated with the control, which you can then use to access the digital signature associated with the control. The <see cref="M:Microsoft.Office.InfoPath.SignatureLine.Sign(System.String,System.String,System.String,System.String)" /> method can be used to programmatically display the Sign dialog box to initiate signing.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SignatureLine ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignatureLine.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SignatureLine();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public abstract string Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Id" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.Id" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Id As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Id { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Id : string" Usage="Microsoft.Office.InfoPath.SignatureLine.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the value of the control <b>ID</b> property.</summary>
+        <value>The identifier of the control.</value>
+        <remarks>
+          <para>The value of the <b>ID</b> property is set by InfoPath when the Signature Line control is added to the form template. To display this value in the InfoPath designer, right-click the control, click Signature Control Properties, and then click the Advanced tab.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public abstract bool Sign (string imageUrl, string suggestedSigner, string suggestedSignerTitle, string suggestedSignerEmail);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Sign(string imageUrl, string suggestedSigner, string suggestedSignerTitle, string suggestedSignerEmail) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignatureLine.Sign(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Sign (imageUrl As String, suggestedSigner As String, suggestedSignerTitle As String, suggestedSignerEmail As String) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract bool Sign(System::String ^ imageUrl, System::String ^ suggestedSigner, System::String ^ suggestedSignerTitle, System::String ^ suggestedSignerEmail);" />
+      <MemberSignature Language="F#" Value="abstract member Sign : string * string * string * string -&gt; bool" Usage="signatureLine.Sign (imageUrl, suggestedSigner, suggestedSignerTitle, suggestedSignerEmail)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="imageUrl" Type="System.String" />
+        <Parameter Name="suggestedSigner" Type="System.String" />
+        <Parameter Name="suggestedSignerTitle" Type="System.String" />
+        <Parameter Name="suggestedSignerEmail" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="imageUrl">The path to the signature or stamp image to display in the control.</param>
+        <param name="suggestedSigner">The name of the suggested signer.</param>
+        <param name="suggestedSignerTitle">The title of the suggested signer.</param>
+        <param name="suggestedSignerEmail">The e-mail address of the suggested signer.</param>
+        <summary>Displays the Sign dialog box with the specified signature image or stamp, and the suggested signer name, title, and e-mail address.</summary>
+        <returns>
+          <b>true</b> if the signing operation succeeds; otherwise, <b>false</b>.</returns>
+        <remarks>
+          <para>The values for all of the parameters of the <see cref="M:Microsoft.Office.InfoPath.SignatureLine.Sign(System.String,System.String,System.String,System.String)" /> method are optional. To omit any parameter, pass a null reference (Nothing in Visual Basic) for that parameter. You can also pass <b>String.Empty</b> for the <paramref name="suggestedSigner" />, <paramref name="suggestedSignerTitle" />, and <paramref name="suggestedSignerEmail" /> parameters. If you pass a null reference (Nothing in Visual Basic) or <b>String.Empty</b> for a parameter and the value of the corresponding property was previously set programmatically or in the Signature Line control at design time, that value will be used when the form or set of data is signed.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following code example accesses the first Signature Line control in the current view, and then calls the <see cref="M:Microsoft.Office.InfoPath.SignatureLine.Sign(System.String,System.String,System.String,System.String)" /> method to display the Sign dialog box for signing the entire form or set of data associated with the control. After the control is signed, the code displays a message box that shows the value of the <see cref="P:Microsoft.Office.InfoPath.SignatureLine.SignatureAppearanceType" /> property for the control.</para>
+          <code>SignatureLine mySignatureLine = 
+   this.CurrentView.SignatureLines[0];
+mySignatureLine.Sign(@"C:\Users\Larry\Pictures\MySignature.jpg",
+   "Larry Zhang", "Sales Associate", "larry@contoso.com");
+MessageBox.Show(mySignatureLine.SignatureAppearanceType.ToString());</code>
+          <code>Dim mySignatureLine As SignatureLine = _
+   Me.CurrentView.SignatureLines(0)
+mySignatureLine.Sign("C:\Users\Larry\Pictures\MySignature.jpg", _
+   "Larry Zhang", "Sales Associate", "larry@contoso.com")
+MessageBox.Show(mySignatureLine.SignatureAppearanceType.ToString())</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Signature">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Signature Signature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Signature Signature" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.Signature" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Signature As Signature" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Signature ^ Signature { Microsoft::Office::InfoPath::Signature ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Signature : Microsoft.Office.InfoPath.Signature" Usage="Microsoft.Office.InfoPath.SignatureLine.Signature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Signature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the <see cref="T:Microsoft.Office.InfoPath.Signature" /> object associated with the control.</summary>
+        <value>An object that represents digital signature associated with the control when the form or set of signable data is signed.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureAppearanceType">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignatureAppearanceType SignatureAppearanceType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.SignatureAppearanceType SignatureAppearanceType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.SignatureAppearanceType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SignatureAppearanceType As SignatureAppearanceType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignatureAppearanceType SignatureAppearanceType { Microsoft::Office::InfoPath::SignatureAppearanceType get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureAppearanceType : Microsoft.Office.InfoPath.SignatureAppearanceType" Usage="Microsoft.Office.InfoPath.SignatureLine.SignatureAppearanceType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureAppearanceType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a value that indicates the appearance of the control.</summary>
+        <value>One of the enumeration values that indicate the appearance of the control.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuggestedSigner">
+      <MemberSignature Language="C#" Value="public abstract string SuggestedSigner { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuggestedSigner" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSigner" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property SuggestedSigner As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ SuggestedSigner { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SuggestedSigner : string with get, set" Usage="Microsoft.Office.InfoPath.SignatureLine.SuggestedSigner" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the name of the suggested signer that is displayed in the control.</summary>
+        <value>The name of the suggested signer.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuggestedSignerEmailAddress">
+      <MemberSignature Language="C#" Value="public abstract string SuggestedSignerEmailAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuggestedSignerEmailAddress" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerEmailAddress" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property SuggestedSignerEmailAddress As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ SuggestedSignerEmailAddress { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SuggestedSignerEmailAddress : string with get, set" Usage="Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerEmailAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the e-mail address of the suggested signer for the control.</summary>
+        <value>The e-mail address of the suggested signer.</value>
+        <remarks>
+          <para>Whether it is set at design time or programmatically, the value of the <see cref="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerEmailAddress" /> property is not displayed in the user interface of the Signature Line control. It is stored as metadata when the form or set of data is signed, and can be accessed programmatically from form code by using this property. </para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SuggestedSignerTitle">
+      <MemberSignature Language="C#" Value="public abstract string SuggestedSignerTitle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SuggestedSignerTitle" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerTitle" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property SuggestedSignerTitle As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ SuggestedSignerTitle { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.SuggestedSignerTitle : string with get, set" Usage="Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerTitle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the title of the suggested signer that is displayed in the control.</summary>
+        <value>The title of the suggested signer.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

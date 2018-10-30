@@ -1,0 +1,112 @@
+﻿<Type Name="XmlFormCancelEventArgs" FullName="Microsoft.Office.InfoPath.XmlFormCancelEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class XmlFormCancelEventArgs : System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlFormCancelEventArgs extends System.ComponentModel.CancelEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlFormCancelEventArgs&#xA;Inherits CancelEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlFormCancelEventArgs abstract : System::ComponentModel::CancelEventArgs" />
+  <TypeSignature Language="F#" Value="type XmlFormCancelEventArgs = class&#xA;    inherit CancelEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ComponentModel.CancelEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the custom message that is displayed when canceling events raised by the form and its underlying XML document.</summary>
+    <remarks>
+      <para>The <b>XmlFormCancelEvent</b> object provides the <see cref="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.Message" /> and <see cref="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.MessageDetails" /> properties to specify or retrieve a custom message when canceling the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changing" />, <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" />, <see cref="E:Microsoft.Office.InfoPath.FormEvents.Save" />, <see cref="E:Microsoft.Office.InfoPath.FormEvents.Merge" />, <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" />, <see cref="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" />, and <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> events.</para>
+      <para>By default, the <b>Message</b> and <b>MessageDetails</b> properties have a a null reference (Nothing in Visual Basic) value. </para>
+      <list type="bullet">
+        <item>
+          <description>When both values are a null reference (Nothing in Visual Basic), the default error message is displayed when an event is cancelled.</description>
+        </item>
+        <item>
+          <description>When both values are non-null, then the values specified for the <b>Message</b> and <b>MessageDetails</b> properties are displayed in the error message dialog box.</description>
+        </item>
+        <item>
+          <description>If both properties are set to the empty string, then no text is displayed in the error message dialog box.</description>
+        </item>
+        <item>
+          <description>The <b>Message</b> property can be a null reference (Nothing in Visual Basic) and the <b>MessageDetails</b> property can be non-null, and vice-versa. If either one of the values is non-null, then InfoPath will display the specified value. For example, if <b>Message</b> is a null reference (Nothing in Visual Basic), but <b>MessageDetails</b> has a value specified, InfoPath displays an error message dialog box with only the details section and no top-level text.</description>
+        </item>
+        <item>
+          <description>In the InfoPath design mode user interface, you can specify a custom message that is displayed when submitting succeeds or fails by using the Form Submit Options command on the Tools menu. If either the <b>Message</b> or <b>MessageDetails</b> properties are set in code, these values override any text specified in the InfoPath user interface.</description>
+        </item>
+      </list>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlFormCancelEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlFormCancelEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public abstract string Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.Message" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Message As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Message { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Message : string with get, set" Usage="Microsoft.Office.InfoPath.XmlFormCancelEventArgs.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the short message that is displayed when the event is cancelled.</summary>
+        <value>The short error message text.</value>
+        <remarks>
+          <para>The value specified for the <b>Message</b> property is displayed at the top of the error message dialog box when the event is cancelled.</para>
+          <para>For information about which events can utilize the <b>Message</b> property, see <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" />.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageDetails">
+      <MemberSignature Language="C#" Value="public abstract string MessageDetails { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MessageDetails" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.MessageDetails" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property MessageDetails As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ MessageDetails { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.MessageDetails : string with get, set" Usage="Microsoft.Office.InfoPath.XmlFormCancelEventArgs.MessageDetails" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the detailed message when the event is cancelled. </summary>
+        <value>The detailed error message text.</value>
+        <remarks>
+          <para>The value specified for the <b>MessageDetails</b> property when the user clicks the Details button in the error message dialog box.</para>
+          <para>For information about which events can utilize the <b>MessageDetails</b> property, see <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" />.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

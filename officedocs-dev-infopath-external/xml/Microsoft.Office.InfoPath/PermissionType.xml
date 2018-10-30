@@ -1,0 +1,210 @@
+﻿<Type Name="PermissionType" FullName="Microsoft.Office.InfoPath.PermissionType">
+  <TypeSignature Language="C#" Value="public enum PermissionType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed PermissionType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.PermissionType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum PermissionType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class PermissionType" />
+  <TypeSignature Language="F#" Value="type PermissionType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Represents a user's permissions.</summary>
+    <remarks>
+      <para>These enumerated constants are returned by the <see cref="P:Microsoft.Office.InfoPath.UserPermission.Permission" /> property of the <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> class, and passed as the <paramref name="PermissionType" /> parameter to the <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,Microsoft.Office.InfoPath.PermissionType)" /> method of the <see cref="T:Microsoft.Office.InfoPath.UserPermissionCollection" /> class.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Change">
+      <MemberSignature Language="C#" Value="Change" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Change = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Change" />
+      <MemberSignature Language="VB.NET" Value="Change" />
+      <MemberSignature Language="C++ CLI" Value="Change" />
+      <MemberSignature Language="F#" Value="Change = 15" Usage="Microsoft.Office.InfoPath.PermissionType.Change" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>15</MemberValue>
+      <Docs>
+        <summary>Allows users to view, edit, copy, and save, but not print a form. Equivalent to the <b>Read</b>, <b>Edit</b>, <b>Save</b>, and <b>Extract</b> permissions combined.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Edit">
+      <MemberSignature Language="C#" Value="Edit" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Edit = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Edit" />
+      <MemberSignature Language="VB.NET" Value="Edit" />
+      <MemberSignature Language="C++ CLI" Value="Edit" />
+      <MemberSignature Language="F#" Value="Edit = 2" Usage="Microsoft.Office.InfoPath.PermissionType.Edit" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Allows the user to edit the form.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Extract">
+      <MemberSignature Language="C#" Value="Extract" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Extract = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Extract" />
+      <MemberSignature Language="VB.NET" Value="Extract" />
+      <MemberSignature Language="C++ CLI" Value="Extract" />
+      <MemberSignature Language="F#" Value="Extract = 8" Usage="Microsoft.Office.InfoPath.PermissionType.Extract" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>Allows a user with the <b>Read</b> permission to copy content in the form.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FullControl">
+      <MemberSignature Language="C#" Value="FullControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType FullControl = int32(64)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.FullControl" />
+      <MemberSignature Language="VB.NET" Value="FullControl" />
+      <MemberSignature Language="C++ CLI" Value="FullControl" />
+      <MemberSignature Language="F#" Value="FullControl = 64" Usage="Microsoft.Office.InfoPath.PermissionType.FullControl" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>Allows the user to add, change, and remove permissions for other users of a form.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectModel">
+      <MemberSignature Language="C#" Value="ObjectModel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType ObjectModel = int32(32)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.ObjectModel" />
+      <MemberSignature Language="VB.NET" Value="ObjectModel" />
+      <MemberSignature Language="C++ CLI" Value="ObjectModel" />
+      <MemberSignature Language="F#" Value="ObjectModel = 32" Usage="Microsoft.Office.InfoPath.PermissionType.ObjectModel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>32</MemberValue>
+      <Docs>
+        <summary>Allows a user to access the form document programmatically through its object model. Users without the <b>ObjectModel</b> permission cannot use the object model to determine their own permissions.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="Print" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Print = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Print" />
+      <MemberSignature Language="VB.NET" Value="Print" />
+      <MemberSignature Language="C++ CLI" Value="Print" />
+      <MemberSignature Language="F#" Value="Print = 16" Usage="Microsoft.Office.InfoPath.PermissionType.Print" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>Allows the user to print the form.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="Read" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Read = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Read" />
+      <MemberSignature Language="VB.NET" Value="Read" />
+      <MemberSignature Language="C++ CLI" Value="Read" />
+      <MemberSignature Language="F#" Value="Read = 1" Usage="Microsoft.Office.InfoPath.PermissionType.Read" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Allows the user to read (view) the form. (The <b>Read</b> and <b>View</b> permissions are equivalent.)</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="Save" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType Save = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.Save" />
+      <MemberSignature Language="VB.NET" Value="Save" />
+      <MemberSignature Language="C++ CLI" Value="Save" />
+      <MemberSignature Language="F#" Value="Save = 4" Usage="Microsoft.Office.InfoPath.PermissionType.Save" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Allows the user to save the form.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="View">
+      <MemberSignature Language="C#" Value="View" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.PermissionType View = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.PermissionType.View" />
+      <MemberSignature Language="VB.NET" Value="View" />
+      <MemberSignature Language="C++ CLI" Value="View" />
+      <MemberSignature Language="F#" Value="View = 1" Usage="Microsoft.Office.InfoPath.PermissionType.View" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.PermissionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Allows the user to view (read) the form. (The <b>Read</b> and <b>View</b> permissions are equivalent.) </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.XSLTemplateClass" />
   <TypeSignature Language="VB.NET" Value="Public Class XSLTemplateClass&#xA;Implements XSLTemplate" />
   <TypeSignature Language="C++ CLI" Value="public ref class XSLTemplateClass : Microsoft::Office::Interop::InfoPath::Xml::XSLTemplate" />
+  <TypeSignature Language="F#" Value="type XSLTemplateClass = class&#xA;    interface IXSLTemplate&#xA;    interface XSLTemplate" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -55,6 +56,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.XSLTemplateClass.createProcessor" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function createProcessor () As IXSLProcessor" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual Microsoft::Office::Interop::InfoPath::Xml::IXSLProcessor ^ createProcessor() = Microsoft::Office::Interop::InfoPath::Xml::IXSLTemplate::createProcessor;" />
+      <MemberSignature Language="F#" Value="abstract member createProcessor : unit -&gt; Microsoft.Office.Interop.InfoPath.Xml.IXSLProcessor&#xA;override this.createProcessor : unit -&gt; Microsoft.Office.Interop.InfoPath.Xml.IXSLProcessor" Usage="xSLTemplateClass.createProcessor " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.Xml.IXSLTemplate.createProcessor</InterfaceMember>
@@ -84,6 +86,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.Xml.XSLTemplateClass.stylesheet" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Property stylesheet As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ stylesheet { Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ get(); void set(Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMNode ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.stylesheet : Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode with get, set" Usage="stylesheet" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.Xml.IXSLTemplate.stylesheet</InterfaceMember>

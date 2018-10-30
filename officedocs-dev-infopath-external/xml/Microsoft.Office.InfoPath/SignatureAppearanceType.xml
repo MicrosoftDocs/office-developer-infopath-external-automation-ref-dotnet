@@ -1,0 +1,65 @@
+﻿<Type Name="SignatureAppearanceType" FullName="Microsoft.Office.InfoPath.SignatureAppearanceType">
+  <TypeSignature Language="C#" Value="public enum SignatureAppearanceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SignatureAppearanceType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignatureAppearanceType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum SignatureAppearanceType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class SignatureAppearanceType" />
+  <TypeSignature Language="F#" Value="type SignatureAppearanceType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Specifies the appearance of a Signature Line control.</summary>
+    <remarks>
+      <para>These enumerated constants specify the return value of the <see cref="P:Microsoft.Office.InfoPath.SignatureLine.SignatureAppearanceType" /> property of the <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> class.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Line">
+      <MemberSignature Language="C#" Value="Line" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.SignatureAppearanceType Line = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.SignatureAppearanceType.Line" />
+      <MemberSignature Language="VB.NET" Value="Line" />
+      <MemberSignature Language="C++ CLI" Value="Line" />
+      <MemberSignature Language="F#" Value="Line = 0" Usage="Microsoft.Office.InfoPath.SignatureAppearanceType.Line" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureAppearanceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>The control displays with a signature line. </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Stamp">
+      <MemberSignature Language="C#" Value="Stamp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.SignatureAppearanceType Stamp = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.SignatureAppearanceType.Stamp" />
+      <MemberSignature Language="VB.NET" Value="Stamp" />
+      <MemberSignature Language="C++ CLI" Value="Stamp" />
+      <MemberSignature Language="F#" Value="Stamp = 1" Usage="Microsoft.Office.InfoPath.SignatureAppearanceType.Stamp" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureAppearanceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>The control displays for signing with the image of a stamp, such as an inkan or hanko seal.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

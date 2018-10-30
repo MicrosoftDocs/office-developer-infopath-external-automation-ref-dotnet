@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class XMLDOMDocumentEvents_SinkHelper&#xA;Implements XMLDOMDocumentEvents" />
   <TypeSignature Language="C++ CLI" Value="public ref class XMLDOMDocumentEvents_SinkHelper sealed : Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents" />
+  <TypeSignature Language="F#" Value="type XMLDOMDocumentEvents_SinkHelper = class&#xA;    interface XMLDOMDocumentEvents" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -35,6 +36,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper.m_dwCookie" />
       <MemberSignature Language="VB.NET" Value="Public m_dwCookie As Integer " />
       <MemberSignature Language="C++ CLI" Value="public: int m_dwCookie;" />
+      <MemberSignature Language="F#" Value="val mutable m_dwCookie : int" Usage="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper.m_dwCookie" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -54,6 +56,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper.m_ondataavailableDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_ondataavailableDelegate As XMLDOMDocumentEvents_ondataavailableEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_ondataavailableEventHandler ^ m_ondataavailableDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_ondataavailableDelegate : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler" Usage="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper.m_ondataavailableDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -73,6 +76,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper.m_onreadystatechangeDelegate" />
       <MemberSignature Language="VB.NET" Value="Public m_onreadystatechangeDelegate As XMLDOMDocumentEvents_onreadystatechangeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public: Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_onreadystatechangeEventHandler ^ m_onreadystatechangeDelegate;" />
+      <MemberSignature Language="F#" Value="val mutable m_onreadystatechangeDelegate : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler" Usage="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper.m_onreadystatechangeDelegate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -92,6 +96,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper.ondataavailable" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub ondataavailable ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void ondataavailable();" />
+      <MemberSignature Language="F#" Value="abstract member ondataavailable : unit -&gt; unit&#xA;override this.ondataavailable : unit -&gt; unit" Usage="xMLDOMDocumentEvents_SinkHelper.ondataavailable " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents.ondataavailable</InterfaceMember>
@@ -115,6 +120,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper.onreadystatechange" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Sub onreadystatechange ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; override void onreadystatechange();" />
+      <MemberSignature Language="F#" Value="abstract member onreadystatechange : unit -&gt; unit&#xA;override this.onreadystatechange : unit -&gt; unit" Usage="xMLDOMDocumentEvents_SinkHelper.onreadystatechange " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents.onreadystatechange</InterfaceMember>

@@ -1,0 +1,185 @@
+﻿<Type Name="TaskPaneType" FullName="Microsoft.Office.InfoPath.TaskPaneType">
+  <TypeSignature Language="C#" Value="public enum TaskPaneType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TaskPaneType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.TaskPaneType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum TaskPaneType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class TaskPaneType" />
+  <TypeSignature Language="F#" Value="type TaskPaneType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Specifies the type of task pane that is currently selected.</summary>
+    <remarks>
+      <para>These enumerated values are returned by the <see cref="P:Microsoft.Office.InfoPath.TaskPane.TaskPaneType" /> property. These values are also used to specify the type of task pane to return using the <see cref="P:Microsoft.Office.InfoPath.TaskPaneCollection.Item(Microsoft.Office.InfoPath.TaskPaneType)" /> property of the <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" /> class.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BulletsNumbering">
+      <MemberSignature Language="C#" Value="BulletsNumbering" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.TaskPaneType BulletsNumbering = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.TaskPaneType.BulletsNumbering" />
+      <MemberSignature Language="VB.NET" Value="BulletsNumbering" />
+      <MemberSignature Language="C++ CLI" Value="BulletsNumbering" />
+      <MemberSignature Language="F#" Value="BulletsNumbering = 5" Usage="Microsoft.Office.InfoPath.TaskPaneType.BulletsNumbering" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>The Bullets and Numbering task pane. Used for applying bullet and numbering styles to a form</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ClipArt">
+      <MemberSignature Language="C#" Value="ClipArt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.TaskPaneType ClipArt = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.TaskPaneType.ClipArt" />
+      <MemberSignature Language="VB.NET" Value="ClipArt" />
+      <MemberSignature Language="C++ CLI" Value="ClipArt" />
+      <MemberSignature Language="F#" Value="ClipArt = 1" Usage="Microsoft.Office.InfoPath.TaskPaneType.ClipArt" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>The Clip Art task pane. Used for inserting clip art into a form.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Find">
+      <MemberSignature Language="C#" Value="Find" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.TaskPaneType Find = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.TaskPaneType.Find" />
+      <MemberSignature Language="VB.NET" Value="Find" />
+      <MemberSignature Language="C++ CLI" Value="Find" />
+      <MemberSignature Language="F#" Value="Find = 2" Usage="Microsoft.Office.InfoPath.TaskPaneType.Find" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>The Find task pane. Used to search for text in a form. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Formatting">
+      <MemberSignature Language="C#" Value="Formatting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.TaskPaneType Formatting = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.TaskPaneType.Formatting" />
+      <MemberSignature Language="VB.NET" Value="Formatting" />
+      <MemberSignature Language="C++ CLI" Value="Formatting" />
+      <MemberSignature Language="F#" Value="Formatting = 4" Usage="Microsoft.Office.InfoPath.TaskPaneType.Formatting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>The Font task pane. Used to format text.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Html">
+      <MemberSignature Language="C#" Value="Html" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.TaskPaneType Html = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.TaskPaneType.Html" />
+      <MemberSignature Language="VB.NET" Value="Html" />
+      <MemberSignature Language="C++ CLI" Value="Html" />
+      <MemberSignature Language="F#" Value="Html = 0" Usage="Microsoft.Office.InfoPath.TaskPaneType.Html" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>The InfoPath custom task pane. Used by form developers to provide extra form functionality.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ParagraphFormatting">
+      <MemberSignature Language="C#" Value="ParagraphFormatting" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.TaskPaneType ParagraphFormatting = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.TaskPaneType.ParagraphFormatting" />
+      <MemberSignature Language="VB.NET" Value="ParagraphFormatting" />
+      <MemberSignature Language="C++ CLI" Value="ParagraphFormatting" />
+      <MemberSignature Language="F#" Value="ParagraphFormatting = 7" Usage="Microsoft.Office.InfoPath.TaskPaneType.ParagraphFormatting" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>The Paragraph  task pane. Used to configure properties of paragraphs including alignment and spacing. </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="Replace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.TaskPaneType Replace = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.TaskPaneType.Replace" />
+      <MemberSignature Language="VB.NET" Value="Replace" />
+      <MemberSignature Language="C++ CLI" Value="Replace" />
+      <MemberSignature Language="F#" Value="Replace = 3" Usage="Microsoft.Office.InfoPath.TaskPaneType.Replace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>The Replace task pane. Used to find and replace text in a form. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Spelling">
+      <MemberSignature Language="C#" Value="Spelling" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.TaskPaneType Spelling = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.TaskPaneType.Spelling" />
+      <MemberSignature Language="VB.NET" Value="Spelling" />
+      <MemberSignature Language="C++ CLI" Value="Spelling" />
+      <MemberSignature Language="F#" Value="Spelling = 6" Usage="Microsoft.Office.InfoPath.TaskPaneType.Spelling" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneType</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>The Spelling task pane. Used to check the spelling in a form. Note: This task pane and its corresponding enumeration have been deprecated in InfoPath.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

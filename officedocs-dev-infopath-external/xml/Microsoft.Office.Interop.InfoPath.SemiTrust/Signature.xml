@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature" />
   <TypeSignature Language="VB.NET" Value="Public Interface Signature" />
   <TypeSignature Language="C++ CLI" Value="public interface class Signature" />
+  <TypeSignature Language="F#" Value="type Signature = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Certificate" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Certificate As CertificateObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::CertificateObject ^ Certificate { Microsoft::Office::Interop::InfoPath::SemiTrust::CertificateObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Certificate : Microsoft.Office.Interop.InfoPath.SemiTrust.CertificateObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Certificate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -42,9 +44,22 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.CertificateObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.CertificateObject" /> object for the X.509 digital certificate that was used to sign a form or a set of signed data in a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Certificate</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureObject" /> object is used to access the certificate of the digital signature, and display the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate.IssuedTo" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.CertificateObject" /> object in a message box:</para>
+          <code>public void DisplaySignatureProperties()
+{
+SignatureObject mySignature = thisXDocument.SignedDataBlocks[0].Signatures[0];
+CertificateObject signatureCertificate = mySignature.&lt;span class="label"&gt;Certificate&lt;/span&gt;;
+thisXDocument.UI.Alert("Certificate Issued To = " + signatureCertificate.IssuedTo);
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Comment">
@@ -53,6 +68,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Comment" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Comment As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Comment { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Comment : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Comment" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -67,9 +83,22 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the text comment that was added to the digital signature associated with a form or a set of signed data in a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Comment</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureObject" /> object is displayed in a message box:</para>
+          <code>public void DisplaySignatureProperties()
+{
+SignatureObject mySignature = thisXDocument.SignedDataBlocks[0].Signatures[0];
+string signatureComment = mySignature.&lt;span class="label"&gt;Comment&lt;/span&gt;;
+thisXDocument.UI.Alert("Comment = " + signatureComment);
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Sign">
@@ -78,6 +107,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Sign" />
       <MemberSignature Language="VB.NET" Value="Public Sub Sign ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Sign();" />
+      <MemberSignature Language="F#" Value="abstract member Sign : unit -&gt; unit" Usage="signature.Sign " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -93,8 +123,26 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Writes the XML digital signature block and computes the cryptographic hash for the signed data.</summary>
+        <remarks>
+          <para>The <b>Sign</b> method can only be called from the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSign" /> event. Calling this method advances the Digital Signatures Wizard to the second step in the signing process, selecting a certificate.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, created by adding the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSign" /> event to the form by selecting Programming from the Tools menu in the InfoPath designer user interface, a digital signature is added to the form by using the <b>Sign</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureObject" /> object:</para>
+          <code>public void OnSign(SignEvent e)
+{
+// The OnSign handler can be customized only in fully trusted form templates.
+Signature thisSignature = e.SignedDataBlock.Signatures.Create();
+
+// You can add other pieces of information to sign by modifying the signature
+// template in thisSignature.SignatureBlockXmlNode.
+thisSignature.&lt;span class="label"&gt;Sign&lt;/span&gt;();
+e.ReturnStatus = true;
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="SignatureBlockXmlNode">
@@ -103,6 +151,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.SignatureBlockXmlNode" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignatureBlockXmlNode As IXMLDOMNode" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ SignatureBlockXmlNode { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureBlockXmlNode : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.SignatureBlockXmlNode" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -117,9 +166,22 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the XML node corresponding a digital signature.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the XML of the <b>SignatureBlockXmlNode</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureObject" /> object is displayed in a message box:</para>
+          <code>public void DisplaySignatureProperties()
+{
+SignatureObject mySignature = thisXDocument.SignedDataBlocks[0].Signatures[0];
+IXMLDOMNode signatureNode = mySignature.&lt;span class="label"&gt;SignatureBlockXmlNode&lt;/span&gt;;
+thisXDocument.UI.Alert("Digital signature XML block: \n" + signatureNode.xml);
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Status">
@@ -128,6 +190,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Status" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Status As XdSignatureStatus" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XdSignatureStatus Status { Microsoft::Office::Interop::InfoPath::SemiTrust::XdSignatureStatus get(); };" />
+      <MemberSignature Language="F#" Value="member this.Status : Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Status" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -142,9 +205,39 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the status of the specified digital signature.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The status that is returned is based on the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus" /> enumeration.</para>
+          <para>The <b>Status</b> property only verifies whether the hash of the digital signature is valid. It does not verify the chain of trust of the digital certificate, nor does it verify that the image of the view captured at the time the signature was added matches the current view of the signed form.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Status" /> property of the <b>Signature</b> object is used to determine the status of the signature, and is displayed in a message box:</para>
+          <code>public void DisplaySignatureProperties()
+{
+SignatureObject mySignature = thisXDocument.SignedDataBlocks[0].Signatures[0];
+string signatureStatus = "Unknown";
+switch(mySignature.&lt;span class="label"&gt;Status&lt;/span&gt;)
+{
+ case XdSignatureStatus.xdSignatureStatusValid : 
+  signatureStatus = "Valid";
+  break;
+ case XdSignatureStatus.xdSignatureStatusInvalid : 
+  signatureStatus = "Invalid";
+  break;
+ case XdSignatureStatus.xdSignatureStatusError :
+  signatureStatus = "Error";
+  break;
+ case XdSignatureStatus.xdSignatureStatusUnsupported :
+  signatureStatus = "Unsupported";
+  break;
+}
+thisXDocument.UI.Alert("Signature Status = " + signatureStatus);
+}</code>
+        </example>
       </Docs>
     </Member>
   </Members>

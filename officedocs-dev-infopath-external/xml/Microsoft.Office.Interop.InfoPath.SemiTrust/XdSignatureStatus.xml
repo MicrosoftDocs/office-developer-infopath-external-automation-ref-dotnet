@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdSignatureStatus" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdSignatureStatus" />
+  <TypeSignature Language="F#" Value="type XdSignatureStatus = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -12,8 +13,34 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The <b>XdSignatureStatus</b> enumeration is used to determine the status of a digital signature.</summary>
+    <remarks>
+      <para>These enumerated values are returned by the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Status" /> property</para>
+      <para />
+    </remarks>
+    <example>
+      <code>public void DisplaySignatureProperties()
+{
+ SignatureObject signature = thisXDocument.SignedDataBlocks[0].Signatures[0];
+ string signatureStatus = "UNKNOWN";
+ switch(signature.Status)
+ {
+  case &lt;span class="label"&gt;XdSignatureStatus&lt;/span&gt;.xdSignatureStatusValid : 
+   signatureStatus = "VALID";
+   break;
+  case &lt;span class="label"&gt;XdSignatureStatus&lt;/span&gt;.xdSignatureStatusInvalid : 
+   signatureStatus = "INVALID";
+   break;
+  case &lt;span class="label"&gt;XdSignatureStatus&lt;/span&gt;.xdSignatureStatusError :
+   signatureStatus = "ERROR";
+   break;
+  case &lt;span class="label"&gt;XdSignatureStatus&lt;/span&gt;.xdSignatureStatusUnsupported :
+   signatureStatus = "UNSUPPORTED";
+   break;
+ }
+ thisXDocument.UI.Alert(" Signature Status = " + signatureStatus);
+}</code>
+    </example>
   </Docs>
   <Members>
     <Member MemberName="xdSignatureStatusError">
@@ -22,6 +49,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusError" />
       <MemberSignature Language="VB.NET" Value="xdSignatureStatusError" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureStatusError" />
+      <MemberSignature Language="F#" Value="xdSignatureStatusError = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusError" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -32,7 +60,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The status of the specified digital signature cannot be determined.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdSignatureStatusInvalid">
@@ -41,6 +69,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusInvalid" />
       <MemberSignature Language="VB.NET" Value="xdSignatureStatusInvalid" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureStatusInvalid" />
+      <MemberSignature Language="F#" Value="xdSignatureStatusInvalid = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusInvalid" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -51,7 +80,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The specified digital signature is invalid.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdSignatureStatusUnsupported">
@@ -60,6 +89,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusUnsupported" />
       <MemberSignature Language="VB.NET" Value="xdSignatureStatusUnsupported" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureStatusUnsupported" />
+      <MemberSignature Language="F#" Value="xdSignatureStatusUnsupported = 3" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusUnsupported" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -70,7 +100,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The specified digital signature is not supported by Microsoft Office InfoPath 2003.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdSignatureStatusValid">
@@ -79,6 +109,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusValid" />
       <MemberSignature Language="VB.NET" Value="xdSignatureStatusValid" />
       <MemberSignature Language="C++ CLI" Value="xdSignatureStatusValid" />
+      <MemberSignature Language="F#" Value="xdSignatureStatusValid = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdSignatureStatus.xdSignatureStatusValid" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -89,7 +120,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The specified digital signature is valid.</summary>
       </Docs>
     </Member>
   </Members>

@@ -1,0 +1,232 @@
+﻿<Type Name="LoadingEventArgs" FullName="Microsoft.Office.InfoPath.LoadingEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class LoadingEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LoadingEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.LoadingEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class LoadingEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class LoadingEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type LoadingEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</summary>
+    <remarks>
+      <para>The <b>LoadingEventArgs</b> class provides the <see cref="P:Microsoft.Office.InfoPath.LoadingEventArgs.CancelableArgs" /> property for canceling the event, and the <see cref="P:Microsoft.Office.InfoPath.LoadingEventArgs.InputParameters" /> property for working with input parameters specified from the command-line, from query parameters in a URL when opening the form from a browser, or when using <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplateWithInputParameters" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" />, or the <see cref="M:Microsoft.Office.Interop.InfoPath.XDocuments3.NewFromSolutionWithInputParameters(System.Object,System.Object)" /> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.XDocumentsCollection" /> from external automation. It also provides the <see cref="Overload:Microsoft.Office.InfoPath.LoadingEventArgs.SetDefaultView" /> method for specifying the default view when opening the form.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LoadingEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.LoadingEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; LoadingEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelableArgs">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.LoadingEventArgs.CancelableArgs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CancelableArgs As XmlFormCancelEventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ CancelableArgs { Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CancelableArgs : Microsoft.Office.InfoPath.XmlFormCancelEventArgs" Usage="Microsoft.Office.InfoPath.LoadingEventArgs.CancelableArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormCancelEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object.</value>
+        <remarks>
+          <para>Access the <b>XmlFormCancelEventArgs</b> object to cancel the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event and specify a custom message to display when the event is canceled.</para>
+          <para>By default, the <b>LoadingEventArgs.CancelableArgs.Cancel</b> property is <b>false</b>.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
+{
+   e.CancelableArgs.Message = "Loading this form was cancelled.";
+   e.CancelableArgs.Cancel = true;
+}</code>
+          <code>Public Sub FormEvents_Loading(ByVal sender As Object, _
+   ByVal e As LoadingEventArgs)
+   e.CancelableArgs.Message = "Loading this form was cancelled."
+   e.CancelableArgs.Cancel = True
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="InputParameters">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IDictionary&lt;string,string&gt; InputParameters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; InputParameters" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.LoadingEventArgs.InputParameters" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property InputParameters As IDictionary(Of String, String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ InputParameters { System::Collections::Generic::IDictionary&lt;System::String ^, System::String ^&gt; ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.InputParameters : System.Collections.Generic.IDictionary&lt;string, string&gt;" Usage="Microsoft.Office.InfoPath.LoadingEventArgs.InputParameters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an <see cref="T:System.Collections.IDictionary" /> that contains any input parameters specified by using the /InputParameters command-line option, query parameters in a URL, or the one of the <b>NewFromFormTemplateWithInputParameters</b> methods.</summary>
+        <value>An <see cref="T:System.Collections.IDictionary" /> that contains input parameters.</value>
+        <remarks>
+          <para>Input parameters consist of one or more name/value pairs separated by the ampersand (&amp;) character that are specified when a form template is opened from the command line or a batch file using the /InputParameters command-line option. Input parameters can also be specified by using query parameters when a form template is opened from a URL.</para>
+          <para>
+            <b>Note</b>: While an <b>IDictionary</b> is normally read/write, InfoPath prevents calls to any methods that write to the <b>IDictionary</b> (such as the <b>Add</b> or <b>Clear</b> methods). Any attempts to make calls that write to the <b>IDictionary</b> returned by the <b>InputParameters</b> property will throw an <b>InvalidOperationException</b>.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">A method was called which attempted to write to the <b>IDictionary</b> that contains input parameters.</exception>
+        <example>
+          <para>In the following code example, the InfoPath form template that contains the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler code is opened from the command line or a URL using the following syntax.</para>
+          <para>Command-line:</para>
+          <para>infopath.exe "C:\User Forms\DeptReport.xsn" /InputParameters "Dept=Accounting&amp;Acct=Contoso"</para>
+          <para>URL:</para>
+          <para>http://server/sites/team/forms/DeptReport.xsn?Dept=Accounting&amp;Acct=Contoso</para>
+          <para>Alternatively, you can open the new form and pass in input parameters from code by using the <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplateWithInputParameters(System.String,System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class, the <see cref="M:Microsoft.Office.Interop.InfoPath._ExternalApplication2.NewFromSolutionWithInputParameters(System.String,System.String)" /> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.ExternalApplication" /> interface, or the <see cref="M:Microsoft.Office.Interop.InfoPath.XDocuments3.NewFromSolutionWithInputParameters(System.Object,System.Object)" /> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.XDocumentsCollection" />. </para>
+          <para>
+            <b>Note</b>: The last two methods are designed for use from external automation code, and cannot be called from form code.</para>
+          <para>The <b>InputParameters</b> property is used from a <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler to set the <b>Department</b> field value to "Accounting" and the <b>Account</b> field value to "Contoso" when the form is opened. The name/value pairs that specify the values can be passed as input parameters using the /InputParameters command-line option, URL input parameter, or <see cref="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplateWithInputParameters(System.String,System.String)" /> method.</para>
+          <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
+{
+   // Be sure that the InputParameter dictionary contains
+   // values before proceeding.
+   if (e.InputParameters.Count != 0)
+   {
+      string vDept = e.InputParameters["Dept"];
+      string vAcct = e.InputParameters["Acct"];
+
+      XPathNavigator myNav = CreateNavigator();
+      myNav.SelectSingleNode("/my:myFields/my:Department",
+         NamespaceManager).SetValue(vDept);
+      myNav.SelectSingleNode("/my:myFields/my:Account",
+         NamespaceManager).SetValue(vAcct);
+   }
+}</code>
+          <code>Public Sub FormEvents_Loading(ByVal sender As Object, _
+   ByVal e As LoadingEventArgs)
+   ' Be sure that the InputParameter dictionary contains
+   ' values before proceeding.
+   If e.InputParameters.Count &amp;lt;&amp;gt; 0 Then
+      Dim vDept As String = e.InputParameters("Dept")
+      Dim vAcct As String = e.InputParameters("Acct")
+
+      Dim myNav As XPathNavigator  = CreateNavigator()
+      myNav.SelectSingleNode("/my:myFields/my:Department", _
+         NamespaceManager).SetValue(vDept)
+      myNav.SelectSingleNode("/my:myFields/my:Account", _
+         NamespaceManager).SetValue(vAcct)
+   End If
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefaultView">
+      <MemberSignature Language="C#" Value="public abstract void SetDefaultView (Microsoft.Office.InfoPath.ViewInfo view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDefaultView(class Microsoft.Office.InfoPath.ViewInfo view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.LoadingEventArgs.SetDefaultView(Microsoft.Office.InfoPath.ViewInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetDefaultView (view As ViewInfo)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetDefaultView(Microsoft::Office::InfoPath::ViewInfo ^ view);" />
+      <MemberSignature Language="F#" Value="abstract member SetDefaultView : Microsoft.Office.InfoPath.ViewInfo -&gt; unit" Usage="loadingEventArgs.SetDefaultView view" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="Microsoft.Office.InfoPath.ViewInfo" />
+      </Parameters>
+      <Docs>
+        <param name="view">A <b>ViewInfo</b> object that specifies the view.</param>
+        <summary>Sets the default view of the form by specifying a <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object.</summary>
+        <remarks>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following code example, the <b>SetDefaultView(Microsoft.Office.InfoPath.ViewInfo)</b> method is used in the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler to set the default view to the second view in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" />.</para>
+          <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
+{
+   e.SetDefaultView(ViewInfos[1]);
+}</code>
+          <code>Public Sub FormEvents_Loading(ByVal sender As Object, _
+   ByVal e As LoadingEventArgs)
+   e.SetDefaultView(ViewInfos(1))
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefaultView">
+      <MemberSignature Language="C#" Value="public abstract void SetDefaultView (string view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetDefaultView(string view) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.LoadingEventArgs.SetDefaultView(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetDefaultView (view As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SetDefaultView(System::String ^ view);" />
+      <MemberSignature Language="F#" Value="abstract member SetDefaultView : string -&gt; unit" Usage="loadingEventArgs.SetDefaultView view" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="view">The name of the view.</param>
+        <summary>Sets the default view of the form by specifying the name of the view.</summary>
+        <remarks>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following code example, the <b>SetDefaultView(System.String)</b> method is used in the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler to set the default view to the view named "View2".</para>
+          <code>public void FormEvents_Loading(object sender, LoadingEventArgs e)
+{
+   e.SetDefaultView("View2");
+}</code>
+          <code>Public Sub FormEvents_Loading(ByVal sender As Object, _
+   ByVal e As LoadingEventArgs)
+   e.SetDefaultView("View2")
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

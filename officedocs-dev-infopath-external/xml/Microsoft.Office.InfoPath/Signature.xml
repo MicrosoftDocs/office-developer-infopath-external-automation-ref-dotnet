@@ -1,0 +1,276 @@
+﻿<Type Name="Signature" FullName="Microsoft.Office.InfoPath.Signature">
+  <TypeSignature Language="C#" Value="public abstract class Signature" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Signature extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Signature" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Signature" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Signature abstract" />
+  <TypeSignature Language="F#" Value="type Signature = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents a digital signature that has been added to a form or a set of signed data in a form.</summary>
+    <remarks>
+      <para>Use the <see cref="P:Microsoft.Office.InfoPath.SignatureCollection.Item(System.Int32)" /> property of the <see cref="T:Microsoft.Office.InfoPath.SignatureCollection" /> collection to return a <b>Signature</b> object.</para>
+      <para>The <b>Signature</b> class provides the <see cref="M:Microsoft.Office.InfoPath.Signature.Sign" /> method for writing the XML digital signature block and computing the cryptographic hash for the signed data.</para>
+      <para>The <b>Signature</b> class provides the following properties for retrieving information about the digital signature: </para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.Signature.Certificate" />   Gets the Certificate object for the X.509 digital certificate with which the form user signed a form or a set of data in a form. </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.Signature.Comment" />   Gets the comment the user added to the digital signature that the user associated with a form or a set of data in a form. </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.Signature.SignatureBlockXmlNode" />   Gets the XML node that contains a digital signature. You can use this property to extend the signature properties or the set of data that InfoPath stores with the signature.</description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.Signature.Status" />   Gets the status of the specified digital signature as a <see cref="T:Microsoft.Office.InfoPath.SignatureStatus" /> enumeration value.</description>
+        </item>
+      </list>
+      <para />
+    </remarks>
+    <example>
+      <para>The following example displays information about the first digital signature for the first set of signed data in a form (or if the form template is configured to sign the entire form, information about the first signature for the entire form). First, a reference to the <b>Signature</b> object that represents the signature is retrieved. The <b>Status</b> and <b>Comment</b> properties of the <b>Signature</b> class are used to get the status and comment values from the signature. The <b>Certificate</b> property of the <b>Signature</b> class is used to get the <b>Certificate</b> object of the signature, which is later used to display who the certificate was issued to. The <b>SignatureBlockXmlNode</b> property of the <b>Signature</b> class is used to retrieve the XML node subtree that contains the signature information. Finally, all of this information is displayed in a series of message boxes.</para>
+      <code>// Get signature.
+Signature mySignature = this.SignedDataBlocks[0].Signatures[0];
+
+// Get status of signature.
+string sigStatus = mySignature.Status.ToString();
+
+// Get comment.
+string signatureComment = mySignature.Comment;
+
+// Get certificate used to sign with.
+Certificate signatureCertificate = mySignature.Certificate;
+
+// Get XML node that contains the signature.
+XPathNavigator signatureNode = mySignature.SignatureBlockXmlNode;
+
+// Display properties.
+MessageBox.Show("Signature properties:\n\nStatus: " + sigStatus + 
+   "\nComment: " + signatureComment + 
+   "\nCertificate Issued To: " + signatureCertificate.IssuedTo);
+
+// Display XML node subtree that contains signature.
+MessageBox.Show("Digital signature XML block: \n" + signatureNode.InnerXml);</code>
+      <code>Imports Microsoft.VisualBasic.Constants
+' Get signature.
+Dim mySignature As Signature = Me.SignedDataBlocks(0).Signatures(0)
+
+' Get status of signature.
+Dim sigStatus As String = mySignature.Status.ToString()
+
+' Get comment.
+Dim signatureComment As String = mySignature.Comment
+
+' Get certificate used to sign with.
+Dim signatureCertificate As Certificate = mySignature.Certificate
+
+' Get XML node that contains the signature.
+Dim signatureNode As XPathNavigator = mySignature.SignatureBlockXmlNode
+
+' Display properties.
+MessageBox.Show("Signature properties:" &amp;amp; NewLine &amp;amp; _
+   "Status: " &amp;amp; sigStatus &amp;amp; NewLine &amp;amp; _
+   "Comment: " &amp;amp; signatureComment &amp;amp; NewLine &amp;amp; _
+   "Certificate Issued To: " &amp;amp; signatureCertificate.IssuedTo)
+
+' Display XML node subtree that contains signature.
+MessageBox.Show("Digital signature XML block:" &amp;amp; NewLine &amp;amp; _
+   signatureNode.InnerXml)</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Signature ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.Signature.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Signature();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Certificate">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Certificate Certificate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Certificate Certificate" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Signature.Certificate" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Certificate As Certificate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Certificate ^ Certificate { Microsoft::Office::InfoPath::Certificate ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Certificate : Microsoft.Office.InfoPath.Certificate" Usage="Microsoft.Office.InfoPath.Signature.Certificate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Certificate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the <see cref="T:Microsoft.Office.InfoPath.Certificate" /> object that represents the X.509 digital certificate that was used to sign a form or a set of signed data in a form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.Certificate" /> object that represents the X.509 digital certificate that was used to sign a form or a set of signed data in a form.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Comment">
+      <MemberSignature Language="C#" Value="public abstract string Comment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Comment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Signature.Comment" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Comment As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Comment { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Comment : string" Usage="Microsoft.Office.InfoPath.Signature.Comment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the text comment that the user added to the digital signature associated with a form or a set of signed data in a form.</summary>
+        <value>The comment that the user added to the digital signature associated with a form or a set of signed data in a form.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public abstract void Sign ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Sign() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.Signature.Sign" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Sign ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Sign();" />
+      <MemberSignature Language="F#" Value="abstract member Sign : unit -&gt; unit" Usage="signature.Sign " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Writes the XML digital signature block and computes the cryptographic hash for the signed data.</summary>
+        <remarks>
+          <para>The <b>Sign</b> method can only be called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">Form code attempted to write to the underlying XML document after signing was initiated.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+        <example>
+          <para>The following example shows the code skeleton that is added to the form template when you add an event handler for the <b>Sign</b> event. First, it uses the <see cref="M:Microsoft.Office.InfoPath.SignatureCollection.CreateSignature" /> method of the <see cref="T:Microsoft.Office.InfoPath.SignatureCollection" /> class to create a new <b>Signature</b> object. It then calls the <b>Sign</b> method of the <see cref="T:Microsoft.Office.InfoPath.Signature" /> class to add the new <b>Signature</b> object to the <b>SignatureCollection</b> object of the form without displaying the Digital Signatures dialog box.</para>
+          <code>public void FormEvents_Sign(object sender, SignEventArgs e)
+{
+   // This event handler will run only in fully trusted form templates.
+
+   Signature thisSignature = 
+      e.SignedDataBlock.Signatures.CreateSignature();
+
+   // To add other pieces of information to sign, modify the
+   // signature template returned by
+   // thisSignature.SignatureBlockXmlNode.
+   // Write your code here.
+
+   thisSignature.Sign();
+   e.SignatureWizard = false;
+}</code>
+          <code>Public Sub FormEvents_Sign(ByVal sender As Object, _
+   ByVal e As SignEventArgs)
+
+   ' This event handler will run only in fully trusted form templates.
+
+   Dim thisSignature As Signature = _
+      e.SignedDataBlock.Signatures.CreateSignature()
+
+   ' To add other pieces of information to sign, modify the
+   ' signature template returned by
+   ' thisSignature.SignatureBlockXmlNode.
+   ' Write your code here.
+
+   thisSignature.Sign()
+   e.SignatureWizard = False
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureBlockXmlNode">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator SignatureBlockXmlNode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator SignatureBlockXmlNode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Signature.SignatureBlockXmlNode" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SignatureBlockXmlNode As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ SignatureBlockXmlNode { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureBlockXmlNode : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.Signature.SignatureBlockXmlNode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <b>System.Xml.XPathNavigator</b> object positioned at the XML node that contains a digital signature.</summary>
+        <value>A <b>System.Xml.XPathNavigator</b> object positioned at the XML node that contains a digital signature.</value>
+        <remarks>
+          <para>You can use this property to extend the signature properties or the set of data that Microsoft InfoPath stores with the signature.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignatureStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.SignatureStatus Status" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Signature.Status" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Status As SignatureStatus" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignatureStatus Status { Microsoft::Office::InfoPath::SignatureStatus get(); };" />
+      <MemberSignature Language="F#" Value="member this.Status : Microsoft.Office.InfoPath.SignatureStatus" Usage="Microsoft.Office.InfoPath.Signature.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.SignatureStatus" /> value that specifies the status of the associated digital signature.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.SignatureStatus" /> value that specifies the status of the associated digital signature.</value>
+        <remarks>
+          <para>The <b>Status</b> property only verifies whether the hash of the digital signature is valid. It does not verify the chain of trust of the digital certificate, nor does it verify that the image of the view captured at the time the signature was added matches the current view of the signed form.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

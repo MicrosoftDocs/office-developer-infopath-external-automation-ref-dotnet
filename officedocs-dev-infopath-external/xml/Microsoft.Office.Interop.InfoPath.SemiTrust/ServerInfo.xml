@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfo" />
   <TypeSignature Language="VB.NET" Value="Public Interface ServerInfo" />
   <TypeSignature Language="C++ CLI" Value="public interface class ServerInfo" />
+  <TypeSignature Language="F#" Value="type ServerInfo = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfoObject" /></summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfo.SharePointListUrl" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SharePointListUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SharePointListUrl { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointListUrl : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfo.SharePointListUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -42,9 +44,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.String" /> that provides the URL of the SharePoint list where the form is located.</summary>
+        <value>The URL of the SharePoint list.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SharePointServerRootUrl">
@@ -53,6 +58,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfo.SharePointServerRootUrl" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SharePointServerRootUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SharePointServerRootUrl { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointServerRootUrl : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfo.SharePointServerRootUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -67,9 +73,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.String" /> that provides the root URL of the SharePoint server where the form is located.</summary>
+        <value>The root URL of the SharePoint server where the form is located.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SharePointSiteCollectionUrl">
@@ -78,6 +87,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfo.SharePointSiteCollectionUrl" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SharePointSiteCollectionUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SharePointSiteCollectionUrl { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointSiteCollectionUrl : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfo.SharePointSiteCollectionUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -92,9 +102,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.String" /> that provides the URL of the SharePoint site collection where the form is located.</summary>
+        <value>The URL of the SharePoint site collection where the form is located</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SharePointSiteUrl">
@@ -103,6 +116,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfo.SharePointSiteUrl" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SharePointSiteUrl As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ SharePointSiteUrl { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointSiteUrl : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.ServerInfo.SharePointSiteUrl" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -117,9 +131,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Gets a <see cref="T:System.String" /> that provides the URL of the SharePoint site where the form is located.</summary>
+        <value>The URL of the SharePoint site where the form is located.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

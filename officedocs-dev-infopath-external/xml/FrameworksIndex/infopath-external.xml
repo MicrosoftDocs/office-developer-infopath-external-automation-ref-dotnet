@@ -1,5 +1,779 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="infopath-external">
+  <Namespace Name="Microsoft.Office.InfoPath">
+    <Type Name="Microsoft.Office.InfoPath.ActionType" Id="T:Microsoft.Office.InfoPath.ActionType">
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.Copy" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.Cut" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.Delete" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.Paste" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XCollectionInsert" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XCollectionInsertAfter" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XCollectionInsertBefore" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XCollectionRefreshFilter" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XCollectionRemove" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XCollectionRemoveAll" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XFileAttachmentAttach" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XFileAttachmentOpen" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XFileAttachmentRemove" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XFileAttachmentSaveAs" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XOptionalInsert" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XOptionalRemove" />
+      <Member Id="F:Microsoft.Office.InfoPath.ActionType.XReplaceReplace" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.AdoQueryConnection" Id="T:Microsoft.Office.InfoPath.AdoQueryConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.AdoQueryConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.AdoQueryConnection.BuildSqlFromXmlNodes(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="P:Microsoft.Office.InfoPath.AdoQueryConnection.Command" />
+      <Member Id="P:Microsoft.Office.InfoPath.AdoQueryConnection.Connection" />
+      <Member Id="P:Microsoft.Office.InfoPath.AdoQueryConnection.Timeout" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.AdoSubmitConnection" Id="T:Microsoft.Office.InfoPath.AdoSubmitConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.AdoSubmitConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.AdoSubmitConnection.BuildSqlFromXmlNodes(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="P:Microsoft.Office.InfoPath.AdoSubmitConnection.Command" />
+      <Member Id="P:Microsoft.Office.InfoPath.AdoSubmitConnection.Connection" />
+      <Member Id="P:Microsoft.Office.InfoPath.AdoSubmitConnection.Timeout" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.Application" Id="T:Microsoft.Office.InfoPath.Application">
+      <Member Id="M:Microsoft.Office.InfoPath.Application.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.Application.CacheFormTemplate(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.Application.GetFormTemplateLocation(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.Application.IsDestinationReachable(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.Application.Quit" />
+      <Member Id="M:Microsoft.Office.InfoPath.Application.Quit(System.Boolean)" />
+      <Member Id="M:Microsoft.Office.InfoPath.Application.RegisterFormTemplate(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.Application.RegisterFormTemplate(System.String,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.Application.UnregisterFormTemplate(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.ActiveWindow" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.ComAddIns" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.Environment" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.LanguageSettings" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.MachineOnlineState" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.Name" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.UsableHeight" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.UsableWidth" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.User" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.Version" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.Windows" />
+      <Member Id="P:Microsoft.Office.InfoPath.Application.XmlForms" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.BdcQueryConnection" Id="T:Microsoft.Office.InfoPath.BdcQueryConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.BdcQueryConnection.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.BdcQueryConnection.EntityName" />
+      <Member Id="P:Microsoft.Office.InfoPath.BdcQueryConnection.EntityNamespace" />
+      <Member Id="P:Microsoft.Office.InfoPath.BdcQueryConnection.LobSystemInstance" />
+      <Member Id="P:Microsoft.Office.InfoPath.BdcQueryConnection.SpecificFinder" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.BdcSubmitConnection" Id="T:Microsoft.Office.InfoPath.BdcSubmitConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.BdcSubmitConnection.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.BdcSubmitConnection.EntityName" />
+      <Member Id="P:Microsoft.Office.InfoPath.BdcSubmitConnection.EntityNamespace" />
+      <Member Id="P:Microsoft.Office.InfoPath.BdcSubmitConnection.LobSystemInstance" />
+      <Member Id="P:Microsoft.Office.InfoPath.BdcSubmitConnection.SpecificFinder" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ButtonEvent" Id="T:Microsoft.Office.InfoPath.ButtonEvent">
+      <Member Id="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" />
+      <Member Id="M:Microsoft.Office.InfoPath.ButtonEvent.#ctor" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.Certificate" Id="T:Microsoft.Office.InfoPath.Certificate">
+      <Member Id="M:Microsoft.Office.InfoPath.Certificate.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.Certificate.ExpirationDate" />
+      <Member Id="P:Microsoft.Office.InfoPath.Certificate.IssuedBy" />
+      <Member Id="P:Microsoft.Office.InfoPath.Certificate.IssuedTo" />
+      <Member Id="P:Microsoft.Office.InfoPath.Certificate.Status" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.CertificateStatus" Id="T:Microsoft.Office.InfoPath.CertificateStatus">
+      <Member Id="F:Microsoft.Office.InfoPath.CertificateStatus.Error" />
+      <Member Id="F:Microsoft.Office.InfoPath.CertificateStatus.Expired" />
+      <Member Id="F:Microsoft.Office.InfoPath.CertificateStatus.NotTrusted" />
+      <Member Id="F:Microsoft.Office.InfoPath.CertificateStatus.Revoked" />
+      <Member Id="F:Microsoft.Office.InfoPath.CertificateStatus.Valid" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ClickedEventArgs" Id="T:Microsoft.Office.InfoPath.ClickedEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.ClickedEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.ClickedEventArgs.ControlId" />
+      <Member Id="P:Microsoft.Office.InfoPath.ClickedEventArgs.Source" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ClickedEventHandler" Id="T:Microsoft.Office.InfoPath.ClickedEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.ContextChangedEventArgs" Id="T:Microsoft.Office.InfoPath.ContextChangedEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.ContextChangedEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.ContextChangedEventArgs.ChangeType" />
+      <Member Id="P:Microsoft.Office.InfoPath.ContextChangedEventArgs.Context" />
+      <Member Id="P:Microsoft.Office.InfoPath.ContextChangedEventArgs.UndoRedo" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ContextChangedEventHandler" Id="T:Microsoft.Office.InfoPath.ContextChangedEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.ControlEvents" Id="T:Microsoft.Office.InfoPath.ControlEvents">
+      <Member Id="M:Microsoft.Office.InfoPath.ControlEvents.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.ControlEvents.Item(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.DataConnection" Id="T:Microsoft.Office.InfoPath.DataConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.DataConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.DataConnection.Execute" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataConnection.Name" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.DataConnectionCollection" Id="T:Microsoft.Office.InfoPath.DataConnectionCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.DataConnectionCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.DataConnectionCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataConnectionCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataConnectionCollection.Item(System.Int32)" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataConnectionCollection.Item(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.DataSource" Id="T:Microsoft.Office.InfoPath.DataSource">
+      <Member Id="M:Microsoft.Office.InfoPath.DataSource.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.DataSource.CreateNavigator" />
+      <Member Id="M:Microsoft.Office.InfoPath.DataSource.GetNamedNodeProperty(System.Xml.XPath.XPathNavigator,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.DataSource.SetNamedNodeProperty(System.Xml.XPath.XPathNavigator,System.String,System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataSource.Name" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataSource.QueryConnection" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataSource.ReadOnly" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.DataSourceCollection" Id="T:Microsoft.Office.InfoPath.DataSourceCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.DataSourceCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.DataSourceCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataSourceCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataSourceCollection.Item(System.Int32)" />
+      <Member Id="P:Microsoft.Office.InfoPath.DataSourceCollection.Item(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.EmailAttachmentType" Id="T:Microsoft.Office.InfoPath.EmailAttachmentType">
+      <Member Id="F:Microsoft.Office.InfoPath.EmailAttachmentType.None" />
+      <Member Id="F:Microsoft.Office.InfoPath.EmailAttachmentType.Xml" />
+      <Member Id="F:Microsoft.Office.InfoPath.EmailAttachmentType.XmlXsn" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.EmailSubmitConnection" Id="T:Microsoft.Office.InfoPath.EmailSubmitConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.EmailSubmitConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.EmailSubmitConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="P:Microsoft.Office.InfoPath.EmailSubmitConnection.AttachmentFileName" />
+      <Member Id="P:Microsoft.Office.InfoPath.EmailSubmitConnection.Bcc" />
+      <Member Id="P:Microsoft.Office.InfoPath.EmailSubmitConnection.CC" />
+      <Member Id="P:Microsoft.Office.InfoPath.EmailSubmitConnection.EmailAttachmentType" />
+      <Member Id="P:Microsoft.Office.InfoPath.EmailSubmitConnection.Introduction" />
+      <Member Id="P:Microsoft.Office.InfoPath.EmailSubmitConnection.Subject" />
+      <Member Id="P:Microsoft.Office.InfoPath.EmailSubmitConnection.To" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.Environment" Id="T:Microsoft.Office.InfoPath.Environment">
+      <Member Id="M:Microsoft.Office.InfoPath.Environment.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.Environment.IsBrowser" />
+      <Member Id="P:Microsoft.Office.InfoPath.Environment.IsMobile" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ErrorMode" Id="T:Microsoft.Office.InfoPath.ErrorMode">
+      <Member Id="F:Microsoft.Office.InfoPath.ErrorMode.Modal" />
+      <Member Id="F:Microsoft.Office.InfoPath.ErrorMode.Modeless" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.EventManager" Id="T:Microsoft.Office.InfoPath.EventManager">
+      <Member Id="M:Microsoft.Office.InfoPath.EventManager.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.EventManager.ControlEvents" />
+      <Member Id="P:Microsoft.Office.InfoPath.EventManager.FormEvents" />
+      <Member Id="P:Microsoft.Office.InfoPath.EventManager.XmlEvents" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ExportFormat" Id="T:Microsoft.Office.InfoPath.ExportFormat">
+      <Member Id="F:Microsoft.Office.InfoPath.ExportFormat.Mht" />
+      <Member Id="F:Microsoft.Office.InfoPath.ExportFormat.Pdf" />
+      <Member Id="F:Microsoft.Office.InfoPath.ExportFormat.Xps" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.FileQueryConnection" Id="T:Microsoft.Office.InfoPath.FileQueryConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.FileQueryConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.FileQueryConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="P:Microsoft.Office.InfoPath.FileQueryConnection.FileLocation" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.FileSubmitConnection" Id="T:Microsoft.Office.InfoPath.FileSubmitConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.FileSubmitConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.FileSubmitConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="P:Microsoft.Office.InfoPath.FileSubmitConnection.Filename" />
+      <Member Id="P:Microsoft.Office.InfoPath.FileSubmitConnection.FolderUrl" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.FormError" Id="T:Microsoft.Office.InfoPath.FormError">
+      <Member Id="M:Microsoft.Office.InfoPath.FormError.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormError.DetailedMessage" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormError.ErrorCode" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormError.FormErrorType" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormError.Message" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormError.Name" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormError.Site" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.FormErrorCollection" Id="T:Microsoft.Office.InfoPath.FormErrorCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String,System.Int32)" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.Delete(Microsoft.Office.InfoPath.FormError)" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.Delete(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.DeleteAll" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.GetErrors(Microsoft.Office.InfoPath.FormErrorType)" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormErrorCollection.GetErrors(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormErrorCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormErrorCollection.Item(System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.FormErrorType" Id="T:Microsoft.Office.InfoPath.FormErrorType">
+      <Member Id="F:Microsoft.Office.InfoPath.FormErrorType.SchemaValidation" />
+      <Member Id="F:Microsoft.Office.InfoPath.FormErrorType.SystemGenerated" />
+      <Member Id="F:Microsoft.Office.InfoPath.FormErrorType.UserDefined" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.FormEvents" Id="T:Microsoft.Office.InfoPath.FormEvents">
+      <Member Id="E:Microsoft.Office.InfoPath.FormEvents.ContextChanged" />
+      <Member Id="E:Microsoft.Office.InfoPath.FormEvents.Loading" />
+      <Member Id="E:Microsoft.Office.InfoPath.FormEvents.Merge" />
+      <Member Id="E:Microsoft.Office.InfoPath.FormEvents.Save" />
+      <Member Id="E:Microsoft.Office.InfoPath.FormEvents.Sign" />
+      <Member Id="E:Microsoft.Office.InfoPath.FormEvents.Submit" />
+      <Member Id="E:Microsoft.Office.InfoPath.FormEvents.VersionUpgrade" />
+      <Member Id="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormEvents.#ctor" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.FormTemplate" Id="T:Microsoft.Office.InfoPath.FormTemplate">
+      <Member Id="M:Microsoft.Office.InfoPath.FormTemplate.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.FormTemplate.OpenFileFromPackage(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormTemplate.CacheId" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormTemplate.Manifest" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormTemplate.Uri" />
+      <Member Id="P:Microsoft.Office.InfoPath.FormTemplate.Version" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.HtmlTaskPane" Id="T:Microsoft.Office.InfoPath.HtmlTaskPane">
+      <Member Id="M:Microsoft.Office.InfoPath.HtmlTaskPane.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.HtmlTaskPane.Navigate(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.HtmlTaskPane.HtmlDocument" />
+      <Member Id="P:Microsoft.Office.InfoPath.HtmlTaskPane.HtmlWindow" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.IInfoPathHostItemProvider" Id="T:Microsoft.Office.InfoPath.IInfoPathHostItemProvider">
+      <Member Id="M:Microsoft.Office.InfoPath.IInfoPathHostItemProvider.GetHostObject(System.String,System.String)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.IInfoPathRuntime" Id="T:Microsoft.Office.InfoPath.IInfoPathRuntime">
+      <Member Id="M:Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization" />
+      <Member Id="M:Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize" />
+      <Member Id="M:Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider(Microsoft.Office.InfoPath.IInfoPathHostItemProvider)" />
+      <Member Id="M:Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.LoadingEventArgs" Id="T:Microsoft.Office.InfoPath.LoadingEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.LoadingEventArgs.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.LoadingEventArgs.SetDefaultView(Microsoft.Office.InfoPath.ViewInfo)" />
+      <Member Id="M:Microsoft.Office.InfoPath.LoadingEventArgs.SetDefaultView(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.LoadingEventArgs.CancelableArgs" />
+      <Member Id="P:Microsoft.Office.InfoPath.LoadingEventArgs.InputParameters" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.LoadingEventHandler" Id="T:Microsoft.Office.InfoPath.LoadingEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.MachineState" Id="T:Microsoft.Office.InfoPath.MachineState">
+      <Member Id="F:Microsoft.Office.InfoPath.MachineState.IEInOfflineState" />
+      <Member Id="F:Microsoft.Office.InfoPath.MachineState.Offline" />
+      <Member Id="F:Microsoft.Office.InfoPath.MachineState.Online" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.MailEnvelope" Id="T:Microsoft.Office.InfoPath.MailEnvelope">
+      <Member Id="M:Microsoft.Office.InfoPath.MailEnvelope.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.MailEnvelope.Available" />
+      <Member Id="P:Microsoft.Office.InfoPath.MailEnvelope.Bcc" />
+      <Member Id="P:Microsoft.Office.InfoPath.MailEnvelope.CC" />
+      <Member Id="P:Microsoft.Office.InfoPath.MailEnvelope.EmailAttachmentType" />
+      <Member Id="P:Microsoft.Office.InfoPath.MailEnvelope.Introduction" />
+      <Member Id="P:Microsoft.Office.InfoPath.MailEnvelope.Subject" />
+      <Member Id="P:Microsoft.Office.InfoPath.MailEnvelope.To" />
+      <Member Id="P:Microsoft.Office.InfoPath.MailEnvelope.Visible" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ManagedObjectWrapper" Id="T:Microsoft.Office.InfoPath.ManagedObjectWrapper">
+      <Member Id="M:Microsoft.Office.InfoPath.ManagedObjectWrapper.#ctor(System.Object)" />
+      <Member Id="M:Microsoft.Office.InfoPath.ManagedObjectWrapper.#ctor(System.Object,System.Boolean)" />
+      <Member Id="P:Microsoft.Office.InfoPath.ManagedObjectWrapper.Client" />
+      <Member Id="P:Microsoft.Office.InfoPath.ManagedObjectWrapper.InnerHostItem" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.MergeEventArgs" Id="T:Microsoft.Office.InfoPath.MergeEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.MergeEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.MergeEventArgs.CancelableArgs" />
+      <Member Id="P:Microsoft.Office.InfoPath.MergeEventArgs.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.MergeEventArgs.Index" />
+      <Member Id="P:Microsoft.Office.InfoPath.MergeEventArgs.Rollback" />
+      <Member Id="P:Microsoft.Office.InfoPath.MergeEventArgs.Xml" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.MergeEventHandler" Id="T:Microsoft.Office.InfoPath.MergeEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.NetworkState" Id="T:Microsoft.Office.InfoPath.NetworkState">
+      <Member Id="M:Microsoft.Office.InfoPath.NetworkState.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.NetworkState.IsDestinationReachable(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.NetworkState.MachineOnlineState" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.Permission" Id="T:Microsoft.Office.InfoPath.Permission">
+      <Member Id="M:Microsoft.Office.InfoPath.Permission.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.Permission.ApplyPolicy(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.Permission.DocumentAuthor" />
+      <Member Id="P:Microsoft.Office.InfoPath.Permission.Enabled" />
+      <Member Id="P:Microsoft.Office.InfoPath.Permission.PermissionFromPolicy" />
+      <Member Id="P:Microsoft.Office.InfoPath.Permission.PolicyDescription" />
+      <Member Id="P:Microsoft.Office.InfoPath.Permission.PolicyName" />
+      <Member Id="P:Microsoft.Office.InfoPath.Permission.RequestPermissionUrl" />
+      <Member Id="P:Microsoft.Office.InfoPath.Permission.StoreLicenses" />
+      <Member Id="P:Microsoft.Office.InfoPath.Permission.UserPermissions" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.PermissionType" Id="T:Microsoft.Office.InfoPath.PermissionType">
+      <Member Id="F:Microsoft.Office.InfoPath.PermissionType.Change" />
+      <Member Id="F:Microsoft.Office.InfoPath.PermissionType.Edit" />
+      <Member Id="F:Microsoft.Office.InfoPath.PermissionType.Extract" />
+      <Member Id="F:Microsoft.Office.InfoPath.PermissionType.FullControl" />
+      <Member Id="F:Microsoft.Office.InfoPath.PermissionType.ObjectModel" />
+      <Member Id="F:Microsoft.Office.InfoPath.PermissionType.Print" />
+      <Member Id="F:Microsoft.Office.InfoPath.PermissionType.Read" />
+      <Member Id="F:Microsoft.Office.InfoPath.PermissionType.Save" />
+      <Member Id="F:Microsoft.Office.InfoPath.PermissionType.View" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SaveCancelEventArgs" Id="T:Microsoft.Office.InfoPath.SaveCancelEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.SaveCancelEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.SaveCancelEventArgs.CloseIfSaveCancelled" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SaveEventArgs" Id="T:Microsoft.Office.InfoPath.SaveEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.SaveEventArgs.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.SaveEventArgs.PerformSaveOperation" />
+      <Member Id="P:Microsoft.Office.InfoPath.SaveEventArgs.CancelableArgs" />
+      <Member Id="P:Microsoft.Office.InfoPath.SaveEventArgs.Filename" />
+      <Member Id="P:Microsoft.Office.InfoPath.SaveEventArgs.IsSaveAs" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SaveEventHandler" Id="T:Microsoft.Office.InfoPath.SaveEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.ServerInfo" Id="T:Microsoft.Office.InfoPath.ServerInfo">
+      <Member Id="M:Microsoft.Office.InfoPath.ServerInfo.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.ServerInfo.SharePointListUrl" />
+      <Member Id="P:Microsoft.Office.InfoPath.ServerInfo.SharePointServerRootUrl" />
+      <Member Id="P:Microsoft.Office.InfoPath.ServerInfo.SharePointSiteCollectionUrl" />
+      <Member Id="P:Microsoft.Office.InfoPath.ServerInfo.SharePointSiteUrl" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SharepointListQueryConnection" Id="T:Microsoft.Office.InfoPath.SharepointListQueryConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.SharepointListQueryConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.SharepointListQueryConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="P:Microsoft.Office.InfoPath.SharepointListQueryConnection.QueryThisFormOnly" />
+      <Member Id="P:Microsoft.Office.InfoPath.SharepointListQueryConnection.SiteUrl" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SharePointListRWQueryConnection" Id="T:Microsoft.Office.InfoPath.SharePointListRWQueryConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="P:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.ContentTypeId" />
+      <Member Id="P:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.ListId" />
+      <Member Id="P:Microsoft.Office.InfoPath.SharePointListRWQueryConnection.SiteUrl" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SharePointListRWSubmitConnection" Id="T:Microsoft.Office.InfoPath.SharePointListRWSubmitConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.SharePointListRWSubmitConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.SharePointListRWSubmitConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="P:Microsoft.Office.InfoPath.SharePointListRWSubmitConnection.ContentTypeId" />
+      <Member Id="P:Microsoft.Office.InfoPath.SharePointListRWSubmitConnection.ListId" />
+      <Member Id="P:Microsoft.Office.InfoPath.SharePointListRWSubmitConnection.SiteUrl" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.Signature" Id="T:Microsoft.Office.InfoPath.Signature">
+      <Member Id="M:Microsoft.Office.InfoPath.Signature.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.Signature.Sign" />
+      <Member Id="P:Microsoft.Office.InfoPath.Signature.Certificate" />
+      <Member Id="P:Microsoft.Office.InfoPath.Signature.Comment" />
+      <Member Id="P:Microsoft.Office.InfoPath.Signature.SignatureBlockXmlNode" />
+      <Member Id="P:Microsoft.Office.InfoPath.Signature.Status" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignatureAppearanceType" Id="T:Microsoft.Office.InfoPath.SignatureAppearanceType">
+      <Member Id="F:Microsoft.Office.InfoPath.SignatureAppearanceType.Line" />
+      <Member Id="F:Microsoft.Office.InfoPath.SignatureAppearanceType.Stamp" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignatureCollection" Id="T:Microsoft.Office.InfoPath.SignatureCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.SignatureCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.SignatureCollection.CreateSignature" />
+      <Member Id="M:Microsoft.Office.InfoPath.SignatureCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureCollection.Item(System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignatureLine" Id="T:Microsoft.Office.InfoPath.SignatureLine">
+      <Member Id="M:Microsoft.Office.InfoPath.SignatureLine.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.SignatureLine.Sign(System.String,System.String,System.String,System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureLine.Id" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureLine.Signature" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureLine.SignatureAppearanceType" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSigner" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerEmailAddress" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureLine.SuggestedSignerTitle" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignatureLineCollection" Id="T:Microsoft.Office.InfoPath.SignatureLineCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.SignatureLineCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.SignatureLineCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureLineCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignatureLineCollection.Item(System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignatureRelation" Id="T:Microsoft.Office.InfoPath.SignatureRelation">
+      <Member Id="F:Microsoft.Office.InfoPath.SignatureRelation.Cosign" />
+      <Member Id="F:Microsoft.Office.InfoPath.SignatureRelation.CounterSign" />
+      <Member Id="F:Microsoft.Office.InfoPath.SignatureRelation.Single" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignatureStatus" Id="T:Microsoft.Office.InfoPath.SignatureStatus">
+      <Member Id="F:Microsoft.Office.InfoPath.SignatureStatus.Error" />
+      <Member Id="F:Microsoft.Office.InfoPath.SignatureStatus.Invalid" />
+      <Member Id="F:Microsoft.Office.InfoPath.SignatureStatus.Unsupported" />
+      <Member Id="F:Microsoft.Office.InfoPath.SignatureStatus.Valid" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignedDataBlock" Id="T:Microsoft.Office.InfoPath.SignedDataBlock">
+      <Member Id="M:Microsoft.Office.InfoPath.SignedDataBlock.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.SignedDataBlock.Sign" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignedDataBlock.Caption" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignedDataBlock.Name" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignedDataBlock.SignatureContainer" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignedDataBlock.SignatureRelation" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignedDataBlock.Signatures" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignedDataBlock.XPath" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignedDataBlockCollection" Id="T:Microsoft.Office.InfoPath.SignedDataBlockCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.SignedDataBlockCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.SignedDataBlockCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Office.InfoPath.SignedDataBlockCollection.ShowSignatureDialog" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignedDataBlockCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignedDataBlockCollection.Item(System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignEventArgs" Id="T:Microsoft.Office.InfoPath.SignEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.SignEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignEventArgs.SignatureWizard" />
+      <Member Id="P:Microsoft.Office.InfoPath.SignEventArgs.SignedDataBlock" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SignEventHandler" Id="T:Microsoft.Office.InfoPath.SignEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.SubmitEventArgs" Id="T:Microsoft.Office.InfoPath.SubmitEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.SubmitEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.SubmitEventArgs.CancelableArgs" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.SubmitEventHandler" Id="T:Microsoft.Office.InfoPath.SubmitEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.SubmitToHostConnection" Id="T:Microsoft.Office.InfoPath.SubmitToHostConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.SubmitToHostConnection.#ctor" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.TaskPane" Id="T:Microsoft.Office.InfoPath.TaskPane">
+      <Member Id="M:Microsoft.Office.InfoPath.TaskPane.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.TaskPane.TaskPaneType" />
+      <Member Id="P:Microsoft.Office.InfoPath.TaskPane.Visible" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.TaskPaneCollection" Id="T:Microsoft.Office.InfoPath.TaskPaneCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.TaskPaneCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.TaskPaneCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Office.InfoPath.TaskPaneCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.TaskPaneCollection.Item(Microsoft.Office.InfoPath.TaskPaneType)" />
+      <Member Id="P:Microsoft.Office.InfoPath.TaskPaneCollection.Item(System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.TaskPaneType" Id="T:Microsoft.Office.InfoPath.TaskPaneType">
+      <Member Id="F:Microsoft.Office.InfoPath.TaskPaneType.BulletsNumbering" />
+      <Member Id="F:Microsoft.Office.InfoPath.TaskPaneType.ClipArt" />
+      <Member Id="F:Microsoft.Office.InfoPath.TaskPaneType.Find" />
+      <Member Id="F:Microsoft.Office.InfoPath.TaskPaneType.Formatting" />
+      <Member Id="F:Microsoft.Office.InfoPath.TaskPaneType.Html" />
+      <Member Id="F:Microsoft.Office.InfoPath.TaskPaneType.ParagraphFormatting" />
+      <Member Id="F:Microsoft.Office.InfoPath.TaskPaneType.Replace" />
+      <Member Id="F:Microsoft.Office.InfoPath.TaskPaneType.Spelling" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.User" Id="T:Microsoft.Office.InfoPath.User">
+      <Member Id="M:Microsoft.Office.InfoPath.User.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.User.IsCurrentUser(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.User.IsUserMemberOf(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.User.LoginName" />
+      <Member Id="P:Microsoft.Office.InfoPath.User.UserName" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.UserPermission" Id="T:Microsoft.Office.InfoPath.UserPermission">
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermission.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermission.Remove" />
+      <Member Id="P:Microsoft.Office.InfoPath.UserPermission.ExpirationDate" />
+      <Member Id="P:Microsoft.Office.InfoPath.UserPermission.Permission" />
+      <Member Id="P:Microsoft.Office.InfoPath.UserPermission.UserId" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.UserPermissionCollection" Id="T:Microsoft.Office.InfoPath.UserPermissionCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermissionCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,Microsoft.Office.InfoPath.PermissionType)" />
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,Microsoft.Office.InfoPath.PermissionType,System.DateTime)" />
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String,System.DateTime)" />
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermissionCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermissionCollection.Remove(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.UserPermissionCollection.RemoveAll" />
+      <Member Id="P:Microsoft.Office.InfoPath.UserPermissionCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.UserPermissionCollection.Item(System.Int32)" />
+      <Member Id="P:Microsoft.Office.InfoPath.UserPermissionCollection.Item(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.VersionUpgradeEventArgs" Id="T:Microsoft.Office.InfoPath.VersionUpgradeEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.CancelableArgs" />
+      <Member Id="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.DocumentVersion" />
+      <Member Id="P:Microsoft.Office.InfoPath.VersionUpgradeEventArgs.FormTemplateVersion" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.VersionUpgradeEventHandler" Id="T:Microsoft.Office.InfoPath.VersionUpgradeEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.View" Id="T:Microsoft.Office.InfoPath.View">
+      <Member Id="M:Microsoft.Office.InfoPath.View.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.DisableAutoUpdate" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.EnableAutoUpdate" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.ExecuteAction(Microsoft.Office.InfoPath.ActionType)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.ExecuteAction(Microsoft.Office.InfoPath.ActionType,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.Export(System.String,Microsoft.Office.InfoPath.ExportFormat)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.ForceUpdate" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.GetContextNodes" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.GetContextNodes(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.GetContextNodes(System.Xml.XPath.XPathNavigator,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.GetSelectedNodes" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.SelectText(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.SelectText(System.Xml.XPath.XPathNavigator,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.View.ShowMailItem(System.String,System.String,System.String,System.String,System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.View.SignatureLines" />
+      <Member Id="P:Microsoft.Office.InfoPath.View.ViewInfo" />
+      <Member Id="P:Microsoft.Office.InfoPath.View.Window" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ViewInfo" Id="T:Microsoft.Office.InfoPath.ViewInfo">
+      <Member Id="M:Microsoft.Office.InfoPath.ViewInfo.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.ViewInfo.Caption" />
+      <Member Id="P:Microsoft.Office.InfoPath.ViewInfo.HideName" />
+      <Member Id="P:Microsoft.Office.InfoPath.ViewInfo.Name" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ViewInfoCollection" Id="T:Microsoft.Office.InfoPath.ViewInfoCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.ViewInfoCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.ViewInfoCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView(Microsoft.Office.InfoPath.ViewInfo)" />
+      <Member Id="M:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.ViewInfoCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.ViewInfoCollection.Default" />
+      <Member Id="P:Microsoft.Office.InfoPath.ViewInfoCollection.Initial" />
+      <Member Id="P:Microsoft.Office.InfoPath.ViewInfoCollection.Item(System.Int32)" />
+      <Member Id="P:Microsoft.Office.InfoPath.ViewInfoCollection.Item(System.String)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ViewSwitchedEventArgs" Id="T:Microsoft.Office.InfoPath.ViewSwitchedEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.ViewSwitchedEventArgs.#ctor" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.ViewSwitchedEventHandler" Id="T:Microsoft.Office.InfoPath.ViewSwitchedEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.WebServiceConnection" Id="T:Microsoft.Office.InfoPath.WebServiceConnection">
+      <Member Id="M:Microsoft.Office.InfoPath.WebServiceConnection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.WebServiceConnection.Execute(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <Member Id="M:Microsoft.Office.InfoPath.WebServiceConnection.GenerateDataSetDiffGram" />
+      <Member Id="P:Microsoft.Office.InfoPath.WebServiceConnection.ServiceUrl" />
+      <Member Id="P:Microsoft.Office.InfoPath.WebServiceConnection.SoapAction" />
+      <Member Id="P:Microsoft.Office.InfoPath.WebServiceConnection.Timeout" />
+      <Member Id="P:Microsoft.Office.InfoPath.WebServiceConnection.WsdlUrl" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.Window" Id="T:Microsoft.Office.InfoPath.Window">
+      <Member Id="M:Microsoft.Office.InfoPath.Window.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.Window.Activate" />
+      <Member Id="M:Microsoft.Office.InfoPath.Window.Close" />
+      <Member Id="M:Microsoft.Office.InfoPath.Window.Close(System.Boolean)" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.Active" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.Caption" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.CommandBars" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.Height" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.Left" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.MailEnvelope" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.TaskPanes" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.Top" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.Width" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.WindowState" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.WindowType" />
+      <Member Id="P:Microsoft.Office.InfoPath.Window.XmlForm" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.WindowCollection" Id="T:Microsoft.Office.InfoPath.WindowCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.WindowCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.WindowCollection.GetEnumerator" />
+      <Member Id="P:Microsoft.Office.InfoPath.WindowCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.WindowCollection.Item(System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.WindowState" Id="T:Microsoft.Office.InfoPath.WindowState">
+      <Member Id="F:Microsoft.Office.InfoPath.WindowState.Maximized" />
+      <Member Id="F:Microsoft.Office.InfoPath.WindowState.Minimized" />
+      <Member Id="F:Microsoft.Office.InfoPath.WindowState.Normal" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.WindowType" Id="T:Microsoft.Office.InfoPath.WindowType">
+      <Member Id="F:Microsoft.Office.InfoPath.WindowType.Designer" />
+      <Member Id="F:Microsoft.Office.InfoPath.WindowType.Editor" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlChangedEventHandler" Id="T:Microsoft.Office.InfoPath.XmlChangedEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.XmlChangingEventArgs" Id="T:Microsoft.Office.InfoPath.XmlChangingEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.XmlChangingEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlChangingEventArgs.CancelableArgs" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlChangingEventHandler" Id="T:Microsoft.Office.InfoPath.XmlChangingEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.XmlEvent" Id="T:Microsoft.Office.InfoPath.XmlEvent">
+      <Member Id="E:Microsoft.Office.InfoPath.XmlEvent.Changed" />
+      <Member Id="E:Microsoft.Office.InfoPath.XmlEvent.Changing" />
+      <Member Id="E:Microsoft.Office.InfoPath.XmlEvent.Validating" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlEvent.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEvent.RaiseUndoRedoForChanged" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlEventArgs" Id="T:Microsoft.Office.InfoPath.XmlEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.XmlEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEventArgs.Match" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEventArgs.NewValue" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEventArgs.OldParent" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEventArgs.OldValue" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEventArgs.Operation" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEventArgs.UndoRedo" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlEvents" Id="T:Microsoft.Office.InfoPath.XmlEvents">
+      <Member Id="M:Microsoft.Office.InfoPath.XmlEvents.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEvents.Item(System.String)" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlEvents.Item(System.String,System.String)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlForm" Id="T:Microsoft.Office.InfoPath.XmlForm">
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.Close" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTasks" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTemplates" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.NotifyHost(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.Print" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.Print(System.Boolean)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.Save" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.SaveAs(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogFilename(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogLocation(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlForm.Submit" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.CurrentView" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.DataSources" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Dirty" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Environment" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Errors" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Extension" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.FormState" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Host" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Hosted" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.HostName" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.NamespaceManager" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.NetworkState" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.New" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Permission" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.QueryDataConnection" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.ReadOnly" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Recovered" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.ServerInfo" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Signed" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.SignedDataBlocks" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.TaskPanes" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Template" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.Uri" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.User" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.UserRole" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlForm.XmlLang" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlFormCancelEventArgs" Id="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.#ctor" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.Message" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormCancelEventArgs.MessageDetails" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlFormCollection" Id="T:Microsoft.Office.InfoPath.XmlFormCollection">
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.GetEnumerator" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.New(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate(System.String,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate(System.String,System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplate(System.String,System.Xml.XPath.XPathNavigator)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.NewFromFormTemplateWithInputParameters(System.String,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.Open(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormCollection.Open(System.String,Microsoft.Office.InfoPath.XmlFormOpenMode)" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormCollection.Count" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormCollection.Item(System.Int32)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlFormHostItem" Id="T:Microsoft.Office.InfoPath.XmlFormHostItem">
+      <Member Id="F:Microsoft.Office.InfoPath.XmlFormHostItem.itemProvider" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.#ctor(System.AddIn.Contract.Collections.IRemoteArgumentArrayContract)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Close" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.CreateNavigator" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.CreateObjRef(System.Type)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.FinishInitialization" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetHostObject(System.String,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetInfrastructureService" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetLifetimeService" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetObjects" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetPrimaryControl" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetRemoteHashCode" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetRemoteType" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetSponsorProvider" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetWorkflowTasks" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetWorkflowTemplates" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.InitializeDataBindings" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.InitializeLifetimeService" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.MemberwiseClone(System.Boolean)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.MergeForm(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.MergeForm(System.Xml.XPath.XPathNavigator)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#FinishInitialization" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#Initialize" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#InitializeHostProvider(Microsoft.Office.InfoPath.IInfoPathHostItemProvider)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#OnShutdown" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#FinishInitialization" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#GetEntryPointObject" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#Initialize" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#InitializeDataBindings" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#OnShutdown" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.NotifyHost(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.OnFinalRevoke" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.OnShutdown" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.OnStartup" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Print" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Print(System.Boolean)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.QueryContract(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.RemoteCast(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.RemoteEquals(System.AddIn.Contract.IContract)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.RemoteToString" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Save" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.SaveAs(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.SetReflectedType(System.Type,System.Object)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.SetSaveAsDialogFilename(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.SetSaveAsDialogLocation(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlFormHostItem.Submit" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.CurrentView" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.DataConnections" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.DataSources" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Dirty" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Environment" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Errors" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Extension" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.FormState" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Host" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Hosted" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.HostName" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.MainDataSource" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.NamespaceManager" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.NetworkState" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.New" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Permission" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.PrimaryCookie" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.QueryDataConnection" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.ReadOnly" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Recovered" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.ReflectedObject" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.ServerInfo" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Signed" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.SignedDataBlocks" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Sponsored" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.TaskPanes" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Template" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.TypeInfrastructureManager" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.Uri" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.User" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.UserRole" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.ViewInfos" />
+      <Member Id="P:Microsoft.Office.InfoPath.XmlFormHostItem.XmlLang" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlFormOpenMode" Id="T:Microsoft.Office.InfoPath.XmlFormOpenMode">
+      <Member Id="F:Microsoft.Office.InfoPath.XmlFormOpenMode.Default" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlFormOpenMode.FailOnVersionMismatch" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlFormOpenMode.FailOnVersionOlder" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlFormOpenMode.IgnoreDataConnectionsFailure" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlFormOpenMode.PromptIfSigned" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlFormOpenMode.ReadOnly" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlFormOpenMode.TransformEvenIfSigned" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlFormOpenMode.UseExistingVersion" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlOperation" Id="T:Microsoft.Office.InfoPath.XmlOperation">
+      <Member Id="F:Microsoft.Office.InfoPath.XmlOperation.Delete" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlOperation.Insert" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlOperation.None" />
+      <Member Id="F:Microsoft.Office.InfoPath.XmlOperation.ValueChange" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlValidatingEventArgs" Id="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs">
+      <Member Id="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String,System.Int32)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" />
+    </Type>
+    <Type Name="Microsoft.Office.InfoPath.XmlValidatingEventHandler" Id="T:Microsoft.Office.InfoPath.XmlValidatingEventHandler" />
+    <Type Name="Microsoft.Office.InfoPath.XPathTypedValue" Id="T:Microsoft.Office.InfoPath.XPathTypedValue">
+      <Member Id="M:Microsoft.Office.InfoPath.XPathTypedValue.#ctor" />
+      <Member Id="M:Microsoft.Office.InfoPath.XPathTypedValue.Evaluate" />
+      <Member Id="M:Microsoft.Office.InfoPath.XPathTypedValue.SetStringValue(System.String)" />
+      <Member Id="M:Microsoft.Office.InfoPath.XPathTypedValue.ToString" />
+      <Member Id="P:Microsoft.Office.InfoPath.XPathTypedValue.XPath" />
+    </Type>
+  </Namespace>
   <Namespace Name="Microsoft.Office.Interop.InfoPath.Helper">
     <Type Name="Microsoft.Office.Interop.InfoPath.Helper.WrapperBase" Id="T:Microsoft.Office.Interop.InfoPath.Helper.WrapperBase">
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Helper.WrapperBase.#ctor" />
@@ -675,6 +1449,11 @@
       <Member Id="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnValidate" />
       <Member Id="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnVersionUpgrade" />
     </Type>
+    <Type Name="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEvidence" Id="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEvidence">
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEvidence.#ctor" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEvidence.CreateIdentityPermission(System.Security.Policy.Evidence)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEvidence.ToString" />
+    </Type>
     <Type Name="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute" Id="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute">
       <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute.#ctor(System.String)" />
       <Member Id="P:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute.UserNamespace" />
@@ -686,6 +1465,20 @@
       <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper.LoadUserAssemblyWithEvidence(System.String)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper.Run(System.String)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper.Stop" />
+    </Type>
+    <Type Name="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission" Id="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission">
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission.#ctor(System.Security.Permissions.PermissionState)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission.Copy" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission.FromXml(System.Security.SecurityElement)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission.Intersect(System.Security.IPermission)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission.IsSubsetOf(System.Security.IPermission)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission.IsUnrestricted" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission.ToXml" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermission.Union(System.Security.IPermission)" />
+    </Type>
+    <Type Name="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermissionAttribute" Id="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermissionAttribute">
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathPermissionAttribute.CreatePermission" />
     </Type>
     <Type Name="Microsoft.Office.Interop.InfoPath.SemiTrust.InputParameter" Id="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InputParameter">
       <Member Id="P:Microsoft.Office.Interop.InfoPath.SemiTrust.InputParameter.Name" />
@@ -2140,6 +2933,8 @@
       <Member Id="E:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.XMLDOMDocumentEvents_Event_onreadystatechange" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.#ctor" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.abort" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.add_ondataavailable(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.add_onreadystatechange(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.appendChild(Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.cloneNode(System.Boolean)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.createAttribute(System.String)" />
@@ -2303,6 +3098,8 @@
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.load(System.Object)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.loadXML(System.String)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.nodeFromID(System.String)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.remove_ondataavailable(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.remove_onreadystatechange(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.removeChild(Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.replaceChild(Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode,Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMNode)" />
       <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50Class.save(System.Object)" />
@@ -3297,6 +4094,10 @@
     <Type Name="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event" Id="T:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event">
       <Member Id="E:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.ondataavailable" />
       <Member Id="E:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.onreadystatechange" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.add_ondataavailable(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.add_onreadystatechange(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.remove_ondataavailable(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler)" />
+      <Member Id="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.remove_onreadystatechange(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
     </Type>
     <Type Name="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler" Id="T:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler" />
     <Type Name="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler" Id="T:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler" />
