@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo" />
   <TypeSignature Language="VB.NET" Value="Public Interface ViewInfo" />
   <TypeSignature Language="C++ CLI" Value="public interface class ViewInfo" />
+  <TypeSignature Language="F#" Value="type ViewInfo = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo.IsDefault" />
       <MemberSignature Language="VB.NET" Value="Public Property IsDefault As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDefault { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.IsDefault : bool with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo.IsDefault" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -42,9 +44,17 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets or sets a value that indicates whether the view is defined as the default view in a Microsoft InfoPath form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>IsDefault</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" /> object can be used to determine whether a view is the default view, and it can be used to programmatically change the default view before the first view is loaded.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>IsDefault</b> property is used to make the second view contained in the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfosCollection" /> collection the default view:</para>
+          <code>thisXDocument.ViewInfos[1].&lt;span class="label"&gt;IsDefault&lt;/span&gt; = true;</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -53,6 +63,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -67,9 +78,19 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the name of the view that is associated with the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The name of the <b>ViewInfoObject</b> object is the same as the name of the view that it represents. The name of the <b>ViewInfoObject</b> object can also be used as the argument to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfos.Item(System.Object)" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfosCollection" /> collection.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Name</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" /> object is used to display the name of a view in a message box:</para>
+          <code>ViewInfo viewInfo;
+viewInfo = thisXDocument.ViewInfos[0];
+thisXDocument.UI.Alert("View name: " + viewInfo.&lt;span class="label"&gt;Name&lt;/span&gt;);</code>
+        </example>
       </Docs>
     </Member>
   </Members>

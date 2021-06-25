@@ -1,0 +1,126 @@
+﻿<Type Name="Environment" FullName="Microsoft.Office.InfoPath.Environment">
+  <TypeSignature Language="C#" Value="public abstract class Environment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Environment extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Environment" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Environment" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Environment abstract" />
+  <TypeSignature Language="F#" Value="type Environment = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides properties to determine what runtime environment was used to open the form template.</summary>
+    <remarks>
+      <para>Use the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Environment" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class to access an <see cref="T:Microsoft.Office.InfoPath.Environment" /> object you can use determine which runtime environment and program was used to open the form template for editing.</para>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.Environment" /> class provides the <see cref="P:Microsoft.Office.InfoPath.Environment.IsBrowser" /> and <see cref="P:Microsoft.Office.InfoPath.Environment.IsMobile" /> properties which enable you to determine what editing environment was used to open a form template. If both properties return <b>false</b>, the form template was opened in Microsoft InfoPath. If either property returns <b>true</b>, the form template was opened from an appropriately configured document library on Microsoft SharePoint Server 2010 running InfoPath Forms Services in the program for the corresponding property: a Web browser (<see cref="P:Microsoft.Office.InfoPath.Environment.IsBrowser" /> property) or a mobile browser (<see cref="P:Microsoft.Office.InfoPath.Environment.IsMobile" /> property).</para>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, a basic pattern is shown for checking the values of <see cref="P:Microsoft.Office.InfoPath.Environment.IsBrowser" />  and <see cref="P:Microsoft.Office.InfoPath.Environment.IsMobile" /> properties to conditionally run code depending on which environment and program was used to open the form.</para>
+      <code>if (this.Environment.IsBrowser)
+{
+   // Code to run if form is open in a Web browser.
+}
+
+else if (this.Environment.IsMobile)
+{
+   // Code to run if form is open in a mobile browser.
+}
+else
+{
+   // Code to run if form is open in the InfoPath editor.
+}
+</code>
+      <code>If (Me.Environment.IsBrowser) Then
+   ' Code to run if form is open in a Web browser.
+ElseIf (Me.Environment.IsMobile) Then
+   ' Code to run if form is open in a mobile browser.
+Else
+   ' Code to run if form is open in the InfoPath application.
+End If
+</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Environment ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.Environment.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Environment();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsBrowser">
+      <MemberSignature Language="C#" Value="public abstract bool IsBrowser { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBrowser" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Environment.IsBrowser" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsBrowser As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsBrowser { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsBrowser : bool" Usage="Microsoft.Office.InfoPath.Environment.IsBrowser" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets whether the form template was opened from InfoPath Forms Services in a Web browser.</summary>
+        <value>
+          <b>true</b> if the form template was opened from InfoPath Forms Services in a Web browser; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>See the code sample in the <see cref="T:Microsoft.Office.InfoPath.Environment" /> class topic.</para>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMobile">
+      <MemberSignature Language="C#" Value="public abstract bool IsMobile { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMobile" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Environment.IsMobile" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property IsMobile As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool IsMobile { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsMobile : bool" Usage="Microsoft.Office.InfoPath.Environment.IsMobile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets whether the form template was opened from InfoPath Forms Services in a browser on a mobile device.</summary>
+        <value>
+          <b>true</b> if the form template was opened from InfoPath Forms Services in a browser on a mobile device; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>See the code sample in the <see cref="T:Microsoft.Office.InfoPath.Environment" /> class topic.</para>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,5 +1,112 @@
 <Overview>
   <Assemblies>
+    <Assembly Name="Microsoft.Office.InfoPath" Version="15.0.0.0">
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("Microsoft Corporation")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCopyright("© 2012 Microsoft Corporation.  All rights reserved.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription("Shared assembly for client and server OM.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("15.0.4027.1000")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyKeyName("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("Microsoft InfoPath")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("Microsoft.Office.InfoPath")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTrademark("Microsoft® is a registered trademark of Microsoft Corporation. Windows® is a registered trademark of Microsoft Corporation.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.AllowPartiallyTrustedCallers</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityRules(System.Security.SecurityRuleSet.Level1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+    </Assembly>
+    <Assembly Name="Microsoft.Office.InfoPath.Permission" Version="15.0.0.0">
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.CLSCompliant(true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("Microsoft Corporation")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCopyright("© 2012 Microsoft Corporation.  All rights reserved.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription("Defines InfoPath's custom CodeAccessPermission.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("15.0.4027.1000")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("Microsoft Office InfoPath")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("Microsoft.Office.InfoPath.Permission")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTrademark("Microsoft® is a registered trademark of Microsoft Corporation. Windows® is a registered trademark of Microsoft Corporation.")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.AllowPartiallyTrustedCallers</AttributeName>
+        </Attribute>
+      </Attributes>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+    </Assembly>
     <Assembly Name="Microsoft.Office.Interop.InfoPath.SemiTrust" Version="11.0.0.0">
       <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
       <Attributes>
@@ -40,6 +147,11 @@
           <AttributeName>System.Security.AllowPartiallyTrustedCallers</AttributeName>
         </Attribute>
       </Attributes>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
     </Assembly>
     <Assembly Name="Microsoft.Office.Interop.InfoPath.Xml" Version="15.0.0.0">
       <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
@@ -57,11 +169,116 @@
           <AttributeName>System.Runtime.InteropServices.TypeLibVersion(5, 0)</AttributeName>
         </Attribute>
       </Attributes>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00 af d4 a0 e7 72 41 51 d5 dd 52 cb 23 a3 0d ed 7c 00 91 cc 01 cf e9 4b 2b cd 85 b3 f4 ee e3 c4 d8 f6 41 7b ff 76 37 63 a9 96 d6 b2 df c1 e7 c2 9b cf b8 29 97 79 df 87 85 cd e2 c1 68 ce ee 48 0e 57 07 25 f2 46 8e 78 2a 9c 24 01 30 2c f6 dc 17 e1 19 11 8e d2 01 19 37 ba e9 69 83 57 ad 21 e8 b6 df b4 04 75 d1 6e 87 eb 03 c7 44 a5 d3 28 99 a0 db c5 96 a6 b2 cf a1 e5 09 be 5f bd 09 fa cf ]</AssemblyPublicKey>
     </Assembly>
   </Assemblies>
   <Remarks>To be added.</Remarks>
   <Copyright>To be added.</Copyright>
   <Types>
+    <Namespace Name="Microsoft.Office.InfoPath">
+      <Type Name="ActionType" Kind="Enumeration" />
+      <Type Name="AdoQueryConnection" Kind="Class" />
+      <Type Name="AdoSubmitConnection" Kind="Class" />
+      <Type Name="Application" Kind="Class" />
+      <Type Name="BdcQueryConnection" Kind="Class" />
+      <Type Name="BdcSubmitConnection" Kind="Class" />
+      <Type Name="ButtonEvent" Kind="Class" />
+      <Type Name="Certificate" Kind="Class" />
+      <Type Name="CertificateStatus" Kind="Enumeration" />
+      <Type Name="ClickedEventArgs" Kind="Class" />
+      <Type Name="ClickedEventHandler" Kind="Delegate" />
+      <Type Name="ContextChangedEventArgs" Kind="Class" />
+      <Type Name="ContextChangedEventHandler" Kind="Delegate" />
+      <Type Name="ControlEvents" Kind="Class" />
+      <Type Name="DataConnection" Kind="Class" />
+      <Type Name="DataConnectionCollection" Kind="Class" />
+      <Type Name="DataSource" Kind="Class" />
+      <Type Name="DataSourceCollection" Kind="Class" />
+      <Type Name="EmailAttachmentType" Kind="Enumeration" />
+      <Type Name="EmailSubmitConnection" Kind="Class" />
+      <Type Name="Environment" Kind="Class" />
+      <Type Name="ErrorMode" Kind="Enumeration" />
+      <Type Name="EventManager" Kind="Class" />
+      <Type Name="ExportFormat" Kind="Enumeration" />
+      <Type Name="FileQueryConnection" Kind="Class" />
+      <Type Name="FileSubmitConnection" Kind="Class" />
+      <Type Name="FormError" Kind="Class" />
+      <Type Name="FormErrorCollection" Kind="Class" />
+      <Type Name="FormErrorType" Kind="Enumeration" />
+      <Type Name="FormEvents" Kind="Class" />
+      <Type Name="FormTemplate" Kind="Class" />
+      <Type Name="HtmlTaskPane" Kind="Class" />
+      <Type Name="IInfoPathHostItemProvider" Kind="Interface" />
+      <Type Name="IInfoPathRuntime" Kind="Interface" />
+      <Type Name="LoadingEventArgs" Kind="Class" />
+      <Type Name="LoadingEventHandler" Kind="Delegate" />
+      <Type Name="MachineState" Kind="Enumeration" />
+      <Type Name="MailEnvelope" Kind="Class" />
+      <Type Name="ManagedObjectWrapper" Kind="Class" />
+      <Type Name="MergeEventArgs" Kind="Class" />
+      <Type Name="MergeEventHandler" Kind="Delegate" />
+      <Type Name="NetworkState" Kind="Class" />
+      <Type Name="Permission" Kind="Class" />
+      <Type Name="PermissionType" Kind="Enumeration" />
+      <Type Name="SaveCancelEventArgs" Kind="Class" />
+      <Type Name="SaveEventArgs" Kind="Class" />
+      <Type Name="SaveEventHandler" Kind="Delegate" />
+      <Type Name="ServerInfo" Kind="Class" />
+      <Type Name="SharepointListQueryConnection" Kind="Class" />
+      <Type Name="SharePointListRWQueryConnection" Kind="Class" />
+      <Type Name="SharePointListRWSubmitConnection" Kind="Class" />
+      <Type Name="Signature" Kind="Class" />
+      <Type Name="SignatureAppearanceType" Kind="Enumeration" />
+      <Type Name="SignatureCollection" Kind="Class" />
+      <Type Name="SignatureLine" Kind="Class" />
+      <Type Name="SignatureLineCollection" Kind="Class" />
+      <Type Name="SignatureRelation" Kind="Enumeration" />
+      <Type Name="SignatureStatus" Kind="Enumeration" />
+      <Type Name="SignedDataBlock" Kind="Class" />
+      <Type Name="SignedDataBlockCollection" Kind="Class" />
+      <Type Name="SignEventArgs" Kind="Class" />
+      <Type Name="SignEventHandler" Kind="Delegate" />
+      <Type Name="SubmitEventArgs" Kind="Class" />
+      <Type Name="SubmitEventHandler" Kind="Delegate" />
+      <Type Name="SubmitToHostConnection" Kind="Class" />
+      <Type Name="TaskPane" Kind="Class" />
+      <Type Name="TaskPaneCollection" Kind="Class" />
+      <Type Name="TaskPaneType" Kind="Enumeration" />
+      <Type Name="User" Kind="Class" />
+      <Type Name="UserPermission" Kind="Class" />
+      <Type Name="UserPermissionCollection" Kind="Class" />
+      <Type Name="VersionUpgradeEventArgs" Kind="Class" />
+      <Type Name="VersionUpgradeEventHandler" Kind="Delegate" />
+      <Type Name="View" Kind="Class" />
+      <Type Name="ViewInfo" Kind="Class" />
+      <Type Name="ViewInfoCollection" Kind="Class" />
+      <Type Name="ViewSwitchedEventArgs" Kind="Class" />
+      <Type Name="ViewSwitchedEventHandler" Kind="Delegate" />
+      <Type Name="WebServiceConnection" Kind="Class" />
+      <Type Name="Window" Kind="Class" />
+      <Type Name="WindowCollection" Kind="Class" />
+      <Type Name="WindowState" Kind="Enumeration" />
+      <Type Name="WindowType" Kind="Enumeration" />
+      <Type Name="XmlChangedEventHandler" Kind="Delegate" />
+      <Type Name="XmlChangingEventArgs" Kind="Class" />
+      <Type Name="XmlChangingEventHandler" Kind="Delegate" />
+      <Type Name="XmlEvent" Kind="Class" />
+      <Type Name="XmlEventArgs" Kind="Class" />
+      <Type Name="XmlEvents" Kind="Class" />
+      <Type Name="XmlForm" Kind="Class" />
+      <Type Name="XmlFormCancelEventArgs" Kind="Class" />
+      <Type Name="XmlFormCollection" Kind="Class" />
+      <Type Name="XmlFormHostItem" Kind="Class" />
+      <Type Name="XmlFormOpenMode" Kind="Enumeration" />
+      <Type Name="XmlOperation" Kind="Enumeration" />
+      <Type Name="XmlValidatingEventArgs" Kind="Class" />
+      <Type Name="XmlValidatingEventHandler" Kind="Delegate" />
+      <Type Name="XPathTypedValue" Kind="Class" />
+    </Namespace>
     <Namespace Name="Microsoft.Office.Interop.InfoPath.Helper">
       <Type Name="WrapperBase" Kind="Class" />
     </Namespace>
@@ -156,8 +373,11 @@
       <Type Name="IDataAdapterMOM" Kind="Interface" />
       <Type Name="InfoPathEventHandlerAttribute" Kind="Class" />
       <Type Name="InfoPathEventType" Kind="Enumeration" />
+      <Type Name="InfoPathEvidence" Kind="Class" />
       <Type Name="InfoPathNamespaceAttribute" Kind="Class" />
       <Type Name="InfoPathOMHelper" Kind="Class" />
+      <Type Name="InfoPathPermission" Kind="Class" />
+      <Type Name="InfoPathPermissionAttribute" Kind="Class" />
       <Type Name="InputParameter" Kind="Interface" />
       <Type Name="InputParameterCollection" Kind="Interface" />
       <Type Name="InputParameterObject" Kind="Interface" />

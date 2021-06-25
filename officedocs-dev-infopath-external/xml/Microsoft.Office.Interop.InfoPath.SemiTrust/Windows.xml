@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Windows" />
   <TypeSignature Language="VB.NET" Value="Public Interface Windows" />
   <TypeSignature Language="C++ CLI" Value="public interface class Windows" />
+  <TypeSignature Language="F#" Value="type Windows = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Windows.Count" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Windows.Count" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -42,9 +44,20 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a count of the number of <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> objects contained in the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> collection.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Count</b> property is used within a for loop to iterate through the collection of <b>Window</b> objects and display a message box indicating the window type value:</para>
+          <code>for (int i=0; i &amp;lt; thisApplication.Windows.&lt;span class="label"&gt;Count&lt;/span&gt;; i++)
+{
+ thisXDocument.UI.Alert("Window type: " + thisApplication.Windows[i].WindowType);
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -53,6 +66,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.Windows.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="windows.GetEnumerator " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -63,9 +77,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Gets an <b>IEnumerator</b> that iterates over all entries in the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> object.</summary>
+        <returns>An <b>IEnumerator</b> that iterates over all entries in the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> object.</returns>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -74,6 +92,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Windows.Item(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(varIndex As Object) As WindowObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::WindowObject ^ default[System::Object ^] { Microsoft::Office::Interop::InfoPath::SemiTrust::WindowObject ^ get(System::Object ^ varIndex); };" />
+      <MemberSignature Language="F#" Value="member this.Item(obj) : Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Windows.Item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -91,10 +110,21 @@
         <Parameter Name="varIndex" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="varIndex">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="varIndex">An expression that specifies the position of a member of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> collection. The argument must be a number from 0 to the value of the collection's <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Windows.Count" /> property minus 1.</param>
+        <summary>Gets a reference to the specified <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> object from <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> collection.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>If the value provided for the <paramref name="varIndex" /> argument does not match any existing member of the collection, an error occurs.</para>
+          <para>After you have set a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> object that the <b>Item</b> property returns, you can access any of its properties and methods.</para>
+          <para>
+            <b>Important</b>: This member can be accessed without restrictions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>Because the <b>Item</b> property is the default property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> collection, it can be used as follows:</para>
+          <code>Window2 firstWindow;
+firstWindow = thisApplication.Windows[0];</code>
+        </example>
       </Docs>
     </Member>
   </Members>

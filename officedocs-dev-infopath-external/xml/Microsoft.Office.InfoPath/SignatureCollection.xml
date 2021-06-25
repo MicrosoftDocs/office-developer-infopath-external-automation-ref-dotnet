@@ -1,0 +1,212 @@
+﻿<Type Name="SignatureCollection" FullName="Microsoft.Office.InfoPath.SignatureCollection">
+  <TypeSignature Language="C#" Value="public abstract class SignatureCollection : System.Collections.IEnumerable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SignatureCollection extends System.Object implements class System.Collections.IEnumerable" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignatureCollection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SignatureCollection&#xA;Implements IEnumerable" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SignatureCollection abstract : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type SignatureCollection = class&#xA;    interface IEnumerable" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Contains a <see cref="T:Microsoft.Office.InfoPath.Signature" /> object for each digital signature applied to a form or to a set of signable data represented by a <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</summary>
+    <remarks>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para>The <b>SignatureCollection</b> object for a form or a set of signable data is accessed through the <see cref="P:Microsoft.Office.InfoPath.SignedDataBlock.Signatures" /> property of the <b>SignedDataBlock</b> object that represents that set of signable data.</para>
+      <para>If the form template is configured to enable digital signatures for the entire form, there is only one <b>SignedDataBlock</b> object for all the data in the form, and the <b>SignatureCollection</b> object contains all digital signatures applied to the entire form.</para>
+      <para>If the form template is configured to enable digital signatures for specific data in the form, there is a <b>SignedDataBlock</b> object for each set of signable data configured in the form template. In this case, each <b>SignedDataBlock</b> object contains the digital signatures applied to the set of signable data that is associated with the <b>SignedDataBlock</b> object.</para>
+      <para>The <b>SignatureCollection</b> class provides the <see cref="M:Microsoft.Office.InfoPath.SignatureCollection.CreateSignature" /> method, which creates a <see cref="T:Microsoft.Office.InfoPath.Signature" /> object (getting a snapshot of the view plus additional signature information) without adding it to the form. To add this signature to the form, call the <see cref="M:Microsoft.Office.InfoPath.Signature.Sign" /> method of the <b>Signature</b> class. You can only call the <b>CreateSignature</b> method from the event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event, which only a fully trusted form template can execute.</para>
+      <para>The <b>SignatureCollection</b> class also provides the <see cref="P:Microsoft.Office.InfoPath.SignatureCollection.Item(System.Int32)" /> and <see cref="P:Microsoft.Office.InfoPath.SignatureCollection.Count" /> properties to access and count the <b>Signature</b> objects in the collection.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>The following example returns the <b>SignatureCollection</b> object that represents the signatures on the first set of signable data, or, if signing is enabled for the entire form, will return the <b>SignatureCollection</b> object for signatures on the entire form.</para>
+      <code>SignatureCollection block1Signatures = 
+   this.SignedDataBlocks[0].Signatures;</code>
+      <code>Dim block1Signatures As SignatureCollection = 
+   Me.SignedDataBlocks(0).Signatures</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SignatureCollection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignatureCollection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SignatureCollection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public abstract int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureCollection.Count" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Count As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int Count { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Microsoft.Office.InfoPath.SignatureCollection.Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the number of <see cref="T:Microsoft.Office.InfoPath.Signature" /> objects in the collection.</summary>
+        <value>The number of <see cref="T:Microsoft.Office.InfoPath.Signature" /> objects in the collection.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSignature">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Signature CreateSignature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.Signature CreateSignature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignatureCollection.CreateSignature" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateSignature () As Signature" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::Signature ^ CreateSignature();" />
+      <MemberSignature Language="F#" Value="abstract member CreateSignature : unit -&gt; Microsoft.Office.InfoPath.Signature" Usage="signatureCollection.CreateSignature " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Signature</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Creates a new <see cref="T:Microsoft.Office.InfoPath.Signature" /> object without adding it to the form.</summary>
+        <returns>A new <see cref="T:Microsoft.Office.InfoPath.Signature" /> object that contains a snapshot of the view plus additional signature information.</returns>
+        <remarks>
+          <para>The <b>CreateSignature</b> method creates a new signature (gets a snapshot of the view plus additional signature information) without adding the signature to the form. To add this signature to the form, you must call the <see cref="M:Microsoft.Office.InfoPath.Signature.Sign" /> method of the <b>Signature</b> class.</para>
+          <para>The method can be called only from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+        <example>
+          <para>The following example shows the code skeleton that is added to the form template when you add an event handler for the <b>Sign</b> event. It uses the <b>CreateSignature</b> method to create a new <b>Signature</b> object. When the <b>Sign</b> method of the <b>Signature</b> class is called, the new <b>Signature</b> object is added to the <b>SignatureCollection</b> object of the form.</para>
+          <code>public void FormEvents_Sign(object sender, SignEventArgs e)
+{
+   // This event handler will run only in fully trusted form templates.
+
+   Signature thisSignature = 
+      e.SignedDataBlock.Signatures.CreateSignature();
+
+   // To add other pieces of information to sign, modify the
+   // signature template returned by
+   // thisSignature.SignatureBlockXmlNode.
+   // Write your code here.
+
+   thisSignature.Sign();
+   e.SignatureWizard = false;
+}</code>
+          <code>Public Sub FormEvents_Sign(ByVal sender As Object, _
+   ByVal e As SignEventArgs)
+
+   ' This event handler will run only in fully trusted form templates.
+
+   Dim thisSignature As Signature = _
+      e.SignedDataBlock.Signatures.CreateSignature()
+
+   ' To add other pieces of information to sign, modify the
+   ' signature template returned by
+   ' thisSignature.SignatureBlockXmlNode.
+   ' Write your code here.
+
+   thisSignature.Sign()
+   e.SignatureWizard = False
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.IEnumerator GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.IEnumerator GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignatureCollection.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetEnumerator () As IEnumerator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="signatureCollection.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets a <b>System.Collections.IEnumerator</b> object that iterates over all entries in the <see cref="T:Microsoft.Office.InfoPath.SignatureCollection" /> object.</summary>
+        <returns>An <b>IEnumerator</b> object that iterates over all entries in the <see cref="T:Microsoft.Office.InfoPath.SignatureCollection" /> object. </returns>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Signature this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Signature Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignatureCollection.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public MustOverride ReadOnly Property Item(index As Integer) As Signature" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Signature ^ default[int] { Microsoft::Office::InfoPath::Signature ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Microsoft.Office.InfoPath.Signature" Usage="Microsoft.Office.InfoPath.SignatureCollection.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Signature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">The zero-based index for the <b>Signature</b> object to return. The value specified must be a number from 0 to the value of the collection's <see cref="P:Microsoft.Office.InfoPath.SignatureCollection.Count" /> property minus 1.</param>
+        <summary>Gets a reference to the specified <see cref="T:Microsoft.Office.InfoPath.Signature" /> object from the <see cref="T:Microsoft.Office.InfoPath.SignatureCollection" /> object.</summary>
+        <value>The <see cref="T:Microsoft.Office.InfoPath.Signature" /> object that corresponds to the specified <paramref name="index" /> value.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.IndexOutOfRangeException">The index value is out of range.</exception>
+        <example>
+          <para>The following example returns the first <b>Signature</b> object in the <b>SignatureCollection</b> object for the first set of signable data in the form, or, if only the entire form can be signed, will return the first <b>Signature</b> object for the entire form.</para>
+          <code>Signature firstSignature = 
+   this.SignedDataBlocks[0].Signatures[0];</code>
+          <code>Dim firstSignature As Signature  = 
+   Me.SignedDataBlocks(0).Signatures(0)</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

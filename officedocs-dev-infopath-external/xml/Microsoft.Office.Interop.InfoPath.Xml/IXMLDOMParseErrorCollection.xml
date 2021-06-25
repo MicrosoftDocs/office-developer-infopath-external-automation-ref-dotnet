@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseErrorCollection" />
   <TypeSignature Language="VB.NET" Value="Public Interface IXMLDOMParseErrorCollection&#xA;Implements IEnumerable" />
   <TypeSignature Language="C++ CLI" Value="public interface class IXMLDOMParseErrorCollection : System::Collections::IEnumerable" />
+  <TypeSignature Language="F#" Value="type IXMLDOMParseErrorCollection = interface&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseErrorCollection.GetEnumerator" />
       <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Collections::IEnumerator ^ GetEnumerator();" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="iXMLDOMParseErrorCollection.GetEnumerator " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
@@ -64,6 +66,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseErrorCollection.item(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property item(index As Integer) As IXMLDOMParseError2" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMParseError2 ^ default[int] { Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMParseError2 ^ get(int index); };" />
+      <MemberSignature Language="F#" Value="member this.item(int) : Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseError2" Usage="Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseErrorCollection.item" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -96,6 +99,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseErrorCollection.length" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property length As Integer" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property int length { int get(); };" />
+      <MemberSignature Language="F#" Value="member this.length : int" Usage="Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseErrorCollection.length" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -124,6 +128,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseErrorCollection.next" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property next As IXMLDOMParseError2" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMParseError2 ^ next { Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMParseError2 ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.next : Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseError2" Usage="Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseErrorCollection.next" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -152,6 +157,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMParseErrorCollection.reset" />
       <MemberSignature Language="VB.NET" Value="Public Sub reset ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void reset();" />
+      <MemberSignature Language="F#" Value="abstract member reset : unit -&gt; unit" Usage="iXMLDOMParseErrorCollection.reset " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>

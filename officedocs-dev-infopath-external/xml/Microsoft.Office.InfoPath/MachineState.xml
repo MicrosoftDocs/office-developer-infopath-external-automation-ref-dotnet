@@ -1,0 +1,84 @@
+﻿<Type Name="MachineState" FullName="Microsoft.Office.InfoPath.MachineState">
+  <TypeSignature Language="C#" Value="public enum MachineState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MachineState extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.MachineState" />
+  <TypeSignature Language="VB.NET" Value="Public Enum MachineState" />
+  <TypeSignature Language="C++ CLI" Value="public enum class MachineState" />
+  <TypeSignature Language="F#" Value="type MachineState = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Specifies the state of the connection for the client computer. </summary>
+    <remarks>
+      <para>These enumerated values are returned by the <see cref="P:Microsoft.Office.InfoPath.Application.MachineOnlineState" /> property.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IEInOfflineState">
+      <MemberSignature Language="C#" Value="IEInOfflineState" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.MachineState IEInOfflineState = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.MachineState.IEInOfflineState" />
+      <MemberSignature Language="VB.NET" Value="IEInOfflineState" />
+      <MemberSignature Language="C++ CLI" Value="IEInOfflineState" />
+      <MemberSignature Language="F#" Value="IEInOfflineState = 2" Usage="Microsoft.Office.InfoPath.MachineState.IEInOfflineState" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.MachineState</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Microsoft Internet Explorer is in offline mode.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Offline">
+      <MemberSignature Language="C#" Value="Offline" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.MachineState Offline = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.MachineState.Offline" />
+      <MemberSignature Language="VB.NET" Value="Offline" />
+      <MemberSignature Language="C++ CLI" Value="Offline" />
+      <MemberSignature Language="F#" Value="Offline = 0" Usage="Microsoft.Office.InfoPath.MachineState.Offline" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.MachineState</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>The client computer is not connected to the network.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Online">
+      <MemberSignature Language="C#" Value="Online" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.MachineState Online = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.MachineState.Online" />
+      <MemberSignature Language="VB.NET" Value="Online" />
+      <MemberSignature Language="C++ CLI" Value="Online" />
+      <MemberSignature Language="F#" Value="Online = 1" Usage="Microsoft.Office.InfoPath.MachineState.Online" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.MachineState</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>The client computer is connected to the network.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

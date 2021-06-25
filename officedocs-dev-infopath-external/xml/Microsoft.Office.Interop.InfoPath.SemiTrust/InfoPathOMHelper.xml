@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper" />
   <TypeSignature Language="VB.NET" Value="Public Class InfoPathOMHelper" />
   <TypeSignature Language="C++ CLI" Value="public ref class InfoPathOMHelper" />
+  <TypeSignature Language="F#" Value="type InfoPathOMHelper = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -13,7 +14,7 @@
   </Base>
   <Interfaces />
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -30,7 +31,7 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -40,6 +41,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper.Init(System.Object,System.Object,System.String,System.String,System.Boolean,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function Init (app As Object, doc As Object, urn As String, applicationPath As String, isFT As Boolean, showExceptions As Boolean) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ Init(System::Object ^ app, System::Object ^ doc, System::String ^ urn, System::String ^ applicationPath, bool isFT, bool showExceptions);" />
+      <MemberSignature Language="F#" Value="member this.Init : obj * obj * string * string * bool * bool -&gt; string" Usage="infoPathOMHelper.Init (app, doc, urn, applicationPath, isFT, showExceptions)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -63,7 +65,7 @@
         <param name="applicationPath">To be added.</param>
         <param name="isFT">To be added.</param>
         <param name="showExceptions">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -74,6 +76,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper.Init2(System.Object,System.Object,System.String,System.String[],System.Boolean,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Function Init2 (app As Object, doc As Object, urn As String, publicKeyTokens As String(), isFT As Boolean, showExceptions As Boolean) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ Init2(System::Object ^ app, System::Object ^ doc, System::String ^ urn, cli::array &lt;System::String ^&gt; ^ publicKeyTokens, bool isFT, bool showExceptions);" />
+      <MemberSignature Language="F#" Value="member this.Init2 : obj * obj * string * string[] * bool * bool -&gt; string" Usage="infoPathOMHelper.Init2 (app, doc, urn, publicKeyTokens, isFT, showExceptions)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -97,7 +100,7 @@
         <param name="publicKeyTokens">To be added.</param>
         <param name="isFT">To be added.</param>
         <param name="showExceptions">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -108,6 +111,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper.LoadUserAssemblyWithEvidence(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub LoadUserAssemblyWithEvidence (assemblyFullPathName As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void LoadUserAssemblyWithEvidence(System::String ^ assemblyFullPathName);" />
+      <MemberSignature Language="F#" Value="member this.LoadUserAssemblyWithEvidence : string -&gt; unit" Usage="infoPathOMHelper.LoadUserAssemblyWithEvidence assemblyFullPathName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -121,7 +125,7 @@
       </Parameters>
       <Docs>
         <param name="assemblyFullPathName">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -131,6 +135,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper.Run(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function Run (assemblyFullPathName As String) As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ Run(System::String ^ assemblyFullPathName);" />
+      <MemberSignature Language="F#" Value="member this.Run : string -&gt; obj" Usage="infoPathOMHelper.Run assemblyFullPathName" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -144,7 +149,7 @@
       </Parameters>
       <Docs>
         <param name="assemblyFullPathName">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -155,6 +160,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper.Stop" />
       <MemberSignature Language="VB.NET" Value="Public Function Stop () As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; bool Stop();" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; bool" Usage="infoPathOMHelper.Stop " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -165,7 +171,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

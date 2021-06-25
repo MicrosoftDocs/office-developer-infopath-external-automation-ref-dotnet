@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event" />
   <TypeSignature Language="VB.NET" Value="Public Interface _XDocumentEventSink2_Event" />
   <TypeSignature Language="C++ CLI" Value="public interface class _XDocumentEventSink2_Event" />
+  <TypeSignature Language="F#" Value="type _XDocumentEventSink2_Event = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>Implements form-level events.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnAfterImport" />
       <MemberSignature Language="VB.NET" Value="Event OnAfterImport As _XDocumentEventSink2_OnAfterImportEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnAfterImportEventHandler ^ OnAfterImport;" />
+      <MemberSignature Language="F#" Value="member this.OnAfterImport : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnAfterImportEventHandler " Usage="member this.OnAfterImport : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnAfterImportEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -37,8 +39,32 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnAfterImportEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after the import (or merge) operation has successfully completed.</summary>
+        <remarks>
+          <para>This event handler does not allow users to cancel an operation.</para>
+          <para>If the merge operation includes merging multiple forms, the <b>OnAfterImport</b> event occurs only after all forms have been merged and the complete operation is successful.</para>
+          <para>
+            <b>Note</b>: There is no user interface (UI) in the InfoPath form design window for creating this event handler. To add this event handler to the project, include the <b>InfoPathEventHandler</b> attribute as it appears in the example.</para>
+          <para>
+            <b>Note</b>: If you create an event handler for the <b>OnAfterImport</b> event of a form template, you must edit the form definition file (.xsf) to set the <b>useScriptHandler</b> attribute of the <b>importParameters</b> element to "yes" before it will run.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>OnAfterImport</b> event handler is used to display a message box that informs the user that the merge operation completed successfully:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnAfterImport&lt;/span&gt;)]
+public void OnAfterImport(DocEvent e)
+{
+  thisXDocument.UI.Alert("Merge operation was successful.");
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>OnAfterImport</b> event handler is used to display a message box that informs the user that the merge operation completed successfully:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnAfterImport&lt;/span&gt;)]
+public void OnAfterImport(DocEvent e)
+{
+  thisXDocument.UI.Alert("Merge operation was successful.");
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="OnContextChange">
@@ -47,6 +73,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnContextChange" />
       <MemberSignature Language="VB.NET" Value="Event OnContextChange As _XDocumentEventSink2_OnContextChangeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnContextChangeEventHandler ^ OnContextChange;" />
+      <MemberSignature Language="F#" Value="member this.OnContextChange : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnContextChangeEventHandler " Usage="member this.OnContextChange : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnContextChangeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -56,8 +83,37 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnContextChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after the context node changes.</summary>
+        <remarks>
+          <para>The context node is the XML DOM node mapped to the view that corresponds to the container (or item) with the current XML selection. For example, if the current selection in the view is in a text box, the context node is the node to which the text box is bound. If the current selection is a repeating section, the context node is the node for that item. If two repeating sections are selected, the context node is the ancestor XML DOM for both items mapped to the view.</para>
+          <para>The <b>OnContextChange</b> event is asynchronous. It does not fire on every change in the context node; instead, it fires after the application has stopped processing other events.</para>
+          <para>When the document loads, or when a view change occurs, the <b>OnContextChange</b> event will occur after the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnLoad" />and <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSwitchView" /> events occur.</para>
+          <para>When the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DocContextChangeEvent.IsUndoRedo" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocContextChangeEventObject" /> object is <b>true</b>, the context change was caused by a user's undo or redo operation rather than an explicit user context change. Operations performed within the <b>OnContextChange</b> event that modify the XML DOM should be avoided in response to undo or redo operations, because they may interfere with the user's intention to revert data to a previous state.</para>
+          <para>For rich text box controls, the <b>OnContextChange</b> event is not raised for context changes within the XHTML content— that is, selection changes to the rich text in the control. The <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.GetContextNodes(System.Object,System.Object)" /> method can be used to determine the selection within rich text box controls.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>public void OnContextChange(DocContextChangeEvent e)
+{
+if (e.Type == "ContextNode")
+{
+IXMLNode expNode=XDocument.DOM.selectSingleNode("//my:field4");
+// set field4 with the name of the current context.
+expNode.text=e.Context.nodeName;
+}
+}</code>
+        </example>
+        <example>
+          <code>public void OnContextChange(DocContextChangeEvent e)
+{
+if (e.Type == "ContextNode")
+{
+IXMLNode expNode=XDocument.DOM.selectSingleNode("//my:field4");
+// set field4 with the name of the current context.
+expNode.text=e.Context.nodeName;
+}
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="OnLoad">
@@ -66,6 +122,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnLoad" />
       <MemberSignature Language="VB.NET" Value="Event OnLoad As _XDocumentEventSink2_OnLoadEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnLoadEventHandler ^ OnLoad;" />
+      <MemberSignature Language="F#" Value="member this.OnLoad : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnLoadEventHandler " Usage="member this.OnLoad : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnLoadEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -75,8 +132,108 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnLoadEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after a Microsoft InfoPath form has been loaded, but before any views have been initialized.</summary>
+        <remarks>
+          <para>This event handler allows users to cancel an operation.</para>
+          <para>If the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent.ReturnStatus" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEventObject" /> object is set to <b>false</b>, InfoPath cancels the loading of the form. If an error occurs in the code for the <b>OnLoad</b> event, InfoPath ignores it and relies on the <b>ReturnStatus</b> property. If the <b>ReturnStatus</b> property is not explicitly set, the default value of <b>true</b> is used.</para>
+          <para>
+            <b>Note</b>: When the <b>OnLoad</b> event occurs, the view is not initialized and the XSL Transformation (XSLT) used for the view is not yet loaded. The <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is not added to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocumentsCollection" /> collection until after the <b>OnLoad</b> event has occurred. However, the <b>XDocument</b> object is available during the <b>OnLoad</b> event.</para>
+          <para>
+            <b>Important</b>: This event requires a Full Trust Security Level. To set this Security Level, choose Form Options from the Tools menu in the InfoPath design window, then on the Security tab select Full Trust. A Full Trust form must be installed or digitally signed.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>OnLoad</b> event handler is used to determine whether the form has been digitally signed, and if it hasn't, to initialize some date values using a combination of functions and custom functions:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnLoad&lt;/span&gt;)]
+public void OnLoad(DocReturnEvent e)
+{ 
+ // Avoid DOM updates when the document has been digitally signed.
+ if (thisXDocument.IsSigned)
+ {
+  return;
+ }
+
+ string today = thisXDocument.Util.Date.Today().ToString();
+ initializeNodeValue("/sls:salesReport/sls:date", today);
+}</code>
+          <para>This <b>Onload</b> event handler example depends on two custom functions: <paramref name="initializeNodeValue" /> and <paramref name="setNodeValue" />.</para>
+          <code>private void initializeNodeValue(string xpath, string strValue)
+{
+ IXMLDOMNode xmlNode = thisXDocument.DOM.selectSingleNode(xpath);
+ // Set the node value *ONLY* if the node is empty.
+ if (xmlNode.text == "")
+ {
+  setNodeValue(xmlNode, strValue);
+ }
+}
+
+private void setNodeValue(IXMLDOMNode xmlNode, string strValue)
+{   
+ if (xmlNode == null)
+ {
+  return;
+ }
+
+ // The xsi:nil needs to be removed before we set the value.
+ if (strValue != "" &amp;amp;&amp;amp; xmlNode.attributes.getNamedItem("xsi:nil") != null)
+ {
+  xmlNode.attributes.removeNamedItem("xsi:nil");
+ }
+
+ // Setting the value would mark the document as dirty.
+ // Let's do that if the value has really changed.
+ if (xmlNode.text != strValue)
+ {
+  xmlNode.text = strValue;
+ }
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>OnLoad</b> event handler is used to determine whether the form has been digitally signed, and if it hasn't, to initialize some date values using a combination of functions and custom functions:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnLoad&lt;/span&gt;)]
+public void OnLoad(DocReturnEvent e)
+{ 
+ // Avoid DOM updates when the document has been digitally signed.
+ if (thisXDocument.IsSigned)
+ {
+  return;
+ }
+
+ string today = thisXDocument.Util.Date.Today().ToString();
+ initializeNodeValue("/sls:salesReport/sls:date", today);
+}</code>
+          <para>This <b>Onload</b> event handler example depends on two custom functions: <paramref name="initializeNodeValue" /> and <paramref name="setNodeValue" />.</para>
+          <code>private void initializeNodeValue(string xpath, string strValue)
+{
+ IXMLDOMNode xmlNode = thisXDocument.DOM.selectSingleNode(xpath);
+ // Set the node value *ONLY* if the node is empty.
+ if (xmlNode.text == "")
+ {
+  setNodeValue(xmlNode, strValue);
+ }
+}
+
+private void setNodeValue(IXMLDOMNode xmlNode, string strValue)
+{   
+ if (xmlNode == null)
+ {
+  return;
+ }
+
+ // The xsi:nil needs to be removed before we set the value.
+ if (strValue != "" &amp;amp;&amp;amp; xmlNode.attributes.getNamedItem("xsi:nil") != null)
+ {
+  xmlNode.attributes.removeNamedItem("xsi:nil");
+ }
+
+ // Setting the value would mark the document as dirty.
+ // Let's do that if the value has really changed.
+ if (xmlNode.text != strValue)
+ {
+  xmlNode.text = strValue;
+ }
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="OnMergeRequest">
@@ -85,6 +242,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnMergeRequest" />
       <MemberSignature Language="VB.NET" Value="Event OnMergeRequest As _XDocumentEventSink2_OnMergeRequestEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnMergeRequestEventHandler ^ OnMergeRequest;" />
+      <MemberSignature Language="F#" Value="member this.OnMergeRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnMergeRequestEventHandler " Usage="member this.OnMergeRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnMergeRequestEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -94,8 +252,60 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnMergeRequestEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the merge operation is invoked either from the Microsoft InfoPath user interface or from the command line by using the <b>/aggregate</b> option.</summary>
+        <remarks>
+          <para>If the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.MergeEvent.ReturnStatus" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.MergeEventObject" /> object is set to <b>false</b>, InfoPath cancels the merge operation. If an error occurs in the code for the <b>OnMergeRequest</b> event, InfoPath ignores the error and relies on the <b>ReturnStatus</b> property If the <b>ReturnStatus</b> property is not explicitly set, the default value of <b>false</b> is used.</para>
+          <para>For InfoPath forms stored in a Windows SharePoint Services form library, the <b>OnMergeRequest</b> event also occurs when the <b>MergeDocuments2</b> method of the <b>OpenXMLDocuments</b> control is executed. For more information on the <b>OpenXMLDocuments</b> control, see the <a href="SPPTSPSDKWelcome">Microsoft SharePoint Products and Technologies 2003 Software Development Kit</a></para>
+          <para>
+            <b>Note</b>: There is no user interface (UI) in the InfoPath form design window for creating this event handler. To add this event handler to the project, include the <b>InfoPathEventHandler</b> attribute as it appears in the example.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>OnMergeRequest</b> event handler performs a merge operation, and it sets variables to indicate the status of the merge operation:</para>
+          <code>private bool _merging = false;
+
+[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnMergeRequest&lt;/span&gt;)]
+public void OnMergeRequest(MergeEvent e)
+{ 
+ // Set global property to indicate that forms are being merged.
+ if (e.Index == 0)
+ {
+  _merging = true;
+ }
+
+ thisXDocument.ImportDOM(e.DOM);
+ e.ReturnStatus = true;
+  
+ if ((e.Index + 1) == e.Count)
+ {
+  _merging = false;
+  thisXDocument.UI.Alert("Your request to merge " + e.Count + " files is now complete.");
+ }
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>OnMergeRequest</b> event handler performs a merge operation, and it sets variables to indicate the status of the merge operation:</para>
+          <code>private bool _merging = false;
+
+[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnMergeRequest&lt;/span&gt;)]
+public void OnMergeRequest(MergeEvent e)
+{ 
+ // Set global property to indicate that forms are being merged.
+ if (e.Index == 0)
+ {
+  _merging = true;
+ }
+
+ thisXDocument.ImportDOM(e.DOM);
+ e.ReturnStatus = true;
+  
+ if ((e.Index + 1) == e.Count)
+ {
+  _merging = false;
+  thisXDocument.UI.Alert("Your request to merge " + e.Count + " files is now complete.");
+ }
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="OnSaveRequest">
@@ -104,6 +314,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSaveRequest" />
       <MemberSignature Language="VB.NET" Value="Event OnSaveRequest As _XDocumentEventSink2_OnSaveRequestEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSaveRequestEventHandler ^ OnSaveRequest;" />
+      <MemberSignature Language="F#" Value="member this.OnSaveRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSaveRequestEventHandler " Usage="member this.OnSaveRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSaveRequestEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -113,8 +324,38 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSaveRequestEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the save operation is invoked from the Microsoft InfoPath user interface or by using the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Save" /> or <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SaveAs(System.String)" /> methods.</summary>
+        <remarks>
+          <para>If the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SaveEvent.ReturnStatus" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SaveEventObject" /> object is set to <b>false</b>, InfoPath cancels the save operation. If an error occurs in the code for the <b>OnSaveRequest</b> event, InfoPath ignores the error and relies on the <b>ReturnStatus</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SaveEventObject" /> object If the <b>ReturnStatus</b> property is not explicitly set, the default value of <b>false</b> is used.</para>
+          <para>The <b>ReturnStatus</b> property works in conjunction with the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.SaveEvent.IsCancelled" /> property when the InfoPath form is closing. If the document has changes that have not been saved and the user cancels the save operation, the <b>IsCancelled</b> property can be set to <b>true</b> to allow InfoPath to close.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnSaveRequest&lt;/span&gt;)]
+public void OnSaveRequest(SaveEvent e)
+ {
+  if(thisXDocument.DOM.selectSingleNode("//my:field2").text == "")
+   thisXDocument.UI.Alert("Field2 is empty.\nYou cannot save the form.");
+  else
+e.IsCancelled = e.PerformSaveOperation();
+// set ReturnStatus to false if you want InfoPath
+// to show an additional error message
+e.ReturnStatus = true;
+}</code>
+        </example>
+        <example>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnSaveRequest&lt;/span&gt;)]
+public void OnSaveRequest(SaveEvent e)
+ {
+  if(thisXDocument.DOM.selectSingleNode("//my:field2").text == "")
+   thisXDocument.UI.Alert("Field2 is empty.\nYou cannot save the form.");
+  else
+e.IsCancelled = e.PerformSaveOperation();
+// set ReturnStatus to false if you want InfoPath
+// to show an additional error message
+e.ReturnStatus = true;
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="OnSign">
@@ -123,6 +364,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSign" />
       <MemberSignature Language="VB.NET" Value="Event OnSign As _XDocumentEventSink2_OnSignEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSignEventHandler ^ OnSign;" />
+      <MemberSignature Language="F#" Value="member this.OnSign : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSignEventHandler " Usage="member this.OnSign : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSignEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -132,8 +374,37 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSignEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after a set of signed data has been selected to sign through the Digital Signature wizard.</summary>
+        <remarks>
+          <para>You can use the <b>OnSign</b> event to add additional data to the digital signature. For example, you can add data from a trusted timestamp server, or add a server-side countersignature of the transaction. You can also use the <b>OnSign</b> event to block signing if the current user is not a member of a particular group.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, created by adding the <b>OnSign</b> event to the form by selecting Programming from the Tools menu in the InfoPath designer user interface, a digital signature is added to the form by using the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Sign" /> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureObject" /> object:</para>
+          <code>public void &lt;span class="label"&gt;OnSign&lt;/span&gt;(SignEvent e)
+{
+// The OnSign handler can be customized only in fully trusted form templates.
+Signature thisSignature = e.SignedDataBlock.Signatures.Create();
+
+// You can add other pieces of information to sign by modifying the signature
+// template in thisSignature.SignatureBlockXmlNode.
+thisSignature.Sign();
+e.ReturnStatus = true;
+}</code>
+        </example>
+        <example>
+          <para>In the following example, created by adding the <b>OnSign</b> event to the form by selecting Programming from the Tools menu in the InfoPath designer user interface, a digital signature is added to the form by using the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.Signature.Sign" /> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureObject" /> object:</para>
+          <code>public void &lt;span class="label"&gt;OnSign&lt;/span&gt;(SignEvent e)
+{
+// The OnSign handler can be customized only in fully trusted form templates.
+Signature thisSignature = e.SignedDataBlock.Signatures.Create();
+
+// You can add other pieces of information to sign by modifying the signature
+// template in thisSignature.SignatureBlockXmlNode.
+thisSignature.Sign();
+e.ReturnStatus = true;
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="OnSubmitRequest">
@@ -142,6 +413,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSubmitRequest" />
       <MemberSignature Language="VB.NET" Value="Event OnSubmitRequest As _XDocumentEventSink2_OnSubmitRequestEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSubmitRequestEventHandler ^ OnSubmitRequest;" />
+      <MemberSignature Language="F#" Value="member this.OnSubmitRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSubmitRequestEventHandler " Usage="member this.OnSubmitRequest : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSubmitRequestEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -151,8 +423,34 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSubmitRequestEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the submit operation is invoked either from the Microsoft InfoPath user interface or by using <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Submit" /> method.</summary>
+        <remarks>
+          <para>This event handler allows users to cancel a <b>Submit</b> operation.</para>
+          <para>If the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent.ReturnStatus" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEventObject" /> object is set to <b>false</b>, InfoPath cancels the submit operation. If an error occurs in the scripting code for the <b>OnSubmitRequest</b> event, InfoPath ignores it and relies on the <b>ReturnStatus</b> property. If the <b>ReturnStatus</b> property is not explicitly set, the default value of <b>false</b> is used.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>OnSubmitRequest</b> event handler is used to prevent the <b>Submit</b> operation if the form has not been saved.</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnSubmitRequest&lt;/span&gt;)]
+public void OnSubmitRequest(DocReturnEvent e)
+{
+ if(thisXDocument.IsDirty || thisXDocument.IsNew)
+ thisXDocument.UI.Alert("Please save this form before submitting");
+else
+ e.ReturnStatus = true;
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>OnSubmitRequest</b> event handler is used to prevent the <b>Submit</b> operation if the form has not been saved.</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnSubmitRequest&lt;/span&gt;)]
+public void OnSubmitRequest(DocReturnEvent e)
+{
+ if(thisXDocument.IsDirty || thisXDocument.IsNew)
+ thisXDocument.UI.Alert("Please save this form before submitting");
+else
+ e.ReturnStatus = true;
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="OnSwitchView">
@@ -161,6 +459,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSwitchView" />
       <MemberSignature Language="VB.NET" Value="Event OnSwitchView As _XDocumentEventSink2_OnSwitchViewEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnSwitchViewEventHandler ^ OnSwitchView;" />
+      <MemberSignature Language="F#" Value="member this.OnSwitchView : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSwitchViewEventHandler " Usage="member this.OnSwitchView : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSwitchViewEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -170,8 +469,29 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnSwitchViewEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs after a view in a Microsoft InfoPath form has been successfully switched.</summary>
+        <remarks>
+          <para>This event handler does not allow users to cancel an operation.</para>
+          <para>
+            <b>Note</b>: The <b>OnSwitchView</b> event also occurs when a form is first opened.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>OnSwitchView</b> event handler is used to show the name of the view displayed when the view change occurs:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnSwitchView&lt;/span&gt;)]
+public void OnSwitchView(DocEvent e)
+{
+ thisXDocument.UI.Alert("Loading the view " + thisXDocument.View.Name);
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>OnSwitchView</b> event handler is used to show the name of the view displayed when the view change occurs:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnSwitchView&lt;/span&gt;)]
+public void OnSwitchView(DocEvent e)
+{
+ thisXDocument.UI.Alert("Loading the view " + thisXDocument.View.Name);
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="OnVersionUpgrade">
@@ -180,6 +500,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnVersionUpgrade" />
       <MemberSignature Language="VB.NET" Value="Event OnVersionUpgrade As _XDocumentEventSink2_OnVersionUpgradeEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocumentEventSink2_OnVersionUpgradeEventHandler ^ OnVersionUpgrade;" />
+      <MemberSignature Language="F#" Value="member this.OnVersionUpgrade : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnVersionUpgradeEventHandler " Usage="member this.OnVersionUpgrade : Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnVersionUpgradeEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -189,8 +510,34 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_OnVersionUpgradeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when the version number of a Microsoft InfoPath form being opened is older than the version number of the form template on which it is based.</summary>
+        <remarks>
+          <para>This event handler allows users to cancel an operation.</para>
+          <para>During the <b>OnVersionUpgrade</b> event, the form's underlying XML document is placed in read-only mode, and it is not validated against the form's associated XML Schema. If the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEvent.ReturnStatus" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEventObject" /> object is set to <b>false</b>, InfoPath cancels the opening of the form. If an error occurs in the scripting code for the <b>OnVersionUpgrade</b> event, InfoPath ignores it and relies on the <b>ReturnStatus</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEventObject" /> object. If the <b>ReturnStatus</b> property is not explicitly set, the default value of <b>true</b> is used.</para>
+          <para>
+            <b>Note</b>: If you create an event handler for the <b>OnVersionUpgrade</b> event of a form template, you must edit the form definition file (.xsf) to include the optional <b>useScriptHandler</b> element of the <b>documentVersionUpgrade</b> element before it will run.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEvent.DocumentVersion" /> and <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEvent.SolutionVersion" /> properties of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEventObject" /> object are used to display the version numbers of the form and form template:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnVersionUpgrade&lt;/span&gt;)]
+public void OnVersionUpgrade(VersionUpgradeEvent e)
+{
+ thisXDocument.UI.Alert("The form version: " + e.DocumentVersion + 
+  "\nThe form template version: " + e.SolutionVersion);
+ e.ReturnStatus = true;
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEvent.DocumentVersion" /> and <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEvent.SolutionVersion" /> properties of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.VersionUpgradeEventObject" /> object are used to display the version numbers of the form and form template:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.&lt;span class="label"&gt;OnVersionUpgrade&lt;/span&gt;)]
+public void OnVersionUpgrade(VersionUpgradeEvent e)
+{
+ thisXDocument.UI.Alert("The form version: " + e.DocumentVersion + 
+  "\nThe form template version: " + e.SolutionVersion);
+ e.ReturnStatus = true;
+}</code>
+        </example>
       </Docs>
     </Member>
   </Members>

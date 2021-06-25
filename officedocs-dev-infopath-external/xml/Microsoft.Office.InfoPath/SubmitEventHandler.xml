@@ -1,0 +1,36 @@
+﻿<Type Name="SubmitEventHandler" FullName="Microsoft.Office.InfoPath.SubmitEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SubmitEventHandler(object sender, SubmitEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SubmitEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SubmitEventHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub SubmitEventHandler(sender As Object, e As SubmitEventArgs)" />
+  <TypeSignature Language="C++ CLI" Value="public delegate void SubmitEventHandler(System::Object ^ sender, SubmitEventArgs ^ e);" />
+  <TypeSignature Language="F#" Value="type SubmitEventHandler = delegate of obj * SubmitEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.InfoPath.SubmitEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">The source of the event.</param>
+    <param name="e">A <see cref="T:Microsoft.Office.InfoPath.SubmitEventArgs" /> object that contains the event data.</param>
+    <summary>Represents the method that will handle the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event of a form.</summary>
+    <remarks>
+      <para>
+        <b>Important</b>: The code skeleton for an event handler associated with the <b>Submit</b> event, which uses the <b>SubmitEventHandler</b> delegate, should be added only from the Microsoft InfoPath user interface. For more information on how to add event handlers in InfoPath, see How Do I: Add an Event Handler.</para>
+      <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>For an example of using the <b>SubmitEventHandler</b> delegate, see the sample code in the <b>Submit</b> event of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class.</para>
+    </example>
+  </Docs>
+</Type>

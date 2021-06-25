@@ -1,0 +1,421 @@
+﻿<Type Name="Permission" FullName="Microsoft.Office.InfoPath.Permission">
+  <TypeSignature Language="C#" Value="public abstract class Permission" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Permission extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Permission" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Permission" />
+  <TypeSignature Language="C++ CLI" Value="public ref class Permission abstract" />
+  <TypeSignature Language="F#" Value="type Permission = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides access to the <see cref="T:Microsoft.Office.InfoPath.UserPermissionCollection" /> and permission settings that can be applied to a form.</summary>
+    <remarks>
+      <para>Use the <b>Permission</b> class and its members to restrict permissions to the active form and to get or set specific permissions settings.</para>
+      <para>An instance of the <b>Permission</b> class associated with a form template is returned by the <see cref="P:Microsoft.Office.InfoPath.Xmlform.Permission" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class. The returned <b>Permission</b> object provides access to the collection of <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> objects associated with the form template and each form instance created with that template. Each <b>UserPermission</b> object is used to define a specific set of rights for an individual user. While some permissions granted through the user interface apply to all users, you can use the <b>UserPermission</b> object to assign permission on a per-user basis with per-user expiration dates.</para>
+      <para>The <b>Permission</b> object and its properties and methods are available whether permissions are restricted on the active form template or not. Use the <see cref="P:Microsoft.Office.InfoPath.Permission.Enabled" /> property to determine whether a form has restricted permissions.</para>
+      <para>If the Windows Rights Management client is not installed on a user's computer, using the <b>Permission</b> class raises an exception.</para>
+      <para>Permissions on a form are enabled in one of the following ways by using properties and methods of the <b>Permission</b> class:</para>
+      <para>The <b>Enabled</b> property is set to <b>true</b>.</para>
+      <para>The <see cref="P:Microsoft.Office.InfoPath.Permission.DocumentAuthor" /> property is set.</para>
+      <para>The <see cref="P:Microsoft.Office.InfoPath.Permission.RequestPermissionUrl" /> property is set.</para>
+      <para>The <see cref="P:Microsoft.Office.InfoPath.Permission.StoreLicenses" /> property is set to <b>true</b> or <b>false</b>.</para>
+      <para>The <see cref="M:Microsoft.Office.InfoPath.Permission.ApplyPolicy(System.String)" /> method is called.</para>
+      <para>Permissions on a form can also be enabled by using one of the <see cref="M:Microsoft.Office.InfoPath.UserPermissionCollection.Add(System.String)" /> methods of the <b>UserPermissionCollection</b> class to add a user to the form's user permissions collection.</para>
+      <para>
+        <b>Note</b>: Permissions cannot be applied when a form is in preview mode. For this reason, all of the properties of the <b>Permission</b> class are read-only when a form is being previewed. In preview mode, the <b>Enabled</b> property will always return <b>false</b>, and if code attempts to change this setting, a <b>System.Runtime.InteropServices.COMException</b> is raised and the error "The property/method is not available in preview mode" is returned. Similarly, the properties and methods associated with the <b>UserPermission</b> and <b>UserPermissionCollection</b> classes will also return this error message when used in preview mode.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Permission ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.Permission.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Permission();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplyPolicy">
+      <MemberSignature Language="C#" Value="public abstract void ApplyPolicy (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ApplyPolicy(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.Permission.ApplyPolicy(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ApplyPolicy (filename As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ApplyPolicy(System::String ^ filename);" />
+      <MemberSignature Language="F#" Value="abstract member ApplyPolicy : string -&gt; unit" Usage="permission.ApplyPolicy filename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">The path and file name of an Extensible Rights Markup Language (XRML) file that defines users and groups and permissions to apply to the form template.</param>
+        <summary>Applies a policy to the form using a policy template file.</summary>
+        <remarks>
+          <para>To view an example of the format of an XRML file that is used as a policy template file, see <a href="http://go.microsoft.com/fwlink/?LinkId=64814">Sample End-User License</a></para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, clicking the Button control applies a policy template file that allows the user to edit, but not copy the current form.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   this.Permission.ApplyPolicy(
+      "\\\\MyShare\\Templates\\Edit_but_not_copy.xml");
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   Me.Permission.ApplyPolicy( _
+      "\\MyShare\Templates\Edit_but_not_copy.xml")
+
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="DocumentAuthor">
+      <MemberSignature Language="C#" Value="public abstract string DocumentAuthor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DocumentAuthor" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.DocumentAuthor" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property DocumentAuthor As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ DocumentAuthor { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DocumentAuthor : string with get, set" Usage="Microsoft.Office.InfoPath.Permission.DocumentAuthor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the author of the current form as an e-mail address.</summary>
+        <value>The e-mail address of the author of the form.</value>
+        <remarks>
+          <para>The author of the form always has non-expiring owner rights to the form, whether the owner permission is granted explicitly through a <see cref="T:Microsoft.Office.InfoPath.UserPermission" /> object or not.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays the e-mail address of the document author.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Permission.DocumentAuthor);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Permission.DocumentAuthor)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public abstract bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.Enabled" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Enabled As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool Enabled { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="Microsoft.Office.InfoPath.Permission.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets whether the permission settings represented by the <b>Permission</b> object are enabled for the current form.</summary>
+        <value>
+          <b>True</b> if the permission settings are enabled; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>Use the <b>Enabled</b> property to determine whether permissions are restricted on the active form, and to enable or disable permissions. Set <b>Enabled</b> to <b>false</b> to disable permissions and to remove all users, other than the form author, and their permissions.</para>
+          <para>
+            <b>Note</b>: In preview mode, the <b>Enabled</b> property will always return <b>false</b>, and if code attempts to change this setting, a <b>System.Runtime.InteropServices.COMException</b> is raised and the message "The property/method is not available in preview mode" is returned.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays whether permission settings are enabled for the current form.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Permission.Enabled.ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Permission.Enabled.ToString())
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PermissionFromPolicy">
+      <MemberSignature Language="C#" Value="public abstract bool PermissionFromPolicy { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PermissionFromPolicy" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.PermissionFromPolicy" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property PermissionFromPolicy As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool PermissionFromPolicy { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.PermissionFromPolicy : bool" Usage="Microsoft.Office.InfoPath.Permission.PermissionFromPolicy" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets whether a permission policy has been applied to the current form.</summary>
+        <value>
+          <b>True</b> if the permission policy was applied; otherwise, <b>false</b>.</value>
+        <remarks>
+          <para>InfoPath supports the use of administrative permission policies which list users and groups and their form permissions. The <b>PermissionFromPolicy</b> property indicates whether a permission policy was applied the last time permissions were enabled on the form.</para>
+          <para>The <b>PermissionFromPolicy</b> property always returns <b>false</b> when checked by a non-owner of the form, even when the user has object model permissions.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays whether a permission policy has been applied to the current form.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Permission.PermissionFromPolicy.ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Permission.PermissionFromPolicy.ToString())
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyDescription">
+      <MemberSignature Language="C#" Value="public abstract string PolicyDescription { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PolicyDescription" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.PolicyDescription" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property PolicyDescription As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ PolicyDescription { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PolicyDescription : string" Usage="Microsoft.Office.InfoPath.Permission.PolicyDescription" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a description of the policy that was applied to the current form. </summary>
+        <value>The description of the policy applied to the active form or a default value if no policy was applied.</value>
+        <remarks>
+          <para>InfoPath supports the use of administrative permission policies which list users and groups and their form permissions.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays the description of the policy that has been applied to the current form.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Permission.PolicyDescription);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Permission.PolicyDescription)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="PolicyName">
+      <MemberSignature Language="C#" Value="public abstract string PolicyName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PolicyName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.PolicyName" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property PolicyName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ PolicyName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PolicyName : string" Usage="Microsoft.Office.InfoPath.Permission.PolicyName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the name of the policy that was applied to the current form.</summary>
+        <value>The name of the policy or a default value if no policy was applied.</value>
+        <remarks>
+          <para>InfoPath supports the use of administrative permission policies which list users and groups and their form permissions.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays the name of the policy that has been applied to the current form.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Permission.PolicyName);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Permission.PolicyName)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestPermissionUrl">
+      <MemberSignature Language="C#" Value="public abstract string RequestPermissionUrl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RequestPermissionUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.RequestPermissionUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property RequestPermissionUrl As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ RequestPermissionUrl { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.RequestPermissionUrl : string with get, set" Usage="Microsoft.Office.InfoPath.Permission.RequestPermissionUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the file, URL, or e-mail address to contact for users who need additional permissions on the current form. </summary>
+        <value>The string specified in the Users can request additional permissions from text box of the Permission dialog box in InfoPath design mode, or the value set from code using this property.</value>
+        <remarks>
+          <para>The <b>RequestPermissionUrl</b> property corresponds to the value specified in the Users can request additional permissions from text box in the Design mode user interface. Use the <b>RequestPermissionUrl</b> property to specify a file, a Web site, or an e-mail contact from which users can request, or learn how to request, additional permissions on the active form. For example:</para>
+          <list type="bullet">
+            <item>
+              <description>A web address: http://companyserver/request_permissions.asp</description>
+            </item>
+            <item>
+              <description>A file: \\companyserver\share\requesting_permissions.txt</description>
+            </item>
+            <item>
+              <description>An e-mail address: mailto:permissionsmrg@example.com?Subject=Request%20permissions</description>
+            </item>
+          </list>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control displays the URL or e-mail address to contact for additional permissions.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(this.Permission.RequestPermissionUrl);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(Me.Permission.RequestPermissionUrl)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreLicenses">
+      <MemberSignature Language="C#" Value="public abstract bool StoreLicenses { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StoreLicenses" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.StoreLicenses" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property StoreLicenses As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool StoreLicenses { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.StoreLicenses : bool with get, set" Usage="Microsoft.Office.InfoPath.Permission.StoreLicenses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets whether the user's license to view the current form should be cached to allow offline viewing when the user cannot connect to a rights management server. </summary>
+        <value>
+          <b>true</b> if the user's license will be cached for offline viewing; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>Corresponds to the setting of the Require a connection to verify a user's permission check box in the Permission dialog box. If the setting of the <b>StoreLicences</b> property is <b>true</b>, the check box is cleared and a user's license is cached locally. If the setting is <b>false</b>, the check box is selected and users other than the form owner must connect to the rights management server and acquire the license to work with the form each time they open it.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control sets the <b>StoreLicenses</b> property to false, and then displays the current value of the property.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   Permission.StoreLicenses = false;
+   MessageBox.Show(this.Permission.StoreLicenses.ToString());
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Permission.StoreLicenses = False
+   MessageBox.Show(Me.Permission.StoreLicenses.ToString())
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="UserPermissions">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.UserPermissionCollection UserPermissions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.UserPermissionCollection UserPermissions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.Permission.UserPermissions" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property UserPermissions As UserPermissionCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::UserPermissionCollection ^ UserPermissions { Microsoft::Office::InfoPath::UserPermissionCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UserPermissions : Microsoft.Office.InfoPath.UserPermissionCollection" Usage="Microsoft.Office.InfoPath.Permission.UserPermissions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.UserPermissionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.UserPermissionCollection" /> for the current form.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.UserPermissionCollection" /> collection that represents the users and their permissions for the current form.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, clicking the Button control gets the <b>UserPermissionsCollection</b> for the current form, adds and assigns a user to the Change access level, and sets an expiration date of two days from the current date.</para>
+          <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
+{
+   string strExpirationDate = DateTime.Today.AddDays(2).ToString();
+   DateTime dtExpirationDate = DateTime.Parse(strExpirationDate);
+
+   this.Permission.UserPermissions.Add("someone@example.com", 
+      PermissionType.Change, dtExpirationDate);
+}</code>
+          <code>Public Sub CTRL1_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim strExpirationDate As String = _
+      DateTime.Today.AddDays(2).ToString()
+   dtExpirationDate As DateTime = DateTime.Parse(strExpirationDate)
+
+   Me.Permission.UserPermissions.Add("someone@example.com", _
+      PermissionType.Change, dtExpirationDate)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

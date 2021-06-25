@@ -1,0 +1,65 @@
+﻿<Type Name="ErrorMode" FullName="Microsoft.Office.InfoPath.ErrorMode">
+  <TypeSignature Language="C#" Value="public enum ErrorMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ErrorMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ErrorMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ErrorMode" />
+  <TypeSignature Language="C++ CLI" Value="public enum class ErrorMode" />
+  <TypeSignature Language="F#" Value="type ErrorMode = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Specifies whether the custom error will be displayed in a modal dialog box or in modeless context within the control that is the source of the error.</summary>
+    <remarks>
+      <para>The <b>ErrorMode</b> enumeration is used to specify the mode in which to display a custom error when using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" /> method of the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> class and the <see cref="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> class.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Modal">
+      <MemberSignature Language="C#" Value="Modal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ErrorMode Modal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ErrorMode.Modal" />
+      <MemberSignature Language="VB.NET" Value="Modal" />
+      <MemberSignature Language="C++ CLI" Value="Modal" />
+      <MemberSignature Language="F#" Value="Modal = 0" Usage="Microsoft.Office.InfoPath.ErrorMode.Modal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ErrorMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>The user is notified of the error with a dialog box alert. After clicking OK in the dialog box alert, the error will appear as an inline alert and the user can choose to return to the previous value with an undo operation.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Modeless">
+      <MemberSignature Language="C#" Value="Modeless" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ErrorMode Modeless = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ErrorMode.Modeless" />
+      <MemberSignature Language="VB.NET" Value="Modeless" />
+      <MemberSignature Language="C++ CLI" Value="Modeless" />
+      <MemberSignature Language="F#" Value="Modeless = 1" Usage="Microsoft.Office.InfoPath.ErrorMode.Modeless" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ErrorMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>The user is notified of the error with an inline alert and can choose to return to the previous value with an undo operation.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1007 @@
+﻿<Type Name="View" FullName="Microsoft.Office.InfoPath.View">
+  <TypeSignature Language="C#" Value="public abstract class View" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit View extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.View" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class View" />
+  <TypeSignature Language="C++ CLI" Value="public ref class View abstract" />
+  <TypeSignature Language="F#" Value="type View = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents a view within a form.</summary>
+    <remarks>
+      <para>The <b>View</b> class provides properties and methods that can be used to programmatically interact with an InfoPath view, including methods for selecting data contained in the view, switching from one view to another, synchronizing the view with a form's underlying XML document, and executing an InfoPath editing action.</para>
+      <para>
+        <b>Note</b>: The InfoPath object model does not provide a collection of <b>View</b> objects, but it does provide the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> class which provides a collection of <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> objects, each of which provides information about the corresponding view it represents. Additionally, the <b>View</b> class provides the <see cref="P:Microsoft.Office.InfoPath.View.ViewInfo" /> property, which allows you to access information about the associated view.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>The <b>View</b> object that represents the current view is accessed using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.CurrentView" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class. In the following example, first a View object is created to reference the form's currently active view. Then, the <b>ViewInfo</b> property is used to access the <b>ViewInfo</b> object for the view and display its name in a message box.</para>
+      <code>// Set a reference to the current view.
+View thisView = this.CurrentView;
+
+// Display the view's name.
+MessageBox.Show(thisView.ViewInfo.Name);</code>
+      <code>' Set a reference to the current view.
+Dim thisView As View = Me.CurrentView
+
+' Display the view's name.
+MessageBox.Show(thisView.ViewInfo.Name)</code>
+      <para>To change the currently active view, use the <see cref="Overload:Microsoft.Office.InfoPath.ViewInfoCollection.SwitchView" /> method of the <b>ViewInfoCollection</b> class as shown in the following example.</para>
+      <code>this.ViewInfos.SwitchView("View2");</code>
+      <code>Me.ViewInfos.SwitchView("View2")</code>
+      <para>To force an update of a view to display information that has been programmatically changed in the form's underlying XML document, you can use the <see cref="M:Microsoft.Office.InfoPath.View.ForceUpdate" /> method of the <b>View</b> class, as shown in the following example.</para>
+      <code>this.CurrentView.ForceUpdate();</code>
+      <code>Me.CurrentView.ForceUpdate()</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected View ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; View();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAutoUpdate">
+      <MemberSignature Language="C#" Value="public abstract void DisableAutoUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DisableAutoUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.DisableAutoUpdate" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub DisableAutoUpdate ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void DisableAutoUpdate();" />
+      <MemberSignature Language="F#" Value="abstract member DisableAutoUpdate : unit -&gt; unit" Usage="view.DisableAutoUpdate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Disables automatic synchronization between a form's underlying XML document and the associated view.</summary>
+        <remarks>
+          <para>The views in a form are automatically synchronized with the data that is contained in a form's underlying XML document. You can override this by using the <b>DisableAutoUpdate</b> method. You may need to do this for performance reasons, such as when you are programmatically making many changes to a form's underlying XML document and you do not want the view to be refreshed until the changes are complete.</para>
+          <para>By default, views will be updated automatically when the application is idle. View synchronization can be re-enabled using the <see cref="M:Microsoft.Office.InfoPath.View.EnableAutoUpdate" /> method.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>DisableAutoUpdate</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to disable synchronization between a form's underlying XML document and the view that it is associated with.</para>
+          <code>this.CurrentView.DisableAutoUpdate();</code>
+          <code>Me.CurrentView.DisableAutoUpdate()</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>DisableAutoUpdate</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAutoUpdate">
+      <MemberSignature Language="C#" Value="public abstract void EnableAutoUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnableAutoUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.EnableAutoUpdate" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EnableAutoUpdate ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void EnableAutoUpdate();" />
+      <MemberSignature Language="F#" Value="abstract member EnableAutoUpdate : unit -&gt; unit" Usage="view.EnableAutoUpdate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Enables automatic synchronization between a form's underlying XML document and the associated view.</summary>
+        <remarks>
+          <para>The views in a form are automatically synchronized with the data that is contained in a form's underlying XML document. However, this can be overridden using the <see cref="M:Microsoft.Office.InfoPath.View.DisableAutoUpdate" /> method. To re-enable synchronization, use the <b>EnableAutoUpdate</b> method.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>EnableAutoUpdate</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to enable synchronization between a form's underlying XML document and the view that it is associated with.</para>
+          <code>this.CurrentView.EnableAutoUpdate();</code>
+          <code>Me.CurrentView.EnableAutoUpdate()</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>EnableAutoUpdate</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAction">
+      <MemberSignature Language="C#" Value="public abstract void ExecuteAction (Microsoft.Office.InfoPath.ActionType action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExecuteAction(valuetype Microsoft.Office.InfoPath.ActionType action) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.ExecuteAction(Microsoft.Office.InfoPath.ActionType)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ExecuteAction (action As ActionType)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ExecuteAction(Microsoft::Office::InfoPath::ActionType action);" />
+      <MemberSignature Language="F#" Value="abstract member ExecuteAction : Microsoft.Office.InfoPath.ActionType -&gt; unit" Usage="view.ExecuteAction action" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="Microsoft.Office.InfoPath.ActionType" />
+      </Parameters>
+      <Docs>
+        <param name="action">An <see cref="T:Microsoft.Office.InfoPath.ActionType" /> enumeration that specifies the action to perform.</param>
+        <summary>Executes an editing command against a form's underlying XML document, based on the data currently selected in the view.</summary>
+        <remarks>
+          <para>The <b>ExecuteAction</b> method is used to programmatically perform built-in editing actions against a form's underlying XML document, based on the selected context in a view.</para>
+          <para>The action that is executed will be the same action that would be used when clicking on an equivalent menu or toolbar button; namely one for which the button element in the .xsf file has corresponding <b>xmlToEdit</b> and <b>action</b> attributes. As with using a button, it will act on the selected context (and in the case where the selection would lead the button to be disabled, then the <b>ExecuteAction</b> method will have no effect).</para>
+          <para>It is possible to first set the selection context by using the <see cref="Overload:Microsoft.Office.InfoPath.View.SelectNodes" /> method or <see cref="Overload:Microsoft.Office.InfoPath.View.SelectText" /> method, then call the <b>ExecuteAction</b> method to act on that context.</para>
+          <para>
+            <b>Note</b>: In some cases, calling the <b>ExecuteAction</b> method from an event handler for the <see cref="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" /> event of a button in the view may cause an error. This is because the selected context changes to the button when the button is clicked. In this case, it is better to use a button or link on a custom task pane, menu, or toolbar to call the <b>ExecuteAction</b> method.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>ExecuteAction</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <b>ExecuteAction(</b><paramref name="action" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to delete the currently selected data and place it on the clipboard.</para>
+          <code>// Create XPathNavigator and select field.
+XPathNavigator textNode = 
+   CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:field1", NamespaceManager);
+
+// Select text in specified field.
+CurrentView.SelectText(textNode);
+
+// Cut selected text.
+CurrentView.ExecuteAction(ActionType.Cut);</code>
+          <code>' Create XPathNavigator and select field.
+Dim textNode As XPathNavigator = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:field1", NamespaceManager)
+
+' Select text in specified field.
+CurrentView.SelectText(textNode)
+
+' Cut selected text.
+CurrentView.ExecuteAction(ActionType.Cut)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAction">
+      <MemberSignature Language="C#" Value="public abstract void ExecuteAction (Microsoft.Office.InfoPath.ActionType action, string xmlToEdit);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ExecuteAction(valuetype Microsoft.Office.InfoPath.ActionType action, string xmlToEdit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.ExecuteAction(Microsoft.Office.InfoPath.ActionType,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ExecuteAction (action As ActionType, xmlToEdit As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ExecuteAction(Microsoft::Office::InfoPath::ActionType action, System::String ^ xmlToEdit);" />
+      <MemberSignature Language="F#" Value="abstract member ExecuteAction : Microsoft.Office.InfoPath.ActionType * string -&gt; unit" Usage="view.ExecuteAction (action, xmlToEdit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="action" Type="Microsoft.Office.InfoPath.ActionType" />
+        <Parameter Name="xmlToEdit" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="action">An <see cref="T:Microsoft.Office.InfoPath.ActionType" /> enumeration that specifies the action to perform.</param>
+        <param name="xmlToEdit">The <b>XmlToEdit</b> identifier of the field or group to which to apply the editing action.To determine the <b>XmlToEdit</b> identifier of a field or group, right-click the control to which the field or group is bound, click &lt;Control Type&gt; Properties, and then click the Advanced tab. The <b>XmlToEdit</b> value is displayed in the Code section of the tab.</param>
+        <summary>Executes an editing command against a form's underlying XML document, based on the specified field or group.</summary>
+        <remarks>
+          <para>The <b>ExecuteAction</b> method is used to programmatically perform built-in editing actions against a form's underlying XML document, based on the selected context in a view.</para>
+          <para>The action that is executed will be the same action that would be used when clicking on an equivalent menu or toolbar button; namely one for which the button element in the .xsf file has corresponding <b>xmlToEdit</b> and <b>action</b> attributes. As with using a button, the action will be based on current selection: it will act on the selected context (and in the case where the selection would lead the button to be disabled, then the <b>ExecuteAction</b> method will have no effect).</para>
+          <para>You can determine the <b>XmlToEdit</b> identifier for a control or group on an InfoPath form in the Designer by displaying the control's Properties dialog box, and then clicking the Advanced tab.</para>
+          <para>
+            <b>Note</b>: In some cases, calling the <b>ExecuteAction</b> method from an event handler for the <see cref="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" /> event of a button in the view may cause an error. This is because the selected context changes to the button when the button is clicked. In this case, it is better to use a button or link on a custom task pane, menu, or toolbar to call the <b>ExecuteAction</b> method.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>ExecuteAction</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <b>ExecuteAction(</b><paramref name="action" />, <paramref name="xmlToEdit" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to insert data into the specified group using the <b>ActionType.XCollectionInsert</b> action.</para>
+          <code>this.CurrentView.ExecuteAction(ActionType.XCollectionInsert, 
+   "group1_1");</code>
+          <code>Me.CurrentView.ExecuteAction(ActionType.XCollectionInsert, "group1_1")</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Export">
+      <MemberSignature Language="C#" Value="public abstract void Export (string fileLocation, Microsoft.Office.InfoPath.ExportFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Export(string fileLocation, valuetype Microsoft.Office.InfoPath.ExportFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.Export(System.String,Microsoft.Office.InfoPath.ExportFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Export (fileLocation As String, format As ExportFormat)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Export(System::String ^ fileLocation, Microsoft::Office::InfoPath::ExportFormat format);" />
+      <MemberSignature Language="F#" Value="abstract member Export : string * Microsoft.Office.InfoPath.ExportFormat -&gt; unit" Usage="view.Export (fileLocation, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileLocation" Type="System.String" />
+        <Parameter Name="format" Type="Microsoft.Office.InfoPath.ExportFormat" />
+      </Parameters>
+      <Docs>
+        <param name="fileLocation">The directory location that the exported view file will be written to.</param>
+        <param name="format">A <see cref="T:Microsoft.Office.InfoPath.ExportFormat" /> enumeration that specifies the type of file format to export to.</param>
+        <summary>Exports the view to a file of the specified format.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Export</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to export the current view to the Portable Document Format file (.pdf) format.</para>
+          <code>this.CurrentView.Export(@"C:\MyView.pdf", ExportFormat.Pdf);</code>
+          <code>Me.CurrentView.Export("C:\MyView.pdf", ExportFormat.Pdf)</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>Export</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ForceUpdate">
+      <MemberSignature Language="C#" Value="public abstract void ForceUpdate ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ForceUpdate() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.ForceUpdate" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ForceUpdate ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ForceUpdate();" />
+      <MemberSignature Language="F#" Value="abstract member ForceUpdate : unit -&gt; unit" Usage="view.ForceUpdate " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Forces synchronization between a form's underlying XML document and the associated view.</summary>
+        <remarks>
+          <para>The views in a form are automatically synchronized with the data that is contained in a form's underlying XML document. However, you can force synchronization to occur using the <b>ForceUpdate</b> method. This is also useful when data in a secondary data source has changed and needs to be refreshed in the view.</para>
+          <para>Automatic synchronization can be disabled using the <see cref="M:Microsoft.Office.InfoPath.View.DisableAutoUpdate" /> method and enabled using the <see cref="M:Microsoft.Office.InfoPath.View.EnableAutoUpdate" /> method.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>ForceUpdate</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to force synchronization between the form's underlying XML document and the current view.</para>
+          <code>this.CurrentView.ForceUpdate();</code>
+          <code>Me.CurrentView.ForceUpdate()</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">The <b>ForceUpdate</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextNodes">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeIterator GetContextNodes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNodeIterator GetContextNodes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.GetContextNodes" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetContextNodes () As XPathNodeIterator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNodeIterator ^ GetContextNodes();" />
+      <MemberSignature Language="F#" Value="abstract member GetContextNodes : unit -&gt; System.Xml.XPath.XPathNodeIterator" Usage="view.GetContextNodes " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeIterator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets a reference to an <see cref="T:System.Xml.XPath.XPathNodeIterator" /> for iterating over the returned XML nodes in the current selection.</summary>
+        <returns>An <see cref="T:System.Xml.XPath.XPathNodeIterator" /> that is populated with the nodes in the current selection.</returns>
+        <remarks>
+          <para>The XML nodes returned by the <b>GetContextNodes</b> method consists of a sequence of nodes that are mapped from the view, corresponding to the selected XSL Transformation (XSLT) nodes. </para>
+          <para>If the selected nodes are bound to more than one control in the view, you must use the <see cref="M:Microsoft.Office.InfoPath.View.GetContextNodes(System.Xml.XPath.XPathNavigator,System.String)" /> method instead which allows you to specify the <b>ViewContext</b> identifier of the control that is bound to the nodes you want to iterate over.</para>
+          <para>
+            <b>Note</b>: The <b>GetContextNodes</b> method will not return nodes based on the current selection if used in the event handler for the <see cref="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" /> event of a button in the view, because the focus is lost from the control that is intended to be in context. To avoid this behavior, use <b>GetContextNodes</b> from a custom task pane, menu, or toolbar.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>GetContextNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <example>
+          <para>In the following example, the <b>GetContextNodes</b> method is used to return a collection of context nodes based on the current selection to populate an <b>XPathNodeIterator</b> object variable.The code then loops through the collection of context nodes and displays the name, inner XML, and value of each node.</para>
+          <code>// Get context nodes in current selection.
+XPathNodeIterator contextNodes = 
+   CurrentView.GetContextNodes();
+
+// Loop through collection and display information.
+foreach (XPathNavigator contextNode in contextNodes)
+{
+   MessageBox.Show(contextNode.Name);
+   MessageBox.Show(contextNode.InnerXml);
+   MessageBox.Show(contextNode.Value);
+}</code>
+          <code>' Get context nodes in current selection.
+Dim contextNodes As XPathNodeIterator = _
+   CurrentView.GetContextNodes(repeatingTableRow1)
+
+' Loop through collection and display information.
+Dim contextNode As XPathNavigator
+For Each contextNode In contextNodes
+   MessageBox.Show(contextNode.Name)
+   MessageBox.Show(contextNode.InnerXml)
+   MessageBox.Show(contextNode.Value)
+Next</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextNodes">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeIterator GetContextNodes (System.Xml.XPath.XPathNavigator xmlNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNodeIterator GetContextNodes(class System.Xml.XPath.XPathNavigator xmlNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.GetContextNodes(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetContextNodes (xmlNode As XPathNavigator) As XPathNodeIterator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNodeIterator ^ GetContextNodes(System::Xml::XPath::XPathNavigator ^ xmlNode);" />
+      <MemberSignature Language="F#" Value="abstract member GetContextNodes : System.Xml.XPath.XPathNavigator -&gt; System.Xml.XPath.XPathNodeIterator" Usage="view.GetContextNodes xmlNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeIterator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlNode" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNode">An object that specifies an XML node.</param>
+        <summary>Gets a reference to an <see cref="T:System.Xml.XPath.XPathNodeIterator" /> object for iterating over the returned XML nodes starting from the specified node.</summary>
+        <returns>An <see cref="T:System.Xml.XPath.XPathNodeIterator" /> that is populated with the nodes starting from the specified node.</returns>
+        <remarks>
+          <para>The XML nodes returned by the <b>GetContextNodes</b> method consists of a sequence of nodes that are mapped from the view, corresponding to the current XSL Transformation (XSLT) node, starting at the specified node and walking up through the view ancestors to the BODY tag. </para>
+          <para>If specified nodes are bound to more than one control in the view, you must use the <see cref="M:Microsoft.Office.InfoPath.View.GetContextNodes(System.Xml.XPath.XPathNavigator,System.String)" /> method instead which allows you to specify the <b>ViewContext</b> identifier of the control that is bound to the nodes you want to iterate over.</para>
+          <para>
+            <b>Note</b>: The <b>GetContextNodes</b> method will not return nodes based on the current selection if used in the event handler for the <see cref="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" /> event of a button in the view, because the focus is lost from the control that is intended to be in context. To avoid this behavior, use <b>GetContextNodes</b> from a custom task pane, menu, or toolbar.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>GetContextNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <see cref="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator)" /> method is used to select the nodes in the first row of a Repeating Table control bound to <b>group2</b>. The <b>GetContextNodes</b> method is then used to return a collection of context nodes based on the current selection and the specified node. Finally, the code then loops through the collection of context nodes and displays the name, inner XML, and value of each node.</para>
+          <code>// Create XPathNavigator and specify XPath for nodes.
+XPathNavigator repeatingTableRow1 = 
+   MainDataSource.CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager);
+
+// Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes(repeatingTableRow1);
+
+// Get context nodes in selection.
+XPathNodeIterator contextNodes = 
+   CurrentView.GetContextNodes(repeatingTableRow1);
+
+// Loop through collection and display information.
+foreach (XPathNavigator contextNode in contextNodes)
+{
+   MessageBox.Show(contextNode.Name);
+   MessageBox.Show(contextNode.InnerXml);
+   MessageBox.Show(contextNode.Value);
+}</code>
+          <code>' Create XPathNavigator and specify XPath for nodes.
+Dim repeatingTableRow1 As XPathNavigator  = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager)
+
+' Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes(repeatingTableRow1)
+
+' Get context nodes in selection.
+Dim contextNodes As XPathNodeIterator = _
+   CurrentView.GetContextNodes(repeatingTableRow1)
+
+' Loop through collection and display information.
+Dim contextNode As XPathNavigator
+For Each contextNode In contextNodes
+   MessageBox.Show(contextNode.Name)
+   MessageBox.Show(contextNode.InnerXml)
+   MessageBox.Show(contextNode.Value)
+Next</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetContextNodes">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeIterator GetContextNodes (System.Xml.XPath.XPathNavigator xmlNode, string controlId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNodeIterator GetContextNodes(class System.Xml.XPath.XPathNavigator xmlNode, string controlId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.GetContextNodes(System.Xml.XPath.XPathNavigator,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetContextNodes (xmlNode As XPathNavigator, controlId As String) As XPathNodeIterator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNodeIterator ^ GetContextNodes(System::Xml::XPath::XPathNavigator ^ xmlNode, System::String ^ controlId);" />
+      <MemberSignature Language="F#" Value="abstract member GetContextNodes : System.Xml.XPath.XPathNavigator * string -&gt; System.Xml.XPath.XPathNodeIterator" Usage="view.GetContextNodes (xmlNode, controlId)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeIterator</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="controlId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNode">An object that specifies the node to get.</param>
+        <param name="controlId">The <b>ViewContext</b> identifier of the control that contains the currently selected XML nodes to return.</param>
+        <summary>Gets a reference to an <see cref="T:System.Xml.XPath.XPathNodeIterator" /> for iterating over the returned XML nodes in the current selection within the control bound to the specified control.</summary>
+        <returns>An <see cref="T:System.Xml.XPath.XPathNodeIterator" /> that is populated with the nodes in the current selection.</returns>
+        <remarks>
+          <para>You can determine the <b>ViewContext</b> identifier for a control or group by opening the form template in Design mode, displaying the control's Properties dialog box, and then clicking the Advanced tab.</para>
+          <para>When the <b>ViewContext</b> identifier is specified, all of the XML nodes that have been specified to be selected must be within that context.</para>
+          <para>The XML nodes returned by the <b>GetContextNodes</b> method consists of a sequence of nodes that are mapped from the view, corresponding to the current XSL Transformation (XSLT) node, starting at the current selection and walking up through the view ancestors to the BODY tag. </para>
+          <para>
+            <b>Note</b>: The <b>GetContextNodes</b> method will not return nodes based on the current selection if used in the event handler for the <see cref="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" /> event of a button in the view, because the focus is lost from the control that is intended to be in context. To avoid this behavior, use <b>GetContextNodes</b> from a custom task pane, menu, or toolbar.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>GetContextNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <see cref="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.String)" /> method is used to select the nodes in the first row of a Repeating Table control bound to <b>group2</b>. The <b>GetContextNodes</b> method is then used to return a collection of context nodes based on the current selection and the specified node. Finally, the code loops through the collection of context nodes and displays the name, inner XML, and value of each node.</para>
+          <code>// Create XPathNavigator and specify XPath for nodes.
+XPathNavigator repeatingTableRow1 = 
+   MainDataSource.CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager);
+
+// Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes(repeatingTableRow1,repeatingTableRow1,"CTRL5");
+
+// Get context nodes in selection.
+XPathNodeIterator contextNodes = 
+   CurrentView.GetContextNodes(repeatingTableRow1,"CTRL5");
+
+// Loop through collection and display information.
+foreach (XPathNavigator contextNode in contextNodes)
+{
+   MessageBox.Show(contextNode.Name);
+   MessageBox.Show(contextNode.InnerXml);
+   MessageBox.Show(contextNode.Value);
+}</code>
+          <code>' Create XPathNavigator and specify XPath for nodes.
+Dim repeatingTableRow1 As XPathNavigator  = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager)
+
+' Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes(repeatingTableRow1,repeatingTableRow1,"CTRL5")
+
+' Get context nodes in selection.
+Dim contextNodes As XPathNodeIterator = _
+   CurrentView.GetContextNodes(repeatingTableRow1)
+
+' Loop through collection and display information.
+Dim contextNode As XPathNavigator
+For Each contextNode In contextNodes
+   MessageBox.Show(contextNode.Name)
+   MessageBox.Show(contextNode.InnerXml)
+   MessageBox.Show(contextNode.Value)
+Next</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSelectedNodes">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNodeIterator GetSelectedNodes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNodeIterator GetSelectedNodes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.GetSelectedNodes" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetSelectedNodes () As XPathNodeIterator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::Xml::XPath::XPathNodeIterator ^ GetSelectedNodes();" />
+      <MemberSignature Language="F#" Value="abstract member GetSelectedNodes : unit -&gt; System.Xml.XPath.XPathNodeIterator" Usage="view.GetSelectedNodes " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNodeIterator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Gets a reference to an <see cref="T:System.Xml.XPath.XPathNodeIterator" /> object for iterating over all XML nodes in the current selection of items in a view.</summary>
+        <returns>An <see cref="T:System.Xml.XPath.XPathNodeIterator" /> for iterating all over nodes in the current selection.</returns>
+        <remarks>
+          <para>If no items are selected in a view, or if only text is selected, then the <b>XPathNodeIterator</b> object returned by the<b> GetSelectedNodes</b> method has nothing to iterate over.</para>
+          <para>
+            <b>Note</b>: The <b>GetSelectedNodes</b> method will not return nodes based on the current selection if used in the event handler for the <see cref="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" /> event of a button in the view, because the focus is lost from the control that is intended to be in context. To avoid this behavior, use <b>GetSelectedNodes</b> from a custom task pane, menu or toolbar.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>GetSelectedNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <example>
+          <para>In the following example, the <see cref="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator)" /> method is used to select the nodes in the first row of a Repeating Table control bound to <b>group2</b>. The <b>GetSelectedNodes</b> method is then used to return a collection of nodes based on the current selection. Finally, the code loops through the collection of nodes displays the name, inner XML, and value of each node.</para>
+          <code>// Create XPathNavigator and specify XPath for nodes.
+XPathNavigator repeatingTableRow1 = 
+   MainDataSource.CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager);
+
+// Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes(repeatingTableRow1);
+
+// Get selected nodes.
+XPathNodeIterator selectedNodes = 
+   CurrentView.GetSelectedNodes();
+
+// Display the count of selected nodes.
+MessageBox.Show(selectedNodes.Count.ToString());
+
+// Loop through collection and display information.
+foreach (XPathNavigator selectedNode in selectedNodes)
+{
+   MessageBox.Show(selectedNode.Name);
+   MessageBox.Show(selectedNode.InnerXml);
+   MessageBox.Show(selectedNode.Value);
+}</code>
+          <code>' Create XPathNavigator and specify XPath for nodes.
+Dim repeatingTableRow1 As XPathNavigator  = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager)
+
+' Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes(repeatingTableRow1)
+
+' Get selected nodes.
+Dim selectedNodes As XPathNodeIterator = _
+   CurrentView.GetSelectedNodes()
+
+' Display the count of selected nodes.
+MessageBox.Show(selectedNodes.Count.ToString())
+
+' Loop through collection and display information.
+Dim selectedNode As XPathNavigator
+For Each selectedNode In selectedNodes
+   MessageBox.Show(selectedNode.Name)
+   MessageBox.Show(selectedNode.InnerXml)
+   MessageBox.Show(selectedNode.Value)
+Next</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNodes">
+      <MemberSignature Language="C#" Value="public abstract void SelectNodes (System.Xml.XPath.XPathNavigator startNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectNodes(class System.Xml.XPath.XPathNavigator startNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectNodes (startNode As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectNodes(System::Xml::XPath::XPathNavigator ^ startNode);" />
+      <MemberSignature Language="F#" Value="abstract member SelectNodes : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="view.SelectNodes startNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startNode" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="startNode">An object that specifies the start node for the selection.</param>
+        <summary>Selects a range of nodes in a view based on the specified starting XML node.</summary>
+        <remarks>
+          <para>If the specified range of nodes is bound to more than one control in the view, you must use the <see cref="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.String)" /> method. This allows you to specify the <b>ViewContext</b> identifier of the control that is bound to the range of nodes you want to select.</para>
+          <para>
+            <b>Note</b>: The <b>SelectNodes</b> method requires that the specified nodes be structurally selectable in the view.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <b>SelectNodes(</b><paramref name="startNode" /><b>)</b> method is used to select the nodes in the first row in a Repeating Table control bound to <b>group2</b>.</para>
+          <code>// Create XPathNavigator and specify XPath for nodes.
+XPathNavigator repeatingTableRow1 = 
+   CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager);
+
+// Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes(repeatingTableRow1);</code>
+          <code>' Create XPathNavigator and specify XPath for nodes.
+Dim repeatingTableRow1 As XPathNavigator  = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager)
+
+' Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes(repeatingTableRow1)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNodes">
+      <MemberSignature Language="C#" Value="public abstract void SelectNodes (System.Xml.XPath.XPathNavigator startNode, System.Xml.XPath.XPathNavigator endNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectNodes(class System.Xml.XPath.XPathNavigator startNode, class System.Xml.XPath.XPathNavigator endNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectNodes (startNode As XPathNavigator, endNode As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectNodes(System::Xml::XPath::XPathNavigator ^ startNode, System::Xml::XPath::XPathNavigator ^ endNode);" />
+      <MemberSignature Language="F#" Value="abstract member SelectNodes : System.Xml.XPath.XPathNavigator * System.Xml.XPath.XPathNavigator -&gt; unit" Usage="view.SelectNodes (startNode, endNode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="endNode" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="startNode">An object that specifies the start node for the selection.</param>
+        <param name="endNode">An object that specifies the end node for the selection.</param>
+        <summary>Selects a range of nodes in a view based on the specified starting XML node and ending XML node.</summary>
+        <remarks>
+          <para>If the specified range of nodes is bound to more than one control in the view, you must use the <see cref="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.String)" /> method. This allows you to specify the <b>ViewContext</b> identifier of the control that is bound to the range of nodes you want to select.</para>
+          <para>
+            <b>Note</b>: The <b>SelectNodes</b> method requires that the specified nodes be structurally selectable in the view.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <b>SelectNodes(</b><paramref name="startNode" />,<paramref name="endNode" /><b>)</b> method is used to select the range of nodes starting from the first row to the third row in a Repeating Table control bound to <b>group2</b>.</para>
+          <code>// Create XPathNavigators to specify range of nodes.
+XPathNavigator repeatingTableRow1 = 
+   CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager);
+XPathNavigator repeatingTableRow3 = 
+   CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:group1/my:group2[3]", NamespaceManager);
+
+// Select range of nodes in specified XPathNavigators.
+CurrentView.SelectNodes(repeatingTableRow1, repeatingTableRow3);</code>
+          <code>' Create XPathNavigators to specify range of nodes.
+Dim repeatingTableRow1 As XPathNavigator  = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager)
+Dim repeatingTableRow2 As XPathNavigator  = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:group1/my:group2[3]", NamespaceManager)
+
+' Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes(repeatingTableRow1, repeatingTableRow3)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectNodes">
+      <MemberSignature Language="C#" Value="public abstract void SelectNodes (System.Xml.XPath.XPathNavigator startNode, System.Xml.XPath.XPathNavigator endNode, string viewContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectNodes(class System.Xml.XPath.XPathNavigator startNode, class System.Xml.XPath.XPathNavigator endNode, string viewContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectNodes (startNode As XPathNavigator, endNode As XPathNavigator, viewContext As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectNodes(System::Xml::XPath::XPathNavigator ^ startNode, System::Xml::XPath::XPathNavigator ^ endNode, System::String ^ viewContext);" />
+      <MemberSignature Language="F#" Value="abstract member SelectNodes : System.Xml.XPath.XPathNavigator * System.Xml.XPath.XPathNavigator * string -&gt; unit" Usage="view.SelectNodes (startNode, endNode, viewContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="endNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="viewContext" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="startNode">An object that specifies the start node for the selection.</param>
+        <param name="endNode">An object that specifies the end node for the selection.</param>
+        <param name="viewContext">The <b>ViewContext</b> identifier for the control or group in which to select text.</param>
+        <summary>Selects a range of nodes in a view based on the specified starting XML node, the ending XML node, and the specified control.</summary>
+        <remarks>
+          <para>When using the <b>SelectNodes</b> method, if the specified range of nodes is bound to more than one control in the view, you must also provide the <b>ViewContext</b> identifier to specify which control contains the nodes to select. You can determine the <b>ViewContext</b> identifier for a control by opening the form template in Design mode, displaying the control's Properties dialog box, and then clicking the Advanced tab.</para>
+          <para>When the <b>ViewContext</b> identifier is specified, all of the XML nodes that have been specified to be selected must be within that context.</para>
+          <para>
+            <b>Note</b>: The <b>SelectNodes</b> method requires that the specified nodes be structurally selectable in the view.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, <b>group2</b> is bound to more than one Repeating Table control, one of which has the <b>ViewContext</b> identifier of "CTRL2". The <b>SelectNodes(</b><paramref name="startNode" />,<paramref name="endNode" />,<paramref name="viewContext" /><b>)</b> method is used to select the range of nodes starting from the first row to the third row that are bound to the control with the <b>ViewContext</b> identifier of "CTRL2".</para>
+          <code>// Create XPathNavigators to specify range of nodes.
+XPathNavigator repeatingTableRow1 = 
+   CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager);
+XPathNavigator repeatingTableRow3 = 
+   CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:group1/my:group2[3]", NamespaceManager);
+
+// Select range of nodes in specified XPathNavigators.
+CurrentView.SelectNodes(
+   repeatingTableRow1, 
+   repeatingTableRow3,
+   "CTRL2");</code>
+          <code>' Create XPathNavigators to specify range of nodes.
+Dim repeatingTableRow1 As XPathNavigator  = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:group1/my:group2[1]", NamespaceManager)
+Dim repeatingTableRow2 As XPathNavigator  = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:group1/my:group2[3]", NamespaceManager)
+
+' Select nodes in specified XPathNavigator.
+CurrentView.SelectNodes( _
+   repeatingTableRow1, _
+   repeatingTableRow3, _
+   "CTRL2")</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectText">
+      <MemberSignature Language="C#" Value="public abstract void SelectText (System.Xml.XPath.XPathNavigator xmlNode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectText(class System.Xml.XPath.XPathNavigator xmlNode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectText(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectText (xmlNode As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectText(System::Xml::XPath::XPathNavigator ^ xmlNode);" />
+      <MemberSignature Language="F#" Value="abstract member SelectText : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="view.SelectText xmlNode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlNode" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNode">An object that specifies the text to select.</param>
+        <summary>Selects the text contained in an editable control that is bound to the node specified by the <see cref="T:System.Xml.XPath.XPathNavigator" /> object passed to this method.</summary>
+        <remarks>
+          <para>If the specified text is bound to more than one control in the view, using this <b>SelectText</b> method will raise an exception. To avoid this, you must use the <see cref="M:Microsoft.Office.InfoPath.View.SelectText(System.Xml.XPath.XPathNavigator,System.String)" /> method which allows you to specify the <b>ViewContext</b> identifier of the control that contains the text you want to select.</para>
+          <para>In addition, if the argument to the <b>SelectText</b> method is a null reference (Nothing in Visual Basic) or is not exposed in the view, then the <b>SelectText</b> method will also raise an exception.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectText</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <b>SelectText(</b><paramref name="xmlNode" /><b>)</b> method is used to select the text in <b>field1</b>.</para>
+          <code>// Create XPathNavigator and select field.
+XPathNavigator textNode = 
+   CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:field1", NamespaceManager);
+
+// Select text in specified field.
+CurrentView.SelectText(textNode);</code>
+          <code>' Create XPathNavigator and select field.
+Dim textNode As XPathNavigator = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:field1", NamespaceManager)
+
+' Select text in specified field.
+CurrentView.SelectText(textNode)</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectText">
+      <MemberSignature Language="C#" Value="public abstract void SelectText (System.Xml.XPath.XPathNavigator xmlNode, string viewContext);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SelectText(class System.Xml.XPath.XPathNavigator xmlNode, string viewContext) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.SelectText(System.Xml.XPath.XPathNavigator,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SelectText (xmlNode As XPathNavigator, viewContext As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void SelectText(System::Xml::XPath::XPathNavigator ^ xmlNode, System::String ^ viewContext);" />
+      <MemberSignature Language="F#" Value="abstract member SelectText : System.Xml.XPath.XPathNavigator * string -&gt; unit" Usage="view.SelectText (xmlNode, viewContext)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xmlNode" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="viewContext" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="xmlNode">An object that specifies the text to select.</param>
+        <param name="viewContext">The <b>ViewContext</b> identifier for the control in which to select text.</param>
+        <summary>Selects the text contained in an editable control that is bound to the node specified by the <see cref="T:System.Xml.XPath.XPathNavigator" /> object and <b>ViewContext</b> identifier of the control.</summary>
+        <remarks>
+          <para>If the specified text is bound to more than one control in the view, you must provide the <b>ViewContext</b> identifier of the control to select text from. You can determine the <b>ViewContext</b> identifier for a control by opening the form template in Design mode, displaying the control's Properties dialog box, and then clicking the Advanced tab.</para>
+          <para>When the <b>ViewContext</b> identifier is specified, the text that is to be selected must be within that context.</para>
+          <para>If any of the arguments to the <b>SelectText</b> method are a null reference (Nothing in Visual Basic) or are not exposed in the view, then the <b>SelectText</b> method will also raise an exception.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectText</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, <b>field1</b> is bound to more than one control, one of which has the <b>ViewContext</b> identifier of "CTRL2". The <b>SelectText(</b><paramref name="xmlnode" />,<paramref name="viewContext" /><b>)</b> method is used to select the text in <b>field1</b> from the control with the <b>ViewContext</b> identifier of "CTRL2".</para>
+          <code>// Create XPathNavigator and select field.
+XPathNavigator textNode = 
+   CreateNavigator().SelectSingleNode(
+   "/my:myFields/my:field1", NamespaceManager);
+
+// Select text in specified field.
+CurrentView.SelectText(textNode, "CTRL2");</code>
+          <code>' Create XPathNavigator and select field.
+Dim textNode As XPathNavigator = _
+   CreateNavigator().SelectSingleNode( _
+   "/my:myFields/my:field1", NamespaceManager)
+
+' Select text in specified field.
+CurrentView.SelectText(textNode, "CTRL2")</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowMailItem">
+      <MemberSignature Language="C#" Value="public abstract void ShowMailItem (string destinationTo, string destinationCC, string destinationBcc, string subject, string body);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ShowMailItem(string destinationTo, string destinationCC, string destinationBcc, string subject, string body) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.View.ShowMailItem(System.String,System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ShowMailItem (destinationTo As String, destinationCC As String, destinationBcc As String, subject As String, body As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ShowMailItem(System::String ^ destinationTo, System::String ^ destinationCC, System::String ^ destinationBcc, System::String ^ subject, System::String ^ body);" />
+      <MemberSignature Language="F#" Value="abstract member ShowMailItem : string * string * string * string * string -&gt; unit" Usage="view.ShowMailItem (destinationTo, destinationCC, destinationBcc, subject, body)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destinationTo" Type="System.String" />
+        <Parameter Name="destinationCC" Type="System.String" />
+        <Parameter Name="destinationBcc" Type="System.String" />
+        <Parameter Name="subject" Type="System.String" />
+        <Parameter Name="body" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="destinationTo">The addresses for the To field of the e-mail message.</param>
+        <param name="destinationCC">The addresses for the CC field of the e-mail message.</param>
+        <param name="destinationBcc">The addresses for the BCC field of the e-mail message.</param>
+        <param name="subject">The Subject field of the e-mail message.</param>
+        <param name="body">The text for the body of the e-mail message.</param>
+        <summary>Creates an e-mail message containing the current view.</summary>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <b>ShowMailItem</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to create a mail message for the current view.</para>
+          <code>this.CurrentView,ShowMailItem("someone@example.com", null, null,
+    "Sample InfoPath Form", "This is a sample InfoPath form.");</code>
+          <code>Me.CurrentView,ShowMailItem("someone@example.com", String.Empty, _
+   String.Empty, "Sample InfoPath Form", 
+   "This is a sample InfoPath form.");</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureLines">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.SignatureLineCollection SignatureLines { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.SignatureLineCollection SignatureLines" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.View.SignatureLines" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SignatureLines As SignatureLineCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::SignatureLineCollection ^ SignatureLines { Microsoft::Office::InfoPath::SignatureLineCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureLines : Microsoft.Office.InfoPath.SignatureLineCollection" Usage="Microsoft.Office.InfoPath.View.SignatureLines" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureLineCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.SignatureLineCollection" /> associated with the current view.</summary>
+        <value>An object that represents the set of Signature Line controls in the current view.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewInfo">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.ViewInfo ViewInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ViewInfo ViewInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.View.ViewInfo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ViewInfo As ViewInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::ViewInfo ^ ViewInfo { Microsoft::Office::InfoPath::ViewInfo ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ViewInfo : Microsoft.Office.InfoPath.ViewInfo" Usage="Microsoft.Office.InfoPath.View.ViewInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to a <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> object associated with the view.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.ViewInfo" /> associated with the current view.</value>
+        <remarks>
+          <para>The <b>ViewInfo</b> object provides properties that can be used to get the name of a view and determine whether its name is hidden on the View menu.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example uses the <b>ViewInfo</b> property of the <see cref="T:Microsoft.Office.InfoPath.View" /> class to get the name for the current view.</para>
+          <code>string myViewName = this.CurrentView.ViewInfo.Name;</code>
+          <code>Dim myViewName As String = Me.CurrentView.ViewInfo.Name</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Window">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.Window Window { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Window Window" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.View.Window" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Window As Window" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::Window ^ Window { Microsoft::Office::InfoPath::Window ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Window : Microsoft.Office.InfoPath.Window" Usage="Microsoft.Office.InfoPath.View.Window" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Window</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to a <see cref="T:Microsoft.Office.InfoPath.Window" /> object associated with the view.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.Window" /> associated with the current view.</value>
+        <remarks>
+          <para>The <b>Window</b> object returned represents the currently active Microsoft InfoPath window. It can also be accessed through the <see cref="T:Microsoft.Office.InfoPath.WindowCollection" /> object, and through the <see cref="P:Microsoft.Office.InfoPath.Application.ActiveWindow" /> property of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example uses the <b>Window</b> property of the <see cref="T:Microsoft.Office.InfoPath.View" /> class to get a reference to the <b>Window</b> object associated with the current view.</para>
+          <code>Window myViewWindow = this.CurrentView.Window;</code>
+          <code>Dim myViewWindow As Window = Me.CurrentView.Window</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1995 @@
+﻿<Type Name="XmlFormHostItem" FullName="Microsoft.Office.InfoPath.XmlFormHostItem">
+  <TypeSignature Language="C#" Value="public abstract class XmlFormHostItem : Microsoft.VisualStudio.Tools.Applications.RemoteObjectAdapter, Microsoft.Office.InfoPath.IInfoPathRuntime, Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlFormHostItem extends Microsoft.VisualStudio.Tools.Applications.RemoteObjectAdapter implements class Microsoft.Office.InfoPath.IInfoPathRuntime, class Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract, class System.AddIn.Contract.IContract" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlFormHostItem" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlFormHostItem&#xA;Inherits RemoteObjectAdapter&#xA;Implements IEntryPointContract, IInfoPathRuntime" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlFormHostItem abstract : Microsoft::VisualStudio::Tools::Applications::RemoteObjectAdapter, Microsoft::Office::InfoPath::IInfoPathRuntime, Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract" />
+  <TypeSignature Language="F#" Value="type XmlFormHostItem = class&#xA;    inherit RemoteObjectAdapter&#xA;    interface IEntryPointContract&#xA;    interface IContract&#xA;    interface IInfoPathRuntime" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.VisualStudio.Tools.Applications.RemoteObjectAdapter</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Office.InfoPath.IInfoPathRuntime</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>This class is a wrapper for the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+    <remarks>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.XmlFormHostItem" /> class and its members are wrappers for the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class and its corresponding members.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public XmlFormHostItem (System.AddIn.Contract.Collections.IRemoteArgumentArrayContract initArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.AddIn.Contract.Collections.IRemoteArgumentArrayContract initArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.#ctor(System.AddIn.Contract.Collections.IRemoteArgumentArrayContract)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (initArgs As IRemoteArgumentArrayContract)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; XmlFormHostItem(System::AddIn::Contract::Collections::IRemoteArgumentArrayContract ^ initArgs);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Office.InfoPath.XmlFormHostItem : System.AddIn.Contract.Collections.IRemoteArgumentArrayContract -&gt; Microsoft.Office.InfoPath.XmlFormHostItem" Usage="new Microsoft.Office.InfoPath.XmlFormHostItem initArgs" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="initArgs" Type="System.AddIn.Contract.Collections.IRemoteArgumentArrayContract" />
+      </Parameters>
+      <Docs>
+        <param name="initArgs">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Close">
+      <MemberSignature Language="C#" Value="public virtual void Close ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Close() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Close" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Close ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Close();" />
+      <MemberSignature Language="F#" Value="abstract member Close : unit -&gt; unit&#xA;override this.Close : unit -&gt; unit" Usage="xmlFormHostItem.Close " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Close" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNavigator">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XPath.XPathNavigator CreateNavigator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Xml.XPath.XPathNavigator CreateNavigator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.CreateNavigator" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateNavigator () As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Xml::XPath::XPathNavigator ^ CreateNavigator();" />
+      <MemberSignature Language="F#" Value="abstract member CreateNavigator : unit -&gt; System.Xml.XPath.XPathNavigator&#xA;override this.CreateNavigator : unit -&gt; System.Xml.XPath.XPathNavigator" Usage="xmlFormHostItem.CreateNavigator " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.DataSource.CreateNavigator" /> method of the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> class, which provides access to an <b>XPathNavigator</b> object for accessing and manipulating a form's underlying XML document (main data source).</summary>
+        <returns>Returns <see cref="T:System.Xml.XPath.XPathNavigator" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateObjRef">
+      <MemberSignature Language="C#" Value="public override System.Runtime.Remoting.ObjRef CreateObjRef (Type requestedType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Runtime.Remoting.ObjRef CreateObjRef(class System.Type requestedType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.CreateObjRef(System.Type)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CreateObjRef (requestedType As Type) As ObjRef" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Runtime::Remoting::ObjRef ^ CreateObjRef(Type ^ requestedType);" />
+      <MemberSignature Language="F#" Value="override this.CreateObjRef : Type -&gt; System.Runtime.Remoting.ObjRef" Usage="xmlFormHostItem.CreateObjRef requestedType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Runtime.Remoting.ObjRef</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="requestedType" Type="System.Type" />
+      </Parameters>
+      <Docs>
+        <param name="requestedType">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CurrentView">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.View CurrentView { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.View CurrentView" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.CurrentView" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property CurrentView As View" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::View ^ CurrentView { Microsoft::Office::InfoPath::View ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CurrentView : Microsoft.Office.InfoPath.View" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.CurrentView" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.CurrentView" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.View" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataConnections">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.DataConnectionCollection DataConnections { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataConnectionCollection DataConnections" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.DataConnections" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property DataConnections As DataConnectionCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::DataConnectionCollection ^ DataConnections { Microsoft::Office::InfoPath::DataConnectionCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataConnections : Microsoft.Office.InfoPath.DataConnectionCollection" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.DataConnections" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataConnectionCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSources">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.DataSourceCollection DataSources { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataSourceCollection DataSources" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.DataSources" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property DataSources As DataSourceCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::DataSourceCollection ^ DataSources { Microsoft::Office::InfoPath::DataSourceCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataSources : Microsoft.Office.InfoPath.DataSourceCollection" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.DataSources" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataSourceCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataSources" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.DataSourceCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dirty">
+      <MemberSignature Language="C#" Value="public virtual bool Dirty { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Dirty" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Dirty" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property Dirty As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool Dirty { bool get(); void set(bool value); };" />
+      <MemberSignature Language="F#" Value="member this.Dirty : bool with get, set" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Dirty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Dirty" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Environment">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.Environment Environment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Environment Environment" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Environment" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Environment As Environment" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::Environment ^ Environment { Microsoft::Office::InfoPath::Environment ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Environment : Microsoft.Office.InfoPath.Environment" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Environment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Environment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Environment" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.Environment" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Errors">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.FormErrorCollection Errors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.FormErrorCollection Errors" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Errors" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Errors As FormErrorCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::FormErrorCollection ^ Errors { Microsoft::Office::InfoPath::FormErrorCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Errors : Microsoft.Office.InfoPath.FormErrorCollection" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Errors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormErrorCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Errors" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extension">
+      <MemberSignature Language="C#" Value="public virtual object Extension { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Extension" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Extension" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Extension As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Object ^ Extension { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Extension : obj" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Extension" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Extension" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FinishInitialization">
+      <MemberSignature Language="C#" Value="protected virtual void FinishInitialization ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void FinishInitialization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.FinishInitialization" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub FinishInitialization ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void FinishInitialization();" />
+      <MemberSignature Language="F#" Value="abstract member FinishInitialization : unit -&gt; unit&#xA;override this.FinishInitialization : unit -&gt; unit" Usage="xmlFormHostItem.FinishInitialization " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization</InterfaceMember>
+        <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormState">
+      <MemberSignature Language="C#" Value="public virtual System.Collections.IDictionary FormState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.IDictionary FormState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.FormState" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property FormState As IDictionary" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Collections::IDictionary ^ FormState { System::Collections::IDictionary ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.FormState : System.Collections.IDictionary" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.FormState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IDictionary</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.FormState" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Collections.IDictionary" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHostObject">
+      <MemberSignature Language="C#" Value="protected object GetHostObject (string primaryType, string cookie);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance object GetHostObject(string primaryType, string cookie) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetHostObject(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetHostObject (primaryType As String, cookie As String) As Object" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; System::Object ^ GetHostObject(System::String ^ primaryType, System::String ^ cookie);" />
+      <MemberSignature Language="F#" Value="member this.GetHostObject : string * string -&gt; obj" Usage="xmlFormHostItem.GetHostObject (primaryType, cookie)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="primaryType" Type="System.String" />
+        <Parameter Name="cookie" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="primaryType">To be added.</param>
+        <param name="cookie">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>Returns <see cref="T:System.Object" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInfrastructureService">
+      <MemberSignature Language="C#" Value="public System.AddIn.Contract.IServiceProviderContract GetInfrastructureService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.AddIn.Contract.IServiceProviderContract GetInfrastructureService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetInfrastructureService" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetInfrastructureService () As IServiceProviderContract" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::AddIn::Contract::IServiceProviderContract ^ GetInfrastructureService();" />
+      <MemberSignature Language="F#" Value="override this.GetInfrastructureService : unit -&gt; System.AddIn.Contract.IServiceProviderContract" Usage="xmlFormHostItem.GetInfrastructureService " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IServiceProviderContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLifetimeService">
+      <MemberSignature Language="C#" Value="public object GetLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance object GetLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetLifetimeService" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetLifetimeService () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; System::Object ^ GetLifetimeService();" />
+      <MemberSignature Language="F#" Value="override this.GetLifetimeService : unit -&gt; obj" Usage="xmlFormHostItem.GetLifetimeService " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetObjects">
+      <MemberSignature Language="C#" Value="protected void GetObjects ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void GetObjects() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetObjects" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub GetObjects ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void GetObjects();" />
+      <MemberSignature Language="F#" Value="member this.GetObjects : unit -&gt; unit" Usage="xmlFormHostItem.GetObjects " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrimaryControl">
+      <MemberSignature Language="C#" Value="protected virtual Microsoft.Office.InfoPath.XmlForm GetPrimaryControl ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Microsoft.Office.InfoPath.XmlForm GetPrimaryControl() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetPrimaryControl" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetPrimaryControl () As XmlForm" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual Microsoft::Office::InfoPath::XmlForm ^ GetPrimaryControl();" />
+      <MemberSignature Language="F#" Value="abstract member GetPrimaryControl : unit -&gt; Microsoft.Office.InfoPath.XmlForm&#xA;override this.GetPrimaryControl : unit -&gt; Microsoft.Office.InfoPath.XmlForm" Usage="xmlFormHostItem.GetPrimaryControl " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlForm</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>Returns <see cref="T:Microsoft.Office.InfoPath.XmlForm" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoteHashCode">
+      <MemberSignature Language="C#" Value="protected override int GetRemoteHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 GetRemoteHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetRemoteHashCode" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetRemoteHashCode () As Integer" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override int GetRemoteHashCode();" />
+      <MemberSignature Language="F#" Value="override this.GetRemoteHashCode : unit -&gt; int" Usage="xmlFormHostItem.GetRemoteHashCode " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.AddIn.Contract.IContract.GetRemoteHashCode</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRemoteType">
+      <MemberSignature Language="C#" Value="protected System.AddIn.Contract.Automation.IRemoteTypeContract GetRemoteType ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.AddIn.Contract.Automation.IRemoteTypeContract GetRemoteType() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetRemoteType" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetRemoteType () As IRemoteTypeContract" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; System::AddIn::Contract::Automation::IRemoteTypeContract ^ GetRemoteType();" />
+      <MemberSignature Language="F#" Value="override this.GetRemoteType : unit -&gt; System.AddIn.Contract.Automation.IRemoteTypeContract" Usage="xmlFormHostItem.GetRemoteType " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteTypeContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSponsorProvider">
+      <MemberSignature Language="C#" Value="protected Microsoft.VisualStudio.Tools.Applications.Contract.ISponsorProviderContract GetSponsorProvider ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class Microsoft.VisualStudio.Tools.Applications.Contract.ISponsorProviderContract GetSponsorProvider() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetSponsorProvider" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetSponsorProvider () As ISponsorProviderContract" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; Microsoft::VisualStudio::Tools::Applications::Contract::ISponsorProviderContract ^ GetSponsorProvider();" />
+      <MemberSignature Language="F#" Value="override this.GetSponsorProvider : unit -&gt; Microsoft.VisualStudio.Tools.Applications.Contract.ISponsorProviderContract" Usage="xmlFormHostItem.GetSponsorProvider " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.Tools.Applications.Contract.ISponsorProviderContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowTasks">
+      <MemberSignature Language="C#" Value="public virtual object GetWorkflowTasks ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetWorkflowTasks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetWorkflowTasks" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetWorkflowTasks () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ GetWorkflowTasks();" />
+      <MemberSignature Language="F#" Value="abstract member GetWorkflowTasks : unit -&gt; obj&#xA;override this.GetWorkflowTasks : unit -&gt; obj" Usage="xmlFormHostItem.GetWorkflowTasks " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTasks" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWorkflowTemplates">
+      <MemberSignature Language="C#" Value="public virtual object GetWorkflowTemplates ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance object GetWorkflowTemplates() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.GetWorkflowTemplates" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetWorkflowTemplates () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual System::Object ^ GetWorkflowTemplates();" />
+      <MemberSignature Language="F#" Value="abstract member GetWorkflowTemplates : unit -&gt; obj&#xA;override this.GetWorkflowTemplates : unit -&gt; obj" Usage="xmlFormHostItem.GetWorkflowTemplates " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.GetWorkflowTemplates" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Host">
+      <MemberSignature Language="C#" Value="public virtual object Host { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Host" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Host" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Host As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Object ^ Host { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Host : obj" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Host" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Host" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hosted">
+      <MemberSignature Language="C#" Value="public virtual bool Hosted { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Hosted" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Hosted" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Hosted As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool Hosted { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Hosted : bool" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Hosted" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Hosted" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HostName">
+      <MemberSignature Language="C#" Value="public virtual string HostName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string HostName" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.HostName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property HostName As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ HostName { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.HostName : string" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.HostName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.HostName" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeDataBindings">
+      <MemberSignature Language="C#" Value="protected virtual void InitializeDataBindings ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitializeDataBindings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.InitializeDataBindings" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub InitializeDataBindings ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void InitializeDataBindings();" />
+      <MemberSignature Language="F#" Value="abstract member InitializeDataBindings : unit -&gt; unit&#xA;override this.InitializeDataBindings : unit -&gt; unit" Usage="xmlFormHostItem.InitializeDataBindings " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeLifetimeService">
+      <MemberSignature Language="C#" Value="public override object InitializeLifetimeService ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance object InitializeLifetimeService() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.InitializeLifetimeService" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function InitializeLifetimeService () As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; override System::Object ^ InitializeLifetimeService();" />
+      <MemberSignature Language="F#" Value="override this.InitializeLifetimeService : unit -&gt; obj" Usage="xmlFormHostItem.InitializeLifetimeService " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="itemProvider">
+      <MemberSignature Language="C#" Value="protected Microsoft.Office.InfoPath.IInfoPathHostItemProvider itemProvider;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Microsoft.Office.InfoPath.IInfoPathHostItemProvider itemProvider" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.XmlFormHostItem.itemProvider" />
+      <MemberSignature Language="VB.NET" Value="Protected itemProvider As IInfoPathHostItemProvider " />
+      <MemberSignature Language="C++ CLI" Value="protected: Microsoft::Office::InfoPath::IInfoPathHostItemProvider ^ itemProvider;" />
+      <MemberSignature Language="F#" Value="val mutable itemProvider : Microsoft.Office.InfoPath.IInfoPathHostItemProvider" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.itemProvider" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.IInfoPathHostItemProvider</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MainDataSource">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.DataSource MainDataSource { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataSource MainDataSource" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.MainDataSource" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property MainDataSource As DataSource" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::DataSource ^ MainDataSource { Microsoft::Office::InfoPath::DataSource ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.MainDataSource : Microsoft.Office.InfoPath.DataSource" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.MainDataSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.MainDataSource" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.DataSource" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MemberwiseClone">
+      <MemberSignature Language="C#" Value="protected MarshalByRefObject MemberwiseClone (bool cloneIdentity);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance class System.MarshalByRefObject MemberwiseClone(bool cloneIdentity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.MemberwiseClone(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function MemberwiseClone (cloneIdentity As Boolean) As MarshalByRefObject" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; MarshalByRefObject ^ MemberwiseClone(bool cloneIdentity);" />
+      <MemberSignature Language="F#" Value="override this.MemberwiseClone : bool -&gt; MarshalByRefObject" Usage="xmlFormHostItem.MemberwiseClone cloneIdentity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.MarshalByRefObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cloneIdentity" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="cloneIdentity">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeForm">
+      <MemberSignature Language="C#" Value="public virtual void MergeForm (string fileUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MergeForm(string fileUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.MergeForm(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub MergeForm (fileUrl As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void MergeForm(System::String ^ fileUrl);" />
+      <MemberSignature Language="F#" Value="abstract member MergeForm : string -&gt; unit&#xA;override this.MergeForm : string -&gt; unit" Usage="xmlFormHostItem.MergeForm fileUrl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileUrl">To be added.</param>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MergeForm">
+      <MemberSignature Language="C#" Value="public virtual void MergeForm (System.Xml.XPath.XPathNavigator target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MergeForm(class System.Xml.XPath.XPathNavigator target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.MergeForm(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub MergeForm (target As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void MergeForm(System::Xml::XPath::XPathNavigator ^ target);" />
+      <MemberSignature Language="F#" Value="abstract member MergeForm : System.Xml.XPath.XPathNavigator -&gt; unit&#xA;override this.MergeForm : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="xmlFormHostItem.MergeForm target" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="target" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="target">To be added.</param>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.MergeForm(System.Xml.XPath.XPathNavigator)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization">
+      <MemberSignature Language="C#" Value="void IInfoPathRuntime.FinishInitialization ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#FinishInitialization" />
+      <MemberSignature Language="VB.NET" Value="Sub FinishInitialization () Implements IInfoPathRuntime.FinishInitialization" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization() = Microsoft::Office::InfoPath::IInfoPathRuntime::FinishInitialization;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize">
+      <MemberSignature Language="C#" Value="void IInfoPathRuntime.Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#Initialize" />
+      <MemberSignature Language="VB.NET" Value="Sub Initialize () Implements IInfoPathRuntime.Initialize" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize() = Microsoft::Office::InfoPath::IInfoPathRuntime::Initialize;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider">
+      <MemberSignature Language="C#" Value="void IInfoPathRuntime.InitializeHostProvider (Microsoft.Office.InfoPath.IInfoPathHostItemProvider hostItemProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider(class Microsoft.Office.InfoPath.IInfoPathHostItemProvider hostItemProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#InitializeHostProvider(Microsoft.Office.InfoPath.IInfoPathHostItemProvider)" />
+      <MemberSignature Language="VB.NET" Value="Sub InitializeHostProvider (hostItemProvider As IInfoPathHostItemProvider) Implements IInfoPathRuntime.InitializeHostProvider" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider(Microsoft::Office::InfoPath::IInfoPathHostItemProvider ^ hostItemProvider) = Microsoft::Office::InfoPath::IInfoPathRuntime::InitializeHostProvider;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider(Microsoft.Office.InfoPath.IInfoPathHostItemProvider)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostItemProvider" Type="Microsoft.Office.InfoPath.IInfoPathHostItemProvider" />
+      </Parameters>
+      <Docs>
+        <param name="hostItemProvider">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown">
+      <MemberSignature Language="C#" Value="void IInfoPathRuntime.OnShutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#OnShutdown" />
+      <MemberSignature Language="VB.NET" Value="Sub OnShutdown () Implements IInfoPathRuntime.OnShutdown" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown() = Microsoft::Office::InfoPath::IInfoPathRuntime::OnShutdown;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization">
+      <MemberSignature Language="C#" Value="void IEntryPointContract.FinishInitialization ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#FinishInitialization" />
+      <MemberSignature Language="VB.NET" Value="Sub FinishInitialization () Implements IEntryPointContract.FinishInitialization" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::FinishInitialization;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.GetEntryPointObject">
+      <MemberSignature Language="C#" Value="System.AddIn.Contract.Automation.IRemoteObjectContract IEntryPointContract.GetEntryPointObject ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.AddIn.Contract.Automation.IRemoteObjectContract Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.GetEntryPointObject() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#GetEntryPointObject" />
+      <MemberSignature Language="VB.NET" Value="Function GetEntryPointObject () As IRemoteObjectContract Implements IEntryPointContract.GetEntryPointObject" />
+      <MemberSignature Language="C++ CLI" Value=" virtual System::AddIn::Contract::Automation::IRemoteObjectContract ^ Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.GetEntryPointObject() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::GetEntryPointObject;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.GetEntryPointObject</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.Automation.IRemoteObjectContract</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.Initialize">
+      <MemberSignature Language="C#" Value="void IEntryPointContract.Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#Initialize" />
+      <MemberSignature Language="VB.NET" Value="Sub Initialize () Implements IEntryPointContract.Initialize" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.Initialize() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::Initialize;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.Initialize</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Security.SecurityCritical</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings">
+      <MemberSignature Language="C#" Value="void IEntryPointContract.InitializeDataBindings ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#InitializeDataBindings" />
+      <MemberSignature Language="VB.NET" Value="Sub InitializeDataBindings () Implements IEntryPointContract.InitializeDataBindings" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::InitializeDataBindings;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown">
+      <MemberSignature Language="C#" Value="void IEntryPointContract.OnShutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#OnShutdown" />
+      <MemberSignature Language="VB.NET" Value="Sub OnShutdown () Implements IEntryPointContract.OnShutdown" />
+      <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::OnShutdown;" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NamespaceManager">
+      <MemberSignature Language="C#" Value="public virtual System.Xml.XmlNamespaceManager NamespaceManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XmlNamespaceManager NamespaceManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.NamespaceManager" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property NamespaceManager As XmlNamespaceManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::Xml::XmlNamespaceManager ^ NamespaceManager { System::Xml::XmlNamespaceManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NamespaceManager : System.Xml.XmlNamespaceManager" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.NamespaceManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XmlNamespaceManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.NamespaceManager" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Xml.XmlNamespaceManager" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NetworkState">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.NetworkState NetworkState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.NetworkState NetworkState" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.NetworkState" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property NetworkState As NetworkState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::NetworkState ^ NetworkState { Microsoft::Office::InfoPath::NetworkState ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NetworkState : Microsoft.Office.InfoPath.NetworkState" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.NetworkState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.NetworkState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.NetworkState" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.NetworkState" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="New">
+      <MemberSignature Language="C#" Value="public virtual bool New { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool New" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.New" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property New As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool New { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.New : bool" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.New" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.New" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NotifyHost">
+      <MemberSignature Language="C#" Value="public virtual void NotifyHost (string notification);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void NotifyHost(string notification) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.NotifyHost(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub NotifyHost (notification As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void NotifyHost(System::String ^ notification);" />
+      <MemberSignature Language="F#" Value="abstract member NotifyHost : string -&gt; unit&#xA;override this.NotifyHost : string -&gt; unit" Usage="xmlFormHostItem.NotifyHost notification" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="notification" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="notification">To be added.</param>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.NotifyHost(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnFinalRevoke">
+      <MemberSignature Language="C#" Value="protected override void OnFinalRevoke ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnFinalRevoke() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.OnFinalRevoke" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnFinalRevoke ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override void OnFinalRevoke();" />
+      <MemberSignature Language="F#" Value="override this.OnFinalRevoke : unit -&gt; unit" Usage="xmlFormHostItem.OnFinalRevoke " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnShutdown">
+      <MemberSignature Language="C#" Value="protected virtual void OnShutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnShutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.OnShutdown" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnShutdown ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnShutdown();" />
+      <MemberSignature Language="F#" Value="abstract member OnShutdown : unit -&gt; unit&#xA;override this.OnShutdown : unit -&gt; unit" Usage="xmlFormHostItem.OnShutdown " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown</InterfaceMember>
+        <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnStartup">
+      <MemberSignature Language="C#" Value="protected virtual void OnStartup ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnStartup() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.OnStartup" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnStartup ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnStartup();" />
+      <MemberSignature Language="F#" Value="abstract member OnStartup : unit -&gt; unit&#xA;override this.OnStartup : unit -&gt; unit" Usage="xmlFormHostItem.OnStartup " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Permission">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.Permission Permission { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.Permission Permission" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Permission" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Permission As Permission" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::Permission ^ Permission { Microsoft::Office::InfoPath::Permission ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Permission : Microsoft.Office.InfoPath.Permission" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Permission" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.Permission</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Permission" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.Permission" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryCookie">
+      <MemberSignature Language="C#" Value="protected virtual string PrimaryCookie { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PrimaryCookie" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.PrimaryCookie" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property PrimaryCookie As String" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual property System::String ^ PrimaryCookie { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.PrimaryCookie : string" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.PrimaryCookie" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public virtual void Print ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Print() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Print" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Print ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Print();" />
+      <MemberSignature Language="F#" Value="abstract member Print : unit -&gt; unit&#xA;override this.Print : unit -&gt; unit" Usage="xmlFormHostItem.Print " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Print" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Print">
+      <MemberSignature Language="C#" Value="public virtual void Print (bool showPrintDialog);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Print(bool showPrintDialog) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Print(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Print (showPrintDialog As Boolean)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Print(bool showPrintDialog);" />
+      <MemberSignature Language="F#" Value="abstract member Print : bool -&gt; unit&#xA;override this.Print : bool -&gt; unit" Usage="xmlFormHostItem.Print showPrintDialog" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="showPrintDialog" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="showPrintDialog">To be added.</param>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Print(System.Boolean)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryContract">
+      <MemberSignature Language="C#" Value="protected override System.AddIn.Contract.IContract QueryContract (string contractIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.AddIn.Contract.IContract QueryContract(string contractIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.QueryContract(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function QueryContract (contractIdentifier As String) As IContract" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::AddIn::Contract::IContract ^ QueryContract(System::String ^ contractIdentifier);" />
+      <MemberSignature Language="F#" Value="override this.QueryContract : string -&gt; System.AddIn.Contract.IContract" Usage="xmlFormHostItem.QueryContract contractIdentifier" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.AddIn.Contract.IContract.QueryContract(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.IContract</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contractIdentifier" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="contractIdentifier">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryDataConnection">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.DataConnection QueryDataConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.DataConnection QueryDataConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.QueryDataConnection" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property QueryDataConnection As DataConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::DataConnection ^ QueryDataConnection { Microsoft::Office::InfoPath::DataConnection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryDataConnection : Microsoft.Office.InfoPath.DataConnection" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.QueryDataConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.DataConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.QueryDataConnection" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.DataConnection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public virtual bool ReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.ReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ReadOnly As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool ReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReadOnly : bool" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ReadOnly" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Recovered">
+      <MemberSignature Language="C#" Value="public virtual bool Recovered { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Recovered" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Recovered" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Recovered As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool Recovered { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Recovered : bool" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Recovered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Recovered" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReflectedObject">
+      <MemberSignature Language="C#" Value="protected object ReflectedObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object ReflectedObject" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.ReflectedObject" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property ReflectedObject As Object" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property System::Object ^ ReflectedObject { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ReflectedObject : obj" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.ReflectedObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteCast">
+      <MemberSignature Language="C#" Value="protected System.AddIn.Contract.RemoteArgument RemoteCast (string canonicalName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype System.AddIn.Contract.RemoteArgument RemoteCast(string canonicalName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.RemoteCast(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function RemoteCast (canonicalName As String) As RemoteArgument" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; System::AddIn::Contract::RemoteArgument RemoteCast(System::String ^ canonicalName);" />
+      <MemberSignature Language="F#" Value="override this.RemoteCast : string -&gt; System.AddIn.Contract.RemoteArgument" Usage="xmlFormHostItem.RemoteCast canonicalName" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.AddIn.Contract.RemoteArgument</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="canonicalName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="canonicalName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteEquals">
+      <MemberSignature Language="C#" Value="protected override bool RemoteEquals (System.AddIn.Contract.IContract contract);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool RemoteEquals(class System.AddIn.Contract.IContract contract) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.RemoteEquals(System.AddIn.Contract.IContract)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function RemoteEquals (contract As IContract) As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override bool RemoteEquals(System::AddIn::Contract::IContract ^ contract);" />
+      <MemberSignature Language="F#" Value="override this.RemoteEquals : System.AddIn.Contract.IContract -&gt; bool" Usage="xmlFormHostItem.RemoteEquals contract" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.AddIn.Contract.IContract.RemoteEquals(System.AddIn.Contract.IContract)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="contract" Type="System.AddIn.Contract.IContract" />
+      </Parameters>
+      <Docs>
+        <param name="contract">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoteToString">
+      <MemberSignature Language="C#" Value="protected override string RemoteToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance string RemoteToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.RemoteToString" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function RemoteToString () As String" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; override System::String ^ RemoteToString();" />
+      <MemberSignature Language="F#" Value="override this.RemoteToString : unit -&gt; string" Usage="xmlFormHostItem.RemoteToString " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.AddIn.Contract.IContract.RemoteToString</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public virtual void Save ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Save() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Save" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Save ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Save();" />
+      <MemberSignature Language="F#" Value="abstract member Save : unit -&gt; unit&#xA;override this.Save : unit -&gt; unit" Usage="xmlFormHostItem.Save " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Save" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveAs">
+      <MemberSignature Language="C#" Value="public virtual void SaveAs (string fileUrl);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveAs(string fileUrl) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.SaveAs(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SaveAs (fileUrl As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SaveAs(System::String ^ fileUrl);" />
+      <MemberSignature Language="F#" Value="abstract member SaveAs : string -&gt; unit&#xA;override this.SaveAs : string -&gt; unit" Usage="xmlFormHostItem.SaveAs fileUrl" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileUrl" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileUrl">To be added.</param>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.SaveAs(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerInfo">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.ServerInfo ServerInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ServerInfo ServerInfo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.ServerInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ServerInfo As ServerInfo" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::ServerInfo ^ ServerInfo { Microsoft::Office::InfoPath::ServerInfo ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ServerInfo : Microsoft.Office.InfoPath.ServerInfo" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.ServerInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ServerInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ServerInfo" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.ServerInfo" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetReflectedType">
+      <MemberSignature Language="C#" Value="protected void SetReflectedType (Type reflectedType, object reflectedObject);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SetReflectedType(class System.Type reflectedType, object reflectedObject) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.SetReflectedType(System.Type,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SetReflectedType (reflectedType As Type, reflectedObject As Object)" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; void SetReflectedType(Type ^ reflectedType, System::Object ^ reflectedObject);" />
+      <MemberSignature Language="F#" Value="override this.SetReflectedType : Type * obj -&gt; unit" Usage="xmlFormHostItem.SetReflectedType (reflectedType, reflectedObject)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reflectedType" Type="System.Type" />
+        <Parameter Name="reflectedObject" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="reflectedType">To be added.</param>
+        <param name="reflectedObject">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSaveAsDialogFilename">
+      <MemberSignature Language="C#" Value="public virtual void SetSaveAsDialogFilename (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSaveAsDialogFilename(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.SetSaveAsDialogFilename(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetSaveAsDialogFilename (filename As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SetSaveAsDialogFilename(System::String ^ filename);" />
+      <MemberSignature Language="F#" Value="abstract member SetSaveAsDialogFilename : string -&gt; unit&#xA;override this.SetSaveAsDialogFilename : string -&gt; unit" Usage="xmlFormHostItem.SetSaveAsDialogFilename filename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">To be added.</param>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogFilename(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSaveAsDialogLocation">
+      <MemberSignature Language="C#" Value="public virtual void SetSaveAsDialogLocation (string pathname);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetSaveAsDialogLocation(string pathname) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.SetSaveAsDialogLocation(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetSaveAsDialogLocation (pathname As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void SetSaveAsDialogLocation(System::String ^ pathname);" />
+      <MemberSignature Language="F#" Value="abstract member SetSaveAsDialogLocation : string -&gt; unit&#xA;override this.SetSaveAsDialogLocation : string -&gt; unit" Usage="xmlFormHostItem.SetSaveAsDialogLocation pathname" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pathname" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="pathname">To be added.</param>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.SetSaveAsDialogLocation(System.String)" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signed">
+      <MemberSignature Language="C#" Value="public virtual bool Signed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Signed" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Signed" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Signed As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property bool Signed { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Signed : bool" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Signed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Signed" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.Boolean" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedDataBlocks">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.SignedDataBlockCollection SignedDataBlocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.SignedDataBlockCollection SignedDataBlocks" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.SignedDataBlocks" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SignedDataBlocks As SignedDataBlockCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::SignedDataBlockCollection ^ SignedDataBlocks { Microsoft::Office::InfoPath::SignedDataBlockCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignedDataBlocks : Microsoft.Office.InfoPath.SignedDataBlockCollection" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.SignedDataBlocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignedDataBlockCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.SignedDataBlocks" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sponsored">
+      <MemberSignature Language="C#" Value="protected bool Sponsored { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Sponsored" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Sponsored" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property Sponsored As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; property bool Sponsored { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.Sponsored : bool" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Sponsored" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Submit">
+      <MemberSignature Language="C#" Value="public virtual void Submit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Submit() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Submit" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Submit ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual void Submit();" />
+      <MemberSignature Language="F#" Value="abstract member Submit : unit -&gt; unit&#xA;override this.Submit : unit -&gt; unit" Usage="xmlFormHostItem.Submit " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="M:Microsoft.Office.InfoPath.XmlForm.Submit" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TaskPanes">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.TaskPaneCollection TaskPanes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.TaskPaneCollection TaskPanes" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.TaskPanes" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property TaskPanes As TaskPaneCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::TaskPaneCollection ^ TaskPanes { Microsoft::Office::InfoPath::TaskPaneCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TaskPanes : Microsoft.Office.InfoPath.TaskPaneCollection" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.TaskPanes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.TaskPaneCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.TaskPanes" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.TaskPaneCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Template">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.FormTemplate Template { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.FormTemplate Template" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Template" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Template As FormTemplate" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::FormTemplate ^ Template { Microsoft::Office::InfoPath::FormTemplate ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Template : Microsoft.Office.InfoPath.FormTemplate" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Template" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormTemplate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Template" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.FormTemplate" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TypeInfrastructureManager">
+      <MemberSignature Language="C#" Value="public Microsoft.VisualStudio.Tools.Applications.TypeInfrastructureManager TypeInfrastructureManager { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.VisualStudio.Tools.Applications.TypeInfrastructureManager TypeInfrastructureManager" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.TypeInfrastructureManager" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TypeInfrastructureManager As TypeInfrastructureManager" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::VisualStudio::Tools::Applications::TypeInfrastructureManager ^ TypeInfrastructureManager { Microsoft::VisualStudio::Tools::Applications::TypeInfrastructureManager ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.TypeInfrastructureManager : Microsoft.VisualStudio.Tools.Applications.TypeInfrastructureManager" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.TypeInfrastructureManager" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>get: System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.VisualStudio.Tools.Applications.TypeInfrastructureManager</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public virtual string Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Uri As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ Uri { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uri : string" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Uri" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="User">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.User User { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.User User" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.User" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property User As User" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::User ^ User { Microsoft::Office::InfoPath::User ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.User : Microsoft.Office.InfoPath.User" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.User" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.User</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.User" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.User" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UserRole">
+      <MemberSignature Language="C#" Value="public virtual string UserRole { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string UserRole" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.UserRole" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property UserRole As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ UserRole { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UserRole : string with get, set" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.UserRole" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.UserRole" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ViewInfos">
+      <MemberSignature Language="C#" Value="public virtual Microsoft.Office.InfoPath.ViewInfoCollection ViewInfos { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.ViewInfoCollection ViewInfos" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.ViewInfos" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ViewInfos As ViewInfoCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property Microsoft::Office::InfoPath::ViewInfoCollection ^ ViewInfos { Microsoft::Office::InfoPath::ViewInfoCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ViewInfos : Microsoft.Office.InfoPath.ViewInfoCollection" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.ViewInfos" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ViewInfoCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ViewInfos" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlLang">
+      <MemberSignature Language="C#" Value="public virtual string XmlLang { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string XmlLang" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlFormHostItem.XmlLang" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property XmlLang As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; virtual property System::String ^ XmlLang { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.XmlLang : string with get, set" Usage="Microsoft.Office.InfoPath.XmlFormHostItem.XmlLang" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>This member is a wrapper for the <see cref="P:Microsoft.Office.InfoPath.XmlForm.XmlLang" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</summary>
+        <value>Returns <see cref="T:System.String" />.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.DOMDocument50" />
   <TypeSignature Language="VB.NET" Value="Public Interface DOMDocument50&#xA;Implements IXMLDOMDocument3, XMLDOMDocumentEvents_Event" />
   <TypeSignature Language="C++ CLI" Value="public interface class DOMDocument50 : Microsoft::Office::Interop::InfoPath::Xml::IXMLDOMDocument3, Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_Event" />
+  <TypeSignature Language="F#" Value="type DOMDocument50 = interface&#xA;    interface IXMLDOMDocument3&#xA;    interface XMLDOMDocumentEvents_Event" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>

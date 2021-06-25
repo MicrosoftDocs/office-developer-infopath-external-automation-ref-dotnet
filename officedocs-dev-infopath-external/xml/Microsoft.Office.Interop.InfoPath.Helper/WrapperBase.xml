@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Helper.WrapperBase" />
   <TypeSignature Language="VB.NET" Value="Public MustInherit Class WrapperBase" />
   <TypeSignature Language="C++ CLI" Value="public ref class WrapperBase abstract" />
+  <TypeSignature Language="F#" Value="type WrapperBase = class" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>

@@ -1,0 +1,70 @@
+﻿<Type Name="SubmitEventArgs" FullName="Microsoft.Office.InfoPath.SubmitEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class SubmitEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SubmitEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SubmitEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SubmitEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SubmitEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type SubmitEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event.</summary>
+    <remarks>
+      <para>The <b>SubmitEventArgs</b> object provides the <see cref="P:Microsoft.Office.InfoPath.SubmitEventArgs.CancelableArgs" /> property for getting a reference to the <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> class which provides properties for cancelling the event and setting a custom message to display when the event is cancelled.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SubmitEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SubmitEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SubmitEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelableArgs">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SubmitEventArgs.CancelableArgs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CancelableArgs As XmlFormCancelEventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ CancelableArgs { Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CancelableArgs : Microsoft.Office.InfoPath.XmlFormCancelEventArgs" Usage="Microsoft.Office.InfoPath.SubmitEventArgs.CancelableArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormCancelEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object which provides access to properties for cancelling the event and displaying a custom message.</value>
+        <remarks>
+          <para>Access the <b>XmlFormCancelEventArgs</b> object to cancel the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Submit" /> event and specify a custom message to display when the event is cancelled.</para>
+          <para>The <b>SubmitEventArgs.CancelableArgs.Cancel</b> property is set to <b>true</b> by default.</para>
+          <para>This property can be used only during the <b>Submit</b> event.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

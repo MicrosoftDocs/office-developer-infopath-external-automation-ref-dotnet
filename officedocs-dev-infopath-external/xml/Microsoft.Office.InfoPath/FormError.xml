@@ -1,0 +1,249 @@
+﻿<Type Name="FormError" FullName="Microsoft.Office.InfoPath.FormError">
+  <TypeSignature Language="C#" Value="public abstract class FormError" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormError extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FormError" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class FormError" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FormError abstract" />
+  <TypeSignature Language="F#" Value="type FormError = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents an error in the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> of a form. </summary>
+    <remarks>
+      <para>Each <b>FormError</b> object in an InfoPath form is associated with a node in the form's underlying XML document. When data validation fails for a particular node, InfoPath creates a <b>FormError</b> object and places it in the <b>FormErrorCollection</b> associated with the form.</para>
+      <para>There are three types of data validation errors that can occur in an InfoPath form. They can be determined using the <see cref="P:Microsoft.Office.InfoPath.FormError.FormErrorType" /> property of the <b>FormError</b> class:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <b>FormErrorType.SchemaValidation</b>   Data validation failed as a result of an XML Schema–defined constraint.</description>
+        </item>
+        <item>
+          <description>
+            <b>FormErrorType.SystemGenerated</b>   Data validation failed as a result of constraints defined in the form definition (.xsf) file or as a result of form code calling the <see cref="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> class.</description>
+        </item>
+        <item>
+          <description>
+            <b>FormErrorType.UserDefined</b>   Data validation failed as a result of a custom error defined using the <see cref="Overload:Microsoft.Office.InfoPath.FormErrorCollection.Add" /> method of the <b>FormErrorsCollection</b> class.</description>
+        </item>
+      </list>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, clicking the Button control gets the first error in the <b>FormErrorCollection</b> of the form, and then displays the values of all of the properties of the <b>FormError</b> object.</para>
+      <code>public void ErrorBtn_Clicked(object sender, ClickedEventArgs e)
+{
+   FormError er = this.Errors[0];
+   MessageBox.Show("Short message: " + er.Message);
+   MessageBox.Show("Detailed message: " + er.DetailedMessage); 
+   MessageBox.Show("Error code: " + er.ErrorCode);
+   MessageBox.Show("Error name: " + er.Name);
+   MessageBox.Show("Error type: " + er.FormErrorType.ToString());
+   MessageBox.Show("Error site XML: " + er.Site.OuterXml.ToString());
+}</code>
+      <code>Public Sub ErrorBtn_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   FormError er = Me.Errors(0)
+   MessageBox.Show("Short message: " &amp;amp; er.Message)
+   MessageBox.Show("Detailed message: " &amp;amp; er.DetailedMessage) 
+   MessageBox.Show("Error code: " &amp;amp; er.ErrorCode)
+   MessageBox.Show("Error name: " &amp;amp; er.Name);
+   MessageBox.Show("Error type: " &amp;amp; er.FormErrorType.ToString())
+   MessageBox.Show("Error site XML: " &amp;amp; er.Site.OuterXml.ToString())
+End Sub</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FormError ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormError.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; FormError();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetailedMessage">
+      <MemberSignature Language="C#" Value="public abstract string DetailedMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DetailedMessage" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormError.DetailedMessage" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property DetailedMessage As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ DetailedMessage { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.DetailedMessage : string with get, set" Usage="Microsoft.Office.InfoPath.FormError.DetailedMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the detailed message displayed for the <see cref="T:Microsoft.Office.InfoPath.FormError" /> object.</summary>
+        <value>The text of the detailed message.</value>
+        <remarks>
+          <para>The detailed error message is the longer error message that can be associated with a control when data validation fails for the data entered (or missing) from the control. Users must click a pop-up menu to display the detailed message.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorCode">
+      <MemberSignature Language="C#" Value="public abstract int ErrorCode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ErrorCode" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormError.ErrorCode" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property ErrorCode As Integer" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property int ErrorCode { int get(); void set(int value); };" />
+      <MemberSignature Language="F#" Value="member this.ErrorCode : int with get, set" Usage="Microsoft.Office.InfoPath.FormError.ErrorCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the numeric error code value of a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object.</summary>
+        <value>The error code of the <see cref="T:Microsoft.Office.InfoPath.FormError" /> object.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormErrorType">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormErrorType FormErrorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.FormErrorType FormErrorType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormError.FormErrorType" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property FormErrorType As FormErrorType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::FormErrorType FormErrorType { Microsoft::Office::InfoPath::FormErrorType get(); };" />
+      <MemberSignature Language="F#" Value="member this.FormErrorType : Microsoft.Office.InfoPath.FormErrorType" Usage="Microsoft.Office.InfoPath.FormError.FormErrorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.FormErrorType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the type of the <see cref="T:Microsoft.Office.InfoPath.FormError" /> object.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.FormErrorType" /> that specifies the type of error.</value>
+        <remarks>
+          <para>There are three types of data validation errors that can occur in an InfoPath form that can be determined using the <b>FormErrorType</b> property of the <b>FormError</b> class:</para>
+          <list type="bullet">
+            <item>
+              <description>
+                <b>FormErrorType.SchemaValidation</b> Data validation failed as a result of an XML Schema–defined constraint.</description>
+            </item>
+            <item>
+              <description>
+                <b>FormErrorType.SystemGenerated</b> Data validation failed as a result of constraints defined in the form definition (.xsf) file or as a result of form code calling the <see cref="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError" /> method of the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> class.</description>
+            </item>
+            <item>
+              <description>
+                <b>FormErrorType.UserSpecified</b> Data validation failed as a result of a custom error defined using the <see cref="Overload:Microsoft.Office.InfoPath.FormErrorCollection.Add" /> method of the <b>FormErrorsCollection</b> class.</description>
+            </item>
+          </list>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Message">
+      <MemberSignature Language="C#" Value="public abstract string Message { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Message" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormError.Message" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Message As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Message { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Message : string with get, set" Usage="Microsoft.Office.InfoPath.FormError.Message" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the short message displayed for a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object.</summary>
+        <value>The text of the short message.</value>
+        <remarks>
+          <para>The short error message is displayed as a ScreenTip that is associated with a control when data validation fails for the data entered (or missing) from the control.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormError.Name" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.InfoPath.FormError.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the name of the <see cref="T:Microsoft.Office.InfoPath.FormError" /> object.</summary>
+        <value>The name specified when the error was created.</value>
+        <remarks>
+          <para>The value of the <b>Name</b> property is used only to identify custom errors (errors of type <b>FormErrorType.UserSpecified</b>) in the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> collection. It is not used for schema validation–generated or system-generated errors. If the type of error is schema validation generated or system generated, the <b>Name</b> property will return a null reference (Nothing in Visual Basic).</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator Site { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Site" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormError.Site" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Site As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ Site { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Site : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.FormError.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an <see cref="T:System.Xml.XPath.XPathNavigator" /> that is positioned at the node of a form's underlying XML document that is associated with a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object.</summary>
+        <value>An <see cref="T:System.Xml.XPath.XPathNavigator" /> positioned at the node associated with the <see cref="T:Microsoft.Office.InfoPath.FormError" /> object.</value>
+        <remarks>
+          <para>Using the <b>Site</b> property, you can access all of the properties and methods that the <b>XPathNavigator</b> class provides to work with the underlying XML document of the form.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

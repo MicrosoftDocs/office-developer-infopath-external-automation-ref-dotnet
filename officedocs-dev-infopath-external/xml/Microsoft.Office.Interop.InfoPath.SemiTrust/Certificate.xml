@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate" />
   <TypeSignature Language="VB.NET" Value="Public Interface Certificate" />
   <TypeSignature Language="C++ CLI" Value="public interface class Certificate" />
+  <TypeSignature Language="F#" Value="type Certificate = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.CertificateObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate.ExpirationDate" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExpirationDate As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ ExpirationDate { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ExpirationDate : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate.ExpirationDate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -42,9 +44,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns the expiration date of a digital certificate in the localized 'SHORTDATE' format.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IssuedBy">
@@ -53,6 +59,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate.IssuedBy" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IssuedBy As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ IssuedBy { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.IssuedBy : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate.IssuedBy" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -67,9 +74,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns the issuer of the digital certificate.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IssuedTo">
@@ -78,6 +89,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate.IssuedTo" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IssuedTo As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ IssuedTo { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.IssuedTo : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate.IssuedTo" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -92,9 +104,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns to whom the digital certificate is issued.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Status">
@@ -103,6 +119,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate.Status" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Status As XdCertificateStatus" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::XdCertificateStatus Status { Microsoft::Office::Interop::InfoPath::SemiTrust::XdCertificateStatus get(); };" />
+      <MemberSignature Language="F#" Value="member this.Status : Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.Certificate.Status" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -117,9 +134,14 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns the status of the digital certificate.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The status that is returned is one of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdCertificateStatus" /> enumerated constants.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

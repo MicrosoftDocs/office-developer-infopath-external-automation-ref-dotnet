@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ApplicationEvents" />
   <TypeSignature Language="VB.NET" Value="Public Interface ApplicationEvents&#xA;Implements ApplicationEventsEmpty" />
   <TypeSignature Language="C++ CLI" Value="public interface class ApplicationEvents : Microsoft::Office::Interop::InfoPath::SemiTrust::ApplicationEventsEmpty" />
+  <TypeSignature Language="F#" Value="type ApplicationEvents = interface&#xA;    interface ApplicationEventsEmpty" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,8 +23,65 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>A collection of event objects representing InfoPath application events.</summary>
+    <remarks>
+      <para>This type is a wrapper for a coclass that is required by managed code for COM interoperability. Use this type to access the members of the COM interface implemented by this coclass. For information about the COM interface, including a link to descriptions of its members, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents" />.</para>
+      <para>The <b>ApplicationEvents</b> collection contains event objects used primarily with COM Add-ins to capture application-wide events. These events include:</para>
+      <list type="table">
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.NewXDocument(Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument)" /> Event</term>
+          <description>Occurs when a new form is created.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.Quit" /> Event</term>
+          <description>Occurs when the user quits InfoPath.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.WindowActivate(Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument,Microsoft.Office.Interop.InfoPath.SemiTrust.Window)" /> Event</term>
+          <description>Occurs when any document window is activated.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.WindowDeactivate(Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument,Microsoft.Office.Interop.InfoPath.SemiTrust.Window)" /> Event</term>
+          <description>Occurs when any document window is deactivated.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.WindowSize(Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument,Microsoft.Office.Interop.InfoPath.SemiTrust.Window)" /> Event</term>
+          <description>Occurs when any document window is resized or moved.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.XDocumentBeforeClose(Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument,System.Boolean@)" /> Event</term>
+          <description>Occurs immediately before any open document closes.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.XDocumentBeforePrint(Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument,System.Boolean@)" /> Event</term>
+          <description>Occurs immediately before any open document is printed.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.XDocumentBeforeSave(Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument,System.Boolean@)" /> Event</term>
+          <description>Occurs immediately before any open document is saved.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.XDocumentChange" /> Event</term>
+          <description>Occurs when a new form is created, when an existing form is opened, or when another form is made the active form.</description>
+        </item>
+        <item>
+          <term>
+            <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._ApplicationEvents.XDocumentOpen(Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument)" /> Event</term>
+          <description>Occurs when a document is opened.</description>
+        </item>
+      </list>
+      <para>Microsoft InfoPath supports COM Add-ins for extending the form editing user experience. COM Add-in support in InfoPath is available in the form editing environment. The form design environment is not able to be extended through the use of COM Add-ins. For more information about using the <b>ApplicationEvents</b> collection and creating a COM Add-in for InfoPath, see How To: Create a COM Add-in to Add Custom Features to InfoPath..</para>
+      <para />
+    </remarks>
   </Docs>
   <Members />
 </Type>

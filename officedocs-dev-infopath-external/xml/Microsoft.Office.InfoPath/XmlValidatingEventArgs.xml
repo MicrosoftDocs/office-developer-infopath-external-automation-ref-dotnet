@@ -1,0 +1,409 @@
+﻿<Type Name="XmlValidatingEventArgs" FullName="Microsoft.Office.InfoPath.XmlValidatingEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class XmlValidatingEventArgs : Microsoft.Office.InfoPath.XmlEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlValidatingEventArgs extends Microsoft.Office.InfoPath.XmlEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlValidatingEventArgs&#xA;Inherits XmlEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlValidatingEventArgs abstract : Microsoft::Office::InfoPath::XmlEventArgs" />
+  <TypeSignature Language="F#" Value="type XmlValidatingEventArgs = class&#xA;    inherit XmlEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.XmlEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event of a field or group.</summary>
+    <remarks>
+      <para>The <b>XmlValidatingEventArgs</b> object is passed to the event handler for the <b>Validating</b> event, which occurs after changes to a form's underlying XML document have been accepted but before the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" /> event has occurred. </para>
+      <para>The <b>XmlValidatingEventArgs</b> class is derived from the <see cref="T:Microsoft.Office.InfoPath.XmlEventArgs" /> class which provides properties that can be used within the event handler to get information about the data that is being validated in the form's underlying XML document and about the node that is being validated. For example, the <b>XmlEventArgs</b> object provides the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property which gets a reference to an <b>XPathNavigator</b> object that points to the node being validated in the form's underlying XML document. However, note that the underlying XML document is read-only during the <b>Validating</b> event.</para>
+      <para>In addition to these properties, the <b>XmlValidatingEventArgs</b> class provides the overloaded <see cref="Overload:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError" /> method for adding errors to the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> of the form, and to specify custom error information for errors that occur during the <b>Validating</b> event.</para>
+      <para>The overloaded <b>ReportError</b> method of the <b>XmlValidatingEventArgs</b> class corresponds to the <b>ReportError</b> method of the <b>DataDOMEvent</b> interface in the Microsoft Office InfoPath 2003 managed code object model.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlValidatingEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlValidatingEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public abstract void ReportError (System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(class System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ReportError (node As XPathNavigator, siteIndependent As Boolean, message As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReportError(System::Xml::XPath::XPathNavigator ^ node, bool siteIndependent, System::String ^ message);" />
+      <MemberSignature Language="F#" Value="abstract member ReportError : System.Xml.XPath.XPathNavigator * bool * string -&gt; unit" Usage="xmlValidatingEventArgs.ReportError (node, siteIndependent, message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="siteIndependent" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node">An <see cref="T:System.Xml.XPath.XPathNavigator" /> positioned at the node that contains the data the error is associated with.</param>
+        <param name="siteIndependent">Sets the condition for automatic deletion of the <b>FormError</b> object. If set to <b>true</b>, the <b>FormError</b> object will be deleted for changes to any nodes that match the XPath expression returned by the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Match" /> property of this event object. If set to <b>false</b>, the <b>FormError</b> object is deleted the next time the form is validated only when the node returned by the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property of this event object has been changed.</param>
+        <param name="message">The text to be used for the short error message.</param>
+        <summary>Creates a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object that contains custom error information with the specified values and adds it to the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> object of the form.</summary>
+        <remarks>
+          <para>The <b>ReportError</b> method is used to create a custom error for an error that occurred during the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event.</para>
+          <para>When the <b>ReportError</b> method is called, InfoPath creates a <b>FormError</b> object and adds it to the <b>FormErrorCollection</b> of the current form. <b>FormError</b> objects are removed from the collection when the validation constraint is no longer invalid. In certain cases they can be explicitly removed using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Delete(Microsoft.Office.InfoPath.FormError)" /> or <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.DeleteAll" /> methods.</para>
+          <para>
+            <b>FormError</b> objects can also be created using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" /> method of the <b>FormErrorCollection</b> class.</para>
+          <para>
+            <b>Note</b>: Site-independent errors should be used when you want the errors to apply to all nodes of the same type. If you want the error to apply to a specific node, use site-dependent errors.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property that the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> class inherits from the <see cref="T:Microsoft.Office.InfoPath.XmlEventArgs" /> class is used to check the value of the node that raised the <b>Validating</b> event. If the data validation fails, the <b>ReportError</b> method is used to create a custom error.</para>
+          <code>public void field1_Validating(object sender, XmlValidatingEventArgs e)
+{
+   if (e.Site.InnerXml != String.Empty)
+   {
+      int fieldValue = int.Parse((e.Site.InnerXml));
+
+      if (fieldValue &amp;gt; 50)
+      {
+         e.ReportError(e.Site,
+            false,
+            "Quantity cannot exceed 50.");
+      }
+
+      if (fieldValue &amp;lt; 0)
+      {
+         e.ReportError(e.Site,
+            false,
+            "Quantity cannot be less than 0.");
+      }
+   }
+}</code>
+          <code>Public Sub field1_Validating(ByVal sender As Object , _
+   ByVal e As XmlValidatingEventArgs)
+   If (e.Site.InnerXml &amp;lt;&amp;gt; String.Empty) Then
+      Integer fieldValue = Integer.Parse((e.Site.InnerXml))
+
+      If (fieldValue &amp;gt; 50) Then
+         e.ReportError(e.Site,
+            false,
+            "Quantity cannot exceed 50.")
+      End If
+
+      If (fieldValue &amp;lt; 0) Then
+         e.ReportError(e.Site,
+            false,
+            "Quantity cannot be less than 0.")
+      End If
+   End If
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public abstract void ReportError (System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(class System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ReportError (node As XPathNavigator, siteIndependent As Boolean, message As String, messageDetails As String)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReportError(System::Xml::XPath::XPathNavigator ^ node, bool siteIndependent, System::String ^ message, System::String ^ messageDetails);" />
+      <MemberSignature Language="F#" Value="abstract member ReportError : System.Xml.XPath.XPathNavigator * bool * string * string -&gt; unit" Usage="xmlValidatingEventArgs.ReportError (node, siteIndependent, message, messageDetails)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="siteIndependent" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageDetails" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="node">An <see cref="T:System.Xml.XPath.XPathNavigator" /> positioned at the node that contains the data the error is associated with.</param>
+        <param name="siteIndependent">Sets the condition for automatic deletion of the <b>FormError</b> object. If set to <b>true</b>, the <b>FormError</b> object will be deleted for changes to any nodes that match the XPath expression returned by the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Match" /> property of this event object. If set to <b>false</b>, the <b>FormError</b> object is deleted the next time the form is validated only when the node returned by the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property of this event object has been changed.</param>
+        <param name="message">The text to be used for the short error message.</param>
+        <param name="messageDetails">The text to be used for the detailed error message.</param>
+        <summary>Creates a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object that contains custom error information with the specified values and adds it to the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> object of the form.</summary>
+        <remarks>
+          <para>The <b>ReportError</b> method is used to create a custom error for an error that occurred during the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event.</para>
+          <para>When the <b>ReportError</b> method is called, InfoPath creates a <b>FormError</b> object and adds it to the <b>FormErrorCollection</b> of the current form. <b>FormError</b> objects are removed from the collection when the validation constraint is no longer invalid. In certain cases they can be explicitly removed using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Delete(Microsoft.Office.InfoPath.FormError)" /> or <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.DeleteAll" /> methods.</para>
+          <para>
+            <b>FormError</b> objects can also be created using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" /> method of the <b>FormErrorCollection</b> class.</para>
+          <para>
+            <b>Note</b>: Site-independent errors should be used when you want the errors to apply to all nodes of the same type. If you want the error to apply to a specific node, use site-dependent errors.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property that the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> class inherits from the <see cref="T:Microsoft.Office.InfoPath.XmlEventArgs" /> class is used to check the value of the node that raised the <b>Validating</b> event. If the data validation fails, the <b>ReportError</b> method is used to create a custom error.</para>
+          <code>public void field1_Validating(object sender, XmlValidatingEventArgs e)
+{
+   if (e.Site.InnerXml != String.Empty)
+   {
+      int fieldValue = int.Parse((e.Site.InnerXml));
+
+      if (fieldValue &amp;gt; 50)
+      {
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot exceed 50.");
+      }
+
+      if (fieldValue &amp;lt; 0)
+      {
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot be less than 0.");
+      }
+   }
+}</code>
+          <code>Public Sub field1_Validating(ByVal sender As Object , _
+   ByVal e As XmlValidatingEventArgs)
+   If (e.Site.InnerXml &amp;lt;&amp;gt; String.Empty) Then
+      Integer fieldValue = Integer.Parse((e.Site.InnerXml))
+
+      If (fieldValue &amp;gt; 50) Then
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot exceed 50.")
+      End If
+
+      If (fieldValue &amp;lt; 0) Then
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot be less than 0.")
+      End If
+   End If
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public abstract void ReportError (System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails, int errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(class System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails, int32 errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ReportError (node As XPathNavigator, siteIndependent As Boolean, message As String, messageDetails As String, errorCode As Integer)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReportError(System::Xml::XPath::XPathNavigator ^ node, bool siteIndependent, System::String ^ message, System::String ^ messageDetails, int errorCode);" />
+      <MemberSignature Language="F#" Value="abstract member ReportError : System.Xml.XPath.XPathNavigator * bool * string * string * int -&gt; unit" Usage="xmlValidatingEventArgs.ReportError (node, siteIndependent, message, messageDetails, errorCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="siteIndependent" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageDetails" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="node">An <see cref="T:System.Xml.XPath.XPathNavigator" /> positioned at the node that contains the data the error is associated with. </param>
+        <param name="siteIndependent">Sets the condition for automatic deletion of the <b>FormError</b> object. If set to <b>true</b>, the <b>FormError</b> object will be deleted for changes to any nodes that match the XPath expression returned by the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Match" /> property of this event object. If set to <b>false</b>, the <b>FormError</b> object is deleted the next time the form is validated only when the node returned by the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property of this event object has been changed.</param>
+        <param name="message">The text to be used for the short error message.</param>
+        <param name="messageDetails">The text to be used for the detailed error message.</param>
+        <param name="errorCode">The number to be used as the error code.</param>
+        <summary>Creates a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object that contains custom error information with the specified values and adds it to the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> object of the form.</summary>
+        <remarks>
+          <para>The <b>ReportError</b> method is used to create a custom error for an error that occurred during the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event.</para>
+          <para>When the <b>ReportError</b> method is called, InfoPath creates a <b>FormError</b> object and adds it to the <b>FormErrorCollection</b> of the current form. <b>FormError</b> objects are removed from the collection when the validation constraint is no longer invalid. In certain cases they can be explicitly removed using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Delete(Microsoft.Office.InfoPath.FormError)" /> or <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.DeleteAll" /> methods.</para>
+          <para>
+            <b>FormError</b> objects can also be created using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" /> method of the <b>FormErrorCollection</b> class.</para>
+          <para>
+            <b>Note</b>: Site-independent errors should be used when you want the errors to apply to all nodes of the same type. If you want the error to apply to a specific node, use site-dependent errors.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property that the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> class inherits from the <see cref="T:Microsoft.Office.InfoPath.XmlEventArgs" /> class is used to check the value of the node that raised the <b>Validating</b> event. If the data validation fails, the <b>ReportError</b> method is used to create a custom error.</para>
+          <code>public void field1_Validating(object sender, XmlValidatingEventArgs e)
+{
+   if (e.Site.InnerXml != String.Empty)
+   {
+      int fieldValue = int.Parse((e.Site.InnerXml));
+
+      if (fieldValue &amp;gt; 50)
+      {
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot exceed 50.",
+            12345);
+
+      }
+
+      if (fieldValue &amp;lt; 0)
+      {
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot be less than 0.",
+            12346);
+      }
+   }
+}</code>
+          <code>Public Sub field1_Validating(ByVal sender As Object , _
+   ByVal e As XmlValidatingEventArgs)
+   If (e.Site.InnerXml &amp;lt;&amp;gt; String.Empty) Then
+      Integer fieldValue = Integer.Parse((e.Site.InnerXml))
+
+      If (fieldValue &amp;gt; 50) Then
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot exceed 50.",
+            12345)
+      End If
+
+      If (fieldValue &amp;lt; 0) Then
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot be less than 0.",
+            12346)
+      End If
+   End If
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="ReportError">
+      <MemberSignature Language="C#" Value="public abstract void ReportError (System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails, int errorCode, Microsoft.Office.InfoPath.ErrorMode errorMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReportError(class System.Xml.XPath.XPathNavigator node, bool siteIndependent, string message, string messageDetails, int32 errorCode, valuetype Microsoft.Office.InfoPath.ErrorMode errorMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlValidatingEventArgs.ReportError(System.Xml.XPath.XPathNavigator,System.Boolean,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void ReportError(System::Xml::XPath::XPathNavigator ^ node, bool siteIndependent, System::String ^ message, System::String ^ messageDetails, int errorCode, Microsoft::Office::InfoPath::ErrorMode errorMode);" />
+      <MemberSignature Language="F#" Value="abstract member ReportError : System.Xml.XPath.XPathNavigator * bool * string * string * int * Microsoft.Office.InfoPath.ErrorMode -&gt; unit" Usage="xmlValidatingEventArgs.ReportError (node, siteIndependent, message, messageDetails, errorCode, errorMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Xml.XPath.XPathNavigator" />
+        <Parameter Name="siteIndependent" Type="System.Boolean" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="messageDetails" Type="System.String" />
+        <Parameter Name="errorCode" Type="System.Int32" />
+        <Parameter Name="errorMode" Type="Microsoft.Office.InfoPath.ErrorMode" />
+      </Parameters>
+      <Docs>
+        <param name="node">An <see cref="T:System.Xml.XPath.XPathNavigator" /> positioned at the node that contains the data the error is associated with.</param>
+        <param name="siteIndependent">Sets the condition for automatic deletion of the <b>FormError</b> object. If set to <b>true</b>, the <b>FormError</b> object will be deleted for changes to any nodes that match the XPath expression returned by the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Match" /> property of this event object. If set to <b>false</b>, the <b>FormError</b> object is deleted the next time the form is validated only when the node returned by the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property of this event object has been changed.</param>
+        <param name="message">The text to be used for the short error message.</param>
+        <param name="messageDetails">The text to be used for the detailed error message.</param>
+        <param name="errorCode">The number to be used as the error code.</param>
+        <param name="errorMode">An <see cref="T:Microsoft.Office.InfoPath.ErrorMode" /> that specifies whether the error will be displayed in a modal dialog box, or modelessly with a wavy underline in the affected control. </param>
+        <summary>Creates a <see cref="T:Microsoft.Office.InfoPath.FormError" /> object that contains custom error information with the specified values and adds it to the <see cref="T:Microsoft.Office.InfoPath.FormErrorCollection" /> object of the form.</summary>
+        <remarks>
+          <para>The <b>ReportError</b> method is used to create a custom error for an error that occurred during the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event.</para>
+          <para>When the <b>ReportError</b> method is called, InfoPath creates a <b>FormError</b> object and adds it to the <b>FormErrorCollection</b> of the current form. <b>FormError</b> objects are removed from the collection when the validation constraint is no longer invalid. In certain cases they can be explicitly removed using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Delete(Microsoft.Office.InfoPath.FormError)" /> or <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.DeleteAll" /> methods.</para>
+          <para>
+            <b>FormError</b> objects can also be created using the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String)" /> method of the <b>FormErrorCollection</b> class.</para>
+          <para>
+            <b>Note</b>: Site-independent errors should be used when you want the errors to apply to all nodes of the same type. If you want the error to apply to a specific node, use site-dependent errors.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property that the <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> class inherits from the <see cref="T:Microsoft.Office.InfoPath.XmlEventArgs" /> class is used to check the value of the node that raised the <b>Validating</b> event. If the data validation fails, the <b>ReportError</b> method is used to create a custom error.</para>
+          <code>public void field1_Validating(object sender, XmlValidatingEventArgs e)
+{
+   if (e.Site.InnerXml != String.Empty)
+   {
+      int fieldValue = int.Parse((e.Site.InnerXml));
+
+      if (fieldValue &amp;gt; 50)
+      {
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot exceed 50.",
+            12345,
+            ErrorMode.Modeless);
+      }
+
+      if (fieldValue &amp;lt; 0)
+      {
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot be less than 0.",
+            12346,
+            ErrorMode.Modeless);
+      }
+   }
+}</code>
+          <code>Public Sub field1_Validating(ByVal sender As Object , _
+   ByVal e As XmlValidatingEventArgs)
+   If (e.Site.InnerXml &amp;lt;&amp;gt; String.Empty) Then
+      Integer fieldValue = Integer.Parse((e.Site.InnerXml))
+
+      If (fieldValue &amp;gt; 50) Then
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot exceed 50.",
+            12345,
+            ErrorMode.Modeless)
+      End If
+
+      If (fieldValue &amp;lt; 0) Then
+         e.ReportError(e.Site,
+            false,
+            "Invalid quantity",
+            "The total number cannot be less than 0.",
+            12346,
+            ErrorMode.Modeless)
+      End If
+   End If
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,196 @@
+﻿<Type Name="FormTemplate" FullName="Microsoft.Office.InfoPath.FormTemplate">
+  <TypeSignature Language="C#" Value="public abstract class FormTemplate" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormTemplate extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FormTemplate" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class FormTemplate" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FormTemplate abstract" />
+  <TypeSignature Language="F#" Value="type FormTemplate = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents a form template.</summary>
+    <remarks>
+      <para>The <b>FormTemplate</b> class implements properties for getting information about a form template, including its version number, its cache identifier, the Uniform Resource Identifier (URI) it was loaded from, and an <see cref="T:System.Xml.XPath.XPathNavigator" /> object positioned at the root of its form definition (.xsf) file. The <b>FormTemplate</b> class also implements a method for opening a file contained within the form template .xsn file.</para>
+      <para>A <b>FormTemplate</b> object that represents the form template associated with the current form is accessed through the <see cref="P:Microsoft.Office.InfoPath.XmlForm.Template" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, a reference is set to the <b>FormTemplate</b> object for the current form template, then the code displays the values of the <see cref="P:Microsoft.Office.InfoPath.FormTemplate.Version" />, <see cref="P:Microsoft.Office.InfoPath.FormTemplate.CacheId" />, and <see cref="P:Microsoft.Office.InfoPath.FormTemplate.Uri" /> properties of the form template.</para>
+      <code>FormTemplate myTemplate = this.Template;
+
+string templateProperties = "Version: " + myTemplate.Version +
+   "\nCacheId: " + myTemplate.CacheId +
+   "\nUri: " + myTemplate.Url.ToString();
+MessageBox.Show(templateProperties);</code>
+      <code>Dim myTemplate As FormTemplate  = Me.Template
+
+Dim templateProperties As String = "Version: " &amp;amp; myTemplate.Version &amp;amp; _
+   vbNewLine &amp;amp; "CacheId: " &amp;amp; myTemplate.CacheId &amp;amp; _
+   vbNewLine &amp;amp; "Uri: " + myTemplate.Url.ToString()
+MessageBox.Show(templateProperties)</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FormTemplate ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormTemplate.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; FormTemplate();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CacheId">
+      <MemberSignature Language="C#" Value="public abstract string CacheId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CacheId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormTemplate.CacheId" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CacheId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ CacheId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CacheId : string" Usage="Microsoft.Office.InfoPath.FormTemplate.CacheId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the form template cache identifier.</summary>
+        <value>The form template cache identifier.</value>
+        <remarks>
+          <para>The <b>CacheID</b> property is set at run time, and the URL it returns points to the folder where the form template's files are cached. The value returned is from the following location in the file system:</para>
+          <code>%USERPROFILE%\Local Settings\Application Data\Microsoft\InfoPath\FormCache1\&lt;span class="placeholder"&gt;foldername&lt;/span&gt;\&lt;span class="placeholder"&gt;cacheID&lt;/span&gt;</code>
+          <para>Where foldername is a random name assigned in a user's form cache, and cacheID is the cache ID value.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Manifest">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator Manifest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Manifest" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormTemplate.Manifest" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Manifest As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ Manifest { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Manifest : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.FormTemplate.Manifest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an XPathNavigator object positioned at the root of the form template's form definition (.xsf) file. </summary>
+        <value>An <b>XPathNavigator</b> object positioned at the root of the form template's form definition (.xsf) file.</value>
+        <remarks>
+          <para>The <b>XPathNavigator</b> object returned is read-write, but changes are not saved when the <see cref="T:Microsoft.Office.InfoPath.FormTemplate" /> object is closed.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenFileFromPackage">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream OpenFileFromPackage (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream OpenFileFromPackage(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormTemplate.OpenFileFromPackage(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function OpenFileFromPackage (filename As String) As Stream" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract System::IO::Stream ^ OpenFileFromPackage(System::String ^ filename);" />
+      <MemberSignature Language="F#" Value="abstract member OpenFileFromPackage : string -&gt; System.IO.Stream" Usage="formTemplate.OpenFileFromPackage filename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="filename">The name of the file to open.</param>
+        <summary>Opens a file contained within the form template (.xsn) file.</summary>
+        <returns>The specified file as a <see cref="T:System.IO.Stream" /> object.</returns>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.IO.IOException">An I/O error, such as file not found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Uri">
+      <MemberSignature Language="C#" Value="public abstract Uri Uri { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri Uri" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormTemplate.Uri" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Uri As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ Uri { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Uri : Uri" Usage="Microsoft.Office.InfoPath.FormTemplate.Uri" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the Uniform Resource Identifier (URI) of a form template.</summary>
+        <value>The Uniform Resource Identifier (URI) of the form template.</value>
+        <remarks>
+          <para>The <b>URI</b> property can take the form of a Uniform Resource Locator (URL) or Uniform Resource Name (URN), depending on the location from which the form was opened.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public abstract string Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Version" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FormTemplate.Version" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Version As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Version { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Version : string" Usage="Microsoft.Office.InfoPath.FormTemplate.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the version of a form template.</summary>
+        <value>The version of the form template.</value>
+        <remarks>
+          <para>To get the version of the InfoPath application, use the <see cref="P:Microsoft.Office.InfoPath.Application.Version" /> property instead.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

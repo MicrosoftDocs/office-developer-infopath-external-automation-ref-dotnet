@@ -1,0 +1,146 @@
+﻿<Type Name="ServerInfo" FullName="Microsoft.Office.InfoPath.ServerInfo">
+  <TypeSignature Language="C#" Value="public abstract class ServerInfo" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServerInfo extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ServerInfo" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ServerInfo" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ServerInfo abstract" />
+  <TypeSignature Language="F#" Value="type ServerInfo = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides information about the SharePoint Foundation server where a form is located.</summary>
+    <remarks>
+      <para>If the form template was published to a SharePoint Foundation server, the members of the <see cref="T:Microsoft.Office.InfoPath.ServerInfo" /> class can be used to determine information about where the form is published, such as the URL of the document library where the form is located. To access the <see cref="T:Microsoft.Office.InfoPath.ServerInfo" /> object associated with the current form, use the <see cref="P:Microsoft.Office.InfoPath.XmlForm.ServerInfo" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para>In a managed code form template created using the object model provided by the members of the <see cref="N:Microsoft.Office.InfoPath" /> namespace, you can use the <b>this</b> (C#) or <b>Me</b> (Visual Basic) keyword in your form code to access the members of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class directly (without requiring an object variable that establishes a reference to the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class).</para>
+      <para>For example, the following code example uses the <b>this</b> or <b>Me</b> keyword to access the <see cref="T:Microsoft.Office.InfoPath.ServerInfo" /> object associated with the current form, and then uses the <see cref="P:Microsoft.Office.InfoPath.ServerInfo.SharePointListUrl" /> property to create a string variable that contains the URL of the document library where the form is located.</para>
+      <code>string strListUrl = &lt;span class="label"&gt;this&lt;/span&gt;.ServerInfo.SharePointListUrl.OriginalString;</code>
+      <code>Dim strListUrl As String = &lt;span class="label"&gt;Me&lt;/span&gt;.ServerInfo.SharePointListUrl.OriginalString</code>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ServerInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.ServerInfo.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ServerInfo();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointListUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SharePointListUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SharePointListUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ServerInfo.SharePointListUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SharePointListUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SharePointListUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointListUrl : Uri" Usage="Microsoft.Office.InfoPath.ServerInfo.SharePointListUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:System.Uri" /> that provides the URL of the document library where the form is located.</summary>
+        <value>The URL of the document library.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointServerRootUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SharePointServerRootUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SharePointServerRootUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ServerInfo.SharePointServerRootUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SharePointServerRootUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SharePointServerRootUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointServerRootUrl : Uri" Usage="Microsoft.Office.InfoPath.ServerInfo.SharePointServerRootUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:System.Uri" /> that provides the root URL of the SharePoint server where the form is located.</summary>
+        <value>The root URL of the SharePoint server where the form is located.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointSiteCollectionUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SharePointSiteCollectionUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SharePointSiteCollectionUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ServerInfo.SharePointSiteCollectionUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SharePointSiteCollectionUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SharePointSiteCollectionUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointSiteCollectionUrl : Uri" Usage="Microsoft.Office.InfoPath.ServerInfo.SharePointSiteCollectionUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:System.Uri" /> that provides the URL of the SharePoint site collection where the form is located.</summary>
+        <value>The URL of the SharePoint site collection where the form is located.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SharePointSiteUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SharePointSiteUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SharePointSiteUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ServerInfo.SharePointSiteUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SharePointSiteUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SharePointSiteUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SharePointSiteUrl : Uri" Usage="Microsoft.Office.InfoPath.ServerInfo.SharePointSiteUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:System.Uri" /> that provides the URL of the SharePoint site where the form is located.</summary>
+        <value>The URL of the SharePoint site where the form is located.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

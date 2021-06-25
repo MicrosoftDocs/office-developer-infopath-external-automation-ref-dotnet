@@ -1,0 +1,36 @@
+﻿<Type Name="XmlValidatingEventHandler" FullName="Microsoft.Office.InfoPath.XmlValidatingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void XmlValidatingEventHandler(object sender, XmlValidatingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlValidatingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlValidatingEventHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub XmlValidatingEventHandler(sender As Object, e As XmlValidatingEventArgs)" />
+  <TypeSignature Language="C++ CLI" Value="public delegate void XmlValidatingEventHandler(System::Object ^ sender, XmlValidatingEventArgs ^ e);" />
+  <TypeSignature Language="F#" Value="type XmlValidatingEventHandler = delegate of obj * XmlValidatingEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.InfoPath.XmlValidatingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">The source of the event.</param>
+    <param name="e">An <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> object that contains the event data.</param>
+    <summary>Represents the method that will handle the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event of a field or group.</summary>
+    <remarks>
+      <para>
+        <b>Important</b>: The code skeleton for an event handler associated with the <b>Validating</b> event, which uses the <b>XmlValidatingEventHandler</b> delegate, should be added only from the Microsoft InfoPath user interface. For more information on how to add event handlers in InfoPath, see How Do I: Add an Event Handler.</para>
+      <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>For an example of using the <b>XmlValidatingEventHandler</b> delegate, see the sample code in the <b>Validating</b> event of the <see cref="T:Microsoft.Office.InfoPath.XmlEvent" /> class.</para>
+    </example>
+  </Docs>
+</Type>

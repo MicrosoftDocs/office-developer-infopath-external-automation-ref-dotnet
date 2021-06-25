@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2" />
   <TypeSignature Language="VB.NET" Value="Public Interface _XDocument2&#xA;Implements _XDocument" />
   <TypeSignature Language="C++ CLI" Value="public interface class _XDocument2 : Microsoft::Office::Interop::InfoPath::SemiTrust::_XDocument" />
+  <TypeSignature Language="F#" Value="type _XDocument2 = interface&#xA;    interface _XDocument" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,7 +23,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -32,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.CreateDOM" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateDOM () As IXMLDOMDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ CreateDOM();" />
+      <MemberSignature Language="F#" Value="abstract member CreateDOM : unit -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" Usage="_XDocument2.CreateDOM " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -47,9 +49,51 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <summary>Creates a new instance of the XML Document Object Model (DOM) in memory.</summary>
+        <returns>An <b>IXMLDOMDocument</b> of the new instance of the XML Document Object Model (DOM).</returns>
+        <remarks>
+          <para>Using the <b>CreateDOM</b> method to create an instance of the XML DOM is equivalent to using the following method of creating a Microsoft XML Core Services (MSXML) 5.0 <b>DOMDocument</b> object:</para>
+          <code>var objDoc = new ActiveXObject("Msxml2.DOMDocument.5.0");</code>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>
+            <b>Note</b>: When automating InfoPath, the <b>setProperty</b> method of the <b>IXMLDOMDocument2</b> object may fail for secondary data sources. To use the <b>setProperty</b> method, follow this example:</para>
+          <code>IXMLDOMDocument2 myDocument = (IXMLDOMDocument2) thisXDocument.&lt;span class="label"&gt;CreateDOM&lt;/span&gt;();
+myDocument.setProperty("SelectionNameSpaces",namespaceString);</code>
+          <para />
+        </remarks>
+        <example>
+          <code>// create a new XMLDOMDocument that can be used by InfoPath
+IXMLDOMDocument newDOM = thisXDocument.&lt;span class="label"&gt;CreateDOM&lt;/span&gt;();
+// Get one node from the main DOM and add it to the new DOM
+IXMLDOMNode referenceNode = thisXDocument.DOM.selectSingleNode("//my:group1");
+newDOM.appendChild(referenceNode);
+// create a new node that will be added to the new DOM
+IXMLDOMNode newNode = newDOM.createNode(1,"my:Group2",referenceNode.namespaceURI);
+// Set its value
+newNode.text = "this is a group2 node";
+// Set the SelectionNamespaces attribute with the namespace used in the new DOM
+((IXMLDOMDocument2)newDOM).setProperty("SelectionNamespaces","xmlns:my='" + referenceNode.namespaceURI + "'");
+// Select one mode from the new DOM and add the new Node as its child
+IXMLDOMNode parentNode = newDOM.selectSingleNode("//my:group1");
+parentNode.appendChild(newNode);</code>
+        </example>
+        <example>
+          <code>// create a new XMLDOMDocument that can be used by InfoPath
+IXMLDOMDocument newDOM = thisXDocument.&lt;span class="label"&gt;CreateDOM&lt;/span&gt;();
+// Get one node from the main DOM and add it to the new DOM
+IXMLDOMNode referenceNode = thisXDocument.DOM.selectSingleNode("//my:group1");
+newDOM.appendChild(referenceNode);
+// create a new node that will be added to the new DOM
+IXMLDOMNode newNode = newDOM.createNode(1,"my:Group2",referenceNode.namespaceURI);
+// Set its value
+newNode.text = "this is a group2 node";
+// Set the SelectionNamespaces attribute with the namespace used in the new DOM
+((IXMLDOMDocument2)newDOM).setProperty("SelectionNamespaces","xmlns:my='" + referenceNode.namespaceURI + "'");
+// Select one mode from the new DOM and add the new Node as its child
+IXMLDOMNode parentNode = newDOM.selectSingleNode("//my:group1");
+parentNode.appendChild(newNode);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="DataAdapters">
@@ -58,6 +102,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DataAdapters" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataAdapters As DataAdaptersCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::DataAdaptersCollection ^ DataAdapters { Microsoft::Office::Interop::InfoPath::SemiTrust::DataAdaptersCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataAdapters : Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DataAdapters" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -72,9 +117,23 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersCollection" /> collection that is associated with a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>DataAdapters</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to a data adapter called "Main query":</para>
+          <code>object objDataAdapter;
+objDataAdapter = thisXDocument.&lt;span class="label"&gt;DataAdapters&lt;/span&gt;["Main query"];</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>DataAdapters</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to a data adapter called "Main query":</para>
+          <code>object objDataAdapter;
+objDataAdapter = thisXDocument.&lt;span class="label"&gt;DataAdapters&lt;/span&gt;["Main query"];</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="DataObjects">
@@ -83,6 +142,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DataObjects" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataObjects As DataObjectsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::DataObjectsCollection ^ DataObjects { Microsoft::Office::Interop::InfoPath::SemiTrust::DataObjectsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DataObjects : Microsoft.Office.Interop.InfoPath.SemiTrust.DataObjectsCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DataObjects" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.DataObjects</InterfaceMember>
@@ -100,9 +160,52 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.DataObjectsCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataObjectsCollection" /> collection that is associated with a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>DataObjects</b> collection provides programmatic access to a form's secondary data sources. Each secondary data source is contained in a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object within the <b>DataObjects</b> collection.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>DataObjects</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to the "CityList" secondary data source:</para>
+          <code>object objDataObject;
+objDataObject = thisXDocument.&lt;span class="label"&gt;DataObjects&lt;/span&gt;["CityList"];</code>
+          <para>In the following example, implemented as an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_Event.OnClick" /> event handler for a button on a form, the <b>DataObjects</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataObjectsCollection" /> collection. The code then loops through the collection and displays the positional index and name of each <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object that it contains:</para>
+          <code>[InfoPathEventHandler(MatchPath="ShowDataObjectNames", EventType=InfoPathEventType.OnClick)]
+public void ShowDataObjectNames_OnClick(DocActionEvent e)
+{
+ // Set a reference to the DataObjects collection.
+ DataObjectsCollection dataObjects = thisXDocument.&lt;span class="label"&gt;DataObjects&lt;/span&gt;;
+
+ // Loop through the collection and display the name
+ // of each DataObject object that it contains.
+ for (int i=0; i &amp;lt; dataObjects.Count; i++)
+ {
+  thisXDocument.UI.Alert("Data object " + i + ": " + dataObjects[i].Name);
+ }
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>DataObjects</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to the "CityList" secondary data source:</para>
+          <code>object objDataObject;
+objDataObject = thisXDocument.&lt;span class="label"&gt;DataObjects&lt;/span&gt;["CityList"];</code>
+          <para>In the following example, implemented as an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_Event.OnClick" /> event handler for a button on a form, the <b>DataObjects</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataObjectsCollection" /> collection. The code then loops through the collection and displays the positional index and name of each <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object that it contains:</para>
+          <code>[InfoPathEventHandler(MatchPath="ShowDataObjectNames", EventType=InfoPathEventType.OnClick)]
+public void ShowDataObjectNames_OnClick(DocActionEvent e)
+{
+ // Set a reference to the DataObjects collection.
+ DataObjectsCollection dataObjects = thisXDocument.&lt;span class="label"&gt;DataObjects&lt;/span&gt;;
+
+ // Loop through the collection and display the name
+ // of each DataObject object that it contains.
+ for (int i=0; i &amp;lt; dataObjects.Count; i++)
+ {
+  thisXDocument.UI.Alert("Data object " + i + ": " + dataObjects[i].Name);
+ }
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="DOM">
@@ -111,6 +214,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DOM" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DOM As IXMLDOMDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ DOM { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DOM : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DOM" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.DOM</InterfaceMember>
@@ -128,9 +232,40 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to a form's underlying XML document in the form of an XML Document Object Model (DOM).</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>A key property of the <b>XDocument</b> object, the <b>DOM</b> property allows you to programmatically access and manipulate the source XML of a form. After you have set a reference to the XML DOM, which contains the source XML data of a form, you can use any of the properties and methods that are supported by the XML DOM.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>// retrieve the Employees Adapter from the DataAdapters collection
+ADOAdapter employeesDA=(ADOAdapter)thisXDocument.DataAdapters["Employees"];
+// get employee’s ID from the main DOM
+string employeeID=thisXDocument.&lt;span class="label"&gt;DOM&lt;/span&gt;.selectSingleNode("//my:field2").text;
+// Change the ADOAdapter’s command to retrieve the record of the Employee’s ID entered
+// by the user
+employeesDA.Command="select * from Employees where EmployeeID="+employeeID;
+// get DataObject from the DataObjects collection and call Query to refresh
+// the data object
+DataObject employeesDO=thisXDocument.DataObjects["Employees"];
+employeesDO.Query();</code>
+        </example>
+        <example>
+          <code>// retrieve the Employees Adapter from the DataAdapters collection
+ADOAdapter employeesDA=(ADOAdapter)thisXDocument.DataAdapters["Employees"];
+// get employee’s ID from the main DOM
+string employeeID=thisXDocument.&lt;span class="label"&gt;DOM&lt;/span&gt;.selectSingleNode("//my:field2").text;
+// Change the ADOAdapter’s command to retrieve the record of the Employee’s ID entered
+// by the user
+employeesDA.Command="select * from Employees where EmployeeID="+employeeID;
+// get DataObject from the DataObjects collection and call Query to refresh
+// the data object
+DataObject employeesDO=thisXDocument.DataObjects["Employees"];
+employeesDO.Query();</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Errors">
@@ -139,6 +274,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Errors" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Errors As ErrorsCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::ErrorsCollection ^ Errors { Microsoft::Office::Interop::InfoPath::SemiTrust::ErrorsCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Errors : Microsoft.Office.Interop.InfoPath.SemiTrust.ErrorsCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Errors" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Errors</InterfaceMember>
@@ -156,9 +292,28 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.ErrorsCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ErrorsCollection" /> that is associated with a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>Errors</b> collection is associated with a form's underlying XML document so that when an error occurs, it occurs within the XML document. After you set a reference to the <b>Errors</b> collection, you can access all of its properties and methods for managing the errors within an InfoPath form.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Errors</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to return the count of the number or errors and then display that value in a message box:</para>
+          <code>int errors;
+
+errors = thisXDocument.&lt;span class="label"&gt;Errors&lt;/span&gt;.Count;
+thisXDocument.UI.Alert("Total number of errors: " + errors);</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>Errors</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to return the count of the number or errors and then display that value in a message box:</para>
+          <code>int errors;
+
+errors = thisXDocument.&lt;span class="label"&gt;Errors&lt;/span&gt;.Count;
+thisXDocument.UI.Alert("Total number of errors: " + errors);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Extension">
@@ -167,6 +322,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Extension" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Extension As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Extension { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Extension : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Extension" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Extension</InterfaceMember>
@@ -184,9 +340,53 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the global scripting object, which exposes the functions and global variables contained in a form's primary form code file.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>Extension</b> object facilitates using the functions and global variables implemented in an InfoPath form's scripting file. Usually, it is used from a custom task pane, from a custom dialog box, or in the XSL Transformation (XSLT) of a view where direct access to the functions and variables may be needed.</para>
+          <para>To use the <b>Extension</b> within a custom task pane, you must first set a reference to the <b>XDocument</b> object by using the Dynamic HTML (DHTML) external property of the DHTML window object, as shown in this example:</para>
+          <code>objXDocument = window.external.XDocument;</code>
+          <para />
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Extension</b> property is used through the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ObjectWrapper" /> interface to invoke the custom method called <paramref name="MyMethod" />. This is necessary when using the <b>Extension</b> property in managed code:</para>
+          <code>ObjectWrapper o = (ObjectWrapper)thisApplication.XDocuments[0].&lt;span class="label"&gt;Extension&lt;/span&gt;;
+ o.GetType().InvokeMember("MyMethod",
+ BindingFlags.InvokeMethod |
+ BindingFlags.DeclaredOnly | 
+ BindingFlags.Public |  
+ BindingFlags.Instance, null, o, null);</code>
+          <para>In the following example, a method called <paramref name="myCustomMethod" /> of the InfoPath project class can be accessed from the custom task pane using the <b>Extension</b> property:</para>
+          <code>//Custom method added to the project
+public string myCustomMethod()
+{
+return "Method value";
+}</code>
+          <para>To access <paramref name="myCustomMethod" /> from the custom task pane, use the DHTML <b>external</b> property of the DHTML <b>window</b> object:</para>
+          <code>objXDocument = window.external.XDocument;
+myString = objXDocument.&lt;span class="label"&gt;Extension&lt;/span&gt;.myCustomMethod();</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>Extension</b> property is used through the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ObjectWrapper" /> interface to invoke the custom method called <paramref name="MyMethod" />. This is necessary when using the <b>Extension</b> property in managed code:</para>
+          <code>ObjectWrapper o = (ObjectWrapper)thisApplication.XDocuments[0].&lt;span class="label"&gt;Extension&lt;/span&gt;;
+ o.GetType().InvokeMember("MyMethod",
+ BindingFlags.InvokeMethod |
+ BindingFlags.DeclaredOnly | 
+ BindingFlags.Public |  
+ BindingFlags.Instance, null, o, null);</code>
+          <para>In the following example, a method called <paramref name="myCustomMethod" /> of the InfoPath project class can be accessed from the custom task pane using the <b>Extension</b> property:</para>
+          <code>//Custom method added to the project
+public string myCustomMethod()
+{
+return "Method value";
+}</code>
+          <para>To access <paramref name="myCustomMethod" /> from the custom task pane, use the DHTML <b>external</b> property of the DHTML <b>window</b> object:</para>
+          <code>objXDocument = window.external.XDocument;
+myString = objXDocument.&lt;span class="label"&gt;Extension&lt;/span&gt;.myCustomMethod();</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetDataVariable">
@@ -195,6 +395,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.GetDataVariable(System.Int32)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDataVariable (lVariableNumber As Integer) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetDataVariable(int lVariableNumber);" />
+      <MemberSignature Language="F#" Value="abstract member GetDataVariable : int -&gt; string" Usage="_XDocument2.GetDataVariable lVariableNumber" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.GetDataVariable(System.Int32)</InterfaceMember>
@@ -215,10 +416,27 @@
         <Parameter Name="lVariableNumber" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="lVariableNumber">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="lVariableNumber">The number of the variable.</param>
+        <summary>Gets the value of the specified variable, which is a predefined variable stored as a processing instruction attribute in the form's underlying XML document.</summary>
+        <returns>The value of the specified variable, which is a predefined variable stored as a processing instruction attribute in the form's underlying XML document.</returns>
+        <remarks>
+          <para>If the variable is not defined or is empty, the <b>GetDataVariable</b> method will return an empty string. To set a variable, use the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SetDataVariable(System.Int32,System.String)" /> method.</para>
+          <para>
+            <b>Note</b>: InfoPath only supports using the <paramref name="initialView" /> variable, which is the variable used to specify the initial view displayed when a form is opened. The number of this variable is always 1, and its value must be the name of a view within the form.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>GetDataVariable</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to return the value of the first variable:</para>
+          <code>string variable1;
+variable1= thisXDocument.&lt;span class="label"&gt;GetDataVariable&lt;/span&gt;(1);</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>GetDataVariable</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to return the value of the first variable:</para>
+          <code>string variable1;
+variable1= thisXDocument.&lt;span class="label"&gt;GetDataVariable&lt;/span&gt;(1);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetDOM">
@@ -227,6 +445,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.GetDOM(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetDOM (bstrName As String) As IXMLDOMDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ GetDOM(System::String ^ bstrName);" />
+      <MemberSignature Language="F#" Value="abstract member GetDOM : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" Usage="_XDocument2.GetDOM bstrName" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.GetDOM(System.String)</InterfaceMember>
@@ -247,10 +466,20 @@
         <Parameter Name="bstrName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrName">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="bstrName">The name of a <b>DataObject</b> object</param>
+        <summary>Gets a reference to the XML Document Object Model (DOM) of the specified <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object associated with the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object.</summary>
+        <returns>An <b>IXMLDOMDocument</b> of the XML Document Object Model (DOM) of the specified <b>DataObject</b> object associated with the <b>XDocument</b> object.</returns>
+        <remarks>
+          <para>After you have a reference to the XML DOM that the <b>GetDOM</b> method returns, you can use any of the properties and methods that the XML DOM supports to manipulate the data that the DOM contains.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>GetDOM</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to the XML DOM that it returns, which in this case is the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /></para>
+          <para>object named "CityDropDownList":</para>
+          <code>IXMLDOMDocument city = thisXDocument.&lt;span class="label"&gt;GetDOM&lt;/span&gt;("CityDropDownList");</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="GetNamedNodeProperty">
@@ -259,6 +488,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.GetNamedNodeProperty(System.Object,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetNamedNodeProperty (varMainDOMNode As Object, bstrPropertyName As String, bstrDefaultValue As String) As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; System::String ^ GetNamedNodeProperty(System::Object ^ varMainDOMNode, System::String ^ bstrPropertyName, System::String ^ bstrDefaultValue);" />
+      <MemberSignature Language="F#" Value="abstract member GetNamedNodeProperty : obj * string * string -&gt; string" Usage="_XDocument2.GetNamedNodeProperty (varMainDOMNode, bstrPropertyName, bstrDefaultValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -278,12 +508,37 @@
         <Parameter Name="bstrDefaultValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="varMainDOMNode">To be added.</param>
-        <param name="bstrPropertyName">To be added.</param>
-        <param name="bstrDefaultValue">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="varMainDOMNode">An XML node corresponding to a nonattribute node in the main data source, for which a named property is to be returned.</param>
+        <param name="bstrPropertyName">Specifies the name of the property whose value is to be returned.</param>
+        <param name="bstrDefaultValue">Specifies the default value to be returned if the property has not been set.</param>
+        <summary>Gets the value of a named property for the specified XML node, which must be a <b>nonattribute</b> node in the main data source.</summary>
+        <returns>The named property for the specified XML node, which must be a <b>nonattribute</b> node in the main data source.</returns>
+        <remarks>
+          <para>Named properties allow users to associate strings with user-defined properties of XML element nodes in the main data source. The value of a named property can be set by using the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SetNamedNodeProperty(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,System.String,System.String)" /> method Use the <b>GetNamedNodeProperty</b> method to read the value of a named property.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example demonstrates setting and getting the value of a named property (with the name "cost") of an XML node (called "item"):</para>
+          <code>IXMLDOMNode item = thisXDocument.DOM.selectSingleNode(@"/items/item");
+string test = thisXDocument.&lt;span class="label"&gt;GetNamedNodeProperty&lt;/span&gt;(item, 'cost', 'Value not set');
+// The value of the "cost" named property is set to 100.
+thisXDocument.SetNamedNodeProperty(item, "cost", "100");
+test = thisXDocument.GetNamedNodeProperty(item, "cost", "Value not set");</code>
+          <para>In the following XSL example, the "cost" named property of the item node is displayed:</para>
+          <code>&amp;lt;xsl:value-of select="xdXDocument:&lt;span class="label"&gt;GetNamedNodeProperty&lt;/span&gt;(item, 'cost', 'empty')"/&amp;gt;</code>
+        </example>
+        <example>
+          <para>The following example demonstrates setting and getting the value of a named property (with the name "cost") of an XML node (called "item"):</para>
+          <code>IXMLDOMNode item = thisXDocument.DOM.selectSingleNode(@"/items/item");
+string test = thisXDocument.&lt;span class="label"&gt;GetNamedNodeProperty&lt;/span&gt;(item, 'cost', 'Value not set');
+// The value of the "cost" named property is set to 100.
+thisXDocument.SetNamedNodeProperty(item, "cost", "100");
+test = thisXDocument.GetNamedNodeProperty(item, "cost", "Value not set");</code>
+          <para>In the following XSL example, the "cost" named property of the item node is displayed:</para>
+          <code>&amp;lt;xsl:value-of select="xdXDocument:&lt;span class="label"&gt;GetNamedNodeProperty&lt;/span&gt;(item, 'cost', 'empty')"/&amp;gt;</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="ImportDOM">
@@ -292,6 +547,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ImportDOM(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ImportDOM (pxDoc As IXMLDOMDocument)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ImportDOM(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ pxDoc);" />
+      <MemberSignature Language="F#" Value="abstract member ImportDOM : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument -&gt; unit" Usage="_XDocument2.ImportDOM pxDoc" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -309,9 +565,32 @@
         <Parameter Name="pxDoc" Type="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" />
       </Parameters>
       <Docs>
-        <param name="pxDoc">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="pxDoc">The XML data that is to be imported (merged) into the currently open form.</param>
+        <summary>Imports the specified XML data into the current form.</summary>
+        <remarks>
+          <para>Using the object model to import a form programmatically is equivalent to performing a merge operation in the user interface..</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>ImportDOM</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to import a form from the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnMergeRequest" /> event:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.OnMergeRequest)]
+public void OnMergeRequest(MergeEvent e)
+{ 
+ thisXDocument.&lt;span class="label"&gt;ImportDOM&lt;/span&gt;(e.DOM);
+ e.ReturnStatus = true;
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>ImportDOM</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to import a form from the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnMergeRequest" /> event:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.OnMergeRequest)]
+public void OnMergeRequest(MergeEvent e)
+{ 
+ thisXDocument.&lt;span class="label"&gt;ImportDOM&lt;/span&gt;(e.DOM);
+ e.ReturnStatus = true;
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="ImportFile">
@@ -320,6 +599,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ImportFile(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub ImportFile (bstrFileURI As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void ImportFile(System::String ^ bstrFileURI);" />
+      <MemberSignature Language="F#" Value="abstract member ImportFile : string -&gt; unit" Usage="_XDocument2.ImportFile bstrFileURI" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.ImportFile(System.String)</InterfaceMember>
@@ -340,9 +620,18 @@
         <Parameter Name="bstrFileURI" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrFileURI">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrFileURI">The Uniform Resource Identifier (URI) of the form that is to be imported (merged) into the currently open form.</param>
+        <summary>Imports the specified form into the current form.</summary>
+        <remarks>
+          <para>Using the object model to programmatically import a form is equivalent to performing a merge operation in the user interface.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>ImportFile</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to import a form:</para>
+          <code>thisXDocument.&lt;span class="label"&gt;ImportFile&lt;/span&gt;(@"C:\SomeOtherForm.xml");</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="IsDirty">
@@ -351,6 +640,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDirty" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDirty As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDirty { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsDirty : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDirty" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsDirty</InterfaceMember>
@@ -368,9 +658,38 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a value that indicates whether the data in a form has been modified since it was last saved.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>If the <b>IsDirty</b> property is <b>true</b>, data in the form's underlying XML document has been changed since it was last saved. If <b>false</b>, no changes have occurred.</para>
+          <para>
+            <b>Note</b>: Changes that occur during an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnLoad" /> event will not result in the <b>IsDirty</b> property being set to <b>true</b>.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>IsDirty</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether data in the form has been changed:</para>
+          <code>if (thisXDocument.&lt;span class="label"&gt;IsDirty&lt;/span&gt;)
+{
+ thisXDocument.UI.Alert("Data has been changed.");
+}
+else
+{
+ thisXDocument.UI.Alert("Data has not been changed.");
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>IsDirty</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether data in the form has been changed:</para>
+          <code>if (thisXDocument.&lt;span class="label"&gt;IsDirty&lt;/span&gt;)
+{
+ thisXDocument.UI.Alert("Data has been changed.");
+}
+else
+{
+ thisXDocument.UI.Alert("Data has not been changed.");
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="IsDOMReadOnly">
@@ -379,6 +698,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDOMReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDOMReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsDOMReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsDOMReadOnly : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDOMReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsDOMReadOnly</InterfaceMember>
@@ -396,9 +716,57 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a value that indicates whether the data in the underlying XML document of a form has been placed in a read-only state.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>If the <b>IsDOMReadOnly</b> property is <b>true</b>, data in the form's underlying XML document is in a read-only state and cannot be changed. If <b>false</b>, the data in the form's underlying XML document can be changed.</para>
+          <para>To determine whether the form has been placed in a read-only state, use the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsReadOnly" /> property</para>
+          <para>The data in a form's XML document will be placed in a read-only state in the following scenarios:</para>
+          <list type="bullet">
+            <item>
+              <description>The form is digitally signed</description>
+            </item>
+            <item>
+              <description>The form is in Reduced Functionality Mode (RFM) mode</description>
+            </item>
+            <item>
+              <description>During an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_Event.OnBeforeChange" /> event</description>
+            </item>
+            <item>
+              <description>During an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_Event.OnValidate" /> event</description>
+            </item>
+            <item>
+              <description>During an undo or redo operation</description>
+            </item>
+          </list>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>IsDOMReadOnly</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether data in the form's underlying XML document has been placed in a read-only state. If it has, a return statement is used to exit the event handler.</para>
+          <code>[InfoPathEventHandler(MatchPath="/my:myFields/my:field1", EventType=InfoPathEventType.OnAfterChange)]
+public void field1_OnAfterChange(DataDOMEvent e)
+{
+ // Determine whether the XML DOM is read-only.
+ if (thisXDocument.&lt;span class="label"&gt;IsDOMReadOnly&lt;/span&gt;)
+  return;
+
+ // Continue normal processing...
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>IsDOMReadOnly</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether data in the form's underlying XML document has been placed in a read-only state. If it has, a return statement is used to exit the event handler.</para>
+          <code>[InfoPathEventHandler(MatchPath="/my:myFields/my:field1", EventType=InfoPathEventType.OnAfterChange)]
+public void field1_OnAfterChange(DataDOMEvent e)
+{
+ // Determine whether the XML DOM is read-only.
+ if (thisXDocument.&lt;span class="label"&gt;IsDOMReadOnly&lt;/span&gt;)
+  return;
+
+ // Continue normal processing...
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="IsNew">
@@ -407,6 +775,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsNew" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsNew As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsNew { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsNew : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsNew" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsNew</InterfaceMember>
@@ -424,9 +793,28 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a value that indicates whether a newly created form has been saved.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>If the <b>IsNew</b> property is <b>true</b>, data in the form's underlying XML document has not been saved since the form was initially created. If <b>false</b>, the data in the new form's underlying XML document has been saved.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>IsNew</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether the data in a new form has been saved:</para>
+          <code>if (thisXDocument.&lt;span class="label"&gt;IsNew&lt;/span&gt;)
+{
+ thisXDocument.UI.Alert("Please save your form.");
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>IsNew</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether the data in a new form has been saved:</para>
+          <code>if (thisXDocument.&lt;span class="label"&gt;IsNew&lt;/span&gt;)
+{
+ thisXDocument.UI.Alert("Please save your form.");
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="IsReadOnly">
@@ -435,6 +823,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsReadOnly" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsReadOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsReadOnly" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsReadOnly</InterfaceMember>
@@ -452,9 +841,29 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a value that indicates whether a form is in read-only mode.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>If the <b>IsReadOnly</b> property is <b>true</b>, the form has been placed in a read-only state. Changes can still be made to the form, but it cannot be saved using a save operation, it must be saved using a save-as operation.</para>
+          <para>To determine whether the form's underlying XML document has been placed in a read-only state, use the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDOMReadOnly" /> property.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>IsReadOnly</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether the form is in a read-only state:</para>
+          <code>if (thisXDocument.&lt;span class="label"&gt;IsReadOnly&lt;/span&gt;)
+{
+ thisXDocument.UI.Alert("The form cannot be modified.");
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>IsReadOnly</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether the form is in a read-only state:</para>
+          <code>if (thisXDocument.&lt;span class="label"&gt;IsReadOnly&lt;/span&gt;)
+{
+ thisXDocument.UI.Alert("The form cannot be modified.");
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="IsRecovered">
@@ -463,6 +872,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsRecovered" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsRecovered As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsRecovered { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsRecovered : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsRecovered" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -477,9 +887,29 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a value that indicates whether a form was last saved by an AutoRecover save operation.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example shows how to use the <b>IsRecovered</b> property to indicate, when the form is opened, whether the form was last saved by an AutoRecover save operation:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.OnLoad)]
+public void OnLoad(DocReturnEvent e)
+{
+ thisXDocument.UI.Alert("Last saved by an AutoRecover save operation: " + thisXDocument.&lt;span class="label"&gt;IsRecovered&lt;/span&gt;);
+}</code>
+        </example>
+        <example>
+          <para>The following example shows how to use the <b>IsRecovered</b> property to indicate, when the form is opened, whether the form was last saved by an AutoRecover save operation:</para>
+          <code>[InfoPathEventHandler(EventType=InfoPathEventType.OnLoad)]
+public void OnLoad(DocReturnEvent e)
+{
+ thisXDocument.UI.Alert("Last saved by an AutoRecover save operation: " + thisXDocument.&lt;span class="label"&gt;IsRecovered&lt;/span&gt;);
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="IsSigned">
@@ -488,6 +918,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsSigned" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsSigned As Boolean" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool IsSigned { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.IsSigned : bool" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsSigned" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.IsSigned</InterfaceMember>
@@ -505,9 +936,31 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a value that indicates whether a form has been digitally signed using digital signatures.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>If the <b>IsSigned</b> property is <b>true</b>, the form has been digitally signed. If <b>false</b>, the form has not been digitally signed.</para>
+          <para>InfoPath uses XML Signatures to digitally sign forms.</para>
+          <para>
+            <b>Note</b>: If a form has been digitally signed, its underlying XML document is placed in a read-only state.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>IsSigned</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether a form has been digitally signed:</para>
+          <code>if (thisXDocument.&lt;span class="label"&gt;IsSigned&lt;/span&gt;)
+{
+ thisXDocument.UI.Alert("This form contains digital signatures.");
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>IsSigned</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to determine whether a form has been digitally signed:</para>
+          <code>if (thisXDocument.&lt;span class="label"&gt;IsSigned&lt;/span&gt;)
+{
+ thisXDocument.UI.Alert("This form contains digital signatures.");
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Language">
@@ -516,6 +969,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Language" />
       <MemberSignature Language="VB.NET" Value="Public Property Language As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Language { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Language : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Language" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Language</InterfaceMember>
@@ -533,9 +987,18 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets or sets a form's default language code.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The language settings for an InfoPath form can also be accessed using the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.LanguageSettings" /> property.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Language</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to display a form's current language setting in a message box:</para>
+          <code>thisXDocument.UI.Alert("The current language is: " + thisXDocument.&lt;span class="label"&gt;Language&lt;/span&gt;);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="PrintOut">
@@ -544,6 +1007,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.PrintOut" />
       <MemberSignature Language="VB.NET" Value="Public Sub PrintOut ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void PrintOut();" />
+      <MemberSignature Language="F#" Value="abstract member PrintOut : unit -&gt; unit" Usage="_XDocument2.PrintOut " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.PrintOut</InterfaceMember>
@@ -562,8 +1026,35 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Prints the form content as it is rendered in the window corresponding to the form's active view.</summary>
+        <remarks>
+          <para>The <b>PrintOut</b> method uses the current printer settings. Returns a permission denied error if called from a form that is not fully trusted.</para>
+          <para>It is recommended that you don't call the <b>PrintOut</b> method from the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnLoad" />or <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSwitchView" /> events. You may encounter one or more of the following behaviors when calling the <b>PrintOut</b> method from an <b>OnLoad</b> or <b>OnSwitchView</b> event procedure:</para>
+          <list type="bullet">
+            <item>
+              <description>The view may print incorrectly.</description>
+            </item>
+            <item>
+              <description>A blank document may be printed.</description>
+            </item>
+            <item>
+              <description>The incorrect view may be printed.</description>
+            </item>
+            <item>
+              <description>The following exception may occur:</description>
+            </item>
+            <item>
+              <description>"Invalid context for the OM call."</description>
+            </item>
+          </list>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>PrintOut</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to print the current view:</para>
+          <code>thisXDocument.&lt;span class="label"&gt;PrintOut&lt;/span&gt;();</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Query">
@@ -572,6 +1063,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Query" />
       <MemberSignature Language="VB.NET" Value="Public Sub Query ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Query();" />
+      <MemberSignature Language="F#" Value="abstract member Query : unit -&gt; unit" Usage="_XDocument2.Query " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Query</InterfaceMember>
@@ -590,8 +1082,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Retrieves data from a form's associated data adapter object and stores the data in the form's underlying XML Document Object Model (DOM).</summary>
+        <remarks>
+          <para>The <b>Query</b> method will return an error if the form does not have an associated data adapter object.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="QueryAdapter">
@@ -600,6 +1097,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.QueryAdapter" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property QueryAdapter As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ QueryAdapter { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryAdapter : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.QueryAdapter" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.QueryAdapter</InterfaceMember>
@@ -617,9 +1115,29 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the data adapter object that is associated with a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>Data adapter objects provide different properties and methods that retrieve and submit data to external data sources; the data adapter that is associated with a form is dependent on the type of data source that was used when the form was initially created.</para>
+          <para>The <b>QueryAdapter</b> property allows you to access an InfoPath form's primary data source. To access the data adapter objects used for a form's secondary data sources, use the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.DataObjects" /> property.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>QueryAdapter</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ADOAdapterObject" /> object; then the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ADOAdapter2.Command" /> property of the <b>ADOAdapter</b> object is used to display the SQL command text in a message box:</para>
+          <code>ADOAdapter2 adapter;
+
+adapter = (ADOAdapter2) thisXDocument.&lt;span class="label"&gt;QueryAdapter&lt;/span&gt;;
+thisXDocument.UI.Alert("SQL command text: " + adapter.Command);</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>QueryAdapter</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ADOAdapterObject" /> object; then the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ADOAdapter2.Command" /> property of the <b>ADOAdapter</b> object is used to display the SQL command text in a message box:</para>
+          <code>ADOAdapter2 adapter;
+
+adapter = (ADOAdapter2) thisXDocument.&lt;span class="label"&gt;QueryAdapter&lt;/span&gt;;
+thisXDocument.UI.Alert("SQL command text: " + adapter.Command);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Role">
@@ -628,6 +1146,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Role" />
       <MemberSignature Language="VB.NET" Value="Public Property Role As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Role { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.Role : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Role" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -642,9 +1161,17 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets or sets the user's current role.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Role</b> property is used to determine the current user's role.</para>
+          <code>string currentRole = thisXDocument.&lt;span class="label"&gt;Role&lt;/span&gt;;</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Save">
@@ -653,6 +1180,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Save" />
       <MemberSignature Language="VB.NET" Value="Public Sub Save ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Save();" />
+      <MemberSignature Language="F#" Value="abstract member Save : unit -&gt; unit" Usage="_XDocument2.Save " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Save</InterfaceMember>
@@ -671,8 +1199,33 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Saves the form to the Uniform Resource Locator (URL) that it is currently associated with.</summary>
+        <remarks>
+          <para>The <b>Save</b> method will return an error if called from a form that is not fully trusted.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>if(thisXDocument.IsNew)
+{
+thisXDocument.SaveAs("c:\\myforms\\form1.xml");
+}
+else
+{
+thisXDocument.&lt;span class="label"&gt;Save&lt;/span&gt;();
+}</code>
+        </example>
+        <example>
+          <code>if(thisXDocument.IsNew)
+{
+thisXDocument.SaveAs("c:\\myforms\\form1.xml");
+}
+else
+{
+thisXDocument.&lt;span class="label"&gt;Save&lt;/span&gt;();
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="SaveAs">
@@ -681,6 +1234,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SaveAs(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SaveAs (bstrFileUrl As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SaveAs(System::String ^ bstrFileUrl);" />
+      <MemberSignature Language="F#" Value="abstract member SaveAs : string -&gt; unit" Usage="_XDocument2.SaveAs bstrFileUrl" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.SaveAs(System.String)</InterfaceMember>
@@ -701,9 +1255,36 @@
         <Parameter Name="bstrFileUrl" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="bstrFileUrl">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="bstrFileUrl">The URL address that the form should be saved to.</param>
+        <summary>Saves the form to the specified Uniform Resource Locator (URL).</summary>
+        <remarks>
+          <para>The <b>SaveAs</b> method will return an error if called from a form that is not fully trusted.</para>
+          <para>
+            <b>Note</b>: The URL that the form is saved to must be in the same domain as the form that calls the <b>SaveAs</b> method.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para />
+        </remarks>
+        <example>
+          <code>if(thisXDocument.IsNew)
+{
+thisXDocument.&lt;span class="label"&gt;SaveAs&lt;/span&gt;("c:\\myforms\\form1.xml");
+}
+else
+{
+thisXDocument.Save();
+}</code>
+        </example>
+        <example>
+          <code>if(thisXDocument.IsNew)
+{
+thisXDocument.&lt;span class="label"&gt;SaveAs&lt;/span&gt;("c:\\myforms\\form1.xml");
+}
+else
+{
+thisXDocument.Save();
+}</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="SetDataVariable">
@@ -712,6 +1293,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SetDataVariable(System.Int32,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetDataVariable (lVariableNumber As Integer, bstrVariableValue As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetDataVariable(int lVariableNumber, System::String ^ bstrVariableValue);" />
+      <MemberSignature Language="F#" Value="abstract member SetDataVariable : int * string -&gt; unit" Usage="_XDocument2.SetDataVariable (lVariableNumber, bstrVariableValue)" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.SetDataVariable(System.Int32,System.String)</InterfaceMember>
@@ -733,10 +1315,22 @@
         <Parameter Name="bstrVariableValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="lVariableNumber">To be added.</param>
-        <param name="bstrVariableValue">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="lVariableNumber">The number of the variable.</param>
+        <param name="bstrVariableValue">The value of the variable.</param>
+        <summary>Sets the value of a predefined variable stored as a processing instruction attribute in the form's underlying XML document.</summary>
+        <remarks>
+          <para>If the variable being set is not a valid processing instruction attribute, the <b>SetDataVariable</b> method will return an error.</para>
+          <para>To get the value of a variable, use the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.GetDataVariable(System.Int32)" /> method.</para>
+          <para>
+            <b>Note</b>:  only supports using the <paramref name="initialView" /> variable, which is the variable used to specify the initial view displayed when a form is opened. The number of this variable is always 1, and its value must be the name of a view within the form.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>SetDataVariable</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set the value of the first variable:</para>
+          <code>thisXDocument.&lt;span class="label"&gt;SetDataVariable&lt;/span&gt;(1, "View 2");</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="SetDirty">
@@ -745,6 +1339,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SetDirty(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetDirty (vfIsDirty As Boolean)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetDirty(bool vfIsDirty);" />
+      <MemberSignature Language="F#" Value="abstract member SetDirty : bool -&gt; unit" Usage="_XDocument2.SetDirty vfIsDirty" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -762,9 +1357,19 @@
         <Parameter Name="vfIsDirty" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="vfIsDirty">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="vfIsDirty">Specifies whether the form is to be marked as unmodified or not.</param>
+        <summary>Sets the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.IsDirty" /> property for the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object, which indicates whether the data in a form has been modified since it was last saved.</summary>
+        <remarks>
+          <para>The <b>SetDirty</b> method can be used from the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSubmitRequest" /> event to force a document to be marked as unchanged. InfoPath will therefore not request the user to save the form when it is closed.</para>
+          <para>The <b>SetDirty</b> method can also be used from the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSaveRequest" /> event to programmatically mark the form as changed or unchanged since it was last saved.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>IsDirty</b> property of the current form is set to <b>false</b> so that the user will not be prompted to save the form when it is closed.</para>
+          <code>thisXDocument.&lt;span class="label"&gt;SetDirty&lt;/span&gt;(false);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="SetNamedNodeProperty">
@@ -773,6 +1378,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SetNamedNodeProperty(Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode,System.String,System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub SetNamedNodeProperty (pxmlMainDOMNode As IXMLDOMNode, bstrPropertyName As String, bstrValue As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void SetNamedNodeProperty(Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMNode ^ pxmlMainDOMNode, System::String ^ bstrPropertyName, System::String ^ bstrValue);" />
+      <MemberSignature Language="F#" Value="abstract member SetNamedNodeProperty : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode * string * string -&gt; unit" Usage="_XDocument2.SetNamedNodeProperty (pxmlMainDOMNode, bstrPropertyName, bstrValue)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -792,11 +1398,16 @@
         <Parameter Name="bstrValue" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="pxmlMainDOMNode">To be added.</param>
-        <param name="bstrPropertyName">To be added.</param>
-        <param name="bstrValue">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="pxmlMainDOMNode">An XML node corresponding to a <b>nonattribute</b> node in the main data source, for which a named property is to be set.</param>
+        <param name="bstrPropertyName">Specifies the name of the property being set.</param>
+        <param name="bstrValue">Specifies the value to which the property will be set.</param>
+        <summary>Sets the value of a named property for the supplied XML node, which must be a <b>nonattribute</b> node in the main data source.</summary>
+        <remarks>
+          <para>Named properties allow users to associate strings with user-defined properties of XML element nodes in the main data source. The value of a named property can be set by using the <b>SetNamedNodeProperty</b> method. Use the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.GetNamedNodeProperty(System.Object,System.String,System.String)" /> method to read the value of a named property.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SignedDataBlocks">
@@ -805,6 +1416,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SignedDataBlocks" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SignedDataBlocks As SignedDataBlocksCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::SignedDataBlocksCollection ^ SignedDataBlocks { Microsoft::Office::Interop::InfoPath::SemiTrust::SignedDataBlocksCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignedDataBlocks : Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.SignedDataBlocks" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -819,9 +1431,23 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlocksCollection" /> collection that is associated with an <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>SignedDataBlocks</b> property of the <b>XDocument</b> object is used to get a reference to the <b>SignedDataBlocksCollection</b> collection. An individual <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object is then accessed using array indexing:</para>
+          <code>SignedDataBlocksCollection sblocks = thisXDocument.&lt;span class="label"&gt;SignedDataBlocks&lt;/span&gt;;
+SignedDataBlockObject sdblock = sblocks[0];</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>SignedDataBlocks</b> property of the <b>XDocument</b> object is used to get a reference to the <b>SignedDataBlocksCollection</b> collection. An individual <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignedDataBlockObject" /> object is then accessed using array indexing:</para>
+          <code>SignedDataBlocksCollection sblocks = thisXDocument.&lt;span class="label"&gt;SignedDataBlocks&lt;/span&gt;;
+SignedDataBlockObject sdblock = sblocks[0];</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Solution">
@@ -830,6 +1456,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Solution" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Solution As SolutionObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::SolutionObject ^ Solution { Microsoft::Office::Interop::InfoPath::SemiTrust::SolutionObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Solution : Microsoft.Office.Interop.InfoPath.SemiTrust.SolutionObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Solution" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Solution</InterfaceMember>
@@ -847,9 +1474,24 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.SolutionObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SolutionObject" /> object that is associated with a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>Solution</b> property provides access to information about a form's associated form definition (.xsf) file, including access to an XML Document Object Model (DOM) that contains all of the source XML of the .xsf file.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Solution</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to load a variable with the XML contents of the .xsf file:</para>
+          <code>string xsf;
+xsf = thisXDocument.&lt;span class="label"&gt;Solution&lt;/span&gt;.DOM.xml;</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>Solution</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to load a variable with the XML contents of the .xsf file:</para>
+          <code>string xsf;
+xsf = thisXDocument.&lt;span class="label"&gt;Solution&lt;/span&gt;.DOM.xml;</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Submit">
@@ -858,6 +1500,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Submit" />
       <MemberSignature Language="VB.NET" Value="Public Sub Submit ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Submit();" />
+      <MemberSignature Language="F#" Value="abstract member Submit : unit -&gt; unit" Usage="_XDocument2.Submit " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.Submit</InterfaceMember>
@@ -876,8 +1519,19 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Executes the predefined submit operation in a form.</summary>
+        <remarks>
+          <para>Using the <b>Submit</b> method is similar to, but not exactly like, using the submit operation from the InfoPath user interface. Calling the <b>Submit</b> method simply performs the submit operation, but the submit operation must first be enabled for a form in design mode.</para>
+          <para>
+            <b>Note</b>: You can write a custom submit operation using the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSubmitRequest" /> event, and then you can programmatically call the event using the <b>Submit</b> method.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Submit</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to submit the form using the predefined submit operation:</para>
+          <code>thisXDocument.&lt;span class="label"&gt;Submit&lt;/span&gt;();</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="UI">
@@ -886,6 +1540,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.UI" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UI As UIObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::UIObject ^ UI { Microsoft::Office::Interop::InfoPath::SemiTrust::UIObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.UI : Microsoft.Office.Interop.InfoPath.SemiTrust.UIObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.UI" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.UI</InterfaceMember>
@@ -903,9 +1558,18 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.UIObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Returns a reference to <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.UIObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>UI</b> (user interface) object provides a number of methods that can be used to display custom and built-in dialog boxes.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>UI</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to display a simple message box using the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.UI2.Alert(System.String)" /> method:</para>
+          <code>thisXDocument.&lt;span class="label"&gt;UI&lt;/span&gt;.Alert("Here is the message text.");</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="URI">
@@ -914,6 +1578,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.URI" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property URI As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ URI { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.URI : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.URI" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.URI</InterfaceMember>
@@ -931,9 +1596,18 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the Uniform Resource Identifier (URI) of a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>URI</b> property can be used as the name of a form when accessed through the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocumentsCollection" /> collection.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>URI</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to display a form's URI in a message box:</para>
+          <code>thisXDocument.UI.Alert("URI:" + thisXDocument.&lt;span class="label"&gt;URI&lt;/span&gt;);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Util">
@@ -942,6 +1616,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Util" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Util As UtilObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::UtilObject ^ Util { Microsoft::Office::Interop::InfoPath::SemiTrust::UtilObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Util : Microsoft.Office.Interop.InfoPath.SemiTrust.UtilObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.Util" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -956,9 +1631,13 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.UtilObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.UtilObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="View">
@@ -967,6 +1646,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.View" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property View As ViewObject" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::ViewObject ^ View { Microsoft::Office::Interop::InfoPath::SemiTrust::ViewObject ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.View : Microsoft.Office.Interop.InfoPath.SemiTrust.ViewObject" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.View" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.View</InterfaceMember>
@@ -984,9 +1664,18 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.ViewObject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewObject" /> associated with a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>ViewObject</b> object that the <b>View</b> property accesses represents the view that is currently active in an InfoPath form. After you have set a reference to the <b>ViewObject</b> object, you can access any of its properties and methods to programmatically interact with the view.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>View</b> property of the <b>XDocument</b> object is used to set a reference to the <b>View</b> object; then, using the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo.Name" /> property of the <b>ViewObject</b> object, it displays the name of the view in a message box:</para>
+          <code>thisXDocument.UI.Alert("View name: " + thisXDocument.&lt;span class="label"&gt;View&lt;/span&gt;.Name);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="ViewInfos">
@@ -995,6 +1684,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ViewInfos" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ViewInfos As ViewInfosCollection" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::ViewInfosCollection ^ ViewInfos { Microsoft::Office::Interop::InfoPath::SemiTrust::ViewInfosCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ViewInfos : Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfosCollection" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ViewInfos" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument.ViewInfos</InterfaceMember>
@@ -1012,9 +1702,40 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfosCollection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfosCollection" /> collection associated with a form.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>ViewInfos</b> collection contains a collection of <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" /> object containing information about each of the views implemented in an InfoPath form.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ViewInfos" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to the <b>ViewInfosCollection</b> collection; then, using the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfos.Count" /> property of the <b>ViewInfosCollection</b> collection, it loops through the collection to determine the default view using the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo.IsDefault" /> property of the <b>ViewInfoObject</b> object. When the default view is found, the code displays the name of the view in a message box.</para>
+          <code>&lt;span class="label"&gt;ViewInfos&lt;/span&gt; viewInfos;
+viewInfos = thisXDocument.&lt;span class="label"&gt;ViewInfos&lt;/span&gt;;
+
+for (int i=0; i &amp;lt; viewInfos.Count; i++)
+{
+ if (viewInfos[i].IsDefault)
+ {
+  thisXDocument.UI.Alert("The default view is: " + viewInfos[i].Name);
+ }
+}</code>
+        </example>
+        <example>
+          <para>In the following example, the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ViewInfos" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is used to set a reference to the <b>ViewInfosCollection</b> collection; then, using the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfos.Count" /> property of the <b>ViewInfosCollection</b> collection, it loops through the collection to determine the default view using the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo.IsDefault" /> property of the <b>ViewInfoObject</b> object. When the default view is found, the code displays the name of the view in a message box.</para>
+          <code>&lt;span class="label"&gt;ViewInfos&lt;/span&gt; viewInfos;
+viewInfos = thisXDocument.&lt;span class="label"&gt;ViewInfos&lt;/span&gt;;
+
+for (int i=0; i &amp;lt; viewInfos.Count; i++)
+{
+ if (viewInfos[i].IsDefault)
+ {
+  thisXDocument.UI.Alert("The default view is: " + viewInfos[i].Name);
+ }
+}</code>
+        </example>
       </Docs>
     </Member>
   </Members>

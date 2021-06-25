@@ -1,0 +1,106 @@
+﻿<Type Name="IInfoPathRuntime" FullName="Microsoft.Office.InfoPath.IInfoPathRuntime">
+  <TypeSignature Language="C#" Value="public interface IInfoPathRuntime" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInfoPathRuntime" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.IInfoPathRuntime" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IInfoPathRuntime" />
+  <TypeSignature Language="C++ CLI" Value="public interface class IInfoPathRuntime" />
+  <TypeSignature Language="F#" Value="type IInfoPathRuntime = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="FinishInitialization">
+      <MemberSignature Language="C#" Value="public void FinishInitialization ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void FinishInitialization() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization" />
+      <MemberSignature Language="VB.NET" Value="Public Sub FinishInitialization ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void FinishInitialization();" />
+      <MemberSignature Language="F#" Value="abstract member FinishInitialization : unit -&gt; unit" Usage="iInfoPathRuntime.FinishInitialization " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Initialize();" />
+      <MemberSignature Language="F#" Value="abstract member Initialize : unit -&gt; unit" Usage="iInfoPathRuntime.Initialize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeHostProvider">
+      <MemberSignature Language="C#" Value="public void InitializeHostProvider (Microsoft.Office.InfoPath.IInfoPathHostItemProvider hostItemProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void InitializeHostProvider(class Microsoft.Office.InfoPath.IInfoPathHostItemProvider hostItemProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider(Microsoft.Office.InfoPath.IInfoPathHostItemProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub InitializeHostProvider (hostItemProvider As IInfoPathHostItemProvider)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void InitializeHostProvider(Microsoft::Office::InfoPath::IInfoPathHostItemProvider ^ hostItemProvider);" />
+      <MemberSignature Language="F#" Value="abstract member InitializeHostProvider : Microsoft.Office.InfoPath.IInfoPathHostItemProvider -&gt; unit" Usage="iInfoPathRuntime.InitializeHostProvider hostItemProvider" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="hostItemProvider" Type="Microsoft.Office.InfoPath.IInfoPathHostItemProvider" />
+      </Parameters>
+      <Docs>
+        <param name="hostItemProvider">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnShutdown">
+      <MemberSignature Language="C#" Value="public void OnShutdown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnShutdown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OnShutdown ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void OnShutdown();" />
+      <MemberSignature Language="F#" Value="abstract member OnShutdown : unit -&gt; unit" Usage="iInfoPathRuntime.OnShutdown " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

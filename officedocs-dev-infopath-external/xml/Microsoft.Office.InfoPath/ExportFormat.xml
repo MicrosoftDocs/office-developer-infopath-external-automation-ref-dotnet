@@ -1,0 +1,84 @@
+﻿<Type Name="ExportFormat" FullName="Microsoft.Office.InfoPath.ExportFormat">
+  <TypeSignature Language="C#" Value="public enum ExportFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ExportFormat extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ExportFormat" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ExportFormat" />
+  <TypeSignature Language="C++ CLI" Value="public enum class ExportFormat" />
+  <TypeSignature Language="F#" Value="type ExportFormat = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Specifies the file format to use when exporting a view.</summary>
+    <remarks>
+      <para>The <b>ExportFormat</b> enumeration is used to specify the file format when using the <see cref="M:Microsoft.Office.InfoPath.View.Export(System.String,Microsoft.Office.InfoPath.ExportFormat)" /> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Mht">
+      <MemberSignature Language="C#" Value="Mht" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ExportFormat Mht = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ExportFormat.Mht" />
+      <MemberSignature Language="VB.NET" Value="Mht" />
+      <MemberSignature Language="C++ CLI" Value="Mht" />
+      <MemberSignature Language="F#" Value="Mht = 1" Usage="Microsoft.Office.InfoPath.ExportFormat.Mht" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ExportFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Web Archive, single file format (.mht)</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Pdf">
+      <MemberSignature Language="C#" Value="Pdf" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ExportFormat Pdf = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ExportFormat.Pdf" />
+      <MemberSignature Language="VB.NET" Value="Pdf" />
+      <MemberSignature Language="C++ CLI" Value="Pdf" />
+      <MemberSignature Language="F#" Value="Pdf = 2" Usage="Microsoft.Office.InfoPath.ExportFormat.Pdf" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ExportFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Portable Document Format file (.pdf)</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Xps">
+      <MemberSignature Language="C#" Value="Xps" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ExportFormat Xps = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ExportFormat.Xps" />
+      <MemberSignature Language="VB.NET" Value="Xps" />
+      <MemberSignature Language="C++ CLI" Value="Xps" />
+      <MemberSignature Language="F#" Value="Xps = 3" Usage="Microsoft.Office.InfoPath.ExportFormat.Xps" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ExportFormat</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>XPS Document (.xps)</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

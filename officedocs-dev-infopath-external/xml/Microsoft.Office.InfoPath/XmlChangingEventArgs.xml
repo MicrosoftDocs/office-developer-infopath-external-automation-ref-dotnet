@@ -1,0 +1,69 @@
+﻿<Type Name="XmlChangingEventArgs" FullName="Microsoft.Office.InfoPath.XmlChangingEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class XmlChangingEventArgs : Microsoft.Office.InfoPath.XmlEventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlChangingEventArgs extends Microsoft.Office.InfoPath.XmlEventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlChangingEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlChangingEventArgs&#xA;Inherits XmlEventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlChangingEventArgs abstract : Microsoft::Office::InfoPath::XmlEventArgs" />
+  <TypeSignature Language="F#" Value="type XmlChangingEventArgs = class&#xA;    inherit XmlEventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.XmlEventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changing" /> event.</summary>
+    <remarks>
+      <para>The <b>XmlChangingEventArgs</b> object is passed to the event handler for the <b>Changing</b> event, which occurs after changes to a form's underlying XML document have been made but before the changes have been accepted. </para>
+      <para>The <b>XmlChangingEventArgs</b> class is derived from the <see cref="T:Microsoft.Office.InfoPath.XmlEventArgs" /> class which provides properties that can be used within the event handler to get information about the data that is about to be changed in the form's underlying XML document and the node that is changing. For example, the <b>XmlEventArgs</b> object provides the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property which gets a reference to an <b>XPathNavigator</b> object that points to the node that is about to be changed in the form's underlying XML document. However, note that the form's underlying XML document is read-only during the <b>Changing </b>event.</para>
+      <para>In addition to these properties, the <b>XmlChangingEventArgs</b> class provides the <see cref="P:Microsoft.Office.InfoPath.XmlChangingEventArgs.CancelableArgs" /> property for returning a <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object for cancelling the event.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlChangingEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlChangingEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlChangingEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CancelableArgs">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.XmlFormCancelEventArgs CancelableArgs" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlChangingEventArgs.CancelableArgs" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property CancelableArgs As XmlFormCancelEventArgs" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ CancelableArgs { Microsoft::Office::InfoPath::XmlFormCancelEventArgs ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.CancelableArgs : Microsoft.Office.InfoPath.XmlFormCancelEventArgs" Usage="Microsoft.Office.InfoPath.XmlChangingEventArgs.CancelableArgs" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlFormCancelEventArgs</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object associated with the event.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XmlFormCancelEventArgs" /> object that provides access to the <b>Cancel</b> property for cancelling the event.</value>
+        <remarks>
+          <para>To cancel the event, set <b>CancelableArgs.Cancel</b> to <b>true</b>.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

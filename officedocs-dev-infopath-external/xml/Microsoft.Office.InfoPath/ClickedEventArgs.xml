@@ -1,0 +1,103 @@
+﻿<Type Name="ClickedEventArgs" FullName="Microsoft.Office.InfoPath.ClickedEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class ClickedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ClickedEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ClickedEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ClickedEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class ClickedEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type ClickedEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.ButtonEvent.Clicked" /> event.</summary>
+    <remarks>
+      <para>The <b>ClickedEventArgs</b> object passes state information to an event handler for the <b>Clicked</b> event, which is associated with a Button control.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ClickedEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.ClickedEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; ClickedEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ControlId">
+      <MemberSignature Language="C#" Value="public abstract string ControlId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ControlId" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ClickedEventArgs.ControlId" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ControlId As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ ControlId { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.ControlId : string" Usage="Microsoft.Office.InfoPath.ClickedEventArgs.ControlId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the value of <b>ID</b> property for the Button control that raised the event.</summary>
+        <value>The <b>ID</b> of the button control.</value>
+        <remarks>To be added.</remarks>
+        <example>
+          <para>In the following example, the <b>ControlId</b> property is used to display the <b>ID</b> property value (MyButton) for the Button control.</para>
+          <code>public void MyButton_Clicked(object sender, ClickedEventArgs e)
+{
+   MessageBox.Show(e.ControlId);
+}</code>
+          <code>Public Sub MyButton_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   MessageBox.Show(e.ControlId)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator Source { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Source" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.ClickedEventArgs.Source" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Source As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ Source { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Source : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.ClickedEventArgs.Source" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an XPathNavigator object positioned at the innermost XML node of the form's underlying XML document that contains the Button control.</summary>
+        <value>An <b>XPathNavigator</b> object positioned at the innermost XML node of the form's underlying XML document that contains the Button control.</value>
+        <remarks>
+          <para>After you have set a reference to the <b>XPathNavigator</b> object that the <b>Source</b> property returns, you can use the properties and methods that are supported by the <b>XPathNavigator</b> class.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Source</b> property is used to return an <b>XPathNavigator</b> object, which is then used to display the of the innermost XML node of the form's underlying XML document that contains the Button control.</para>
+          <code>MessageBox.Show(e.Source.OuterXml.ToString());</code>
+          <code>MessageBox.Show(e.Source.OuterXml.ToString())</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

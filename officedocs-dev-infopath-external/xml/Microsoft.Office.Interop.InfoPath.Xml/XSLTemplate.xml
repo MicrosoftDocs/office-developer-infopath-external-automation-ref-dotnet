@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.XSLTemplate" />
   <TypeSignature Language="VB.NET" Value="Public Interface XSLTemplate&#xA;Implements IXSLTemplate" />
   <TypeSignature Language="C++ CLI" Value="public interface class XSLTemplate : Microsoft::Office::Interop::InfoPath::Xml::IXSLTemplate" />
+  <TypeSignature Language="F#" Value="type XSLTemplate = interface&#xA;    interface IXSLTemplate" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
     <AssemblyVersion>15.0.0.0</AssemblyVersion>

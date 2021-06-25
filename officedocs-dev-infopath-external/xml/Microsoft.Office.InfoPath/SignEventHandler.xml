@@ -1,0 +1,36 @@
+﻿<Type Name="SignEventHandler" FullName="Microsoft.Office.InfoPath.SignEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SignEventHandler(object sender, SignEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SignEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignEventHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub SignEventHandler(sender As Object, e As SignEventArgs)" />
+  <TypeSignature Language="C++ CLI" Value="public delegate void SignEventHandler(System::Object ^ sender, SignEventArgs ^ e);" />
+  <TypeSignature Language="F#" Value="type SignEventHandler = delegate of obj * SignEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.InfoPath.SignEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">The source of the event.</param>
+    <param name="e">A <see cref="T:Microsoft.Office.InfoPath.SignEventArgs" /> object that contains the event data.</param>
+    <summary>Represents the method that will handle the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Sign" /> event of a form.</summary>
+    <remarks>
+      <para>
+        <b>Important</b>: The code skeleton for an event handler associated with the <b>Sign</b> event, which uses the <b>SignEventHandler</b> delegate, should be added only from the Microsoft InfoPath user interface. For more information on how to add event handlers in InfoPath, see How Do I: Add an Event Handler.</para>
+      <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>For an example of using the <b>SignEventHandler</b> delegate, see the sample code in the <b>Sign</b> event of the <see cref="T:Microsoft.Office.InfoPath.FormEvents" /> class.</para>
+    </example>
+  </Docs>
+</Type>

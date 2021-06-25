@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface DataObject" />
   <TypeSignature Language="C++ CLI" Value="public interface class DataObject" />
+  <TypeSignature Language="F#" Value="type DataObject = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>This type is a wrapper for a COM interface implemented by a coclass that is required by managed code for COM interoperability. To access the members specified by this interface, use the type that wraps the coclass that implements this interface. For information about that type, including usage, remarks, and examples, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DataObject.DOM" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DOM As IXMLDOMDocument" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ DOM { Microsoft::Office::Interop::InfoPath::SemiTrust::IXMLDOMDocument ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.DOM : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.DataObject.DOM" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -42,9 +44,18 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to an XML Document Object Model (DOM) that is associated with a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The <b>DOM</b> property allows you to programmatically access and manipulate the stored XML data of a secondary data source represented by the <b>DataObject</b> object. After you have set a reference to the XML DOM, which contains the stored XML data, you can use any of the properties and methods that are supported by the XML DOM.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>DOM</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object is used to return all of the contents of a form's secondary data source using the xml property of the XML DOM:</para>
+          <code>string xml = thisXDocument.DataObjects["CityList"].&lt;span class="label"&gt;DOM&lt;/span&gt;.xml;</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -53,6 +64,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DataObject.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.DataObject.Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -67,9 +79,19 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets the name of the associated <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>The name of the <b>DataObject</b> object is the same as the name of the secondary data source that it represents. The name of the <b>DataObject</b> object can also be used as the argument to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DataObjects.Item(System.Object)" /> property.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>Name</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object is used to display the name of the <b>DataObject</b> object in a message box:</para>
+          <code>string strName = thisXDocument.DataObjects[0].&lt;span class="label"&gt;Name&lt;/span&gt;;
+thisXDocument.UI.Alert("Data Object name: " + strName);</code>
+        </example>
       </Docs>
     </Member>
     <Member MemberName="Query">
@@ -78,6 +100,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.DataObject.Query" />
       <MemberSignature Language="VB.NET" Value="Public Sub Query ()" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; void Query();" />
+      <MemberSignature Language="F#" Value="abstract member Query : unit -&gt; unit" Usage="dataObject.Query " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -93,8 +116,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Executes the query operation on the data adapter associated with the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object, and inserts the returned XML in the associated data source (XML DOM).</summary>
+        <remarks>
+          <para>The <b>Query</b> method can be used to refresh the data contained in the XML DOM that is associated with a <b>DataObject</b> object.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="QueryAdapter">
@@ -103,6 +131,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DataObject.QueryAdapter" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property QueryAdapter As Object" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ QueryAdapter { System::Object ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryAdapter : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.DataObject.QueryAdapter" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -117,9 +146,20 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets a reference to the data adapter object that is used for a secondary data source.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>After you have set a reference to the data adapter object that the <b>QueryAdapter</b> property returns, you can use the properties and methods that the particular data adapter object contains.</para>
+          <para>
+            <b>Important</b>: This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>QueryAdapter</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object is used to return a reference to the data adapter that is associated with the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataSourceObject" /> object, which, in this case, is an <b>ADOAdapter</b> data adapter object. The code then uses the Command property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ADOAdapterObject" /> object to display the SQL command text in a message box:</para>
+          <code>ADOAdapter adapter;
+adapter = (ADOAdapter) thisXDocument.DataObjects["CityList"].&lt;span class="label"&gt;QueryAdapter&lt;/span&gt;;
+thisXDocument.UI.Alert("SQL command text: " + adapter.Command);</code>
+        </example>
       </Docs>
     </Member>
   </Members>

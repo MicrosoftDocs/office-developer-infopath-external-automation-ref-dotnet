@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState" />
   <TypeSignature Language="VB.NET" Value="Public Enum XdMachineOnlineState" />
   <TypeSignature Language="C++ CLI" Value="public enum class XdMachineOnlineState" />
+  <TypeSignature Language="F#" Value="type XdMachineOnlineState = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -12,8 +13,11 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>The <b>XdMachineOnlineState</b> enumeration is used to determine the state of the connection for the client computer.</summary>
+    <remarks>
+      <para>These enumerated values are returned by the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._Application2.MachineOnlineState" /> property.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="xdIEIsInOfflineMode">
@@ -22,6 +26,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdIEIsInOfflineMode" />
       <MemberSignature Language="VB.NET" Value="xdIEIsInOfflineMode" />
       <MemberSignature Language="C++ CLI" Value="xdIEIsInOfflineMode" />
+      <MemberSignature Language="F#" Value="xdIEIsInOfflineMode = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdIEIsInOfflineMode" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -32,7 +37,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Microsoft Internet Explorer is in offline mode. </summary>
       </Docs>
     </Member>
     <Member MemberName="xdOffline">
@@ -41,6 +46,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdOffline" />
       <MemberSignature Language="VB.NET" Value="xdOffline" />
       <MemberSignature Language="C++ CLI" Value="xdOffline" />
+      <MemberSignature Language="F#" Value="xdOffline = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdOffline" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -51,7 +57,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The client computer is not connected to the network.</summary>
       </Docs>
     </Member>
     <Member MemberName="xdOnline">
@@ -60,6 +66,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdOnline" />
       <MemberSignature Language="VB.NET" Value="xdOnline" />
       <MemberSignature Language="C++ CLI" Value="xdOnline" />
+      <MemberSignature Language="F#" Value="xdOnline = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.XdMachineOnlineState.xdOnline" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -70,7 +77,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>The client computer is connected to the network.</summary>
       </Docs>
     </Member>
   </Members>

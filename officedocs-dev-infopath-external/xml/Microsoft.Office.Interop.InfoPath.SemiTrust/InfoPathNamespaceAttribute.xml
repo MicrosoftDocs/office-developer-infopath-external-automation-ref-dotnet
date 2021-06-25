@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute" />
   <TypeSignature Language="VB.NET" Value="Public NotInheritable Class InfoPathNamespaceAttribute&#xA;Inherits Attribute" />
   <TypeSignature Language="C++ CLI" Value="public ref class InfoPathNamespaceAttribute sealed : Attribute" />
+  <TypeSignature Language="F#" Value="type InfoPathNamespaceAttribute = class&#xA;    inherit Attribute" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,8 +19,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Apply this attribute to specify the namespace prefixes that are used in the class that contains form code in a managed-code project.</summary>
+    <remarks>
+      <para>
+        <b>Important</b>: This attribute and its settings are generated automatically when you create and work with an InfoPath managed-code form template using the InfoPath 2003 object model. You should not alter this attribute. For more information, see How to: Create a Managed Code Form Template Using the InfoPath 2003 Object Model.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -28,6 +33,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute.#ctor(System.String)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (usernamespace As String)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; InfoPathNamespaceAttribute(System::String ^ usernamespace);" />
+      <MemberSignature Language="F#" Value="new Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute : string -&gt; Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute" Usage="new Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute usernamespace" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -38,7 +44,7 @@
       </Parameters>
       <Docs>
         <param name="usernamespace">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>This member is reserved for internal use and is not intended to be used directly from your code.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -48,6 +54,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute.UserNamespace" />
       <MemberSignature Language="VB.NET" Value="Public Property UserNamespace As String" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ UserNamespace { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.UserNamespace : string with get, set" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute.UserNamespace" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -57,9 +64,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Gets or sets the namespace prefixes in the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute" /> attribute that is applied to the class that contains form code in a managed-code project.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+          <para>
+            <b>Important</b>: The settings of the <b>InfoPathNamespace</b> attribute are generated automatically when you create and work with an InfoPath managed-code form template using the InfoPath 2003 object model. You should not alter this attribute. For more information, see How to: Create a Managed Code Form Template Using the InfoPath 2003 Object Model.</para>
+          <para />
+        </remarks>
       </Docs>
     </Member>
   </Members>

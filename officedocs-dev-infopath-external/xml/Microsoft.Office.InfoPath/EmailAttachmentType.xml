@@ -1,0 +1,85 @@
+﻿<Type Name="EmailAttachmentType" FullName="Microsoft.Office.InfoPath.EmailAttachmentType">
+  <TypeSignature Language="C#" Value="public enum EmailAttachmentType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed EmailAttachmentType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.EmailAttachmentType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum EmailAttachmentType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class EmailAttachmentType" />
+  <TypeSignature Language="F#" Value="type EmailAttachmentType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Specifies the type of form files attached to an e-mail message.</summary>
+    <remarks>
+      <para>Use the <b>EmailAttachmentType</b> to specify the <see cref="P:Microsoft.Office.InfoPath.EmailSubmitConnection.EmailAttachmentType" /> property of the <see cref="T:Microsoft.Office.InfoPath.EmailSubmitConnection" /> class and the <see cref="P:Microsoft.Office.InfoPath.MailEnvelope.EmailAttachmentType" /> property of the <see cref="T:Microsoft.Office.InfoPath.MailEnvelope" /> class.</para>
+      <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.EmailAttachmentType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.EmailAttachmentType.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Microsoft.Office.InfoPath.EmailAttachmentType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.EmailAttachmentType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>No file will be attached. Only the form view will be sent as the e-mail message body.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Xml">
+      <MemberSignature Language="C#" Value="Xml" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.EmailAttachmentType Xml = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.EmailAttachmentType.Xml" />
+      <MemberSignature Language="VB.NET" Value="Xml" />
+      <MemberSignature Language="C++ CLI" Value="Xml" />
+      <MemberSignature Language="F#" Value="Xml = 1" Usage="Microsoft.Office.InfoPath.EmailAttachmentType.Xml" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.EmailAttachmentType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>The attachment is a form file (.xml).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XmlXsn">
+      <MemberSignature Language="C#" Value="XmlXsn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.EmailAttachmentType XmlXsn = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.EmailAttachmentType.XmlXsn" />
+      <MemberSignature Language="VB.NET" Value="XmlXsn" />
+      <MemberSignature Language="C++ CLI" Value="XmlXsn" />
+      <MemberSignature Language="F#" Value="XmlXsn = 2" Usage="Microsoft.Office.InfoPath.EmailAttachmentType.XmlXsn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.EmailAttachmentType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>The attachment is a form file (.xml) along with its associated form template file (.xsn).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

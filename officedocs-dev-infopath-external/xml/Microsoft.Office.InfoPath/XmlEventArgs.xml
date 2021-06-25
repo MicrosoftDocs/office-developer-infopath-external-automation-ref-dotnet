@@ -1,0 +1,227 @@
+﻿<Type Name="XmlEventArgs" FullName="Microsoft.Office.InfoPath.XmlEventArgs">
+  <TypeSignature Language="C#" Value="public abstract class XmlEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlEventArgs extends System.EventArgs" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlEventArgs" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class XmlEventArgs&#xA;Inherits EventArgs" />
+  <TypeSignature Language="C++ CLI" Value="public ref class XmlEventArgs abstract : EventArgs" />
+  <TypeSignature Language="F#" Value="type XmlEventArgs = class&#xA;    inherit EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides data for the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" /> event.</summary>
+    <remarks>
+      <para>The <b>XmlEventArgs</b> object is passed to the event handler for the <b>Changed</b> event, which occurs after changes to the form's underlying XML document have been accepted and the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> event has occurred. The <b>XmlEventArgs</b> object provides a number of properties that can be used within the event handler to programmatically interact with the data that is being changed in the form's underlying XML document and to get information about the node that is being changed.</para>
+      <para>The <b>XmlEventArgs</b> object provides the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" /> property which gets a reference to an <b>XPathNavigator</b> object that that is positioned at the node that is being changed, and can be used to work with this node and other data in a form's underlying XML document.</para>
+      <para>The <see cref="T:Microsoft.Office.InfoPath.XmlChangingEventArgs" /> and <see cref="T:Microsoft.Office.InfoPath.XmlValidatingEventArgs" /> classes for the corresponding <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changing" /><see cref="E:Microsoft.Office.InfoPath.XmlEvent.Validating" /> events are derived from the <b>XmlEventArgs</b> class and expose the same set of properties.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected XmlEventArgs ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlEventArgs.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; XmlEventArgs();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Match">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathExpression Match { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathExpression Match" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEventArgs.Match" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Match As XPathExpression" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathExpression ^ Match { System::Xml::XPath::XPathExpression ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Match : System.Xml.XPath.XPathExpression" Usage="Microsoft.Office.InfoPath.XmlEventArgs.Match" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an <see cref="T:System.Xml.XPath.XPathExpression" /> object which contains an XPath expression that returns the node that is currently being changed.</summary>
+        <value>A <see cref="T:System.Xml.XPath.XPathExpression" /> object that returns the node that is currently being changed in the form's underlying XML document.</value>
+        <remarks>
+          <para>The <b>XPathExpression</b> object returned by <b>Match</b> property contains a compiled XPath expression that points to a node in the form's underlying XML document. This is the node that raised the event to which the event handler is responding.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewValue">
+      <MemberSignature Language="C#" Value="public abstract string NewValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NewValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEventArgs.NewValue" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property NewValue As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ NewValue { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.NewValue : string" Usage="Microsoft.Office.InfoPath.XmlEventArgs.NewValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the new value for the node being changed.</summary>
+        <value>The value that will replace the existing value.</value>
+        <remarks>
+          <para>The <b>NewValue</b> property contains the value of the node that will replace the existing value. To get the original value of the node, use the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.OldValue" /> property.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldParent">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator OldParent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator OldParent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEventArgs.OldParent" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property OldParent As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ OldParent { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OldParent : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.XmlEventArgs.OldParent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an <see cref="T:System.Xml.XPath.XPathNavigator" /> object pointing to the node which is the parent of the node being deleted.</summary>
+        <value>An <see cref="T:System.Xml.XPath.XPathNavigator" /> object for the parent of the deleted node.</value>
+        <remarks>
+          <para>The value of the <b>OldParent</b> property is a null reference (Nothing in Visual Basic) unless the change that is occurring is a delete operation. When a delete operation was performed, the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.Operation" /> property will return <b>XmlOperation.Delete</b>.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OldValue">
+      <MemberSignature Language="C#" Value="public abstract string OldValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string OldValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEventArgs.OldValue" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property OldValue As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ OldValue { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.OldValue : string" Usage="Microsoft.Office.InfoPath.XmlEventArgs.OldValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the original value of the node that is being changed.</summary>
+        <value>The original value of the node that is being changed.</value>
+        <remarks>
+          <para>The <b>OldValue</b> property returns the original value of the node that will be replaced with a new value or deleted. To get the new value of the node, use the <see cref="P:Microsoft.Office.InfoPath.XmlEventArgs.NewValue" /> property.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.XmlOperation Operation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.XmlOperation Operation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEventArgs.Operation" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Operation As XmlOperation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::XmlOperation Operation { Microsoft::Office::InfoPath::XmlOperation get(); };" />
+      <MemberSignature Language="F#" Value="member this.Operation : Microsoft.Office.InfoPath.XmlOperation" Usage="Microsoft.Office.InfoPath.XmlEventArgs.Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.XmlOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an <see cref="T:Microsoft.Office.InfoPath.XmlOperation" /> enumeration that indicates the type of operation that occurred when the node was changed.</summary>
+        <value>An <see cref="T:Microsoft.Office.InfoPath.XmlOperation" /> enumeration for the operation that has occurred.</value>
+        <remarks>
+          <para>The <b>XmlOperation</b> enumeration values that the <b>Operation</b> property returns are: <b>XmlOperation.Insert</b>, <b>XmlOperation.ValueChange</b>, and <b>XmlOperation.Delete</b>. Which operations can occur depends on the structure of the control to which the handler for the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" /> event is bound. For example, for a Text Box control, the node that the control is bound to can never be inserted or deleted, so only the <b>XmlOperation.ValueChange</b> operation can occur. Whereas, for a repeating control, such as a Repeating Table control, in addition to <b>XmlOperation.ValueChange</b> operations that can occur in the fields in the table's columns, entire groups (rows) can be inserted and deleted, which cause the <b>Operation</b> property to return the corresponding <b>XmlOperation.Insert</b> and <b>XmlOperation.Delete</b> enumeration values.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Site">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator Site { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator Site" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEventArgs.Site" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Site As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ Site { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Site : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.XmlEventArgs.Site" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets an <see cref="T:System.Xml.XPath.XPathNavigator" /> object pointing at the node that is being changed.</summary>
+        <value>An <see cref="T:System.Xml.XPath.XPathNavigator" /> object pointing to the changed node.</value>
+        <remarks>
+          <para>After you set a reference to the <b>XPathNavigator</b> object that the <b>Site</b> property returns, you can use any of the properties and methods that are supported by the <b>XPathNavigator</b> class to work with the data.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UndoRedo">
+      <MemberSignature Language="C#" Value="public abstract bool UndoRedo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UndoRedo" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.XmlEventArgs.UndoRedo" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property UndoRedo As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool UndoRedo { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.UndoRedo : bool" Usage="Microsoft.Office.InfoPath.XmlEventArgs.UndoRedo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a value that indicates whether the node being changed is part of an undo or redo operation.</summary>
+        <value>
+          <b>true</b> if the node being changed is part of an undo or redo operation; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>When an undo or a redo operation takes place, the form's underlying XML document is placed in a read-only state and cannot be modified. If this occurs during a <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changed" /> event, the <b>UndoRedo</b> property can be used to bypass the data validation logic contained in the handler for the event.</para>
+          <para>This member can be accessed without restrictions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

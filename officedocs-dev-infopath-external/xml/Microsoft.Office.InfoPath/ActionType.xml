@@ -1,0 +1,364 @@
+﻿<Type Name="ActionType" FullName="Microsoft.Office.InfoPath.ActionType">
+  <TypeSignature Language="C#" Value="public enum ActionType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ActionType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ActionType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ActionType" />
+  <TypeSignature Language="C++ CLI" Value="public enum class ActionType" />
+  <TypeSignature Language="F#" Value="type ActionType = " />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Specifies the editing command to be performed by the <see cref="M:Microsoft.Office.InfoPath.View.ExecuteAction(Microsoft.Office.InfoPath.ActionType)" /> method.</summary>
+    <remarks>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Copy">
+      <MemberSignature Language="C#" Value="Copy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType Copy = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.Copy" />
+      <MemberSignature Language="VB.NET" Value="Copy" />
+      <MemberSignature Language="C++ CLI" Value="Copy" />
+      <MemberSignature Language="F#" Value="Copy = 0" Usage="Microsoft.Office.InfoPath.ActionType.Copy" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Copies the selected data to the clipboard. </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Cut">
+      <MemberSignature Language="C#" Value="Cut" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType Cut = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.Cut" />
+      <MemberSignature Language="VB.NET" Value="Cut" />
+      <MemberSignature Language="C++ CLI" Value="Cut" />
+      <MemberSignature Language="F#" Value="Cut = 2" Usage="Microsoft.Office.InfoPath.ActionType.Cut" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Removes the selected data and copies it to the clipboard.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType Delete = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.Delete" />
+      <MemberSignature Language="VB.NET" Value="Delete" />
+      <MemberSignature Language="C++ CLI" Value="Delete" />
+      <MemberSignature Language="F#" Value="Delete = 3" Usage="Microsoft.Office.InfoPath.ActionType.Delete" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>Deletes the selected data.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Paste">
+      <MemberSignature Language="C#" Value="Paste" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType Paste = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.Paste" />
+      <MemberSignature Language="VB.NET" Value="Paste" />
+      <MemberSignature Language="C++ CLI" Value="Paste" />
+      <MemberSignature Language="F#" Value="Paste = 1" Usage="Microsoft.Office.InfoPath.ActionType.Paste" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Copies data from the clipboard to the insertion point.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XCollectionInsert">
+      <MemberSignature Language="C#" Value="XCollectionInsert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XCollectionInsert = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XCollectionInsert" />
+      <MemberSignature Language="VB.NET" Value="XCollectionInsert" />
+      <MemberSignature Language="C++ CLI" Value="XCollectionInsert" />
+      <MemberSignature Language="F#" Value="XCollectionInsert = 4" Usage="Microsoft.Office.InfoPath.ActionType.XCollectionInsert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>Inserts data based on the selected context using the <b>xCollection</b> editing component. If current selection is within a container of the <b>xCollection</b>, specified by its <b>xmlToEdit</b> element in the .xsf, then the <b>fragmentToInsert</b> element data is appended within that container.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XCollectionInsertAfter">
+      <MemberSignature Language="C#" Value="XCollectionInsertAfter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XCollectionInsertAfter = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XCollectionInsertAfter" />
+      <MemberSignature Language="VB.NET" Value="XCollectionInsertAfter" />
+      <MemberSignature Language="C++ CLI" Value="XCollectionInsertAfter" />
+      <MemberSignature Language="F#" Value="XCollectionInsertAfter = 6" Usage="Microsoft.Office.InfoPath.ActionType.XCollectionInsertAfter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>Inserts data after the selected context using the <b>xCollection</b> editing component. If current selection is within an item of the <b>xCollection</b>, as specified by its <b>xmlToEdit</b> element in the .xsf, then the <b>fragmentToInsert</b> element data is inserted after that item.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XCollectionInsertBefore">
+      <MemberSignature Language="C#" Value="XCollectionInsertBefore" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XCollectionInsertBefore = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XCollectionInsertBefore" />
+      <MemberSignature Language="VB.NET" Value="XCollectionInsertBefore" />
+      <MemberSignature Language="C++ CLI" Value="XCollectionInsertBefore" />
+      <MemberSignature Language="F#" Value="XCollectionInsertBefore = 5" Usage="Microsoft.Office.InfoPath.ActionType.XCollectionInsertBefore" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>Inserts data before the selected context using the <b>xCollection</b> editing component. If current selection is within an item of the <b>xCollection</b>, as specified by its <b>xmlToEdit</b> element in the .xsf, then the <b>fragmentToInsert</b> element data is inserted before that item.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XCollectionRefreshFilter">
+      <MemberSignature Language="C#" Value="XCollectionRefreshFilter" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XCollectionRefreshFilter = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XCollectionRefreshFilter" />
+      <MemberSignature Language="VB.NET" Value="XCollectionRefreshFilter" />
+      <MemberSignature Language="C++ CLI" Value="XCollectionRefreshFilter" />
+      <MemberSignature Language="F#" Value="XCollectionRefreshFilter = 9" Usage="Microsoft.Office.InfoPath.ActionType.XCollectionRefreshFilter" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>Refreshes the filter for the selected Repeating Table or Repeating Section control using the <b>xCollection</b> editing component.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XCollectionRemove">
+      <MemberSignature Language="C#" Value="XCollectionRemove" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XCollectionRemove = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XCollectionRemove" />
+      <MemberSignature Language="VB.NET" Value="XCollectionRemove" />
+      <MemberSignature Language="C++ CLI" Value="XCollectionRemove" />
+      <MemberSignature Language="F#" Value="XCollectionRemove = 7" Usage="Microsoft.Office.InfoPath.ActionType.XCollectionRemove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>Deletes data from the selected context using the <b>xCollection</b> editing component. If current selection is within an item of the <b>xCollection</b>, as specified by its <b>xmlToEdit</b> element in the .xsf, then that item is deleted.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XCollectionRemoveAll">
+      <MemberSignature Language="C#" Value="XCollectionRemoveAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XCollectionRemoveAll = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XCollectionRemoveAll" />
+      <MemberSignature Language="VB.NET" Value="XCollectionRemoveAll" />
+      <MemberSignature Language="C++ CLI" Value="XCollectionRemoveAll" />
+      <MemberSignature Language="F#" Value="XCollectionRemoveAll = 8" Usage="Microsoft.Office.InfoPath.ActionType.XCollectionRemoveAll" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>Deletes all data contained within the selected context using the <b>xCollection</b> editing component. If current selection is within a container of the <b>xCollection</b>, as specified by the <b>xmlToEdit</b> element in the .xsf, then this action deletes all the items within that container.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XFileAttachmentAttach">
+      <MemberSignature Language="C#" Value="XFileAttachmentAttach" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XFileAttachmentAttach = int32(16)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XFileAttachmentAttach" />
+      <MemberSignature Language="VB.NET" Value="XFileAttachmentAttach" />
+      <MemberSignature Language="C++ CLI" Value="XFileAttachmentAttach" />
+      <MemberSignature Language="F#" Value="XFileAttachmentAttach = 16" Usage="Microsoft.Office.InfoPath.ActionType.XFileAttachmentAttach" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>Opens the Attach File dialog box to specify the file to attach for the selected File Attachment control using the <b>xFileAttachment</b> editing component.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XFileAttachmentOpen">
+      <MemberSignature Language="C#" Value="XFileAttachmentOpen" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XFileAttachmentOpen = int32(13)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XFileAttachmentOpen" />
+      <MemberSignature Language="VB.NET" Value="XFileAttachmentOpen" />
+      <MemberSignature Language="C++ CLI" Value="XFileAttachmentOpen" />
+      <MemberSignature Language="F#" Value="XFileAttachmentOpen = 13" Usage="Microsoft.Office.InfoPath.ActionType.XFileAttachmentOpen" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>13</MemberValue>
+      <Docs>
+        <summary>Opens the file attached to the selected File Attachment control using the <b>xFileAttachment</b> editing component. The form template must be configured as Full Trust for this editing command to succeed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XFileAttachmentRemove">
+      <MemberSignature Language="C#" Value="XFileAttachmentRemove" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XFileAttachmentRemove = int32(15)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XFileAttachmentRemove" />
+      <MemberSignature Language="VB.NET" Value="XFileAttachmentRemove" />
+      <MemberSignature Language="C++ CLI" Value="XFileAttachmentRemove" />
+      <MemberSignature Language="F#" Value="XFileAttachmentRemove = 15" Usage="Microsoft.Office.InfoPath.ActionType.XFileAttachmentRemove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>15</MemberValue>
+      <Docs>
+        <summary>Removes the file attached to the selected File Attachment control using the <b>xFileAttachment</b> editing component.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XFileAttachmentSaveAs">
+      <MemberSignature Language="C#" Value="XFileAttachmentSaveAs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XFileAttachmentSaveAs = int32(14)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XFileAttachmentSaveAs" />
+      <MemberSignature Language="VB.NET" Value="XFileAttachmentSaveAs" />
+      <MemberSignature Language="C++ CLI" Value="XFileAttachmentSaveAs" />
+      <MemberSignature Language="F#" Value="XFileAttachmentSaveAs = 14" Usage="Microsoft.Office.InfoPath.ActionType.XFileAttachmentSaveAs" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>14</MemberValue>
+      <Docs>
+        <summary>Opens the Save As dialog box to specify where to save the file attached to the selected File Attachment control using the <b>xFileAttachment</b> editing component.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XOptionalInsert">
+      <MemberSignature Language="C#" Value="XOptionalInsert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XOptionalInsert = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XOptionalInsert" />
+      <MemberSignature Language="VB.NET" Value="XOptionalInsert" />
+      <MemberSignature Language="C++ CLI" Value="XOptionalInsert" />
+      <MemberSignature Language="F#" Value="XOptionalInsert = 10" Usage="Microsoft.Office.InfoPath.ActionType.XOptionalInsert" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary>Inserts data based on the selected context using the <b>xOptional</b> editing component. If current selection is within a container of the <b>xOptional</b>, as specified by its <b>xmlToEdit</b> element in the .xsf, then the <b>fragmentToInsert</b> element data is appended within that container.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XOptionalRemove">
+      <MemberSignature Language="C#" Value="XOptionalRemove" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XOptionalRemove = int32(11)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XOptionalRemove" />
+      <MemberSignature Language="VB.NET" Value="XOptionalRemove" />
+      <MemberSignature Language="C++ CLI" Value="XOptionalRemove" />
+      <MemberSignature Language="F#" Value="XOptionalRemove = 11" Usage="Microsoft.Office.InfoPath.ActionType.XOptionalRemove" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>11</MemberValue>
+      <Docs>
+        <summary>Deletes data from the selected context using the <b>xOptional</b> editing component. If current selection is within an item of the <b>xOptional</b>, as specified by its <b>xmlToEdit</b> element in the .xsf, then that item is deleted.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="XReplaceReplace">
+      <MemberSignature Language="C#" Value="XReplaceReplace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Microsoft.Office.InfoPath.ActionType XReplaceReplace = int32(12)" />
+      <MemberSignature Language="DocId" Value="F:Microsoft.Office.InfoPath.ActionType.XReplaceReplace" />
+      <MemberSignature Language="VB.NET" Value="XReplaceReplace" />
+      <MemberSignature Language="C++ CLI" Value="XReplaceReplace" />
+      <MemberSignature Language="F#" Value="XReplaceReplace = 12" Usage="Microsoft.Office.InfoPath.ActionType.XReplaceReplace" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.ActionType</ReturnType>
+      </ReturnValue>
+      <MemberValue>12</MemberValue>
+      <Docs>
+        <summary>Replaces the data in the selected context using the <b>xReplace</b> editing component. If current selection is within an item of the <b>xReplace</b>, as specified by its <b>xmlToEdit</b> element in the .xsf, then that item is replaced by the <b>fragmentToInsert</b> element data.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

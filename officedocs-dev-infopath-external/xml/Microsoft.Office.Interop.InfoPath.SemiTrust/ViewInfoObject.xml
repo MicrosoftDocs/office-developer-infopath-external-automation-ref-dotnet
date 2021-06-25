@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfoObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface ViewInfoObject&#xA;Implements ViewInfo" />
   <TypeSignature Language="C++ CLI" Value="public interface class ViewInfoObject : Microsoft::Office::Interop::InfoPath::SemiTrust::ViewInfo" />
+  <TypeSignature Language="F#" Value="type ViewInfoObject = interface&#xA;    interface ViewInfo" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -22,8 +23,15 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Contains descriptive information about a view within an InfoPath form.</summary>
+    <remarks>
+      <para>This type is a wrapper for a coclass that is required by managed code for COM interoperability. Use this type to access the members of the COM interface implemented by this coclass. For information about the COM interface, including a link to descriptions of its members, see<see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo" />.</para>
+      <para>Using the members of the <b>ViewInfo</b> interface provides compatibility with InfoPath 2003. To use new members that were added to the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewInfo2" /> object model in Microsoft InfoPath 2010, you must cast the object returned by the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ViewInfos" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object to the <b>ViewInfo2</b> type. For more information, see How to: Use Object Model Members That Are Not Compatible with InfoPath 2003.</para>
+      <para>The <b>ViewInfoObject</b> object provides properties that can be used to get the name of a view, determine whether a view is the default view of the form, and determine whether its name is hidden on the View menu. The <b>ViewInfoObject</b> object is accessible through the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocument2.ViewInfos" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object.</para>
+      <para>
+        <b>Note</b>: To work with the view programmatically, use the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewObject" /> object.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members />
 </Type>

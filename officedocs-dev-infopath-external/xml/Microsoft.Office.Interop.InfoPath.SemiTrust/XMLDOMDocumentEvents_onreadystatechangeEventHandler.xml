@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_onreadystatechangeEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub XMLDOMDocumentEvents_onreadystatechangeEventHandler()" />
   <TypeSignature Language="C++ CLI" Value="public delegate void XMLDOMDocumentEvents_onreadystatechangeEventHandler();" />
+  <TypeSignature Language="F#" Value="type XMLDOMDocumentEvents_onreadystatechangeEventHandler = delegate of unit -&gt; unit" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -21,7 +22,8 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>
+    This type or member acts as a proxy for a Microsoft XML Core Services (MSXML) object or member. For information about the MSXML object or member that is wrapped by this type or member, see the <a href="7e831db8-9d0a-43ff-87e9-11382721eb99.htm">MSXML SDK</a><a href="f7a0cac5-26f9-49ed-b52c-0240ef0c9d38.htm">Working with MSXML5 and System.Xml Using the InfoPath 2003 Object Model</a></summary>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>

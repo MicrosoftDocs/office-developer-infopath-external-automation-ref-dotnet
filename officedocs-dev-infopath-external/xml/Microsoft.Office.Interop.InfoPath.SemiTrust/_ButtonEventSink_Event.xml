@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_Event" />
   <TypeSignature Language="VB.NET" Value="Public Interface _ButtonEventSink_Event" />
   <TypeSignature Language="C++ CLI" Value="public interface class _ButtonEventSink_Event" />
+  <TypeSignature Language="F#" Value="type _ButtonEventSink_Event = interface" />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -18,7 +19,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>A Button control in a Microsoft InfoPath form template is used to implement an event handler for the <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_Event.OnClick" /> event, and cannot be used directly in code.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -28,6 +29,7 @@
       <MemberSignature Language="DocId" Value="E:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_Event.OnClick" />
       <MemberSignature Language="VB.NET" Value="Event OnClick As _ButtonEventSink_OnClickEventHandler " />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; event Microsoft::Office::Interop::InfoPath::SemiTrust::_ButtonEventSink_OnClickEventHandler ^ OnClick;" />
+      <MemberSignature Language="F#" Value="member this.OnClick : Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_OnClickEventHandler " Usage="member this.OnClick : Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_OnClickEventHandler " />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -37,8 +39,33 @@
         <ReturnType>Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_OnClickEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Occurs when a Button control is clicked within a view in a Microsoft InfoPath form.</summary>
+        <remarks>
+          <para>This event handler does not allow users to cancel an operation.</para>
+          <para>
+            <b>Note</b>: The <b>OnClick</b> event for the InfoPath button control is the only control event that is supported.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>OnClick</b> event handler is used to show the value of <paramref name="my:field1" /> in an message box:</para>
+          <code>[InfoPathEventHandler(MatchPath="btnAlert", EventType=InfoPathEventType.&lt;span class="label"&gt;OnClick&lt;/span&gt;)]
+public void btnAlert_&lt;span class="label"&gt;OnClick&lt;/span&gt;(DocActionEvent e)
+ {
+  IXMLDOMNode field1;
+  field1 = thisXDocument.DOM.selectSingleNode(@"/my:myFields/my:field1");
+  thisXDocument.UI.Alert(field1.text);
+ }</code>
+        </example>
+        <example>
+          <para>In the following example, the <b>OnClick</b> event handler is used to show the value of <paramref name="my:field1" /> in an message box:</para>
+          <code>[InfoPathEventHandler(MatchPath="btnAlert", EventType=InfoPathEventType.&lt;span class="label"&gt;OnClick&lt;/span&gt;)]
+public void btnAlert_&lt;span class="label"&gt;OnClick&lt;/span&gt;(DocActionEvent e)
+ {
+  IXMLDOMNode field1;
+  field1 = thisXDocument.DOM.selectSingleNode(@"/my:myFields/my:field1");
+  thisXDocument.UI.Alert(field1.text);
+ }</code>
+        </example>
       </Docs>
     </Member>
   </Members>

@@ -1,0 +1,234 @@
+﻿<Type Name="SharepointListQueryConnection" FullName="Microsoft.Office.InfoPath.SharepointListQueryConnection">
+  <TypeSignature Language="C#" Value="public abstract class SharepointListQueryConnection : Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SharepointListQueryConnection extends Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SharepointListQueryConnection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SharepointListQueryConnection&#xA;Inherits DataConnection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SharepointListQueryConnection abstract : Microsoft::Office::InfoPath::DataConnection" />
+  <TypeSignature Language="F#" Value="type SharepointListQueryConnection = class&#xA;    inherit DataConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.DataConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Obsolete("The SharePointListQueryConnection class has been deprecated. Use SharePointListRWQueryConnection instead.")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Represents a data connection for retrieving data from a SharePoint list or document library.</summary>
+    <remarks>
+      <para>
+        <b>Important</b>: The <see cref="T:Microsoft.Office.InfoPath.SharepointListQueryConnection" /> class and its members have been deprecated in Microsoft InfoPath. Code written with the members of this class is compatible only with a data connection to a SharePoint document library created in InfoPath 2003 or InfoPath 2007, with a data connection in a new form template created in InfoPath with one of the InfoPath 2007 Form Templates, or with a data connection converted with the Convert to Previous Version button in the Data Connections dialog box. To write code that works with a data connection to a SharePoint document library created in an InfoPath form template, use the members of the <see cref="T:Microsoft.Office.InfoPath.SharePointListRWQueryConnection" /> class. Additionally, if you convert a data connection to a SharePoint document library with the Convert to Current Version button in the Data Connections dialog box, you must rewrite any code written with the members of the <see cref="T:Microsoft.Office.InfoPath.SharepointListQueryConnection" /> class to use the members of the <see cref="T:Microsoft.Office.InfoPath.SharePointListRWQueryConnection" /> class instead.</para>
+      <para>The <b>SharePointListQueryConnection</b> object represents a secondary data connection created in InfoPath using the Data Connection Wizard that specifies all the information necessary for retrieving data from a SharePoint list or document library.</para>
+      <para>The <b>SharePointListQueryConnection</b> class provides properties that can be used to get the name of the data connection and the Uniform Resource Locator (URL) of the list or document library on the Windows SharePoint Services site from which the connection retrieves data.</para>
+      <para>The <b>SharePointListQueryConnection</b> object associated with the data connection is accessible using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class to return the connection from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> of the form template.</para>
+      <para>The default <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method, inherited from the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> base class, performs a query or submit operation using the values that were declaratively defined in InfoPath form template design mode. Additionally, the <b>SharePointListQueryConnection</b> class provides the <see cref="M:Microsoft.Office.InfoPath.SharepointListQueryConnection.Execute(System.Xml.XPath.XPathNavigator)" /> method, which allows you to specify a different location to insert the data that is returned.</para>
+      <para>The <b>SharePointListQueryConnection</b> class corresponds to the <b>SharePointListAdapterObject</b> interface of the Microsoft Office InfoPath 2003 object model.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>In the following example, a reference to the <b>SharePointListQueryConnection</b> object that represents the connection named "Contacts", which connects to a list of contact information on SharePoint, is set by passing the name to the <see cref="P:Microsoft.Office.InfoPath.DataConnectionCollection.Item(System.String)" /> property of the <b>DataConnectionCollection</b> class, and then casting the returned object to the <b>SharePointListQueryConnection</b> type.</para>
+      <para>[C#]</para>
+      <code>SharePointListQueryConnection spConnection = (SharePointListQueryConnection)this.DataConnections["Contacts"];</code>
+      <code>Dim spConnection As SharePointListQueryConnection = _
+   DirectCast(Me.DataConnections("Contacts"), _
+   SharePointListQueryConnection)</code>
+      <para>After the reference has been set, you can use the properties or methods of the <b>SharePointListQueryConnection</b> object. The following example sets a string variable to the value returned by the <see cref="P:Microsoft.Office.InfoPath.DataConnection.Name" /> property inherited from the <b>DataConnection</b> base class.</para>
+      <code>string spName = spConnection.Name;</code>
+      <code>Dim spName As String = spConnection.Name</code>
+    </example>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SharepointListQueryConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SharepointListQueryConnection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SharepointListQueryConnection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract void Execute (System.Xml.XPath.XPathNavigator output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(class System.Xml.XPath.XPathNavigator output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SharepointListQueryConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Execute (output As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Execute(System::Xml::XPath::XPathNavigator ^ output);" />
+      <MemberSignature Language="F#" Value="override this.Execute : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="sharepointListQueryConnection.Execute output" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="output">An <see cref="T:System.Xml.XPath.XPathNavigator" /> that specifies an XML node in the primary or a secondary data source of the form into which to insert the returned data. The <b>XPathNavigator</b> passed as the <paramref name="output" /> parameter can also specify to insert the data into any XML file on the local computer, or into a <b>System.Xml.XmlDocument</b> held in memory.</param>
+        <summary>Overrides the default <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method to allow specifying a different location to insert the data that is returned.</summary>
+        <remarks>
+          <para>Setting the <paramref name="output" /> parameter to a null reference (Nothing in Visual Basic) has the same effect as using the default <b>Execute</b> method to return data using the declarative settings defined in the form template.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.Net.WebException">The query operation failed or returned no data (the queried list is empty).</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <b>Execute(</b><paramref name="output" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.SharepointListQueryConnection" /> class is used to execute a query against the "Contacts" connection and store the output in an <b>XmlDocument</b> that is created in memory. It then displays the output stored in the <b>XmlDocument</b> in the <b>QueryOutput</b> field of the form.</para>
+          <code>public void ExecuteOutput_Clicked(object sender, ClickedEventArgs e)
+{
+   // Create the XmlDocument to accept the query results.
+   XmlDocument outputFile = new XmlDocument();
+   outputFile.LoadXml(
+      "&amp;lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&amp;gt;&amp;lt;outputRoot&amp;gt;&amp;lt;/outputRoot&amp;gt;");
+
+   // Create XmlNamespaceManager for XmlDocument object. When
+   // creating a more complex document, use AddNamespace method
+   // to add a mapping from namespace prefix to namespace URL for 
+   // each namespace to this object.
+   XmlNamespaceManager outputFileNamespaceManager = 
+      new XmlNamespaceManager(outputFile.NameTable);
+
+   // Create an XPathNavigator positioned at the root of the
+   // XmlDocument output file created above.
+   XPathNavigator outputFileNavigator = outputFile.CreateNavigator();
+   XPathNavigator outputRootNavigator = 
+      outputFileNavigator.SelectSingleNode("/outputRoot", 
+      outputFileNamespaceManager);
+
+   // Query the SharePoint list defined for the 
+   // SharepointListQueryConnection and log the results
+   // in the XmlDocument created above.
+    SharepointListQueryConnection queryConnection = 
+      (SharepointListQueryConnection)(DataConnections["Contacts"]);
+    queryConnection.Execute(outputRootNavigator);
+
+   // Insert the results of the query from the XmlDocument in the 
+   // QueryOutput field of the main data source of the form.
+   XPathNavigator mainNavigator = MainDataSource.CreateNavigator();
+   XPathNavigator queryOutputNavigator = 
+      mainNavigator.SelectSingleNode("/my:myFields/my:QueryOutput",
+      NamespaceManager);
+    queryOutputNavigator.SetValue(outputRootNavigator.InnerXml);
+}</code>
+          <code>Public Sub ExecuteOutput_Clicked(ByVal sender As Object , _
+   ByVal e As ClickedEventArgs)
+{
+   ' Create the XmlDocument to accept the query results.
+   Dim outputFile As XmlDocument = new XmlDocument()
+   outputFile.LoadXml(
+      "&amp;lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&amp;gt;&amp;lt;outputRoot&amp;gt;&amp;lt;/outputRoot&amp;gt;")
+
+   ' Create XmlNamespaceManager for XmlDocument object. When
+   ' creating a more complex document, use AddNamespace method
+   ' to add a mapping from namespace prefix to namespace URL for 
+   ' each namespace to this object.
+   Dim outputFileNamespaceManager As XmlNamespaceManager  = _
+      new XmlNamespaceManager(outputFile.NameTable)
+
+   ' Create an XPathNavigator positioned at the root of the
+   ' XmlDocument output file created above.
+   Dim outputFileNavigator As XPathNavigator = _
+      outputFile.CreateNavigator()
+   Dim outputRootNavigator As XPathNavigator = 
+      outputFileNavigator.SelectSingleNode("/outputRoot", 
+      outputFileNamespaceManager)
+
+   ' Query the SharePoint list defined for the 
+   ' SharepointListQueryConnection and log the results
+   '  in the XmlDocument created above.
+    Dim myQueryConnection As SharepointListQueryConnection  = _
+      DirectCast(DataConnections["Contacts"], _
+      SharepointListQueryConnection)
+    myQueryConnection.Execute(outputRootNavigator);
+
+   ' Insert the results of the query from the XmlDocument 
+   ' in the QueryOutput field of the main data source of the form.
+   Dim mainNavigator As XPathNavigator  = _
+      MainDataSource.CreateNavigator()
+   Dim queryOutputNavigator As XPathNavigator  = 
+      mainNavigator.SelectSingleNode("/my:myFields/my:QueryOutput", _
+      NamespaceManager)
+    queryOutputNavigator.SetValue(outputRootNavigator.InnerXml)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryThisFormOnly">
+      <MemberSignature Language="C#" Value="public abstract bool QueryThisFormOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool QueryThisFormOnly" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SharepointListQueryConnection.QueryThisFormOnly" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property QueryThisFormOnly As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property bool QueryThisFormOnly { bool get(); };" />
+      <MemberSignature Language="F#" Value="member this.QueryThisFormOnly : bool" Usage="Microsoft.Office.InfoPath.SharepointListQueryConnection.QueryThisFormOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets whether the query operation will apply only to the current form.</summary>
+        <value>
+          <b>true</b> if the query applies only to the current form; otherwise <b>false</b>.</value>
+        <remarks>
+          <para>When a form is part of a SharePoint workflow, the query operation will apply only to the current form. The value of this property corresponds to the value of the <b>queryThisFormOnly</b> attribute of the <b>xsf:extensions/xsf:extension/xsf2:solutionDefinition/xsf2:solutionDefinition/xsf2:dataConnections/xsf2:sharePointListAdapterExt/</b> element in the form definition file (.xsf) of the form template.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SiteUrl">
+      <MemberSignature Language="C#" Value="public abstract Uri SiteUrl { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Uri SiteUrl" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SharepointListQueryConnection.SiteUrl" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SiteUrl As Uri" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Uri ^ SiteUrl { Uri ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SiteUrl : Uri" Usage="Microsoft.Office.InfoPath.SharepointListQueryConnection.SiteUrl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Uri</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <b>System.Uri</b> object that represents the Uniform Resource Locator (URL) of the Windows SharePoint Services site associated with the <see cref="T:Microsoft.Office.InfoPath.SharepointListQueryConnection" /> object.</summary>
+        <value>A <b>System.Uri</b> object that represents the Uniform Resource Locator (URL) of the Windows SharePoint Services site associated with the <see cref="T:Microsoft.Office.InfoPath.SharepointListQueryConnection" /> object.</value>
+        <remarks>
+          <para>The <b>System.Uri</b> object returned by the <b>SiteUrl</b> property provides a variety of properties and methods that can be used to provide information about the URL of the SharePoint site.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example sets a string variable to the value returned by the <see cref="P:Microsoft.Office.InfoPath.SharepointListQueryConnection.SiteUrl" /> property.</para>
+          <code>string spSiteURL = spConnection.SiteUrl.ToString();</code>
+          <code>Dim spSiteURL As String input = _
+   string spSiteURL = spConnection.SiteUrl.ToString()</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

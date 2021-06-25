@@ -1,0 +1,36 @@
+﻿<Type Name="XmlChangingEventHandler" FullName="Microsoft.Office.InfoPath.XmlChangingEventHandler">
+  <TypeSignature Language="C#" Value="public delegate void XmlChangingEventHandler(object sender, XmlChangingEventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlChangingEventHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlChangingEventHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub XmlChangingEventHandler(sender As Object, e As XmlChangingEventArgs)" />
+  <TypeSignature Language="C++ CLI" Value="public delegate void XmlChangingEventHandler(System::Object ^ sender, XmlChangingEventArgs ^ e);" />
+  <TypeSignature Language="F#" Value="type XmlChangingEventHandler = delegate of obj * XmlChangingEventArgs -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="Microsoft.Office.InfoPath.XmlChangingEventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">The source of the event.</param>
+    <param name="e">An <see cref="T:Microsoft.Office.InfoPath.XmlChangingEventArgs" /> object that contains the event data.</param>
+    <summary>Represents the method that will handle the <see cref="E:Microsoft.Office.InfoPath.XmlEvent.Changing" /> event of a form.</summary>
+    <remarks>
+      <para>
+        <b>Important</b>: The code skeleton for an event handler associated with the <b>Changing</b> event, which uses the <b>XmlChangingEventHandler</b> delegate, should be added only from the Microsoft InfoPath user interface. For more information on how to add event handlers in InfoPath, see How Do I: Add an Event Handler.</para>
+      <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+      <para />
+    </remarks>
+    <example>
+      <para>For an example of using the <b>XmlChangingEventHandler</b> delegate, see the sample code in the <b>Changing</b> event of the <see cref="T:Microsoft.Office.InfoPath.XmlEvent" /> class.</para>
+    </example>
+  </Docs>
+</Type>

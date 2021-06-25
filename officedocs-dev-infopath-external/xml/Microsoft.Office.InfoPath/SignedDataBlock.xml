@@ -1,0 +1,262 @@
+﻿<Type Name="SignedDataBlock" FullName="Microsoft.Office.InfoPath.SignedDataBlock">
+  <TypeSignature Language="C#" Value="public abstract class SignedDataBlock" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SignedDataBlock extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignedDataBlock" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SignedDataBlock" />
+  <TypeSignature Language="C++ CLI" Value="public ref class SignedDataBlock abstract" />
+  <TypeSignature Language="F#" Value="type SignedDataBlock = class" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents a set of data in a form that can be digitally signed.</summary>
+    <remarks>
+      <para>A <b>SignedDataBlock</b> object corresponds to a set of data that was configured in the form template at design time using the Digital Signature category in the Form Options dialog box. If the Allow signing parts of the form option is selected in the Digital Signature category of the Form Options dialog box, a <b>SignedDataBlock</b> represents one of the sets of data configured using that option. If the Allow signing the entire form option is selected, there is only one <b>SignedDataBlock</b> object which represents the entire form.</para>
+      <para>Alternatively, if you create a form template that can be opened only in the InfoPath editor, you can add one or more Signature Line controls to the form, and then use the settings on the Advanced tab of the control's Properties dialog box to configure digital signing for all or part of a form.</para>
+      <para>The set of <b>SignedDataBlock</b> objects configured for a form is accessible from the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlockCollection" /> object of the form template. The <b>SignedDataBlockCollection</b> object is accessible using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.SignedDataBlocks" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class.</para>
+      <para>The <b>SignedDataBlock</b> class provides the <see cref="M:Microsoft.Office.InfoPath.SignedDataBlock.Sign" /> method, which invokes the Sign dialog box for adding a digital signature to the set of data represented by the specified <b>SignedDataBlock</b> object.</para>
+      <para>The <b>SignedDataBlock</b> class provides the following properties: </para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.SignedDataBlock.Caption" />   Gets the signature confirmation message of the <b>SignedDataBlock</b> object. </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.SignedDataBlock.Name" />   Gets the friendly name of a <b>SignedDataBlock</b> object. </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.SignedDataBlock.SignatureContainer" />   Gets a <see cref="T:System.Xml.XPath.XPathNavigator" /> object that is positioned at the root node of the subtree in the form that stores the signatures associated with the current set of data represented by the <b>SignedDataBlock</b> object. </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.SignedDataBlock.SignatureRelation" />   Gets the relationship among multiple signatures of the <b>SignedDataBlock</b> object, expressed as <see cref="T:Microsoft.Office.InfoPath.SignatureRelation" /> enumerated constants. </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.SignedDataBlock.Signatures" />   Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.SignatureCollection" /> associated with the <b>SignedDataBlock</b> object. </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.InfoPath.SignedDataBlock.XPath" />   Gets the XPath expression for the data that is signed by the current set of data represented by the <b>SignedDataBlock</b> object. </description>
+        </item>
+      </list>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SignedDataBlock ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignedDataBlock.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; SignedDataBlock();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Caption">
+      <MemberSignature Language="C#" Value="public abstract string Caption { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Caption" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.Caption" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Caption As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Caption { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Caption : string" Usage="Microsoft.Office.InfoPath.SignedDataBlock.Caption" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the signature confirmation message defined for the set of data represented by the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</summary>
+        <value>The signature confirmation message defined for the set of data represented by the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</value>
+        <remarks>
+          <para>If the form template is configured to allow signing parts of the form, the value of the <b>Caption</b> property corresponds to the value entered in the Signature confirmation message box of the Set of Signable Data dialog box when the set of data that can be signed was defined in the form template.</para>
+          <para>If the form template is configured to enable digital signatures for the entire form, the <b>Caption</b> property will always return "Verify that the form or section you are signing is correct, as well as the additional information that will be stored with your signature".</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public abstract string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.Name" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ Name { System::String ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="Microsoft.Office.InfoPath.SignedDataBlock.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the friendly name of a <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</summary>
+        <value>The friendly name of a <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</value>
+        <remarks>
+          <para>If the form template is configured to enable digital signatures for specific data in the form, the value of the <b>Name</b> property corresponds to the value entered in the Type a name for the data that can be signed box of the Set of Signable Data dialog box when the set of data was defined. </para>
+          <para>If the form template is configured to enable digital signatures for the entire form, the <b>Name</b> property will always return "Entire_form".</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sign">
+      <MemberSignature Language="C#" Value="public abstract void Sign ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Sign() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.SignedDataBlock.Sign" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Sign ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Sign();" />
+      <MemberSignature Language="F#" Value="abstract member Sign : unit -&gt; unit" Usage="signedDataBlock.Sign " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Invokes the Sign dialog box for adding a digital signature to the set of data represented by the specified <b>SignedDataBlock</b> object.</summary>
+        <remarks>
+          <para>The new signature uses the default signature template, which is applied to the set of data represented by the specified <b>SignedDataBlock</b> object. Calling this method advances to the second step in the signing process which is performed using the Sign dialog box: verifying that the form or section being signed is correct and specifying additional information that will be stored with the digital signature, such as selecting a picture to use as a signature, and specifying the purpose for signing. The user can also choose to sign using a different digital certificate.</para>
+          <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>The following example will invoke the Sign dialog box for the set of data represented by the specified <b>SignedDataBlock</b> object.</para>
+          <code>this.SignedDataBlocks[0].Sign();</code>
+          <code>Me.SignedDataBlocks(0).Sign()</code>
+        </example>
+        <exception cref="T:System.InvalidOperationException">Form code attempted to write to the underlying XML document after signing was initiated.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureContainer">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathNavigator SignatureContainer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathNavigator SignatureContainer" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.SignatureContainer" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SignatureContainer As XPathNavigator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathNavigator ^ SignatureContainer { System::Xml::XPath::XPathNavigator ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureContainer : System.Xml.XPath.XPathNavigator" Usage="Microsoft.Office.InfoPath.SignedDataBlock.SignatureContainer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathNavigator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <b>System.Xml.XPathNavigator</b> object positioned at the root XML node of the subtree in the form that contains the signatures applied to the set of data represented by the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</summary>
+        <value>An <b>System.Xml.XPathNavigator</b> object positioned at the root XML node of the subtree in the form that contains the signatures applied to the set of data represented by the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SignatureRelation">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignatureRelation SignatureRelation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.InfoPath.SignatureRelation SignatureRelation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.SignatureRelation" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property SignatureRelation As SignatureRelation" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignatureRelation SignatureRelation { Microsoft::Office::InfoPath::SignatureRelation get(); };" />
+      <MemberSignature Language="F#" Value="member this.SignatureRelation : Microsoft.Office.InfoPath.SignatureRelation" Usage="Microsoft.Office.InfoPath.SignedDataBlock.SignatureRelation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureRelation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a <see cref="T:Microsoft.Office.InfoPath.SignatureRelation" /> value that specifies the relationship defined for how multiple signatures can be applied to the set of data represented by the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</summary>
+        <value>A <see cref="T:Microsoft.Office.InfoPath.SignatureRelation" /> value that specifies the relationship defined for how multiple signatures can be applied to the set of data represented by the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</value>
+        <remarks>
+          <para>If the form template is configured to enable digital signatures for specific data in the form, the value of the <b>SignatureRelation</b> property corresponds to the option selected under Signature options in the Set of Signable Data dialog box when the set of signable data was defined in the form template.</para>
+          <para>If the form template is configured to enable digital signatures for the entire form, the <b>SignatureRelation</b> property will always return <b>SignatureRelation.CounterSign</b>.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Signatures">
+      <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.SignatureCollection Signatures { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.InfoPath.SignatureCollection Signatures" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.Signatures" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Signatures As SignatureCollection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property Microsoft::Office::InfoPath::SignatureCollection ^ Signatures { Microsoft::Office::InfoPath::SignatureCollection ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.Signatures : Microsoft.Office.InfoPath.SignatureCollection" Usage="Microsoft.Office.InfoPath.SignedDataBlock.Signatures" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.InfoPath.SignatureCollection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the <see cref="T:Microsoft.Office.InfoPath.SignatureCollection" /> object associated with the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</summary>
+        <value>The <see cref="T:Microsoft.Office.InfoPath.SignatureCollection" /> object associated with the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XPath">
+      <MemberSignature Language="C#" Value="public abstract System.Xml.XPath.XPathExpression XPath { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Xml.XPath.XPathExpression XPath" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.SignedDataBlock.XPath" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property XPath As XPathExpression" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::Xml::XPath::XPathExpression ^ XPath { System::Xml::XPath::XPathExpression ^ get(); };" />
+      <MemberSignature Language="F#" Value="member this.XPath : System.Xml.XPath.XPathExpression" Usage="Microsoft.Office.InfoPath.SignedDataBlock.XPath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Xml.XPath.XPathExpression</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the XPath expression for the set of data that is represented by the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</summary>
+        <value>The XPath expression for the set of data that is represented by the <see cref="T:Microsoft.Office.InfoPath.SignedDataBlock" /> object.</value>
+        <remarks>
+          <para>The value of the <b>XPath</b> property corresponds to the XPath expression that was specified in the Fields and groups to be signed box in the Set of Signable Data dialog box when the set of data was defined in the form template.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,198 @@
+﻿<Type Name="FileQueryConnection" FullName="Microsoft.Office.InfoPath.FileQueryConnection">
+  <TypeSignature Language="C#" Value="public abstract class FileQueryConnection : Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FileQueryConnection extends Microsoft.Office.InfoPath.DataConnection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FileQueryConnection" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class FileQueryConnection&#xA;Inherits DataConnection" />
+  <TypeSignature Language="C++ CLI" Value="public ref class FileQueryConnection abstract : Microsoft::Office::InfoPath::DataConnection" />
+  <TypeSignature Language="F#" Value="type FileQueryConnection = class&#xA;    inherit DataConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Microsoft.Office.InfoPath.DataConnection</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Represents a connection for retrieving data from an XML file.</summary>
+    <remarks>
+      <para>The <b>FileQueryConnection</b> class represents a data connection created in InfoPath using the Data Connection Wizard that specifies all the information necessary for retrieving data from an XML file that is used as a secondary (external) data source. </para>
+      <para>The <b>FileQueryConnection</b> object is accessible using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataConnections" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" /> class to return the connection from the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> of the form template. </para>
+      <para>The <b>FileQueryConnection</b> object can also be accessed from <see cref="T:Microsoft.Office.InfoPath.DataSourceCollection" /> of the form template using the <see cref="P:Microsoft.Office.InfoPath.XmlForm.DataSources" /> property of the <see cref="T:Microsoft.Office.InfoPath.XmlForm" />, and the <see cref="P:Microsoft.Office.InfoPath.DataSource.QueryConnection" /> property of the <see cref="T:Microsoft.Office.InfoPath.DataSource" /> class as shown in the following line of code.</para>
+      <code>FileQueryConnection myDataSource = 
+   (FileQueryConnection)(DataSources["XMLFile"].QueryConnection);</code>
+      <code>Dim myDataSource As FileQueryConnection  = 
+   DirectCast(DataSources("XMLFile").QueryConnection, _
+   FileQueryConnection)</code>
+      <para>The <b>FileQueryConnection</b> class provides the <see cref="P:Microsoft.Office.InfoPath.FileQueryConnection.FileLocation" /> property, which can be used get or set the Uniform Resource Locator (URL) or universal naming convention (UNC) path of the XML file that is being used an external data source. </para>
+      <para>In addition to the default <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method inherited from the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> base class that performs a query operation using the values that were declaratively defined in InfoPath form template design mode, the <b>FileQueryConnection</b> class also provides the <see cref="M:Microsoft.Office.InfoPath.FileQueryConnection.Execute(System.Xml.XPath.XPathNavigator)" /> method, which allows you to specify a different XML node in which to insert the data returned from the external XML file.</para>
+      <para>The <b>FileQueryConnection</b> class corresponds to the <b>XMLFileAdapterObject</b> class of the Microsoft Office InfoPath 2003 object model.</para>
+      <para />
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FileQueryConnection ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FileQueryConnection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberSignature Language="C++ CLI" Value="protected:&#xA; FileQueryConnection();" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Execute">
+      <MemberSignature Language="C#" Value="public abstract void Execute (System.Xml.XPath.XPathNavigator output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Execute(class System.Xml.XPath.XPathNavigator output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FileQueryConnection.Execute(System.Xml.XPath.XPathNavigator)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Execute (output As XPathNavigator)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Execute(System::Xml::XPath::XPathNavigator ^ output);" />
+      <MemberSignature Language="F#" Value="override this.Execute : System.Xml.XPath.XPathNavigator -&gt; unit" Usage="fileQueryConnection.Execute output" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Xml.XPath.XPathNavigator" />
+      </Parameters>
+      <Docs>
+        <param name="output">An <see cref="T:System.Xml.XPath.XPathNavigator" /> that specifies an XML node in the primary or a secondary data source of the form into which to insert the returned data. The <b>XPathNavigator</b> passed as the <paramref name="output" /> parameter can also specify to insert the data into any XML file on the local computer, or into an <see cref="T:System.Xml.XmlDocument" /> held in memory.</param>
+        <summary>Overrides the default <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method to allow specifying a different location to insert the data that is returned.</summary>
+        <remarks>
+          <para>Setting the <paramref name="output" /> parameter to a null reference (Nothing in Visual Basic) has the same effect as using the default <b>Execute</b> method (inherited from the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> base class) to return data using the declarative settings defined in the form template.</para>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <exception cref="T:System.Net.WebException">The query operation failed.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <example>
+          <para>In the following example, the <b>Execute(</b><paramref name="output" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.FileQueryConnection" /> class is used to execute a query against the "List.xml" file and store the output in an <b>XmlDocument</b> that is created in memory. It then displays the output stored in the <b>XmlDocument</b> in the <b>QueryOutput</b> field of the form.</para>
+          <code>public void ExecuteOutput_Clicked(object sender, ClickedEventArgs e)
+{
+   // Create the XmlDocument to accept the query results.
+   XmlDocument outputFile = new XmlDocument();
+   outputFile.LoadXml(
+      "&amp;lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&amp;gt;&amp;lt;outputRoot&amp;gt;&amp;lt;/outputRoot&amp;gt;");
+
+   // Create XmlNamespaceManager for XmlDocument object. When
+   // creating a more complex document, use AddNamespace method
+   // to add a mapping from namespace prefix to namespace URL for 
+   // each namespace to this object.
+   XmlNamespaceManager outputFileNamespaceManager = 
+      new XmlNamespaceManager(outputFile.NameTable);
+
+   // Create an XPathNavigator positioned at the root of the
+   // XmlDocument output file created above.
+   XPathNavigator outputFileNavigator = outputFile.CreateNavigator();
+   XPathNavigator outputRootNavigator = 
+      outputFileNavigator.SelectSingleNode("/outputRoot", 
+      outputFileNamespaceManager);
+
+   // Query the XML file defined for the FileQueryConnection
+   // and log the results in the XmlDocument created above.
+    FileQueryConnection queryConnection = 
+      (FileQueryConnection)(DataConnections["List.xml"]);
+    queryConnection.Execute(outputRootNavigator);
+
+   // Insert the results of the query from the XmlDocument in the 
+   // QueryOutput field of the main data source of the form.
+   XPathNavigator mainNavigator = MainDataSource.CreateNavigator();
+   XPathNavigator queryOutputNavigator = 
+      mainNavigator.SelectSingleNode("/my:myFields/my:QueryOutput",
+      NamespaceManager);
+    queryOutputNavigator.SetValue(outputRootNavigator.InnerXml);
+}</code>
+          <code>Public Sub ExecuteOutput_Clicked(ByVal sender As Object , _
+   ByVal e As ClickedEventArgs)
+{
+   ' Create the XmlDocument to accept the query results.
+   Dim outputFile As XmlDocument = new XmlDocument()
+   outputFile.LoadXml(
+      "&amp;lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&amp;gt;&amp;lt;outputRoot&amp;gt;&amp;lt;/outputRoot&amp;gt;")
+
+   ' Create XmlNamespaceManager for XmlDocument object. When
+   ' creating a more complex document, use AddNamespace method
+   ' to add a mapping from namespace prefix to namespace URL for 
+   ' each namespace to this object.
+   Dim outputFileNamespaceManager As XmlNamespaceManager  = _
+      new XmlNamespaceManager(outputFile.NameTable)
+
+   ' Create an XPathNavigator positioned at the root of the
+   ' XmlDocument output file created above.
+   Dim outputFileNavigator As XPathNavigator = _
+      outputFile.CreateNavigator()
+   Dim outputRootNavigator As XPathNavigator = 
+      outputFileNavigator.SelectSingleNode("/outputRoot", 
+      outputFileNamespaceManager)
+
+   ' Query the XML file defined for the FileQueryConnection
+   ' and log the results in the XmlDocument created above.
+    Dim myQueryConnection As FileQueryConnection  = _
+      DirectCast(DataConnections["List.xml"], FileQueryConnection)
+    myQueryConnection.Execute(outputRootNavigator);
+
+   ' Insert the results of the query from the XmlDocument 
+   ' in the QueryOutput field of the main data source of the form.
+   Dim mainNavigator As XPathNavigator  = _
+      MainDataSource.CreateNavigator()
+   Dim queryOutputNavigator As XPathNavigator  = 
+      mainNavigator.SelectSingleNode("/my:myFields/my:QueryOutput", _
+      NamespaceManager)
+    queryOutputNavigator.SetValue(outputRootNavigator.InnerXml)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+    <Member MemberName="FileLocation">
+      <MemberSignature Language="C#" Value="public abstract string FileLocation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string FileLocation" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.InfoPath.FileQueryConnection.FileLocation" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property FileLocation As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract property System::String ^ FileLocation { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberSignature Language="F#" Value="member this.FileLocation : string with get, set" Usage="Microsoft.Office.InfoPath.FileQueryConnection.FileLocation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the Uniform Resource Locator (URL) or universal naming convention (UNC) path of the XML file that is associated with the <see cref="T:Microsoft.Office.InfoPath.FileQueryConnection" /> object.</summary>
+        <value>The URL or UNC of the XML file that is associated with the <see cref="T:Microsoft.Office.InfoPath.FileQueryConnection" /> object.</value>
+        <remarks>
+          <para>This member can be accessed only by forms running in the same domain as the currently open form, or by forms that have been granted cross-domain permissions.</para>
+          <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
+          <para />
+        </remarks>
+        <example>
+          <para>In the following example, the <b>FileLocation</b> property of the <b>FileQueryConnection</b> class is used to display the URL or UNC of the XML file associated with the <b>FileQueryConnection</b> object named "File1" in the <see cref="T:Microsoft.Office.InfoPath.DataConnectionCollection" /> of the form template.</para>
+          <code>public void FileLocation_Clicked(object sender, ClickedEventArgs e)
+   FileQueryConnection myConnection = this.DataConnections("File1");
+   MessageBox.Show(myConnection.FileLocation);
+End Sub</code>
+          <code>Public Sub FileLocation_Clicked(ByVal sender As Object, _
+   ByVal e As ClickedEventArgs)
+   Dim myConnection As FileQueryConnection = _
+      Me.DataConnections("File1")
+   MessageBox.Show(myConnection.FileLocation)
+End Sub</code>
+        </example>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

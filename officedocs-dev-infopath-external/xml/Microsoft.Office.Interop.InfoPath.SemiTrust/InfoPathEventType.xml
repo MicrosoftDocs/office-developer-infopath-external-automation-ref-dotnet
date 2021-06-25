@@ -4,6 +4,7 @@
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType" />
   <TypeSignature Language="VB.NET" Value="Public Enum InfoPathEventType" />
   <TypeSignature Language="C++ CLI" Value="public enum class InfoPathEventType" />
+  <TypeSignature Language="F#" Value="type InfoPathEventType = " />
   <AssemblyInfo>
     <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
     <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -12,8 +13,12 @@
     <BaseTypeName>System.Enum</BaseTypeName>
   </Base>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Specifies the type of event defined by an <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventHandlerAttribute" />.</summary>
+    <remarks>
+      <para>
+        <b>Important</b>: To prevent errors in the specification of the <b>InfoPathEventHandler</b> attribute for an event handler, you should only use InfoPath user interface commands to add the stub for event handler code. For more information, see How to: Add an Event Handler.</para>
+      <para />
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="None">
@@ -22,6 +27,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.None" />
       <MemberSignature Language="VB.NET" Value="None" />
       <MemberSignature Language="C++ CLI" Value="None" />
+      <MemberSignature Language="F#" Value="None = -1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.None" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -32,7 +38,7 @@
       </ReturnValue>
       <MemberValue>-1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>No type is specified.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnAfterChange">
@@ -41,6 +47,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnAfterChange" />
       <MemberSignature Language="VB.NET" Value="OnAfterChange" />
       <MemberSignature Language="C++ CLI" Value="OnAfterChange" />
+      <MemberSignature Language="F#" Value="OnAfterChange = 10" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnAfterChange" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -51,7 +58,7 @@
       </ReturnValue>
       <MemberValue>10</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_Event.OnAfterChange" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnAfterImport">
@@ -60,6 +67,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnAfterImport" />
       <MemberSignature Language="VB.NET" Value="OnAfterImport" />
       <MemberSignature Language="C++ CLI" Value="OnAfterImport" />
+      <MemberSignature Language="F#" Value="OnAfterImport = 2" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnAfterImport" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -70,7 +78,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnAfterImport" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnBeforeChange">
@@ -79,6 +87,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnBeforeChange" />
       <MemberSignature Language="VB.NET" Value="OnBeforeChange" />
       <MemberSignature Language="C++ CLI" Value="OnBeforeChange" />
+      <MemberSignature Language="F#" Value="OnBeforeChange = 9" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnBeforeChange" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -89,7 +98,7 @@
       </ReturnValue>
       <MemberValue>9</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_Event.OnBeforeChange" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnClick">
@@ -98,6 +107,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnClick" />
       <MemberSignature Language="VB.NET" Value="OnClick" />
       <MemberSignature Language="C++ CLI" Value="OnClick" />
+      <MemberSignature Language="F#" Value="OnClick = 12" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnClick" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -108,7 +118,7 @@
       </ReturnValue>
       <MemberValue>12</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_Event.OnClick" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnContextChange">
@@ -117,6 +127,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnContextChange" />
       <MemberSignature Language="VB.NET" Value="OnContextChange" />
       <MemberSignature Language="C++ CLI" Value="OnContextChange" />
+      <MemberSignature Language="F#" Value="OnContextChange = 8" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnContextChange" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -127,7 +138,7 @@
       </ReturnValue>
       <MemberValue>8</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnContextChange" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnLoad">
@@ -136,6 +147,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnLoad" />
       <MemberSignature Language="VB.NET" Value="OnLoad" />
       <MemberSignature Language="C++ CLI" Value="OnLoad" />
+      <MemberSignature Language="F#" Value="OnLoad = 0" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnLoad" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -146,7 +158,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnLoad" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnMergeRequest">
@@ -155,6 +167,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnMergeRequest" />
       <MemberSignature Language="VB.NET" Value="OnMergeRequest" />
       <MemberSignature Language="C++ CLI" Value="OnMergeRequest" />
+      <MemberSignature Language="F#" Value="OnMergeRequest = 5" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnMergeRequest" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -165,7 +178,7 @@
       </ReturnValue>
       <MemberValue>5</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnMergeRequest" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnSaveRequest">
@@ -174,6 +187,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnSaveRequest" />
       <MemberSignature Language="VB.NET" Value="OnSaveRequest" />
       <MemberSignature Language="C++ CLI" Value="OnSaveRequest" />
+      <MemberSignature Language="F#" Value="OnSaveRequest = 6" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnSaveRequest" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -184,7 +198,7 @@
       </ReturnValue>
       <MemberValue>6</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSaveRequest" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnSign">
@@ -193,6 +207,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnSign" />
       <MemberSignature Language="VB.NET" Value="OnSign" />
       <MemberSignature Language="C++ CLI" Value="OnSign" />
+      <MemberSignature Language="F#" Value="OnSign = 7" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnSign" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -203,7 +218,7 @@
       </ReturnValue>
       <MemberValue>7</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSign" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnSubmitRequest">
@@ -212,6 +227,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnSubmitRequest" />
       <MemberSignature Language="VB.NET" Value="OnSubmitRequest" />
       <MemberSignature Language="C++ CLI" Value="OnSubmitRequest" />
+      <MemberSignature Language="F#" Value="OnSubmitRequest = 3" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnSubmitRequest" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -222,7 +238,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSubmitRequest" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnSwitchView">
@@ -231,6 +247,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnSwitchView" />
       <MemberSignature Language="VB.NET" Value="OnSwitchView" />
       <MemberSignature Language="C++ CLI" Value="OnSwitchView" />
+      <MemberSignature Language="F#" Value="OnSwitchView = 1" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnSwitchView" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -241,7 +258,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnSwitchView" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnValidate">
@@ -250,6 +267,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnValidate" />
       <MemberSignature Language="VB.NET" Value="OnValidate" />
       <MemberSignature Language="C++ CLI" Value="OnValidate" />
+      <MemberSignature Language="F#" Value="OnValidate = 11" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnValidate" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -260,7 +278,7 @@
       </ReturnValue>
       <MemberValue>11</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_Event.OnValidate" /> event.</summary>
       </Docs>
     </Member>
     <Member MemberName="OnVersionUpgrade">
@@ -269,6 +287,7 @@
       <MemberSignature Language="DocId" Value="F:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnVersionUpgrade" />
       <MemberSignature Language="VB.NET" Value="OnVersionUpgrade" />
       <MemberSignature Language="C++ CLI" Value="OnVersionUpgrade" />
+      <MemberSignature Language="F#" Value="OnVersionUpgrade = 4" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathEventType.OnVersionUpgrade" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
@@ -279,7 +298,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Specifies an event handler for an <see cref="E:Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2_Event.OnVersionUpgrade" /> event.</summary>
       </Docs>
     </Member>
   </Members>
