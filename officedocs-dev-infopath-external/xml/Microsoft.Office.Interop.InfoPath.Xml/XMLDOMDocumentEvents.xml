@@ -1,4 +1,4 @@
-﻿<Type Name="XMLDOMDocumentEvents" FullName="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents">
+<Type Name="XMLDOMDocumentEvents" FullName="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents">
   <TypeSignature Language="C#" Value="public interface XMLDOMDocumentEvents" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLDOMDocumentEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents" />
@@ -12,13 +12,16 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("3EFAA427-272F-11D2-836F-0000F87A7782")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("3EFAA427-272F-11D2-836F-0000F87A7782")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("3EFAA427-272F-11D2-836F-0000F87A7782")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(2)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(2)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(2)&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeLibType(4112)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.TypeLibType(4112)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.TypeLibType(4112)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -40,7 +43,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(198)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(198)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(198)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -66,7 +70,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(-609)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(-609)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(-609)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

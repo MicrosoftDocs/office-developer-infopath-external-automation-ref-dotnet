@@ -1,4 +1,4 @@
-﻿<Type Name="XmlFormOpenMode" FullName="Microsoft.Office.InfoPath.XmlFormOpenMode">
+<Type Name="XmlFormOpenMode" FullName="Microsoft.Office.InfoPath.XmlFormOpenMode">
   <TypeSignature Language="C#" Value="public enum XmlFormOpenMode" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlFormOpenMode extends System.Enum" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlFormOpenMode" />
@@ -14,7 +14,8 @@
   </Base>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Flags</AttributeName>
+      <AttributeName Language="C#">[System.Flags]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Flags&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

@@ -12,10 +12,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink), typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_EventProvider))</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink), typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_EventProvider))]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink), typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._ButtonEventSink_EventProvider))&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(false)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -46,16 +48,6 @@
             <b>Note</b>: The <b>OnClick</b> event for the InfoPath button control is the only control event that is supported.</para>
           <para />
         </remarks>
-        <example>
-          <para>In the following example, the <b>OnClick</b> event handler is used to show the value of <paramref name="my:field1" /> in an message box:</para>
-          <code>[InfoPathEventHandler(MatchPath="btnAlert", EventType=InfoPathEventType.&lt;span class="label"&gt;OnClick&lt;/span&gt;)]
-public void btnAlert_&lt;span class="label"&gt;OnClick&lt;/span&gt;(DocActionEvent e)
- {
-  IXMLDOMNode field1;
-  field1 = thisXDocument.DOM.selectSingleNode(@"/my:myFields/my:field1");
-  thisXDocument.UI.Alert(field1.text);
- }</code>
-        </example>
         <example>
           <para>In the following example, the <b>OnClick</b> event handler is used to show the value of <paramref name="my:field1" /> in an message box:</para>
           <code>[InfoPathEventHandler(MatchPath="btnAlert", EventType=InfoPathEventType.&lt;span class="label"&gt;OnClick&lt;/span&gt;)]

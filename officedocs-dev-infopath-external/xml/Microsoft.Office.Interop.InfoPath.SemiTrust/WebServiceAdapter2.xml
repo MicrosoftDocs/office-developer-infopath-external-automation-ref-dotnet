@@ -1,4 +1,4 @@
-﻿<Type Name="WebServiceAdapter2" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2">
+<Type Name="WebServiceAdapter2" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2">
   <TypeSignature Language="C#" Value="public interface WebServiceAdapter2 : Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract WebServiceAdapter2 implements class Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WebServiceAdapter2" />
@@ -16,10 +16,12 @@
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd5d4-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd5d4-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd5d4-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -41,7 +43,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(15)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(15)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(15)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -72,7 +75,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(13)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(13)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -137,7 +141,8 @@ thisXDocument.UI.Alert(datasetDiffgramNode.xml);</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(7)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(7)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(7)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -208,7 +213,8 @@ webServiceAdapter.Input = tempDom.xml;</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(10)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(10)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -241,7 +247,8 @@ webServiceAdapter.Input = tempDom.xml;</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(6)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(6)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(6)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -318,7 +325,8 @@ webServiceAdapter.Query();</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(14)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(14)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -351,7 +359,8 @@ webServiceAdapter.Query();</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(11)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(11)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -384,7 +393,8 @@ webServiceAdapter.Query();</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(8)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(8)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(8)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -415,7 +425,8 @@ webServiceAdapter.Query();</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(12)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(12)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -446,7 +457,8 @@ webServiceAdapter.Query();</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(9)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(9)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(9)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -475,7 +487,8 @@ webServiceAdapter.Query();</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(16)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(16)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(16)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -509,7 +522,8 @@ webServiceAdapter.Query();</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(5)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(5)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(5)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

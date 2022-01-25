@@ -1,4 +1,4 @@
-﻿<Type Name="View" FullName="Microsoft.Office.InfoPath.View">
+<Type Name="View" FullName="Microsoft.Office.InfoPath.View">
   <TypeSignature Language="C#" Value="public abstract class View" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit View extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.View" />
@@ -155,9 +155,6 @@ MessageBox.Show(thisView.ViewInfo.Name)</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>ExecuteAction</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>ExecuteAction(</b><paramref name="action" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to delete the currently selected data and place it on the clipboard.</para>
           <code>// Create XPathNavigator and select field.
@@ -181,6 +178,9 @@ CurrentView.SelectText(textNode)
 ' Cut selected text.
 CurrentView.ExecuteAction(ActionType.Cut)</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>ExecuteAction</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="ExecuteAction">
@@ -216,15 +216,15 @@ CurrentView.ExecuteAction(ActionType.Cut)</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>ExecuteAction</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>ExecuteAction(</b><paramref name="action" />, <paramref name="xmlToEdit" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to insert data into the specified group using the <b>ActionType.XCollectionInsert</b> action.</para>
           <code>this.CurrentView.ExecuteAction(ActionType.XCollectionInsert, 
    "group1_1");</code>
           <code>Me.CurrentView.ExecuteAction(ActionType.XCollectionInsert, "group1_1")</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>ExecuteAction</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Export">
@@ -327,7 +327,6 @@ CurrentView.ExecuteAction(ActionType.Cut)</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>GetContextNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
         <example>
           <para>In the following example, the <b>GetContextNodes</b> method is used to return a collection of context nodes based on the current selection to populate an <b>XPathNodeIterator</b> object variable.The code then loops through the collection of context nodes and displays the name, inner XML, and value of each node.</para>
           <code>// Get context nodes in current selection.
@@ -353,6 +352,7 @@ For Each contextNode In contextNodes
    MessageBox.Show(contextNode.Value)
 Next</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>GetContextNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetContextNodes">
@@ -386,9 +386,6 @@ Next</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>GetContextNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <see cref="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator)" /> method is used to select the nodes in the first row of a Repeating Table control bound to <b>group2</b>. The <b>GetContextNodes</b> method is then used to return a collection of context nodes based on the current selection and the specified node. Finally, the code then loops through the collection of context nodes and displays the name, inner XML, and value of each node.</para>
           <code>// Create XPathNavigator and specify XPath for nodes.
@@ -430,6 +427,9 @@ For Each contextNode In contextNodes
    MessageBox.Show(contextNode.Value)
 Next</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>GetContextNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetContextNodes">
@@ -466,9 +466,6 @@ Next</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>GetContextNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <see cref="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator,System.Xml.XPath.XPathNavigator,System.String)" /> method is used to select the nodes in the first row of a Repeating Table control bound to <b>group2</b>. The <b>GetContextNodes</b> method is then used to return a collection of context nodes based on the current selection and the specified node. Finally, the code loops through the collection of context nodes and displays the name, inner XML, and value of each node.</para>
           <code>// Create XPathNavigator and specify XPath for nodes.
@@ -510,6 +507,9 @@ For Each contextNode In contextNodes
    MessageBox.Show(contextNode.Value)
 Next</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>GetContextNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetSelectedNodes">
@@ -539,7 +539,6 @@ Next</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>GetSelectedNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
         <example>
           <para>In the following example, the <see cref="M:Microsoft.Office.InfoPath.View.SelectNodes(System.Xml.XPath.XPathNavigator)" /> method is used to select the nodes in the first row of a Repeating Table control bound to <b>group2</b>. The <b>GetSelectedNodes</b> method is then used to return a collection of nodes based on the current selection. Finally, the code loops through the collection of nodes displays the name, inner XML, and value of each node.</para>
           <code>// Create XPathNavigator and specify XPath for nodes.
@@ -587,6 +586,7 @@ For Each selectedNode In selectedNodes
    MessageBox.Show(selectedNode.Value)
 Next</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>GetSelectedNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="SelectNodes">
@@ -618,9 +618,6 @@ Next</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>SelectNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>SelectNodes(</b><paramref name="startNode" /><b>)</b> method is used to select the nodes in the first row in a Repeating Table control bound to <b>group2</b>.</para>
           <code>// Create XPathNavigator and specify XPath for nodes.
@@ -638,6 +635,9 @@ Dim repeatingTableRow1 As XPathNavigator  = _
 ' Select nodes in specified XPathNavigator.
 CurrentView.SelectNodes(repeatingTableRow1)</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="SelectNodes">
@@ -671,9 +671,6 @@ CurrentView.SelectNodes(repeatingTableRow1)</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>SelectNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>SelectNodes(</b><paramref name="startNode" />,<paramref name="endNode" /><b>)</b> method is used to select the range of nodes starting from the first row to the third row in a Repeating Table control bound to <b>group2</b>.</para>
           <code>// Create XPathNavigators to specify range of nodes.
@@ -697,6 +694,9 @@ Dim repeatingTableRow2 As XPathNavigator  = _
 ' Select nodes in specified XPathNavigator.
 CurrentView.SelectNodes(repeatingTableRow1, repeatingTableRow3)</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="SelectNodes">
@@ -733,9 +733,6 @@ CurrentView.SelectNodes(repeatingTableRow1, repeatingTableRow3)</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>SelectNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, <b>group2</b> is bound to more than one Repeating Table control, one of which has the <b>ViewContext</b> identifier of "CTRL2". The <b>SelectNodes(</b><paramref name="startNode" />,<paramref name="endNode" />,<paramref name="viewContext" /><b>)</b> method is used to select the range of nodes starting from the first row to the third row that are bound to the control with the <b>ViewContext</b> identifier of "CTRL2".</para>
           <code>// Create XPathNavigators to specify range of nodes.
@@ -765,6 +762,9 @@ CurrentView.SelectNodes( _
    repeatingTableRow3, _
    "CTRL2")</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectNodes</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="SelectText">
@@ -795,9 +795,6 @@ CurrentView.SelectNodes( _
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>SelectText</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>SelectText(</b><paramref name="xmlNode" /><b>)</b> method is used to select the text in <b>field1</b>.</para>
           <code>// Create XPathNavigator and select field.
@@ -815,6 +812,9 @@ Dim textNode As XPathNavigator = _
 ' Select text in specified field.
 CurrentView.SelectText(textNode)</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectText</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="SelectText">
@@ -848,9 +848,6 @@ CurrentView.SelectText(textNode)</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>SelectText</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, <b>field1</b> is bound to more than one control, one of which has the <b>ViewContext</b> identifier of "CTRL2". The <b>SelectText(</b><paramref name="xmlnode" />,<paramref name="viewContext" /><b>)</b> method is used to select the text in <b>field1</b> from the control with the <b>ViewContext</b> identifier of "CTRL2".</para>
           <code>// Create XPathNavigator and select field.
@@ -868,6 +865,9 @@ Dim textNode As XPathNavigator = _
 ' Select text in specified field.
 CurrentView.SelectText(textNode, "CTRL2")</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>SelectText</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="ShowMailItem">
@@ -904,8 +904,6 @@ CurrentView.SelectText(textNode, "CTRL2")</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>ShowMailItem</b> method of the <see cref="T:Microsoft.Office.InfoPath.View" /> class is used to create a mail message for the current view.</para>
           <code>this.CurrentView,ShowMailItem("someone@example.com", null, null,
@@ -914,6 +912,8 @@ CurrentView.SelectText(textNode, "CTRL2")</code>
    String.Empty, "Sample InfoPath Form", 
    "This is a sample InfoPath form.");</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="SignatureLines">

@@ -12,10 +12,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink), typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_EventProvider))</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink), typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_EventProvider))]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink), typeof(Microsoft.Office.Interop.InfoPath.SemiTrust._DataDOMEventSink_EventProvider))&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(false)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -47,19 +49,6 @@
             <b>Note</b>: In some cases, events related to changes in a form's underlying XML document may occur more than once. For example, when existing data is changed, an insert and delete operation occurs.</para>
           <para />
         </remarks>
-        <example>
-          <code>[InfoPathEventHandler(MatchPath="/my:myFields/my:field1", EventType=InfoPathEventType.&lt;span class="label"&gt;OnAfterChange&lt;/span&gt;)]
-public void field1_&lt;span class="label"&gt;OnAfterChange&lt;/span&gt;(DataDOMEvent e)
-{
- if (e.IsUndoRedo)
- {
-  // An undo or redo operation has occurred and the DOM is read-only.
-  return;
- }
-
- CalculateTotalCampaignCost();
-}</code>
-        </example>
         <example>
           <code>[InfoPathEventHandler(MatchPath="/my:myFields/my:field1", EventType=InfoPathEventType.&lt;span class="label"&gt;OnAfterChange&lt;/span&gt;)]
 public void field1_&lt;span class="label"&gt;OnAfterChange&lt;/span&gt;(DataDOMEvent e)
@@ -120,23 +109,6 @@ public void RepVisitDt_&lt;span class="label"&gt;OnBeforeChange&lt;/span&gt;(Dat
  return;
 }</code>
         </example>
-        <example>
-          <para>In the following example, the <b>OnBeforeChange</b> event handler is used to validate the data in a field. If the data is not valid, the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEvent.ReturnStatus" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEventObject" /> object is used to reject the changes.</para>
-          <code>[InfoPathEventHandler(MatchPath="/Customers/Customer/RepVisitDt", EventType=InfoPathEventType.&lt;span class="label"&gt;OnBeforeChange&lt;/span&gt;)]
-public void RepVisitDt_&lt;span class="label"&gt;OnBeforeChange&lt;/span&gt;(DataDOMEvent e)
-{
- IXMLDOMNode phone = thisXDocument.DOM.selectSingleNode    (@"/Customers/CustomerInfo/ContactDates/PhoneContactDt");
- if (phone.text == "")
- {
-  e.ReturnMessage = "The Phone Contact Start date must be set prior to the Representative Visit date.";
-  e.ReturnStatus = false;
-  return;
- }
- // If the data is valid, eventObj.ReturnStatus = true.
- e.ReturnStatus = true;
- return;
-}</code>
-        </example>
       </Docs>
     </Member>
     <Member MemberName="OnValidate">
@@ -164,34 +136,6 @@ public void RepVisitDt_&lt;span class="label"&gt;OnBeforeChange&lt;/span&gt;(Dat
             <b>Note</b>: In some cases, events related to changes in a form's underlying XML document may occur more than once. For example, when existing data is changed, an insert and delete operation occurs.</para>
           <para />
         </remarks>
-        <example>
-          <para>In the following example, the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEvent.Site" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEventObject" /> object is used to check the value of the node. If the data validation fails, the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEvent.ReportError(System.Object,System.String,System.Boolean,System.String,System.Int32,System.String)" /> method is used to create a custom error:</para>
-          <code>[InfoPathEventHandler(MatchPath="/my:myFields/my:field1", EventType=InfoPathEventType.&lt;span class="label"&gt;OnValidate&lt;/span&gt;)]
-public void field1_&lt;span class="label"&gt;OnValidate&lt;/span&gt;(DataDOMEvent e)
-{
- if (int.Parse(e.Site.text) &amp;gt; 50)
- {
-  e.ReportError(
-   e.Site, 
-   "Invalid quantity. The total number of each type of block cannot exceed 50.", 
-   false,
-   "",
-   2,
-   "modeless");
- }
-
- if (int.Parse(e.Site.text) &amp;lt; 0)
- {
-  e.ReportError(
-   e.Site, 
-   "Invalid quantity. The total number of each type of block cannot be less than 0.", 
-   false,
-   "",
-   2,
-   "modeless");
- }
-}</code>
-        </example>
         <example>
           <para>In the following example, the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEvent.Site" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEventObject" /> object is used to check the value of the node. If the data validation fails, the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.DataDOMEvent.ReportError(System.Object,System.String,System.Boolean,System.String,System.Int32,System.String)" /> method is used to create a custom error:</para>
           <code>[InfoPathEventHandler(MatchPath="/my:myFields/my:field1", EventType=InfoPathEventType.&lt;span class="label"&gt;OnValidate&lt;/span&gt;)]

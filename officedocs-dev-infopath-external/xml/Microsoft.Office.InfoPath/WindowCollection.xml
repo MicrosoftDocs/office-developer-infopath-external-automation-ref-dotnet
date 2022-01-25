@@ -1,4 +1,4 @@
-﻿<Type Name="WindowCollection" FullName="Microsoft.Office.InfoPath.WindowCollection">
+<Type Name="WindowCollection" FullName="Microsoft.Office.InfoPath.WindowCollection">
   <TypeSignature Language="C#" Value="public abstract class WindowCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WindowCollection extends System.Object implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.WindowCollection" />

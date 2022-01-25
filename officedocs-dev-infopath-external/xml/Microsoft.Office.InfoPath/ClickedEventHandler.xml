@@ -1,4 +1,4 @@
-﻿<Type Name="ClickedEventHandler" FullName="Microsoft.Office.InfoPath.ClickedEventHandler">
+<Type Name="ClickedEventHandler" FullName="Microsoft.Office.InfoPath.ClickedEventHandler">
   <TypeSignature Language="C#" Value="public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ClickedEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ClickedEventHandler" />

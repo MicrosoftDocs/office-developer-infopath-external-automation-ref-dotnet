@@ -1,4 +1,4 @@
-﻿<Type Name="DataConnection" FullName="Microsoft.Office.InfoPath.DataConnection">
+<Type Name="DataConnection" FullName="Microsoft.Office.InfoPath.DataConnection">
   <TypeSignature Language="C#" Value="public abstract class DataConnection" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataConnection extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.DataConnection" />
@@ -198,11 +198,6 @@
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.Net.WebException">The execute operation failed.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
-        <exception cref="T:System.InvalidOperationException">For submit operations, the <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.Runtime.InteropServices.SEHException">A structured exception handler (SEH) error was thrown from unmanaged code that is not mapped to an equivalent managed code exception. For more information, search on "unmanaged exceptions" and "Structured Exception Handling" in the MSDN Library.</exception>
         <example>
           <para>In the following example, after the <b>Command</b> property of the <b>ADOQueryConnection</b> class is used to update the SQL command text of the data connection, the <b>Execute</b> method of the <see cref="T:Microsoft.Office.InfoPath.DataConnection" /> class is used to execute the query to refresh the data in the form.</para>
           <code>public void RefreshData_Clicked(object sender, ClickedEventArgs e)
@@ -252,6 +247,11 @@
     myAdoQueryConnection.Execute()
 End Sub</code>
         </example>
+        <exception cref="T:System.Net.WebException">The execute operation failed.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.InvalidOperationException">For submit operations, the <see cref="M:Microsoft.Office.InfoPath.DataConnection.Execute" /> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.Runtime.InteropServices.SEHException">A structured exception handler (SEH) error was thrown from unmanaged code that is not mapped to an equivalent managed code exception. For more information, search on "unmanaged exceptions" and "Structured Exception Handling" in the MSDN Library.</exception>
       </Docs>
     </Member>
     <Member MemberName="Name">

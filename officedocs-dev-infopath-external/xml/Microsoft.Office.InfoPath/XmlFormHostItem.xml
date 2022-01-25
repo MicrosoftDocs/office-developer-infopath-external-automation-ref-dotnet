@@ -1,4 +1,4 @@
-﻿<Type Name="XmlFormHostItem" FullName="Microsoft.Office.InfoPath.XmlFormHostItem">
+<Type Name="XmlFormHostItem" FullName="Microsoft.Office.InfoPath.XmlFormHostItem">
   <TypeSignature Language="C#" Value="public abstract class XmlFormHostItem : Microsoft.VisualStudio.Tools.Applications.RemoteObjectAdapter, Microsoft.Office.InfoPath.IInfoPathRuntime, Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlFormHostItem extends Microsoft.VisualStudio.Tools.Applications.RemoteObjectAdapter implements class Microsoft.Office.InfoPath.IInfoPathRuntime, class Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract, class System.AddIn.Contract.IContract" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlFormHostItem" />
@@ -19,10 +19,14 @@
     <Interface>
       <InterfaceName>Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract</InterfaceName>
     </Interface>
+    <Interface>
+      <InterfaceName>System.AddIn.Contract.IContract</InterfaceName>
+    </Interface>
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+      <AttributeName Language="C#">[System.Diagnostics.DebuggerNonUserCode]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerNonUserCode&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -47,10 +51,12 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Security.SecurityCritical</AttributeName>
+          <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <Parameters>
@@ -119,7 +125,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -290,17 +297,14 @@
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void FinishInitialization();" />
       <MemberSignature Language="F#" Value="abstract member FinishInitialization : unit -&gt; unit&#xA;override this.FinishInitialization : unit -&gt; unit" Usage="xmlFormHostItem.FinishInitialization " />
       <MemberType>Method</MemberType>
-      <Implements>
-        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization</InterfaceMember>
-        <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization</InterfaceMember>
-      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
         <AssemblyVersion>15.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -347,10 +351,12 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Security.SecurityCritical</AttributeName>
+          <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -382,7 +388,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -409,7 +416,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -436,13 +444,16 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Security.SecurityCritical</AttributeName>
+          <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+          <AttributeName Language="C#">[System.Security.SecurityTreatAsSafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Security.SecurityTreatAsSafe&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -468,13 +479,16 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Security.SecurityCritical</AttributeName>
+          <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Security.SecurityTreatAsSafe</AttributeName>
+          <AttributeName Language="C#">[System.Security.SecurityTreatAsSafe]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Security.SecurityTreatAsSafe&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -504,7 +518,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -531,7 +546,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -558,7 +574,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -686,16 +703,14 @@
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void InitializeDataBindings();" />
       <MemberSignature Language="F#" Value="abstract member InitializeDataBindings : unit -&gt; unit&#xA;override this.InitializeDataBindings : unit -&gt; unit" Usage="xmlFormHostItem.InitializeDataBindings " />
       <MemberType>Method</MemberType>
-      <Implements>
-        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings</InterfaceMember>
-      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
         <AssemblyVersion>15.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -721,7 +736,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -748,7 +764,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -794,7 +811,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -864,6 +882,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#FinishInitialization" />
       <MemberSignature Language="VB.NET" Value="Sub FinishInitialization () Implements IInfoPathRuntime.FinishInitialization" />
       <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization() = Microsoft::Office::InfoPath::IInfoPathRuntime::FinishInitialization;" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization : unit -&gt; unit&#xA;override this.Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization : unit -&gt; unit" Usage="xmlFormHostItem.Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.FinishInitialization</InterfaceMember>
@@ -887,6 +906,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#Initialize" />
       <MemberSignature Language="VB.NET" Value="Sub Initialize () Implements IInfoPathRuntime.Initialize" />
       <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize() = Microsoft::Office::InfoPath::IInfoPathRuntime::Initialize;" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize : unit -&gt; unit&#xA;override this.Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize : unit -&gt; unit" Usage="xmlFormHostItem.Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.Initialize</InterfaceMember>
@@ -910,6 +930,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#InitializeHostProvider(Microsoft.Office.InfoPath.IInfoPathHostItemProvider)" />
       <MemberSignature Language="VB.NET" Value="Sub InitializeHostProvider (hostItemProvider As IInfoPathHostItemProvider) Implements IInfoPathRuntime.InitializeHostProvider" />
       <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider(Microsoft::Office::InfoPath::IInfoPathHostItemProvider ^ hostItemProvider) = Microsoft::Office::InfoPath::IInfoPathRuntime::InitializeHostProvider;" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider : Microsoft.Office.InfoPath.IInfoPathHostItemProvider -&gt; unit&#xA;override this.Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider : Microsoft.Office.InfoPath.IInfoPathHostItemProvider -&gt; unit" Usage="xmlFormHostItem.Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider hostItemProvider" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.InitializeHostProvider(Microsoft.Office.InfoPath.IInfoPathHostItemProvider)</InterfaceMember>
@@ -920,10 +941,12 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Security.SecurityCritical</AttributeName>
+          <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -944,6 +967,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#Office#InfoPath#IInfoPathRuntime#OnShutdown" />
       <MemberSignature Language="VB.NET" Value="Sub OnShutdown () Implements IInfoPathRuntime.OnShutdown" />
       <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown() = Microsoft::Office::InfoPath::IInfoPathRuntime::OnShutdown;" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown : unit -&gt; unit&#xA;override this.Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown : unit -&gt; unit" Usage="xmlFormHostItem.Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown</InterfaceMember>
@@ -967,6 +991,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#FinishInitialization" />
       <MemberSignature Language="VB.NET" Value="Sub FinishInitialization () Implements IEntryPointContract.FinishInitialization" />
       <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::FinishInitialization;" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization : unit -&gt; unit&#xA;override this.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization : unit -&gt; unit" Usage="xmlFormHostItem.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.FinishInitialization</InterfaceMember>
@@ -977,10 +1002,12 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Security.SecurityCritical</AttributeName>
+          <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -998,6 +1025,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#GetEntryPointObject" />
       <MemberSignature Language="VB.NET" Value="Function GetEntryPointObject () As IRemoteObjectContract Implements IEntryPointContract.GetEntryPointObject" />
       <MemberSignature Language="C++ CLI" Value=" virtual System::AddIn::Contract::Automation::IRemoteObjectContract ^ Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.GetEntryPointObject() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::GetEntryPointObject;" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.GetEntryPointObject : unit -&gt; System.AddIn.Contract.Automation.IRemoteObjectContract&#xA;override this.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.GetEntryPointObject : unit -&gt; System.AddIn.Contract.Automation.IRemoteObjectContract" Usage="xmlFormHostItem.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.GetEntryPointObject " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.GetEntryPointObject</InterfaceMember>
@@ -1008,7 +1036,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1027,6 +1056,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#Initialize" />
       <MemberSignature Language="VB.NET" Value="Sub Initialize () Implements IEntryPointContract.Initialize" />
       <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.Initialize() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::Initialize;" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.Initialize : unit -&gt; unit&#xA;override this.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.Initialize : unit -&gt; unit" Usage="xmlFormHostItem.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.Initialize " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.Initialize</InterfaceMember>
@@ -1037,10 +1067,12 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Security.SecurityCritical</AttributeName>
+          <AttributeName Language="C#">[System.Security.SecurityCritical]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Security.SecurityCritical&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1058,6 +1090,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#InitializeDataBindings" />
       <MemberSignature Language="VB.NET" Value="Sub InitializeDataBindings () Implements IEntryPointContract.InitializeDataBindings" />
       <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::InitializeDataBindings;" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings : unit -&gt; unit&#xA;override this.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings : unit -&gt; unit" Usage="xmlFormHostItem.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.InitializeDataBindings</InterfaceMember>
@@ -1068,7 +1101,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1086,6 +1120,7 @@
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.XmlFormHostItem.Microsoft#VisualStudio#Tools#Applications#Contract#IEntryPointContract#OnShutdown" />
       <MemberSignature Language="VB.NET" Value="Sub OnShutdown () Implements IEntryPointContract.OnShutdown" />
       <MemberSignature Language="C++ CLI" Value=" virtual void Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown() = Microsoft::VisualStudio::Tools::Applications::Contract::IEntryPointContract::OnShutdown;" />
+      <MemberSignature Language="F#" Value="abstract member Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown : unit -&gt; unit&#xA;override this.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown : unit -&gt; unit" Usage="xmlFormHostItem.Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown " />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown</InterfaceMember>
@@ -1096,7 +1131,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1209,7 +1245,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1229,17 +1266,14 @@
       <MemberSignature Language="C++ CLI" Value="protected:&#xA; virtual void OnShutdown();" />
       <MemberSignature Language="F#" Value="abstract member OnShutdown : unit -&gt; unit&#xA;override this.OnShutdown : unit -&gt; unit" Usage="xmlFormHostItem.OnShutdown " />
       <MemberType>Method</MemberType>
-      <Implements>
-        <InterfaceMember>M:Microsoft.VisualStudio.Tools.Applications.Contract.IEntryPointContract.OnShutdown</InterfaceMember>
-        <InterfaceMember>M:Microsoft.Office.InfoPath.IInfoPathRuntime.OnShutdown</InterfaceMember>
-      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.InfoPath</AssemblyName>
         <AssemblyVersion>15.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1265,7 +1299,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1312,7 +1347,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>get: System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[get: System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1386,7 +1422,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1479,7 +1516,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>get: System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[get: System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1505,7 +1543,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1538,7 +1577,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1571,7 +1611,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1664,7 +1705,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1785,7 +1827,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>get: System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[get: System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1874,7 +1917,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>get: System.ComponentModel.EditorBrowsable</AttributeName>
+          <AttributeName Language="C#">[get: System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

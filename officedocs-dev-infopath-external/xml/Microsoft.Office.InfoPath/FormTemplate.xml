@@ -1,4 +1,4 @@
-﻿<Type Name="FormTemplate" FullName="Microsoft.Office.InfoPath.FormTemplate">
+<Type Name="FormTemplate" FullName="Microsoft.Office.InfoPath.FormTemplate">
   <TypeSignature Language="C#" Value="public abstract class FormTemplate" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormTemplate extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FormTemplate" />

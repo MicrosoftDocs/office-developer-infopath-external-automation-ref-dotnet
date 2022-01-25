@@ -1,4 +1,4 @@
-﻿<Type Name="tagDOMNodeType" FullName="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType">
+<Type Name="tagDOMNodeType" FullName="Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType">
   <TypeSignature Language="C#" Value="public enum tagDOMNodeType" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed tagDOMNodeType extends System.Enum" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.tagDOMNodeType" />

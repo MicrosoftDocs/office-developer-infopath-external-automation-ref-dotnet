@@ -1,4 +1,4 @@
-﻿<Type Name="DataSource" FullName="Microsoft.Office.InfoPath.DataSource">
+<Type Name="DataSource" FullName="Microsoft.Office.InfoPath.DataSource">
   <TypeSignature Language="C#" Value="public abstract class DataSource" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataSource extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.DataSource" />

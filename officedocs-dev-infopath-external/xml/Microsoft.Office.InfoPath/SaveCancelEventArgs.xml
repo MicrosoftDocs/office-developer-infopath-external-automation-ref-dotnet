@@ -1,4 +1,4 @@
-﻿<Type Name="SaveCancelEventArgs" FullName="Microsoft.Office.InfoPath.SaveCancelEventArgs">
+<Type Name="SaveCancelEventArgs" FullName="Microsoft.Office.InfoPath.SaveCancelEventArgs">
   <TypeSignature Language="C#" Value="public abstract class SaveCancelEventArgs : Microsoft.Office.InfoPath.XmlFormCancelEventArgs" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SaveCancelEventArgs extends Microsoft.Office.InfoPath.XmlFormCancelEventArgs" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SaveCancelEventArgs" />

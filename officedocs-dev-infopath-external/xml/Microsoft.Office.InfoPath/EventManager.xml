@@ -1,4 +1,4 @@
-﻿<Type Name="EventManager" FullName="Microsoft.Office.InfoPath.EventManager">
+<Type Name="EventManager" FullName="Microsoft.Office.InfoPath.EventManager">
   <TypeSignature Language="C#" Value="public abstract class EventManager" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EventManager extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.EventManager" />

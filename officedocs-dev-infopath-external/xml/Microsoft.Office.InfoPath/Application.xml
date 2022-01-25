@@ -1,4 +1,4 @@
-﻿<Type Name="Application" FullName="Microsoft.Office.InfoPath.Application">
+<Type Name="Application" FullName="Microsoft.Office.InfoPath.Application">
   <TypeSignature Language="C#" Value="public abstract class Application" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Application extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Application" />
@@ -97,9 +97,6 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>CacheMyFormTemplates</b> custom function loops through the location for each the form template specified in the <b>forms</b> array and passes that value to the <b>CacheFormTemplate</b> method for evaluation.</para>
           <code>private string[] _forms = 
@@ -123,6 +120,9 @@ private void CacheMyFormTemplates(string[] forms)
    }
 }</code>
         </example>
+        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="ComAddIns">
@@ -150,7 +150,6 @@ private void CacheMyFormTemplates(string[] forms)
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>The following example accesses the first item in the <b>COMAddIns</b> collection that is returned by the <b>ComAddIns</b> property.</para>
           <code>Object objectReference = 1;
@@ -173,6 +172,7 @@ Dim myComAddIn As Microsoft.Office.Core.COMAddIn = _
    myComAddIns.Item(objectReference)
 </code>
         </example>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Environment">
@@ -234,8 +234,6 @@ Dim myComAddIn As Microsoft.Office.Core.COMAddIn = _
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, a cache ID value is passed to the <b>GetFormTemplateLocation</b> method to display the published location of the form template.</para>
           <code>MessageBox.Show(this.Application.GetFormTemplateLocation(
@@ -243,6 +241,8 @@ Dim myComAddIn As Microsoft.Office.Core.COMAddIn = _
           <code>MessageBox.Show(Me.Application.GetFormTemplateLocation( _
    "37d5ef02fa44a797$"))</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="IsDestinationReachable">
@@ -276,9 +276,6 @@ Dim myComAddIn As Microsoft.Office.Core.COMAddIn = _
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.IO.FileNotFoundException">The location of the destination cannot be found.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, clicking the <b>Button</b> control displays whether a connection can be made to the specified URL.</para>
           <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
@@ -294,6 +291,9 @@ Dim myComAddIn As Microsoft.Office.Core.COMAddIn = _
    MessageBox.Show(result)
 End Sub</code>
         </example>
+        <exception cref="T:System.IO.FileNotFoundException">The location of the destination cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="LanguageSettings">
@@ -322,7 +322,6 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>The following example uses the <b>get_LanguageID</b> method (or the <b>LanguageID</b> property) of the <b>LanguageSettings</b> class to return the LCID value (a four-digit number) for the language that is currently being used for the Office user interface.</para>
           <para>This example requires a <b>using</b> or <b>Imports</b> directive for the <b>Microsoft.Office.Core</b> namespace in the declarations section of the form code module.</para>
@@ -335,6 +334,7 @@ int lcid =
 Dim lcid As Integer  = 
    langSettings.LanguageID (MsoAppLanguageID.msoLanguageIDUI)</code>
         </example>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="MachineOnlineState">
@@ -532,9 +532,6 @@ MessageBox.Show(appName)</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>RegisterFormTemplate</b> method of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class is used in a function to install a form template. The example assumes that there is a <b>using</b> or <b>Imports</b> statement for the <b>Microsoft.Office.InfoPath</b> namespace in the declarations section of the class that contains the function, and that the Microsoft InfoPath 3.0 Type Library is referenced on the COM tab of the Add Reference dialog box in Visual Studio.</para>
           <code>public void InstallForm()
@@ -551,6 +548,9 @@ infoPathApp.RegisterFormTemplate("C:\My Forms\MyFormTemplate.xsn", _
    "overwrite")
 End Sub</code>
         </example>
+        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="UnregisterFormTemplate">
@@ -580,9 +580,6 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>UnregisterFormTemplate</b> method of the <see cref="T:Microsoft.Office.InfoPath.Application" /> class is used in a function to uninstall the specified form template. The example assumes that there is a <b>using</b> or <b>Imports</b> statement for the <b>Microsoft.Office.InfoPath</b> namespace in the declarations section of the class that contains the function, and that the Microsoft InfoPath 3.0 Type Library is referenced on the COM tab of the Add Reference dialog box in Visual Studio.</para>
           <code>public void UninstallForm()
@@ -597,6 +594,9 @@ Dim infoPathApp As Microsoft.Office.InfoPath.Application = _
 infoPathApp.UnregisterFormTemplate("C:\My Forms\MyFormTemplate.xsn")
 End Sub</code>
         </example>
+        <exception cref="T:System.IO.FileNotFoundException">The form template file cannot be found.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="UsableHeight">

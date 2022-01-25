@@ -1,4 +1,4 @@
-﻿<Type Name="IXMLDOMSelection" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSelection">
+<Type Name="IXMLDOMSelection" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSelection">
   <TypeSignature Language="C#" Value="public interface IXMLDOMSelection : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNodeList" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXMLDOMSelection implements class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNodeList" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMSelection" />
@@ -16,10 +16,12 @@
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("AA634FC7-5888-44a7-A257-3A47150D3A0E")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("AA634FC7-5888-44a7-A257-3A47150D3A0E")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("AA634FC7-5888-44a7-A257-3A47150D3A0E")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -42,7 +44,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(87)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(87)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(87)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -70,7 +73,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(82)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(82)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(82)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -97,7 +101,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(81)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(81)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(81)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -150,7 +155,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(88)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(88)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(88)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -184,7 +190,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(0)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(0)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -218,7 +225,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(74)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(74)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(74)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -245,7 +253,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(84)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(84)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(84)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -279,7 +288,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(76)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(76)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(76)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -307,7 +317,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(83)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(83)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(83)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -335,7 +346,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(86)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(86)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(86)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -362,7 +374,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(85)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(85)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(85)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -393,7 +406,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(77)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(77)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(77)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -420,7 +434,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(89)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(89)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(89)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

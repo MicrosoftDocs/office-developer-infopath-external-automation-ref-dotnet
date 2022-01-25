@@ -1,4 +1,4 @@
-﻿<Type Name="XmlFormCollection" FullName="Microsoft.Office.InfoPath.XmlFormCollection">
+<Type Name="XmlFormCollection" FullName="Microsoft.Office.InfoPath.XmlFormCollection">
   <TypeSignature Language="C#" Value="public abstract class XmlFormCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlFormCollection extends System.Object implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlFormCollection" />
@@ -162,7 +162,6 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>New</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
         <example>
           <para>In the following code example, the <b>New</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form on which to base the new form and the new form's associated <b>XmlForm</b> object is returned.</para>
           <code>XmlForm newDocument = 
@@ -170,6 +169,7 @@
           <code>Dim newDocument As XmlForm  = _
    Me.Application.XmlForms.New("C:\MyForm.xml")</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>New</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="New">
@@ -203,7 +203,6 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>New</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
         <example>
           <para>In the following code example, the <b>New</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form on which to base the new form by using the default open mode, and the new form's associated <b>XmlForm</b> object is returned.</para>
           <code>XmlForm newDocument = 
@@ -213,6 +212,7 @@
    Me.Application.XmlForms.New("C:\MyForm.xml", 
    XmlFormOpenMode.Default)</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>New</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplate">
@@ -244,10 +244,6 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
-        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
         <example>
           <para>In the following code example, the <b>NewFromFormTemplate(</b><paramref name="formTemplateLocation" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form template and the new form's associated <b>XmlForm</b> object is returned.</para>
           <code>XmlForm newDocument = 
@@ -257,6 +253,10 @@
    Me.Application.XmlForms.NewFromFormTemplate(_
    "C:\MyForm.xsn")</code>
         </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplate">
@@ -290,10 +290,6 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
-        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
         <example>
           <para>In the following code example, the <b>NewFromFormTemplate(</b><paramref name="formTemplateLocation" />,<paramref name=" xmlData" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form template, the URI of XML data, and the new form's associated <b>XmlForm</b> object is returned.</para>
           <code>XmlForm newDocument = 
@@ -303,6 +299,10 @@
    Me.Application.XmlForms.NewFromFormTemplate(_
    "C:\MyForm.xsn", "C:\MyForm.xml")</code>
         </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplate">
@@ -336,10 +336,6 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
-        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
         <example>
           <para>In the following code example, the <b>NewFromFormTemplate(</b><paramref name="formTemplateLocation" />,<paramref name=" xmlData" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form template and an <b>XPathNavigator</b> object that returns XML data, and the new form's associated <b>XmlForm</b> object returned.</para>
           <code>// Create an in-memory XML document.
@@ -371,6 +367,10 @@ Dim newDocument As XmlForm  = _
    Me.Application.XmlForms.NewFromFormTemplate(_
    "C:\MyForm.xsn", newDocNav)</code>
         </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplate">
@@ -406,10 +406,6 @@ Dim newDocument As XmlForm  = _
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
-        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
         <example>
           <para>In the following code example, the <b>NewFromFormTemplate(</b><paramref name="formTemplateLocation" />,<paramref name=" xmlData" />,<paramref name="behavior" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.XmlFormCollection" /> class is passed the URI of an existing form template, the URI of XML data, an <b>XmlFormOpenMode</b> enumeration, and the new form's associated <b>XmlForm</b> object is returned.</para>
           <code>XmlForm newDocument = 
@@ -420,6 +416,10 @@ Dim newDocument As XmlForm  = _
    Me.Application.XmlForms.NewFromFormTemplate(_
    "C:\MyForm.xsn", XmlFormOpenMode.FailOnVersionOlder)</code>
         </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="NewFromFormTemplateWithInputParameters">
@@ -452,10 +452,6 @@ Dim newDocument As XmlForm  = _
           <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
-        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
         <example>
           <para>The following code example shows how to create a new form by passing in the URI of a form template that contains an appropriate <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event handler and two input parameters. </para>
           <code>XmlForm newDocument = 
@@ -465,6 +461,10 @@ Dim newDocument As XmlForm  = _
    Me.Application.XmlForms.NewFromFormTemplateWithParameters( _
    "C:\User Forms\DeptReport.xsn","Dept=Accounting&amp;amp;Acct=Contoso")</code>
         </example>
+        <exception cref="T:System.ArgumentException">The parameter that was passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter that was passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.IO.FileNotFoundException">The file specified for <paramref name="formTemplateLocation" /> does not exist.</exception>
+        <exception cref="T:System.InvalidOperationException">This method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
       </Docs>
     </Member>
     <Member MemberName="Open">

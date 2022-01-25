@@ -1,4 +1,4 @@
-﻿<Type Name="IInfoPathRuntime" FullName="Microsoft.Office.InfoPath.IInfoPathRuntime">
+<Type Name="IInfoPathRuntime" FullName="Microsoft.Office.InfoPath.IInfoPathRuntime">
   <TypeSignature Language="C#" Value="public interface IInfoPathRuntime" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInfoPathRuntime" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.IInfoPathRuntime" />

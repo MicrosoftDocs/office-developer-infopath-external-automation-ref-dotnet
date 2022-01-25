@@ -1,4 +1,4 @@
-﻿<Type Name="SharepointListAdapter2" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapter2">
+<Type Name="SharepointListAdapter2" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapter2">
   <TypeSignature Language="C#" Value="public interface SharepointListAdapter2 : Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SharepointListAdapter2 implements class Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SharepointListAdapter2" />
@@ -16,10 +16,12 @@
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd740-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd740-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd740-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -44,7 +46,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(8)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(8)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(8)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -77,7 +80,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(9)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(9)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(9)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -123,7 +127,8 @@ catch (Exception ex)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(6)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(6)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(6)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -153,7 +158,8 @@ catch (Exception ex)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(11)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(11)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -189,7 +195,8 @@ catch (Exception ex)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(5)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(5)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(5)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -227,7 +234,8 @@ thisXDocument.UI.Alert(SPList.&lt;span class="label"&gt;SiteUrl&lt;/span&gt;);</
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(10)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(10)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -261,7 +269,8 @@ thisXDocument.UI.Alert(SPList.&lt;span class="label"&gt;SiteUrl&lt;/span&gt;);</
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(7)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(7)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(7)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

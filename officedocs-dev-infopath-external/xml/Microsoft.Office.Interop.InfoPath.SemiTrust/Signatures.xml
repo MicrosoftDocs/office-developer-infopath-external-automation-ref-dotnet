@@ -1,4 +1,4 @@
-﻿<Type Name="Signatures" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.Signatures">
+<Type Name="Signatures" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.Signatures">
   <TypeSignature Language="C#" Value="public interface Signatures" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Signatures" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Signatures" />
@@ -12,10 +12,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd716-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd716-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd716-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -37,7 +39,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(1)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -67,7 +70,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(2)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -134,7 +138,8 @@ public void OnSign(SignEvent e)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(0)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(0)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

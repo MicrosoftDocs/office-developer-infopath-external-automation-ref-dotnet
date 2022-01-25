@@ -19,7 +19,8 @@
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

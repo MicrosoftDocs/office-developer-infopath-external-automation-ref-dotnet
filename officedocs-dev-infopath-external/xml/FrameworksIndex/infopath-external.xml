@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="infopath-external">
+  <Assemblies>
+    <Assembly Name="Microsoft.Office.InfoPath" Version="15.0.0.0" />
+    <Assembly Name="Microsoft.Office.InfoPath.Permission" Version="15.0.0.0" />
+    <Assembly Name="Microsoft.Office.Interop.InfoPath.SemiTrust" Version="11.0.0.0" />
+    <Assembly Name="Microsoft.Office.Interop.InfoPath.Xml" Version="15.0.0.0" />
+  </Assemblies>
   <Namespace Name="Microsoft.Office.InfoPath">
     <Type Name="Microsoft.Office.InfoPath.ActionType" Id="T:Microsoft.Office.InfoPath.ActionType">
       <Member Id="F:Microsoft.Office.InfoPath.ActionType.Copy" />

@@ -1,4 +1,4 @@
-﻿<Type Name="SignatureLines" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLines">
+<Type Name="SignatureLines" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLines">
   <TypeSignature Language="C#" Value="public interface SignatureLines" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SignatureLines" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.SignatureLines" />
@@ -12,10 +12,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd767-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd767-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd767-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -37,7 +39,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(1)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -92,7 +95,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(0)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(0)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

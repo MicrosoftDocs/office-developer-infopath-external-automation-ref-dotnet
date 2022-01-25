@@ -1,4 +1,4 @@
-﻿<Type Name="XmlValidatingEventHandler" FullName="Microsoft.Office.InfoPath.XmlValidatingEventHandler">
+<Type Name="XmlValidatingEventHandler" FullName="Microsoft.Office.InfoPath.XmlValidatingEventHandler">
   <TypeSignature Language="C#" Value="public delegate void XmlValidatingEventHandler(object sender, XmlValidatingEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlValidatingEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlValidatingEventHandler" />

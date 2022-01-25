@@ -14,12 +14,16 @@
   </Base>
   <Interfaces>
     <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust._XDocumentEventSink2</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

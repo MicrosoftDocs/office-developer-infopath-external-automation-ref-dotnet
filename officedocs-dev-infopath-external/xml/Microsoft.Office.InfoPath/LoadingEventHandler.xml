@@ -1,4 +1,4 @@
-﻿<Type Name="LoadingEventHandler" FullName="Microsoft.Office.InfoPath.LoadingEventHandler">
+<Type Name="LoadingEventHandler" FullName="Microsoft.Office.InfoPath.LoadingEventHandler">
   <TypeSignature Language="C#" Value="public delegate void LoadingEventHandler(object sender, LoadingEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LoadingEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.LoadingEventHandler" />

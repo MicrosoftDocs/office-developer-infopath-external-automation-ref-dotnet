@@ -1,4 +1,4 @@
-﻿<Type Name="ViewSwitchedEventHandler" FullName="Microsoft.Office.InfoPath.ViewSwitchedEventHandler">
+<Type Name="ViewSwitchedEventHandler" FullName="Microsoft.Office.InfoPath.ViewSwitchedEventHandler">
   <TypeSignature Language="C#" Value="public delegate void ViewSwitchedEventHandler(object sender, ViewSwitchedEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ViewSwitchedEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ViewSwitchedEventHandler" />

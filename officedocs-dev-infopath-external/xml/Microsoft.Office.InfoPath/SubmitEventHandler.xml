@@ -1,4 +1,4 @@
-﻿<Type Name="SubmitEventHandler" FullName="Microsoft.Office.InfoPath.SubmitEventHandler">
+<Type Name="SubmitEventHandler" FullName="Microsoft.Office.InfoPath.SubmitEventHandler">
   <TypeSignature Language="C#" Value="public delegate void SubmitEventHandler(object sender, SubmitEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SubmitEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SubmitEventHandler" />

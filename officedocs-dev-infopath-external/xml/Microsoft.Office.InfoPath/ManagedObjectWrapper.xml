@@ -1,4 +1,4 @@
-﻿<Type Name="ManagedObjectWrapper" FullName="Microsoft.Office.InfoPath.ManagedObjectWrapper">
+<Type Name="ManagedObjectWrapper" FullName="Microsoft.Office.InfoPath.ManagedObjectWrapper">
   <TypeSignature Language="C#" Value="public sealed class ManagedObjectWrapper" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ManagedObjectWrapper extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ManagedObjectWrapper" />
@@ -15,10 +15,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Diagnostics.DebuggerNonUserCode</AttributeName>
+      <AttributeName Language="C#">[System.Diagnostics.DebuggerNonUserCode]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Diagnostics.DebuggerNonUserCode&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Security.SecurityCritical(System.Security.SecurityCriticalScope.Everything)</AttributeName>
+      <AttributeName Language="C#">[System.Security.SecurityCritical(System.Security.SecurityCriticalScope.Everything)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Security.SecurityCritical(System.Security.SecurityCriticalScope.Everything)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

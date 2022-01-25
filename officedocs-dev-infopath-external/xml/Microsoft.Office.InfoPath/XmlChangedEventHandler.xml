@@ -1,4 +1,4 @@
-﻿<Type Name="XmlChangedEventHandler" FullName="Microsoft.Office.InfoPath.XmlChangedEventHandler">
+<Type Name="XmlChangedEventHandler" FullName="Microsoft.Office.InfoPath.XmlChangedEventHandler">
   <TypeSignature Language="C#" Value="public delegate void XmlChangedEventHandler(object sender, XmlEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XmlChangedEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlChangedEventHandler" />

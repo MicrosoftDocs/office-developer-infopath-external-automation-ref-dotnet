@@ -1,4 +1,4 @@
-﻿<Type Name="FormError" FullName="Microsoft.Office.InfoPath.FormError">
+<Type Name="FormError" FullName="Microsoft.Office.InfoPath.FormError">
   <TypeSignature Language="C#" Value="public abstract class FormError" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormError extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FormError" />

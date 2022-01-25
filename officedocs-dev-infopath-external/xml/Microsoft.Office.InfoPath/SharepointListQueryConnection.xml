@@ -1,4 +1,4 @@
-﻿<Type Name="SharepointListQueryConnection" FullName="Microsoft.Office.InfoPath.SharepointListQueryConnection">
+<Type Name="SharepointListQueryConnection" FullName="Microsoft.Office.InfoPath.SharepointListQueryConnection">
   <TypeSignature Language="C#" Value="public abstract class SharepointListQueryConnection : Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SharepointListQueryConnection extends Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SharepointListQueryConnection" />
@@ -15,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Obsolete("The SharePointListQueryConnection class has been deprecated. Use SharePointListRWQueryConnection instead.")</AttributeName>
+      <AttributeName Language="C#">[System.Obsolete("The SharePointListQueryConnection class has been deprecated. Use SharePointListRWQueryConnection instead.")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Obsolete("The SharePointListQueryConnection class has been deprecated. Use SharePointListRWQueryConnection instead.")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -87,9 +88,6 @@
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.Net.WebException">The query operation failed or returned no data (the queried list is empty).</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>Execute(</b><paramref name="output" /><b>)</b> method of the <see cref="T:Microsoft.Office.InfoPath.SharepointListQueryConnection" /> class is used to execute a query against the "Contacts" connection and store the output in an <b>XmlDocument</b> that is created in memory. It then displays the output stored in the <b>XmlDocument</b> in the <b>QueryOutput</b> field of the form.</para>
           <code>public void ExecuteOutput_Clicked(object sender, ClickedEventArgs e)
@@ -169,6 +167,9 @@
     queryOutputNavigator.SetValue(outputRootNavigator.InnerXml)
 End Sub</code>
         </example>
+        <exception cref="T:System.Net.WebException">The query operation failed or returned no data (the queried list is empty).</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="QueryThisFormOnly">

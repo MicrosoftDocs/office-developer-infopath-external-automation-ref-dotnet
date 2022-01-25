@@ -1,4 +1,4 @@
-﻿<Type Name="XMLDOMDocumentEvents_Event" FullName="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event">
+<Type Name="XMLDOMDocumentEvents_Event" FullName="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event">
   <TypeSignature Language="C#" Value="public interface XMLDOMDocumentEvents_Event" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLDOMDocumentEvents_Event" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event" />
@@ -12,13 +12,16 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents), typeof(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_EventProvider))</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents), typeof(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_EventProvider))]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents), typeof(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_EventProvider))&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(false)&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeLibType(16)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.TypeLibType(16)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.TypeLibType(16)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -27,12 +30,12 @@
   </Docs>
   <Members>
     <Member MemberName="add_ondataavailable">
-      <MemberSignature Language="C#" Value="public void add_ondataavailable (Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler );" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void add_ondataavailable(class Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler ) runtime managed" />
+      <MemberSignature Language="C#" Value="public void add_ondataavailable (Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler unnamedParam1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void add_ondataavailable(class Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler unnamedParam1) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.add_ondataavailable(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub add_ondataavailable ( As XMLDOMDocumentEvents_ondataavailableEventHandler)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void add_ondataavailable(Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_ondataavailableEventHandler ^ );" />
-      <MemberSignature Language="F#" Value="abstract member add_ondataavailable : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler -&gt; unit" Usage="xMLDOMDocumentEvents_Event.add_ondataavailable " />
+      <MemberSignature Language="VB.NET" Value="Public Sub add_ondataavailable (unnamedParam1 As XMLDOMDocumentEvents_ondataavailableEventHandler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void add_ondataavailable(Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_ondataavailableEventHandler ^ unnamedParam1);" />
+      <MemberSignature Language="F#" Value="abstract member add_ondataavailable : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler -&gt; unit" Usage="xMLDOMDocumentEvents_Event.add_ondataavailable unnamedParam1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -42,21 +45,21 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="" Type="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler" />
+        <Parameter Name="unnamedParam1" Type="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler" />
       </Parameters>
       <Docs>
-        <param name="">To be added.</param>
+        <param name="unnamedParam1">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="add_onreadystatechange">
-      <MemberSignature Language="C#" Value="public void add_onreadystatechange (Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler );" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void add_onreadystatechange(class Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler ) runtime managed" />
+      <MemberSignature Language="C#" Value="public void add_onreadystatechange (Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler unnamedParam1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void add_onreadystatechange(class Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler unnamedParam1) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.add_onreadystatechange(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub add_onreadystatechange ( As XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void add_onreadystatechange(Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_onreadystatechangeEventHandler ^ );" />
-      <MemberSignature Language="F#" Value="abstract member add_onreadystatechange : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler -&gt; unit" Usage="xMLDOMDocumentEvents_Event.add_onreadystatechange " />
+      <MemberSignature Language="VB.NET" Value="Public Sub add_onreadystatechange (unnamedParam1 As XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void add_onreadystatechange(Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_onreadystatechangeEventHandler ^ unnamedParam1);" />
+      <MemberSignature Language="F#" Value="abstract member add_onreadystatechange : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler -&gt; unit" Usage="xMLDOMDocumentEvents_Event.add_onreadystatechange unnamedParam1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -66,10 +69,10 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="" Type="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler" />
+        <Parameter Name="unnamedParam1" Type="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler" />
       </Parameters>
       <Docs>
-        <param name="">To be added.</param>
+        <param name="unnamedParam1">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,12 +118,12 @@
       </Docs>
     </Member>
     <Member MemberName="remove_ondataavailable">
-      <MemberSignature Language="C#" Value="public void remove_ondataavailable (Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler );" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void remove_ondataavailable(class Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler ) runtime managed" />
+      <MemberSignature Language="C#" Value="public void remove_ondataavailable (Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler unnamedParam1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void remove_ondataavailable(class Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler unnamedParam1) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.remove_ondataavailable(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub remove_ondataavailable ( As XMLDOMDocumentEvents_ondataavailableEventHandler)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void remove_ondataavailable(Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_ondataavailableEventHandler ^ );" />
-      <MemberSignature Language="F#" Value="abstract member remove_ondataavailable : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler -&gt; unit" Usage="xMLDOMDocumentEvents_Event.remove_ondataavailable " />
+      <MemberSignature Language="VB.NET" Value="Public Sub remove_ondataavailable (unnamedParam1 As XMLDOMDocumentEvents_ondataavailableEventHandler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void remove_ondataavailable(Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_ondataavailableEventHandler ^ unnamedParam1);" />
+      <MemberSignature Language="F#" Value="abstract member remove_ondataavailable : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler -&gt; unit" Usage="xMLDOMDocumentEvents_Event.remove_ondataavailable unnamedParam1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -130,21 +133,21 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="" Type="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler" />
+        <Parameter Name="unnamedParam1" Type="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_ondataavailableEventHandler" />
       </Parameters>
       <Docs>
-        <param name="">To be added.</param>
+        <param name="unnamedParam1">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="remove_onreadystatechange">
-      <MemberSignature Language="C#" Value="public void remove_onreadystatechange (Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler );" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void remove_onreadystatechange(class Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler ) runtime managed" />
+      <MemberSignature Language="C#" Value="public void remove_onreadystatechange (Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler unnamedParam1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void remove_onreadystatechange(class Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler unnamedParam1) runtime managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_Event.remove_onreadystatechange(Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub remove_onreadystatechange ( As XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
-      <MemberSignature Language="C++ CLI" Value="public:&#xA; void remove_onreadystatechange(Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_onreadystatechangeEventHandler ^ );" />
-      <MemberSignature Language="F#" Value="abstract member remove_onreadystatechange : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler -&gt; unit" Usage="xMLDOMDocumentEvents_Event.remove_onreadystatechange " />
+      <MemberSignature Language="VB.NET" Value="Public Sub remove_onreadystatechange (unnamedParam1 As XMLDOMDocumentEvents_onreadystatechangeEventHandler)" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void remove_onreadystatechange(Microsoft::Office::Interop::InfoPath::Xml::XMLDOMDocumentEvents_onreadystatechangeEventHandler ^ unnamedParam1);" />
+      <MemberSignature Language="F#" Value="abstract member remove_onreadystatechange : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler -&gt; unit" Usage="xMLDOMDocumentEvents_Event.remove_onreadystatechange unnamedParam1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.Xml</AssemblyName>
@@ -154,10 +157,10 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="" Type="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler" />
+        <Parameter Name="unnamedParam1" Type="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_onreadystatechangeEventHandler" />
       </Parameters>
       <Docs>
-        <param name="">To be added.</param>
+        <param name="unnamedParam1">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>

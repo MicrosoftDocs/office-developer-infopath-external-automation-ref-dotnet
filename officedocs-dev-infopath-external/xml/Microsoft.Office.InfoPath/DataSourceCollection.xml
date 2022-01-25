@@ -1,4 +1,4 @@
-﻿<Type Name="DataSourceCollection" FullName="Microsoft.Office.InfoPath.DataSourceCollection">
+<Type Name="DataSourceCollection" FullName="Microsoft.Office.InfoPath.DataSourceCollection">
   <TypeSignature Language="C#" Value="public abstract class DataSourceCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataSourceCollection extends System.Object implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.DataSourceCollection" />

@@ -1,4 +1,4 @@
-﻿<Type Name="Window" FullName="Microsoft.Office.InfoPath.Window">
+<Type Name="Window" FullName="Microsoft.Office.InfoPath.Window">
   <TypeSignature Language="C#" Value="public abstract class Window" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Window extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Window" />
@@ -248,7 +248,6 @@ End If</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>In the following example, the <b>CommandBars</b> property of the <see cref="T:Microsoft.Office.InfoPath.Window" /> class is use to get a <b>CommandBars</b> collection and display the count of Command Bars. </para>
           <para>This example requires a <b>using</b> or <b>Imports</b> directive for the <b>Microsoft.Office.Core</b> namespace in the declarations section of the form code module.</para>
@@ -275,6 +274,7 @@ Dim commandBarsCount As Integer = myCommandBars.Count
 MessageBox.Show("There are " &amp;amp; commandBarsCount.ToString() &amp;amp; 
    " Command Bars")</code>
         </example>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="Height">

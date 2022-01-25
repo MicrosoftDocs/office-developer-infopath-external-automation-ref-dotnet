@@ -1,4 +1,4 @@
-﻿<Type Name="DataAdaptersEnumerator" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersEnumerator">
+<Type Name="DataAdaptersEnumerator" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersEnumerator">
   <TypeSignature Language="C#" Value="public class DataAdaptersEnumerator : System.Collections.IEnumerator" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DataAdaptersEnumerator extends System.Object implements class System.Collections.IEnumerator" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersEnumerator" />
@@ -51,9 +51,6 @@
       <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Current { System::Object ^ get(); };" />
       <MemberSignature Language="F#" Value="member this.Current : obj" Usage="Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersEnumerator.Current" />
       <MemberType>Property</MemberType>
-      <Implements>
-        <InterfaceMember>P:System.Collections.IEnumerator.Current</InterfaceMember>
-      </Implements>
       <AssemblyInfo>
         <AssemblyName>Microsoft.Office.Interop.InfoPath.SemiTrust</AssemblyName>
         <AssemblyVersion>11.0.0.0</AssemblyVersion>
@@ -122,7 +119,7 @@
       <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.InfoPath.SemiTrust.DataAdaptersEnumerator.System#Collections#IEnumerator#Current" />
       <MemberSignature Language="VB.NET" Value=" ReadOnly Property Current As Object Implements IEnumerator.Current" />
       <MemberSignature Language="C++ CLI" Value="property System::Object ^ System::Collections::IEnumerator::Current { System::Object ^ get(); };" />
-      <MemberSignature Language="F#" Usage="System.Collections.IEnumerator.Current" />
+      <MemberSignature Language="F#" Value="member this.System.Collections.IEnumerator.Current : obj" Usage="System.Collections.IEnumerator.Current" />
       <MemberType>Property</MemberType>
       <Implements>
         <InterfaceMember>P:System.Collections.IEnumerator.Current</InterfaceMember>

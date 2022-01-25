@@ -1,4 +1,4 @@
-﻿<Type Name="XMLDOMDocumentEvents_Event" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_Event">
+<Type Name="XMLDOMDocumentEvents_Event" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_Event">
   <TypeSignature Language="C#" Value="public interface XMLDOMDocumentEvents_Event" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XMLDOMDocumentEvents_Event" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_Event" />
@@ -12,10 +12,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents), typeof(Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_EventProvider))</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents), typeof(Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_EventProvider))]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComEventInterface(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents), typeof(Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_EventProvider))&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(false)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

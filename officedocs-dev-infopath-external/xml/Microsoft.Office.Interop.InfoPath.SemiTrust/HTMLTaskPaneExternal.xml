@@ -1,4 +1,4 @@
-﻿<Type Name="HTMLTaskPaneExternal" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.HTMLTaskPaneExternal">
+<Type Name="HTMLTaskPaneExternal" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.HTMLTaskPaneExternal">
   <TypeSignature Language="C#" Value="public interface HTMLTaskPaneExternal" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract HTMLTaskPaneExternal" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.HTMLTaskPaneExternal" />
@@ -12,10 +12,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd5f4-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd5f4-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd5f4-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -42,7 +44,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(1)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -82,7 +85,8 @@ objWindow.MailEnvelope.Visible = true;</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(2)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

@@ -1,4 +1,4 @@
-﻿<Type Name="XMLDOMDocumentEvents_SinkHelper" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_SinkHelper">
+<Type Name="XMLDOMDocumentEvents_SinkHelper" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_SinkHelper">
   <TypeSignature Language="C#" Value="public sealed class XMLDOMDocumentEvents_SinkHelper : Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit XMLDOMDocumentEvents_SinkHelper extends System.Object implements class Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_SinkHelper" />
@@ -19,7 +19,8 @@
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

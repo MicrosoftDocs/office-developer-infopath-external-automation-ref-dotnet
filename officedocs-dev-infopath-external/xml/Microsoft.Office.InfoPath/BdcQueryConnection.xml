@@ -1,4 +1,4 @@
-﻿<Type Name="BdcQueryConnection" FullName="Microsoft.Office.InfoPath.BdcQueryConnection">
+<Type Name="BdcQueryConnection" FullName="Microsoft.Office.InfoPath.BdcQueryConnection">
   <TypeSignature Language="C#" Value="public abstract class BdcQueryConnection : Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BdcQueryConnection extends Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.BdcQueryConnection" />

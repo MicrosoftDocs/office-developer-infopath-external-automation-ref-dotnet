@@ -1,4 +1,4 @@
-﻿<Type Name="InfoPathNamespaceAttribute" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute">
+<Type Name="InfoPathNamespaceAttribute" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute">
   <TypeSignature Language="C#" Value="public sealed class InfoPathNamespaceAttribute : Attribute" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit InfoPathNamespaceAttribute extends System.Attribute" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathNamespaceAttribute" />
@@ -15,7 +15,8 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.AttributeUsage(System.AttributeTargets.Class)</AttributeName>
+      <AttributeName Language="C#">[System.AttributeUsage(System.AttributeTargets.Class)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.AttributeUsage(System.AttributeTargets.Class)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

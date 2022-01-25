@@ -1,4 +1,4 @@
-﻿<Type Name="AdoQueryConnection" FullName="Microsoft.Office.InfoPath.AdoQueryConnection">
+<Type Name="AdoQueryConnection" FullName="Microsoft.Office.InfoPath.AdoQueryConnection">
   <TypeSignature Language="C#" Value="public abstract class AdoQueryConnection : Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AdoQueryConnection extends Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.AdoQueryConnection" />
@@ -73,9 +73,6 @@
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">One of the following conditions has occurred:The SQL command string generated from the input node cannot be parsed.The input node is not a table of query field values.The input node contains columns (XML attributes) that are not present in the data source that is being queried.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the event handler for a <b>Button</b> control uses the <b>BuildSQLFromXMLNodes</b> method of the <b>ADOQueryConnection</b> class to parse the current query field values and display them in a message box.</para>
           <para>This example assumes that the form template has a data connection named "Main connection" to the <b>Employees</b> table in the SQL Server Northwind sample database.</para>
@@ -121,6 +118,9 @@
    MessageBox.Show(sqlFromXmlNodes)
 End Sub</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">One of the following conditions has occurred:The SQL command string generated from the input node cannot be parsed.The input node is not a table of query field values.The input node contains columns (XML attributes) that are not present in the data source that is being queried.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Command">

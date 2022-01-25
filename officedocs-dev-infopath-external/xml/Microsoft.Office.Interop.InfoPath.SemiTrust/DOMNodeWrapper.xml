@@ -1,4 +1,4 @@
-﻿<Type Name="DOMNodeWrapper" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeWrapper">
+<Type Name="DOMNodeWrapper" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeWrapper">
   <TypeSignature Language="C#" Value="public class DOMNodeWrapper : Microsoft.Office.Interop.InfoPath.Helper.WrapperBase, Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNode, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMAttribute, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMCDATASection, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMComment, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument3, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocumentFragment, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocumentType, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMElement, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMEntity, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMEntityReference, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMImplementation, Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMProcessingInstruction" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DOMNodeWrapper extends Microsoft.Office.Interop.InfoPath.Helper.WrapperBase implements class Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNode, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMAttribute, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMCDATASection, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMCharacterData, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMComment, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument2, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument3, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocumentFragment, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocumentType, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMElement, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMEntity, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMEntityReference, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMImplementation, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMProcessingInstruction, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMText" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DOMNodeWrapper" />
@@ -23,7 +23,16 @@
       <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMCDATASection</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMCharacterData</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMComment</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument2</InterfaceName>
     </Interface>
     <Interface>
       <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument3</InterfaceName>
@@ -47,7 +56,13 @@
       <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMImplementation</InterfaceName>
     </Interface>
     <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMProcessingInstruction</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMText</InterfaceName>
     </Interface>
   </Interfaces>
   <Docs>

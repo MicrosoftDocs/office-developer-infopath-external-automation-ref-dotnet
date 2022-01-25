@@ -1,4 +1,4 @@
-﻿<Type Name="IDataAdapterMOM" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.IDataAdapterMOM">
+<Type Name="IDataAdapterMOM" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.IDataAdapterMOM">
   <TypeSignature Language="C#" Value="public interface IDataAdapterMOM" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDataAdapterMOM" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.IDataAdapterMOM" />
@@ -12,10 +12,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd734-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd734-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd734-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsIUnknown)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

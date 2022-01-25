@@ -1,4 +1,4 @@
-﻿<Type Name="WebServiceConnection" FullName="Microsoft.Office.InfoPath.WebServiceConnection">
+<Type Name="WebServiceConnection" FullName="Microsoft.Office.InfoPath.WebServiceConnection">
   <TypeSignature Language="C#" Value="public abstract class WebServiceConnection : Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit WebServiceConnection extends Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.WebServiceConnection" />
@@ -87,9 +87,6 @@
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.Net.WebException">A network error occurred while attempting to access the Web service.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are<b></b>not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, three <b>XmlDocument</b> objects are created to work with the <b>Execute</b> method. The first XmlDocument is populated with data, then three <b>XPathNavigator</b> objects are created to pass as the <paramref name="input" />, <paramref name="output" />, and <paramref name="errors" /> parameters of the <b>Execute</b> method, and the method is called.</para>
           <code>// Open connection.
@@ -131,6 +128,9 @@ Dim errorsNav As XPathNavigator = errorsDocument.CreateNavigator()
 ' Call Execute method.
 wsc.Execute(inputNav, outputNav, errorsNav)</code>
         </example>
+        <exception cref="T:System.Net.WebException">A network error occurred while attempting to access the Web service.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are<b></b>not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="GenerateDataSetDiffGram">

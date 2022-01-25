@@ -1,4 +1,4 @@
-﻿<Type Name="View" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.View">
+<Type Name="View" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.View">
   <TypeSignature Language="C#" Value="public interface View" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract View" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.View" />
@@ -12,10 +12,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd55d-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd55d-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd55d-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -37,7 +39,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(7)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(7)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(7)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -73,7 +76,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(8)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(8)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(8)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -108,7 +112,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(14)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(14)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -221,7 +226,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(9)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(9)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(9)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -261,7 +267,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(6)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(6)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(6)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -297,7 +304,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(11)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(11)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -351,7 +359,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(10)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(10)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -394,7 +403,8 @@ if (selectedNodes.Count &amp;gt; 0)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(1)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(1)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(1)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -436,7 +446,8 @@ if (selectedNodes.Count &amp;gt; 0)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(12)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(12)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -489,7 +500,8 @@ if (selectedNodes.Count &amp;gt; 0)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(13)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(13)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -532,7 +544,8 @@ thisXDocument.View.&lt;span class="label"&gt;SelectText&lt;/span&gt;(field1, Typ
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(2)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -570,7 +583,8 @@ thisXDocument.View.&lt;span class="label"&gt;SelectText&lt;/span&gt;(field1, Typ
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(4)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(4)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

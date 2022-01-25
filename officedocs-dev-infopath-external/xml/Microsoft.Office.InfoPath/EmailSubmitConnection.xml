@@ -1,4 +1,4 @@
-﻿<Type Name="EmailSubmitConnection" FullName="Microsoft.Office.InfoPath.EmailSubmitConnection">
+<Type Name="EmailSubmitConnection" FullName="Microsoft.Office.InfoPath.EmailSubmitConnection">
   <TypeSignature Language="C#" Value="public abstract class EmailSubmitConnection : Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit EmailSubmitConnection extends Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.EmailSubmitConnection" />
@@ -173,8 +173,6 @@
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is<b></b>not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>The following example uses the <b>Execute(XPathNavigator)</b> method to submit the form to the data connection named "Email Submit" using the data from the data source named "QueryTypedDataSet" instead of the main data source of the form.</para>
           <code>public void FormEvents_Submit(object sender, SubmitEventArgs e)
@@ -198,6 +196,8 @@
    mySubmit.Execute(myNav)
 End Sub</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is<b></b>not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Introduction">

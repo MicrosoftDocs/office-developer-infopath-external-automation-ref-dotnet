@@ -1,4 +1,4 @@
-﻿<Type Name="ObjectWrapper" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.ObjectWrapper">
+<Type Name="ObjectWrapper" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.ObjectWrapper">
   <TypeSignature Language="C#" Value="public class ObjectWrapper : Microsoft.Office.Interop.InfoPath.Helper.WrapperBase" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ObjectWrapper extends Microsoft.Office.Interop.InfoPath.Helper.WrapperBase" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ObjectWrapper" />

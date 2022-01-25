@@ -1,4 +1,4 @@
-﻿<Type Name="ServerInfo" FullName="Microsoft.Office.InfoPath.ServerInfo">
+<Type Name="ServerInfo" FullName="Microsoft.Office.InfoPath.ServerInfo">
   <TypeSignature Language="C#" Value="public abstract class ServerInfo" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ServerInfo extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ServerInfo" />

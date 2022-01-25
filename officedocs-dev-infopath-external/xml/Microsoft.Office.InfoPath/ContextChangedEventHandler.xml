@@ -1,4 +1,4 @@
-﻿<Type Name="ContextChangedEventHandler" FullName="Microsoft.Office.InfoPath.ContextChangedEventHandler">
+<Type Name="ContextChangedEventHandler" FullName="Microsoft.Office.InfoPath.ContextChangedEventHandler">
   <TypeSignature Language="C#" Value="public delegate void ContextChangedEventHandler(object sender, ContextChangedEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ContextChangedEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ContextChangedEventHandler" />

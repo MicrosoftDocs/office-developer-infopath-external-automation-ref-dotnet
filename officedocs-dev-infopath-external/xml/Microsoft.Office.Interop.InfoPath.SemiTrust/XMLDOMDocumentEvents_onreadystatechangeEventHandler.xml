@@ -1,4 +1,4 @@
-﻿<Type Name="XMLDOMDocumentEvents_onreadystatechangeEventHandler" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_onreadystatechangeEventHandler">
+<Type Name="XMLDOMDocumentEvents_onreadystatechangeEventHandler" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_onreadystatechangeEventHandler">
   <TypeSignature Language="C#" Value="public delegate void XMLDOMDocumentEvents_onreadystatechangeEventHandler();" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XMLDOMDocumentEvents_onreadystatechangeEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XMLDOMDocumentEvents_onreadystatechangeEventHandler" />
@@ -14,7 +14,8 @@
   </Base>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ComVisible(false)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ComVisible(false)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ComVisible(false)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Parameters />

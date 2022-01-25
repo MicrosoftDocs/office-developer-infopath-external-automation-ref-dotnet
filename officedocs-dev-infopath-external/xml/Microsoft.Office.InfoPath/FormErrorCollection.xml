@@ -1,4 +1,4 @@
-﻿<Type Name="FormErrorCollection" FullName="Microsoft.Office.InfoPath.FormErrorCollection">
+<Type Name="FormErrorCollection" FullName="Microsoft.Office.InfoPath.FormErrorCollection">
   <TypeSignature Language="C#" Value="public abstract class FormErrorCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit FormErrorCollection extends System.Object implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.FormErrorCollection" />
@@ -105,8 +105,6 @@ Me.Errors.Add(txtbox, "Field1Error", "Short error message.",
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
         <example>
           <para>In the following example, first an <b>XPathNavigator</b> object is positioned at the field with which to associate an error. Then, the <b>XPathNavigator</b>, name, and message are passed to the <see cref="Overload:Microsoft.Office.InfoPath.FormErrorCollection.Add" /> method of the <b>FormErrorCollection</b> class to add the error to the form's error collection.</para>
           <code>XPathNavigator root, txtbox;
@@ -128,6 +126,8 @@ txtbox = root.SelectSingleNode("//my:field1", Me.NamespaceManager)
 ' Get form's collection of errors and add error.
 Me.Errors.Add(txtbox, "Field1Error", "Short error message.")</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -166,8 +166,6 @@ Me.Errors.Add(txtbox, "Field1Error", "Short error message.")</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
         <example>
           <para>In the following example, first an <b>XPathNavigator</b> object is positioned at the field with which to associate an error. Then, the <b>XPathNavigator</b>, name, message, and detailed message are passed to the <see cref="Overload:Microsoft.Office.InfoPath.FormErrorCollection.Add" /> method of the <b>FormErrorCollection</b> class to add the error to the form's error collection.</para>
           <code>XPathNavigator root, txtbox;
@@ -191,6 +189,8 @@ txtbox = root.SelectSingleNode("//my:field1", Me.NamespaceManager)
 Me.Errors.Add(txtbox, "Field1Error", "Short error message.", 
    "Detailed error description.", 102057, ErrorMode.Modeless)</code>
         </example>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -231,8 +231,6 @@ Me.Errors.Add(txtbox, "Field1Error", "Short error message.",
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
         <example>
           <para>In the following example, first an <b>XPathNavigator</b> object is positioned at the field with which to associate an error. Then, the <b>XPathNavigator</b>, name, message, detailed message, error code, and error number are passed to the <see cref="Overload:Microsoft.Office.InfoPath.FormErrorCollection.Add" /> method of the <b>FormErrorCollection</b> class to add the error to the form's error collection.</para>
           <code>XPathNavigator root, txtbox;
@@ -256,12 +254,15 @@ txtbox = root.SelectSingleNode("//my:field1", Me.NamespaceManager)
 Me.Errors.Add(txtbox, "Field1Error", "Short error message.", 
    "Detailed error description.", 102057)</code>
         </example>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
       </Docs>
     </Member>
     <Member MemberName="Add">
       <MemberSignature Language="C#" Value="public abstract Microsoft.Office.InfoPath.FormError Add (System.Xml.XPath.XPathNavigator context, string name, string message, string messageDetails, int errorCode, Microsoft.Office.InfoPath.ErrorMode errorMode);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Office.InfoPath.FormError Add(class System.Xml.XPath.XPathNavigator context, string name, string message, string messageDetails, int32 errorCode, valuetype Microsoft.Office.InfoPath.ErrorMode errorMode) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.Add(System.Xml.XPath.XPathNavigator,System.String,System.String,System.String,System.Int32,Microsoft.Office.InfoPath.ErrorMode)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Add (context As XPathNavigator, name As String, message As String, messageDetails As String, errorCode As Integer, errorMode As ErrorMode) As FormError" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract Microsoft::Office::InfoPath::FormError ^ Add(System::Xml::XPath::XPathNavigator ^ context, System::String ^ name, System::String ^ message, System::String ^ messageDetails, int errorCode, Microsoft::Office::InfoPath::ErrorMode errorMode);" />
       <MemberSignature Language="F#" Value="abstract member Add : System.Xml.XPath.XPathNavigator * string * string * string * int * Microsoft.Office.InfoPath.ErrorMode -&gt; Microsoft.Office.InfoPath.FormError" Usage="formErrorCollection.Add (context, name, message, messageDetails, errorCode, errorMode)" />
       <MemberType>Method</MemberType>
@@ -297,8 +298,6 @@ Me.Errors.Add(txtbox, "Field1Error", "Short error message.",
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentException">The parameters passed to this method are<b></b>not valid. For example, they are of the wrong type or format.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
         <example>
           <para>In the following example, first an <b>XPathNavigator</b> object is positioned at the field with which to associate an error. Then, the <b>XPathNavigator</b>, name, message, detailed message, error code, error number, and error display mode are passed to the <see cref="Overload:Microsoft.Office.InfoPath.FormErrorCollection.Add" /> method of the <b>FormErrorCollection</b> class to add the error to the form's error collection.</para>
           <code>XPathNavigator root, txtbox;
@@ -322,6 +321,8 @@ txtbox = root.SelectSingleNode("//my:field1", Me.NamespaceManager)
 Me.Errors.Add(txtbox, "Field1Error", "Short error message.", 
    "Detailed error description.", 102057, ErrorMode.Modeless)</code>
         </example>
+        <exception cref="T:System.ArgumentException">The parameters passed to this method are<b></b>not valid. For example, they are of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameters passed to this method are a null reference (Nothing in Visual Basic).</exception>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -353,6 +354,7 @@ Me.Errors.Add(txtbox, "Field1Error", "Short error message.",
       <MemberSignature Language="C#" Value="public abstract void Delete (Microsoft.Office.InfoPath.FormError formError);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete(class Microsoft.Office.InfoPath.FormError formError) cil managed" />
       <MemberSignature Language="DocId" Value="M:Microsoft.Office.InfoPath.FormErrorCollection.Delete(Microsoft.Office.InfoPath.FormError)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Delete (formError As FormError)" />
       <MemberSignature Language="C++ CLI" Value="public:&#xA; abstract void Delete(Microsoft::Office::InfoPath::FormError ^ formError);" />
       <MemberSignature Language="F#" Value="abstract member Delete : Microsoft.Office.InfoPath.FormError -&gt; unit" Usage="formErrorCollection.Delete formError" />
       <MemberType>Method</MemberType>
@@ -375,8 +377,6 @@ Me.Errors.Add(txtbox, "Field1Error", "Short error message.",
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
         <example>
           <para>In the following example, the <see cref="M:Microsoft.Office.InfoPath.FormErrorCollection.GetErrors(Microsoft.Office.InfoPath.FormErrorType)" /> method of the <b>FormErrorCollection</b> class is used to get an array of all user-defined errors in the form's error collection. Then, the<b> Delete(</b><paramref name="formError" /><b>)</b> method is used to delete the first <b>FormError</b> object in the array from the form's error collection.</para>
           <code>FormErrorCollection myErrors = this.Errors;
@@ -396,6 +396,8 @@ myUserErrors = myErrors.GetErrors(FormErrorType.UserDefined)
 ' Delete the first user defined error.
 myErrors.Delete(myUserErrors(0))</code>
         </example>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -524,8 +526,6 @@ myErrors.Delete(myUserErrors(0))</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>GetErrors</b> method of the <b>FormErrorCollection</b> class is used to get all errors of type <b>FormErrorType.UserDefined</b> from the form's errors collection. Then the <see cref="P:Microsoft.Office.InfoPath.FormError.Name" /> property of the <see cref="T:Microsoft.Office.InfoPath.FormError" /> class is used to display their names.</para>
           <code>FormError[] myErrors;
@@ -542,6 +542,8 @@ For Each FormError err In myErrors
    MessageBox.Show(err.Name);
 Next</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetErrors">
@@ -572,8 +574,6 @@ Next</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, the <b>GetErrors</b> method of the <b>FormErrorCollection</b> class is used to get all errors named <b>DateFormatError</b> from the form's errors collection. The <see cref="P:Microsoft.Office.InfoPath.FormError.Message" /> property of the <see cref="T:Microsoft.Office.InfoPath.FormError" /> class is then used to display their error messages.</para>
           <code>FormError[] myErrors;
@@ -590,6 +590,8 @@ For Each FormError err In myErrors
    MessageBox.Show(err.Message);
 Next</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Item">

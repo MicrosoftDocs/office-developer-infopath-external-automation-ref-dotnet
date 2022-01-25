@@ -16,10 +16,12 @@
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd6bb-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd6bb-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd6bb-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -44,7 +46,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(4)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(4)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -59,13 +62,6 @@
             <b>Important</b>: This member can be accessed without restrictions.</para>
           <para />
         </remarks>
-        <example>
-          <para>In the following example, the <b>ActiveWindow</b> property is used to gain access to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window2.MailEnvelope" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> object that returns a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.MailEnvelopeObject" /> object.</para>
-          <code>MailEnvelope email = thisApplication.&lt;span class="label"&gt;ActiveWindow&lt;/span&gt;.MailEnvelope;
-email.Subject = getNode(@"/mtg:meetingAgenda/mtg:subject").text;
-email.To = aliases + "; ";
-email.Visible = true;</code>
-        </example>
         <example>
           <para>In the following example, the <b>ActiveWindow</b> property is used to gain access to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window2.MailEnvelope" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> object that returns a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.MailEnvelopeObject" /> object.</para>
           <code>MailEnvelope email = thisApplication.&lt;span class="label"&gt;ActiveWindow&lt;/span&gt;.MailEnvelope;
@@ -89,7 +85,8 @@ email.Visible = true;</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(14)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(14)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -107,28 +104,6 @@ email.Visible = true;</code>
             <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
           <para />
         </remarks>
-        <example>
-          <code>private string[] _forms = 
-{ 
-@"\\MyServer\MyForms\MyForm.xsn", 
-@"\\MyServer\MyForms\manifest.xsf" 
-};
-
-private void someFunction()
-{
-…
-CacheFormTemplate(_forms);
-…
-}
-
-private void CacheFormTemplate(string[] forms)
-{ 
- foreach (string form in forms)
- {
-  thisApplication.&lt;span class="label"&gt;CacheSolution&lt;/span&gt;(form);
- }
-}</code>
-        </example>
         <example>
           <code>private string[] _forms = 
 { 
@@ -170,7 +145,8 @@ private void CacheFormTemplate(string[] forms)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(7)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(7)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(7)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -340,7 +316,8 @@ private void CacheFormTemplate(string[] forms)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(16)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(16)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(16)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -379,7 +356,8 @@ private void CacheFormTemplate(string[] forms)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(6)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(6)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(6)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -394,16 +372,6 @@ private void CacheFormTemplate(string[] forms)
             <b>Important</b>: This member can be accessed without restrictions.</para>
           <para />
         </remarks>
-        <example>
-          <para>The following example uses the <b>LanguageID</b> property of the <b>LanguageSettings</b> object to return the LCID value (a four-digit number) for the language that is currently being used for the Office help system:</para>
-          <code>LanguageSettings languageSettings = (LanguageSettings) thisApplication.LanguageSettings;   
-int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
-</code>
-          <para>
-            <b>Note</b>: The above example requires the <b>Microsoft.Office.Core</b> namespace and a reference to the Microsoft Office 11.0 Object Library.</para>
-          <para>
-            <b>Important</b>: The above example requires the form have a Full Trust Security Level.</para>
-        </example>
         <example>
           <para>The following example uses the <b>LanguageID</b> property of the <b>LanguageSettings</b> object to return the LCID value (a four-digit number) for the language that is currently being used for the Office help system:</para>
           <code>LanguageSettings languageSettings = (LanguageSettings) thisApplication.LanguageSettings;   
@@ -430,7 +398,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(15)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(15)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(15)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -465,7 +434,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(0)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(0)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -503,7 +473,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(10)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(10)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -543,7 +514,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(9)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(9)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(9)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -583,7 +555,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(8)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(8)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(8)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -621,7 +594,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(12)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(12)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -651,16 +625,6 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
           <para>
             <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
         </example>
-        <example>
-          <para>In the following C# example, the <b>RegisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to install a form template:</para>
-          <code>public void InstallForm()
-{
- Microsoft.Office.Interop.InfoPath.Application infoPath = new Microsoft.Office.Interop.InfoPath.ApplicationClass();
- infoPath.&lt;span class="label"&gt;RegisterSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn", "overwrite");
-}</code>
-          <para>
-            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
-        </example>
       </Docs>
     </Member>
     <Member MemberName="UnregisterSolution">
@@ -677,7 +641,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(13)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(13)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -705,16 +670,6 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
           <para>
             <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
         </example>
-        <example>
-          <para>In the following example, the <b>UnregisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to uninstall a form template:</para>
-          <code>public void UninstallForm()
-{
- Microsoft.Office.Interop.InfoPath.Application infoPath = new Microsoft.Office.Interop.InfoPath.ApplicationClass();
- infoPath.&lt;span class="label"&gt;UnregisterSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn");
-}</code>
-          <para>
-            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
-        </example>
       </Docs>
     </Member>
     <Member MemberName="UsableHeight">
@@ -731,7 +686,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(18)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(18)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(18)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -761,7 +717,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(17)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(17)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(17)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -791,7 +748,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(11)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(11)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -824,7 +782,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(5)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(5)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(5)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -863,7 +822,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(2)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -903,7 +863,8 @@ int lcid = languageSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDHelp);
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(3)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(3)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(3)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

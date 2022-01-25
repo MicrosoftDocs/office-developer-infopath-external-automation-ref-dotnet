@@ -1,4 +1,4 @@
-﻿<Type Name="XmlChangingEventArgs" FullName="Microsoft.Office.InfoPath.XmlChangingEventArgs">
+<Type Name="XmlChangingEventArgs" FullName="Microsoft.Office.InfoPath.XmlChangingEventArgs">
   <TypeSignature Language="C#" Value="public abstract class XmlChangingEventArgs : Microsoft.Office.InfoPath.XmlEventArgs" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlChangingEventArgs extends Microsoft.Office.InfoPath.XmlEventArgs" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlChangingEventArgs" />

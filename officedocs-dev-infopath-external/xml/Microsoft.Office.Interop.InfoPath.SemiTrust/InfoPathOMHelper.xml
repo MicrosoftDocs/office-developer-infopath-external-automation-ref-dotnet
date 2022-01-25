@@ -1,4 +1,4 @@
-﻿<Type Name="InfoPathOMHelper" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper">
+<Type Name="InfoPathOMHelper" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper">
   <TypeSignature Language="C#" Value="public class InfoPathOMHelper" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit InfoPathOMHelper extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.InfoPathOMHelper" />

@@ -1,4 +1,4 @@
-﻿<Type Name="XmlForm" FullName="Microsoft.Office.InfoPath.XmlForm">
+<Type Name="XmlForm" FullName="Microsoft.Office.InfoPath.XmlForm">
   <TypeSignature Language="C#" Value="public abstract class XmlForm" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlForm extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlForm" />
@@ -754,9 +754,6 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>MergeForm</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following code example, a <b>System.Xml.XmlDocument</b> object is used to load a form from the specified URL, and then a <b>System.Xml.XPath.XPathNavigator</b> object is positioned at the root of the form to merge. Finally, the <b>XPathNavigator</b> is passed to the <b>MergeForm(System.Xml.XPath.XPathNavigator)</b> method to merge the form into the current form. </para>
           <code>string pathToFile = @"C:\FormToMerge\Form1.xml";
@@ -782,6 +779,9 @@ Dim nav As XPathNavigator = FormXML.CreateNavigator()
 ' Merge the root node (the entire document) into the current form.
 Me.MergeForm(nav)</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>MergeForm</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="NamespaceManager">
@@ -935,8 +935,6 @@ End If</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>The following code example shows what the event handler in the code-behind of an ASPX page would need look like in order to receive the string value provided by the <b>NotifyHost</b> method. In this example, the <b>NotifyHost</b> method would be providing "ActionA" as the <paramref name="notification" /> parameter, and the event handler would perform a conditional action when the value is received.</para>
           <code>private void XmlFormView1_NotifyHost(Object sender, 
@@ -961,6 +959,8 @@ End If</code>
    End If
 End Sub</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="Permission">
@@ -1209,8 +1209,6 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>Save</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>In the following code example, the <see cref="P:Microsoft.Office.InfoPath.XmlForm.New" /> property is used to determine if the form has been saved previously, and if so, the <b>Save</b> method is used to save the form to the URL that it is currently associated with.</para>
           <code>if(this.New)
@@ -1227,6 +1225,8 @@ Else
    Me.Save()
 End If</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>Save</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="SaveAs">
@@ -1257,10 +1257,6 @@ End If</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The value passed for <paramref name="fileUrl" /> is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The value passed for <paramref name="fileUrl" /> is "" or is invalid.</exception>
-        <exception cref="T:System.InvalidOperationException">The <b>Save</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>In the following code example, the <see cref="P:Microsoft.Office.InfoPath.XmlForm.New" /> property is used to determine if the form has been saved previously, and if not, the <b>SaveAs</b> method is used to save the form to the specified URL.</para>
           <code>if(this.New)
@@ -1277,6 +1273,10 @@ Else
    Me.Save()
 End If</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The value passed for <paramref name="fileUrl" /> is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The value passed for <paramref name="fileUrl" /> is "" or is invalid.</exception>
+        <exception cref="T:System.InvalidOperationException">The <b>Save</b> method was called from the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> event.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="ServerInfo">

@@ -1,4 +1,4 @@
-﻿<Type Name="Signature" FullName="Microsoft.Office.InfoPath.Signature">
+<Type Name="Signature" FullName="Microsoft.Office.InfoPath.Signature">
   <TypeSignature Language="C#" Value="public abstract class Signature" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Signature extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Signature" />
@@ -182,8 +182,6 @@ MessageBox.Show("Digital signature XML block:" &amp;amp; NewLine &amp;amp; _
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">Form code attempted to write to the underlying XML document after signing was initiated.</exception>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>The following example shows the code skeleton that is added to the form template when you add an event handler for the <b>Sign</b> event. First, it uses the <see cref="M:Microsoft.Office.InfoPath.SignatureCollection.CreateSignature" /> method of the <see cref="T:Microsoft.Office.InfoPath.SignatureCollection" /> class to create a new <b>Signature</b> object. It then calls the <b>Sign</b> method of the <see cref="T:Microsoft.Office.InfoPath.Signature" /> class to add the new <b>Signature</b> object to the <b>SignatureCollection</b> object of the form without displaying the Digital Signatures dialog box.</para>
           <code>public void FormEvents_Sign(object sender, SignEventArgs e)
@@ -218,6 +216,8 @@ MessageBox.Show("Digital signature XML block:" &amp;amp; NewLine &amp;amp; _
    e.SignatureWizard = False
 End Sub</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">Form code attempted to write to the underlying XML document after signing was initiated.</exception>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="SignatureBlockXmlNode">

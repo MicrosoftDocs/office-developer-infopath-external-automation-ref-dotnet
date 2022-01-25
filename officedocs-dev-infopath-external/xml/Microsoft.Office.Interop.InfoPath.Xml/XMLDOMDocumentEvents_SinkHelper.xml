@@ -1,4 +1,4 @@
-﻿<Type Name="XMLDOMDocumentEvents_SinkHelper" FullName="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper">
+<Type Name="XMLDOMDocumentEvents_SinkHelper" FullName="Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper">
   <TypeSignature Language="C#" Value="public sealed class XMLDOMDocumentEvents_SinkHelper : Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed XMLDOMDocumentEvents_SinkHelper extends System.Object implements class Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.XMLDOMDocumentEvents_SinkHelper" />
@@ -19,10 +19,12 @@
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.ClassInterface(System.Runtime.InteropServices.ClassInterfaceType.None)&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeLibType(System.Runtime.InteropServices.TypeLibTypeFlags.FHidden)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.TypeLibType(System.Runtime.InteropServices.TypeLibTypeFlags.FHidden)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.TypeLibType(System.Runtime.InteropServices.TypeLibTypeFlags.FHidden)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

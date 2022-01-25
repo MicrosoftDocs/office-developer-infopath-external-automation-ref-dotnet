@@ -1,4 +1,4 @@
-﻿<Type Name="IXMLDOMImplementation" FullName="Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMImplementation">
+<Type Name="IXMLDOMImplementation" FullName="Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMImplementation">
   <TypeSignature Language="C#" Value="public interface IXMLDOMImplementation" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IXMLDOMImplementation" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.Xml.IXMLDOMImplementation" />
@@ -12,10 +12,12 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("2933BF8F-7B36-11D2-B20E-00C04F983E60")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("2933BF8F-7B36-11D2-B20E-00C04F983E60")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("2933BF8F-7B36-11D2-B20E-00C04F983E60")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.TypeLibType(4288)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.TypeLibType(4288)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.TypeLibType(4288)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -37,7 +39,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(145)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(145)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(145)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

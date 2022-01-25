@@ -1,4 +1,4 @@
-﻿<Type Name="DocActionEvent" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEvent">
+<Type Name="DocActionEvent" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEvent">
   <TypeSignature Language="C#" Value="public interface DocActionEvent : Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DocActionEvent implements class Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent, class Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DocActionEvent" />
@@ -11,15 +11,20 @@
   </AssemblyInfo>
   <Interfaces>
     <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.DocEvent</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.DocReturnEvent</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd63a-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd63a-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd63a-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -44,7 +49,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(101)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(101)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(101)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -84,7 +90,8 @@ public void ShowViewNames_OnClick(DocActionEvent e)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(200)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(200)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(200)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -132,7 +139,8 @@ public void DocActionEventSource_OnClick(DocActionEvent e)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(100)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(100)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(100)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

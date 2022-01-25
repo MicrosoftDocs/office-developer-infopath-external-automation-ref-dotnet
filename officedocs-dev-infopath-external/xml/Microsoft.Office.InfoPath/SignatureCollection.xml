@@ -1,4 +1,4 @@
-﻿<Type Name="SignatureCollection" FullName="Microsoft.Office.InfoPath.SignatureCollection">
+<Type Name="SignatureCollection" FullName="Microsoft.Office.InfoPath.SignatureCollection">
   <TypeSignature Language="C#" Value="public abstract class SignatureCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SignatureCollection extends System.Object implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignatureCollection" />
@@ -105,7 +105,6 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
         <example>
           <para>The following example shows the code skeleton that is added to the form template when you add an event handler for the <b>Sign</b> event. It uses the <b>CreateSignature</b> method to create a new <b>Signature</b> object. When the <b>Sign</b> method of the <b>Signature</b> class is called, the new <b>Signature</b> object is added to the <b>SignatureCollection</b> object of the form.</para>
           <code>public void FormEvents_Sign(object sender, SignEventArgs e)
@@ -140,6 +139,7 @@
    e.SignatureWizard = False
 End Sub</code>
         </example>
+        <exception cref="T:System.Security.SecurityException">The form template is not configured for Full Trust using the Security and Trust category of the Form Options dialog box.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -198,7 +198,6 @@ End Sub</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.IndexOutOfRangeException">The index value is out of range.</exception>
         <example>
           <para>The following example returns the first <b>Signature</b> object in the <b>SignatureCollection</b> object for the first set of signable data in the form, or, if only the entire form can be signed, will return the first <b>Signature</b> object for the entire form.</para>
           <code>Signature firstSignature = 
@@ -206,6 +205,7 @@ End Sub</code>
           <code>Dim firstSignature As Signature  = 
    Me.SignedDataBlocks(0).Signatures(0)</code>
         </example>
+        <exception cref="T:System.IndexOutOfRangeException">The index value is out of range.</exception>
       </Docs>
     </Member>
   </Members>

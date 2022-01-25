@@ -1,8 +1,0 @@
-{
-  "infopath-external": [
-    "microsoft.office.infopath",
-    "Microsoft.Office.InfoPath.Permission",
-    "Microsoft.Office.Interop.InfoPath.SemiTrust",
-    "Microsoft.Office.Interop.InfoPath.Xml-exclude"
-  ]
-}

@@ -1,4 +1,4 @@
-﻿<Type Name="Certificate" FullName="Microsoft.Office.InfoPath.Certificate">
+<Type Name="Certificate" FullName="Microsoft.Office.InfoPath.Certificate">
   <TypeSignature Language="C#" Value="public abstract class Certificate" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Certificate extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Certificate" />

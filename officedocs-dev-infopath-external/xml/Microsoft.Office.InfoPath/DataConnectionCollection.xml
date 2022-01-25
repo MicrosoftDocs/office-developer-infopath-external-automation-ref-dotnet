@@ -1,4 +1,4 @@
-﻿<Type Name="DataConnectionCollection" FullName="Microsoft.Office.InfoPath.DataConnectionCollection">
+<Type Name="DataConnectionCollection" FullName="Microsoft.Office.InfoPath.DataConnectionCollection">
   <TypeSignature Language="C#" Value="public abstract class DataConnectionCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DataConnectionCollection extends System.Object implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.DataConnectionCollection" />

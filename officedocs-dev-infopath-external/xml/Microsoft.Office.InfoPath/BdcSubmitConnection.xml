@@ -1,4 +1,4 @@
-﻿<Type Name="BdcSubmitConnection" FullName="Microsoft.Office.InfoPath.BdcSubmitConnection">
+<Type Name="BdcSubmitConnection" FullName="Microsoft.Office.InfoPath.BdcSubmitConnection">
   <TypeSignature Language="C#" Value="public abstract class BdcSubmitConnection : Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BdcSubmitConnection extends Microsoft.Office.InfoPath.DataConnection" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.BdcSubmitConnection" />

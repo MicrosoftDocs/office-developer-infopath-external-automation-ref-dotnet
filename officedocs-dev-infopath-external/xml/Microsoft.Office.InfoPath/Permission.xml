@@ -1,4 +1,4 @@
-﻿<Type Name="Permission" FullName="Microsoft.Office.InfoPath.Permission">
+<Type Name="Permission" FullName="Microsoft.Office.InfoPath.Permission">
   <TypeSignature Language="C#" Value="public abstract class Permission" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Permission extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.Permission" />
@@ -77,8 +77,6 @@
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>In the following example, clicking the Button control applies a policy template file that allows the user to edit, but not copy the current form.</para>
           <code>public void CTRL1_Clicked(object sender, ClickedEventArgs e)
@@ -92,6 +90,8 @@
 
 End Sub</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="DocumentAuthor">

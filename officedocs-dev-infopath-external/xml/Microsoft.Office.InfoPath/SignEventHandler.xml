@@ -1,4 +1,4 @@
-﻿<Type Name="SignEventHandler" FullName="Microsoft.Office.InfoPath.SignEventHandler">
+<Type Name="SignEventHandler" FullName="Microsoft.Office.InfoPath.SignEventHandler">
   <TypeSignature Language="C#" Value="public delegate void SignEventHandler(object sender, SignEventArgs e);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SignEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignEventHandler" />

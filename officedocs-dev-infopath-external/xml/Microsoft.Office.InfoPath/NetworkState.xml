@@ -1,4 +1,4 @@
-﻿<Type Name="NetworkState" FullName="Microsoft.Office.InfoPath.NetworkState">
+<Type Name="NetworkState" FullName="Microsoft.Office.InfoPath.NetworkState">
   <TypeSignature Language="C#" Value="public abstract class NetworkState" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit NetworkState extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.NetworkState" />

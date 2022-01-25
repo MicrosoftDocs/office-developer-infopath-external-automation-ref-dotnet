@@ -1,4 +1,4 @@
-﻿<Type Name="IInfoPathHostItemProvider" FullName="Microsoft.Office.InfoPath.IInfoPathHostItemProvider">
+<Type Name="IInfoPathHostItemProvider" FullName="Microsoft.Office.InfoPath.IInfoPathHostItemProvider">
   <TypeSignature Language="C#" Value="public interface IInfoPathHostItemProvider" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IInfoPathHostItemProvider" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.IInfoPathHostItemProvider" />

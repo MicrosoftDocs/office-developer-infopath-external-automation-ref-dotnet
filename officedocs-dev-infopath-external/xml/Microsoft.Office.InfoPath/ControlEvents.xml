@@ -1,4 +1,4 @@
-﻿<Type Name="ControlEvents" FullName="Microsoft.Office.InfoPath.ControlEvents">
+<Type Name="ControlEvents" FullName="Microsoft.Office.InfoPath.ControlEvents">
   <TypeSignature Language="C#" Value="public abstract class ControlEvents" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ControlEvents extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ControlEvents" />

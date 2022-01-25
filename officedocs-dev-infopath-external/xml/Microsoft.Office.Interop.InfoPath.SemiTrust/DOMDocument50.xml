@@ -1,4 +1,4 @@
-﻿<Type Name="DOMDocument50" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.DOMDocument50">
+<Type Name="DOMDocument50" FullName="Microsoft.Office.Interop.InfoPath.SemiTrust.DOMDocument50">
   <TypeSignature Language="C#" Value="public interface DOMDocument50 : Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument3" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DOMDocument50 implements class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument2, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument3, class Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.InfoPath.SemiTrust.DOMDocument50" />
@@ -11,15 +11,26 @@
   </AssemblyInfo>
   <Interfaces>
     <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument2</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMDocument3</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust.IXMLDOMNode</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.CoClass(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust.DOMDocument50Wrapper))</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.CoClass(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust.DOMDocument50Wrapper))]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.CoClass(typeof(Microsoft.Office.Interop.InfoPath.SemiTrust.DOMDocument50Wrapper))&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("2933BF96-7B36-11d2-B20E-00C04F983E60")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("2933BF96-7B36-11d2-B20E-00C04F983E60")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("2933BF96-7B36-11d2-B20E-00C04F983E60")&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

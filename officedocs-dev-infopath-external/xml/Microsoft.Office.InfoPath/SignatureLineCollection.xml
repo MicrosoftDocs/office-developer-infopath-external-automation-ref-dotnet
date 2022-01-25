@@ -1,4 +1,4 @@
-﻿<Type Name="SignatureLineCollection" FullName="Microsoft.Office.InfoPath.SignatureLineCollection">
+<Type Name="SignatureLineCollection" FullName="Microsoft.Office.InfoPath.SignatureLineCollection">
   <TypeSignature Language="C#" Value="public abstract class SignatureLineCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SignatureLineCollection extends System.Object implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.SignatureLineCollection" />
@@ -169,8 +169,6 @@ End While</code>
           <para>This type or member can be accessed only from code running in forms opened in Microsoft InfoPath Filler.</para>
           <para />
         </remarks>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>The following code example iterates over the entire collection of <see cref="T:Microsoft.Office.InfoPath.SignatureLine" /> objects and displays the value of the <see cref="P:Microsoft.Office.InfoPath.Signature.Comment" /> property associated with each signature.</para>
           <code>SignatureLineCollection mySignatures = 
@@ -186,6 +184,8 @@ For Each myLine As SignatureLine In mySignatures
    MessageBox.Show(myLine.Signature.Comment.ToString())
 Next</code>
         </example>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
   </Members>

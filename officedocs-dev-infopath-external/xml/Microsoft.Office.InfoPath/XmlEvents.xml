@@ -1,4 +1,4 @@
-﻿<Type Name="XmlEvents" FullName="Microsoft.Office.InfoPath.XmlEvents">
+<Type Name="XmlEvents" FullName="Microsoft.Office.InfoPath.XmlEvents">
   <TypeSignature Language="C#" Value="public abstract class XmlEvents" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit XmlEvents extends System.Object" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.XmlEvents" />

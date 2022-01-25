@@ -1,4 +1,4 @@
-﻿<Type Name="ViewInfoCollection" FullName="Microsoft.Office.InfoPath.ViewInfoCollection">
+<Type Name="ViewInfoCollection" FullName="Microsoft.Office.InfoPath.ViewInfoCollection">
   <TypeSignature Language="C#" Value="public abstract class ViewInfoCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ViewInfoCollection extends System.Object implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.ViewInfoCollection" />
@@ -275,9 +275,6 @@ Next</code>
           <para>This type or member can be accessed from code running in forms opened in Microsoft InfoPath Filler or in a Web browser.</para>
           <para />
         </remarks>
-        <exception cref="T:System.InvalidOperationException">The <b>SwitchView</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> or <see cref="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" /> events.</exception>
-        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
-        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
         <example>
           <para>The following example switches the current view to the initial view in the <see cref="T:Microsoft.Office.InfoPath.ViewInfoCollection" /> collection using the <see cref="P:Microsoft.Office.InfoPath.ViewInfoCollection.Initial" /> property to get the <b>ViewInfo</b> object that represents the initial view in the collection.</para>
           <code>ViewInfo firstView = ViewInfos.Initial;
@@ -285,6 +282,9 @@ this.ViewInfos.SwitchView(firstView);</code>
           <code>Dim firstView As ViewInfo  = ViewInfos.Initial
 Me.ViewInfos.SwitchView(firstView)</code>
         </example>
+        <exception cref="T:System.InvalidOperationException">The <b>SwitchView</b> method was called from an event handler for the <see cref="E:Microsoft.Office.InfoPath.FormEvents.Loading" /> or <see cref="E:Microsoft.Office.InfoPath.FormEvents.ViewSwitched" /> events.</exception>
+        <exception cref="T:System.ArgumentNullException">The parameter passed to this method is a null reference (Nothing in Visual Basic).</exception>
+        <exception cref="T:System.ArgumentException">The parameter passed to this method is not valid. For example, it is of the wrong type or format.</exception>
       </Docs>
     </Member>
     <Member MemberName="SwitchView">

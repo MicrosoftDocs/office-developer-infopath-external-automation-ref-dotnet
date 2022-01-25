@@ -11,15 +11,20 @@
   </AssemblyInfo>
   <Interfaces>
     <Interface>
+      <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust._Application</InterfaceName>
+    </Interface>
+    <Interface>
       <InterfaceName>Microsoft.Office.Interop.InfoPath.SemiTrust._Application2</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.Guid("096cd72e-0786-11d1-95fa-0080c78ee3bb")</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.Guid("096cd72e-0786-11d1-95fa-0080c78ee3bb")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.Guid("096cd72e-0786-11d1-95fa-0080c78ee3bb")&gt;]</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)</AttributeName>
+      <AttributeName Language="C#">[System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.InterfaceType(System.Runtime.InteropServices.ComInterfaceType.InterfaceIsDual)&gt;]</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -44,7 +49,8 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(4)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(4)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(4)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -59,13 +65,6 @@
             <b>Important</b>: This member can be accessed without restrictions.</para>
           <para />
         </remarks>
-        <example>
-          <para>In the following example, the <b>ActiveWindow</b> property is used to gain access to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window2.MailEnvelope" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> object that returns a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.MailEnvelopeObject" /> object.</para>
-          <code>MailEnvelope email = thisApplication.&lt;span class="label"&gt;ActiveWindow&lt;/span&gt;.MailEnvelope;
-email.Subject = getNode(@"/mtg:meetingAgenda/mtg:subject").text;
-email.To = aliases + "; ";
-email.Visible = true;</code>
-        </example>
         <example>
           <para>In the following example, the <b>ActiveWindow</b> property is used to gain access to the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Window2.MailEnvelope" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowObject" /> object that returns a <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.MailEnvelopeObject" /> object.</para>
           <code>MailEnvelope email = thisApplication.&lt;span class="label"&gt;ActiveWindow&lt;/span&gt;.MailEnvelope;
@@ -92,7 +91,8 @@ email.Visible = true;</code>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(14)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(14)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(14)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -131,27 +131,6 @@ private void CacheFormTemplate(string[] forms)
     }
 }</code>
         </example>
-        <example>
-          <para>In the following example, the <b>CacheFormTemplate</b> custom function loops through the location for each the form template specified in the <b>forms</b> array and passes that value to the <b>CacheSolution</b> method for evaluation.</para>
-          <code>private string[] _forms = 
-{
-   @"\\MyServer\MyForms\MyForm.xsn", 
-   @"\\MyServer\MyForms\manifest.xsf" 
-};
-
-private void someFunction()
-{
-   CacheFormTemplate(_forms);
-}
-
-private void CacheFormTemplate(string[] forms)
-{
-   foreach (string form in forms)
-   {
-      thisApplication.&lt;span class="label"&gt;CacheSolution&lt;/span&gt;(form);
-    }
-}</code>
-        </example>
       </Docs>
     </Member>
     <Member MemberName="COMAddIns">
@@ -168,7 +147,8 @@ private void CacheFormTemplate(string[] forms)
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(19)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(19)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(19)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -184,29 +164,6 @@ private void CacheFormTemplate(string[] forms)
           <para>This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
           <para />
         </remarks>
-        <example>
-          <para>The following example accesses the first item in the <b>COMAddIns</b> collection that is returned by the <b>ComAddIns</b> property.</para>
-          <code>object objectReference = 1;
-
-Microsoft.Office.Interop.InfoPath.SemiTrust.Application app = 
-   thisApplication;
-
-Microsoft.Office.Core.COMAddIns myCOMAddIns = 
-   (Microsoft.Office.Core.COMAddIns)((_Application3)app).COMAddIns;
-
-Microsoft.Office.Core.COMAddIn myCOMAddIn = 
-   myCOMAddIns.Item(ref objectReference);</code>
-          <code>Dim objectReference As Object = 1
-
-Dim app As Microsoft.Office.Interop.InfoPath.SemiTrust.Application = _
-   thisApplication
-
-Dim myCOMAddIns As Microsoft.Office.Core.COMAddIns = _
-   DirectCast(app, _Application3).COMAddIns
-
-Dim myCOMAddIn As Microsoft.Office.Core.COMAddIn = _
-   myCOMAddIns.Item(objectReference)</code>
-        </example>
         <example>
           <para>The following example accesses the first item in the <b>COMAddIns</b> collection that is returned by the <b>ComAddIns</b> property.</para>
           <code>object objectReference = 1;
@@ -249,7 +206,8 @@ Dim myCOMAddIn As Microsoft.Office.Core.COMAddIn = _
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(7)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(7)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(7)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -406,13 +364,6 @@ Dim myCOMAddIn As Microsoft.Office.Core.COMAddIn = _
           <code>Dim myDate As String = thisApplication.&lt;span class="label"&gt;FormatString&lt;/span&gt;( _
    "2003-01-08", "date", "dateFormat:Long Date")</code>
         </example>
-        <example>
-          <para>In the following example, the <b>FormatString</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to format the specified date string into a long date format:</para>
-          <code>string myDate = thisApplication.&lt;span class="label"&gt;FormatString&lt;/span&gt;(
-   "2003-01-08", "date", "dateFormat:Long Date");</code>
-          <code>Dim myDate As String = thisApplication.&lt;span class="label"&gt;FormatString&lt;/span&gt;( _
-   "2003-01-08", "date", "dateFormat:Long Date")</code>
-        </example>
       </Docs>
     </Member>
     <Member MemberName="GetSolutionURI">
@@ -429,7 +380,8 @@ Dim myCOMAddIn As Microsoft.Office.Core.COMAddIn = _
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(21)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(21)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(21)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -460,16 +412,6 @@ thisXDocument.UI.Alert(thisApp.GetFormSolutionURI(
 thisXDocument.UI.Alert(thisApplication.GetFormSolutionURI( _
    "37d5ef02fa44a797$"))</code>
         </example>
-        <example>
-          <para>In the following example, a cache ID value is passed to the <b>GetSolutionURI</b> method to display the published location of the form template.</para>
-          <code>_Application3 thisApp = (_Application3)thisApplication;
-thisXDocument.UI.Alert(thisApp.GetFormSolutionURI(
-   "37d5ef02fa44a797$"));</code>
-          <code>Dim thisApp As _Application3 = _
-   DirectCast(thisApplication, _Application3)
-thisXDocument.UI.Alert(thisApplication.GetFormSolutionURI( _
-   "37d5ef02fa44a797$"))</code>
-        </example>
       </Docs>
     </Member>
     <Member MemberName="IsDestinationReachable">
@@ -489,7 +431,8 @@ thisXDocument.UI.Alert(thisApplication.GetFormSolutionURI( _
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(16)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(16)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(16)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -528,7 +471,8 @@ thisXDocument.UI.Alert(thisApplication.GetFormSolutionURI( _
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(6)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(6)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(6)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -546,18 +490,6 @@ thisXDocument.UI.Alert(thisApplication.GetFormSolutionURI( _
             <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
           <para />
         </remarks>
-        <example>
-          <para>The following example uses the <b>LanguageID</b> property of the <b>LanguageSettings</b> object to return the LCID value (a four-digit number) for the language that is currently being used for the Office user interface.</para>
-          <para>This example requires a <b>using</b> or <b>Imports</b> directive for the <b>Microsoft.Office.Core</b> namespace in the declarations section of the form code module.</para>
-          <code>LanguageSettings langSettings = 
-   (LanguageSettings) thisApplication.LanguageSettings;
-int lcid = 
-   langSettings.get_LanguageID(MsoAppLanguageID.msoLanguageIDUI);</code>
-          <code>Dim langSettings As LanguageSettings  = 
-   DirectCast(thisApplication.LanguageSettings, LanguageSettings)
-Dim lcid As Integer  = 
-   langSettings.LanguageID(MsoAppLanguageID.msoLanguageIDUI)</code>
-        </example>
         <example>
           <para>The following example uses the <b>LanguageID</b> property of the <b>LanguageSettings</b> object to return the LCID value (a four-digit number) for the language that is currently being used for the Office user interface.</para>
           <para>This example requires a <b>using</b> or <b>Imports</b> directive for the <b>Microsoft.Office.Core</b> namespace in the declarations section of the form code module.</para>
@@ -589,7 +521,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(15)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(15)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(15)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -622,7 +555,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(0)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(0)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -661,7 +595,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(10)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(10)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(10)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -701,7 +636,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(9)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(9)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(9)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -741,7 +677,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(8)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(8)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(8)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -783,7 +720,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(12)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(12)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(12)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -814,17 +752,6 @@ Dim lcid As Integer  =
           <para>
             <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
         </example>
-        <example>
-          <para>In the following C# example, the <b>RegisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to install a form template:</para>
-          <code>public void InstallForm()
-{
-   Microsoft.Office.Interop.InfoPath.Application infoPath = 
-      new Microsoft.Office.Interop.InfoPath.ApplicationClass();
-   infoPath.&lt;span class="label"&gt;RegisterSolution&lt;/span&gt;(@"C:\MyFormTemplate.xsn", "overwrite");
-}</code>
-          <para>
-            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
-        </example>
       </Docs>
     </Member>
     <Member MemberName="UnregisterSolution">
@@ -844,7 +771,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(13)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(13)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(13)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -862,17 +790,6 @@ Dim lcid As Integer  =
             <b>Important</b>: This member can be accessed only by forms opened from a form template that has been configured to run with full trust using the Security and Trust category of the Form Options dialog box. This member requires full trust for the immediate caller and cannot be used by partially trusted code. For more information, see "Using Libraries from Partially Trusted Code" on MSDN.</para>
           <para />
         </remarks>
-        <example>
-          <para>In the following example, the <b>UnregisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to uninstall a form template:</para>
-          <code>public void UninstallForm()
-{
-   Microsoft.Office.Interop.InfoPath.Application infoPath =
-      new Microsoft.Office.Interop.InfoPath.ApplicationClass();
-   infoPath.&lt;span class="label"&gt;UnregisterSolution&lt;/span&gt;(@"C:\My Forms\MyFormTemplate.xsn");
-}</code>
-          <para>
-            <b>Note</b>: The above example assumes that the <see cref="N:Microsoft.Office.Interop.InfoPath" /> namespace is being used and that the Microsoft InfoPath 3.0 Type Library is referenced.</para>
-        </example>
         <example>
           <para>In the following example, the <b>UnregisterSolution</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to uninstall a form template:</para>
           <code>public void UninstallForm()
@@ -903,7 +820,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(18)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(18)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(18)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -936,7 +854,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(17)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(17)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(17)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -969,7 +888,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(11)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(11)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(11)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1002,7 +922,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(5)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(5)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(5)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1018,13 +939,6 @@ Dim lcid As Integer  =
             <b>Important</b>: This member can be accessed without restrictions.</para>
           <para />
         </remarks>
-        <example>
-          <para>In the following example, the <b>Version</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to display the application's version number in a message box:</para>
-          <code>thisXDocument.UI.Alert("Application version: " + 
-   thisApplication.&lt;span class="label"&gt;Version&lt;/span&gt;);</code>
-          <code>thisXDocument.UI.Alert("Application version: " &amp;amp; _
-   thisApplication.&lt;span class="label"&gt;Version&lt;/span&gt;)</code>
-        </example>
         <example>
           <para>In the following example, the <b>Version</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.Application" /> object is used to display the application's version number in a message box:</para>
           <code>thisXDocument.UI.Alert("Application version: " + 
@@ -1051,7 +965,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(2)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(2)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(2)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1068,13 +983,6 @@ Dim lcid As Integer  =
             <b>Important</b>: This member can be accessed without restrictions.</para>
           <para />
         </remarks>
-        <example>
-          <para>In the following example, the <b>Windows</b> property is used to access the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Windows.Count" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> collection and display the value in a message box:</para>
-          <code>thisXDocument.UI.Alert("Count of Windows: " + 
-   thisApplication.&lt;span class="label"&gt;Windows&lt;/span&gt;.Count);</code>
-          <code>thisXDocument.UI.Alert("Count of Windows: " &amp;amp; _
-   thisApplication.&lt;span class="label"&gt;Windows&lt;/span&gt;.Count)</code>
-        </example>
         <example>
           <para>In the following example, the <b>Windows</b> property is used to access the <see cref="P:Microsoft.Office.Interop.InfoPath.SemiTrust.Windows.Count" /> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.WindowsCollection" /> collection and display the value in a message box:</para>
           <code>thisXDocument.UI.Alert("Count of Windows: " + 
@@ -1101,7 +1009,8 @@ Dim lcid As Integer  =
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>System.Runtime.InteropServices.DispId(3)</AttributeName>
+          <AttributeName Language="C#">[System.Runtime.InteropServices.DispId(3)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.InteropServices.DispId(3)&gt;]</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -1116,13 +1025,6 @@ Dim lcid As Integer  =
             <b>Important</b>: This member can be accessed without restrictions.</para>
           <para />
         </remarks>
-        <example>
-          <para>In the following example, the <b>XDocuments</b> property is used to access the <b>Count</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocumentsCollection" /> collection and display the value in a message box:</para>
-          <code>thisXDocument.UI.Alert("Count of XDocuments: " + 
-   thisApplication.&lt;span class="label"&gt;XDocuments&lt;/span&gt;.Count);</code>
-          <code>thisXDocument.UI.Alert("Count of XDocuments: " &amp;amp; _
-   thisApplication.&lt;span class="label"&gt;XDocuments&lt;/span&gt;.Count)</code>
-        </example>
         <example>
           <para>In the following example, the <b>XDocuments</b> property is used to access the <b>Count</b> property of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocumentsCollection" /> collection and display the value in a message box:</para>
           <code>thisXDocument.UI.Alert("Count of XDocuments: " + 

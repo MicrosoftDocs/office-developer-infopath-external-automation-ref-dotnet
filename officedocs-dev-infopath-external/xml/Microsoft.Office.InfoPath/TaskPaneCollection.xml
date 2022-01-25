@@ -1,4 +1,4 @@
-﻿<Type Name="TaskPaneCollection" FullName="Microsoft.Office.InfoPath.TaskPaneCollection">
+<Type Name="TaskPaneCollection" FullName="Microsoft.Office.InfoPath.TaskPaneCollection">
   <TypeSignature Language="C#" Value="public abstract class TaskPaneCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit TaskPaneCollection extends System.Object implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.InfoPath.TaskPaneCollection" />
