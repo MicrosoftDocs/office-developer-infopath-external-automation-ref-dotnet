@@ -43,7 +43,7 @@ public void ShowWindowTypes_OnClick(DocActionEvent e)
 
 // Loop through the collection and display the type
 // of each Window object that it contains.
-for (int i=0; i &amp;lt; windows.Count; i++)
+for (int i=0; i < windows.Count; i++)
  {
 string windowType = "";
 

@@ -98,7 +98,7 @@
         </remarks>
         <example>
           <para>In the following example, the <b>Count</b> property of the <b>XDocuments</b> collection is used within a for loop to iterate through the collection of <b>XDocument</b> objects and display a message box indicating the Uniform Resource Identifier (URI) location for each currently open form:</para>
-          <code>for (int i=0; i &amp;lt; thisApplication.XDocuments.&lt;span class="label"&gt;Count&lt;/span&gt;; i++)
+          <code>for (int i=0; i < thisApplication.XDocuments.&lt;span class="label"&gt;Count&lt;/span&gt;; i++)
 {
    thisXDocument.UI.Alert("XDocument URI: " + thisApplication.XDocuments[i].URI);
 }</code>
@@ -321,7 +321,7 @@ newDocument = thisApplication.XDocuments. &lt;span class="label"&gt;NewFromSolut
 // Create a new DOM 
 IXMLDOMDocument newDoc=thisXDocument.CreateDOM();
 //Load DOM with some XML
-string myXml="&amp;lt;person&amp;gt;&amp;lt;firstName/&amp;gt;&amp;lt;lastName/&amp;gt;&amp;lt;address/&amp;gt;&amp;lt;city/&amp;gt;&amp;lt;country/&amp;gt;&amp;lt;/person&amp;gt;”;
+string myXml="<person><firstName/><lastName/><address/><city/><country/></person>”;
 newDoc.loadXML(myXml);
 // Call NewSolutionWithData to open a new Form and load the XML
 // the solution to edit the xml was published on SharePoint thisApplication.XDocuments.&lt;span class="label"&gt;NewFromSolutionWithData&lt;/span&gt;(newDoc.documentElement,"http://localhost/Sample/forms/template.xsn",(int)XdDocumentVersionMode.xdFailOnVersionOlder);</code>

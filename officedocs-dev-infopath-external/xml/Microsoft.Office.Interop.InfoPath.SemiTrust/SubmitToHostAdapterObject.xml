@@ -31,7 +31,7 @@
     </remarks>
     <example>
       <para>The following example shows a pattern for writing code that will perform custom actions in a form template's business logic before the form is submitted.</para>
-      <code>[InfoPathEventHandler(EventType = InfoPathEventType.OnSubmitRequest]
+      <code>[InfoPathEventHandler(EventType = InfoPathEventType.OnSubmitRequest)]
 public void FormEvents_OnSubmitRequest(DocReturnEvent e)
 {
    // Get the data adapter defined in the form template from the 
@@ -46,7 +46,7 @@ public void FormEvents_OnSubmitRequest(DocReturnEvent e)
    // Execute the submit operation against the adapter.
    submitAdapter.Submit();</code>
       <para>}</para>
-      <code>&amp;lt;InfoPathEventHandler(EventType := InfoPathEventType.OnSubmitRequest)&amp;gt;
+      <code><InfoPathEventHandler(EventType := InfoPathEventType.OnSubmitRequest)>
 Public Sub FormEvents_OnSubmitRequest(ByVal e As DocReturnEvent)
    ' Get the data connection defined in the form template from the
    ' DataAdapters collection and cast to the SubmitToHostAdapter

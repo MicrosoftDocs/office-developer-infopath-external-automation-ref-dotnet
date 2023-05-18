@@ -134,7 +134,7 @@ End Sub</code>
    ByVal e As LoadingEventArgs)
    ' Be sure that the InputParameter dictionary contains
    ' values before proceeding.
-   If e.InputParameters.Count &amp;lt;&amp;gt; 0 Then
+   If e.InputParameters.Count <> 0 Then
       Dim vDept As String = e.InputParameters("Dept")
       Dim vAcct As String = e.InputParameters("Acct")
 

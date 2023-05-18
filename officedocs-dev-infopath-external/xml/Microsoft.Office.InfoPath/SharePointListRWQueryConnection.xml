@@ -118,7 +118,7 @@
    // Create the XmlDocument to accept the query results.
    XmlDocument outputFile = new XmlDocument();
    outputFile.LoadXml(
-      "&amp;lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&amp;gt;&amp;lt;outputRoot&amp;gt;&amp;lt;/outputRoot&amp;gt;");
+      "<?xml version=\"1.0\" encoding=\"utf-8\" ?><outputRoot></outputRoot>");
 
    // Create XmlNamespaceManager for XmlDocument object. When
    // creating a more complex document, use the AddNamespace method
@@ -155,7 +155,7 @@
    ' Create the XmlDocument to accept the query results.
    Dim outputFile As XmlDocument = new XmlDocument()
    outputFile.LoadXml(
-      "&amp;lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&amp;gt;&amp;lt;outputRoot&amp;gt;&amp;lt;/outputRoot&amp;gt;")
+      "<?xml version=\"1.0\" encoding=\"utf-8\" ?><outputRoot></outputRoot>")
 
    ' Create XmlNamespaceManager for the XmlDocument object. When
    ' creating a more complex document, use the AddNamespace method
@@ -188,7 +188,9 @@
       mainNavigator.SelectSingleNode("/my:myFields/my:QueryOutput", _
       NamespaceManager)
     queryOutputNavigator.SetValue(outputRootNavigator.InnerXml)
-End Sub</code>
+End Sub
+}
+  </code>
         </example>
       </Docs>
     </Member>

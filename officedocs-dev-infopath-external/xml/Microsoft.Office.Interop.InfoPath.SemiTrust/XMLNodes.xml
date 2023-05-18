@@ -55,7 +55,7 @@
           <para>In the following example, the <b>Count</b> property is used within a <b>for</b> loop to iterate through the collection of XML DOM node objects returned by the <see cref="M:Microsoft.Office.Interop.InfoPath.SemiTrust.View.GetSelectedNodes" /> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.ViewObject" /> object and display a message box indicating the name of each XML DOM node that is contained in the <b>XMLNodes</b> collection:</para>
           <code>XMLNodes selectedNodes;
 selectedNodes = thisXDocument.View.GetSelectedNodes();
-for (int i=0; i &amp;lt; selectedNodes.&lt;span class="label"&gt;Count&lt;/span&gt;; i++)
+for (int i=0; i < selectedNodes.&lt;span class="label"&gt;Count&lt;/span&gt;; i++)
 {
  thisXDocument.UI.Alert("XML DOM node name: " + selectedNodes[i].nodeName);
 }</code>

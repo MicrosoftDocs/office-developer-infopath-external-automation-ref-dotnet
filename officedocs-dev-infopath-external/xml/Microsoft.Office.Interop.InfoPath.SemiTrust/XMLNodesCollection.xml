@@ -37,7 +37,7 @@
 
 selectedNodes = thisXDocument.View.GetSelectedNodes();
 
-if (selectedNodes.Count &amp;gt; 0)
+if (selectedNodes.Count > 0)
 {
  thisXDocument.UI.Alert(selectedNodes[0].nodeName + "\n\n" + selectedNodes[0].text);
 }</code>

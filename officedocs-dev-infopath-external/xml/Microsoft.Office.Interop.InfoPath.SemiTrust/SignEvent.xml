@@ -73,8 +73,8 @@ public void OnSign(SignEvent e)
  if ( e.SignedDataBlock.Name == thisXDocument.SignedDataBlocks[0].Name )
  {
   // check the number of signatures in the first signed data block
-  // if there are three signatures, don’t add another signature  and set ReturnStatus to true)
-  // else add the signature (use the Sign() method to show the wizard) and don’t do anything else (ReturnStatus is true)
+  // if there are three signatures, don't add another signature  and set (ReturnStatus to true)
+  // else add the signature (use the Sign() method to show the wizard) and don't do anything else (ReturnStatus is true)
   if ( thisXDocument.SignedDataBlocks[0].Signatures.Count &amp;gt; 3 )
   {
    thisXDocument.UI.Alert("Only 3 signatures are allowed on this set of data : " + e.SignedDataBlock.Name );
