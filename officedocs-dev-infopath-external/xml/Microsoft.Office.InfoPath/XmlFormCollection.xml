@@ -346,7 +346,7 @@
 XmlDocument newDoc = new XmlDocument();
 // Load the document with some XML.
 newDoc.LoadXml(
-   "<?xml version=\"1.0\" encoding=\"utf-8\" ?><person><firstName/><lastName/><address/><city/><country/></person>");
+  "<?xml version=\"1.0\" encoding=\"utf-8\" ?><person><firstName/><lastName/><address/><city/><country/></person>");
 // Create an XPathNavigator for the XML file.
 XPathNavigator newDocNav = newDoc.CreateNavigator();
 // Call NewFromFormTemplate to open new form and load XML.

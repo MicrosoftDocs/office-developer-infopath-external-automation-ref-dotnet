@@ -214,7 +214,7 @@ MessageBox.Show(Me.CurrentView.Window.Caption)</code>
 
    // Loop through the collection and display the name
    // of each DataSource object that it contains.
-   for (int i = 0; i < myDataSources.Count; i++)
+   for (int i = 0; i &amp;lt; myDataSources.Count; i++)
    {
       MessageBox.Show("Data source " + i + ": " + 
          myDataSources[i].Name);

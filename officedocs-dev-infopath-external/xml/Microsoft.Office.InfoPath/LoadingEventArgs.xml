@@ -129,15 +129,16 @@ End Sub</code>
       myNav.SelectSingleNode("/my:myFields/my:Account",
          NamespaceManager).SetValue(vAcct);
    }
-}</code>
-          <code>Public Sub FormEvents_Loading(ByVal sender As Object, _
+}
+</code>
+<code>
+  Public Sub FormEvents_Loading(ByVal sender As Object, _
    ByVal e As LoadingEventArgs)
    ' Be sure that the InputParameter dictionary contains
    ' values before proceeding.
    If e.InputParameters.Count <> 0 Then
       Dim vDept As String = e.InputParameters("Dept")
       Dim vAcct As String = e.InputParameters("Acct")
-
       Dim myNav As XPathNavigator  = CreateNavigator()
       myNav.SelectSingleNode("/my:myFields/my:Department", _
          NamespaceManager).SetValue(vDept)
