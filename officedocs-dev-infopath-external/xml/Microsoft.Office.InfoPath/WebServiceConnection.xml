@@ -102,7 +102,7 @@ XmlDocument outputDocument = new XmlDocument();
 XmlDocument errorsDocument = new XmlDocument();
 
 // Load input document.
-inputDocument.LoadXml("&amp;lt;inputValue1&amp;gt;Test&amp;lt;/inputValue1&amp;gt;&amp;lt;inputValue2&amp;gt;5&amp;lt;/inputValue2&amp;gt;");
+inputDocument.LoadXml("&amp;lt;inputValue1&amp;gt;Test&amp;lt;/inputValue1&amp;gt;&amp;lt;inputValue2&amp;gt;5&amp;lt;/inputValue2&amp;gt;")
 
 // Create XPathNavigator objects for documents.
 XPathNavigator inputNav = inputDocument.CreateNavigator();

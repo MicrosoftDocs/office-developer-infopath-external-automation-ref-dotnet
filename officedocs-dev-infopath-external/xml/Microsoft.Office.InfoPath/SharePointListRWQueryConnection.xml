@@ -188,7 +188,7 @@
       mainNavigator.SelectSingleNode("/my:myFields/my:QueryOutput", _
       NamespaceManager)
     queryOutputNavigator.SetValue(outputRootNavigator.InnerXml)
-End Sub</code>
+End Sub</code>	
         </example>
       </Docs>
     </Member>
