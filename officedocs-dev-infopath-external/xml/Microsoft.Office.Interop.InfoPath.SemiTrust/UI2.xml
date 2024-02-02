@@ -304,7 +304,7 @@
 
 &amp;lt;title&amp;gt;A Simple Custom Dialog Box&amp;lt;/title&amp;gt;	&amp;lt;title&amp;gt;A Simple Custom Dialog Box&amp;lt;/title&amp;gt;	<title>A Simple Custom Dialog Box</title>
 &amp;lt;/head&amp;gt;
-&amp;lt;/head&amp;gt
+&amp;lt;/head&amp;gt;
 </head>
 
 &amp;lt;body style="BACKGROUND-COLOR: window" onLoad="Initialize()"&amp;gt;
