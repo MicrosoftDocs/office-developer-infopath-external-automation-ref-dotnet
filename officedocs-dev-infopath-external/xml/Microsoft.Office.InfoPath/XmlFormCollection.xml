@@ -346,7 +346,7 @@
 XmlDocument newDoc = new XmlDocument();
 // Load the document with some XML.
 newDoc.LoadXml(
-  "<?xml version=\"1.0\" encoding=\"utf-8\" ?><person><firstName/><lastName/><address/><city/><country/></person>");
+  "&amp;lt;?xml version=\"1.0\" encoding=\"utf-8\" ?&amp;gt;&amp;lt;person&amp;gt;&amp;lt;firstName/&amp;gt;&amp;lt;lastName/&amp;gt;&amp;lt;address/&amp;gt;&amp;lt;city/&amp;gt;&amp;lt;country/&amp;gt;&amp;lt;/person&amp;gt;");
 // Create an XPathNavigator for the XML file.
 XPathNavigator newDocNav = newDoc.CreateNavigator();
 // Call NewFromFormTemplate to open new form and load XML.
@@ -356,10 +356,10 @@ XmlForm newDocument =
           <code>' Create an in-memory XML document.
 Dim newDoc As XmlDocument = new XmlDocument()
 ' Create XML to load.
-Dim xmlToLoad As String = "<?xml version=" &amp;amp; Quote &amp;amp; "1.0" &amp;amp; Quote &amp;amp; _
+Dim xmlToLoad As String = "&amp;lt;?xml version=" &amp;amp; Quote &amp;amp; "1.0" &amp;amp; Quote &amp;amp; _
    " encoding=" &amp;amp; Quote &amp;amp; "utf-8" &amp;amp; Quote &amp;amp; _
-   " ?><person><firstName/><lastName/><address/>" &amp;amp; _
-   "<city/><country/></person>"
+   " ?&amp;gt;&amp;lt;person&amp;gt;&amp;lt;firstName/&amp;gt;&amp;lt;lastName/&amp;gt;&amp;lt;address/&amp;gt;" &amp;amp; _
+   "&amp;lt;city/&amp;gt;&amp;lt;country/&amp;gt;&amp;lt;/person&amp;gt;"
 ' Load the document with some XML.
 newDoc.LoadXml(
    )

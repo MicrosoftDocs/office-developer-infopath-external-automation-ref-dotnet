@@ -190,7 +190,7 @@ End Sub</code>
 }</code>
           <code>Public Sub field1_Validating(ByVal sender As Object , _
    ByVal e As XmlValidatingEventArgs)
-   If (e.Site.InnerXml <> String.Empty) Then
+   If (e.Site.InnerXml &amp;lt;&amp;gt; String.Empty) Then
       Integer fieldValue = Integer.Parse((e.Site.InnerXml))
 
       If (fieldValue &amp;gt; 50) Then
@@ -283,7 +283,7 @@ End Sub</code>
 }</code>
           <code>Public Sub field1_Validating(ByVal sender As Object , _
    ByVal e As XmlValidatingEventArgs)
-   If (e.Site.InnerXml <> String.Empty) Then
+   If (e.Site.InnerXml &amp;lt;&amp;gt; String.Empty) Then
       Integer fieldValue = Integer.Parse((e.Site.InnerXml))
 
       If (fieldValue &amp;gt; 50) Then
@@ -380,7 +380,7 @@ End Sub</code>
 }</code>
           <code>Public Sub field1_Validating(ByVal sender As Object , _
    ByVal e As XmlValidatingEventArgs)
-   If (e.Site.InnerXml <> String.Empty) Then
+   If (e.Site.InnerXml &amp;lt;&amp;gt; String.Empty) Then
       Integer fieldValue = Integer.Parse((e.Site.InnerXml))
 
       If (fieldValue &amp;gt; 50) Then

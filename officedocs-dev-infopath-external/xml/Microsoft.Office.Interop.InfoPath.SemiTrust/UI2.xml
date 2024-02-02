@@ -290,9 +290,9 @@
           <para>In the following example, the <b>ShowModalDialog</b> method of the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.UIObject" /> object is used to display a custom dialog box. Note that the <see cref="T:Microsoft.Office.Interop.InfoPath.SemiTrust.XDocument" /> object is passed to the custom dialog box using the <paramref name="varArguments" /> parameter.</para>
           <code>thisXDocument.UI.&lt;span class="label"&gt;ShowModalDialog&lt;/span&gt;("show.htm",(object)thisXDocument,100,100,10,10);</code>
           <para>The following example is the HTML code used to implement a simple custom dialog box. Note the use of the <b>dialogArguments</b> property of the DHTML window object to get the values passed to the custom dialog box, which in this case is the <b>XDocument</b> object of the InfoPath object model, from the <b>ShowModalDialog</b> method. When a user clicks the Show Alert button in the custom dialog box, the source XML of the form's underlying XML document appears in a message box.</para>
-          <code><html>
-<head>
-<script language="jscript">
+          <code>&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;script language="jscript"&amp;gt;
  var gobjXDocument = null;
  function Initialize()
  {
@@ -300,25 +300,27 @@
   if (typeof window.dialogArguments == "object")
   gobjXDocument = window.dialogArguments;
  }
-</script>
+&amp;lt;/script&amp;gt;
 
-<title>A Simple Custom Dialog Box</title>
+&amp;lt;title&amp;gt;A Simple Custom Dialog Box&amp;lt;/title&amp;gt;	&amp;lt;title&amp;gt;A Simple Custom Dialog Box&amp;lt;/title&amp;gt;	<title>A Simple Custom Dialog Box</title>
+&amp;lt;/head&amp;gt;
+&amp;lt;/head&amp;gt
 </head>
 
-<body style="BACKGROUND-COLOR: window" onLoad="Initialize()">
- <strong>Click one of the following buttons:</strong>
- <br/>
- <br/>
- <div id="divButtons" tyle="align:center">
- <input id="btnShowAlert" style="WIDTH: 106px; HEIGHT: 24px" 
+&amp;lt;body style="BACKGROUND-COLOR: window" onLoad="Initialize()"&amp;gt;
+ &amp;lt;strong&amp;gt;Click one of the following buttons:&amp;lt;/strong&amp;gt;
+&amp;lt;br/&amp;gt;
+&amp;lt;br/&amp;gt;
+ &amp;lt;div id="divButtons" tyle="align:center"&amp;gt;
+ &amp;lt;input id="btnShowAlert" style="WIDTH: 106px; HEIGHT: 24px" 
   onclick='gobjXDocument.UI.Alert(gobjXDocument.DOM.xml);' 
-   type="button" size="21" value="Show Alert"></input>
- <input id="btnCancel" style="WIDTH: 106px; HEIGHT: 24px" 
+   type="button" size="21" value="Show Alert"&amp;gt;&amp;lt;/input&amp;gt
+ &amp;lt;input id="btnCancel" style="WIDTH: 106px; HEIGHT: 24px" 
   onclick="window.close();" type="button" size="21" 
-  value="Cancel"></input>
- </div>
-</body>
-</html></code>
+  value="Cancel"&amp;gt;&amp;lt;/input&amp;gt
+ &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;</code>
           <para>For information on how to use the <b>ShowModalDialog</b> box method, see How to: Display Alerts and Dialog Boxes (InfoPath 2003 Object Model).</para>
         </example>
       </Docs>
