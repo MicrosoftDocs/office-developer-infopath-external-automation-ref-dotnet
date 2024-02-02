@@ -606,7 +606,7 @@ string test = thisXDocument.&lt;span class="label"&gt;GetNamedNodeProperty&lt;/s
 thisXDocument.SetNamedNodeProperty(item, "cost", "100");
 test = thisXDocument.GetNamedNodeProperty(item, "cost", "Value not set");</code>
           <para>In the following XSL example, the "cost" named property of the item node is displayed:</para>
-          <code><xsl:value-of select="xdXDocument:&lt;span class="label"&gt;GetNamedNodeProperty&lt;/span&gt;(item, 'cost', 'empty')"/></code>
+          <code>&amp;lt;xsl:value-of select="xdXDocument:&lt;span class="label"&gt;GetNamedNodeProperty&lt;/span&gt;(item, 'cost', 'empty')"/&amp;gt;</code>
         </example>
         <example>
           <para>The following example demonstrates setting and getting the value of a named property (with the name "cost") of an XML node (called "item"):</para>
@@ -616,7 +616,7 @@ string test = thisXDocument.&lt;span class="label"&gt;GetNamedNodeProperty&lt;/s
 thisXDocument.SetNamedNodeProperty(item, "cost", "100");
 test = thisXDocument.GetNamedNodeProperty(item, "cost", "Value not set");</code>
           <para>In the following XSL example, the "cost" named property of the item node is displayed:</para>
-          <code><xsl:value-of select="xdXDocument:&lt;span class="label"&gt;GetNamedNodeProperty&lt;/span&gt;(item, 'cost', 'empty')"/></code>
+          <code>&amp;lt;xsl:value-of select="xdXDocument:&lt;span class="label"&gt;GetNamedNodeProperty&lt;/span&gt;(item, 'cost', 'empty')"/&amp;gt;</code>
         </example>
       </Docs>
     </Member>
