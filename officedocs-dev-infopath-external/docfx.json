@@ -39,6 +39,7 @@
       ]
     },
     "globalMetadata": {
+      "ms.service": "infopath",
       "feedback_system": "Standard",
       "apiPlatform": "dotnet",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
@@ -50,7 +51,6 @@
       "ms.topic": "reference",
       "audience": "developer",
       "ms.reviewer": "",
-      "ms.prod": "infopath",
       "products": ["https://authoring-docs-microsoft.poolparty.biz/devrel/001c6113-1039-491d-b66a-39ba2b1246bf"],
       "ms.suite": "office",
       "ms.technology": "sdk",
